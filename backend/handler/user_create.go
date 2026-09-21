@@ -22,15 +22,6 @@ func (h *Handler) CreateUser(c echo.Context) error {
 		return responseError(c, errcode.CompanyIdAndUserNameFieldRequired)
 	}
 
-	user, err := h.User.GetUserByUserNameAndCompanyId(username, companyId)
-	if err != nil {
-		return responseError(c, errcode.InternalServerError)
-	}
-
-	if user != nil && user.Username == username {
-		return responseJSON(c, user)
-	}
-
 	newUser := new(model.User)
 	newUser.Id = utils.UniqueID()
 	newUser.CompanyId = companyId

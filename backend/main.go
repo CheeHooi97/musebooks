@@ -18,6 +18,7 @@ import (
 	"time"
 
 	"github.com/labstack/echo/v4"
+	echoMiddleware "github.com/labstack/echo/v4/middleware"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"gorm.io/gorm/schema"
@@ -47,6 +48,9 @@ func main() {
 	if err != nil {
 		log.Fatal("Failed to migrate database:", err)
 	}
+	if err := database.SeedCatalog(db); err != nil {
+		log.Fatal("Failed to seed catalog:", err)
+	}
 
 	// Initialize repository
 	repos := repository.InitializeRepository(db)
@@ -61,6 +65,10 @@ func main() {
 	api := router.SetupRoutes(h, db)
 
 	e := echo.New()
+	e.Use(echoMiddleware.CORSWithConfig(echoMiddleware.CORSConfig{
+		AllowOrigins: []string{"http://localhost:3000", "http://127.0.0.1:3000"},
+		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept, echo.HeaderAuthorization, "X-Scraper-Token"},
+	}))
 	e.HTTPErrorHandler = func(err error, c echo.Context) {
 		if !c.Response().Committed {
 			c.JSON(http.StatusInternalServerError, map[string]any{

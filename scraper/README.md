@@ -20,6 +20,16 @@ python -m pip install -r scraper/requirements.txt
 python scraper/run_api_worker.py --worker-id jp-tw-cn-my-01
 ```
 
+Run the offline adapter contract check without starting a worker or opening a
+browser:
+
+```powershell
+python scraper/dry_run_marketplaces.py
+```
+
+The dry run only builds/validates rendered search and detail URLs. It does not
+fetch marketplace pages, create jobs, or ingest records.
+
 The runner claims jobs from the Go API, starts a separate
 `photobook_worker.py` process for each job, ingests the batch, and completes or
 requeues the job. Configure the API URL and token first:
@@ -111,9 +121,10 @@ Invoke-RestMethod -Method Post `
 
 Use the same envelope with `yahoo-auctions-jp`, `mercari-jp`, `rakuma`,
 `yahoo-furima-jp`, `surugaya`, `mandarake`, `books-com-tw`, `ruten-tw`,
-`shopee-tw`, `bookwalker-tw`, `readmoo-tw`, `jd-cn`, `taobao-cn`, `xianyu-cn`,
-`dangdang-cn`, `carousell-my`, `shopee-my`, `lazada-my`, `bookwalker-jp`, or
-`rakuten-books-jp`. Use `MY` for Malaysia; an upstream `MLS` region label
+`shopee-tw`, `yahoo-tw`, `bookwalker-tw`, `readmoo-tw`, `jd-cn`, `taobao-cn`,
+`xianyu-cn`, `dangdang-cn`, `kongfz-cn`, `carousell-my`, `shopee-my`,
+`lazada-my`, `mudah-my`, `bookwalker-jp`, or `rakuten-books-jp`. Use `MY` for
+Malaysia; an upstream `MLS` region label
 should be normalized to `MY` before selecting a source. The URL, when supplied,
 must be the source's permitted rendered page; the worker will reject a
 different host.

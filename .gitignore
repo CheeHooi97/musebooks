@@ -1,3 +1,13 @@
 dev.yaml
 .env
 storage/serviceAccountKey.json
+
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+scraper/bin/
+scraper/.cache/
+scraper/__pycache__/
+scraper_exp/__pycache__/
+.tmp/
+*.log

@@ -17,11 +17,14 @@ MARKETPLACES = {
     "yahoo-furima-jp": ("モデル 写真集", "paypayfleamarket.yahoo.co.jp"),
     "ruten-tw": ("模特 寫真集", "www.ruten.com.tw"),
     "shopee-tw": ("模特 寫真集", "shopee.tw"),
+    "yahoo-tw": ("模特 寫真集", "tw.bid.yahoo.com"),
     "taobao-cn": ("模特 写真集", "s.taobao.com"),
     "xianyu-cn": ("模特 写真集", "www.goofish.com"),
+    "kongfz-cn": ("写真集", "book.kongfz.com"),
     "carousell-my": ("model photobook", "www.carousell.com.my"),
     "shopee-my": ("model photobook", "shopee.com.my"),
     "lazada-my": ("model photobook", "www.lazada.com.my"),
+    "mudah-my": ("photobook", "www.mudah.my"),
 }
 
 
@@ -54,6 +57,37 @@ class MarketplaceAdapterTests(unittest.TestCase):
             "モデル 写真集", "sold_discovery", "physical"
         )
         self.assertEqual(parse_qs(urlparse(mercari).query)["status"], ["sold_out"])
+
+        with self.assertRaisesRegex(ValueError, "exact rendered closed-listing searchUrl"):
+            resolve_adapter("yahoo-tw").build_search_url(
+                "模特 寫真集", "sold_discovery", "physical"
+            )
+
+        with self.assertRaisesRegex(ValueError, "does not expose a verified public sold-history route"):
+            resolve_adapter("mudah-my").build_search_url(
+                "photobook", "sold_discovery", "physical"
+            )
+
+    def test_new_candidate_detail_urls_have_stable_ids(self) -> None:
+        cases = {
+            "yahoo-tw": (
+                "https://tw.bid.yahoo.com/item/101620286146",
+                "101620286146",
+            ),
+            "kongfz-cn": (
+                "https://book.kongfz.com/285774/1824563994/",
+                "1824563994",
+            ),
+            "mudah-my": (
+                "https://www.mudah.my/kang-hyewon-iz-one-beauty-cut-type-a-photobook-114344526.htm",
+                "114344526",
+            ),
+        }
+        for source_id, (url, external_id) in cases.items():
+            with self.subTest(source_id=source_id):
+                adapter = resolve_adapter(source_id)
+                self.assertTrue(adapter.is_result_url(url))
+                self.assertEqual(adapter.extract_external_id(url), external_id)
 
     def test_jdirectitems_alias_uses_canonical_yahoo_identity(self) -> None:
         alias = resolve_adapter("jdirectmarket")

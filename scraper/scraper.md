@@ -108,11 +108,11 @@ when `knownPhotobook` or `personKeywords` is present.
 | P1 | Mercari Japan — `mercari-jp` | JP | Yes | Limited/yes when sold-out evidence is rendered | Keep disabled until access/terms review; browser reachability is not permission. |
 | P1 | Rakuma — `rakuma` | JP | Yes | Usually item/seller evidence, not a complete public sale history | Good extra active-market sample; validate sold labels before using historical prices. |
 | P1 | Yahoo! Flea Market — `yahoo-furima-jp` | JP | Yes | Limited | Use for active inventory unless a public sold surface is verified. |
-| P1 | Yahoo拍賣 — `yahoo-tw` candidate | TW | Yes | Yes for `已結標` pages only when a final/winning price is visible | The official surface supports both direct-purchase and bidding listings; `已結標` alone is not proof of a sale. |
+| P1 | Yahoo拍賣 — `yahoo-tw` | TW | Yes | Requires an exact rendered closed-listing URL and visible final/winning price | The active keyword route is implemented; the source remains disabled pending browser/access review. `已結標` alone is not proof of a sale. |
 | P1 | Xianyu/Goofish — `xianyu-cn` | CN | Yes | Limited | Strong second-hand candidate, but public web search/detail routes need browser validation. |
-| P1 | Kongfz/孔夫子旧书网 — new candidate | CN | Yes | Yes in online auction/book pages when sale evidence is visible | Especially relevant to out-of-print art and photography books; verify public detail IDs and completed-sale semantics. |
+| P1 | Kongfz/孔夫子旧书网 — `kongfz-cn` | CN | Yes | Requires an exact rendered active/sold surface and visible final/winning price | Detail identity and host allow-list are implemented; keyword search is intentionally form-driven and the source remains disabled pending browser/access review. |
 | P1 | Carousell — `carousell-my` | MY | Yes | Limited | Useful active local inventory; public historical sold prices are not a dependable baseline. |
-| P1 | Mudah.my — new candidate | MY | Yes | Usually no public sold history | Add for active Malaysia coverage; it is a classified/recommerce marketplace, not an auction-history source. |
+| P1 | Mudah.my — `mudah-my` | MY | Yes | No verified public sold history | The active keyword route and ad-ID extraction are implemented; it is classified/recommerce inventory, not an auction-history source, and remains disabled pending browser/access review. |
 | P2 | Ruten / Shopee / Taobao / Lazada | TW/CN/MY | Yes | Usually no reliable public sold history | Good supplementary active offers; inspect variant/stock because cards, posters, vouchers and printing services are common. |
 
 `JDirectItems Auction` is not a second inventory source to add beside Yahoo
@@ -288,7 +288,7 @@ counter does not mean sold out. Digital coverage is unverified; printing voucher
 and seller file bundles are not digital book editions. Challenge/login pages
 must return blocked instead of a successful empty batch.
 
-### Yahoo拍賣 Taiwan — proposed `yahoo-tw`
+### Yahoo拍賣 Taiwan — `yahoo-tw`
 
 **Observed:** the [official Yahoo拍賣 search surface](https://tw.bid.yahoo.com/)
 has a 圖書/影音/文具 category and supports both 直購 (direct purchase) and
@@ -296,12 +296,13 @@ has a 圖書/影音/文具 category and supports both 直購 (direct purchase) a
 describes both purchase modes, and the [advanced search](https://tw.bid.yahoo.com/tw/show/searchoptions)
 exposes used-item, direct-purchase, bidding and international-shipping filters.
 
-This is a strong Taiwan addition for physical copies. Validate the current
-keyword route and detail URL/ID from the rendered form before adding an
-adapter. Implement active and sold as separate routes or filters; `已結標`
-means closed and must not be stored as sold unless the detail shows a winning
-bid or final price. Keep the source distinct from JP Yahoo Auctions even though
-both are Yahoo-branded.
+This is a strong Taiwan addition for physical copies. The adapter now uses the
+observed `/search/auction/product?p={query}` active route and recognizes the
+numeric `/item/{id}` detail URL. Sold discovery deliberately requires the exact
+closed-listing URL captured from the rendered UI; `已結標` means closed and must
+not be stored as sold unless the detail shows a winning bid or final price. The
+source is seeded but disabled pending browser/access review. Keep it distinct
+from JP Yahoo Auctions even though both are Yahoo-branded.
 
 ### Taiwan digital expansion
 
@@ -373,7 +374,7 @@ browser fixture identifies actual product links and controls. Keep deleted,
 unavailable and sold separate. Do not use an app/private endpoint to compensate
 for an unavailable public result list.
 
-### Kongfz / 孔夫子旧书网 — proposed `kongfz-cn`
+### Kongfz / 孔夫子旧书网 — `kongfz-cn`
 
 **Observed:** [Kongfz](https://www.kongfz.com/?locale=en) is a Chinese C2C
 second-hand book and collectibles platform with separate 在售 (active), 已售
@@ -381,11 +382,13 @@ second-hand book and collectibles platform with separate 在售 (active), 已售
 describes its shop and auction marketplaces, which makes it a better candidate
 for out-of-print photography books than JD's normal retail results.
 
-Add only after capturing the public search form, a book/photography result,
-and a detail page with a stable listing identity. For ordinary shop listings,
-record asking price as active inventory; for auction history, require a final
-winning price and do not infer a sale from an ended lot. It is a candidate
-source, not yet enabled or included in the Python adapter registry.
+The source is now seeded as `kongfz-cn` and the Python adapter recognizes the
+public `book.kongfz.com/{shop_id}/{item_id}/` detail shape. Keyword discovery
+is intentionally form-driven: supply the exact rendered search/category URL
+captured by the browser rather than guessing a query endpoint. For ordinary
+shop listings, record asking price as active inventory; for auction history,
+require a final winning price and do not infer a sale from an ended lot. It is
+still disabled pending browser/access review.
 
 ### Zhuanzhuan / 转转 — candidate secondary CN source
 
@@ -462,7 +465,7 @@ Reject vouchers and printing services, distinguish album bundles from real book
 copies, and extract MYR price/variant, seller and stock evidence.
 Digital photobook coverage remains unverified.
 
-### Mudah.my — proposed `mudah-my`
+### Mudah.my — `mudah-my`
 
 **Observed:** [Mudah.my](https://www.mudah.my/) describes itself as a Malaysian
 recommerce marketplace for new and used items and lists
@@ -470,8 +473,11 @@ Music/Movies/Books/Magazines plus Hobby & Collectibles categories. It is a
 useful additional active-inventory source for local copies of photography
 books. It is classified-ad style rather than a public auction-history source,
 so do not add a sold-discovery job until a public sold-state/detail route is
-verified. Capture the rendered search form and stable ad ID before adding it to
-the adapter registry; do not guess a `/search` route from an indexed URL.
+verified. The source is now seeded as `mudah-my`; the adapter uses the observed
+`/malaysia/all?q={query}` active route and extracts the numeric ID from
+`/{slug}-{ad_id}.htm`. It remains disabled pending browser/access review. Do
+not create a sold-discovery job: no verified public sold-history route was
+found.
 
 ### Malaysia publisher/creator stores
 

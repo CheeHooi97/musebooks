@@ -27,12 +27,15 @@ API boundary and keep the marketplace ID separate.
 | CN | JD.com | Rendered consumer search/detail pages | Browser catalog/detail adapter; do not use Open Platform endpoints | Browser review |
 | JP | Yahoo! JAPAN Auctions / JDirectItems Auction | Rendered auction pages | Low-rate browser adapter; require visible active/winning-sale evidence; one canonical Yahoo source ID | Review required |
 | TW | Books.com.tw | Rendered bookstore pages | Browser catalog/detail adapter; separate printed and authorized e-book products | Review required |
+| TW | Yahoo拍賣 Taiwan | Rendered auction/listing pages | Browser active/detail adapter; sold mode only with an exact rendered closed-listing URL and final/winning price | Review required |
 | TW | Ruten | Rendered listing pages | Browser active/detail adapter; preserve condition and stock evidence | Review required |
 | TW/MY | Shopee | Rendered consumer pages | Browser-only adapter for permitted pages; no seller/partner API | Review required |
 | MY | Lazada | Rendered consumer pages | Browser-only adapter for permitted pages; no Open Platform API | Review required |
 | JP | Mercari | Public pages with restrictive automation terms | Keep disabled unless written/official access is obtained | Blocked by default |
 | CN | Taobao/Tmall, Xianyu | Rendered consumer pages | P3 browser investigation only; no login automation, bypasses, or private endpoints | Not enabled |
+| CN | Kongfz / 孔夫子旧书网 | Rendered shop/auction pages | Browser active/detail adapter; use exact rendered search/category URLs and require final sale evidence for sold mode | Review required |
 | MY | Carousell | Rendered consumer search/detail pages | Browser-only adapter after access review; reject custom albums and unrelated goods | Review required |
+| MY | Mudah.my | Rendered classified search/detail pages | Browser active/detail adapter; no public sold-history claim | Review required |
 
 The word “API” below refers only to the MuseBooks control-plane API. It is not
 an instruction to call a marketplace API. All source rows are configured with
@@ -119,6 +122,11 @@ history is de-duplicated.
 The API stores these findings as source configuration (`accessMethod`,
 `accessStatus`, `termsUrl`, `allowedHosts`, `capabilities`, `ratePerMinute`) so
 an operator can disable a source without changing adapter code.
+
+The current offline contract check is `python scraper/dry_run_marketplaces.py`.
+It validates URL construction and record-ID extraction for eBay, Yahoo Japan,
+Yahoo Taiwan, Kongfz, Mudah, Books.com.tw and Rakuten Books without launching
+the browser or fetching marketplace pages.
 
 ## Operational rules
 

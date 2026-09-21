@@ -153,6 +153,15 @@ class MarketplaceAdapter:
                 raise AdapterConfigurationError("Shopee Taiwan requires request.query or request.searchUrl")
             return f"https://shopee.tw/search?keyword={encoded}"
 
+        if self.key == "yahoo-tw":
+            if not query:
+                raise AdapterConfigurationError("Yahoo!拍賣 Taiwan requires request.query or request.searchUrl")
+            if operation == "sold_discovery":
+                raise AdapterConfigurationError(
+                    "Yahoo!拍賣 Taiwan sold search requires the exact rendered closed-listing searchUrl"
+                )
+            return f"https://tw.bid.yahoo.com/search/auction/product?p={encoded}"
+
         if self.key == "bookwalker-tw":
             raise AdapterConfigurationError(
                 "BOOK☆WALKER Taiwan search is form-driven; submit the exact rendered searchUrl"
@@ -183,6 +192,11 @@ class MarketplaceAdapter:
                 "Dangdang search is form-driven; submit the exact rendered searchUrl"
             )
 
+        if self.key == "kongfz-cn":
+            raise AdapterConfigurationError(
+                "Kongfz search is rendered/form-driven; submit the exact rendered searchUrl"
+            )
+
         if self.key == "carousell-my":
             raise AdapterConfigurationError(
                 "Carousell search is dynamic; submit the exact rendered searchUrl"
@@ -197,6 +211,15 @@ class MarketplaceAdapter:
             if not query:
                 raise AdapterConfigurationError("Lazada Malaysia requires request.query or request.searchUrl")
             return f"https://www.lazada.com.my/catalog/?q={encoded}"
+
+        if self.key == "mudah-my":
+            if not query:
+                raise AdapterConfigurationError("Mudah.my requires request.query or request.searchUrl")
+            if operation == "sold_discovery":
+                raise AdapterConfigurationError(
+                    "Mudah.my does not expose a verified public sold-history route"
+                )
+            return f"https://www.mudah.my/malaysia/all?q={encoded}"
 
         if self.key == "rakuma-jp":
             if not query:
@@ -284,7 +307,10 @@ class MarketplaceAdapter:
             )
         if self.key == "rakuten-books-jp":
             return host.endswith("books.rakuten.co.jp") and (
-                path.startswith("/rb/") or "/product/" in path or "/book/" in path
+                path.startswith("/rb/")
+                or path.startswith("/rk/")
+                or "/product/" in path
+                or "/book/" in path
             )
         if self.key == "bookwalker-jp":
             return host.endswith("bookwalker.jp") and not self._is_navigation_path(path)
@@ -294,6 +320,8 @@ class MarketplaceAdapter:
             return host.endswith("ruten.com.tw") and ("/item/" in path or "/product/" in path)
         if self.key == "shopee-tw":
             return host.endswith("shopee.tw") and self._is_shopee_path(path)
+        if self.key == "yahoo-tw":
+            return host == "tw.bid.yahoo.com" and "/item/" in path
         if self.key == "bookwalker-tw":
             return host.endswith("bookwalker.com.tw") and not self._is_navigation_path(path)
         if self.key == "readmoo-tw":
@@ -314,6 +342,8 @@ class MarketplaceAdapter:
             return host.endswith("dangdang.com") and (
                 "product.aspx" in path or bool(query.get("product_id") or query.get("productId"))
             )
+        if self.key == "kongfz-cn":
+            return host == "book.kongfz.com" and bool(re.search(r"/\d+/\d+/?$", path))
         if self.key == "carousell-my":
             return host.endswith("carousell.com.my") and "/p/" in path
         if self.key == "shopee-my":
@@ -322,6 +352,8 @@ class MarketplaceAdapter:
             return host.endswith("lazada.com.my") and (
                 path.startswith("/products/") or (path.endswith(".html") and "/catalog" not in path)
             )
+        if self.key == "mudah-my":
+            return host in {"mudah.my", "www.mudah.my"} and bool(re.search(r"-\d+\.htm$", path))
         if self.key == "rakuma-jp":
             return host.endswith("fril.jp") and (host == "item.fril.jp" or "/item/" in path or "/product/" in path)
         if self.key == "yahoo-furima-jp":
@@ -355,7 +387,7 @@ class MarketplaceAdapter:
             if match:
                 return _numeric_id(match.group(1))
         elif self.key == "rakuten-books-jp":
-            match = re.search(r"/rb/([0-9]+)", path, re.IGNORECASE)
+            match = re.search(r"/(?:rb|rk)/([^/?#]+)", path, re.IGNORECASE)
             if match:
                 return _numeric_id(match.group(1))
         elif self.key == "books-com-tw":
@@ -364,6 +396,10 @@ class MarketplaceAdapter:
                 return _numeric_id(match.group(1))
         elif self.key == "ruten-tw":
             match = re.search(r"/(?:item|product)/([^/?#]+)", path, re.IGNORECASE)
+            if match:
+                return _numeric_id(match.group(1))
+        elif self.key == "yahoo-tw":
+            match = re.search(r"/item/([^/?#]+)", path, re.IGNORECASE)
             if match:
                 return _numeric_id(match.group(1))
         elif self.key in {"shopee-tw", "shopee-my"}:
@@ -392,12 +428,20 @@ class MarketplaceAdapter:
             for key in ("product_id", "productId", "id"):
                 if query.get(key):
                     return _numeric_id(query[key])
+        elif self.key == "kongfz-cn":
+            match = re.search(r"/(\d+)/(\d+)/?$", path)
+            if match:
+                return _numeric_id(match.group(2))
         elif self.key == "carousell-my":
             match = re.search(r"/p/[^/]*-([0-9]+)(?:/|$)", path, re.IGNORECASE)
             if match:
                 return _numeric_id(match.group(1))
         elif self.key == "lazada-my":
             match = re.search(r"-i([0-9]+)\.html$", path, re.IGNORECASE)
+            if match:
+                return _numeric_id(match.group(1))
+        elif self.key == "mudah-my":
+            match = re.search(r"-(\d+)\.htm$", path, re.IGNORECASE)
             if match:
                 return _numeric_id(match.group(1))
         elif self.key == "rakuma-jp":
@@ -487,15 +531,18 @@ _ADAPTERS = (
     MarketplaceAdapter("books-com-tw", ("books-com-tw", "books_com_tw")),
     MarketplaceAdapter("ruten-tw", ("ruten-tw", "ruten_tw")),
     MarketplaceAdapter("shopee-tw", ("shopee-tw", "shopee_tw")),
+    MarketplaceAdapter("yahoo-tw", ("yahoo-tw", "yahoo_tw", "yahoo-auctions-tw", "yahoo_auctions_tw")),
     MarketplaceAdapter("bookwalker-tw", ("bookwalker-tw", "bookwalker_tw")),
     MarketplaceAdapter("readmoo-tw", ("readmoo-tw", "readmoo_tw")),
     MarketplaceAdapter("jd-cn", ("jd-cn", "jd_cn")),
     MarketplaceAdapter("taobao-cn", ("taobao-cn", "taobao_cn", "tmall-cn", "tmall_cn")),
     MarketplaceAdapter("xianyu-cn", ("xianyu-cn", "xianyu_cn", "goofish-cn", "goofish_cn")),
     MarketplaceAdapter("dangdang-cn", ("dangdang-cn", "dangdang_cn")),
+    MarketplaceAdapter("kongfz-cn", ("kongfz-cn", "kongfz_cn", "kongfuzi-cn", "kongfuzi_cn")),
     MarketplaceAdapter("carousell-my", ("carousell-my", "carousell_my")),
     MarketplaceAdapter("shopee-my", ("shopee-my", "shopee_my")),
     MarketplaceAdapter("lazada-my", ("lazada-my", "lazada_my")),
+    MarketplaceAdapter("mudah-my", ("mudah-my", "mudah_my")),
     MarketplaceAdapter("rakuma-jp", ("rakuma", "rakuma-jp", "rakuma_jp")),
     MarketplaceAdapter("yahoo-furima-jp", ("yahoo-furima-jp", "yahoo_furima_jp")),
     MarketplaceAdapter("surugaya-jp", ("surugaya", "surugaya-jp", "surugaya_jp")),
