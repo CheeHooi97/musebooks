@@ -30,8 +30,8 @@ CASES = (
         "operations": ("active_discovery", "sold_discovery"),
         "allowed_hosts": ("www.ebay.com",),
         "records": (
-            {"url": "https://www.ebay.com/itm/277274225321", "format": "physical"},
-            {"url": "https://www.ebay.com/itm/146539915626", "format": "physical"},
+            {"url": "https://www.ebay.com/itm/358449968604", "format": "physical"},
+            {"url": "https://www.ebay.com/itm/357802341215", "format": "physical"},
             {"url": "https://www.ebay.com/itm/406187793066", "format": "physical"},
         ),
     },
@@ -54,31 +54,9 @@ CASES = (
         "operations": ("active_discovery", "sold_discovery"),
         "allowed_hosts": ("tw.bid.yahoo.com",),
         "records": (
-            {"url": "https://tw.bid.yahoo.com/item/101620286146", "format": "physical"},
-            {"url": "https://tw.bid.yahoo.com/item/101686572334", "format": "physical"},
-            {"url": "https://tw.bid.yahoo.com/item/100280449431", "format": "physical"},
-        ),
-    },
-    {
-        "source_id": "kongfz-cn",
-        "query": "写真集",
-        "formats": ("physical",),
-        "operations": ("active_discovery", "sold_discovery"),
-        "allowed_hosts": (
-            "www.kongfz.com",
-            "search.kongfz.com",
-            "shop.kongfz.com",
-            "book.kongfz.com",
-        ),
-        # Kongfz search is rendered/form-driven. This is a captured public
-        # category/list surface, not an invented keyword query.
-        "rendered_search_urls": {
-            "active_discovery": "https://shop.kongfz.com/20091/type_15/",
-        },
-        "records": (
-            {"url": "https://book.kongfz.com/441424/7738446386/", "format": "physical"},
-            {"url": "https://book.kongfz.com/285774/1824563994/", "format": "physical"},
-            {"url": "https://book.kongfz.com/264608/6635198755/", "format": "physical"},
+            {"url": "https://tw.bid.yahoo.com/item/101752226580", "format": "physical"},
+            {"url": "https://tw.bid.yahoo.com/item/101752838293", "format": "physical"},
+            {"url": "https://tw.bid.yahoo.com/item/101498429210", "format": "physical"},
         ),
     },
     {
@@ -88,9 +66,9 @@ CASES = (
         "operations": ("active_discovery", "sold_discovery"),
         "allowed_hosts": ("www.mudah.my", "mudah.my"),
         "records": (
-            {"url": "https://www.mudah.my/straykids-official-album-rock-ver-115658230.htm", "format": "physical"},
-            {"url": "https://www.mudah.my/kang-hyewon-iz-one-beauty-cut-type-a-photobook-114344526.htm", "format": "physical"},
-            {"url": "https://www.mudah.my/girls-generation-snsd-snsd-holiday-photobook-115627025.htm", "format": "physical"},
+            {"url": "https://www.mudah.my/yes-i-am-chaeyoung-1st-photobook-115829041.htm", "format": "physical"},
+            {"url": "https://www.mudah.my/d-icon-issue-no-8-iz-one-izone-photobook-2020-115710991.htm", "format": "physical"},
+            {"url": "https://www.mudah.my/jo-yuri-iz-one-glassy-single-cd-photobook-2021-114573520.htm", "format": "physical"},
         ),
     },
     {
@@ -100,8 +78,8 @@ CASES = (
         "operations": ("catalog_discovery",),
         "allowed_hosts": ("www.books.com.tw", "search.books.com.tw"),
         "records": (
-            {"url": "https://www.books.com.tw/products/E050121645", "format": "digital"},
-            {"url": "https://www.books.com.tw/products/M010163044", "format": "physical"},
+            {"url": "https://www.books.com.tw/products/E050331248", "format": "digital"},
+            {"url": "https://www.books.com.tw/products/M010238917", "format": "physical"},
             {"url": "https://www.books.com.tw/products/M010169315", "format": "physical"},
         ),
     },
@@ -157,7 +135,6 @@ def run_case(case: dict) -> dict:
                 message = str(exc)
                 if operation == "sold_discovery" and source_id in {
                     "yahoo-tw",
-                    "kongfz-cn",
                     "mudah-my",
                 }:
                     status = "unsupported_public_history" if source_id == "mudah-my" else "requires_exact_rendered_url"

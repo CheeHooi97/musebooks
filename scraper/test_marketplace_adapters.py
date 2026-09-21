@@ -20,7 +20,6 @@ MARKETPLACES = {
     "yahoo-tw": ("模特 寫真集", "tw.bid.yahoo.com"),
     "taobao-cn": ("模特 写真集", "s.taobao.com"),
     "xianyu-cn": ("模特 写真集", "www.goofish.com"),
-    "kongfz-cn": ("写真集", "book.kongfz.com"),
     "carousell-my": ("model photobook", "www.carousell.com.my"),
     "shopee-my": ("model photobook", "shopee.com.my"),
     "lazada-my": ("model photobook", "www.lazada.com.my"),
@@ -71,16 +70,12 @@ class MarketplaceAdapterTests(unittest.TestCase):
     def test_new_candidate_detail_urls_have_stable_ids(self) -> None:
         cases = {
             "yahoo-tw": (
-                "https://tw.bid.yahoo.com/item/101620286146",
-                "101620286146",
-            ),
-            "kongfz-cn": (
-                "https://book.kongfz.com/285774/1824563994/",
-                "1824563994",
+                "https://tw.bid.yahoo.com/item/101752226580",
+                "101752226580",
             ),
             "mudah-my": (
-                "https://www.mudah.my/kang-hyewon-iz-one-beauty-cut-type-a-photobook-114344526.htm",
-                "114344526",
+                "https://www.mudah.my/yes-i-am-chaeyoung-1st-photobook-115829041.htm",
+                "115829041",
             ),
         }
         for source_id, (url, external_id) in cases.items():

@@ -33,7 +33,6 @@ API boundary and keep the marketplace ID separate.
 | MY | Lazada | Rendered consumer pages | Browser-only adapter for permitted pages; no Open Platform API | Review required |
 | JP | Mercari | Public pages with restrictive automation terms | Keep disabled unless written/official access is obtained | Blocked by default |
 | CN | Taobao/Tmall, Xianyu | Rendered consumer pages | P3 browser investigation only; no login automation, bypasses, or private endpoints | Not enabled |
-| CN | Kongfz / 孔夫子旧书网 | Rendered shop/auction pages | Browser active/detail adapter; use exact rendered search/category URLs and require final sale evidence for sold mode | Review required |
 | MY | Carousell | Rendered consumer search/detail pages | Browser-only adapter after access review; reject custom albums and unrelated goods | Review required |
 | MY | Mudah.my | Rendered classified search/detail pages | Browser active/detail adapter; no public sold-history claim | Review required |
 
@@ -125,7 +124,7 @@ an operator can disable a source without changing adapter code.
 
 The current offline contract check is `python scraper/dry_run_marketplaces.py`.
 It validates URL construction and record-ID extraction for eBay, Yahoo Japan,
-Yahoo Taiwan, Kongfz, Mudah, Books.com.tw and Rakuten Books without launching
+Yahoo Taiwan, Mudah, Books.com.tw and Rakuten Books without launching
 the browser or fetching marketplace pages.
 
 ## Operational rules

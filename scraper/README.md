@@ -122,7 +122,7 @@ Invoke-RestMethod -Method Post `
 Use the same envelope with `yahoo-auctions-jp`, `mercari-jp`, `rakuma`,
 `yahoo-furima-jp`, `surugaya`, `mandarake`, `books-com-tw`, `ruten-tw`,
 `shopee-tw`, `yahoo-tw`, `bookwalker-tw`, `readmoo-tw`, `jd-cn`, `taobao-cn`,
-`xianyu-cn`, `dangdang-cn`, `kongfz-cn`, `carousell-my`, `shopee-my`,
+`xianyu-cn`, `dangdang-cn`, `carousell-my`, `shopee-my`,
 `lazada-my`, `mudah-my`, `bookwalker-jp`, or `rakuten-books-jp`. Use `MY` for
 Malaysia; an upstream `MLS` region label
 should be normalized to `MY` before selecting a source. The URL, when supplied,

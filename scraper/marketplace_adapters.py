@@ -192,11 +192,6 @@ class MarketplaceAdapter:
                 "Dangdang search is form-driven; submit the exact rendered searchUrl"
             )
 
-        if self.key == "kongfz-cn":
-            raise AdapterConfigurationError(
-                "Kongfz search is rendered/form-driven; submit the exact rendered searchUrl"
-            )
-
         if self.key == "carousell-my":
             raise AdapterConfigurationError(
                 "Carousell search is dynamic; submit the exact rendered searchUrl"
@@ -342,8 +337,6 @@ class MarketplaceAdapter:
             return host.endswith("dangdang.com") and (
                 "product.aspx" in path or bool(query.get("product_id") or query.get("productId"))
             )
-        if self.key == "kongfz-cn":
-            return host == "book.kongfz.com" and bool(re.search(r"/\d+/\d+/?$", path))
         if self.key == "carousell-my":
             return host.endswith("carousell.com.my") and "/p/" in path
         if self.key == "shopee-my":
@@ -428,10 +421,6 @@ class MarketplaceAdapter:
             for key in ("product_id", "productId", "id"):
                 if query.get(key):
                     return _numeric_id(query[key])
-        elif self.key == "kongfz-cn":
-            match = re.search(r"/(\d+)/(\d+)/?$", path)
-            if match:
-                return _numeric_id(match.group(2))
         elif self.key == "carousell-my":
             match = re.search(r"/p/[^/]*-([0-9]+)(?:/|$)", path, re.IGNORECASE)
             if match:
@@ -538,7 +527,6 @@ _ADAPTERS = (
     MarketplaceAdapter("taobao-cn", ("taobao-cn", "taobao_cn", "tmall-cn", "tmall_cn")),
     MarketplaceAdapter("xianyu-cn", ("xianyu-cn", "xianyu_cn", "goofish-cn", "goofish_cn")),
     MarketplaceAdapter("dangdang-cn", ("dangdang-cn", "dangdang_cn")),
-    MarketplaceAdapter("kongfz-cn", ("kongfz-cn", "kongfz_cn", "kongfuzi-cn", "kongfuzi_cn")),
     MarketplaceAdapter("carousell-my", ("carousell-my", "carousell_my")),
     MarketplaceAdapter("shopee-my", ("shopee-my", "shopee_my")),
     MarketplaceAdapter("lazada-my", ("lazada-my", "lazada_my")),

@@ -110,7 +110,6 @@ when `knownPhotobook` or `personKeywords` is present.
 | P1 | Yahoo! Flea Market — `yahoo-furima-jp` | JP | Yes | Limited | Use for active inventory unless a public sold surface is verified. |
 | P1 | Yahoo拍賣 — `yahoo-tw` | TW | Yes | Requires an exact rendered closed-listing URL and visible final/winning price | The active keyword route is implemented; the source remains disabled pending browser/access review. `已結標` alone is not proof of a sale. |
 | P1 | Xianyu/Goofish — `xianyu-cn` | CN | Yes | Limited | Strong second-hand candidate, but public web search/detail routes need browser validation. |
-| P1 | Kongfz/孔夫子旧书网 — `kongfz-cn` | CN | Yes | Requires an exact rendered active/sold surface and visible final/winning price | Detail identity and host allow-list are implemented; keyword search is intentionally form-driven and the source remains disabled pending browser/access review. |
 | P1 | Carousell — `carousell-my` | MY | Yes | Limited | Useful active local inventory; public historical sold prices are not a dependable baseline. |
 | P1 | Mudah.my — `mudah-my` | MY | Yes | No verified public sold history | The active keyword route and ad-ID extraction are implemented; it is classified/recommerce inventory, not an auction-history source, and remains disabled pending browser/access review. |
 | P2 | Ruten / Shopee / Taobao / Lazada | TW/CN/MY | Yes | Usually no reliable public sold history | Good supplementary active offers; inspect variant/stock because cards, posters, vouchers and printing services are common. |
@@ -374,29 +373,13 @@ browser fixture identifies actual product links and controls. Keep deleted,
 unavailable and sold separate. Do not use an app/private endpoint to compensate
 for an unavailable public result list.
 
-### Kongfz / 孔夫子旧书网 — `kongfz-cn`
-
-**Observed:** [Kongfz](https://www.kongfz.com/?locale=en) is a Chinese C2C
-second-hand book and collectibles platform with separate 在售 (active), 已售
-(sold) and 在线拍卖 sections. The [about page](https://www.kongfz.com/help/aboutus.php)
-describes its shop and auction marketplaces, which makes it a better candidate
-for out-of-print photography books than JD's normal retail results.
-
-The source is now seeded as `kongfz-cn` and the Python adapter recognizes the
-public `book.kongfz.com/{shop_id}/{item_id}/` detail shape. Keyword discovery
-is intentionally form-driven: supply the exact rendered search/category URL
-captured by the browser rather than guessing a query endpoint. For ordinary
-shop listings, record asking price as active inventory; for auction history,
-require a final winning price and do not infer a sale from an ended lot. It is
-still disabled pending browser/access review.
-
 ### Zhuanzhuan / 转转 — candidate secondary CN source
 
 The [official Zhuanzhuan site](https://www.zhuanzhuan.com/) presents a
 second-hand marketplace with platform-guaranteed transactions, and its
 published coverage includes books. It is worth a later active-inventory
 adapter, but the public web page is SPA-driven and no reliable public sold
-history route was established. Keep it below Kongfz/Xianyu until a rendered
+history route was established. Keep it below Xianyu until a rendered
 search/detail fixture is available.
 
 ### Dangdang — proposed `dangdang-cn`
@@ -607,7 +590,7 @@ that a source is reachable or permitted.
 
 For the user's resale-price objective, the recommended implementation order is
 eBay and Yahoo Auctions first; then Mercari/Rakuma/Yahoo Flea after access
-review; then Taiwan Yahoo拍賣, Ruten and Shopee; then Kongfz/Xianyu and
+review; then Taiwan Yahoo拍賣, Ruten and Shopee; then Xianyu and
 Carousell/Mudah. Keep Rakuten Books and BOOK☆WALKER as edition/digital
 reference sources, not the primary resale-price feed. This order is an
 engineering judgment based on the cited marketplace evidence, not a guarantee
