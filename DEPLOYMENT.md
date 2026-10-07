@@ -27,15 +27,17 @@ Create `/opt/musebooks/backend/.env` on the server with production values. Keep 
 ENV=production
 POSTGRES_HOST=127.0.0.1
 POSTGRES_PORT=5432
-POSTGRES_USER=musebooks
-POSTGRES_PASSWORD=replace-with-the-database-password
+POSTGRES_USER=tcguser
+POSTGRES_PASSWORD=use-the-existing-MuseCards-database-role-password
 POSTGRES_DATABASE=musebooks
 POSTGRES_SSLMODE=disable
-POSTGRES_TIMEZONE=Asia/Singapore
+POSTGRES_TIMEZONE=UTC
 SYSTEM_AES_KEY=replace-with-base64-encoded-32-byte-key
 SCRAPER_INGEST_TOKEN=replace-with-a-long-random-token
-MUSEBOOKS_API_ADDR=127.0.0.1:2002
-MUSEBOOKS_SEED_DEMO=false
+HTTP_ADDR=127.0.0.1:2002
+POSTGRES_AUTO_MIGRATE=false
+POSTGRES_SKIP_STARTUP_MIGRATIONS=false
+CORS_ALLOWED_ORIGINS=https://musebooks.my,capacitor://localhost,https://localhost,http://localhost
 ~~~
 
 Set the file permissions:
@@ -79,9 +81,12 @@ That SSH account needs non-interactive `sudo -n` access for the deployment scrip
 
 ## Deploy and verify
 
-After the one-time server setup and secrets are in place, every push to `main` runs the workflow. You can also run it from **GitHub → Actions → Deploy MuseBooks → Run workflow**. It builds the Next.js static export and Linux amd64 Go API, uploads an immutable release, activates the MuseBooks Nginx virtual host and API, and checks:
+After the one-time server setup and secrets are in place, every push to `main` runs the workflow. You can also run it from **GitHub → Actions → Deploy MuseBooks → Run workflow**. It builds the React/Vite static website and Linux amd64 Go API, uploads an immutable release, activates the MuseBooks Nginx virtual host and API, and checks:
 
 - `https://musebooks.my/` contains MuseBooks and does not contain MuseCards.
 - `https://musebooks.my/v1/origins` responds successfully.
 
 The deploy script rolls the active release links and configs back if the local API check or Nginx reload fails. A separate catalog import is still needed if the production MuseBooks database should contain records; the website does not substitute demo data.
+
+
+PostgreSQL and application structure follow MuseCards. See [catalog implementation](docs/catalog-implementation.md) for normalized tables, migration commands, shared connection settings, and ownership requirements. Active React/Vite code is under `frontend/src`; obsolete Next.js files and TypeScript application sources have been removed.

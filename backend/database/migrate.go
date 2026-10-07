@@ -1,28 +1,45 @@
 package database
 
 import (
-	"musebooks/catalog"
 	"musebooks/model"
 
 	"gorm.io/gorm"
 )
 
 func Migrate(db *gorm.DB) error {
-	models := []any{
-		&model.User{},
-		&model.Admin{},
-		&catalog.Origin{},
-		&catalog.Source{},
-		&catalog.Work{},
-		&catalog.Edition{},
-		&catalog.Listing{},
-		&catalog.ListingObservation{},
-		&catalog.ScrapeJob{},
-		&catalog.ScrapeRun{},
-	}
-	err := db.AutoMigrate(models...)
-	if err != nil {
-		return err
-	}
-	return nil
+	return db.Transaction(func(db *gorm.DB) error {
+		if err := db.Exec("SELECT pg_advisory_xact_lock(hashtext(?))", CatalogSchemaVersion).Error; err != nil {
+			return err
+		}
+		if err := renameLegacyAccountTables(db); err != nil {
+			return err
+		}
+		models := []any{
+			&model.Company{},
+			&model.Market{},
+			&model.Person{},
+			&model.ProductLine{},
+			&model.Marketplace{},
+			&model.User{},
+			&model.Admin{},
+			&model.Origin{},
+			&model.Source{},
+			&model.Work{},
+			&model.Edition{},
+			&model.Listing{},
+			&model.ListingObservation{},
+			&model.ScrapeJob{},
+			&model.ScrapeRun{},
+			&model.WorkPerson{},
+			&model.CatalogMedia{},
+			&model.ListingMatch{},
+			&model.ActiveListing{},
+			&model.SoldListing{},
+		}
+		err := db.AutoMigrate(models...)
+		if err != nil {
+			return err
+		}
+		return MigrateCatalogStructure(db)
+	})
 }

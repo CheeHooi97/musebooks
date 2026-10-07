@@ -9,14 +9,18 @@ import (
 )
 
 type Handler struct {
-	User  *service.UserService
-	Admin *service.AdminService
+	Catalog *CatalogHandler
+	Browse  *CatalogBrowseHandler
+	User    *service.UserService
+	Admin   *service.AdminService
 }
 
 func NewHandler(services *service.Services) *Handler {
 	h := &Handler{
-		User:  services.UserService,
-		Admin: services.AdminService,
+		Catalog: NewCatalogHandler(services.CatalogService),
+		Browse:  NewCatalogBrowseHandler(services.CatalogService),
+		User:    services.UserService,
+		Admin:   services.AdminService,
 	}
 
 	return h

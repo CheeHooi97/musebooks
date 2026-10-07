@@ -2,11 +2,11 @@ package main
 
 import (
 	"context"
-	"fmt"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
+	"strings"
 	"syscall"
 
 	"musebooks/config"
@@ -19,37 +19,28 @@ import (
 
 	"github.com/labstack/echo/v4"
 	echoMiddleware "github.com/labstack/echo/v4/middleware"
-	"gorm.io/driver/postgres"
-	"gorm.io/gorm"
-	"gorm.io/gorm/schema"
 )
 
 func main() {
 	// Load config
 	config.LoadConfig()
 
-	dsn := fmt.Sprintf("host=%s user=%s password=%s dbname=%s port=%s sslmode=%s TimeZone=%s",
-		config.DBHost, config.DBUser, config.DBPassword, config.DBName, config.DBPort,
-		config.DBSSLMode, config.DBTimeZone)
-
-	// Connect to the database
-	db, err := gorm.Open(postgres.Open(dsn), &gorm.Config{
-		NamingStrategy: schema.NamingStrategy{
-			TablePrefix:   "",
-			SingularTable: true,
-		},
-	})
+	db, err := database.Open(false, false)
 	if err != nil {
-		log.Fatal("Failed to connect to the database:", err)
+		log.Fatal(err)
 	}
-
-	// Auto-migrate
-	err = database.Migrate(db)
-	if err != nil {
-		log.Fatal("Failed to migrate database:", err)
+	pool, _ := db.DB()
+	defer pool.Close()
+	if config.DBAutoMigrate && !config.DBSkipStartupMigrations {
+		if err := database.Migrate(db); err != nil {
+			log.Fatal("Failed to migrate database: ", err)
+		}
+		if err := database.SeedCatalog(db); err != nil {
+			log.Fatal("Failed to seed catalog: ", err)
+		}
 	}
-	if err := database.SeedCatalog(db); err != nil {
-		log.Fatal("Failed to seed catalog:", err)
+	if err := database.CheckCatalogSchema(db); err != nil {
+		log.Fatal(err)
 	}
 
 	// Initialize repository
@@ -66,7 +57,7 @@ func main() {
 
 	e := echo.New()
 	e.Use(echoMiddleware.CORSWithConfig(echoMiddleware.CORSConfig{
-		AllowOrigins: []string{"http://localhost:3000", "http://127.0.0.1:3000"},
+		AllowOrigins: strings.Split(config.CORSOrigins, ","),
 		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept, echo.HeaderAuthorization, "X-Scraper-Token"},
 	}))
 	e.HTTPErrorHandler = func(err error, c echo.Context) {
@@ -87,13 +78,12 @@ func main() {
 		api.ServeHTTP(res, req)
 		return
 	})
-	listenAddr := os.Getenv("MUSEBOOKS_API_ADDR")
-	if listenAddr == "" {
-		listenAddr = ":2001"
-	}
-	if err := e.Start(listenAddr); err != nil && err != http.ErrServerClosed {
-		log.Fatalf("Failed to start server: %v", err)
-	}
+	listenAddr := config.HTTPAddr
+	go func() {
+		if err := e.Start(listenAddr); err != nil && err != http.ErrServerClosed {
+			log.Fatalf("Failed to start server: %v", err)
+		}
+	}()
 
 	quit := make(chan os.Signal, 1)
 	signal.Notify(quit, os.Interrupt, syscall.SIGTERM)

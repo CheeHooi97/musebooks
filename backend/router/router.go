@@ -1,7 +1,6 @@
 package router
 
 import (
-	"musebooks/catalog"
 	"musebooks/handler"
 	"musebooks/middleware"
 	"musebooks/utils"
@@ -16,7 +15,13 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	e.Validator = utils.NewValidator()
 
 	v := e.Group("/v1", middleware.Authenticate(db))
-	catalogHandler := catalog.NewHandler(db)
+	catalogHandler := h.Catalog
+	browse := h.Browse
+	v.GET("/models", browse.Models)
+	v.GET("/models/:id/books", browse.DirectoryBooks)
+	v.GET("/publishers", browse.Publishers)
+	v.GET("/publishers/:id/books", browse.DirectoryBooks)
+	v.GET("/listings", browse.Listings)
 	v.GET("/books", catalogHandler.ListBooks)
 	v.GET("/books/:id", catalogHandler.GetBook)
 	v.GET("/editions/:id", catalogHandler.GetEdition)

@@ -1,0 +1,13 @@
+import React from "react";
+import { createRoot } from "react-dom/client";
+import Home from "./pages/Home";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import "@fontsource/gloock/400.css";
+import "@fontsource/hanken-grotesk/400.css";
+import "@fontsource/hanken-grotesk/500.css";
+import "@fontsource/hanken-grotesk/600.css";
+import "@fontsource/azeret-mono/400.css";
+import "@fontsource/azeret-mono/500.css";
+import "./styles.css";
+import "./catalog.css";
+createRoot(document.getElementById("root")).render(<React.StrictMode>{window.location.pathname.startsWith("/privacy-policy") ? <PrivacyPolicy /> : <Home />}</React.StrictMode>);

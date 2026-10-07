@@ -5,9 +5,12 @@ storage/serviceAccountKey.json
 frontend/node_modules/
 frontend/.next/
 frontend/out/
+frontend/.env.mobile.local
 scraper/bin/
 scraper/.cache/
 scraper/__pycache__/
 scraper_exp/__pycache__/
 .tmp/
 *.log
+
+frontend/dist/

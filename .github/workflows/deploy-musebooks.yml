@@ -46,7 +46,7 @@ jobs:
         working-directory: frontend
         run: |
           npm ci
-          node scripts/build-website.mjs
+          npm run build
 
       - name: Set up Go
         uses: actions/setup-go@v7
@@ -62,7 +62,7 @@ jobs:
           release_id="${GITHUB_SHA}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
           bundle="$RUNNER_TEMP/musebooks-bundle"
           mkdir -p "$bundle/website"
-          cp -a frontend/out/. "$bundle/website/"
+          cp -a frontend/dist/. "$bundle/website/"
           GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -C backend -trimpath -ldflags="-s -w" -o "$bundle/musebooks-api" .
           cp deploy/musebooks-api.service "$bundle/musebooks-api.service"
           cp deploy/musebooks-site.conf "$bundle/musebooks-site.conf"
