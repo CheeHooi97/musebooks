@@ -8,9 +8,9 @@ Cloudflare DNS for `musebooks.my` and `www.musebooks.my` is already proxied to t
 
 ## One-time server setup
 
-The shared Ubuntu/Debian server needs Nginx, PostgreSQL, and Certbot. The MuseBooks API listens on `127.0.0.1:2001`; MuseCards can keep its current services and ports. Allow inbound ports 80 and 443 in the server and provider firewalls.
+The shared Ubuntu/Debian server needs Nginx, PostgreSQL, and Certbot. The MuseBooks API listens on `127.0.0.1:2002`; port `2001` is already used by Picklah on this server. Nginx proxies MuseBooks API requests to its own port, leaving MuseCards and Picklah services intact. Allow inbound ports 80 and 443 in the server and provider firewalls.
 
-Create a separate database and service account. These commands assume PostgreSQL is installed locally:
+The production server already has a MuseBooks database with catalog data. Setup preserves that database and changes ownership only within MuseBooks. Do not recreate or restore over it. These PostgreSQL commands are for a fresh server with no MuseBooks database; the current server already has its dedicated `musebooks` PostgreSQL role and Linux service account:
 
 ~~~sh
 sudo -u postgres createuser --pwprompt musebooks
@@ -34,7 +34,7 @@ POSTGRES_SSLMODE=disable
 POSTGRES_TIMEZONE=Asia/Singapore
 SYSTEM_AES_KEY=replace-with-base64-encoded-32-byte-key
 SCRAPER_INGEST_TOKEN=replace-with-a-long-random-token
-MUSEBOOKS_API_ADDR=127.0.0.1:2001
+MUSEBOOKS_API_ADDR=127.0.0.1:2002
 MUSEBOOKS_SEED_DEMO=false
 ~~~
 

@@ -165,14 +165,14 @@ systemctl restart musebooks-api
 
 api_ready=0
 for attempt in $(seq 1 20); do
-  if curl --fail --silent --show-error --max-time 3 http://127.0.0.1:2001/v1/origins >/dev/null; then
+  if curl --fail --silent --show-error --max-time 3 http://127.0.0.1:2002/v1/origins >/dev/null; then
     api_ready=1
     break
   fi
   sleep 2
 done
 if (( ! api_ready )); then
-  echo "MuseBooks API did not become healthy at http://127.0.0.1:2001/v1/origins." >&2
+  echo "MuseBooks API did not become healthy at http://127.0.0.1:2002/v1/origins." >&2
   false
 fi
 
