@@ -1,0 +1,23 @@
+[Unit]
+Description=MuseBooks API
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=musebooks
+Group=musebooks
+WorkingDirectory=/opt/musebooks/backend
+EnvironmentFile=/opt/musebooks/backend/.env
+ExecStart=/opt/musebooks/backend/current/musebooks-api
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target

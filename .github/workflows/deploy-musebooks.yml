@@ -1,0 +1,124 @@
+name: Deploy MuseBooks
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: musebooks-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DEPLOY_HOST: ${{ secrets.DEPLOY_HOST }}
+      DEPLOY_PORT: ${{ secrets.DEPLOY_PORT }}
+      DEPLOY_USER: ${{ secrets.DEPLOY_USER }}
+      DEPLOY_SSH_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+      DEPLOY_KNOWN_HOSTS: ${{ secrets.DEPLOY_KNOWN_HOSTS }}
+    steps:
+      - name: Require the main branch
+        shell: bash
+        run: |
+          if [[ "$GITHUB_REF" != "refs/heads/main" ]]; then
+            echo 'Production deployment only runs from main.' >&2
+            exit 1
+          fi
+
+      - name: Check out main
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: Build website
+        working-directory: frontend
+        run: |
+          npm ci
+          node scripts/build-website.mjs
+
+      - name: Set up Go
+        uses: actions/setup-go@v7
+        with:
+          go-version-file: backend/go.mod
+          cache-dependency-path: backend/go.sum
+
+      - name: Package release
+        id: package
+        shell: bash
+        run: |
+          set -euo pipefail
+          release_id="${GITHUB_SHA}-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}"
+          bundle="$RUNNER_TEMP/musebooks-bundle"
+          mkdir -p "$bundle/website"
+          cp -a frontend/out/. "$bundle/website/"
+          GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -C backend -trimpath -ldflags="-s -w" -o "$bundle/musebooks-api" .
+          cp deploy/musebooks-api.service "$bundle/musebooks-api.service"
+          cp deploy/musebooks-site.conf "$bundle/musebooks-site.conf"
+          tar -czf "$RUNNER_TEMP/musebooks-${release_id}.tar.gz" -C "$bundle" .
+          echo "release_id=$release_id" >> "$GITHUB_OUTPUT"
+          echo "archive=$RUNNER_TEMP/musebooks-${release_id}.tar.gz" >> "$GITHUB_OUTPUT"
+
+      - name: Configure SSH
+        shell: bash
+        run: |
+          set -euo pipefail
+          : "${DEPLOY_HOST:?Add DEPLOY_HOST to GitHub Actions secrets}"
+          : "${DEPLOY_USER:?Add DEPLOY_USER to GitHub Actions secrets}"
+          : "${DEPLOY_SSH_KEY:?Add DEPLOY_SSH_KEY to GitHub Actions secrets}"
+          : "${DEPLOY_KNOWN_HOSTS:?Add DEPLOY_KNOWN_HOSTS to GitHub Actions secrets}"
+          DEPLOY_PORT="${DEPLOY_PORT:-22}"
+          [[ "$DEPLOY_HOST" =~ ^[A-Za-z0-9.-]+$ ]]
+          [[ "$DEPLOY_USER" =~ ^[A-Za-z0-9._-]+$ ]]
+          [[ "$DEPLOY_PORT" =~ ^[0-9]+$ ]]
+          install -m 0700 -d "$HOME/.ssh"
+          printf '%s\n' "$DEPLOY_SSH_KEY" > "$HOME/.ssh/musebooks_deploy"
+          printf '%s\n' "$DEPLOY_KNOWN_HOSTS" > "$HOME/.ssh/known_hosts"
+          chmod 0600 "$HOME/.ssh/musebooks_deploy" "$HOME/.ssh/known_hosts"
+          ssh-keygen -y -f "$HOME/.ssh/musebooks_deploy" >/dev/null
+          echo "DEPLOY_PORT=$DEPLOY_PORT" >> "$GITHUB_ENV"
+
+      - name: Upload and activate release
+        shell: bash
+        env:
+          RELEASE_ID: ${{ steps.package.outputs.release_id }}
+          RELEASE_ARCHIVE: ${{ steps.package.outputs.archive }}
+        run: |
+          set -euo pipefail
+          remote_archive="/tmp/musebooks-${RELEASE_ID}.tar.gz"
+          scp -i "$HOME/.ssh/musebooks_deploy" -P "$DEPLOY_PORT" \
+            -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            "$RELEASE_ARCHIVE" "$DEPLOY_USER@$DEPLOY_HOST:$remote_archive"
+          ssh -i "$HOME/.ssh/musebooks_deploy" -p "$DEPLOY_PORT" \
+            -o BatchMode=yes -o StrictHostKeyChecking=yes \
+            "$DEPLOY_USER@$DEPLOY_HOST" \
+            "sudo -n bash -s -- '$RELEASE_ID' '$remote_archive'" \
+            < deploy/remote-deploy-musebooks.sh
+
+      - name: Verify public website and API
+        shell: bash
+        env:
+          RELEASE_ID: ${{ steps.package.outputs.release_id }}
+        run: |
+          set -euo pipefail
+          page="$RUNNER_TEMP/musebooks-live.html"
+          curl --fail --silent --show-error --location --retry 10 --retry-all-errors --retry-delay 3 \
+            -H 'Cache-Control: no-cache' "https://musebooks.my/?deploy=${RELEASE_ID}" -o "$page"
+          grep -Fq 'MuseBooks' "$page"
+          if grep -Fq 'MuseCards' "$page"; then
+            echo 'musebooks.my is still serving MuseCards content.' >&2
+            exit 1
+          fi
+          curl --fail --silent --show-error --location --retry 10 --retry-all-errors --retry-delay 3 \
+            'https://musebooks.my/v1/origins' -o /dev/null

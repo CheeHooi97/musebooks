@@ -87,7 +87,11 @@ func main() {
 		api.ServeHTTP(res, req)
 		return
 	})
-	if err := e.Start(":2001"); err != nil && err != http.ErrServerClosed {
+	listenAddr := os.Getenv("MUSEBOOKS_API_ADDR")
+	if listenAddr == "" {
+		listenAddr = ":2001"
+	}
+	if err := e.Start(listenAddr); err != nil && err != http.ErrServerClosed {
 		log.Fatalf("Failed to start server: %v", err)
 	}
 
