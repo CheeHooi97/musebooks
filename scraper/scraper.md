@@ -1,3 +1,5 @@
+> Current policy: physical retail scraping remains excluded. Authorized Taiwan digital retail offers are supported for catalog, availability and current prices; digital sold-price scraping is unsupported. See digital-taiwan-inspection.md for verified stores and editions.
+
 # Photobook marketplace scraping specification
 
 Research date: 2026-09-14. Implementation directory: `scraper/`.
@@ -36,9 +38,15 @@ scheduled collection.
 | --- | --- | --- | --- |
 | JP | `{model} 写真集`, `{model} フォトブック`, `{model} 電子写真集`, `{ISBN}` | `{model} 電子写真集`, `{model} デジタル写真集` on an authorized store | ja-JP / Asia/Tokyo / JPY |
 | TW | `{model} 寫真集`, `{model} 寫真書`, `{model} 電子寫真集`, `{ISBN}` | `{model} 數位寫真`, `{model} 電子寫真集` on an authorized store | zh-TW / Asia/Taipei / TWD |
-| CN | `{model} 写真集`, `{model} 写真书`, `{model} 电子写真集`, `{ISBN}` | `{model} 电子写真集`, `{model} 电子书` on an authorized store | zh-CN / Asia/Shanghai / CNY |
-| MY | `{model} photobook`, `{model} photo book`, `{model} ebook`, `{ISBN}` | `{model} ebook`, `{model} digital photobook` on an authorized store | en-MY / Asia/Kuala_Lumpur / MYR |
-| Global | `{title} photobook`, `{ISBN}`, native-language title aliases | Exact title plus `ebook`, only with verified digital seller provenance | Source currency; do not assume USD from `$` alone |
+| CN | `{model} 写真集`, `{model} 写真书`, `{model} 电子写真集`, `{ISBN}` | `{model} 电子写真集` on an authorized store | zh-CN / Asia/Shanghai / CNY |
+| MY | `{model} photobook`, `{model} photo book`, `{ISBN}` | `{model} digital photobook` on an authorized store | en-MY / Asia/Kuala_Lumpur / MYR |
+| Global | `{title} photobook`, `{ISBN}`, native-language title aliases | Exact verified title plus `ebook`/`EPUB` only to locate its digital edition | Source currency; do not assume USD from `$` alone |
+
+An `ebook`, `EPUB`, or `PDF` label describes delivery format only. Keep an
+official digital edition when the selected product is independently verified
+as a human-model photobook; reject general ebooks even when a model name or
+photobook result appears in nearby recommendations. The selected product title,
+its structured metadata, and copy tied to that exact title establish scope.
 
 Run aliases as separate searches and union by listing identity. Do not send all
 synonyms as one AND query. Preserve original names and accents; normalize
@@ -181,15 +189,16 @@ The result surface includes an on-sale filter and unrelated bonus-only goods.
 Do not reuse the reference's trading-card category 7325.
 
 **Reference search:** `/search?keyword={encoded_query}&status=on_sale`.
-The reference uses `sold_out` for sold-only searches and `page_token=v1:N`
-for later pages. Treat the token shape as unverified: follow the actual Next
-control when available and stop on repeated listing IDs.
+The sold-only route uses `status=sold_out`. Pagination requires an observed
+token or a rendered Next URL; the worker no longer invents `page_token=v1:N`.
+Without a public next link, collection is limited to the rendered page.
 
 **Reference detail paths:** `/item/{id}` and `/shops/product/{id}`; keep their
 identities distinct. Extract item-local sold badge, condition and shipping payer.
 Use physical only; a title mentioning digital does not authorize a file resale.
-Existing backend configuration blocks this source. This document does not
-change that setting or establish permission to collect it.
+Public active and sold book details were verified on 2026-10-05. The seed now
+enables this source with a browser review status and six navigations per minute.
+See `japan-inspection.md` for the actual book-worker outputs and limitations.
 
 ### Rakuten Books / Kobo — `rakuten-books-jp`
 
@@ -206,8 +215,9 @@ genre, keyword and sort state; numeric page parameters have not been verified he
 Resolve detail IDs from actual product links; keep ISBN separate from a store's
 internal product number. Extract publisher, release date, binding/page count,
 format, tax-inclusive price and preorder/stock evidence from the selected edition.
-The current seed allows only physical: digital jobs need `allowedFormats` updated
-or a dedicated Kobo source after adapter validation.
+Physical active collection is live-verified. The seed supports physical and
+digital formats; Kobo digital active collection has not been live-verified in
+this inspection. No public completed-transaction feed is configured.
 
 ### BOOK☆WALKER Japan — `bookwalker-jp`
 
@@ -217,6 +227,10 @@ or a dedicated Kobo source after adapter validation.
 Use the photobook new-release category for discovery, then the rendered search
 form for a person/title. The combined artbook landing page needs extra relevance
 filtering. The store sells digital books; it does not ship a physical copy.
+
+The verified keyword route is `/search/?word={query}&qcat=8`; product links use
+`/de{UUID}/`. Login, history, series and campaign pages are not product links.
+Digital active collection is live-verified; retail sold-history jobs fail explicitly.
 
 Follow rendered numbered/Next links, retaining the category. Resolve product
 identity from the actual detail URL, commonly a `de...` identifier. A series
@@ -246,9 +260,10 @@ Search route: `https://search.books.com.tw/search/query/key/{encoded_query}/cat/
 Select the physical or e-book filter through the page and record the resulting
 URL; filter codes and pagination are not asserted here.
 
-**Host fix required:** search uses `search.books.com.tw`; detail pages use
-`www.books.com.tw/products/{id}`. The current seed allows only the latter, so
-search jobs cannot run until the search host is added. Preserve M/E/other product
+Search uses `search.books.com.tw`; detail pages use
+`www.books.com.tw/products/{id}`. The seed allows both hosts. Search tracking
+links under `/redirect/move/.../item/{id}/...` are normalized to product URLs.
+Preserve M/E/other product
 prefixes exactly; verify format on the page rather than relying only on a prefix.
 
 The [physical product example](https://www.books.com.tw/products/M010047280)
@@ -307,8 +322,8 @@ from JP Yahoo Auctions even though both are Yahoo-branded.
 
 | Source | Evidence | Search and records strategy |
 | --- | --- | --- |
-| BOOK☆WALKER Taiwan — proposed `bookwalker-tw` | [Observed detailed search](https://www.bookwalker.com.tw/index.php/search?detail=1) on the electronic-book store | Use the search form with title/person/寫真集 and retain its exact submitted URL. A guessed `/search?w=...` request was unavailable during research; do not call it verified. Follow book links, not series aggregation; capture digital edition and publisher metadata. |
-| Readmoo — proposed `readmoo-tw` | [First-party category navigation](https://console.readmoo.com/welcome) includes 寫真集 | Start on the consumer store and select that category or search by title. The candidate `/search/keyword?q={q}` could not be opened in research. Confirm the actual form action and detail IDs before implementation. Do not scrape account/console data; the linked page is only coverage evidence. |
+| BOOK☆WALKER Taiwan — `bookwalker-tw` | Public search form verified 2026-10-05 | Use `/search?w={query}` for single-book results. Omit `series_display` to follow `/product/{id}` links. Public active digital listings were collected; restricted content is skipped. |
+| Readmoo — `readmoo-tw` | Public search and active detail collection verified 2026-10-05 | Use `/search/keyword?q={query}` and `/book/{id}`. Verify the selected electronic-book sale price and purchase control; skip age/login gates. This retail storefront has no public completed-transaction feed. |
 
 Neither expansion source is currently in the backend seed. Use TWD and
 Asia/Taipei when those are actually the displayed currency/local dates; keep
@@ -595,3 +610,32 @@ Carousell/Mudah. Keep Rakuten Books and BOOK☆WALKER as edition/digital
 reference sources, not the primary resale-price feed. This order is an
 engineering judgment based on the cited marketplace evidence, not a guarantee
 of access or complete regional coverage.
+
+### Ruten sold discovery
+
+Keyword-only `ruten-tw` sold jobs use a verified public completed-auction event
+index. Rendered links are filtered locally for matching human-model photobooks,
+and native ended/winner/final-bid evidence is required on each detail page.
+Coverage is limited to that index's lots, not complete marketplace sold history.
+Use an explicit `searchUrl` for additional public indexes or `url` for a known
+completed item. The default live index currently yielded no matching sold
+photobooks. Empty results never establish successful sold-price verification.
+
+### Model catalog discovery and import
+
+`taiwan_photobook_models.json` records the researched model/artist names and
+aliases. `discover_model_catalog.py --model-file taiwan_photobook_models.json`
+supports resumable source searches, with `--sources` and `--max-detail-pages`
+controlling the collection budget. Follow returned cursors to inspect remaining
+pages; a completed initial job alone does not establish an exhaustive bibliography.
+
+`prepare_catalog_import.py` builds reviewed catalog records, preserves shared
+model credits, rejects calendar/illustration products, and mirrors available
+covers through `r2_covers.py`. Publisher metadata supplies physical editions;
+publisher retail prices are not marketplace asking or sold observations. Digital
+parts and cover-order editions remain distinct even when they share a work.
+
+After applying a manifest with the backend `catalog-import` command,
+`export_model_catalog.py` writes the source-linked per-model bibliography and
+JSON edition export. See `catalog-import-report.md` and
+`taiwan-photobook-catalog.md` for the actual verified batch and outstanding gaps.

@@ -1,0 +1,32 @@
+{
+  "pending": [
+    {
+      "model": "徐薇涵",
+      "url": "https://reading.udn.com/store/store/store_product.do?pid=183300",
+      "reason": "Current fetched page did not verify title identity",
+      "status": "Imported through Kingstone in batch 58"
+    },
+    {
+      "model": "林祐青",
+      "title": "Vivi林祐青 ShaShin首本個人寫真書",
+      "format": "digital",
+      "status": "Imported batch 56"
+    },
+    {
+      "model": "陳禹霏",
+      "url": "https://www.rakuten.com.tw/shop/kobo/product/b4b74eb3-89e4-3bb0-9daf-b74abff5e16f/",
+      "reason": "Sanmin 015876349 title conflicts with 周昕 description and Instagram; pending alternate retailer confirmation",
+      "status": "Imported verified HyRead edition through PChome in batch 57; Sanmin conflict retained"
+    },
+    {
+      "model": "唐明翎",
+      "url": "https://www.books.com.tw/products/E050121645",
+      "reason": "Indexed retailer page now returns 404; alternate source required"
+    },
+    {
+      "model": "願願",
+      "title": "願你擁有 ShaShin個人寫真書",
+      "status": "Imported batch 56"
+    }
+  ]
+}

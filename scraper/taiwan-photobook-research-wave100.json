@@ -1,0 +1,147 @@
+{
+  "purpose": "確認 BOOK☆WALKER 在售數位寫真，依相同 EISBN 連結到既有數位版次；不推定實體版。",
+  "batch": 100,
+  "checkedNotes": [
+    "Amis 艾蜜絲：商品頁 NT$249；取代資料庫中舊的 BOOK☆WALKER NT$197 觀測。EISBN 9789571095585、固定版面 EPUB、300 頁、2019-08-09。",
+    "曼容：BOOK☆WALKER 顯示 241 頁，既有 Readmoo/Sanmin 同 EISBN 數位版為 252 頁；保留既有頁數，待有更明確的出版方說明時再調和。",
+    "四個新增平台商品皆以商品頁所示 EISBN 匹配既有 digital edition；封面物件已存在於 R2，沒有重複上傳。",
+    "所有價格均為目前數位零售標價，不是已成交價格。"
+  ],
+  "sources": [
+    "https://www.bookwalker.com.tw/product/68340",
+    "https://www.bookwalker.com.tw/product/84331",
+    "https://www.bookwalker.com.tw/product/94281",
+    "https://www.bookwalker.com.tw/product/192714",
+    "https://www.bookwalker.com.tw/product/236735"
+  ],
+  "changes": {
+    "newEditions": 0,
+    "activeDigitalOffersRefreshed": 1,
+    "newWorks": 0,
+    "activeDigitalOffersAdded": 4,
+    "newCoverUploads": 0
+  },
+  "verifiedAt": "2026-10-07T07:08:11Z",
+  "works": [
+    {
+      "publisher": "尖端出版",
+      "format": "digital",
+      "bookwalkerOffer": {
+        "statusEvidence": null,
+        "status": "active",
+        "currency": "TWD",
+        "format": "digital",
+        "url": "https://www.bookwalker.com.tw/product/68340",
+        "observedAt": "2026-10-07T15:03:24+08:00",
+        "externalId": "68340",
+        "priceMinor": 24900
+      },
+      "releaseDate": "2019-08-09",
+      "catalogPageCount": 300,
+      "contentSummary": "固定版面 EPUB 數位寫真，300頁。官方商品介紹說明收錄先前特別販售的月曆與桌曆寫真，以及新增、未公開內容；未提供逐張影像或完整場景清單。",
+      "isbn": "9789571095585",
+      "workId": "work-tw-3e070b2f8132afc44337002d",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/678aebbf2854457ec601fe2adae6cfdfcb9d73b7b14159fda76dc957f753c4c0.jpg",
+      "title": "Amis艾蜜絲夢遊仙境數位寫真",
+      "coverObjectKey": "musebooks/covers/678aebbf2854457ec601fe2adae6cfdfcb9d73b7b14159fda76dc957f753c4c0.jpg",
+      "editionId": "edition-9753cafa9714257a98da5033",
+      "modelCredits": "艾蜜絲"
+    },
+    {
+      "publisher": "尖端出版",
+      "format": "digital",
+      "bookwalkerOffer": {
+        "statusEvidence": null,
+        "status": "active",
+        "currency": "TWD",
+        "format": "digital",
+        "url": "https://www.bookwalker.com.tw/product/84331",
+        "observedAt": "2026-10-07T15:08:11+08:00",
+        "externalId": "84331",
+        "priceMinor": 28800
+      },
+      "releaseDate": "2020-03-06",
+      "catalogPageCount": 286,
+      "contentSummary": "固定版式 EPUB，286頁。Readmoo 目錄列15章：初、精靈、探險、溪戲、塵囂、暮、靜夜、花海、傳說、相遇、漾、眼眸、繁花、祈願、歸；出版社描述台灣旅拍場景，包括花東、羅東、部落、烏石港與三清宮。",
+      "isbn": "9789571095844",
+      "workId": "work-tw-3e945700c868364414e1ebae",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/8261f815b4fe11754d79efa127d53c91adad54b0d88b5553c8a12c473bf754e3.jpg",
+      "title": "混血精靈NANA 書那娜數位寫真",
+      "coverObjectKey": "musebooks/covers/8261f815b4fe11754d79efa127d53c91adad54b0d88b5553c8a12c473bf754e3.jpg",
+      "editionId": "edition-0a388c4b6e5067448f1a9ab7",
+      "modelCredits": "書那娜"
+    },
+    {
+      "publisher": "尖端出版",
+      "format": "digital",
+      "bookwalkerOffer": {
+        "statusEvidence": null,
+        "status": "active",
+        "currency": "TWD",
+        "format": "digital",
+        "url": "https://www.bookwalker.com.tw/product/94281",
+        "observedAt": "2026-10-07T15:08:11+08:00",
+        "externalId": "94281",
+        "priceMinor": 29900
+      },
+      "releaseDate": "2020-08-10",
+      "catalogPageCount": 186,
+      "contentSummary": "固定版面 EPUB 186 頁，含側拍花絮影音。官方介紹指出兩位模特兒的寫真與互動，且不同版本只更換封面與頁面編排、內容相同；此為商品簡介摘要，非逐張影像清單。",
+      "isbn": "9789571095721",
+      "workId": "work-tw-b308cbd8292f131b7cf48caf",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/5322ab603fc1c7cab32d7aea5628c6767a33424a6076e3b56aeecc0461ab0022.jpg",
+      "title": "bestie閨蜜：孟潔×菲菲寫真",
+      "coverObjectKey": "musebooks/covers/5322ab603fc1c7cab32d7aea5628c6767a33424a6076e3b56aeecc0461ab0022.jpg",
+      "editionId": "edition-de546a4341f16ff59738d01f",
+      "modelCredits": "林孟潔、李恩菲"
+    },
+    {
+      "publisher": "尖端出版",
+      "format": "digital",
+      "bookwalkerOffer": {
+        "statusEvidence": null,
+        "status": "active",
+        "currency": "TWD",
+        "format": "digital",
+        "url": "https://www.bookwalker.com.tw/product/192714",
+        "observedAt": "2026-10-07T15:08:11+08:00",
+        "externalId": "192714",
+        "priceMinor": 35000
+      },
+      "releaseDate": "2024-03-20",
+      "catalogPageCount": 306,
+      "contentSummary": "固定版面 EPUB 306 頁，含 8 支側拍花絮影音。官方商品介紹提及浴缸與海灘拍攝情境；此為商品簡介摘要，非逐張影像清單。",
+      "isbn": "9786263778207",
+      "workId": "work-tw-d03c462dbc07223f4acf5652",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/84db4e50549add540a47a6f8d9481828c2cb1dcdd49d02280b5bdbc3ec6195d5.png",
+      "title": "冞冞糊糊愛上你：綵冞數位寫真",
+      "coverObjectKey": "musebooks/covers/84db4e50549add540a47a6f8d9481828c2cb1dcdd49d02280b5bdbc3ec6195d5.png",
+      "editionId": "edition-90120bb303d60a84356b57af",
+      "modelCredits": "吳綵冞"
+    },
+    {
+      "publisher": "尖端出版",
+      "format": "digital",
+      "bookwalkerOffer": {
+        "statusEvidence": null,
+        "status": "active",
+        "currency": "TWD",
+        "format": "digital",
+        "url": "https://www.bookwalker.com.tw/product/236735",
+        "observedAt": "2026-10-07T15:08:11+08:00",
+        "externalId": "236735",
+        "priceMinor": 35000
+      },
+      "releaseDate": "2025-02-01",
+      "catalogPageCount": 252,
+      "contentSummary": "固定版式 EPUB，252頁，附9段側拍花絮影音。尖端出版介紹列出甜美、活潑、性感及俏皮等形象；攝影師為李彥勳Ronin。",
+      "isbn": "9786264036115",
+      "workId": "work-tw-03c5ae12b61ad3d1e9c5b3b5",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/0b50e9c890d00b0fc5ea48d93de090a3d28facf55be1aff36ed0c9d71bb5aac2.jpg",
+      "title": "曼曼喜歡你 曼容數位寫真（含影音）",
+      "coverObjectKey": "musebooks/covers/0b50e9c890d00b0fc5ea48d93de090a3d28facf55be1aff36ed0c9d71bb5aac2.jpg",
+      "editionId": "edition-a0a17dce1636ff2ff25d3ebb",
+      "modelCredits": "曼容"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "batch": 99,
+  "verifiedAt": "2026-10-07T06:56:55Z",
+  "purpose": "Add a live-verified digital photobook edition without inferring a physical counterpart.",
+  "models": [
+    {
+      "name": "Bella",
+      "aliases": [
+        "Bella",
+        "貝拉"
+      ],
+      "identityNote": "BOOK☆WALKER credits the model as Bella; the product page does not give a longer personal name.",
+      "works": [
+        {
+          "workId": "work-tw-c1b585ce78d765af90a6d050",
+          "title": "Journey Girl Vol.12 Bella 貝拉",
+          "photographer": "一加",
+          "editions": [
+            {
+              "editionId": "edition-0761500a192047dd80601879",
+              "format": "digital",
+              "label": "數位版",
+              "isbn": "",
+              "identifierNote": "No ISBN/EISBN displayed on the verified BOOK☆WALKER page; source product ID 254904 is retained.",
+              "publisher": "滾石移動",
+              "releaseDate": "2025-08-05",
+              "pageCount": 156,
+              "seriesName": "Journey Girl",
+              "fileFormat": "EPUB（固定版面）",
+              "contentSummary": "156頁固定版面 EPUB 數位寫真雜誌。BOOK☆WALKER列出 Bella 與攝影師一加，系列為 Journey Girl；商品介紹未提供完整影像、造型或取景清單。",
+              "metadataSourceUrl": "https://www.bookwalker.com.tw/product/254904",
+              "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/254904/254904_1.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/348662b823840c05e250bd8cbfe12657eb374619fd7fdf03c3495ca97ddf96cb.jpg",
+              "coverObjectKey": "musebooks/covers/348662b823840c05e250bd8cbfe12657eb374619fd7fdf03c3495ca97ddf96cb.jpg",
+              "coverSHA256": "348662b823840c05e250bd8cbfe12657eb374619fd7fdf03c3495ca97ddf96cb",
+              "coverBytes": 151322,
+              "retailOffers": [
+                {
+                  "sourceId": "bookwalker-tw",
+                  "externalId": "254904",
+                  "url": "https://www.bookwalker.com.tw/product/254904",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 17900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T06:56:55Z"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "checkedSearches": [
+    {
+      "model": "子婷",
+      "sourceId": "readmoo-tw",
+      "result": "方糖兒 子婷數位寫真 is listed at NT$236 and is already in the catalog; no duplicate import."
+    },
+    {
+      "model": "許維恩",
+      "sourceId": "readmoo-tw",
+      "result": "Search returned 14 items, but no qualifying individual photobook listing; no import."
+    },
+    {
+      "model": "張景嵐",
+      "sourceId": "readmoo-tw",
+      "result": "Search returned 18 items, primarily magazines/interviews and unrelated products; no qualifying individual photobook listing."
+    }
+  ],
+  "sources": [
+    "https://www.bookwalker.com.tw/product/254904"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "batch": 93,
+  "verifiedAt": "2026-10-07T04:11:54Z",
+  "purpose": "Catalog an independently corroborated digital photobook from Sharp Point's publisher campaign, keeping its historical campaign price out of active retail observations.",
+  "models": [
+    {
+      "name": "韓智恩",
+      "aliases": [
+        "韓智恩",
+        "Nancy韓智恩"
+      ],
+      "identityNote": "Sharp Point's campaign describes model Nancy韓智恩, and its product card links the exact book cover to this photobook. This is not an assertion about the unrelated Korean actor with the same Han Ji-eun name.",
+      "works": [
+        {
+          "workId": "work-tw-408156daf6f8e182a64595e2",
+          "title": "夏日恩典：韓智恩數位寫真",
+          "photographer": "莉奈",
+          "editions": [
+            {
+              "editionId": "edition-813ac2f2c9c5d6ea446220ac",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "with_video",
+              "isbn": "9789571095646",
+              "publisher": "尖端出版",
+              "pageCount": 380,
+              "releaseDate": null,
+              "fileFormat": null,
+              "contentSummary": "數位寫真，380頁並附拍攝花絮影片；出版社活動頁稱由攝影師莉奈掌鏡。文件格式、正式發行日及完整造型／影像清單未找到可核對來源。",
+              "metadataSourceUrl": "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+              "retailerProductUrl": "https://www.bookwalker.com.tw/product/65875",
+              "retailerStatus": "unavailable",
+              "historicalCampaignPrice": {
+                "currency": "TWD",
+                "priceMinor": 26200,
+                "observedAt": "2020 campaign page; not a current offer"
+              },
+              "coverSourceUrl": "https://cp.bookwalker.com.tw/event/2020/20200416/images/25.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/dabf1bec565708f4e2309a2970fb59905efd0fce95a01d53fbb3a43981df3236.jpg",
+              "coverObjectKey": "musebooks/covers/dabf1bec565708f4e2309a2970fb59905efd0fce95a01d53fbb3a43981df3236.jpg",
+              "coverSHA256": "dabf1bec565708f4e2309a2970fb59905efd0fce95a01d53fbb3a43981df3236",
+              "coverBytes": 276045,
+              "retailOffers": []
+            }
+          ]
+        }
+      ],
+      "physicalEdition": "No physical version identified in the publisher campaign, NCL record or focused title search; this is not a claim that no physical issue exists.",
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://www.bookwalker.com.tw/product/65875",
+        "https://www.youtube.com/watch?v=x9LLwCLQDgY",
+        "https://nclfile.ncl.edu.tw/files/202201/14a17a9b-32cc-4216-8edd-6f776cc373a2.pdf"
+      ],
+      "findings": [
+        "Sharp Point's campaign card links the exact book image to BOOK☆WALKER product 65875 and credits 韓智恩／莉奈; the publisher description says 380 pages and includes a behind-the-scenes video.",
+        "Sharp Point's official 2020-04-09 promotional video names Nancy韓智恩, credits photographer 莉奈 and repeats the 380-page/video details. The promo date was not used as a publication date.",
+        "The National Central Library bibliography lists title 夏日恩典: 韓智恩數位寫真 and ISBN 9789571095646 with 韓智恩、莉奈 as creators.",
+        "The direct BOOK☆WALKER product page currently returns 404. Its publisher campaign page carries an old NT$262 campaign price; no current retail price was imported.",
+        "Sanmin's live ISBN search did not return this ISBN. No other current, directly verified digital offer or physical edition was found.",
+        "The publisher campaign image was downloaded from the product-linked public page, mirrored to R2 and passed public SHA-256 readback. The direct image host rejected non-browser fetches, so the already-rendered image was saved through the browser page asset."
+      ]
+    }
+  ]
+}

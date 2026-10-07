@@ -13,6 +13,7 @@ import re
 from dataclasses import dataclass
 from typing import Any
 from urllib.parse import parse_qsl, quote, urlencode, urlparse, urlunparse
+from digital_storefronts import EXTRA_DIGITAL_SOURCES, canonical_url, result_id
 
 
 class AdapterConfigurationError(ValueError):
@@ -88,6 +89,25 @@ class MarketplaceAdapter:
     key: str
     aliases: tuple[str, ...]
 
+    def canonical_result_url(self, url: str) -> str:
+        if self.key in EXTRA_DIGITAL_SOURCES:
+            return canonical_url(self.key, url)
+        if self.key in {"pubu-tw", "kobo-tw"} and self.is_result_url(url):
+            parsed = urlparse(url)
+            return f"https://{parsed.hostname}{parsed.path.rstrip('/')}"
+        if self.key == "rakuten-books-jp" and _host(url) == "books.rakuten.co.jp" and re.fullmatch(r"/(?:rb|rk)/[0-9a-zA-Z-]+/?", _path(url)):
+            parsed = urlparse(url)
+            return f"https://books.rakuten.co.jp{parsed.path.rstrip('/')}/"
+        if self.key == "ruten-tw" and _host(url) == "www.ruten.com.tw" and _path(url) == "/item/show":
+            match = re.fullmatch(r"([0-9]+)(?:&.*)?", urlparse(url).query)
+            if match:
+                return f"https://www.ruten.com.tw/item/{match.group(1)}/"
+        if self.key == "books-com-tw" and _host(url) == "search.books.com.tw" and _path(url).startswith("/redirect/move/"):
+            match = re.search(r"/item/([A-Za-z0-9]+)(?:/|$)", urlparse(url).path)
+            if match:
+                return f"https://www.books.com.tw/products/{match.group(1)}"
+        return url
+
     def build_search_url(
         self,
         query: str,
@@ -98,6 +118,32 @@ class MarketplaceAdapter:
         operation = _clean_query(operation).lower()
         format_value = _clean_query(format_value).lower()
         encoded = quote(query, safe="")
+
+        if self.key in EXTRA_DIGITAL_SOURCES:
+            if operation == "sold_discovery":
+                raise AdapterConfigurationError("digital retailers do not expose public completed-sale prices")
+            if not query:
+                raise AdapterConfigurationError("digital retail discovery requires request.query")
+            routes = {
+                "hami-tw": f"https://www.hamibook.com.tw/Search/finish?keyword={encoded}",
+                "google-play-books-tw": f"https://play.google.com/store/search?q={encoded}&c=books&hl=zh_TW&gl=TW",
+                "momo-books-tw": f"https://www.momoshop.com.tw/search/searchShop.jsp?keyword={encoded}",
+                "pchome-books-tw": f"https://24h.pchome.com.tw/search/?q={encoded}",
+                "kingstone-books-tw": f"https://www.kingstone.com.tw/search/key/{encoded}",
+                "yahoo-shopping-books-tw": f"https://tw.buy.yahoo.com/search/product?p={encoded}",
+            }
+            if self.key in routes:
+                return routes[self.key]
+            raise AdapterConfigurationError(f"{self.key} requires an exact public ebook URL or verified request.searchUrl")
+
+        if self.key in {"pubu-tw", "kobo-tw"}:
+            if operation == "sold_discovery":
+                raise AdapterConfigurationError("digital retailers do not expose public completed-sale prices")
+            if not query:
+                raise AdapterConfigurationError("digital retail discovery requires request.query")
+            if self.key == "pubu-tw":
+                return f"https://www.pubu.com.tw/search?q={encoded}"
+            return f"https://www.kobo.com/tw/zh/search?query={encoded}"
 
         if self.key == "ebay":
             if not query:
@@ -134,9 +180,7 @@ class MarketplaceAdapter:
         if self.key == "bookwalker-jp":
             if not query:
                 return "https://bookwalker.jp/new/?qcat=8"
-            raise AdapterConfigurationError(
-                "BOOK☆WALKER Japan search is form-driven; submit the exact rendered searchUrl"
-            )
+            return f"https://bookwalker.jp/search/?word={encoded}&qcat=8"
 
         if self.key == "books-com-tw":
             if not query:
@@ -146,11 +190,17 @@ class MarketplaceAdapter:
         if self.key == "ruten-tw":
             if not query:
                 raise AdapterConfigurationError("Ruten requires request.query or request.searchUrl")
+            if operation == "sold_discovery":
+                # Verified public index of ended auctions, not a site-wide
+                # keyword sold-search endpoint. The worker filters locally.
+                return "https://pub.ruten.com.tw/ruten20th/bid.html"
             return f"https://www.ruten.com.tw/find/?q={encoded}"
 
         if self.key == "shopee-tw":
             if not query:
                 raise AdapterConfigurationError("Shopee Taiwan requires request.query or request.searchUrl")
+            if operation == "sold_discovery":
+                raise AdapterConfigurationError("Shopee Taiwan does not expose a verified public sold-history route")
             return f"https://shopee.tw/search?keyword={encoded}"
 
         if self.key == "yahoo-tw":
@@ -163,14 +213,14 @@ class MarketplaceAdapter:
             return f"https://tw.bid.yahoo.com/search/auction/product?p={encoded}"
 
         if self.key == "bookwalker-tw":
-            raise AdapterConfigurationError(
-                "BOOK☆WALKER Taiwan search is form-driven; submit the exact rendered searchUrl"
-            )
+            if not query:
+                raise AdapterConfigurationError("BOOK☆WALKER Taiwan requires request.query or request.searchUrl")
+            return f"https://www.bookwalker.com.tw/search?w={encoded}"
 
         if self.key == "readmoo-tw":
-            raise AdapterConfigurationError(
-                "Readmoo search is form-driven; submit the exact rendered searchUrl"
-            )
+            if not query:
+                raise AdapterConfigurationError("Readmoo requires request.query or request.searchUrl")
+            return f"https://readmoo.com/search/keyword?q={encoded}"
 
         if self.key == "jd-cn":
             if not query:
@@ -219,11 +269,15 @@ class MarketplaceAdapter:
         if self.key == "rakuma-jp":
             if not query:
                 raise AdapterConfigurationError("Rakuma requires request.query or request.searchUrl")
+            if operation == "sold_discovery":
+                raise AdapterConfigurationError("Rakuma sold discovery requires an exact public sold-listing URL or verified searchUrl")
             return f"https://fril.jp/s?query={encoded}"
 
         if self.key == "yahoo-furima-jp":
             if not query:
                 raise AdapterConfigurationError("Yahoo! Flea requires request.query or request.searchUrl")
+            if operation == "sold_discovery":
+                raise AdapterConfigurationError("Yahoo! Flea sold discovery requires an exact public sold-listing URL or verified searchUrl")
             return f"https://paypayfleamarket.yahoo.co.jp/search/{encoded}"
 
         if self.key == "surugaya-jp":
@@ -265,10 +319,13 @@ class MarketplaceAdapter:
         if self.key == "mercari-jp":
             if page_number == 1 and not cursor:
                 return url
-            token = cursor or f"v1:{page_number - 1}"
-            return _with_query(url, page_token=token)
+            if not cursor:
+                raise AdapterConfigurationError("Mercari pagination requires an observed page token or exact rendered next URL")
+            return _with_query(url, page_token=cursor)
         if self.key == "ruten-tw":
             return _with_query(url, p=str(page_number))
+        if self.key == "yahoo-tw":
+            return _with_query(url, pg=str(page_number))
         if self.key in {"shopee-tw", "shopee-my"}:
             return _with_query(url, page=str(page_number - 1))
         if self.key == "jd-cn":
@@ -288,10 +345,19 @@ class MarketplaceAdapter:
     def is_result_url(self, url: str) -> bool:
         """Return true only for a likely product/listing detail link."""
 
+        if self.key in EXTRA_DIGITAL_SOURCES:
+            return bool(result_id(self.key, url))
+
+        if self.key not in {"pubu-tw", "kobo-tw"}:
+            url = self.canonical_result_url(url)
         host = _host(url)
         path = _path(url)
         query = _query(url)
 
+        if self.key == "pubu-tw":
+            return host == "www.pubu.com.tw" and bool(re.fullmatch(r"/ebook/\d+/?", path))
+        if self.key == "kobo-tw":
+            return host == "www.kobo.com" and bool(re.fullmatch(r"/tw/zh/ebook/[a-z0-9_-]+/?", path, re.I))
         if self.key == "ebay":
             return host.endswith("ebay.com") and "/itm/" in path
         if self.key == "yahoo-auctions-jp":
@@ -301,14 +367,9 @@ class MarketplaceAdapter:
                 "/item/" in path or "/items/" in path or "/shops/product/" in path
             )
         if self.key == "rakuten-books-jp":
-            return host.endswith("books.rakuten.co.jp") and (
-                path.startswith("/rb/")
-                or path.startswith("/rk/")
-                or "/product/" in path
-                or "/book/" in path
-            )
+            return host == "books.rakuten.co.jp" and bool(re.fullmatch(r"/(?:rb|rk)/[0-9a-zA-Z-]+/?", path))
         if self.key == "bookwalker-jp":
-            return host.endswith("bookwalker.jp") and not self._is_navigation_path(path)
+            return host in {"bookwalker.jp", "www.bookwalker.jp"} and bool(re.fullmatch(r"/de[0-9a-f-]{32,36}/?", path, re.I))
         if self.key == "books-com-tw":
             return host.endswith("books.com.tw") and "/products/" in path
         if self.key == "ruten-tw":
@@ -318,9 +379,9 @@ class MarketplaceAdapter:
         if self.key == "yahoo-tw":
             return host == "tw.bid.yahoo.com" and "/item/" in path
         if self.key == "bookwalker-tw":
-            return host.endswith("bookwalker.com.tw") and not self._is_navigation_path(path)
+            return (host == "bookwalker.com.tw" or host.endswith(".bookwalker.com.tw")) and bool(re.fullmatch(r"/(?:book|product)/\d+/?", path))
         if self.key == "readmoo-tw":
-            return host.endswith("readmoo.com") and not self._is_navigation_path(path)
+            return (host == "readmoo.com" or host.endswith(".readmoo.com")) and bool(re.fullmatch(r"/book/\d+/?", path))
         if self.key == "jd-cn":
             return host == "item.jd.com" and bool(re.search(r"/[^/]+\.html$", path))
         if self.key == "taobao-cn":
@@ -363,10 +424,15 @@ class MarketplaceAdapter:
         """Extract a source item ID; return empty when identity is not explicit."""
 
         structured = structured if isinstance(structured, dict) else {}
+        if self.key in EXTRA_DIGITAL_SOURCES:
+            return result_id(self.key, url)
+        url = self.canonical_result_url(url)
         host = _host(url)
         path = urlparse(url).path
         query = _query(url)
 
+        if self.key in {"pubu-tw", "kobo-tw"}:
+            return path.rstrip('/').rsplit('/', 1)[-1] if self.is_result_url(url) else ""
         if self.key == "ebay":
             match = re.search(r"/itm/(?:[^/]+/)?([0-9]+)(?:/|$)", path)
             if match:
@@ -522,6 +588,9 @@ _ADAPTERS = (
     MarketplaceAdapter("shopee-tw", ("shopee-tw", "shopee_tw")),
     MarketplaceAdapter("yahoo-tw", ("yahoo-tw", "yahoo_tw", "yahoo-auctions-tw", "yahoo_auctions_tw")),
     MarketplaceAdapter("bookwalker-tw", ("bookwalker-tw", "bookwalker_tw")),
+    MarketplaceAdapter("pubu-tw", ("pubu-tw", "pubu_tw")),
+    *[MarketplaceAdapter(key, (key, key.replace('-', '_'))) for key in sorted(EXTRA_DIGITAL_SOURCES)],
+    MarketplaceAdapter("kobo-tw", ("kobo-tw", "kobo_tw")),
     MarketplaceAdapter("readmoo-tw", ("readmoo-tw", "readmoo_tw")),
     MarketplaceAdapter("jd-cn", ("jd-cn", "jd_cn")),
     MarketplaceAdapter("taobao-cn", ("taobao-cn", "taobao_cn", "tmall-cn", "tmall_cn")),

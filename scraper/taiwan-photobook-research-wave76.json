@@ -1,0 +1,52 @@
+{
+  "model": "YURI / 陳洛心 (catalogued under earlier credited name 陳怡叡)",
+  "identityNote": "Sanmin author bio names current Talent 陳洛心 / YURI and references the earlier 陳怡叡 photo book; identity was cross-checked against contemporaneous reporting of her name change.",
+  "workId": "work-tw-47da677df17f8ec405473a4f",
+  "editions": [
+    {
+      "format": "physical",
+      "isbn": "9786264196444",
+      "label": "心動凝望書封版",
+      "pages": 160,
+      "dimensions": "25.6 × 18 × 1 cm",
+      "releaseDate": "2025-09-05",
+      "extra": "One 30 × 42 cm limited poster",
+      "sourceUrl": "https://www.sanmin.com.tw/product/index/014813838"
+    },
+    {
+      "format": "digital",
+      "eisbn": "9786264196291",
+      "container": "EPUB fixed layout",
+      "releaseDate": "2025-09-05",
+      "extra": "Readmoo lists 40 bonus photos",
+      "sourceUrl": "https://www.sanmin.com.tw/product/index/014791167",
+      "bonusSourceUrl": "https://reading.udn.com/ebook/store/store_product.do?pid=45773"
+    }
+  ],
+  "description": "YURI in Japanese snow scenery, streets and city settings; photographer 鄭弘敬. The digital edition does not inherit the paper poster.",
+  "workTitle": "洛入你心：陳怡叡寫真",
+  "editionRecords": [
+    {
+      "id": "edition-b0e655975b6645acc30523cd",
+      "format": "physical",
+      "isbn": "9786264196444",
+      "pages": 160,
+      "dimensions": "25.6cm*18cm*1cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/0025ab7bedba8b60af7fb81da526b5d298e2b5a2db84fa001eb82e0806ce596b.jpg",
+      "coverObjectKey": "musebooks/covers/0025ab7bedba8b60af7fb81da526b5d298e2b5a2db84fa001eb82e0806ce596b.jpg",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014813838",
+      "contentSummary": "日本雪景、街巷與城市景色中的YURI寫真，攝影師鄭弘敬掌鏡；160頁紙本，附30×42cm限定海報1張。此筆為心動凝望書封版。"
+    },
+    {
+      "id": "edition-0c6e456e08e6270aff8b4f69",
+      "format": "digital",
+      "isbn": "9786264196291",
+      "pages": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/a33efac3a8b70b4c0a6e2c4aecd322eb096fccb47f5a82bcd59969e5752f99a2.png",
+      "coverObjectKey": "musebooks/covers/a33efac3a8b70b4c0a6e2c4aecd322eb096fccb47f5a82bcd59969e5752f99a2.png",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014791167",
+      "contentSummary": "EPUB固定版式數位寫真，主題為日本雪景、街巷與城市景色；Readmoo列明加贈40幅獨享福利美照。電子版不繼承紙本限定海報。"
+    }
+  ]
+}

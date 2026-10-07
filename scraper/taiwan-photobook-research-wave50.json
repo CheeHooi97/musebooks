@@ -1,0 +1,54 @@
+{
+  "leads": [
+    {
+      "models": [
+        "成語蕎"
+      ],
+      "title": "另一個我/a new chapter 寫真＋EP / B款",
+      "url": "https://www.kingstone.com.tw/basic/2019500058167/",
+      "format": "physical",
+      "status": "Imported and verified in research batch 50"
+    },
+    {
+      "models": [
+        "李馨"
+      ],
+      "title": "李馨CinCin -ShaShin celeb present寫真書",
+      "url": "https://books.apple.com/jp/book/id1564890878",
+      "format": "digital",
+      "status": "Imported HyRead JPG edition through PChome in batch 53"
+    },
+    {
+      "models": [
+        "愛語莎Vanessa"
+      ],
+      "title": "愛語莎Vanessa - ShaShin celeb present寫真書",
+      "url": "https://books.apple.com/us/book/id1564889023",
+      "format": "digital",
+      "status": "Imported through Kingstone in research batch 51"
+    },
+    {
+      "models": [
+        "莙莙Queena",
+        "小林兒Royi",
+        "李馨CinCin",
+        "愛語莎Vanessa"
+      ],
+      "title": "ShaShin celeb present 4 in 1 四合一寫真書",
+      "url": "https://www.rakuten.com.tw/shop/kobo/product/2b332de8-f66f-3b1e-9681-f1e3fdaf2ced/",
+      "format": "digital",
+      "status": "Imported as four-credit collection in batch 54"
+    },
+    {
+      "models": [
+        "小林兒Royi"
+      ],
+      "title": "小林兒Royi -ShaShin celeb present寫真書",
+      "url": "https://books.apple.com/au/book/id1564889801",
+      "format": "digital",
+      "status": "Imported through Sanmin in batch 52"
+    }
+  ],
+  "imported": false,
+  "limitation": "All listed title leads resolved; platform-specific formats and dates retained"
+}

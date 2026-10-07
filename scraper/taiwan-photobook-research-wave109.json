@@ -1,0 +1,117 @@
+{
+  "batch": 109,
+  "verifiedAt": "2026-10-07",
+  "purpose": "Add two Taiwan-published photobooks with format-specific print and ebook editions, covers, composition and verified active store prices.",
+  "models": [
+    "陳柏文、姜典",
+    "陳肇天"
+  ],
+  "works": [
+    {
+      "model": "陳柏文、姜典",
+      "title": "柏愛典藏：陳柏文×姜典寫真書",
+      "photographer": "藍陳福堂",
+      "publisher": "台灣角川",
+      "workId": "work-tw-1881f911a2b2ae0d4aa59f3b",
+      "sources": [
+        "https://www.sanmin.com.tw/product/index/012866521",
+        "https://www.bookwalker.com.tw/product/190606"
+      ],
+      "composition": "陳柏文與姜典因戲結緣後合拍的雙人寫真，收錄中台灣海灘、旅宿、鐵道、街頭及秘境等場景，呈現兩人的旅行互動與Q&A心情故事。",
+      "editions": [
+        {
+          "format": "physical",
+          "label": "平裝版",
+          "url": "https://www.sanmin.com.tw/product/index/012866521",
+          "releaseDate": "2024-02-22",
+          "pageCount": 160,
+          "isbnOrEisbn": "9786263787049",
+          "metadataNote": "三民紙本頁確認ISBN 9786263787049、平裝160頁、出版社台灣角川及攝影藍陳福堂。內容含中台灣旅拍和Q&A；紙本附兩款隨機A3折疊海報。三民現有庫存1本，商品可加入購物車。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/146c1e7a89a0cfa2ab2ee2b6e11d707e9372716677a6776c30a9089bd1ee1c1a.jpg",
+          "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/626/626378704.jpg",
+          "activeOffer": {
+            "sourceId": "sanmin-print-tw",
+            "url": "https://www.sanmin.com.tw/product/index/012866521",
+            "priceTWD": 612,
+            "evidence": "Live Sanmin Books Taiwan product page showed the physical paperback at NT$612, stock 1, and an enabled add-to-cart button. This is a current physical-store asking price, not a completed-sale price."
+          }
+        },
+        {
+          "format": "digital",
+          "label": "數位特別版固定版面 EPUB",
+          "url": "https://www.bookwalker.com.tw/product/190606",
+          "releaseDate": "2024-03-08",
+          "pageCount": 0,
+          "isbnOrEisbn": "9786263788541",
+          "metadataNote": "BOOK☆WALKER列固定版面EPUB、EISBN 9786263788541，與紙本ISBN分開保存。電子版包含合拍影像和Q&A；不把紙本隨附海報視為電子內容。封面與紙本封面分開保存。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/28668280d8f0c2c91a465a028e621634cab78d2e639c8d4dc0d04ee024e72bf4.jpg",
+          "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/190606/190606_1.jpg",
+          "activeOffer": {
+            "sourceId": "bookwalker-tw",
+            "url": "https://www.bookwalker.com.tw/product/190606",
+            "priceTWD": 510,
+            "evidence": "Live BOOK☆WALKER Taiwan product page showed active fixed-layout EPUB checkout/cart at NT$510, EISBN 9786263788541, and release date 2024-03-08. This is a current digital asking price, not a completed sale."
+          }
+        }
+      ]
+    },
+    {
+      "model": "陳肇天",
+      "title": "Sky：陳肇天寫真書",
+      "photographer": "曾崇倫",
+      "publisher": "台灣角川",
+      "workId": "work-tw-e2df03728b6a30c4aac8f5fc",
+      "sources": [
+        "https://www.kadokawa.com.tw/products/9786263526198",
+        "https://www.bookwalker.com.tw/product/168155"
+      ],
+      "composition": "陳肇天Sky首本個人寫真書，結合海灘及自然景色、運動與私密生活影像，以及介紹其出道歷程的心情散文；曾崇倫掌鏡。",
+      "editions": [
+        {
+          "format": "physical",
+          "label": "首版紙本寫真書",
+          "url": "https://www.kadokawa.com.tw/products/9786263526198",
+          "releaseDate": "2023-06-28",
+          "pageCount": 0,
+          "isbnOrEisbn": "9786263526198",
+          "metadataNote": "台灣角川確認ISBN 9786263526198、作者文／陳肇天Sky、攝影曾崇倫、上市日2023-06-28及首刷隨機親簽寫真卡；目前顯示售完，沒有建立紙本價格。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/f3ac980688bccf1a1c7e78daf6faaa61b19b79d7f25f6365e7506c90c22b403c.webp",
+          "coverSourceUrl": "https://shoplineimg.com/655b0f3c9b81d900188b35f1/66400a1f100517001fa6d471/800x.webp?source_format=jpg",
+          "activeOffer": null
+        },
+        {
+          "format": "digital",
+          "label": "數位特別版固定版面 EPUB",
+          "url": "https://www.bookwalker.com.tw/product/168155",
+          "releaseDate": "2023-07-07",
+          "pageCount": 160,
+          "isbnOrEisbn": "9786263526631",
+          "metadataNote": "BOOK☆WALKER列固定版面EPUB、160頁、EISBN 9786263526631；另存數位封面，不混用紙本封面或紙本首刷親簽卡。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/0b39cca68393a5daef4097a1cc34a79eec13eae7cba3fa7985a528218b4691ca.jpg",
+          "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/168155/168155_1.jpg",
+          "activeOffer": {
+            "sourceId": "bookwalker-tw",
+            "url": "https://www.bookwalker.com.tw/product/168155",
+            "priceTWD": 450,
+            "evidence": "Live BOOK☆WALKER Taiwan product page showed active fixed-layout EPUB checkout/cart at NT$450, 160 pages, EISBN 9786263526631, and release date 2023-07-07. This is a current digital asking price, not a completed-sale price."
+          }
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Two new works and four separate editions are prepared. The print and ebook cover artwork differs for both books, so all four covers were uploaded as distinct assets.",
+    "Three current offers are recorded: Sanmin physical paperback NT$612 for 柏愛典藏; BOOK☆WALKER EPUB NT$510 for 柏愛典藏; and BOOK☆WALKER EPUB NT$450 for Sky. These are asking prices, not completed-sale prices.",
+    "Kadokawa marks the Sky physical edition sold out; its publication record is retained without an active offer.",
+    "R2 cover objects passed public GET SHA-256 readback before import."
+  ],
+  "changes": {
+    "newWorks": 2,
+    "newPhysicalEditions": 2,
+    "newDigitalEditions": 2,
+    "verifiedActivePhysicalOffers": 1,
+    "verifiedActiveDigitalOffers": 2,
+    "newR2CoverUploads": 4,
+    "pendingCovers": 0
+  }
+}

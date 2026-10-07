@@ -1,0 +1,380 @@
+{
+  "batch": 95,
+  "verifiedAt": "2026-10-07T04:39:52Z",
+  "purpose": "Add six individually verified Sharp Point digital EPUB photobooks, publisher-linked cover assets and currently purchasable Taiwan retail offers. Digital editions are kept separate from physical listings.",
+  "models": [
+    {
+      "name": "艾璐",
+      "aliases": [
+        "艾璐",
+        "艾璐Airu",
+        "Airu"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-73f9981de4e00777458db805",
+          "title": "我艾你 愛してる 艾璐 數位寫真",
+          "photographer": "戴群芳",
+          "editions": [
+            {
+              "editionId": "edition-5073a280a691752c60ef1506",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571095837",
+              "eisbn": "9789571095837",
+              "publisher": "尖端出版",
+              "releaseDate": "2020-03-11",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 190,
+              "photographer": "戴群芳",
+              "contentSummary": "固定版式 EPUB，190頁。尖端／Readmoo簡介稱本書收錄曾特別販售的月曆、桌曆作品，以及新拍與未公開影像；完整造型目錄未標示。",
+              "metadataSourceUrl": "https://readmoo.com/book/210133422000101",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/39.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/8f242dcced457902efa1e595dfb6685308873d4005acb7541fc87815a50d2a01.jpg",
+              "coverObjectKey": "musebooks/covers/8f242dcced457902efa1e595dfb6685308873d4005acb7541fc87815a50d2a01.jpg",
+              "coverSHA256": "8f242dcced457902efa1e595dfb6685308873d4005acb7541fc87815a50d2a01",
+              "coverBytes": 263530,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210133422000101",
+                  "url": "https://readmoo.com/book/210133422000101",
+                  "verificationUrl": "https://readmoo.com/book/210133422000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 23900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:39:52Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://www.bookwalker.com.tw/product/84828",
+        "https://readmoo.com/book/210133422000101"
+      ],
+      "findings": [
+        "The official Sharp Point campaign directly links the publisher cover asset to the named photographer/model card and describes its image themes. The campaign's old promotional price is archival, not a current offer.",
+        "Live Sanmin and/or canonical Readmoo product details provide the currently purchasable EPUB EISBN, publication date, fixed-layout format, page count when shown, and listed price.",
+        "No physical edition matching this title or EISBN was verified."
+      ]
+    },
+    {
+      "name": "雨䕕",
+      "aliases": [
+        "雨䕕",
+        "雨蓮"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-1f5229d6d2181083b2ac0d83",
+          "title": "Fairy雨䕕同名數位寫真",
+          "photographer": "戴群芳",
+          "editions": [
+            {
+              "editionId": "edition-9a0bba32cfd50eb1c9a3f074",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571095578",
+              "eisbn": "9789571095578",
+              "publisher": "尖端出版",
+              "releaseDate": "2019-08-28",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 244,
+              "photographer": "戴群芳",
+              "contentSummary": "固定版式 EPUB，244頁。尖端簡介稱作品收錄先前特別販售的月曆、桌曆影像，也加入新拍與未公開內容；完整造型目錄未標示。",
+              "metadataSourceUrl": "https://readmoo.com/book/210114818000101",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/30.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/2e3299b0ce4f3027183691bdf77b1dad9d016701699b9b057cbaeb53c5f315e1.jpg",
+              "coverObjectKey": "musebooks/covers/2e3299b0ce4f3027183691bdf77b1dad9d016701699b9b057cbaeb53c5f315e1.jpg",
+              "coverSHA256": "2e3299b0ce4f3027183691bdf77b1dad9d016701699b9b057cbaeb53c5f315e1",
+              "coverBytes": 304627,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210114818000101",
+                  "url": "https://readmoo.com/book/210114818000101",
+                  "verificationUrl": "https://readmoo.com/book/210114818000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 23600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:39:52Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://www.bookwalker.com.tw/product/69341",
+        "https://readmoo.com/book/210114818000101"
+      ],
+      "findings": [
+        "The official Sharp Point campaign directly links the publisher cover asset to the named photographer/model card and describes its image themes. The campaign's old promotional price is archival, not a current offer.",
+        "Live Sanmin and/or canonical Readmoo product details provide the currently purchasable EPUB EISBN, publication date, fixed-layout format, page count when shown, and listed price.",
+        "No physical edition matching this title or EISBN was verified. The model name uses 雨䕕 exactly as printed on the publisher and retailer pages; it is not normalized to 雨蓮."
+      ]
+    },
+    {
+      "name": "Neneko",
+      "aliases": [
+        "Neneko",
+        "肉感少女",
+        "ねねこ"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-940280fecbf67b9cc5c38685",
+          "title": "肉感少女的幻想：Neneko性感寫真書",
+          "photographer": "陳語瑄",
+          "editions": [
+            {
+              "editionId": "edition-2f5939412972fa6005c518e2",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571075891",
+              "eisbn": "9789571075891",
+              "publisher": "尖端出版",
+              "releaseDate": "2017-08-08",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": null,
+              "photographer": "陳語瑄",
+              "contentSummary": "固定版式 EPUB。Sanmin商品簡介列出水手服、幼稚園制服、巫女、啦啦隊服與睡衣等角色扮演造型；沒有標示頁數或完整照片目錄。",
+              "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014360185",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/10.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/67d6c5bc9ae9d9d448808b3a3a635fbbd8478e864bb4281080d5a815e373379a.jpg",
+              "coverObjectKey": "musebooks/covers/67d6c5bc9ae9d9d448808b3a3a635fbbd8478e864bb4281080d5a815e373379a.jpg",
+              "coverSHA256": "67d6c5bc9ae9d9d448808b3a3a635fbbd8478e864bb4281080d5a815e373379a",
+              "coverBytes": 49459,
+              "retailOffers": [
+                {
+                  "sourceId": "sanmin-books-tw",
+                  "externalId": "014360185",
+                  "url": "https://www.sanmin.com.tw/product/index/014360185",
+                  "verificationUrl": "https://www.sanmin.com.tw/product/index/014360185",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 27000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:39:52Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://www.bookwalker.com.tw/product/48911",
+        "https://www.sanmin.com.tw/product/index/014360185"
+      ],
+      "findings": [
+        "The official Sharp Point campaign directly links the publisher cover asset to the named photographer/model card and describes its image themes. The campaign's old promotional price is archival, not a current offer.",
+        "Live Sanmin and/or canonical Readmoo product details provide the currently purchasable EPUB EISBN, publication date, fixed-layout format, page count when shown, and listed price.",
+        "No physical edition matching this title or EISBN was verified."
+      ]
+    },
+    {
+      "name": "張香香",
+      "aliases": [
+        "張香香"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-35ddcdf23d38daeb6c58551e",
+          "title": "Sweet Time：張香香的私密寫真",
+          "photographer": "傑森",
+          "editions": [
+            {
+              "editionId": "edition-8cabd831d7b8ffaa8f5bf9f9",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571065359",
+              "eisbn": "9789571065359",
+              "publisher": "尖端出版",
+              "releaseDate": "2016-09-20",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": null,
+              "photographer": "傑森",
+              "contentSummary": "固定版式 EPUB。出版社介紹以時尚肖像呈現張香香從鄰家女孩到網路紅人的不同面向；書頁附有 AR 動畫／拍攝花絮及私密海報介紹。未標示頁數或完整目錄。",
+              "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014189632",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/18.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/441e400a191025737917c959ebe0cf483170d330bf00d53103a7bdb37d54ef82.jpg",
+              "coverObjectKey": "musebooks/covers/441e400a191025737917c959ebe0cf483170d330bf00d53103a7bdb37d54ef82.jpg",
+              "coverSHA256": "441e400a191025737917c959ebe0cf483170d330bf00d53103a7bdb37d54ef82",
+              "coverBytes": 46588,
+              "retailOffers": [
+                {
+                  "sourceId": "sanmin-books-tw",
+                  "externalId": "014189632",
+                  "url": "https://www.sanmin.com.tw/product/index/014189632",
+                  "verificationUrl": "https://www.sanmin.com.tw/product/index/014189632",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 25200,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:39:52Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://www.bookwalker.com.tw/product/10896",
+        "https://www.sanmin.com.tw/product/index/014189632"
+      ],
+      "findings": [
+        "The official Sharp Point campaign directly links the publisher cover asset to the named photographer/model card and describes its image themes. The campaign's old promotional price is archival, not a current offer.",
+        "Live Sanmin and/or canonical Readmoo product details provide the currently purchasable EPUB EISBN, publication date, fixed-layout format, page count when shown, and listed price.",
+        "No physical edition matching this title or EISBN was verified."
+      ]
+    },
+    {
+      "name": "芳婷",
+      "aliases": [
+        "芳婷"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-45ed0efcd28483cbd093c610",
+          "title": "Heartbeat 芳婷電子寫真書",
+          "photographer": "艾迪",
+          "editions": [
+            {
+              "editionId": "edition-2dacb142e2ce2bc13680c062",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571095035",
+              "eisbn": "9789571095035",
+              "publisher": "尖端出版",
+              "releaseDate": "2018-05-25",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 200,
+              "photographer": "艾迪",
+              "contentSummary": "固定版式 EPUB，200頁、超過200張影像。簡介列出清純制服、居家照與比基尼造型；附目錄標示書封、內頁與版權頁。",
+              "metadataSourceUrl": "https://readmoo.com/book/210089610000101",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/08.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/08cb1925a73765a9cf2824b4c89d957da0daf12e02931dbac662f0a108201220.jpg",
+              "coverObjectKey": "musebooks/covers/08cb1925a73765a9cf2824b4c89d957da0daf12e02931dbac662f0a108201220.jpg",
+              "coverSHA256": "08cb1925a73765a9cf2824b4c89d957da0daf12e02931dbac662f0a108201220",
+              "coverBytes": 59004,
+              "retailOffers": [
+                {
+                  "sourceId": "sanmin-books-tw",
+                  "externalId": "014360245",
+                  "url": "https://www.sanmin.com.tw/product/index/014360245",
+                  "verificationUrl": "https://www.sanmin.com.tw/product/index/014360245",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 23600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:39:52Z"
+                },
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210089610000101",
+                  "url": "https://readmoo.com/book/210089610000101",
+                  "verificationUrl": "https://readmoo.com/book/210089610000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 23600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:39:52Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://www.bookwalker.com.tw/product/41098",
+        "https://www.sanmin.com.tw/product/index/014360245",
+        "https://readmoo.com/book/210089610000101"
+      ],
+      "findings": [
+        "The official Sharp Point campaign directly links the publisher cover asset to the named photographer/model card and describes its image themes. The campaign's old promotional price is archival, not a current offer.",
+        "Live Sanmin and/or canonical Readmoo product details provide the currently purchasable EPUB EISBN, publication date, fixed-layout format, page count when shown, and listed price.",
+        "No physical edition matching this title or EISBN was verified."
+      ]
+    },
+    {
+      "name": "茉莉",
+      "aliases": [
+        "茉莉",
+        "Jasmine"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-e0bb5a9922b965c434e736ad",
+          "title": "茉茉在你身邊 茉莉數位寫真書",
+          "photographer": "艾迪",
+          "editions": [
+            {
+              "editionId": "edition-5d769281fb77fc2df273bbb7",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571095301",
+              "eisbn": "9789571095301",
+              "publisher": "尖端出版",
+              "releaseDate": "2018-11-30",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 216,
+              "photographer": "艾迪",
+              "contentSummary": "固定版式 EPUB，216頁。出版社簡介描述茉莉的展場模特兒形象，以及運動、泳池和居家臥室等情境；完整照片目錄未標示。",
+              "metadataSourceUrl": "https://readmoo.com/book/210099764000101",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/07.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/87bcb3d387f0067b27aa4f09a5faf2f68e04196e857a0bb8dda4ba7218d02729.jpg",
+              "coverObjectKey": "musebooks/covers/87bcb3d387f0067b27aa4f09a5faf2f68e04196e857a0bb8dda4ba7218d02729.jpg",
+              "coverSHA256": "87bcb3d387f0067b27aa4f09a5faf2f68e04196e857a0bb8dda4ba7218d02729",
+              "coverBytes": 49715,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210099764000101",
+                  "url": "https://readmoo.com/book/210099764000101",
+                  "verificationUrl": "https://readmoo.com/book/210099764000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 23600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:39:52Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://www.bookwalker.com.tw/product/52395",
+        "https://readmoo.com/book/210099764000101"
+      ],
+      "findings": [
+        "The official Sharp Point campaign directly links the publisher cover asset to the named photographer/model card and describes its image themes. The campaign's old promotional price is archival, not a current offer.",
+        "Live Sanmin and/or canonical Readmoo product details provide the currently purchasable EPUB EISBN, publication date, fixed-layout format, page count when shown, and listed price.",
+        "No physical edition matching this title or EISBN was verified."
+      ]
+    }
+  ]
+}

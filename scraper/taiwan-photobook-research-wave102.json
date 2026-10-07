@@ -1,0 +1,133 @@
+{
+  "batch": 102,
+  "verifiedAt": "2026-10-07T07:33:41Z",
+  "purpose": "Add separately verified Taiwan physical and digital photobook editions, current public offers only, and R2-backed cover assets.",
+  "notes": [
+    "Yilian / Yilianboy is one model: Sanmin author metadata explicitly pairs Yilian with Yilianboy游泳教練; his photo-essay and SECRET are separate works.",
+    "SECRET paper and e-book editions share publisher ISBN 9789577435590 but remain separate format editions. BOOK☆WALKER digital-only special content and wallpapers are not assigned to the printed edition.",
+    "The Ruten listing is active at NT$6,500 with platform quantity 1; seller asks buyers to confirm stock first. No sold price is inferred from the count of 10 purchases.",
+    "Sanmin currently says the Yilian photo-essay and physical SECRET are unavailable to order; Eslite marks 抱你寫詩 discontinued. No active retail price was recorded for those items.",
+    "Four covers were uploaded to R2 and verified by HTTP 200 public readback with exact local SHA-256 matches. Eslite served the cover through an image optimization layer; it was converted from WebP to JPEG for the R2 catalog cover object."
+  ],
+  "sources": [
+    "https://www.sanmin.com.tw/product/index/007914280",
+    "https://www.sanmin.com.tw/product/index/007564633",
+    "https://www.bookwalker.com.tw/product/81588",
+    "https://www.ruten.com.tw/item/22337668175303/",
+    "https://www.eslite.com/product/1001296682534720",
+    "https://www.cna.com.tw/news/amov/201607300287.aspx",
+    "https://taiwancinema.bamid.gov.tw/Staff/PrintFrameContent?ContentUrl=83263"
+  ],
+  "changes": {
+    "newWorks": 3,
+    "newPhysicalEditions": 3,
+    "newDigitalEditions": 1,
+    "newActivePhysicalOffers": 1,
+    "newActiveDigitalOffers": 1,
+    "newR2CoverUploads": 4
+  },
+  "models": [
+    {
+      "name": "Yilian",
+      "aliases": [
+        "Yilian",
+        "Yilianboy",
+        "Yilianboy游泳教練"
+      ],
+      "identityNote": "Sanmin identifies the photo-essay author as Yilian (Yilianboy游泳教練), and BOOK☆WALKER lists Yilianboy for SECRET.",
+      "works": [
+        {
+          "title": "你的藍色不是我的藍色：Yilian游泳教練首部寫真散文，那些歸屬感、幸福感，以及勇氣和愛",
+          "format": "physical",
+          "isbn": "9789869955911",
+          "publisher": "拾青",
+          "releaseDate": "2020-11-04",
+          "pageCount": 160,
+          "photographer": "nobody（阿傑）",
+          "contentSummary": "44篇隨筆與超過100幀人像攝影；山景、市街與海邊。",
+          "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/007914280",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/05665d5105dcb4321d0ce40ebf806be77960a54f2818efaa1e63837bd73c4a62.jpg",
+          "coverSHA256": "05665d5105dcb4321d0ce40ebf806be77960a54f2818efaa1e63837bd73c4a62",
+          "retailOffers": []
+        },
+        {
+          "title": "SECRET：游泳教練寫真書",
+          "editions": [
+            {
+              "format": "physical",
+              "isbn": "9789577435590",
+              "releaseDate": "2020-01-09",
+              "pageCount": 160,
+              "publisher": "台灣角川",
+              "photographer": "藍陳福堂",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/800ae92e9873269ff8252bcf97a14a6a0dee3b49174efde3fd60f4e12add6bf2.jpg",
+              "coverSHA256": "800ae92e9873269ff8252bcf97a14a6a0dee3b49174efde3fd60f4e12add6bf2",
+              "retailOffers": [
+                {
+                  "sourceId": "ruten-tw",
+                  "externalId": "22337668175303",
+                  "url": "https://www.ruten.com.tw/item/22337668175303/",
+                  "status": "active",
+                  "priceMinor": 650000,
+                  "currency": "TWD",
+                  "priceType": "fixed",
+                  "format": "physical",
+                  "observedAt": "2026-10-07T07:33:41Z",
+                  "availabilityCaveat": "Seller requests buyer confirm stock before ordering."
+                }
+              ]
+            },
+            {
+              "format": "digital",
+              "label": "電子書特別版",
+              "isbn": "9789577435590",
+              "releaseDate": "2020-01-31",
+              "pageCount": 144,
+              "publisher": "台灣角川",
+              "photographer": "藍陳福堂",
+              "contentSummary": "固定版面 EPUB；有電子書獨家特別內容與手機、電腦桌布。",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/dc49d436e4e13b8e0b9484a0d22fcd89a14a184d5cf589c7724bb0018868ef26.jpg",
+              "coverSHA256": "dc49d436e4e13b8e0b9484a0d22fcd89a14a184d5cf589c7724bb0018868ef26",
+              "retailOffers": [
+                {
+                  "sourceId": "bookwalker-tw",
+                  "externalId": "81588",
+                  "url": "https://www.bookwalker.com.tw/product/81588",
+                  "status": "active",
+                  "priceMinor": 40900,
+                  "currency": "TWD",
+                  "priceType": "digital",
+                  "format": "digital",
+                  "observedAt": "2026-10-07T07:33:41Z"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "吳翔震",
+      "aliases": [
+        "吳翔震"
+      ],
+      "works": [
+        {
+          "title": "抱你寫詩",
+          "format": "physical",
+          "isbn": "9789869355100",
+          "publisher": "映象帝國",
+          "releaseDate": "2016-09-08",
+          "pageCount": 112,
+          "photographer": "曹凱評",
+          "contentSummary": "由26首自創詩選13首，搭配山林、海邊、都會、九份影像。",
+          "metadataSourceUrl": "https://www.eslite.com/product/1001296682534720",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/d5a1e9ed4ec96265d2a33b978321bc5179918180a1f054b72a540e111ca470d0.jpg",
+          "coverSHA256": "d5a1e9ed4ec96265d2a33b978321bc5179918180a1f054b72a540e111ca470d0",
+          "retailOffers": [],
+          "availabilityNote": "Eslite marks the title discontinued; no active offer recorded."
+        }
+      ]
+    }
+  ]
+}

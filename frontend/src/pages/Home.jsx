@@ -1,3 +1,4 @@
+import BookDetail from "./BookDetail";
 import CatalogPages from "./CatalogPages";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { apiUrl } from "../lib/api";
@@ -59,7 +60,7 @@ function EditionPrices({ edition }) {
 }
 function BookCover({ book, edition: selectedEdition, compact = false, loading = "lazy", }) {
     const image = selectedEdition?.coverUrl || book.coverUrl;
-    return <div className={`cover-art${compact ? " cover-art--compact" : ""}`}>
+    return <div className={`cover-art${image ? " cover-art--image" : ""}${compact ? " cover-art--compact" : ""}`}>
     {image && <img src={image} alt="" loading={loading} fetchPriority={loading === "eager" ? "high" : "auto"}/>}
     <div className="cover-art__wash"/>
     <span className="cover-art__mark">{book.originalTitle.slice(0, 2)}</span>
@@ -76,6 +77,7 @@ function releaseTimestamp(book) {
     return Math.max(0, ...book.editions.map((item) => item.releaseDate ? Date.parse(item.releaseDate) || 0 : 0));
 }
 export default function Home() {
+    const [bookSlug, setBookSlug] = useState(() => { try { return window.location.pathname.startsWith("/books/") ? decodeURIComponent(window.location.pathname.slice(7)) : ""; } catch { return "invalid-book"; } });
     const [books, setBooks] = useState([]);
     const [origins, setOrigins] = useState([]);
     const [query, setQuery] = useState("");
@@ -94,8 +96,8 @@ export default function Home() {
     const [retry, setRetry] = useState(0);
     const [theme, setTheme] = useState("light");
     const [themeReady, setThemeReady] = useState(false);
-    const nativeBackState = useRef({ activeView, mobileFilters });
-    nativeBackState.current = { activeView, mobileFilters };
+    const nativeBackState = useRef({ activeView, mobileFilters, bookSlug });
+    nativeBackState.current = { activeView, mobileFilters, bookSlug };
     useEffect(() => {
         try {
             const stored = window.localStorage.getItem("musebooks.collection.v1");
@@ -174,10 +176,10 @@ export default function Home() {
     }, [availability, books, format, language, origin, query, sortBy]);
     const languages = useMemo(() => Array.from(new Set(books.flatMap((book) => (book.editions || []).map((edition) => edition.language).filter((value) => Boolean(value))))).sort((a, b) => a.localeCompare(b)), [books]);
     const visibleBooks = activeView === "collection" ? filteredBooks.filter((book) => saved.includes(book.id)) : filteredBooks;
-    const selectedBook = visibleBooks.find((book) => book.id === selectedId) || visibleBooks[0];
-    const selectedEditions = selectedBook ? visibleEditions(selectedBook, { format, language, availability }) : [];
+    const selectedBook = bookSlug ? books.find(book => book.slug === bookSlug) : visibleBooks.find((book) => book.id === selectedId) || visibleBooks[0];
+    const selectedEditions = selectedBook ? bookSlug ? selectedBook.editions : visibleEditions(selectedBook, { format, language, availability }) : [];
     const selectedEdition = selectedEditions.find((item) => item.id === selectedEditionId) || selectedEditions[0];
-    const selectedListing = primaryListing(selectedEdition, availability);
+    const selectedListing = primaryListing(selectedEdition, bookSlug ? "" : availability);
     useEffect(() => {
         if (!books.length)
             return;
@@ -191,6 +193,8 @@ export default function Home() {
             }
             const book = books.find((item) => item.slug === slug);
             if (book) {
+                window.history.replaceState(null, "", `/books/${encodeURIComponent(book.slug)}`);
+                setBookSlug(book.slug);
                 setActiveView("browse");
                 setSelectedId(book.id);
                 setSelectedEditionId(book.editions[0]?.id || "");
@@ -223,6 +227,11 @@ export default function Home() {
         let removeListener;
         void import("@capacitor/app")
             .then(({ App }) => App.addListener("backButton", ({ canGoBack }) => {
+            if (nativeBackState.current.bookSlug) {
+                if (canGoBack) window.history.back();
+                else { setBookSlug(""); window.history.replaceState(null, "", "/"); }
+                return;
+            }
             if (nativeBackState.current.mobileFilters) {
                 setMobileFilters(false);
                 return;
@@ -258,8 +267,7 @@ export default function Home() {
         if (!selectedBook)
             return;
         const siteOrigin = isCapacitorBuild ? import.meta.env.VITE_SITE_URL || "https://musebooks.my" : window.location.origin;
-        const shareURL = new URL("/", siteOrigin);
-        shareURL.hash = selectedBook.slug;
+        const shareURL = new URL(`/books/${encodeURIComponent(selectedBook.slug)}`, siteOrigin);
         const title = selectedBook.englishTitle || selectedBook.originalTitle;
         try {
             if (isCapacitorBuild) {
@@ -293,35 +301,56 @@ export default function Home() {
         setAvailability("");
         setQuery("");
     };
+    useEffect(() => {
+        const syncRoute = () => {
+            try { setBookSlug(window.location.pathname.startsWith("/books/") ? decodeURIComponent(window.location.pathname.slice(7)) : ""); } catch { setBookSlug("invalid-book"); }
+        };
+        window.addEventListener("popstate", syncRoute);
+        return () => window.removeEventListener("popstate", syncRoute);
+    }, []);
+    useEffect(() => {
+        if (bookSlug && selectedBook) document.title = (selectedBook.englishTitle || selectedBook.originalTitle) + " — MuseBooks";
+        else document.title = "MuseBooks — Photobook collection";
+    }, [bookSlug, selectedBook]);
+    const navigateView = (view) => {
+        setBookSlug("");
+        setActiveView(view);
+        window.history.pushState(null, "", "/");
+    };
     const chooseBook = (book, edition) => {
+        window.history.pushState(null, "", `/books/${encodeURIComponent(book.slug)}`);
+        setBookSlug(book.slug);
         setSelectedId(book.id);
         setSelectedEditionId(edition?.id || "");
+        setShareState("idle");
+        window.scrollTo(0, 0);
+        window.requestAnimationFrame(() => document.getElementById("book-title")?.focus());
     };
     return <div className={`site-shell${isCapacitorBuild ? " native-mobile-build" : ""}`}>
     <a className="skip-link" href="#main-content">Skip to catalog</a>
     <header className="site-header">
       <a className="wordmark" href="/" aria-label="MuseBooks home">MuseBooks</a>
       <nav className="main-nav" aria-label="Main navigation">
-        <button type="button" className={activeView === "browse" ? "active" : ""} aria-current={activeView === "browse" ? "page" : undefined} onClick={() => setActiveView("browse")}>Browse the collection</button>
+        <button type="button" className={activeView === "browse" ? "active" : ""} aria-current={activeView === "browse" ? "page" : undefined} onClick={() => navigateView("browse")}>Browse the collection</button>
         {["models", "publishers", "active", "sold"].map(section => <a key={section} href={`/${section}`} className={activeView === section ? "active" : ""} aria-current={activeView === section ? "page" : undefined}>{section === "models" ? "Models" : section === "publishers" ? "Publishers" : section === "active" ? "Active listings" : "Sold listings"}</a>)}
-        <button type="button" className={activeView === "collection" ? "active" : ""} aria-current={activeView === "collection" ? "page" : undefined} onClick={() => setActiveView("collection")}>Saved collection <span className="saved-count">{saved.length}</span></button>
+        <button type="button" className={activeView === "collection" ? "active" : ""} aria-current={activeView === "collection" ? "page" : undefined} onClick={() => navigateView("collection")}>Saved collection <span className="saved-count">{saved.length}</span></button>
       </nav>
       <div className="header-actions">
-        {(activeView === "browse" || activeView === "collection") && <label className="header-search">
+        {!bookSlug && (activeView === "browse" || activeView === "collection") && <label className="header-search">
           <Icon name="search" size={18}/>
           <input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search photobooks, titles, or places" aria-label="Search photobooks"/>
         </label>}
         <button className="icon-button" type="button" onClick={() => setTheme((value) => value === "light" ? "dark" : "light")} aria-label={`Switch to ${theme === "light" ? "dark" : "light"} appearance`} title={`Switch to ${theme === "light" ? "dark" : "light"} appearance`}>
           <Icon name={theme === "light" ? "moon" : "sun"} size={20}/>
         </button>
-        <button className="icon-button" type="button" onClick={() => setActiveView("collection")} aria-label={`Open saved collection, ${saved.length} saved`} aria-pressed={activeView === "collection"}>
+        <button className="icon-button" type="button" onClick={() => navigateView("collection")} aria-label={`Open saved collection, ${saved.length} saved`} aria-pressed={activeView === "collection"}>
           <Icon name="bookmark" size={20}/>
         </button>
       </div>
     </header>
 
     <main id="main-content">
-      {activeView !== "browse" && activeView !== "collection" ? <CatalogPages key={activeView} section={activeView}/> : <>
+      {bookSlug ? <>{apiState === "loading" ? <div className="detail-route-state" role="status">Loading photobook…</div> : apiState === "error" ? <div className="detail-route-state" role="alert"><h1>This photobook couldn’t be loaded.</h1><button onClick={() => setRetry(value => value + 1)}>Retry connection</button></div> : !selectedBook ? <div className="detail-route-state"><h1>Photobook not found.</h1><a href="/">Browse the collection</a></div> : selectedEdition ? <BookDetail {...{ selectedBook, selectedEdition, selectedEditions, selectedListing, availability, saved, shareState, setSelectedEditionId, toggleSaved, shareSelected, BookCover, EditionPrices, Icon, primaryListing, formatPrice, priceLabel, editionFormatLabel }} /> : <div className="detail-route-state"><h1>{selectedBook.originalTitle}</h1><p>No editions recorded yet.</p><a href="/">Browse the collection</a></div>}</> : activeView !== "browse" && activeView !== "collection" ? <CatalogPages key={activeView} section={activeView}/> : <>
       <section className="hero" aria-labelledby="page-title">
         <div className="hero-copy">
           <h1 id="page-title">Find the next book worth keeping.</h1>
@@ -332,24 +361,7 @@ export default function Home() {
             <button type="submit">Search</button>
           </form>
         </div>
-        <div className="hero-record" aria-label={selectedBook ? `Featured record: ${selectedBook.englishTitle || selectedBook.originalTitle}` : "Catalog connection status"}>
-          {selectedBook && selectedEdition ? <>
-            <BookCover book={selectedBook} edition={selectedEdition} loading="eager"/>
-            <div className="hero-record__caption"><span>{selectedBook.origin.nativeName || selectedBook.origin.name}</span><strong>{selectedBook.englishTitle || selectedBook.originalTitle}</strong></div>
-          </> : <div className={`hero-record__state hero-record__state--${apiState}`} role="status">
-            <Icon name="book" size={24}/>
-            <strong>{apiState === "loading" ? "Opening the catalog" : apiState === "error" ? "Catalog connection unavailable" : selectedBook ? "No edition records to show" : "No books match these filters"}</strong>
-            {apiState === "error" && <button type="button" onClick={() => setRetry((value) => value + 1)}>Retry connection</button>}
-          </div>}
-        </div>
       </section>
-
-      {selectedBook && selectedEdition && <section className="provenance-strip" aria-label="Selected book provenance">
-        <div><span>Work</span><strong>{selectedBook.origin.name}</strong></div>
-        <div><span>Edition</span><strong>{selectedEdition.editionLabel}</strong></div>
-        <div><span>Format</span><strong>{editionFormatLabel(selectedEdition.format)}</strong></div>
-        <div><span>Price context</span><strong>{priceLabel(selectedEdition, selectedListing)}</strong></div>
-      </section>}
 
       <section className="catalog-layout" id="catalog" aria-label={activeView === "collection" ? "Saved books" : "Photobook catalog"}>
         <button className="mobile-filter-toggle" type="button" aria-expanded={mobileFilters} aria-controls="catalog-filter-rail" onClick={() => setMobileFilters((value) => !value)}>
@@ -395,9 +407,8 @@ export default function Home() {
             {visibleBooks.map((book, index) => {
                     const cardEdition = visibleEditions(book, { format, language, availability })[0];
                     const listingItem = primaryListing(cardEdition, availability);
-                    const isSelected = selectedBook?.id === book.id;
-                    return <article className={`book-card${isSelected ? " book-card--selected" : ""}`} key={book.id}>
-                <button className="book-card__select" type="button" onClick={() => chooseBook(book, cardEdition)} aria-pressed={isSelected} aria-label={`Show details for ${book.englishTitle || book.originalTitle}`}>
+                    return <article className="book-card" key={book.id}>
+                <a className="book-card__select" href={`/books/${encodeURIComponent(book.slug)}`} onClick={(event) => { if (event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey) { event.preventDefault(); chooseBook(book, cardEdition); } }} aria-label={`Show details for ${book.englishTitle || book.originalTitle}`}>
                   <div className="book-card__cover"><BookCover book={book} edition={cardEdition} loading={index < 3 ? "eager" : "lazy"}/></div>
                   <div className="book-card__content">
                     <h3>{book.originalTitle}</h3>
@@ -406,7 +417,7 @@ export default function Home() {
                     <div className="book-card__price">{listingItem ? formatPrice(listingItem.priceMinor, listingItem.currency) : cardEdition ? "Price not recorded" : "No edition record"}</div>
                     <div className="book-card__meta"><span>{cardEdition ? priceLabel(cardEdition, listingItem) : "No source-backed edition yet"}</span></div>
                   </div>
-                </button>
+                </a>
                 <button className={`card-save${saved.includes(book.id) ? " card-save--saved" : ""}`} type="button" onClick={() => toggleSaved(book.id)} aria-label={`${saved.includes(book.id) ? "Remove" : "Save"} ${book.englishTitle || book.originalTitle}`} aria-pressed={saved.includes(book.id)}>
                   <Icon name="bookmark" size={18}/>
                 </button>
@@ -418,54 +429,12 @@ export default function Home() {
             <h3>{activeView === "collection" && saved.length === 0 ? "Your collection is ready." : activeView === "collection" ? "No saved books match." : "No titles match those filters."}</h3>
             <p>{activeView === "collection" && saved.length === 0 ? "Save a photobook to keep its editions and source prices close." : "Try clearing a filter or searching a wider title, artist, or place."}</p>
             {activeView === "collection" && saved.length === 0
-                    ? <button type="button" onClick={() => setActiveView("browse")}>Browse the catalog</button>
+                    ? <button type="button" onClick={() => navigateView("browse")}>Browse the catalog</button>
                     : <button type="button" onClick={clearFilters}>Clear filters</button>}
           </div>}
         </section>
 
-        {selectedBook && selectedEdition && <aside id="editions" className="detail-panel" aria-label="Selected photobook">
-          <div className="detail-media">
-            <BookCover book={selectedBook} edition={selectedEdition} loading="eager"/>
-            <div className="detail-thumbs">
-              {selectedBook.editions.map((item) => <button key={item.id} type="button" className={item.id === selectedEdition.id ? "thumb--selected" : ""} onClick={() => setSelectedEditionId(item.id)} aria-label={`View ${item.editionLabel}`} aria-pressed={item.id === selectedEdition.id}><BookCover book={selectedBook} edition={item} compact/></button>)}
-              {selectedBook.editions.length > 1 && <a className="more-thumb" href="#available-editions">All editions</a>}
-            </div>
-          </div>
-          <div className="detail-copy">
-            <h2>{selectedBook.originalTitle}</h2>
-            {selectedBook.englishTitle && <p className="detail-title">{selectedBook.englishTitle}</p>}
-            <div className="detail-facts">
-              <span><b>Photographer</b>{selectedBook.photographer || "Not recorded"}</span>
-              <span><b>Origin</b>{selectedBook.origin.name}</span>
-              <span><b>Format</b>{editionFormatLabel(selectedEdition.format)}</span>
-              <span><b>Language</b>{selectedEdition.language || "Not recorded"}</span>
-              <span><b>Pages</b>{selectedEdition.pageCount ? `${selectedEdition.pageCount} pages` : "Not recorded"}</span>
-              <span><b>Published</b>{selectedEdition.releaseDate ? new Date(selectedEdition.releaseDate).getFullYear() : "Not recorded"}</span>
-              <span><b>Publisher</b>{selectedEdition.publisher || "Not recorded"}</span>
-              <span><b>Market</b>{selectedEdition.editionMarket || "Not recorded"}</span>
-            </div>
-            <div className="edition-heading" id="available-editions"><h3>Available editions</h3><a href="#edition-list">View all</a></div>
-            <div className="edition-list" id="edition-list">
-              {selectedEditions.map((item) => {
-                    const itemListing = primaryListing(item, availability);
-                    const active = item.id === selectedEdition.id;
-                    return <div className={`edition-row${active ? " edition-row--active" : ""}`} key={item.id}>
-                  <button className="edition-row__select" type="button" onClick={() => setSelectedEditionId(item.id)} aria-pressed={active}>
-                    <strong>{item.editionLabel}</strong><span>{editionFormatLabel(item.format)} · {priceLabel(item, itemListing)}</span>
-                  </button>
-                  <strong>{itemListing ? formatPrice(itemListing.priceMinor, itemListing.currency) : "No price"}</strong>
-                  {itemListing?.url ? <a href={itemListing.url} target="_blank" rel="noreferrer" data-external-link>View source</a> : <span className="quiet-state">No source</span>}
-                </div>;
-                })}
-            </div>
-            <EditionPrices edition={selectedEdition}/>
-            <div className="detail-actions">
-              {selectedListing && <a className="action-primary" href={selectedListing.url} target="_blank" rel="noreferrer" data-external-link><Icon name="external" size={16}/> Visit source site</a>}
-              <button type="button" onClick={() => toggleSaved(selectedBook.id)} aria-pressed={saved.includes(selectedBook.id)}><Icon name="bookmark" size={16}/> {saved.includes(selectedBook.id) ? "Saved to collection" : "Save to collection"}</button>
-              <button type="button" onClick={shareSelected}><Icon name="share" size={16}/> {shareState === "shared" ? "Share sheet opened" : shareState === "copied" ? "Link copied" : "Share"}</button>
-            </div>
-          </div>
-        </aside>}
+
       </section>
       </>}
     </main>
@@ -473,8 +442,8 @@ export default function Home() {
     <footer className="site-footer"><span>MuseBooks</span><span>Listings keep their source, format, and availability context.</span><a href="/privacy-policy">Privacy Policy</a><span className={`connection-status connection-status--${apiState}`}>{apiState === "live" ? "Catalog connected" : apiState === "loading" ? "Connecting to catalog" : "Catalog unavailable"}</span></footer>
 
     {isCapacitorBuild && <nav className="mobile-tabbar" aria-label="App navigation">
-      <button type="button" className={activeView === "browse" ? "is-active" : ""} aria-current={activeView === "browse" ? "page" : undefined} onClick={() => setActiveView("browse")}><Icon name="book" size={20}/><span>Browse</span></button>
-      <button type="button" className={activeView === "collection" ? "is-active" : ""} aria-current={activeView === "collection" ? "page" : undefined} onClick={() => setActiveView("collection")}><Icon name="bookmark" size={20}/><span>Collection</span><i>{saved.length}</i></button>
+      <button type="button" className={activeView === "browse" ? "is-active" : ""} aria-current={activeView === "browse" ? "page" : undefined} onClick={() => navigateView("browse")}><Icon name="book" size={20}/><span>Browse</span></button>
+      <button type="button" className={activeView === "collection" ? "is-active" : ""} aria-current={activeView === "collection" ? "page" : undefined} onClick={() => navigateView("collection")}><Icon name="bookmark" size={20}/><span>Collection</span><i>{saved.length}</i></button>
     </nav>}
   </div>;
 }

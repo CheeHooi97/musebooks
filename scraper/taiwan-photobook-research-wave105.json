@@ -1,0 +1,122 @@
+{
+  "batch": 105,
+  "verifiedAt": "2026-10-07",
+  "purpose": "Add BOOK☆WALKER's four verified digital photobooks in 羽庭's series as digital editions/works, without treating them as physical marketplace inventory.",
+  "notes": [
+    "BOOK☆WALKER's official 羽庭 series page says it contains four volumes. Each product page explicitly identifies a fixed-layout EPUB, series 羽庭, an active NT$299 purchase option, and 18+ classification.",
+    "雨停 羽庭 is cataloged as a digital edition of the same 雨停 work as the previously verified 2018 physical special issue; the paper and EPUB editions have separate edition IDs and covers.",
+    "溺愛羽庭 (83 pages; 2023-09-24), 羽の魅 (71 pages; 2025-01-24), and 惑之庭 (78 pages; 2025-01-24) are separate digital works. The BW pages credit photographer 米西亞 for the latter two and identify publisher 米希亞. No EISBN is displayed, so none was inferred.",
+    "All four BOOK☆WALKER-supplied 18+ masked cover images were uploaded to R2; each public GET returned 200 and matched the local SHA-256. The image masks remain part of the source assets.",
+    "No physical editions were inferred for the three separate digital works; no sold price was inferred from any retail offer."
+  ],
+  "sources": [
+    "https://www.bookwalker.com.tw/search?series=21942",
+    "https://www.bookwalker.com.tw/product/56313",
+    "https://www.bookwalker.com.tw/product/176363",
+    "https://www.bookwalker.com.tw/product/236737",
+    "https://www.bookwalker.com.tw/product/236738"
+  ],
+  "changes": {
+    "newWorks": 3,
+    "newDigitalEditions": 4,
+    "newPhysicalEditions": 0,
+    "verifiedActiveDigitalOffers": 4,
+    "newR2CoverUploads": 4
+  },
+  "models": [
+    {
+      "name": "羽庭",
+      "aliases": [
+        "羽庭",
+        "廖欣寧",
+        "羽婷"
+      ],
+      "works": [
+        {
+          "title": "VISION MAN 質男幫特刊：雨停 羽庭",
+          "workId": "work-tw-7ae1a24c67610147797674a4",
+          "editions": [
+            {
+              "editionId": "edition-b0f6582994adfbcf9613d1b3",
+              "format": "digital",
+              "label": "數位固定版面EPUB",
+              "pageCount": 86,
+              "releaseDate": "2019-02-13T00:00:00Z",
+              "metadataSourceUrl": "https://www.bookwalker.com.tw/product/56313",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/c8cf4402d757959def11726fc713666f32d8d931b85b06c4a9748fe58fbd92d7.jpg",
+              "offer": {
+                "url": "https://www.bookwalker.com.tw/product/56313",
+                "status": "active",
+                "priceMinor": 29900,
+                "currency": "TWD"
+              }
+            }
+          ]
+        },
+        {
+          "title": "溺愛羽庭",
+          "workId": "work-tw-5f6e4a4b9249afed37f478ab",
+          "editions": [
+            {
+              "editionId": "edition-9f983463802a12e9993c1c38",
+              "format": "digital",
+              "label": "數位固定版面EPUB",
+              "pageCount": 83,
+              "releaseDate": "2023-09-24T00:00:00Z",
+              "metadataSourceUrl": "https://www.bookwalker.com.tw/product/176363",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/6b7157f5d2ff3abe6b00c18ad5e3292248471dccb95197d1f653185322d5f659.jpg",
+              "offer": {
+                "url": "https://www.bookwalker.com.tw/product/176363",
+                "status": "active",
+                "priceMinor": 29900,
+                "currency": "TWD"
+              }
+            }
+          ]
+        },
+        {
+          "title": "羽の魅",
+          "workId": "work-tw-103832fd97555a1ff46cec39",
+          "editions": [
+            {
+              "editionId": "edition-930a848955f9c16a5ec3cee5",
+              "format": "digital",
+              "label": "數位固定版面EPUB",
+              "pageCount": 71,
+              "releaseDate": "2025-01-24T00:00:00Z",
+              "metadataSourceUrl": "https://www.bookwalker.com.tw/product/236737",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/b2dc9fe9b012b4c6c17220bdf19bc094596be6324d610940a54eb6f6406b6368.jpg",
+              "offer": {
+                "url": "https://www.bookwalker.com.tw/product/236737",
+                "status": "active",
+                "priceMinor": 29900,
+                "currency": "TWD"
+              }
+            }
+          ]
+        },
+        {
+          "title": "惑之庭",
+          "workId": "work-tw-adfb72828921d699e5ac218b",
+          "editions": [
+            {
+              "editionId": "edition-ca44896b931e0c29e61994a0",
+              "format": "digital",
+              "label": "數位固定版面EPUB",
+              "pageCount": 78,
+              "releaseDate": "2025-01-24T00:00:00Z",
+              "metadataSourceUrl": "https://www.bookwalker.com.tw/product/236738",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/a658236916ac1bb33811d77649c9378e5683de29abe947a57cc2238d211cb30f.jpg",
+              "offer": {
+                "url": "https://www.bookwalker.com.tw/product/236738",
+                "status": "active",
+                "priceMinor": 29900,
+                "currency": "TWD"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

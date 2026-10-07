@@ -1,0 +1,27 @@
+{
+  "pending": [],
+  "resolved": [
+    {
+      "model": "吳慈敏",
+      "title": "啾啾2021寫真書",
+      "format": "physical",
+      "url": "https://www.tcsb.com.tw/9789860635089",
+      "isbn": "9789860635089",
+      "reason": "Primary retailer discovered; full live metadata and cover collection pending"
+    },
+    {
+      "model": "吳慈敏",
+      "title": "啾啾2022寫真書",
+      "format": "physical",
+      "url": "https://www.litashop.com.tw/pages/chuchu",
+      "reason": "Need exact book product and distinguish bundles/calendar"
+    },
+    {
+      "model": "吳慈敏",
+      "title": "啾啾Chu Chu’s 2020寫真書",
+      "format": "digital",
+      "url": "https://books.apple.com/nz/book/啾啾chu-chus-2020寫真書/id6444817010",
+      "reason": "Need accessible primary full metadata and exact cover"
+    }
+  ]
+}

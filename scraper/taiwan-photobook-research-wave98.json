@@ -1,0 +1,329 @@
+{
+  "batch": 98,
+  "verifiedAt": "2026-10-07T13:35:27+08:00",
+  "summary": "Live verification of active Taiwan digital photobook retailer offers; prices are retail asking prices, not completed-sale prices.",
+  "models": [
+    {
+      "name": "Mika徐韻庭",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-62303cd196dd4691d0c78c47",
+          "format": "digital",
+          "isbn": "9789571095318",
+          "retailOffers": [
+            {
+              "sourceId": "sanmin-books-tw",
+              "externalId": "014126685",
+              "url": "https://www.sanmin.com.tw/product/index/014126685",
+              "priceMinor": 23600,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nicole妮可",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-99f20397c4ba81002e598304",
+          "format": "digital",
+          "isbn": "9786267683064",
+          "retailOffers": [
+            {
+              "sourceId": "sanmin-books-tw",
+              "externalId": "014381528",
+              "url": "https://www.sanmin.com.tw/product/index/014381528",
+              "priceMinor": 45500,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TOKKI CUTIE",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-8849001daa8ba7233f189920",
+          "format": "digital",
+          "isbn": "9786260160128",
+          "retailOffers": [
+            {
+              "sourceId": "taaze-books-tw",
+              "externalId": "14100139059",
+              "url": "https://www.taaze.tw/products/14100139059.html",
+              "priceMinor": 90000,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            },
+            {
+              "sourceId": "momo-books-tw",
+              "externalId": "15246719",
+              "url": "https://www.momoshop.com.tw/product/15246719",
+              "priceMinor": 79200,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "向理來",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-ce007b5da7a392a3cec06d98",
+          "format": "digital",
+          "isbn": "9786264446600",
+          "retailOffers": [
+            {
+              "sourceId": "rakuten-kobo-tw",
+              "externalId": "1dd820bd-0e56-3024-aa5e-a5e4cdaae4fa",
+              "url": "https://www.rakuten.com.tw/shop/kobo/product/1dd820bd-0e56-3024-aa5e-a5e4cdaae4fa/",
+              "priceMinor": 55300,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "孟潔",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-3475ee58631ea235f48dbbf4",
+          "format": "digital",
+          "isbn": "9789571095875",
+          "retailOffers": [
+            {
+              "sourceId": "sanmin-books-tw",
+              "externalId": "013427981",
+              "url": "https://www.sanmin.com.tw/product/index/013427981",
+              "priceMinor": 29900,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        },
+        {
+          "editionId": "edition-90f42f199da6d3995d50856f",
+          "format": "digital",
+          "isbn": "9786263568433",
+          "retailOffers": [
+            {
+              "sourceId": "sanmin-books-tw",
+              "externalId": "013426304",
+              "url": "https://www.sanmin.com.tw/product/index/013426304",
+              "priceMinor": 29900,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "孟潔／菲菲",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-de546a4341f16ff59738d01f",
+          "format": "digital",
+          "isbn": "9789571095721",
+          "retailOffers": [
+            {
+              "sourceId": "sanmin-books-tw",
+              "externalId": "013427546",
+              "url": "https://www.sanmin.com.tw/product/index/013427546",
+              "priceMinor": 29900,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "巫苡萱",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-2fb480cde62952eb11365c92",
+          "format": "digital",
+          "isbn": "9786263160248",
+          "retailOffers": [
+            {
+              "sourceId": "sanmin-books-tw",
+              "externalId": "013426301",
+              "url": "https://www.sanmin.com.tw/product/index/013426301",
+              "priceMinor": 29900,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        },
+        {
+          "editionId": "edition-c3b5583b83d0620e9f657853",
+          "format": "digital",
+          "isbn": "9789571095073",
+          "retailOffers": [
+            {
+              "sourceId": "sanmin-books-tw",
+              "externalId": "014360181",
+              "url": "https://www.sanmin.com.tw/product/index/014360181",
+              "priceMinor": 23600,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "李藹蔚",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-bd0f0f5916b6b3382fc8c79b",
+          "format": "digital",
+          "isbn": "9786263776210",
+          "retailOffers": [
+            {
+              "sourceId": "sanmin-books-tw",
+              "externalId": "013650100",
+              "url": "https://www.sanmin.com.tw/product/index/013650100",
+              "priceMinor": 35000,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "林真亦",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-0ab6e9dc55d6a07f200b2958",
+          "format": "digital",
+          "isbn": "9786264197281",
+          "retailOffers": [
+            {
+              "sourceId": "bookwalker-tw",
+              "externalId": "262431",
+              "url": "https://www.bookwalker.com.tw/product/262431",
+              "priceMinor": 47600,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            },
+            {
+              "sourceId": "readmoo-tw",
+              "externalId": "210424363000101",
+              "url": "https://readmoo.com/book/210424363000101",
+              "priceMinor": 47600,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "王芯羽",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-a0d4e470e26a7e53eb2bf358",
+          "format": "digital",
+          "isbn": "9786263776388",
+          "retailOffers": [
+            {
+              "sourceId": "sanmin-books-tw",
+              "externalId": "013627195",
+              "url": "https://www.sanmin.com.tw/product/index/013627195",
+              "priceMinor": 35000,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "鍾以希",
+      "identityNote": "Existing catalog model/credit; this batch adds verified digital retailer offers and corrects digital ISBNs where noted.",
+      "works": [
+        {
+          "editionId": "edition-631debd66f9a32ef6735b23f",
+          "format": "digital",
+          "isbn": "9789571095790",
+          "retailOffers": [
+            {
+              "sourceId": "sanmin-books-tw",
+              "externalId": "014360306",
+              "url": "https://www.sanmin.com.tw/product/index/014360306",
+              "priceMinor": 23900,
+              "currency": "TWD",
+              "status": "active",
+              "format": "digital",
+              "priceType": "digital",
+              "observedAt": "2026-10-07T13:35:27+08:00"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

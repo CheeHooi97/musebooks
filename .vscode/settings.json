@@ -1,0 +1,32 @@
+{
+  "files.exclude": {
+    "scraper/taiwan-photobook-*.json": true,
+    "scraper/taiwan_*.json": true,
+    "frontend/android/**/build": true,
+    "frontend/android/capacitor-cordova-android-plugins": true,
+    "frontend/android/**/*.json": true,
+    "frontend/android/**/*.png": true,
+    "frontend/android/**/*.jpg": true,
+    "frontend/android/**/*.jpeg": true,
+    "frontend/android/**/*.webp": true,
+    "frontend/android/**/*.gif": true,
+    "frontend/android/**/*.ico": true,
+    "frontend/android/**/res/drawable*": true,
+    "frontend/android/**/res/mipmap*": true
+  },
+  "search.exclude": {
+    "**/scraper/taiwan-photobook-*.json": true,
+    "**/scraper/taiwan_*.json": true,
+    "**/frontend/android/**/build": true,
+    "**/frontend/android/capacitor-cordova-android-plugins": true,
+    "**/frontend/android/**/*.json": true,
+    "**/frontend/android/**/*.png": true,
+    "**/frontend/android/**/*.jpg": true,
+    "**/frontend/android/**/*.jpeg": true,
+    "**/frontend/android/**/*.webp": true,
+    "**/frontend/android/**/*.gif": true,
+    "**/frontend/android/**/*.ico": true,
+    "**/frontend/android/**/res/drawable*": true,
+    "**/frontend/android/**/res/mipmap*": true
+  }
+}

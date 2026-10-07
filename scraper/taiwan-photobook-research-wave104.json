@@ -1,0 +1,233 @@
+{
+  "batch": 104,
+  "verifiedAt": "2026-10-07",
+  "purpose": "Catalog newly verified Taiwan physical and digital photobooks with independent format/edition rows, source evidence, covers, and verified current offer status.",
+  "notes": [
+    "阿喜 standard physical ISBN 9789869124805: 128 pages; Five Music identifies photographer 陳映之 and 15 styling themes. The separate Eslite deluxe package has EAN 4719760105370 and three 杯緣子 figures; EAN is not stored as ISBN.",
+    "Chungwa Telecom's 2015 announcement verifies a historical HamiBook/Kollect digital exclusive with 25 previously unpublished images. No current product page, EISBN, or price was found; the digital edition has no retailer offer.",
+    "Ruten shows 阿喜's item sold out, stock 0, sold count 1. The displayed NT$500 is not confirmed as the transaction price; completed status is recorded with no sale amount.",
+    "Close to Vera is a 160-page Taiwanese paperback, ISBN 9789869535748. Ruten showed one active used signed copy asking NT$500.",
+    "海倫清桃's physical paperback is 144 pages, ISBN 9789863585084, dated 2017-05-01. The fixed-layout EPUB is separately cataloged without reusing the physical ISBN. Sanmin showed a current ebook price of NT$560; Ruten showed an active used signed physical copy at NT$500 with three posters.",
+    "羽庭's 雨停 is a physical special issue dated 2018-06-27. TAAZE marks it out of print; its displayed old price is not imported as an active offer.",
+    "All four cover objects were uploaded to R2 and verified through public GET with exact SHA-256 readback."
+  ],
+  "sources": [
+    "https://www.5music.com.tw/Cdlist-C.asp?cdno=435495678816",
+    "https://nclfile.ncl.edu.tw/files/201511/3714787f-ab04-4c3c-865d-aa9f57d83a3d.pdf",
+    "https://www.eslite.com/product/1001196942377701",
+    "https://www.cht.com.tw/zh-tw/home/cht/messages/2015/msg-150212-173544",
+    "https://www.ruten.com.tw/item/22624864044811/",
+    "https://www.kingstone.com.tw/basic/2019500056743/",
+    "https://nclfile.ncl.edu.tw/files/201801/1f98ddfb-1e5c-4865-baef-752c5d0de2f0.pdf",
+    "https://www.ruten.com.tw/item/22503672140901/",
+    "https://www.sanmin.com.tw/product/index/006316873",
+    "https://www.books.com.tw/products/E050116880",
+    "https://nclfile.ncl.edu.tw/files/201707/6a050dd1-d8e4-436d-b03d-d18db0c97f6e.pdf",
+    "https://www.ruten.com.tw/item/22541162554568/",
+    "https://www.taaze.tw/products/21100030956.html"
+  ],
+  "models": [
+    {
+      "name": "林育品",
+      "aliases": [
+        "林育品",
+        "阿喜"
+      ],
+      "works": [
+        {
+          "title": "馬尾女孩最無敵：阿喜私攝概念寫真書",
+          "workId": "work-tw-0d65ed6f1bdeb5b3b4fd66fb",
+          "summary": "阿喜（林育品）的個人寫真作品；標準紙本、附公仔精裝盒裝與HamiBook數位獨家內容分開記錄。",
+          "editions": [
+            {
+              "editionId": "edition-20d765ecc06ca5dd16afb5b9",
+              "format": "physical",
+              "editionLabel": "標準版",
+              "editionVariant": "standard",
+              "isbn": "9789869124805",
+              "publisher": "愛貝克思",
+              "pageCount": 128,
+              "releaseDate": "2014-12-10T00:00:00Z",
+              "metadataSourceUrl": "https://www.5music.com.tw/Cdlist-C.asp?cdno=435495678816",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/ca39587fc4302e35d0e4e09f3d082e90627de151cbee9556c7943f3b6d0c366f.jpg",
+              "offer": {
+                "sourceId": "ruten-tw",
+                "url": "https://www.ruten.com.tw/item/22624864044811/",
+                "title": "阿喜(林育品) 私攝概念寫真集 馬尾女孩最無敵",
+                "status": "completed",
+                "priceMinor": 0,
+                "currency": "TWD",
+                "priceType": "fixed",
+                "statusEvidence": "Live Ruten item page showed SoldOut, stock 0, and sold count 1. The page's displayed NT$500 was a listing price, not a disclosed final transaction amount; no sale price is recorded."
+              }
+            },
+            {
+              "editionId": "edition-84e7788f1ba7c787ff096f3a",
+              "format": "physical",
+              "editionLabel": "精裝盒裝版（附3杯緣子公仔）",
+              "editionVariant": "special",
+              "isbn": "",
+              "publisher": "愛貝克思",
+              "pageCount": 128,
+              "releaseDate": "",
+              "metadataSourceUrl": "https://www.eslite.com/product/1001196942377701",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/ca39587fc4302e35d0e4e09f3d082e90627de151cbee9556c7943f3b6d0c366f.jpg",
+              "offer": null
+            },
+            {
+              "editionId": "edition-cdb1e9c483f54d53e6d2085d",
+              "format": "digital",
+              "editionLabel": "HamiBook數位獨家版",
+              "editionVariant": "limited",
+              "isbn": "",
+              "publisher": "愛貝克思",
+              "pageCount": 0,
+              "releaseDate": "",
+              "metadataSourceUrl": "https://www.cht.com.tw/zh-tw/home/cht/messages/2015/msg-150212-173544",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/ca39587fc4302e35d0e4e09f3d082e90627de151cbee9556c7943f3b6d0c366f.jpg",
+              "offer": null
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "嚴正嵐",
+      "aliases": [
+        "嚴正嵐",
+        "Vera",
+        "Vera Yen"
+      ],
+      "works": [
+        {
+          "title": "Close to Vera：嚴正嵐×手札＋塗鴉÷寫真",
+          "workId": "work-tw-003967591f407e27903fe024",
+          "summary": "嚴正嵐的個人寫真與手札、塗鴉作品。",
+          "editions": [
+            {
+              "editionId": "edition-0988610ea339d6fb02ac532e",
+              "format": "physical",
+              "editionLabel": "標準版",
+              "editionVariant": "standard",
+              "isbn": "9789869535748",
+              "publisher": "水靈文創",
+              "pageCount": 160,
+              "releaseDate": "2017-10-25T00:00:00Z",
+              "metadataSourceUrl": "https://www.kingstone.com.tw/basic/2019500056743/",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/f601a4d4387f08cdc1f71b781702314c8957a7f50bab5d6046e1ecd083a37334.jpg",
+              "offer": {
+                "sourceId": "ruten-tw",
+                "url": "https://www.ruten.com.tw/item/22503672140901/",
+                "title": "Close to Vera 嚴正嵐寫真書（簽名本）",
+                "status": "active",
+                "priceMinor": 50000,
+                "currency": "TWD",
+                "priceType": "fixed",
+                "statusEvidence": "Live Ruten item page showed stock 1 and active purchase controls at NT$500. This is the current asking price; the seller describes a used signed copy."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "海倫清桃",
+      "aliases": [
+        "海倫清桃",
+        "Helen Thanh Đào",
+        "Helen Thanh Dao"
+      ],
+      "works": [
+        {
+          "title": "海倫清桃：坦然做自己",
+          "workId": "work-tw-fa713259e5dc782a65ae217c",
+          "summary": "海倫清桃的個人寫真作品；紙本版與固定版面EPUB分開記錄。",
+          "editions": [
+            {
+              "editionId": "edition-9d48afedf18cfc9d84e126a1",
+              "format": "physical",
+              "editionLabel": "平裝版",
+              "editionVariant": "standard",
+              "isbn": "9789863585084",
+              "publisher": "白象文化",
+              "pageCount": 144,
+              "releaseDate": "2017-05-01T00:00:00Z",
+              "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/006316873",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/9adc660e4d9997b3b5512477c4e9106049bf0b4905004196c0d69bcc843c0be9.jpg",
+              "offer": {
+                "sourceId": "ruten-tw",
+                "url": "https://www.ruten.com.tw/item/22541162554568/",
+                "title": "海倫清桃 坦然做自己 寫真書 簽名版附海報",
+                "status": "active",
+                "priceMinor": 50000,
+                "currency": "TWD",
+                "priceType": "fixed",
+                "statusEvidence": "Live Ruten item page showed stock 6 and active purchase controls at NT$500. This is the current asking price, not a completed-sale price; seller describes a used signed copy with three posters."
+              }
+            },
+            {
+              "editionId": "edition-b09feebcee9d6fe3e16ebeb9",
+              "format": "digital",
+              "editionLabel": "固定版面EPUB",
+              "editionVariant": "unspecified",
+              "isbn": "",
+              "publisher": "白象文化",
+              "pageCount": 0,
+              "releaseDate": "",
+              "metadataSourceUrl": "https://www.books.com.tw/products/E050116880",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/9adc660e4d9997b3b5512477c4e9106049bf0b4905004196c0d69bcc843c0be9.jpg",
+              "offer": {
+                "sourceId": "sanmin-books-tw",
+                "url": "https://www.sanmin.com.tw/product/index/006316873",
+                "title": "海倫清桃：坦然做自己（電子書）",
+                "status": "active",
+                "priceMinor": 56000,
+                "currency": "TWD",
+                "priceType": "digital",
+                "statusEvidence": "Live Sanmin product page displayed 書紐電子書 NT$560; Books.com identifies the ebook as fixed-layout EPUB. This is a current digital retail asking price, not a sold transaction."
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "羽庭",
+      "aliases": [
+        "羽庭",
+        "羽婷",
+        "廖欣寧"
+      ],
+      "works": [
+        {
+          "title": "VISION MAN 質男幫特刊：雨停 羽庭",
+          "workId": "work-tw-7ae1a24c67610147797674a4",
+          "summary": "羽庭（廖欣寧）的個人紙本寫真特刊。",
+          "editions": [
+            {
+              "editionId": "edition-a086b62be9952e632f3f6548",
+              "format": "physical",
+              "editionLabel": "標準版",
+              "editionVariant": "standard",
+              "isbn": "",
+              "publisher": "創新書報股份有限公司",
+              "pageCount": 0,
+              "releaseDate": "2018-06-27T00:00:00Z",
+              "metadataSourceUrl": "https://www.taaze.tw/products/21100030956.html",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/7da4032c7143ecad1954b0da83036b17b8f2716eb60bd692bb2a1ea674c49d1e.jpg",
+              "offer": null
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "changes": {
+    "newWorks": 4,
+    "newPhysicalEditions": 5,
+    "newDigitalEditions": 2,
+    "verifiedActiveOffers": 3,
+    "verifiedSoldListingsWithoutFinalPrice": 1,
+    "newR2CoverUploads": 4
+  }
+}

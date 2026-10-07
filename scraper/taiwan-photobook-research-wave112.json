@@ -1,0 +1,50 @@
+{
+  "batch": 112,
+  "verifiedAt": "2026-10-07",
+  "purpose": "Add 阿厚綾’s verified physical photobook edition, its official retailer cover and a current bookstore asking-price observation; keep digital format separate unless a digital edition is verified.",
+  "models": [
+    "阿厚綾"
+  ],
+  "works": [
+    {
+      "model": "阿厚綾",
+      "title": "《綾の邊界 きわ》阿厚綾",
+      "workId": "work-tw-3575066e4bd36091324620d0",
+      "sources": [
+        "https://www.kingstone.com.tw/basic/2075020023320/",
+        "https://www.kolr.ai/influencer/8bd0c27c-8409-481a-9530-1e2cce684390?lang=zh&platform=ig",
+        "https://www.findglocal.com/TW/Taipei/126250264880064/%E6%84%9B%E7%BE%8E%E6%98%9F-iamstar.TV"
+      ],
+      "composition": "阿厚綾（Aya）首本個人實體寫真書，以溫泉、和服、居家、中式氛圍與泳裝等場景呈現甜美到性感的多面形象。",
+      "editions": [
+        {
+          "format": "physical",
+          "label": "標準版",
+          "url": "https://www.kingstone.com.tw/basic/2075020023320/",
+          "releaseDate": "2026-08-18",
+          "isbnOrEisbn": "",
+          "pageCount": null,
+          "dimensions": "19 × 26 cm",
+          "metadataNote": "Kingstone says paperback, 16開19×26cm. ISBN blank and page count zero on page; not inferred.",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/eafd686f27fa7c1dc8661cf4f61ac57771f6e71d7d9e32ac0143326bc324a7f5.jpg",
+          "coverSourceUrl": "https://cdn.kingstone.com.tw/mag/images/product/20750/2075020023320/2075020023320b.jpg?Q=6cbbd",
+          "activeOffers": [
+            {
+              "sourceId": "kingstone-print-tw",
+              "url": "https://www.kingstone.com.tw/basic/2075020023320/",
+              "priceTWD": 890,
+              "evidence": "Kingstone product page showed NT$890 (list price NT$980), an enabled checkout/add-to-cart action, and limited inventory on 2026-10-07. This is a bookstore asking price, not a secondary-market or sold price."
+            }
+          ],
+          "digitalEdition": "No separate digital retailer product was found in public searches of exact title across Kingstone, BOOK☆WALKER, Readmoo, Rakuten/Kobo and Pubu; treat this as not found, not proof that none exists."
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Kingstone product page identifies this as a physical paperback and shows an enabled order action at NT$890 on 2026-10-07. This is retail price only; no completed-sale price or used-marketplace listing is asserted.",
+    "Books.com was promoted by the model’s agency in August, but the current product endpoint returned HTTP 403, so no current offer or price was imported.",
+    "Image downloaded from Kingstone product page; R2 PUT, HEAD and public GET all returned HTTP 200 and public SHA-256 exactly matched the downloaded image.",
+    "Exact-title searches for Ruten, Yahoo Auctions and other public marketplace results did not surface a separately verifiable active or completed listing. This is a search result limitation, not proof that no secondary-market listing exists; no marketplace or sold-price observation was imported."
+  ]
+}

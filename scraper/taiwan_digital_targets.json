@@ -1,0 +1,564 @@
+[
+  {
+    "sourceId": "bookwalker-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "readmoo-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "pubu-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "kobo-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "bookwalker-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "readmoo-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "pubu-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "kobo-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "bookwalker-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "readmoo-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "pubu-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "kobo-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "hami-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "hami-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "hami-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "google-play-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "google-play-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "google-play-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "momo-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "momo-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "momo-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "pchome-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "pchome-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "pchome-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "yahoo-shopping-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "yahoo-shopping-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "yahoo-shopping-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "kingstone-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "kingstone-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "kingstone-books-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "books-com-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "吳元元",
+      "format": "digital",
+      "humanModelKeywords": [
+        "吳元元",
+        "元元",
+        "吳婕安"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "books-com-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "林襄",
+      "format": "digital",
+      "humanModelKeywords": [
+        "林襄",
+        "Mizuki"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "books-com-tw",
+    "operation": "active_discovery",
+    "request": {
+      "query": "張雅涵",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 2,
+      "maxDetailPages": 20
+    }
+  },
+  {
+    "sourceId": "taaze-books-tw",
+    "operation": "catalog_discovery",
+    "request": {
+      "url": "https://m.taaze.tw/do/mobile/single.aspx?pid=14100093289",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 1,
+      "maxDetailPages": 1
+    }
+  },
+  {
+    "sourceId": "apple-books-us",
+    "operation": "catalog_discovery",
+    "request": {
+      "url": "https://books.apple.com/us/book/id6760949828",
+      "format": "digital",
+      "humanModelKeywords": [
+        "張雅涵",
+        "雅涵",
+        "Kimi",
+        "禾羽"
+      ],
+      "fetchDetails": true,
+      "maxPages": 1,
+      "maxDetailPages": 1
+    }
+  }
+]

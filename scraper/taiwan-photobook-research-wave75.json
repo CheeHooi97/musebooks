@@ -1,0 +1,49 @@
+{
+  "model": "阿部瑪利亞",
+  "identityNote": "Sanmin biographical metadata identifies Maria Abe; ebook and print share the same photo-book description.",
+  "printExtras": "One random collector card from two designs; 10.5 × 15 cm.",
+  "editions": [
+    {
+      "format": "physical",
+      "isbn": "9786264199285",
+      "pages": 128,
+      "dimensions": "28 × 21 × 0.95 cm",
+      "releaseDate": "2025-11-07",
+      "sourceUrl": "https://www.sanmin.com.tw/product/index/014936599"
+    },
+    {
+      "format": "digital",
+      "eisbn": "9786264199193",
+      "container": "EPUB fixed layout",
+      "releaseDate": "2025-11-07",
+      "sourceUrl": "https://www.sanmin.com.tw/product/index/015064155"
+    }
+  ],
+  "description": "Home-area Kanagawa coast and streets, including the city where she started in AKB48; the retailer describes her 15-year stage journey. Photographer: KRIS KANG.",
+  "workId": "work-tw-9b43d68ebb12e2f513409a04",
+  "workTitle": "半分 はんぶん：阿部瑪利亞寫真",
+  "editionRecords": [
+    {
+      "id": "edition-30269ae9f8125155dd75ee7c",
+      "format": "physical",
+      "isbn": "9786264199285",
+      "pages": 128,
+      "dimensions": "28cm*21cm*0.95cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/e7065f456a97e218550e285546ca2bec450b9e465cd84ed223a3dc13d79e77d2.jpg",
+      "coverObjectKey": "musebooks/covers/e7065f456a97e218550e285546ca2bec450b9e465cd84ed223a3dc13d79e77d2.jpg",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014936599",
+      "contentSummary": "阿部瑪利亞首部寫真，場景取自家鄉神奈川海岸、街巷及AKB48出道城市，記錄她十五年舞台經歷；紙本128頁，隨書附隨機收藏卡1張（2款之一）。"
+    },
+    {
+      "id": "edition-196eccf3cd620a8c7d196379",
+      "format": "digital",
+      "isbn": "9786264199193",
+      "pages": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/b592cdd3a2ff8417739d30a11c2e41106ef80e791cc1a7b9e64cd143ca4f5c3f.png",
+      "coverObjectKey": "musebooks/covers/b592cdd3a2ff8417739d30a11c2e41106ef80e791cc1a7b9e64cd143ca4f5c3f.png",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/015064155",
+      "contentSummary": "阿部瑪利亞首部寫真，場景取自家鄉神奈川海岸、街巷及AKB48出道城市，記錄她十五年舞台經歷；EPUB版式電子書，未列紙本收藏卡贈品。"
+    }
+  ]
+}

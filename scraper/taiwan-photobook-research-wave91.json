@@ -1,0 +1,216 @@
+{
+  "batch": 91,
+  "verifiedAt": "2026-10-07T03:44:31Z",
+  "purpose": "Catalog individual Rakuten Girls Yanmaga Cup digital mini photobooks without merging them into the separate group photobook or asserting stale prices as active/sold.",
+  "series": {
+    "title": "Rakuten Girls 迷你寫真集",
+    "imprint": "ヤンマガデジタル写真集",
+    "publisher": "講談社",
+    "releaseDate": "2026-04-24",
+    "publishedTitleCount": 10,
+    "membersListed": [
+      "穎樂",
+      "若潼",
+      "廉世彬",
+      "高橋佳帆",
+      "Kira",
+      "溫妮",
+      "彭彭",
+      "禹菡",
+      "Mika",
+      "笑笑"
+    ],
+    "composition": "The source catalog lists ten member-specific digital mini photobooks. These are individual titles, separate from the existing four-member group digital photobook. Available sources do not disclose reliable page counts or complete image contents for the minis.",
+    "discoverySourceUrls": [
+      "https://ymclub.kodansha.co.jp/pages/yanmaga-cup-tw",
+      "https://findbook.com.tw/rakuten%20girls%20%E8%BF%B7%E4%BD%A0%E5%AF%AB%E7%9C%9F%E9%9B%86",
+      "https://24h.pchome.com.tw/search/?cateId=DJBQ&q=cup"
+    ]
+  },
+  "editionsAdded": [
+    {
+      "model": "穎樂",
+      "workId": "work-tw-9c75b675ff536b31e3196fc6",
+      "editionId": "edition-ce4697cf80112022f56cceaa",
+      "publishedTitle": "Rakuten Girls 迷你寫真集 穎樂 Yanmaga Cup Yanmaga 數位寫真集",
+      "format": "digital",
+      "language": "ja",
+      "isbn": "",
+      "publisher": "講談社",
+      "releaseDate": "2026-04-24",
+      "pageCount": null,
+      "metadataSourceUrl": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAIL",
+      "retailerProductUrl": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAIL",
+      "retailerExternalId": "DJBQ4C-D900JYAIL",
+      "retailerStatus": "unavailable",
+      "retailerObservedPrice": null,
+      "soldPrice": null,
+      "coverSourceUrl": "https://img.pchome.com.tw/cs/items/DJBQ4CD900JYAIL/000001_1777219543.jpg",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/5bdfbd357b3abdd200d686860889466105add87695b7524d6da24edcf8434de3.jpg",
+      "coverObjectKey": "musebooks/covers/5bdfbd357b3abdd200d686860889466105add87695b7524d6da24edcf8434de3.jpg",
+      "coverSHA256": "5bdfbd357b3abdd200d686860889466105add87695b7524d6da24edcf8434de3",
+      "coverBytes": 49073,
+      "contentSummary": "個人專屬的 Yanmaga 數位迷你寫真集；Kobo 電子書，日文固定版式 EPUB。來源未標示頁數或收錄範圍。此作品與四人團體數位寫真集分開建檔。"
+    },
+    {
+      "model": "高橋佳帆",
+      "workId": "work-tw-7900672c525b416c3e4a2457",
+      "editionId": "edition-20fd1d26b7518aba2e3f641c",
+      "publishedTitle": "Rakuten Girls 迷你寫真集 高橋佳帆 Yanmaga Cup Yanmaga 數位寫真集",
+      "format": "digital",
+      "language": "ja",
+      "isbn": "8982002000025",
+      "publisher": "講談社",
+      "releaseDate": "2026-04-24",
+      "pageCount": null,
+      "metadataSourceUrl": "https://www.kobo.com/tw/zh/ebook/YLxZIBkZVTuQgCCDkypKtg",
+      "retailerProductUrl": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAHK",
+      "retailerExternalId": "DJBQ4C-D900JYAHK",
+      "retailerStatus": "unavailable",
+      "retailerObservedPrice": null,
+      "soldPrice": null,
+      "coverSourceUrl": "https://cdn.kobo.com/book-images/de03961c-7b5d-4be2-bf0d-f75040f80e33/353/569/90/False/YLxZIBkZVTuQgCCDkypKtg.jpg",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/07b96222a3d2cd7b25a44c68c6409a7d913b5dfd16eb247880b2f0d5d573b83b.jpg",
+      "coverObjectKey": "musebooks/covers/07b96222a3d2cd7b25a44c68c6409a7d913b5dfd16eb247880b2f0d5d573b83b.jpg",
+      "coverSHA256": "07b96222a3d2cd7b25a44c68c6409a7d913b5dfd16eb247880b2f0d5d573b83b",
+      "coverBytes": 63457,
+      "contentSummary": "Kobo 台灣列為日文 EPUB 3（Adobe DRM，25 MB），講談社出版，2026-04-24 發行；書籍 ID 8982002000025。個人迷你寫真集，頁數與收錄範圍未標示；與團體數位寫真集分開建檔。"
+    },
+    {
+      "model": "廉世彬",
+      "workId": "work-tw-c1a080c05850bc2e4423c2c7",
+      "editionId": "edition-2097a35e99d26aa582551c38",
+      "publishedTitle": "Rakuten Girls 迷你寫真集 廉世彬 Yanmaga Cup Yanmaga 數位寫真集",
+      "format": "digital",
+      "language": "ja",
+      "isbn": "8982002000023",
+      "publisher": "講談社",
+      "releaseDate": "2026-04-24",
+      "pageCount": null,
+      "metadataSourceUrl": "https://www.kobo.com/tw/zh/ebook/ucb5JI1zFTa93qIVVPlpHg",
+      "retailerProductUrl": "",
+      "retailerExternalId": "",
+      "retailerStatus": "not_independently_verified",
+      "retailerObservedPrice": null,
+      "soldPrice": null,
+      "coverSourceUrl": "https://cdn.kobo.com/book-images/389c914b-4da7-4ea8-bbc9-46ea190e9285/353/569/90/False/ucb5JI1zFTa93qIVVPlpHg.jpg",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/1214622e39b4409a2c3bec9f6386af1d9a4026af38b3a34e70f15ff19d6b9a30.jpg",
+      "coverObjectKey": "musebooks/covers/1214622e39b4409a2c3bec9f6386af1d9a4026af38b3a34e70f15ff19d6b9a30.jpg",
+      "coverSHA256": "1214622e39b4409a2c3bec9f6386af1d9a4026af38b3a34e70f15ff19d6b9a30",
+      "coverBytes": 60156,
+      "contentSummary": "Kobo 台灣列為日文 EPUB 3（Adobe DRM，27 MB），講談社出版，2026-04-24 發行；書籍 ID 8982002000023。個人迷你寫真集，頁數與收錄範圍未標示；與團體數位寫真集分開建檔。"
+    },
+    {
+      "model": "溫妮",
+      "workId": "work-tw-7d4c3aaee1115b5112fa9b78",
+      "editionId": "edition-a5688034fe01d00db641bdc1",
+      "publishedTitle": "Rakuten Girls 迷你寫真集 溫妮 Yanmaga Cup Yanmaga 數位寫真集",
+      "format": "digital",
+      "language": "ja",
+      "isbn": "8982002000019",
+      "publisher": "講談社",
+      "releaseDate": "2026-04-24",
+      "pageCount": null,
+      "metadataSourceUrl": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAHA",
+      "retailerProductUrl": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAHA",
+      "retailerExternalId": "DJBQ4C-D900JYAHA",
+      "retailerStatus": "unavailable",
+      "retailerObservedPrice": null,
+      "soldPrice": null,
+      "coverSourceUrl": "https://img.pchome.com.tw/cs/items/DJBQ4CD900JYAHA/000001_1777219518.jpg",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/62308cc9dcefc5d19d36f4220d4dd4c471c1efeeb21d7134a6a0f24dd5c5659a.jpg",
+      "coverObjectKey": "musebooks/covers/62308cc9dcefc5d19d36f4220d4dd4c471c1efeeb21d7134a6a0f24dd5c5659a.jpg",
+      "coverSHA256": "62308cc9dcefc5d19d36f4220d4dd4c471c1efeeb21d7134a6a0f24dd5c5659a",
+      "coverBytes": 55685,
+      "contentSummary": "PChome 書目資料標示為講談社日文 Kobo 電子書，2026-04-24 發行，ISBN／書籍 ID 8982002000019；規格標示固定版式 EPUB3、非實體紙本。頁數與收錄範圍未標示；與團體數位寫真集分開建檔。"
+    },
+    {
+      "model": "若潼",
+      "workId": "work-tw-bb27df0b71a6552bf4b71aa3",
+      "editionId": "edition-e547773819762d3ad4337a79",
+      "publishedTitle": "Rakuten Girls 迷你寫真集 若潼 Yanmaga Cup Yanmaga 數位寫真集",
+      "format": "digital",
+      "language": "ja",
+      "isbn": "",
+      "publisher": "講談社",
+      "releaseDate": "2026-04-24",
+      "pageCount": null,
+      "metadataSourceUrl": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAJU",
+      "retailerProductUrl": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAJU",
+      "retailerExternalId": "DJBQ4C-D900JYAJU",
+      "retailerStatus": "unavailable",
+      "retailerObservedPrice": null,
+      "soldPrice": null,
+      "coverSourceUrl": "https://img.pchome.com.tw/cs/items/DJBQ4CD900JYAJU/000001_1777219573.jpg",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/3e2472327a4bcefdbb8e6051e06c5263b899205fd3e26f2f1e89731524e602e1.jpg",
+      "coverObjectKey": "musebooks/covers/3e2472327a4bcefdbb8e6051e06c5263b899205fd3e26f2f1e89731524e602e1.jpg",
+      "coverSHA256": "3e2472327a4bcefdbb8e6051e06c5263b899205fd3e26f2f1e89731524e602e1",
+      "coverBytes": 51749,
+      "contentSummary": "個人專屬的 Yanmaga 數位迷你寫真集；PChome Kobo 商品頁標題確認為數位商品。書籍 ID、頁數及收錄範圍尚未由可讀產品規格頁確認；與團體數位寫真集分開建檔。"
+    },
+    {
+      "model": "禹菡",
+      "workId": "work-tw-e86a069f74594c2502976f88",
+      "editionId": "edition-5c2973a95d0da2282cd11a47",
+      "publishedTitle": "Rakuten Girls 迷你寫真集 禹菡 Yanmaga Cup Yanmaga 數位寫真集",
+      "format": "digital",
+      "language": "ja",
+      "isbn": "",
+      "publisher": "講談社",
+      "releaseDate": "2026-04-24",
+      "pageCount": null,
+      "metadataSourceUrl": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAGZ",
+      "retailerProductUrl": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAGZ",
+      "retailerExternalId": "DJBQ4C-D900JYAGZ",
+      "retailerStatus": "unavailable",
+      "retailerObservedPrice": null,
+      "soldPrice": null,
+      "coverSourceUrl": "https://img.pchome.com.tw/cs/items/DJBQ4CD900JYAGZ/000001_1777219508.jpg",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/3f1aab99f100f72ae39af3282ddac62398bfc5f50c1390b27dc70ecc7720ab37.jpg",
+      "coverObjectKey": "musebooks/covers/3f1aab99f100f72ae39af3282ddac62398bfc5f50c1390b27dc70ecc7720ab37.jpg",
+      "coverSHA256": "3f1aab99f100f72ae39af3282ddac62398bfc5f50c1390b27dc70ecc7720ab37",
+      "coverBytes": 57215,
+      "contentSummary": "個人專屬的 Yanmaga 數位迷你寫真集；PChome Kobo 商品頁標題確認為數位商品。書籍 ID、頁數及收錄範圍尚未由可讀產品規格頁確認；與團體數位寫真集分開建檔。"
+    }
+  ],
+  "availabilityCheck": {
+    "pchome": {
+      "observedAt": "2026-10-07T03:44:31Z",
+      "checkedItems": [
+        "DJBQ4C-D900JYAIL",
+        "DJBQ4C-D900JYAHK",
+        "DJBQ4C-D900JYAHA",
+        "DJBQ4C-D900JYAJU",
+        "DJBQ4C-D900JYAGZ"
+      ],
+      "result": "Each live product page's item-detail status is unavailable with price 0. No active PChome offer was imported.",
+      "historicalIndexedPrice": "NT$150 appears in older search-index snapshots; it was not treated as current price or completed-sale price."
+    },
+    "kobo": {
+      "checkedItems": [
+        "8982002000025",
+        "8982002000023"
+      ],
+      "result": "Taiwan Kobo product pages and edition metadata were verified. The live browser session is outside Taiwan and requests a Taiwan address before purchase, so no current Kobo price or offer observation was recorded."
+    },
+    "soldPrices": "No final transaction prices found or recorded."
+  },
+  "unresolvedMembers": [
+    {
+      "model": "Kira",
+      "reason": "Series title found, but exact product identity and matching cover not yet verified."
+    },
+    {
+      "model": "彭彭",
+      "reason": "Series title found, but exact product identity and matching cover not yet verified."
+    },
+    {
+      "model": "Mika",
+      "reason": "Series title found, but exact product identity and matching cover not yet verified."
+    },
+    {
+      "model": "笑笑",
+      "reason": "Series title found, but exact product identity and matching cover not yet verified."
+    }
+  ]
+}

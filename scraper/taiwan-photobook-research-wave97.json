@@ -1,0 +1,490 @@
+{
+  "batch": 97,
+  "verifiedAt": "2026-10-07T05:11:03Z",
+  "purpose": "Add four active Readmoo digital editions and attach four additional Readmoo offers to existing digital editions, retaining eISBN and print/digital format boundaries.",
+  "models": [
+    {
+      "name": "吳心緹",
+      "aliases": [
+        "吳心緹",
+        "小敏"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-f10145439a5f5bf0802a945f",
+          "title": "Holiday：吳心緹の寫真集",
+          "photographer": "鄭弘敬",
+          "editions": [
+            {
+              "editionId": "edition-8e7fcc6ecf3a8cf78a0bb25f",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786263968011",
+              "eisbn": "9786263968011",
+              "reportedEisbns": [],
+              "publisher": "時報出版",
+              "releaseDate": "2024-10-29",
+              "fileFormat": "EPUB（固定版面）",
+              "pageCount": 211,
+              "photographer": "鄭弘敬",
+              "contentSummary": "固定版式 EPUB，211頁。吳心緹與攝影師鄭弘敬合作，記錄橫跨冬日至盛夏、日本與台灣各地的假期旅程與四季景色。",
+              "metadataSourceUrl": "https://readmoo.com/book/210355144000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/gm/ledmoll.jpg?v=1730175461",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/29fb2061b4b386a8e698712b19e23ca51ef9fa03b5a42cea19265d82c7070fc3.jpg",
+              "coverObjectKey": "musebooks/covers/29fb2061b4b386a8e698712b19e23ca51ef9fa03b5a42cea19265d82c7070fc3.jpg",
+              "coverSHA256": "29fb2061b4b386a8e698712b19e23ca51ef9fa03b5a42cea19265d82c7070fc3",
+              "coverBytes": 201205,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210355144000101",
+                  "url": "https://readmoo.com/book/210355144000101",
+                  "verificationUrl": "https://readmoo.com/book/210355144000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 45500,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T05:11:03Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210355144000101"
+      ],
+      "findings": [
+        "Readmoo currently presents this exact product with an electronic-book price and a purchase button; the saved offer is digital asking price, not a completed-sale price.",
+        "固定版式 EPUB，211頁。吳心緹與攝影師鄭弘敬合作，記錄橫跨冬日至盛夏、日本與台灣各地的假期旅程與四季景色。",
+        "The exact cover from the live product page was mirrored to R2 and passed public SHA-256 readback.",
+        "Paper ISBN 9786263968097 remains assigned to a physical edition; this offer uses the separate digital EISBN 9786263968011.",
+        "The digital edition is stored as a separate digital-format edition under the existing title work identified by the paper ISBN 9786263968097; its marketplace listing remains format-tagged digital."
+      ]
+    },
+    {
+      "name": "夏蕾",
+      "aliases": [
+        "夏蕾"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-44b0143f8e9afb4d9fff0e09",
+          "title": "心動蕾達：夏蕾寫真",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-cf999a4774a1d09f39dbfd70",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786264446433",
+              "eisbn": "9786264446433",
+              "reportedEisbns": [],
+              "publisher": "時報出版",
+              "releaseDate": "2026-09-18",
+              "fileFormat": "EPUB（固定版面）",
+              "pageCount": 147,
+              "photographer": "",
+              "contentSummary": "固定版式 EPUB，147頁。Readmoo 與出版社簡介稱為夏蕾第一本寫真書，以影像記錄她此刻的樣貌；簡介未列完整造型目錄。",
+              "metadataSourceUrl": "https://readmoo.com/book/210502043000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/jb/qpekrpi.jpg?v=1790050817",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/189a68c223a121bb964281ea4faeaba66e534c52888fbbb2c6b6315a25a5737a.jpg",
+              "coverObjectKey": "musebooks/covers/189a68c223a121bb964281ea4faeaba66e534c52888fbbb2c6b6315a25a5737a.jpg",
+              "coverSHA256": "189a68c223a121bb964281ea4faeaba66e534c52888fbbb2c6b6315a25a5737a",
+              "coverBytes": 692108,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210502043000101",
+                  "url": "https://readmoo.com/book/210502043000101",
+                  "verificationUrl": "https://readmoo.com/book/210502043000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 47600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T05:11:03Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210502043000101"
+      ],
+      "findings": [
+        "Readmoo currently presents this exact product with an electronic-book price and a purchase button; the saved offer is digital asking price, not a completed-sale price.",
+        "固定版式 EPUB，147頁。Readmoo 與出版社簡介稱為夏蕾第一本寫真書，以影像記錄她此刻的樣貌；簡介未列完整造型目錄。",
+        "The exact cover from the live product page was mirrored to R2 and passed public SHA-256 readback."
+      ]
+    },
+    {
+      "name": "陳怡叡",
+      "aliases": [
+        "陳怡叡",
+        "陳怡叡（YURI）",
+        "YURI"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-dfac21c4da2431aa607199e2",
+          "title": "與你．YURI：陳怡叡的南島寫真",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-7ac7e4397109a591b394a9f1",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571390710",
+              "eisbn": "9789571390710",
+              "reportedEisbns": [],
+              "publisher": "時報出版",
+              "releaseDate": "2021-08-03",
+              "fileFormat": "EPUB（固定版面）",
+              "pageCount": 163,
+              "photographer": "",
+              "contentSummary": "固定版式 EPUB，163頁。Readmoo 將本書介紹為 YURI 陳怡叡的第一本短文寫真；商品頁未列完整照片目錄或攝影師。",
+              "metadataSourceUrl": "https://readmoo.com/book/210192450000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/8f/ce56lb5.jpg?v=1629859229",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/a17bdc4b5af8700d732b17400f7bc6308783a85211902a4bdcf14e5549ad4989.jpg",
+              "coverObjectKey": "musebooks/covers/a17bdc4b5af8700d732b17400f7bc6308783a85211902a4bdcf14e5549ad4989.jpg",
+              "coverSHA256": "a17bdc4b5af8700d732b17400f7bc6308783a85211902a4bdcf14e5549ad4989",
+              "coverBytes": 220025,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210192450000101",
+                  "url": "https://readmoo.com/book/210192450000101",
+                  "verificationUrl": "https://readmoo.com/book/210192450000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 38500,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T05:11:03Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210192450000101"
+      ],
+      "findings": [
+        "Readmoo currently presents this exact product with an electronic-book price and a purchase button; the saved offer is digital asking price, not a completed-sale price.",
+        "固定版式 EPUB，163頁。Readmoo 將本書介紹為 YURI 陳怡叡的第一本短文寫真；商品頁未列完整照片目錄或攝影師。",
+        "The exact cover from the live product page was mirrored to R2 and passed public SHA-256 readback.",
+        "The digital edition is stored as a separate digital-format edition under the existing title work identified by the paper ISBN 9789571390628; its marketplace listing remains format-tagged digital."
+      ]
+    },
+    {
+      "name": "謝凱蒂",
+      "aliases": [
+        "謝凱蒂",
+        "未眠Katy"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-b3899af5c9c9ae7e5045a3db",
+          "title": "浮誇的不是表情，是我的人生：浮誇甜心謝凱蒂的掏心散文＋舒心寫真",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-741dd96dc4b73a3fd1f7f772",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "eisbn": "",
+              "reportedEisbns": [
+                "9786263535565",
+                "9786263535596"
+              ],
+              "publisher": "時報出版",
+              "releaseDate": "2023-04-14",
+              "fileFormat": "EPUB（流動版面）",
+              "pageCount": null,
+              "photographer": "",
+              "contentSummary": "流動版面 EPUB，散文與寫真合輯。出版社介紹稱收錄超過100張個人寫真及成長故事。Readmoo 同一商品頁列出兩個 EISBN；國家圖書館書目分別將 9786263535565 列為《浮誇的不是表情，是我的人生》EPUB，將 9786263535596 列為《浮誇甜心謝凱蒂的舒心寫真》EPUB，因此目錄單一 ISBN 欄留白，兩個識別碼均記於研究資料。",
+              "metadataSourceUrl": "https://readmoo.com/book/210270123000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/jc/ilmlrmb.jpg?v=1720774246",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/5367a4124b35293765e820079560c6b71eb5ec65fe36a51c4c163b221989c8b3.jpg",
+              "coverObjectKey": "musebooks/covers/5367a4124b35293765e820079560c6b71eb5ec65fe36a51c4c163b221989c8b3.jpg",
+              "coverSHA256": "5367a4124b35293765e820079560c6b71eb5ec65fe36a51c4c163b221989c8b3",
+              "coverBytes": 162860,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210270123000101",
+                  "url": "https://readmoo.com/book/210270123000101",
+                  "verificationUrl": "https://readmoo.com/book/210270123000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 47600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T05:11:03Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210270123000101",
+        "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1679039608.pdf"
+      ],
+      "findings": [
+        "Readmoo currently presents this exact product with an electronic-book price and a purchase button; the saved offer is digital asking price, not a completed-sale price.",
+        "流動版面 EPUB，散文與寫真合輯。出版社介紹稱收錄超過100張個人寫真及成長故事。Readmoo 同一商品頁列出兩個 EISBN；國家圖書館書目分別將 9786263535565 列為《浮誇的不是表情，是我的人生》EPUB，將 9786263535596 列為《浮誇甜心謝凱蒂的舒心寫真》EPUB，因此目錄單一 ISBN 欄留白，兩個識別碼均記於研究資料。",
+        "The exact cover from the live product page was mirrored to R2 and passed public SHA-256 readback.",
+        "Taiwan National Central Library bibliography distinguishes the two EISBNs on the Readmoo page: 9786263535565, 9786263535596. Since this listing combines the memoir and photo book and the database has one ISBN slot, both are retained in research metadata while the edition ISBN field remains blank.",
+        "The digital edition is stored as a separate digital-format edition under the existing title work identified by the paper ISBN 9786263535510; its marketplace listing remains format-tagged digital."
+      ]
+    },
+    {
+      "name": "陳洛心YURI",
+      "aliases": [
+        "陳洛心",
+        "陳洛心YURI",
+        "YURI"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-47da677df17f8ec405473a4f",
+          "title": "洛入你心：YURI陳洛心日本寫真【電子書加贈40幅獨享福利美照】",
+          "photographer": "鄭弘敬",
+          "editions": [
+            {
+              "editionId": "edition-0c6e456e08e6270aff8b4f69",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786264196291",
+              "eisbn": "9786264196291",
+              "reportedEisbns": [],
+              "publisher": "時報出版",
+              "releaseDate": "2025-09-05",
+              "fileFormat": "EPUB（固定版面）",
+              "pageCount": 205,
+              "photographer": "鄭弘敬",
+              "contentSummary": "固定版式 EPUB，205頁，電子書加贈40幅獨享照片。作品由鄭弘敬拍攝，在日本冬日景色中記錄 YURI 的自然神情與旅途片刻。紙本 ISBN 9786264196444、EISBN 9786264196291 已在既有版次資料中核對；Readmoo 新署名陳洛心YURI 沿用同一版次，不另建重複作品。",
+              "metadataSourceUrl": "https://readmoo.com/book/210408820000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/bf/ieackh6.jpg?v=1756689934",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/64e27f897521948c5d1ab15af79914ab6b5ee4a894048fbda164b5c149fe3e85.jpg",
+              "coverObjectKey": "musebooks/covers/64e27f897521948c5d1ab15af79914ab6b5ee4a894048fbda164b5c149fe3e85.jpg",
+              "coverSHA256": "64e27f897521948c5d1ab15af79914ab6b5ee4a894048fbda164b5c149fe3e85",
+              "coverBytes": 1780501,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210408820000101",
+                  "url": "https://readmoo.com/book/210408820000101",
+                  "verificationUrl": "https://readmoo.com/book/210408820000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 47600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T05:11:03Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210408820000101"
+      ],
+      "findings": [
+        "Readmoo currently presents this exact product with an electronic-book price and a purchase button; the saved offer is digital asking price, not a completed-sale price.",
+        "固定版式 EPUB，205頁，電子書加贈40幅獨享照片。作品由鄭弘敬拍攝，在日本冬日景色中記錄 YURI 的自然神情與旅途片刻。紙本 ISBN 9786264196444、EISBN 9786264196291 已在既有版次資料中核對；Readmoo 新署名陳洛心YURI 沿用同一版次，不另建重複作品。",
+        "The exact cover from the live product page was mirrored to R2 and passed public SHA-256 readback.",
+        "Paper ISBN 9786264196444 remains assigned to a physical edition; this offer uses the separate digital EISBN 9786264196291."
+      ]
+    },
+    {
+      "name": "曼容",
+      "aliases": [
+        "曼容"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-03c5ae12b61ad3d1e9c5b3b5",
+          "title": "曼曼喜歡你 曼容數位寫真（含影音）",
+          "photographer": "李彥勳Ronin",
+          "editions": [
+            {
+              "editionId": "edition-a0a17dce1636ff2ff25d3ebb",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "with_video",
+              "isbn": "9786264036115",
+              "eisbn": "9786264036115",
+              "reportedEisbns": [],
+              "publisher": "尖端出版",
+              "releaseDate": "2025-02-01",
+              "fileFormat": "EPUB（固定版面）",
+              "pageCount": 252,
+              "photographer": "李彥勳Ronin",
+              "contentSummary": "固定版式 EPUB，252頁，附9段側拍花絮影音。尖端出版介紹列出甜美、活潑、性感及俏皮等形象；攝影師為李彥勳Ronin。",
+              "metadataSourceUrl": "https://readmoo.com/book/210368780000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/nm/dcqnzfc.jpg?v=1737681418",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/0b50e9c890d00b0fc5ea48d93de090a3d28facf55be1aff36ed0c9d71bb5aac2.jpg",
+              "coverObjectKey": "musebooks/covers/0b50e9c890d00b0fc5ea48d93de090a3d28facf55be1aff36ed0c9d71bb5aac2.jpg",
+              "coverSHA256": "0b50e9c890d00b0fc5ea48d93de090a3d28facf55be1aff36ed0c9d71bb5aac2",
+              "coverBytes": 242469,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210368780000101",
+                  "url": "https://readmoo.com/book/210368780000101",
+                  "verificationUrl": "https://readmoo.com/book/210368780000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 35000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T05:11:03Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210368780000101"
+      ],
+      "findings": [
+        "Readmoo currently presents this exact product with an electronic-book price and a purchase button; the saved offer is digital asking price, not a completed-sale price.",
+        "固定版式 EPUB，252頁，附9段側拍花絮影音。尖端出版介紹列出甜美、活潑、性感及俏皮等形象；攝影師為李彥勳Ronin。",
+        "The exact cover from the live product page was mirrored to R2 and passed public SHA-256 readback."
+      ]
+    },
+    {
+      "name": "冼迪琦",
+      "aliases": [
+        "冼迪琦",
+        "小迪"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-0c266caaa840f253c4b2c102",
+          "title": "刻在心迪：冼迪琦寫真",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-5dd38ae00fd0fbb31685bf3c",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786264192538",
+              "eisbn": "9786264192538",
+              "reportedEisbns": [],
+              "publisher": "時報出版",
+              "releaseDate": "2025-03-25",
+              "fileFormat": "EPUB（固定版面）",
+              "pageCount": 147,
+              "photographer": "",
+              "contentSummary": "固定版式 EPUB，147頁。時報出版將作品標示為 Passion Sisters 成員冼迪琦的個人寫真；本版 EISBN 9786264192538，紙本 ISBN 9786264192552。Readmoo 頁面未列完整造型目錄。",
+              "metadataSourceUrl": "https://readmoo.com/book/210381773000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/oe/dkelteo.jpg?v=1744280249",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/4487bac9bf636e9cc195c5585807397df124a8769b17c2fd68e485f52291370a.jpg",
+              "coverObjectKey": "musebooks/covers/4487bac9bf636e9cc195c5585807397df124a8769b17c2fd68e485f52291370a.jpg",
+              "coverSHA256": "4487bac9bf636e9cc195c5585807397df124a8769b17c2fd68e485f52291370a",
+              "coverBytes": 1663061,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210381773000101",
+                  "url": "https://readmoo.com/book/210381773000101",
+                  "verificationUrl": "https://readmoo.com/book/210381773000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 45500,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T05:11:03Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210381773000101"
+      ],
+      "findings": [
+        "Readmoo currently presents this exact product with an electronic-book price and a purchase button; the saved offer is digital asking price, not a completed-sale price.",
+        "固定版式 EPUB，147頁。時報出版將作品標示為 Passion Sisters 成員冼迪琦的個人寫真；本版 EISBN 9786264192538，紙本 ISBN 9786264192552。Readmoo 頁面未列完整造型目錄。",
+        "The exact cover from the live product page was mirrored to R2 and passed public SHA-256 readback.",
+        "The digital edition is stored as a separate digital-format edition under the existing title work identified by the paper ISBN 9786264192552; its marketplace listing remains format-tagged digital."
+      ]
+    },
+    {
+      "name": "阿部瑪利亞",
+      "aliases": [
+        "阿部瑪利亞",
+        "阿部Maria"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-9b43d68ebb12e2f513409a04",
+          "title": "半分 はんぶん：阿部瑪利亞寫真",
+          "photographer": "KRIS KANG",
+          "editions": [
+            {
+              "editionId": "edition-196eccf3cd620a8c7d196379",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786264199193",
+              "eisbn": "9786264199193",
+              "reportedEisbns": [],
+              "publisher": "時報出版",
+              "releaseDate": "2025-11-11",
+              "fileFormat": "EPUB（固定版面）",
+              "pageCount": 131,
+              "photographer": "KRIS KANG",
+              "contentSummary": "固定版式 EPUB，131頁，阿部瑪利亞首本寫真，由 KRIS KANG 拍攝。商品標籤列有海岸線、神奈川、寫真與光影；紙本 ISBN 9786264199285、EISBN 9786264199193。",
+              "metadataSourceUrl": "https://readmoo.com/book/210431924000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/bg/d7c4k9c.jpg?v=1764299584",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/c90bc7f17f771aa7aa5e1f1b73361b4aef99f130c411452923dd4fb10b9d8c64.jpg",
+              "coverObjectKey": "musebooks/covers/c90bc7f17f771aa7aa5e1f1b73361b4aef99f130c411452923dd4fb10b9d8c64.jpg",
+              "coverSHA256": "c90bc7f17f771aa7aa5e1f1b73361b4aef99f130c411452923dd4fb10b9d8c64",
+              "coverBytes": 1823547,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210431924000101",
+                  "url": "https://readmoo.com/book/210431924000101",
+                  "verificationUrl": "https://readmoo.com/book/210431924000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 47600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T05:11:03Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210431924000101"
+      ],
+      "findings": [
+        "Readmoo currently presents this exact product with an electronic-book price and a purchase button; the saved offer is digital asking price, not a completed-sale price.",
+        "固定版式 EPUB，131頁，阿部瑪利亞首本寫真，由 KRIS KANG 拍攝。商品標籤列有海岸線、神奈川、寫真與光影；紙本 ISBN 9786264199285、EISBN 9786264199193。",
+        "The exact cover from the live product page was mirrored to R2 and passed public SHA-256 readback."
+      ]
+    }
+  ]
+}

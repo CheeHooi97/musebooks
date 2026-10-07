@@ -1,0 +1,164 @@
+{
+  "batch": 89,
+  "verifiedAt": "2026-10-07T11:16:49+08:00",
+  "purpose": "Verify Pubu distribution and enrich the already-catalogued separate digital and physical editions for 瑟七’s 微澀．微瑟 photobook.",
+  "models": [
+    {
+      "name": "瑟七",
+      "aliases": [
+        "瑟七",
+        "Seul7",
+        "林沂玟"
+      ],
+      "identityNote": "Pubu lists author 瑟七 and photographer KRIS KANG (康志豪); its ISBN 9786264555029 matches the already-catalogued digital edition. The physical book remains a separate ISBN and edition.",
+      "physicalStatus": "The 144-page print edition remains separate. The catalog retains two Ruten and one Yahoo active-offer observations captured 2026-10-06; this batch did not refresh those second-hand offers. No completed-sale price was recorded.",
+      "digitalStatus": "Pubu’s official page is currently purchasable at NT$350 and specifies EPUB fixed layout (463MB), 294 pages, ISBN 9786264555029, and video. Active digital offers from Pubu, BOOK☆WALKER and Readmoo are linked to the digital edition; only Pubu was freshly rechecked in this batch.",
+      "sourceUrls": [
+        "https://www.pubu.com.tw/ebook/690306",
+        "https://www.cite.com.tw/book?id=108115",
+        "https://www.ruten.com.tw/item/22628062929424/",
+        "https://www.ruten.com.tw/item/22628082675187/",
+        "https://tw.bid.yahoo.com/item/101758878879",
+        "https://www.bookwalker.com.tw/product/305610",
+        "https://readmoo.com/book/210497069000101"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-df1e291d2b2f39f368a77cc1",
+          "title": "微澀・微瑟：瑟七寫真書",
+          "photographer": "KRIS KANG（康志豪）",
+          "editions": [
+            {
+              "editionId": "edition-f2d049670557ef6927251aff",
+              "format": "physical",
+              "label": "標準版",
+              "variant": "standard",
+              "isbn": "9786264552080",
+              "pageCount": 144,
+              "dimensions": "21cm×29.7cm",
+              "releaseDate": "2026-07-07",
+              "publisher": "尖端",
+              "photographer": "",
+              "contentSummary": "紙本寫真書，共144頁。",
+              "sourceUrl": "https://www.cite.com.tw/book?id=108115",
+              "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/626/626455208.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/617c9c2b9765ff0cbcc46993315175bc943640955db4a2df320e7963438877cc.jpg",
+              "coverObjectKey": "musebooks/covers/617c9c2b9765ff0cbcc46993315175bc943640955db4a2df320e7963438877cc.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "ruten-tw",
+                  "retailer": "Ruten 露天市集",
+                  "externalId": "22628062929424",
+                  "url": "https://www.ruten.com.tw/item/22628062929424/",
+                  "status": "active",
+                  "format": "physical",
+                  "priceType": "fixed",
+                  "priceMinor": 70300,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T13:50:49.856561+08:00",
+                  "statusEvidence": ""
+                },
+                {
+                  "sourceId": "ruten-tw",
+                  "retailer": "Ruten 露天市集",
+                  "externalId": "22628082675187",
+                  "url": "https://www.ruten.com.tw/item/22628082675187/",
+                  "status": "active",
+                  "format": "physical",
+                  "priceType": "fixed",
+                  "priceMinor": 76000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T13:51:34.245203+08:00",
+                  "statusEvidence": ""
+                },
+                {
+                  "sourceId": "yahoo-tw",
+                  "retailer": "Yahoo拍賣",
+                  "externalId": "101758878879",
+                  "url": "https://tw.bid.yahoo.com/item/101758878879",
+                  "status": "active",
+                  "format": "physical",
+                  "priceType": "fixed",
+                  "priceMinor": 76000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T13:50:55.343286+08:00",
+                  "statusEvidence": ""
+                }
+              ],
+              "sourceUrls": [
+                "https://www.cite.com.tw/book?id=108115",
+                "https://www.ruten.com.tw/item/22628062929424/",
+                "https://www.ruten.com.tw/item/22628082675187/",
+                "https://tw.bid.yahoo.com/item/101758878879"
+              ]
+            },
+            {
+              "editionId": "edition-0b730768da4b9e6b0bef9b82",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "with_video",
+              "isbn": "9786264555029",
+              "pageCount": 294,
+              "dimensions": "",
+              "releaseDate": "2026-08-30",
+              "publisher": "尖端出版",
+              "photographer": "",
+              "contentSummary": "固定版式 EPUB（463 MB），294 頁；商品標題及產品介紹標示含影音。",
+              "sourceUrl": "https://www.pubu.com.tw/ebook/690306",
+              "coverSourceUrl": "https://res4.pubu.tw/docs/589787/8033/qAzbR8_l.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/086f70fcd70389a0501086b5bb54642964fdcb096975000e9382d2dfce681cf8.jpg",
+              "coverObjectKey": "musebooks/covers/086f70fcd70389a0501086b5bb54642964fdcb096975000e9382d2dfce681cf8.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "bookwalker-tw",
+                  "retailer": "BOOK☆WALKER Taiwan",
+                  "externalId": "305610",
+                  "url": "https://www.bookwalker.com.tw/product/305610",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 27700,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T13:50:05.704395+08:00",
+                  "statusEvidence": ""
+                },
+                {
+                  "sourceId": "pubu-tw",
+                  "retailer": "Pubu",
+                  "externalId": "690306",
+                  "url": "https://www.pubu.com.tw/ebook/690306",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 35000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T11:14:58+08:00",
+                  "statusEvidence": ""
+                },
+                {
+                  "sourceId": "readmoo-tw",
+                  "retailer": "Readmoo 讀墨",
+                  "externalId": "210497069000101",
+                  "url": "https://readmoo.com/book/210497069000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 35000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T13:55:02.346428+08:00",
+                  "statusEvidence": ""
+                }
+              ],
+              "sourceUrls": [
+                "https://www.pubu.com.tw/ebook/690306",
+                "https://www.bookwalker.com.tw/product/305610",
+                "https://readmoo.com/book/210497069000101"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "soldPriceResult": "No completed transaction price was verified or imported; digital storefront prices and active physical asks are not sold prices."
+}

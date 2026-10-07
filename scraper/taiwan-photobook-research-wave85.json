@@ -1,0 +1,415 @@
+{
+  "batch": 85,
+  "verifiedAt": "2026-10-07",
+  "models": [
+    {
+      "name": "艾芸",
+      "aliases": [
+        "艾芸",
+        "Arwen",
+        "陳艾芸"
+      ],
+      "identityNote": "Fan520 的 Arwen 個人頁將她標示為陳艾芸，商品頁列出其第一本個人實體寫真書；頁數、攝影者、尺寸與 ISBN 未公布。",
+      "identitySourceUrls": [
+        "https://www.fan520.net/pages/arwen",
+        "https://www.fan520.net/products/arwen-2"
+      ],
+      "physicalStatus": "已核實實體版；本批沒有連結至此版次的 marketplace 價格觀測。",
+      "digitalStatus": "本批未核實到數位版。",
+      "works": [
+        {
+          "workId": "work-tw-3c33d3a7701825124cea5e85",
+          "title": "艾芸-寫真書-台版小倉由菜（第一本個人寫真集）",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-1ac43a114b7be2abe67172b0",
+              "format": "physical",
+              "label": "標準版",
+              "variant": "standard",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "女神範賣場列為艾芸（Arwen／陳艾芸）的首本個人實體寫真書；賣場僅稱商品內容如圖，未公開攝影者、拍攝內容、頁數、尺寸或隨書構成。",
+              "sourceUrl": "https://www.fan520.net/products/arwen-2",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/69d09a6529b1bdbed2b0e1a0/original.jpg?1775278692=&owner_id=5ba224b55f9cf10005b5b487",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/868ddce02b73608b9e95116570f60fd0164e336ac7f8a1725e6a5c2eafc8f75b.jpg",
+              "coverObjectKey": "musebooks/covers/868ddce02b73608b9e95116570f60fd0164e336ac7f8a1725e6a5c2eafc8f75b.jpg",
+              "retailOffers": []
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/arwen-2"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "許小葆",
+      "aliases": [
+        "許小葆",
+        "小葆"
+      ],
+      "identityNote": "Fan520 商品頁明確標示許小葆與「數位寫真」，服務說明確認以 PDF 電子檔交付；A–D 四個不同主題依各自商品頁分列，沒有補推頁數或攝影資訊。",
+      "identitySourceUrls": [
+        "https://www.fan520.net/categories/%E5%B0%8F%E8%91%86%E5%AF%AB%E7%9C%9F",
+        "https://www.fan520.net/products/bao-61501",
+        "https://www.fan520.net/products/bao-2023082401",
+        "https://www.fan520.net/products/bao-2023090101",
+        "https://www.fan520.net/products/abao-070701"
+      ],
+      "physicalStatus": "本批未核實到實體版。",
+      "digitalStatus": "已核實數位版與平台現售價格；只記錄數位零售價。",
+      "works": [
+        {
+          "workId": "work-tw-994bdecc7ad8d68a15252c26",
+          "title": "許小葆 數位寫真 - 女僕小葆貝(D) \" 送 影片。 ^^",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-721de98c6771b804087635e2",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "with_video",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真，附影音。",
+              "sourceUrl": "https://www.fan520.net/products/abao-070701",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/686b8bc32a485b000b2280ce/original.jpg?1751878595",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/be0fbcc48e90d45ca7d3039348fe56a7debcaf35dd946ed468b7ce5fec178563.jpg",
+              "coverObjectKey": "musebooks/covers/be0fbcc48e90d45ca7d3039348fe56a7debcaf35dd946ed468b7ce5fec178563.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "abao-070701",
+                  "url": "https://www.fan520.net/products/abao-070701",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 49000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T01:04:32.131962+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/abao-070701"
+          ]
+        },
+        {
+          "workId": "work-tw-6fc2dd1e08bf594d55982f7c",
+          "title": "許小葆 數位寫真-甜心小葆貝(A)--再送影片喔!",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-b4048359710f1be6027a0370",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "with_video",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真，附影音。",
+              "sourceUrl": "https://www.fan520.net/products/bao-61501",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/695f580d34afcb95cad43db0/original.jpg?1767856140=&owner_id=5ba224b55f9cf10005b5b487",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/2cf5fc6e0dbd6d68f4fe340f00905c2015e1fc23d0a3d4a647c9bb22c0564d31.jpg",
+              "coverObjectKey": "musebooks/covers/2cf5fc6e0dbd6d68f4fe340f00905c2015e1fc23d0a3d4a647c9bb22c0564d31.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "bao-61501",
+                  "url": "https://www.fan520.net/products/bao-61501",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 59000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T01:06:23.014802+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/bao-61501"
+          ]
+        },
+        {
+          "workId": "work-tw-6723652a3ff77d61555690b5",
+          "title": "許小葆 數位寫真-貓耳小女僕(C)",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-3aca93dea0c0759e26e1f46e",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.fan520.net/products/bao-2023090101",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/64f1a301ff9719001791c938/original.jpg?1693557505",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/e8aacb806e2a516d6229a6d6ad223f2658a3a8976370dc13e3de45fb7c8bccc9.jpg",
+              "coverObjectKey": "musebooks/covers/e8aacb806e2a516d6229a6d6ad223f2658a3a8976370dc13e3de45fb7c8bccc9.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "bao-2023090101",
+                  "url": "https://www.fan520.net/products/bao-2023090101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 49000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T01:05:36.316484+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/bao-2023090101"
+          ]
+        },
+        {
+          "workId": "work-tw-448315c86ead2129e23da444",
+          "title": "許小葆 數位寫真-電玩葆寶(B)",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-2eee9aa4a50861176115d800",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.fan520.net/products/bao-2023082401",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/64e6ff9748e2365d959fb042/original.jpg?1692860310",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/d276bc1bbbaf2137d8c7bd8ba9e4eae97308f0365d5bb8d833bbba4967320a22.jpg",
+              "coverObjectKey": "musebooks/covers/d276bc1bbbaf2137d8c7bd8ba9e4eae97308f0365d5bb8d833bbba4967320a22.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "bao-2023082401",
+                  "url": "https://www.fan520.net/products/bao-2023082401",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 49000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T01:05:59.847623+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/bao-2023082401"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "明明",
+      "aliases": [
+        "明明"
+      ],
+      "identityNote": "四個 Fan520 商品頁分別標示明明數位寫真 A–D；服務說明確認 PDF 電子檔交付，商品標題標示贈影片的版次才記為含影片。",
+      "identitySourceUrls": [
+        "https://www.fan520.net/products/ilis61028-052201",
+        "https://www.fan520.net/products/ilis61028-070801",
+        "https://www.fan520.net/products/ilis61028-072001",
+        "https://www.fan520.net/products/ilis61028-083101"
+      ],
+      "physicalStatus": "本批未核實到實體版。",
+      "digitalStatus": "已核實數位版與平台現售價格；只記錄數位零售價。",
+      "works": [
+        {
+          "workId": "work-tw-5cd9e057687f7098f96cf18f",
+          "title": "明明 數位寫真 性感透視旗袍-贈影片(D) (遮點",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-e5057d9bfa14a31e78d535dc",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "with_video",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真，附影音。",
+              "sourceUrl": "https://www.fan520.net/products/ilis61028-083101",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/64eff111055ce80020de0ec4/original.jpg?1693446416",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/bc31117476637a95a7c1cd3489ef8b9175eaeb69147fc7e6660175de3093cf08.jpg",
+              "coverObjectKey": "musebooks/covers/bc31117476637a95a7c1cd3489ef8b9175eaeb69147fc7e6660175de3093cf08.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "ilis61028-083101",
+                  "url": "https://www.fan520.net/products/ilis61028-083101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 39000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T01:06:46.391925+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/ilis61028-083101"
+          ]
+        },
+        {
+          "workId": "work-tw-a0cf35fa04fe33bcaa60a287",
+          "title": "明明 數位寫真 明明裝可愛-贈影片(B) (遮點)",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-4e2ef9b36e25d13058b4b007",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "with_video",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真，附影音。",
+              "sourceUrl": "https://www.fan520.net/products/ilis61028-070801",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/64a8d14dae2083001421362d/original.jpg?1688785229",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/ad339741424b96f743631d78984adf72f4ba5f48921f6054442a833f5ab8a655.jpg",
+              "coverObjectKey": "musebooks/covers/ad339741424b96f743631d78984adf72f4ba5f48921f6054442a833f5ab8a655.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "ilis61028-070801",
+                  "url": "https://www.fan520.net/products/ilis61028-070801",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 39000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T01:07:33.032338+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/ilis61028-070801"
+          ]
+        },
+        {
+          "workId": "work-tw-e4828aa6d5957ccce4722ec9",
+          "title": "明明 數位寫真 誘人小秘書-贈影片(C) (遮點)",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-2d6582a90a60f31fc76b6043",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "with_video",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真，附影音。",
+              "sourceUrl": "https://www.fan520.net/products/ilis61028-072001",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/64b8a0cd5d24330014a81357/original.jpg?1689821389",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/590b45185828974fd41a3213c99bd4cd350acf5ffc2b39b2b574cc21bdfced4c.jpg",
+              "coverObjectKey": "musebooks/covers/590b45185828974fd41a3213c99bd4cd350acf5ffc2b39b2b574cc21bdfced4c.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "ilis61028-072001",
+                  "url": "https://www.fan520.net/products/ilis61028-072001",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 39000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T01:07:09.815547+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/ilis61028-072001"
+          ]
+        },
+        {
+          "workId": "work-tw-4accba322e09cd8d8dd035c9",
+          "title": "明明數位寫真-明明很想你(A) (遮點)",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-f8cece5a1c557ad448d0f721",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.fan520.net/products/ilis61028-052201",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/646b2c57351a50001d158b37/original.jpg?1684745303",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/958e22e1640fff85148a8fad00dac340a56194d91f9e981dece5db7bbc396cc4.jpg",
+              "coverObjectKey": "musebooks/covers/958e22e1640fff85148a8fad00dac340a56194d91f9e981dece5db7bbc396cc4.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "ilis61028-052201",
+                  "url": "https://www.fan520.net/products/ilis61028-052201",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 39000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T01:07:56.303217+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/ilis61028-052201"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "batch": 110,
+  "verifiedAt": "2026-10-07",
+  "purpose": "Add 羚安's digital-only photobook as one EPUB edition with two live-verified retailer offers and its own digital cover asset.",
+  "models": [
+    "羚安"
+  ],
+  "works": [
+    {
+      "model": "羚安",
+      "title": "羚家女孩 羚安數位寫真",
+      "photographer": "陳賢瀛",
+      "publisher": "尖端出版",
+      "workId": "work-tw-c52ec24d93929b659678c90c",
+      "sources": [
+        "https://www.bookwalker.com.tw/product/175658",
+        "https://readmoo.com/book/210291466000101"
+      ],
+      "composition": "羚安與攝影師陳賢瀛合作的數位寫真，呈現俏皮、恬靜與鄰家感等不同氣質；商品介紹提及室內人像與戶外慵懶清新風格。未確認或混入任何紙本版本。",
+      "editions": [
+        {
+          "format": "digital",
+          "label": "數位版固定版面 EPUB",
+          "url": "https://www.bookwalker.com.tw/product/175658",
+          "releaseDate": "2023-09-20",
+          "pageCount": 280,
+          "isbnOrEisbn": "9786263771208",
+          "metadataNote": "BOOK☆WALKER列280頁；Readmoo同一EISBN列282頁，資料來源頁數略有差異。只有數位版獲得本次直接驗證；未把任何紙本商品混進此版次。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/3a43318171a610d197a3f34a7be40753b2cc8ed0f6cecb449337e3d34ce2c666.jpg",
+          "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/175658/175658_1.jpg",
+          "activeOffers": [
+            {
+              "sourceId": "bookwalker-tw",
+              "url": "https://www.bookwalker.com.tw/product/175658",
+              "priceTWD": 259,
+              "evidence": "Live product detail showed the same fixed-layout EPUB edition, EISBN 9786263771208, and an enabled purchase action at NT$259. This is a current digital retail asking price, not a completed-sale price. Fixed-layout EPUB; checkout and add-to-cart enabled."
+            },
+            {
+              "sourceId": "readmoo-tw",
+              "url": "https://readmoo.com/book/210291466000101",
+              "priceTWD": 259,
+              "evidence": "Live product detail showed the same fixed-layout EPUB edition, EISBN 9786263771208, and an enabled purchase action at NT$259. This is a current digital retail asking price, not a completed-sale price. Fixed-layout EPUB; purchase button enabled."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "The work has one digital edition. No physical edition was found or inferred from the digital listings.",
+    "BOOK☆WALKER and Readmoo both showed an active NT$259 EPUB offer during live review; these are store asking prices, not completed sale prices.",
+    "BOOK☆WALKER lists 280 pages and Readmoo lists 282 for the matching EISBN; both source values are preserved in the note.",
+    "The digital cover was fetched from the BOOK☆WALKER product page's observed image asset and passed public R2 SHA-256 readback."
+  ],
+  "changes": {
+    "newWorks": 1,
+    "newPhysicalEditions": 0,
+    "newDigitalEditions": 1,
+    "verifiedActiveDigitalOffers": 2,
+    "newR2CoverUploads": 1,
+    "pendingCovers": 0
+  }
+}

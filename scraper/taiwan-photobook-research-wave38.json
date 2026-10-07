@@ -1,0 +1,30 @@
+[
+  {
+    "model": "禾羽",
+    "title": "禾你相羽",
+    "format": "digital",
+    "url": "https://24h.pchome.com.tw/books/prod/DJBQ2E-D900JY2UU",
+    "status": "Resolved wave40: imported from PChome exact cover, ISBN blank, 2026-05-20 ebook date"
+  },
+  {
+    "model": "禾羽",
+    "title": "2026 禾你相羽 in Okinawa",
+    "format": "physical",
+    "url": "https://www.kaboom.tw/products/2026-kimi-in-okinawa-photo-book",
+    "status": "Imported two physical editions wave39; exact individual covers still pending"
+  },
+  {
+    "model": "周感恩",
+    "title": "Thank You首本個人紀念寫真書",
+    "format": "physical",
+    "url": "https://www.tcsb.com.tw/SalePage/Index/10783314?lang=zh-TW",
+    "status": "Resolved duplicate: existing ISBN 9786269687787; no import"
+  },
+  {
+    "model": "夏蕾",
+    "title": "心動蕾達 標準版",
+    "format": "physical",
+    "url": "https://www.sanmin.com.tw/product/index/015783272",
+    "status": "Imported standard physical edition wave39"
+  }
+]

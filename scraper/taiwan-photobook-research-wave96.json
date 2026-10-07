@@ -1,0 +1,475 @@
+{
+  "batch": 96,
+  "verifiedAt": "2026-10-07T04:54:42Z",
+  "purpose": "Record eight live Readmoo Taiwan digital offers, add four new digital works, refresh four matching catalog entries, preserve ISBN omissions, and skip duplicate-content cover variants.",
+  "models": [
+    {
+      "name": "李雅英",
+      "aliases": [
+        "李雅英",
+        "Lee A-young",
+        "이아영"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-7eb813c78e8a9d7c16529fae",
+          "title": "沿著海，遇見你：英為你心動 李雅英1st台灣感性紙上電影系列 數位版",
+          "photographer": "李彥勳",
+          "editions": [
+            {
+              "editionId": "edition-99f26fb681f5d000a9908488",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786264551892",
+              "eisbn": "9786264551892",
+              "publisher": "尖端出版",
+              "releaseDate": "2026-04-24",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 344,
+              "photographer": "李彥勳",
+              "contentSummary": "固定版式 EPUB，344頁。數位版明確收錄與實體書完全不同的272張全新影像，另有數位限定場景與造型及側拍花絮影音；章節由晨曦、巷弄、綠意、海岸至琥珀色心動，取景宜蘭與苗栗。",
+              "metadataSourceUrl": "https://readmoo.com/book/210468148000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/bb/gic8k54.jpg?v=1776761702",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/be5d10b4895be9d3016df574df5a0384f2e9e9a8cdcd22a7fe2e577e48ac9194.jpg",
+              "coverObjectKey": "musebooks/covers/be5d10b4895be9d3016df574df5a0384f2e9e9a8cdcd22a7fe2e577e48ac9194.jpg",
+              "coverSHA256": "be5d10b4895be9d3016df574df5a0384f2e9e9a8cdcd22a7fe2e577e48ac9194",
+              "coverBytes": 1351252,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210468148000101",
+                  "url": "https://readmoo.com/book/210468148000101",
+                  "verificationUrl": "https://readmoo.com/book/210468148000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 49900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:54:42Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210468148000101"
+      ],
+      "findings": [
+        "The live Readmoo detail page provides the title, model, fixed-layout EPUB format, current Taiwan-dollar asking price, and purchase control; ISBN/EISBN, publication date, page count, photographer and publisher are retained only as displayed by the page.",
+        "實體版已另有收錄；Readmoo 明確說明此數位版的272張照片與實體版完全不同，因此獨立建檔，不與實體版混為同一 edition。",
+        "The cover image was taken from this exact product page and uploaded to R2; the public object passed a SHA-256 readback check."
+      ]
+    },
+    {
+      "name": "江宛庭",
+      "aliases": [
+        "江宛庭",
+        "宛宛"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-9bdb017c3ca6969c356a7bf8",
+          "title": "《宛美情人》江宛庭數位寫真（含影音）",
+          "photographer": "達文西",
+          "editions": [
+            {
+              "editionId": "edition-4986e389893e6a1e76ccfe36",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786263778405",
+              "eisbn": "9786263778405",
+              "publisher": "尖端出版",
+              "releaseDate": "2024-04-24",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 256,
+              "photographer": "達文西",
+              "contentSummary": "固定版式 EPUB，256頁。作品以多套造型呈現江宛庭從成熟性感到安靜日常的一面，並附7段拍攝花絮影片；Readmoo 提醒部分 Samsung 裝置可能無法播放影音。",
+              "metadataSourceUrl": "https://readmoo.com/book/210326272000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/60/8fa3gd7.jpg?v=1713836436",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/df7400192ef8cab5d8bb93a7d0838a74e8fd491ce6e8d284917cda80d57fd170.jpg",
+              "coverObjectKey": "musebooks/covers/df7400192ef8cab5d8bb93a7d0838a74e8fd491ce6e8d284917cda80d57fd170.jpg",
+              "coverSHA256": "df7400192ef8cab5d8bb93a7d0838a74e8fd491ce6e8d284917cda80d57fd170",
+              "coverBytes": 218967,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210326272000101",
+                  "url": "https://readmoo.com/book/210326272000101",
+                  "verificationUrl": "https://readmoo.com/book/210326272000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 35000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:54:42Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210326272000101"
+      ],
+      "findings": [
+        "The live Readmoo detail page provides the title, model, fixed-layout EPUB format, current Taiwan-dollar asking price, and purchase control; ISBN/EISBN, publication date, page count, photographer and publisher are retained only as displayed by the page.",
+        "本次資料庫比對未找到可確認為同一作品的實體版；數位版維持獨立記錄。",
+        "The cover image was taken from this exact product page and uploaded to R2; the public object passed a SHA-256 readback check."
+      ]
+    },
+    {
+      "name": "林岱縈",
+      "aliases": [
+        "林岱縈",
+        "林岱螢",
+        "Daiying Lin"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-09a8cc1590975c9b2dafe637",
+          "title": "答應你：林岱縈寫真【電子書加值版】",
+          "photographer": "KRIS KANG",
+          "editions": [
+            {
+              "editionId": "edition-35d8bad5a2c3928565328b2f",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786263746671",
+              "eisbn": "9786263746671",
+              "publisher": "時報出版",
+              "releaseDate": "2023-12-12",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 149,
+              "photographer": "KRIS KANG",
+              "contentSummary": "固定版式 EPUB，149頁。電子書加值版，頁面說明包含實體版海報影像；本版使用獨立 EISBN 9786263746671，實體版紙本 ISBN 為9786263740402。",
+              "metadataSourceUrl": "https://readmoo.com/book/210305040000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/5f/5e24gb8.jpg?v=1702347310",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/2ede8e59298c219c995cd82f3d99ae013aed2245d3874935ef775ca6aa31ed96.jpg",
+              "coverObjectKey": "musebooks/covers/2ede8e59298c219c995cd82f3d99ae013aed2245d3874935ef775ca6aa31ed96.jpg",
+              "coverSHA256": "2ede8e59298c219c995cd82f3d99ae013aed2245d3874935ef775ca6aa31ed96",
+              "coverBytes": 203486,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210305040000101",
+                  "url": "https://readmoo.com/book/210305040000101",
+                  "verificationUrl": "https://readmoo.com/book/210305040000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 45500,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:54:42Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210305040000101"
+      ],
+      "findings": [
+        "The live Readmoo detail page provides the title, model, fixed-layout EPUB format, current Taiwan-dollar asking price, and purchase control; ISBN/EISBN, publication date, page count, photographer and publisher are retained only as displayed by the page.",
+        "資料庫已有紙本 ISBN 9786263740402 的實體版。此電子書有獨立 EISBN 9786263746671，依格式分開建立數位作品記錄。",
+        "The cover image was taken from this exact product page and uploaded to R2; the public object passed a SHA-256 readback check."
+      ]
+    },
+    {
+      "name": "孫唯真",
+      "aliases": [
+        "孫唯真",
+        "唯真",
+        "Miao喵 Photography"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-30790bd3769b1090574e0361",
+          "title": "F巨乳 唯獨是你 孫唯真大尺度寫真",
+          "photographer": "Miao喵 Photography",
+          "editions": [
+            {
+              "editionId": "edition-1671770f242f910cc26df014",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "eisbn": "",
+              "publisher": "滾石移動",
+              "releaseDate": "2018-07-03",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 237,
+              "photographer": "Miao喵 Photography",
+              "contentSummary": "固定版式 EPUB，237頁。頁面列出內衣、薄紗、沐浴、居家及臥室等拍攝情境，並有模特兒簡介與版權頁；Readmoo 商品頁未顯示 ISBN/EISBN。",
+              "metadataSourceUrl": "https://readmoo.com/book/210106007000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/fg/8fd7mbb.jpg?v=1554748329",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/321d3ce9e9a629b343a89a1cf16da533cd24669dc82fb75cf640e39b8a4c0667.jpg",
+              "coverObjectKey": "musebooks/covers/321d3ce9e9a629b343a89a1cf16da533cd24669dc82fb75cf640e39b8a4c0667.jpg",
+              "coverSHA256": "321d3ce9e9a629b343a89a1cf16da533cd24669dc82fb75cf640e39b8a4c0667",
+              "coverBytes": 338083,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210106007000101",
+                  "url": "https://readmoo.com/book/210106007000101",
+                  "verificationUrl": "https://readmoo.com/book/210106007000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 29900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:54:42Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210106007000101"
+      ],
+      "findings": [
+        "The live Readmoo detail page provides the title, model, fixed-layout EPUB format, current Taiwan-dollar asking price, and purchase control; ISBN/EISBN, publication date, page count, photographer and publisher are retained only as displayed by the page.",
+        "Readmoo 此商品頁未提供 ISBN/EISBN；以 Readmoo 商品 ID 210106007000101 和 canonical URL 識別，不推測其他版本。",
+        "The cover image was taken from this exact product page and uploaded to R2; the public object passed a SHA-256 readback check."
+      ]
+    },
+    {
+      "name": "蕭芷渲",
+      "aliases": [
+        "蕭芷渲",
+        "芷渲"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-7a111147a978c621209750fd",
+          "title": "芷為你而燦爛-蕭芷渲數位寫真書",
+          "photographer": "莉奈",
+          "editions": [
+            {
+              "editionId": "edition-0a375843809b4446a5735c6f",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "eisbn": "",
+              "publisher": "莉奈文創",
+              "releaseDate": "2023-05-20",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 186,
+              "photographer": "莉奈",
+              "contentSummary": "固定版式 EPUB，186頁。商品介紹稱為《芷為你而閃亮》之後續作，呈現較私密、柔和自然的一面；Readmoo 商品頁未顯示 ISBN/EISBN。",
+              "metadataSourceUrl": "https://readmoo.com/book/210282307000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/a6/3dc3igb.jpg?v=1690281564",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/18bf5ad89218cb8b43be1f0ceccc558e2bc6e0672a367fd8ee2bf1f882b3f443.jpg",
+              "coverObjectKey": "musebooks/covers/18bf5ad89218cb8b43be1f0ceccc558e2bc6e0672a367fd8ee2bf1f882b3f443.jpg",
+              "coverSHA256": "18bf5ad89218cb8b43be1f0ceccc558e2bc6e0672a367fd8ee2bf1f882b3f443",
+              "coverBytes": 383444,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210282307000101",
+                  "url": "https://readmoo.com/book/210282307000101",
+                  "verificationUrl": "https://readmoo.com/book/210282307000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 36900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:54:42Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210282307000101"
+      ],
+      "findings": [
+        "The live Readmoo detail page provides the title, model, fixed-layout EPUB format, current Taiwan-dollar asking price, and purchase control; ISBN/EISBN, publication date, page count, photographer and publisher are retained only as displayed by the page.",
+        "Readmoo 此商品頁未提供 ISBN/EISBN；以商品 ID 210282307000101 和 canonical URL 識別。另一商品《芷為你而閃亮》頁面標示與先前版本內容相同，故未重複匯入。",
+        "The cover image was taken from this exact product page and uploaded to R2; the public object passed a SHA-256 readback check."
+      ]
+    },
+    {
+      "name": "陳熙爰",
+      "aliases": [
+        "陳熙爰",
+        "熙爰"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-d947e9d1bdaa46ac55320f0d",
+          "title": "愛上熙爰前 陳熙爰數位寫真（含影音）",
+          "photographer": "達文西",
+          "editions": [
+            {
+              "editionId": "edition-862de8fa66e6c0dfa1eef5fc",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786264031868",
+              "eisbn": "9786264031868",
+              "publisher": "尖端出版",
+              "releaseDate": "2024-08-12",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 288,
+              "photographer": "達文西",
+              "contentSummary": "固定版式 EPUB，288頁。尖端出版商品介紹以空服員形象及「三笑芭比」稱號介紹陳熙爰，並稱作品呈現她未曾公開的一面；含影音。",
+              "metadataSourceUrl": "https://readmoo.com/book/210343510000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/ec/7lb9nei.jpg?v=1732523547",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/c41a81bd4e5067aa8ba78684b21c45646bf296b1ec4b38e7d49da5b61beb4b84.jpg",
+              "coverObjectKey": "musebooks/covers/c41a81bd4e5067aa8ba78684b21c45646bf296b1ec4b38e7d49da5b61beb4b84.jpg",
+              "coverSHA256": "c41a81bd4e5067aa8ba78684b21c45646bf296b1ec4b38e7d49da5b61beb4b84",
+              "coverBytes": 255141,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210343510000101",
+                  "url": "https://readmoo.com/book/210343510000101",
+                  "verificationUrl": "https://readmoo.com/book/210343510000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 35000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:54:42Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210343510000101"
+      ],
+      "findings": [
+        "The live Readmoo detail page provides the title, model, fixed-layout EPUB format, current Taiwan-dollar asking price, and purchase control; ISBN/EISBN, publication date, page count, photographer and publisher are retained only as displayed by the page.",
+        "本次資料庫比對未找到可確認為同一作品的實體版；數位版維持獨立記錄。",
+        "The cover image was taken from this exact product page and uploaded to R2; the public object passed a SHA-256 readback check."
+      ]
+    },
+    {
+      "name": "斐棋",
+      "aliases": [
+        "斐棋",
+        "Faye"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-7dcb82ca95b6bee6bd8ffc3a",
+          "title": "一棋一會 斐棋1st數位寫真（含影音）",
+          "photographer": "黃天仁",
+          "editions": [
+            {
+              "editionId": "edition-299138ce27d19d21a106d10d",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786264343435",
+              "eisbn": "9786264343435",
+              "publisher": "尖端出版",
+              "releaseDate": "2025-11-24",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 268,
+              "photographer": "黃天仁",
+              "contentSummary": "固定版式 EPUB，268頁，含拍攝花絮影音。商品介紹列出澀谷／代官山街景、輕井澤風景，以及用餐、料理、運動與浴室情境。",
+              "metadataSourceUrl": "https://readmoo.com/book/210430987000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/jh/focirjh.jpg?v=1763952547",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/cd362a921d681d3eba94d455d1065becf3204b25bac2601a1aa1d23466c56fd7.jpg",
+              "coverObjectKey": "musebooks/covers/cd362a921d681d3eba94d455d1065becf3204b25bac2601a1aa1d23466c56fd7.jpg",
+              "coverSHA256": "cd362a921d681d3eba94d455d1065becf3204b25bac2601a1aa1d23466c56fd7",
+              "coverBytes": 532760,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210430987000101",
+                  "url": "https://readmoo.com/book/210430987000101",
+                  "verificationUrl": "https://readmoo.com/book/210430987000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 35000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:54:42Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210430987000101"
+      ],
+      "findings": [
+        "The live Readmoo detail page provides the title, model, fixed-layout EPUB format, current Taiwan-dollar asking price, and purchase control; ISBN/EISBN, publication date, page count, photographer and publisher are retained only as displayed by the page.",
+        "資料庫已收錄斐棋的實體寫真，使用紙本 ISBN 9786264343466。數位版使用 EISBN 9786264343435，依格式另建，不合併實體版。",
+        "The cover image was taken from this exact product page and uploaded to R2; the public object passed a SHA-256 readback check."
+      ]
+    },
+    {
+      "name": "瑟七",
+      "aliases": [
+        "瑟七",
+        "Seul7",
+        "青瑟47"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-df1e291d2b2f39f368a77cc1",
+          "title": "《微澀．微瑟》瑟七 Seul7 數位寫真（含影音）",
+          "photographer": "KRIS KANG",
+          "editions": [
+            {
+              "editionId": "edition-0b730768da4b9e6b0bef9b82",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786264555029",
+              "eisbn": "9786264555029",
+              "publisher": "尖端出版",
+              "releaseDate": "2026-08-30",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 294,
+              "photographer": "KRIS KANG",
+              "contentSummary": "固定版式 EPUB，294頁，含影音。商品頁提供的內容摘要為「一點點青澀，一點點瑟七」，未列完整造型目錄。",
+              "metadataSourceUrl": "https://readmoo.com/book/210497069000101",
+              "coverSourceUrl": "https://cdn.readmoo.com/cover/mq/pozntpj.jpg?v=1787733889",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/4aeb8410703853609a4f3507a82e3b4e3f620543fc30ae1f5f31631a5b07f885.jpg",
+              "coverObjectKey": "musebooks/covers/4aeb8410703853609a4f3507a82e3b4e3f620543fc30ae1f5f31631a5b07f885.jpg",
+              "coverSHA256": "4aeb8410703853609a4f3507a82e3b4e3f620543fc30ae1f5f31631a5b07f885",
+              "coverBytes": 528296,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210497069000101",
+                  "url": "https://readmoo.com/book/210497069000101",
+                  "verificationUrl": "https://readmoo.com/book/210497069000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 35000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:54:42Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://readmoo.com/book/210497069000101"
+      ],
+      "findings": [
+        "The live Readmoo detail page provides the title, model, fixed-layout EPUB format, current Taiwan-dollar asking price, and purchase control; ISBN/EISBN, publication date, page count, photographer and publisher are retained only as displayed by the page.",
+        "本次資料庫比對未找到同名作品的實體版。另有《青瑟47》慶功版頁面明確說明僅更換封面、內容相同，該封面版未另建作品。",
+        "The cover image was taken from this exact product page and uploaded to R2; the public object passed a SHA-256 readback check."
+      ]
+    }
+  ]
+}

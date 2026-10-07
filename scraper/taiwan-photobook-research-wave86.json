@@ -1,0 +1,97 @@
+{
+  "batch": 86,
+  "verifiedAt": "2026-10-07",
+  "models": [
+    {
+      "name": "多莉",
+      "aliases": [
+        "多莉",
+        "Dory",
+        "多莉Dory",
+        "Dory多莉"
+      ],
+      "identityNote": "iWIN官方商品頁將模特兒標為多莉Dory；國家圖書館書目以多莉(Dory)著錄2025實體書。",
+      "identitySourceUrls": [
+        "https://www.iwinimc.com/products/dory0620-sandory2025-preorderonly",
+        "https://www.iwinimc.com/products/dory0620-dory2027-photobook-preorderonly",
+        "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1760932966.pdf"
+      ],
+      "physicalStatus": "核實兩本不同年份的實體寫真：2025版已發行且出版社標示絕版；2027版目前預購中，書名暫定，預計2026-12-01出貨。",
+      "digitalStatus": "本批未核實到獨立數位寫真版；未將封面雜誌或周邊商品列作寫真書。",
+      "marketplaceReview": {
+        "checkedAt": "2026-10-07",
+        "ruten": {
+          "url": "https://www.ruten.com.tw/item/22601876318464/",
+          "status": "active multi-variant merchandise listing",
+          "visiblePriceRange": "TWD 800-1200 across six variants",
+          "photobookOption": "寫真書+小卡",
+          "decision": "Not linked as a standalone book listing because the selected-option price and exact bundle composition are not exposed; the page's two sales do not disclose final transaction prices."
+        },
+        "shopee": {
+          "url": "https://shopee.tw/%E7%B5%95%E7%89%88%E5%85%A8%E6%96%B0%E6%9C%AA%E6%8B%86-%E8%AA%98%E6%83%91%E8%AA%8C-San-Dory%E4%B8%89%E5%A4%9A%E8%8E%892025-%E5%AF%AB%E7%9C%9F%E9%9B%86-%E5%A4%9A%E8%8E%89Dory-cin-i.130652226.47900330172",
+          "status": "sold out multi-variant listing",
+          "visiblePriceRange": "TWD 299-1495 across three options",
+          "decision": "No completed-sale price was disclosed, so no sold-price observation was recorded."
+        }
+      },
+      "works": [
+        {
+          "workId": "work-tw-cb9baf46f5e255eb67c9bbb6",
+          "title": "San Dory三多莉2025",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-7b26de5f0711a0d031708731",
+              "format": "physical",
+              "label": "標準版",
+              "variant": "standard",
+              "isbn": "9786269847396",
+              "pageCount": 144,
+              "dimensions": "18×25.6×1.2cm",
+              "releaseDate": "2025-10-21",
+              "releasePrecision": "day",
+              "publisher": "iWIN曖維多媒體廣告行銷股份有限公司",
+              "contentSummary": "已出版紙本寫真，144頁、18×25.6×1.2cm、平裝膠裝；標準內容為寫真書1本與書衣1式。出版社目前標示絕版不再販售。ISBN由國家圖書館書目確認。",
+              "sourceUrl": "https://www.iwinimc.com/products/dory0620-sandory2025-preorderonly",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/68b70ca1d63b59000c55cfa5/original.jpg?1756826784=&owner_id=5d425a123781fc0001c438fd",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/87a7fcb58ea3c8799359810a65259081dd5ea21443534e2fc8a75652158a7405.jpg",
+              "coverObjectKey": "musebooks/covers/87a7fcb58ea3c8799359810a65259081dd5ea21443534e2fc8a75652158a7405.jpg",
+              "retailOffers": []
+            }
+          ],
+          "sourceUrls": [
+            "https://www.iwinimc.com/products/dory0620-sandory2025-preorderonly"
+          ]
+        },
+        {
+          "workId": "work-tw-e302cf56910e5ac766b2a03b",
+          "title": "多莉Dory 2027聯名寫真書（暫定）",
+          "photographer": "Ryan",
+          "editions": [
+            {
+              "editionId": "edition-4846d1035b42cb7c4350b548",
+              "format": "physical",
+              "label": "標準版",
+              "variant": "standard",
+              "isbn": "",
+              "pageCount": 64,
+              "dimensions": "18×25.6cm",
+              "releaseDate": "2026-12-01",
+              "releasePrecision": "day",
+              "publisher": "iWIN曖維多媒體廣告行銷股份有限公司",
+              "contentSummary": "預購中的紙本寫真；書名標示暫定，預計2026-12-01出貨。商品為寫真書1本與書衣1式：書本封面為溪邊款、書衣為繩縛款；64頁、18×25.6cm、平裝膠裝。iWIN商品圖為樣品示意，最終封面仍可能變更。Mirror Media報導本書由攝影師Ryan掌鏡，共14組造型。",
+              "sourceUrl": "https://www.iwinimc.com/products/dory0620-dory2027-photobook-preorderonly",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/6ab94d9e7503b6c6aa44cc23/original.jpg?1790528924=&owner_id=5d425a123781fc0001c438fd",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/a15d1f28d239e5c81bbf6686f6eba2502749052ce4276db0ae970d481c687a8a.jpg",
+              "coverObjectKey": "musebooks/covers/a15d1f28d239e5c81bbf6686f6eba2502749052ce4276db0ae970d481c687a8a.jpg",
+              "retailOffers": []
+            }
+          ],
+          "sourceUrls": [
+            "https://www.iwinimc.com/products/dory0620-dory2027-photobook-preorderonly"
+          ]
+        }
+      ]
+    }
+  ]
+}

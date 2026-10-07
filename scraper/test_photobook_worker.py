@@ -142,6 +142,7 @@ def test_fixed_price_source_is_not_allowed_for_resale_jobs() -> None:
         "adapter": "rakuten_books_jp",
     }
     with_error = {
+        "marketplaceOnly": True,
         "sourceId": "rakuten-books-jp",
         "source": fixed_source,
         "operation": "active_discovery",
@@ -151,7 +152,7 @@ def test_fixed_price_source_is_not_allowed_for_resale_jobs() -> None:
     try:
         collect(with_error)
     except ValueError as exc:
-        assert "resale/auction marketplace" in str(exc)
+        assert "retail sources are excluded" in str(exc)
     else:
         raise AssertionError("expected fixed-price source to be rejected")
 

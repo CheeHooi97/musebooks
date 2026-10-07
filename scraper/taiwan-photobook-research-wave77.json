@@ -1,0 +1,37 @@
+{
+  "model": "寶兒 (Bao / 吳昀廷)",
+  "identityNote": "Sanmin ebook page and matching print ISBN confirm this is the existing Babe Fantasy photo book by寶兒; NCL deposit data identifies its EPUB ISBN.",
+  "workId": "work-tw-6bfdeef40b49b66040c85d2e",
+  "editions": [
+    {
+      "format": "physical",
+      "isbn": "9786267683798",
+      "pages": 160,
+      "releaseDate": "2025-12-11",
+      "sourceUrl": "https://www.cite.com.tw/book?id=105737"
+    },
+    {
+      "format": "digital",
+      "eisbn": "9786267683781",
+      "container": "EPUB",
+      "releaseDate": "2025-12-09",
+      "sourceUrl": "https://www.sanmin.com.tw/product/index/015552499",
+      "isbnAuthorityUrl": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1760932966.pdf"
+    }
+  ],
+  "description": "寶兒’s first solo photo book, planned and styled with her participation. Digital edition is kept separate from the print poster, box accessories and page count.",
+  "workTitle": "Babe Fantasy‧寶兒寫真書【隨書附贈寫真海報（四款隨機投入一款）】",
+  "editionRecords": [
+    {
+      "id": "edition-e641bc1592a1c564d82b937b",
+      "format": "digital",
+      "isbn": "9786267683781",
+      "pages": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/1924e0b8050511a05f2b429d4c3928c3e1849a489b2b6b9ae07a6bf028617e03.png",
+      "coverObjectKey": "musebooks/covers/1924e0b8050511a05f2b429d4c3928c3e1849a489b2b6b9ae07a6bf028617e03.png",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/015552499",
+      "contentSummary": "EPUB數位寫真，為寶兒首本個人寫真《Babe Fantasy》的電子版；不帶入紙本海報、盒裝配件、頁數或尺寸。未公開數位附圖數量未由Sanmin頁面確認。"
+    }
+  ]
+}

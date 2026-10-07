@@ -1,0 +1,225 @@
+{
+  "batch": 79,
+  "models": [
+    {
+      "name": "邊荷律 / Byun Ha-yul",
+      "identityNote": "Sanmin names 邊荷律 as author and 李彥勳 as photographer; the SPP collector product lists the same author and photographer.",
+      "digitalStatus": "No corroborated Taiwan digital retailer record was found. A candidate EISBN 9786263399266 resolves to an unrelated Kobo title, so no digital edition was created.",
+      "workId": "work-tw-702b1a106e9e740afbb6dce7",
+      "workTitle": "荷止微甜：邊荷律影像紀實",
+      "editions": [
+        {
+          "format": "physical",
+          "label": "標準平裝版",
+          "isbn": "9786264550413",
+          "pages": 176,
+          "dimensions": "25.6 × 18 × 1.3 cm",
+          "releaseDate": "2026-05-20",
+          "photographer": "李彥勳",
+          "contents": "宜蘭、苗栗海岸及生活場景；首刷附2張燙金寫真卡，8款隨機，8.5 × 5.4 cm。",
+          "sourceUrl": "https://www.sanmin.com.tw/product/index/015514569"
+        },
+        {
+          "format": "physical",
+          "label": "精裝典藏版",
+          "isbn": "",
+          "barcode": "4717702300906",
+          "publisherProductCode": "3F000064",
+          "pages": null,
+          "dimensions": "16開（publisher listing）；cm size unconfirmed",
+          "releaseDate": "2026-05-20",
+          "photographer": "李彥勳",
+          "contents": "精裝書、典藏書盒及附錄收藏盒；160 × 50 cm 細纖維抱枕套（不含枕心）、底片膠卷鑰匙圈、8款中隨機4張燙金寫真卡。",
+          "sourceUrl": "https://www.spp.com.tw/SalePage/Index/11579526",
+          "contentsSourceUrl": "https://www.ebc.net.tw/entertainment/entertainment-news/489671"
+        }
+      ],
+      "description": "Collector item is a separate physical edition. Do not treat its EAN as an ISBN or assign unverified page-count/dimensions. No digital record imported."
+    },
+    {
+      "name": "李雅英 / Lee A-young",
+      "identityNote": "Sanmin lists 李雅英 as author and 李彥勳 as photographer for both print ISBN and EPUB EISBN.",
+      "digitalStatus": "Confirmed Sanmin EPUB edition; it has its own digital cover and unique EISBN.",
+      "workId": "work-tw-7eb813c78e8a9d7c16529fae",
+      "workTitle": "沿著海，遇見你：英為你心動 李雅英寫真書",
+      "editions": [
+        {
+          "format": "physical",
+          "label": "標準平裝版",
+          "isbn": "9786264349130",
+          "pages": 176,
+          "dimensions": "25.6 × 18 × 1.3 cm",
+          "releaseDate": "2026-03-20",
+          "photographer": "李彥勳",
+          "contents": "台灣山海場景；首刷燙金寫真卡系列共8款，該零售頁未確認每本張數。",
+          "sourceUrl": "https://www.sanmin.com.tw/product/index/015267268"
+        },
+        {
+          "format": "physical",
+          "label": "精裝典藏版",
+          "isbn": "",
+          "barcode": "4717702300647",
+          "publisherProductCode": "3F000059",
+          "pages": null,
+          "dimensions": "16開（publisher listing）；cm size unconfirmed",
+          "releaseDate": "2026-03-20",
+          "photographer": "李彥勳",
+          "contents": "精裝書與典藏書盒、附錄收藏盒；160 × 50 cm 抱枕套（不含枕心）、11 × 6.8 cm 寫真卡套、8款系列寫真卡（本數量未確認）。",
+          "sourceUrl": "https://www.spp.com.tw/SalePage/Index/11508984"
+        },
+        {
+          "format": "digital",
+          "label": "EPUB版式電子書",
+          "eisbn": "9786264551892",
+          "container": "EPUB fixed layout",
+          "releaseDate": "2026-04-24",
+          "contents": "272張未收錄於紙本的新照片及側拍花絮影音；不帶入紙本頁數、尺寸或卡片資訊。",
+          "sourceUrl": "https://www.sanmin.com.tw/product/index/015487069"
+        }
+      ],
+      "description": "The digital edition has 272 new photos and behind-the-scenes video according to the retailer; it remains a separate digital edition under the shared photobook work. Collector set remains physical."
+    },
+    {
+      "name": "李珠珢 / Lee JuEun (NCL spelling variant: 李珠瑛)",
+      "identityNote": "Sanmin identifies the standard edition and Lee JuEun; the National Central Library ISBN deposit record identifies the hardcover collector ISBN. Publisher-supplied product photography and contents appear in its press announcement.",
+      "digitalStatus": "No verified Taiwan digital retailer edition found.",
+      "workId": "work-tw-b6704c86b9a9ab18708f26cb",
+      "workTitle": "FIGHT FOR ALL：李珠珢的主場日記",
+      "editions": [
+        {
+          "format": "physical",
+          "label": "一般平裝版",
+          "isbn": "9786264342247",
+          "pages": 176,
+          "dimensions": "25.6 × 18 × 1.3 cm",
+          "releaseDate": "2025-11-04",
+          "photographer": "藍陳福堂",
+          "contents": "新莊棒球場及Fubon Angels練舞空間影像；首刷通路寫真卡組為2張，圖片款式依通路而異。",
+          "sourceUrl": "https://www.sanmin.com.tw/product/index/014740702"
+        },
+        {
+          "format": "physical",
+          "label": "精裝典藏版",
+          "isbn": "9786264342254",
+          "barcode": "4717702299392",
+          "pages": 176,
+          "dimensions": "28 cm per NCL deposit record",
+          "releaseDate": "2025-09-02",
+          "photographer": "藍陳福堂",
+          "contents": "精裝寫真書、附錄收藏盒及典藏書盒；160 × 50 cm 抱枕套（不含枕心）、18 × 6 cm 流砂造型書籤、4張雷射燙金寫真卡（8.8 × 6.3 cm）。Interior content is the same as paperback.",
+          "sourceUrl": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1752563403.pdf",
+          "publisherSuppliedCoverAndContentsUrl": "https://www.popdaily.com.tw/press/1562350?is_app=true",
+          "availabilityNote": "The 2025-09-02 date is the listed publication date; subsequent publisher announcement said collector orders would begin shipping 2025-10-28 after a delay."
+        }
+      ],
+      "description": "Paperback and collector hardcover share interior photos but have different bindings and accessories. The SPP presale page is no longer available; NCL ISBN data and publisher-supplied press photography support the hardcover record."
+    }
+  ],
+  "editionRecords": [
+    {
+      "model": "邊荷律",
+      "id": "edition-049557503e2cea3b2614cd79",
+      "format": "physical",
+      "isbn": "9786264550413",
+      "editionLabel": "標準版",
+      "editionVariant": "standard",
+      "pageCount": 176,
+      "dimensions": "25.6cm*18cm*1.3cm",
+      "releaseDate": "2026-05-20T00:00:00Z",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/de8d2f3405ef92463da3b9d3e846972c44f32b83c3fde1f3ac612c753d937cfa.jpg",
+      "coverObjectKey": "musebooks/covers/de8d2f3405ef92463da3b9d3e846972c44f32b83c3fde1f3ac612c753d937cfa.jpg",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/015514569",
+      "contentSummary": "176頁平裝，宜蘭與苗栗海岸／生活情境影像；首刷含8款系列中隨機2張燙金寫真卡，8.5×5.4cm。"
+    },
+    {
+      "model": "邊荷律",
+      "id": "edition-77a92c04b129b89f554ee240",
+      "format": "physical",
+      "isbn": "",
+      "editionLabel": "精裝典藏版",
+      "editionVariant": "collector",
+      "pageCount": 0,
+      "dimensions": "",
+      "releaseDate": "2026-05-20T00:00:00Z",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/fa4b9a8c9612e1f51e28627eac9d16e5bd3425ec3590521bd349c32f5676f9ef.jpg",
+      "coverObjectKey": "musebooks/covers/fa4b9a8c9612e1f51e28627eac9d16e5bd3425ec3590521bd349c32f5676f9ef.jpg",
+      "metadataSourceUrl": "https://www.spp.com.tw/SalePage/Index/11579526",
+      "contentSummary": "精裝書1本、典藏書盒與附錄收藏盒；附160×50cm細纖維抱枕套（不含枕心）、底片膠卷鑰匙圈及4張隨機燙金寫真卡（系列共8款）。"
+    },
+    {
+      "model": "李雅英",
+      "id": "edition-c7f474073407f1707eda9854",
+      "format": "physical",
+      "isbn": "9786264349130",
+      "editionLabel": "標準版",
+      "editionVariant": "standard",
+      "pageCount": 176,
+      "dimensions": "25.6cm*18cm*1.3cm",
+      "releaseDate": "2026-03-20T00:00:00Z",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/a3176303575515ae7b04714a73823350a4cf053948f56ee74a121964d8264fc4.jpg",
+      "coverObjectKey": "musebooks/covers/a3176303575515ae7b04714a73823350a4cf053948f56ee74a121964d8264fc4.jpg",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/015267268",
+      "contentSummary": "176頁平裝影像書，記錄李雅英在宜蘭與苗栗的山海、街景及日常；首刷附系列8款燙金寫真卡，商品頁未明示單冊張數。"
+    },
+    {
+      "model": "李雅英",
+      "id": "edition-a95d40cfd9cf8b6866b9af53",
+      "format": "physical",
+      "isbn": "",
+      "editionLabel": "精裝典藏版",
+      "editionVariant": "collector",
+      "pageCount": 0,
+      "dimensions": "",
+      "releaseDate": "2026-03-20T00:00:00Z",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/17caf0e70236aeecb8aeae2e0a436d0c5f25b1f26e9112f1dd88907b3a764657.jpg",
+      "coverObjectKey": "musebooks/covers/17caf0e70236aeecb8aeae2e0a436d0c5f25b1f26e9112f1dd88907b3a764657.jpg",
+      "metadataSourceUrl": "https://www.spp.com.tw/SalePage/Index/11508984",
+      "contentSummary": "精裝書1本、精緻典藏書盒及附錄收藏盒；附160×50cm抱枕套（不含枕心）、11×6.8cm珍藏卡套與8.5×5.4cm燙金寫真卡（系列共8款，張數未明示）。"
+    },
+    {
+      "model": "李雅英",
+      "id": "edition-99f26fb681f5d000a9908488",
+      "format": "digital",
+      "isbn": "9786264551892",
+      "editionLabel": "數位版",
+      "editionVariant": "unspecified",
+      "pageCount": 0,
+      "dimensions": "",
+      "releaseDate": "2026-04-24T00:00:00Z",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/2c0d411274f694ba0c5b92d55ff4613f91a7db017614f6d4ae1db249598f0a1d.png",
+      "coverObjectKey": "musebooks/covers/2c0d411274f694ba0c5b92d55ff4613f91a7db017614f6d4ae1db249598f0a1d.png",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/015487069",
+      "contentSummary": "EPUB固定版式數位寫真，含實體書未收錄的全新272張照片與側拍花絮影音；不帶入紙本頁數、尺寸或附卡。"
+    },
+    {
+      "model": "李珠珢",
+      "id": "edition-0e90f0383790f677d1335309",
+      "format": "physical",
+      "isbn": "9786264342247",
+      "editionLabel": "一般版",
+      "editionVariant": "standard",
+      "pageCount": 176,
+      "dimensions": "25.6cm*18cm*1.3cm",
+      "releaseDate": "2025-11-04T00:00:00Z",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/4d8c188cee24e89bc984178abce53d88846f9e21e99f843b027d0111d2ab81d9.jpg",
+      "coverObjectKey": "musebooks/covers/4d8c188cee24e89bc984178abce53d88846f9e21e99f843b027d0111d2ab81d9.jpg",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014740702",
+      "contentSummary": "176頁平裝，收錄李珠珢在新莊棒球場及Fubon Angels練舞空間的影像；首刷通路卡組為2張，圖片款式依通路而異。"
+    },
+    {
+      "model": "李珠珢",
+      "id": "edition-41024106ea840482605ee2a9",
+      "format": "physical",
+      "isbn": "9786264342254",
+      "editionLabel": "精裝典藏版",
+      "editionVariant": "collector",
+      "pageCount": 176,
+      "dimensions": "28 cm (NCL record)",
+      "releaseDate": "2025-09-02T00:00:00Z",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/b0b3ac8f7af02d9112608a5f50ad46fa40ad73c88c9bbd9768e6d6404b6dab8f.jpg",
+      "coverObjectKey": "musebooks/covers/b0b3ac8f7af02d9112608a5f50ad46fa40ad73c88c9bbd9768e6d6404b6dab8f.jpg",
+      "metadataSourceUrl": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1752563403.pdf",
+      "contentSummary": "176頁精裝書、附錄收藏盒與典藏書盒；抱枕套160×50cm（不含枕心）、流砂造型書籤18×6cm，以及4張雷射燙金寫真卡8.8×6.3cm。影像內容與平裝版相同。"
+    }
+  ]
+}

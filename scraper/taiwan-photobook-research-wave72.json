@@ -1,0 +1,21 @@
+{
+  "resolved": [
+    {
+      "model": "SHOYA",
+      "title": "慾見SHOYA：筋肉教練寫真",
+      "url": "https://www.sanmin.com.tw/product/index/015158859",
+      "reason": "Physical edition verified via publisher and Kingstone, imported wave73"
+    },
+    {
+      "model": "SHOYA",
+      "title": "慾見SHOYA：筋肉教練寫真（電子書）",
+      "format": "digital",
+      "url": "https://reading.udn.com/ebook/store/store_product.do?pid=139784",
+      "eisbn": "9786264450362",
+      "releaseDate": "2026-01-30",
+      "formatDetails": "EPUB 3 fixed layout; 74 MB",
+      "reason": "Exact Readmoo digital cover uploaded to R2; edition linked to existing SHOYA work and saved in PostgreSQL."
+    }
+  ],
+  "pending": []
+}

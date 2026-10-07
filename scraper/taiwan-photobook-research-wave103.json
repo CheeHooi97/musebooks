@@ -1,0 +1,62 @@
+{
+  "batch": 103,
+  "verifiedAt": "2026-10-07",
+  "purpose": "Add Teresa 馮子紜’s separately verified physical photobook, cover, and publication/composition metadata.",
+  "notes": [
+    "Sanmin identifies the work, author, photographer, publisher, publication date, hardcover binding, 112 pages, and 30×22×1 cm dimensions. Its live product page states 絕版無法訂購 / 無法訂購.",
+    "Books.com currently says 已售完，無法購買; Yahoo Shopping says 已停售. Displayed retailer prices are not saved as active offers because the products cannot currently be purchased.",
+    "The Ruten search result points to a single-stock listing, but the item opens an adult-age confirmation page. It was not passed; no active or sold marketplace price was verified or imported. A Shopee result was not accessed because it requires verification.",
+    "The displayed 13-digit retailer identifier 2428915800900 is retained here as source metadata but omitted from the database ISBN field because it is not a standard ISBN-13 identifier.",
+    "The official Sanmin cover was uploaded to R2 and verified by HTTP 200 public readback with an exact SHA-256 match."
+  ],
+  "sources": [
+    "https://www.sanmin.com.tw/product/index/010706483",
+    "https://www.books.com.tw/products/0010934861",
+    "https://tw.buy.yahoo.com/gdsale/gdsale.asp?gdid=p0082263533936",
+    "https://www.ruten.com.tw/item/22451463357990/",
+    "https://m.taaze.tw/do/mobile/single.aspx?pid=11100990715"
+  ],
+  "models": [
+    {
+      "name": "馮子紜",
+      "aliases": [
+        "馮子紜",
+        "Teresa",
+        "緹芝"
+      ],
+      "works": [
+        {
+          "title": "Teresa馮子紜寫真集",
+          "format": "physical",
+          "publisher": "白象文化",
+          "releaseDate": "2022-09-01",
+          "pageCount": 112,
+          "dimensions": "30 x 22 x 1 cm",
+          "binding": "精裝",
+          "photographer": "周明進",
+          "sourceIdentifier": "2428915800900",
+          "sourceIdentifierType": "retailer-displayed identifier (not stored as ISBN)",
+          "contentSummary": "超過100頁彩色影像，主題包含日系風格、戶外比基尼與寵物風女友，另附A3海報。",
+          "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/010706483",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/f09187eb572385606e39d77ff70a37d2cb5ee3bb046dc1125b0d875f83ec11e9.jpg",
+          "coverSHA256": "f09187eb572385606e39d77ff70a37d2cb5ee3bb046dc1125b0d875f83ec11e9",
+          "retailOffers": [],
+          "availabilityNotes": [
+            "Sanmin: out of print, unavailable to order",
+            "Books.com: sold out",
+            "Yahoo Shopping: discontinued",
+            "Ruten: age-confirmation interstitial not passed; listing price unverified"
+          ]
+        }
+      ]
+    }
+  ],
+  "changes": {
+    "newWorks": 1,
+    "newPhysicalEditions": 1,
+    "newDigitalEditions": 0,
+    "verifiedActiveMarketplaceOffers": 0,
+    "verifiedSoldOffers": 0,
+    "newR2CoverUploads": 1
+  }
+}

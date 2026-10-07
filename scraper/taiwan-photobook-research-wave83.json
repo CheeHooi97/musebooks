@@ -1,0 +1,486 @@
+{
+  "batch": 83,
+  "models": [
+    {
+      "name": "陳白白、葉蛋蛋、波奇、莉亞",
+      "aliases": [
+        "陳白白",
+        "阿白",
+        "white0407",
+        "葉蛋蛋",
+        "alie_egg",
+        "波奇",
+        "poch___173",
+        "莉亞",
+        "Liya莉亞",
+        "liya_0715"
+      ],
+      "identityNote": "Google Play identifies this as the 2024 MotoH car-model photobook with four named models and 160 ebook pages. This batch verified the digital edition only.",
+      "identitySourceUrls": [
+        "https://play.google.com/store/books/details?id=m4cgEQAAQBAJ&hl=zh_TW&gl=TW"
+      ],
+      "digitalStatus": "已核實數位版。",
+      "physicalStatus": "本批未核實對應實體版。",
+      "works": [
+        {
+          "workId": "work-tw-a28dc55bb44e5391280ec89a",
+          "title": "MotoH車漾女神誌 - 女神降臨寫真集",
+          "editions": [
+            {
+              "editionId": "edition-936ecc63c85af49a7b947cbe",
+              "sourceTitle": "MotoH車漾女神誌 - 女神降臨寫真集",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 160,
+              "dimensions": "",
+              "releaseDate": "2024-04-01",
+              "contentSummary": "160頁數位車模寫真，由陳白白（阿白）、葉蛋蛋、波奇與Liya莉亞共同拍攝；本批未確認對應紙本版。",
+              "sourceUrl": "https://play.google.com/store/books/details?id=m4cgEQAAQBAJ&hl=zh_TW&gl=TW",
+              "coverSourceUrl": "https://play.google.com/books/publisher/content/images/frontcover/m4cgEQAAQBAJ?fife",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/951930ae9b68b28603c78943dcf1f782b0672289543dbccb699fd227db3ddc6c.jpg",
+              "coverObjectKey": "musebooks/covers/951930ae9b68b28603c78943dcf1f782b0672289543dbccb699fd227db3ddc6c.jpg",
+              "retailOffers": [
+                {
+                  "editionId": "edition-936ecc63c85af49a7b947cbe",
+                  "sourceId": "google-play-books-tw",
+                  "retailer": "Google Play Books Taiwan",
+                  "externalId": "m4cgEQAAQBAJ",
+                  "url": "https://play.google.com/store/books/details?id=m4cgEQAAQBAJ&hl=zh_TW&gl=TW",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 27900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T15:43:25.709953Z"
+                }
+              ],
+              "releasePrecision": "month"
+            }
+          ],
+          "photographer": ""
+        }
+      ]
+    },
+    {
+      "name": "黃艾比、陳安安、貝兒、步步、小桃子",
+      "aliases": [
+        "黃艾比",
+        "Abbie Huang",
+        "陳安安",
+        "Ann Chen",
+        "貝兒",
+        "步步",
+        "小桃子"
+      ],
+      "identityNote": "Sanmin identifies the five models and an EPUB ebook product dated 2018-03-30. Page count and photographer were not given on the retailer page.",
+      "identitySourceUrls": [
+        "https://www.sanmin.com.tw/product/index/015876831"
+      ],
+      "digitalStatus": "已核實數位版。",
+      "physicalStatus": "本批未核實對應實體版。",
+      "works": [
+        {
+          "workId": "work-tw-42a905bc5a1ffb84ad38a5f9",
+          "title": "Girl Friend女友寫真 No.2",
+          "editions": [
+            {
+              "editionId": "edition-c37808053825eee6b1fbb418",
+              "sourceTitle": "Girl Friend女友寫真 No.2",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "2018-03-30",
+              "contentSummary": "EPUB版式數位群像寫真；黃艾比、陳安安、貝兒、步步、小桃子五位模特兒共同拍攝。商品頁未列頁數。",
+              "sourceUrl": "https://www.sanmin.com.tw/product/index/015876831",
+              "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/222/222286917.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/204e49bbfda7df7487c767de7cf74742340c9d4ec6f0a9e94720f3bb0cdc3600.png",
+              "coverObjectKey": "musebooks/covers/204e49bbfda7df7487c767de7cf74742340c9d4ec6f0a9e94720f3bb0cdc3600.png",
+              "retailOffers": [
+                {
+                  "editionId": "edition-c37808053825eee6b1fbb418",
+                  "sourceId": "sanmin-books-tw",
+                  "retailer": "三民網路書店",
+                  "externalId": "015876831",
+                  "url": "https://www.sanmin.com.tw/product/index/015876831",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 39900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T15:59:24.579700Z"
+                }
+              ],
+              "releasePrecision": "day"
+            }
+          ],
+          "photographer": ""
+        }
+      ]
+    },
+    {
+      "name": "夢夢、殷宛琦、尤妝妝、謝立琪、唐琦琦",
+      "aliases": [
+        "夢夢",
+        "殷宛琦",
+        "Riva",
+        "尤妝妝",
+        "Linda",
+        "謝立琪",
+        "唐琦琦"
+      ],
+      "identityNote": "Sanmin identifies the five models and an EPUB ebook product dated 2019-10-17. Page count was not given on the retailer page.",
+      "identitySourceUrls": [
+        "https://www.sanmin.com.tw/product/index/015876851"
+      ],
+      "digitalStatus": "已核實數位版。",
+      "physicalStatus": "本批未核實對應實體版。",
+      "works": [
+        {
+          "workId": "work-tw-e154e764b6b7fa0e5375be1c",
+          "title": "Girl Friend女友寫真 No.3",
+          "editions": [
+            {
+              "editionId": "edition-a96635e918f5d13a8fb10c54",
+              "sourceTitle": "Girl Friend女友寫真 No.3",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "2019-10-17",
+              "contentSummary": "EPUB版式數位群像寫真；夢夢、殷宛琦、尤妝妝、謝立琪、唐琦琦五位模特兒共同拍攝。商品頁未列頁數。",
+              "sourceUrl": "https://www.sanmin.com.tw/product/index/015876851",
+              "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/222/222286937.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/7d3467bb1d1b63b77fe043256f83f3f514f9286a5719529aecfe62f9476086e1.png",
+              "coverObjectKey": "musebooks/covers/7d3467bb1d1b63b77fe043256f83f3f514f9286a5719529aecfe62f9476086e1.png",
+              "retailOffers": [
+                {
+                  "editionId": "edition-a96635e918f5d13a8fb10c54",
+                  "sourceId": "sanmin-books-tw",
+                  "retailer": "三民網路書店",
+                  "externalId": "015876851",
+                  "url": "https://www.sanmin.com.tw/product/index/015876851",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 39900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T15:59:38.026602Z"
+                }
+              ],
+              "releasePrecision": "day"
+            }
+          ],
+          "photographer": ""
+        }
+      ]
+    },
+    {
+      "name": "草草、金瑀恩、莉亞、佳佳兒",
+      "aliases": [
+        "草草",
+        "grassxlife",
+        "grass630",
+        "金瑀恩",
+        "莉亞",
+        "Liya莉亞",
+        "liya_0715",
+        "佳佳兒"
+      ],
+      "identityNote": "Sanmin and Kobo identify four models, photographer 許小弘, 144 pages, and EPUB 3 fixed-layout digital format dated 2020-02-06.",
+      "identitySourceUrls": [
+        "https://www.sanmin.com.tw/product/index/015876854",
+        "https://www.kobo.com/tw/zh/ebook/girl-friend-no-4"
+      ],
+      "digitalStatus": "已核實數位版。",
+      "physicalStatus": "本批未核實對應實體版。",
+      "works": [
+        {
+          "workId": "work-tw-80f76b18292b82e520ad821f",
+          "title": "Girl Friend女友寫真 No.4",
+          "editions": [
+            {
+              "editionId": "edition-a8c59c9ddbc7006a38fd9e82",
+              "sourceTitle": "Girl Friend女友寫真 No.4",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 144,
+              "dimensions": "",
+              "releaseDate": "2020-02-06",
+              "contentSummary": "144頁EPUB 3固定版面數位寫真；草草、金瑀恩、莉亞、佳佳兒四位模特兒共同拍攝，許小弘攝影。",
+              "sourceUrl": "https://www.sanmin.com.tw/product/index/015876854",
+              "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/222/222286940.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/cea5859d2dfe8048b2258b9236cbcd0e3b2fadbb893ca39343326709efe10aa7.png",
+              "coverObjectKey": "musebooks/covers/cea5859d2dfe8048b2258b9236cbcd0e3b2fadbb893ca39343326709efe10aa7.png",
+              "retailOffers": [
+                {
+                  "editionId": "edition-a8c59c9ddbc7006a38fd9e82",
+                  "sourceId": "google-play-books-tw",
+                  "retailer": "Google Play Books Taiwan",
+                  "externalId": "r8vWDwAAQBAJ",
+                  "url": "https://play.google.com/store/books/details?id=r8vWDwAAQBAJ&hl=zh_TW&gl=TW",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 28500,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T15:43:43.150806Z"
+                },
+                {
+                  "editionId": "edition-a8c59c9ddbc7006a38fd9e82",
+                  "sourceId": "sanmin-books-tw",
+                  "retailer": "三民網路書店",
+                  "externalId": "015876854",
+                  "url": "https://www.sanmin.com.tw/product/index/015876854",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 39900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T15:43:56.386869Z"
+                }
+              ],
+              "releasePrecision": "day"
+            }
+          ],
+          "photographer": "許小弘"
+        }
+      ]
+    },
+    {
+      "name": "吳昱萱、曼達、鐘挅莉、朱芯辰、親親",
+      "aliases": [
+        "吳昱萱",
+        "昱萱",
+        "dazzling.conqueror",
+        "曼達",
+        "鐘挅莉",
+        "Dolly",
+        "朱芯辰",
+        "Amanda Chu",
+        "親親"
+      ],
+      "identityNote": "Sanmin lists five models in the digital photobook. The page did not disclose pagination, photographer, or ebook file details.",
+      "identitySourceUrls": [
+        "https://www.sanmin.com.tw/product/index/015876853"
+      ],
+      "digitalStatus": "已核實數位版。",
+      "physicalStatus": "本批未核實對應實體版。",
+      "works": [
+        {
+          "workId": "work-tw-5acc1bb4ddcf005eed425556",
+          "title": "國民女友First Love",
+          "editions": [
+            {
+              "editionId": "edition-904930b87d8ca8dc59cf00aa",
+              "sourceTitle": "國民女友First Love",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "2019-12-24",
+              "contentSummary": "數位群像寫真，由吳昱萱、曼達、鐘挅莉、朱芯辰與親親五位模特兒共同拍攝。商品頁未提供頁數、攝影師與檔案細節。",
+              "sourceUrl": "https://www.sanmin.com.tw/product/index/015876853",
+              "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/222/222286939.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/b3eae852aa239535dad2cec86ec15b16bec84887bfb1eb3f587ad8ec29100733.png",
+              "coverObjectKey": "musebooks/covers/b3eae852aa239535dad2cec86ec15b16bec84887bfb1eb3f587ad8ec29100733.png",
+              "retailOffers": [
+                {
+                  "editionId": "edition-904930b87d8ca8dc59cf00aa",
+                  "sourceId": "sanmin-books-tw",
+                  "retailer": "三民網路書店",
+                  "externalId": "015876853",
+                  "url": "https://www.sanmin.com.tw/product/index/015876853",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 39900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T15:59:51.859690Z"
+                }
+              ],
+              "releasePrecision": "day"
+            }
+          ],
+          "photographer": ""
+        }
+      ]
+    },
+    {
+      "name": "吳綵冞",
+      "aliases": [
+        "吳綵冞",
+        "綵冞",
+        "Mina"
+      ],
+      "identityNote": "Sanmin identifies the EISBN, EPUB fixed-layout format, release date, photographer 陳伸維, bathtub and beach scenes, and eight behind-the-scenes clips.",
+      "identitySourceUrls": [
+        "https://www.sanmin.com.tw/product/index/013627152"
+      ],
+      "digitalStatus": "已核實數位版。",
+      "physicalStatus": "本批未核實對應實體版。",
+      "works": [
+        {
+          "workId": "work-tw-d03c462dbc07223f4acf5652",
+          "title": "冞冞糊糊愛上你：綵冞數位寫真",
+          "editions": [
+            {
+              "editionId": "edition-90120bb303d60a84356b57af",
+              "sourceTitle": "冞冞糊糊愛上你：綵冞數位寫真",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9786263778207",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "2024-03-20",
+              "contentSummary": "EPUB版式數位寫真，由陳伸維攝影；包含浴缸與海灘場景，附8支側拍花絮影音。",
+              "sourceUrl": "https://www.sanmin.com.tw/product/index/013627152",
+              "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/222/222188420.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/84db4e50549add540a47a6f8d9481828c2cb1dcdd49d02280b5bdbc3ec6195d5.png",
+              "coverObjectKey": "musebooks/covers/84db4e50549add540a47a6f8d9481828c2cb1dcdd49d02280b5bdbc3ec6195d5.png",
+              "retailOffers": [
+                {
+                  "editionId": "edition-90120bb303d60a84356b57af",
+                  "sourceId": "sanmin-books-tw",
+                  "retailer": "三民網路書店",
+                  "externalId": "013627152",
+                  "url": "https://www.sanmin.com.tw/product/index/013627152",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 35000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T16:00:05.117284Z"
+                }
+              ],
+              "releasePrecision": "day"
+            }
+          ],
+          "photographer": "陳伸維"
+        }
+      ]
+    },
+    {
+      "name": "洪仕晟",
+      "aliases": [
+        "洪仕晟",
+        "Robert Hung"
+      ],
+      "identityNote": "The publisher and NCL confirm the physical 160-page book; BOOK☆WALKER confirms a separate 160-page fixed-layout EPUB released 2022-02-18, with a phone-wallpaper bonus. The two formats remain separate under one work.",
+      "identitySourceUrls": [
+        "https://www.kadokawa.com.tw/products/9786263211940",
+        "https://www.bookwalker.com.tw/product/133398",
+        "https://nclfile.ncl.edu.tw/files/202204/58dc014c-a17e-4259-ac08-e039a107fc62.pdf"
+      ],
+      "digitalStatus": "已核實數位版。",
+      "physicalStatus": "已核實實體版。",
+      "works": [
+        {
+          "workId": "work-tw-e2702ce1b7146fbb31773ce6",
+          "title": "似曾相識：洪仕晟寫真書 Robert's 1st Photobook",
+          "editions": [
+            {
+              "editionId": "edition-d42da54d4b0855cdb70f4d21",
+              "sourceTitle": "似曾相識：洪仕晟寫真書 Robert's 1st Photobook",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 160,
+              "dimensions": "",
+              "releaseDate": "2022-02-18",
+              "contentSummary": "固定版面EPUB數位寫真，160頁，另含手機桌布電子書特典；場景包括金門海灘、沙丘、民宿、城市街頭與居家生活。",
+              "sourceUrl": "https://www.bookwalker.com.tw/product/133398",
+              "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/133398/133398_1.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/be47335b193124b3310de537d82de7e7fa0c0db77331808a8aed6093e0d12bf1.jpg",
+              "coverObjectKey": "musebooks/covers/be47335b193124b3310de537d82de7e7fa0c0db77331808a8aed6093e0d12bf1.jpg",
+              "retailOffers": [
+                {
+                  "editionId": "edition-d42da54d4b0855cdb70f4d21",
+                  "sourceId": "bookwalker-tw",
+                  "retailer": "BOOK☆WALKER Taiwan",
+                  "externalId": "133398",
+                  "url": "https://www.bookwalker.com.tw/product/133398",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 32300,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-06T15:54:53.418076Z"
+                }
+              ],
+              "releasePrecision": "day"
+            },
+            {
+              "editionId": "edition-c39cc4536a4e79cadf7c2a37",
+              "sourceTitle": "似曾相識：洪仕晟寫真書 Robert's 1st Photobook",
+              "format": "physical",
+              "label": "標準版",
+              "variant": "standard",
+              "isbn": "9786263211940",
+              "pageCount": 160,
+              "dimensions": "25.8cm*18.2cm*1.2cm",
+              "releaseDate": "2022-01-26",
+              "contentSummary": "160頁平裝寫真；金門海灘、沙丘、民宿、城市街頭與居家生活場景，造型含拳擊、橄欖球員、皮衣、白袍、泳褲、眼鏡及運動白襪等。攝影：深夜名堂 Justin Hsieh。",
+              "sourceUrl": "https://www.kadokawa.com.tw/products/9786263211940",
+              "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/133398/133398_1.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/be47335b193124b3310de537d82de7e7fa0c0db77331808a8aed6093e0d12bf1.jpg",
+              "coverObjectKey": "musebooks/covers/be47335b193124b3310de537d82de7e7fa0c0db77331808a8aed6093e0d12bf1.jpg",
+              "retailOffers": [],
+              "releasePrecision": "day"
+            }
+          ],
+          "photographer": "深夜名堂 Justin Hsieh"
+        }
+      ]
+    }
+  ],
+  "existingEditionOfferUpdates": [
+    {
+      "workId": "work-tw-03c5ae12b61ad3d1e9c5b3b5",
+      "editionId": "edition-a0a17dce1636ff2ff25d3ebb",
+      "model": "曼容",
+      "format": "digital",
+      "retailOffers": [
+        {
+          "sourceId": "sanmin-books-tw",
+          "retailer": "三民網路書店",
+          "externalId": "013978283",
+          "url": "https://www.sanmin.com.tw/product/index/013978283",
+          "priceMinor": 35000,
+          "currency": "TWD",
+          "observedAt": "2026-10-06T15:40:39.947013Z"
+        }
+      ]
+    },
+    {
+      "workId": "work-tw-44b0143f8e9afb4d9fff0e09",
+      "editionId": "edition-cf999a4774a1d09f39dbfd70",
+      "model": "夏蕾",
+      "format": "digital",
+      "retailOffers": [
+        {
+          "sourceId": "pubu-tw",
+          "retailer": "Pubu",
+          "externalId": "696714",
+          "url": "https://www.pubu.com.tw/ebook/696714",
+          "priceMinor": 47600,
+          "currency": "TWD",
+          "observedAt": "2026-10-06T15:40:53.073499Z"
+        },
+        {
+          "sourceId": "sanmin-books-tw",
+          "retailer": "三民網路書店",
+          "externalId": "015899348",
+          "url": "https://www.sanmin.com.tw/product/index/015899348",
+          "priceMinor": 47600,
+          "currency": "TWD",
+          "observedAt": "2026-10-06T15:41:06.516026Z"
+        }
+      ]
+    }
+  ]
+}

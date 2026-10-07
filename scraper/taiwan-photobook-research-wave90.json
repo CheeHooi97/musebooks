@@ -1,0 +1,73 @@
+{
+  "batch": 90,
+  "verifiedAt": "2026-10-07T11:27:18+08:00",
+  "purpose": "Catalog a newly discovered Taiwan-market group digital photobook and verify an active authorized retail offer.",
+  "models": [
+    {
+      "name": "穎樂、笑笑、溫妮、高橋佳帆",
+      "aliases": [
+        "穎樂",
+        "笑笑",
+        "溫妮",
+        "高橋佳帆"
+      ],
+      "identityNote": "Kodansha identifies the Yanmaga Cup Kobo edition as a four-member Rakuten Girls photobook featuring 穎樂、高橋佳帆、笑笑、溫妮. The Taiwan Kobo-exclusive edition adds 20 pages of black-swimsuit photos.",
+      "physicalStatus": "No physical edition for this group title was found or verified; the identified item is a Kobo EPUB, and no print edition was inferred.",
+      "digitalStatus": "Kobo specifies EPUB3 fixed layout with Adobe DRM (179 MB), release 2026-08-31, product ID 8982431001000; pagination is not published. PChome’s live page returned HTTP 200 and displayed NT$650 with add-to-cart and immediate-purchase actions; it identifies the item as a non-physical Kobo ebook.",
+      "sourceUrls": [
+        "https://ymclub.kodansha.co.jp/pages/yanmaga-cup-tw",
+        "https://www.kobo.com/tw/zh/ebook/kobo-rakuten-girls-2",
+        "https://www.rakuten.com.tw/shop/kobo/product/2b86ca34-c543-3708-a100-0cb0bac76b32/",
+        "https://24h.pchome.com.tw/books/prod/DJBQ2E-D900KE504"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-76b3b9559d5cbb77566e2795",
+          "title": "樂天女孩 Yanmaga 數位寫真集",
+          "photographer": "LUCKMAN、藤本和典",
+          "editions": [
+            {
+              "editionId": "edition-99a8b5430bbd6b8fc29e61c4",
+              "format": "digital",
+              "label": "台灣Kobo限定版",
+              "variant": "exclusive",
+              "isbn": "8982431001000",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "2026-08-31",
+              "publisher": "講談社",
+              "photographer": "LUCKMAN、藤本和典",
+              "contentSummary": "固定版式 EPUB3（179 MB），Adobe DRM。收錄穎樂、高橋佳帆、笑笑、溫妮赴鎌倉拍攝的泳裝與浴衣影像；台灣 Kobo 限定版另含 20 頁黑色泳裝照片。出版頁未標示頁數。",
+              "sourceUrl": "https://www.kobo.com/tw/zh/ebook/kobo-rakuten-girls-2",
+              "coverSourceUrl": "https://img.pchome.com.tw/cs/items/DJBQ2ED900KE504/000001_1788469203.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/106fed6c775fd6bdd70e76e58e1fec1cac9897a5530747241b166d861bfbb6ba.jpg",
+              "coverObjectKey": "musebooks/covers/106fed6c775fd6bdd70e76e58e1fec1cac9897a5530747241b166d861bfbb6ba.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "pchome-books-tw",
+                  "retailer": "PChome 24h購物",
+                  "externalId": "DJBQ2E-D900KE504",
+                  "url": "https://24h.pchome.com.tw/books/prod/DJBQ2E-D900KE504",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 65000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T11:25:07+08:00",
+                  "statusEvidence": ""
+                }
+              ],
+              "sourceUrls": [
+                "https://ymclub.kodansha.co.jp/pages/yanmaga-cup-tw",
+                "https://www.kobo.com/tw/zh/ebook/kobo-rakuten-girls-2",
+                "https://www.rakuten.com.tw/shop/kobo/product/2b86ca34-c543-3708-a100-0cb0bac76b32/",
+                "https://24h.pchome.com.tw/books/prod/DJBQ2E-D900KE504"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "soldPriceResult": "No sold-price data was found or recorded; the NT$650 observation is a current active digital retail price, not a completed sale."
+}

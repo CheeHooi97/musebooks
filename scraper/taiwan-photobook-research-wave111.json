@@ -1,0 +1,115 @@
+{
+  "batch": 111,
+  "verifiedAt": "2026-10-07",
+  "purpose": "Add 金渡兒's first Taiwan physical photobook, separate the standard, retailer-exclusive covers, and publisher boxed edition, and save reviewed cover assets and current bookstore offers.",
+  "models": [
+    "金渡兒"
+  ],
+  "works": [
+    {
+      "model": "金渡兒",
+      "title": "想與你一起渡過：金渡兒影像紀實",
+      "photographer": "李彥勳",
+      "publisher": "尖端出版",
+      "workId": "work-tw-ced53516a440d27c1c1f6e1d",
+      "sources": [
+        "https://www.spp.com.tw/SalePage/Index/12110606",
+        "https://www.sanmin.com.tw/product/index/015782086",
+        "https://www.books.com.tw/products/0011061933",
+        "https://www.eslite.com/product/10012116312683215827006",
+        "https://www.spp.com.tw/SalePage/Index/11962162",
+        "https://www.cool-style.com.tw/wd2/archives/1322845-%E9%87%91%E6%B8%A1%E5%85%92%E9%A6%96%E6%9C%AC%E5%AF%AB%E7%9C%9F%E6%9B%B8%E3%80%8A%E6%83%B3%E8%88%87%E4%BD%A0%E4%B8%80%E8%B5%B7%E6%B8%A1%E9%81%8E%E3%80%8B7-14-%E6%B5%AA%E6%BC%AB%E9%96%8B%E6%94%BE",
+        "https://www.cool-style.com.tw/wd2/archives/1341313-%E9%87%91%E6%B8%A1%E5%85%92%E5%AF%AB%E7%9C%9F%E9%96%8B%E8%B3%A3%E5%8D%B3%E5%82%B3%E6%8D%B7%E5%A0%B1%EF%BC%81%E3%80%8A%E6%83%B3%E8%88%87%E4%BD%A0%E4%B8%80%E8%B5%B7%E6%B8%A1%E9%81%8E%E3%80%8B%E7%81%AB/amp",
+        "https://www.nownews.com/news/6873422"
+      ],
+      "composition": "金渡兒首本台灣實體影像紀實寫真，由李彥勳攝影。以少女白日夢與陪伴式夏日旅程為主題，場景涵蓋泳池、馬場、湖畔、戶外綠意及室內；造型從清晨日常、泳池比基尼、牛仔帽騎白馬，延伸至夜間浴袍、紅色內衣與黑色蕾絲，呈現甜美、率性、成熟等多種影像風格。",
+      "editions": [
+        {
+          "format": "physical",
+          "label": "一般版",
+          "variant": "standard",
+          "url": "https://www.spp.com.tw/SalePage/Index/12110606",
+          "releaseDate": "2026-09-09",
+          "pageCount": 144,
+          "isbnOrEisbn": "9786264553773",
+          "dimensions": "29.7 × 21 × 1 cm",
+          "metadataNote": "尖端官方頁及三民直接列出作者、攝影師、ISBN、日期及144頁。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/d0dd72ffadf077b3f79edb076346f344c21db78ba3e12629dfc4e1d8d84977df.jpg",
+          "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/626/626455377.jpg",
+          "activeOffers": [
+            {
+              "sourceId": "sanmin-print-tw",
+              "url": "https://www.sanmin.com.tw/product/index/015782086",
+              "priceTWD": 719,
+              "evidence": "New paperback; Sanmin page showed stock >10 and an enabled add-to-cart action at NT$719. This is a bookstore asking price, not a completed-sale price."
+            }
+          ]
+        },
+        {
+          "format": "physical",
+          "label": "博客來限定封面版",
+          "variant": "exclusive",
+          "url": "https://www.books.com.tw/products/0011061933",
+          "releaseDate": "2026-09-09",
+          "pageCount": null,
+          "isbnOrEisbn": "",
+          "metadataNote": "出版社新聞確認為博客來限定封面的同一本一般版；直接商品頁規格欄目前未能取證，不套用標準版頁數或ISBN。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/cd611d90c2997d6a7d36d5ffef543c5a7fef65676f296d8263baafe991ad8790.jpg",
+          "coverSourceUrl": "https://www.books.com.tw/img/001/106/19/0011061933.jpg",
+          "activeOffers": []
+        },
+        {
+          "format": "physical",
+          "label": "誠品限定封面版",
+          "variant": "exclusive",
+          "url": "https://www.eslite.com/product/10012116312683215827006",
+          "releaseDate": "2026-09-08",
+          "pageCount": 176,
+          "isbnOrEisbn": "",
+          "metadataNote": "誠品列EAN 4717702301859、176頁；商品頁未列ISBN。一般版ISBN商品頁為144頁，因此保留此來源的176頁並註明衝突。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/c63df6e8039a90bf1b525607ef473530dfde8cd11f225b438b25658f5fabdd58.jpg",
+          "coverSourceUrl": "https://s.eslite.com/b2b/vendor/vendor178771141361520260826103013/mainCoverImage1_1704529.jpg",
+          "activeOffers": [
+            {
+              "sourceId": "eslite-books-tw",
+              "url": "https://www.eslite.com/product/10012116312683215827006",
+              "priceTWD": 631,
+              "evidence": "Eslite product page identified the exclusive-cover item and showed an enabled purchase action at NT$631. This is a bookstore asking price, not a completed-sale price."
+            }
+          ]
+        },
+        {
+          "format": "physical",
+          "label": "尖端限定特裝版",
+          "variant": "limited_box",
+          "url": "https://www.spp.com.tw/SalePage/Index/11962162",
+          "releaseDate": "2026-09-08",
+          "pageCount": null,
+          "isbnOrEisbn": "",
+          "metadataNote": "尖端限時特裝預購，公告售價NT$1,680、9/8起出貨；含書、磁吸收藏盒、獨家書封、小卡、抱枕套及海報。此價格是歷史預購價，不記為目前零售價或成交價。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/9420c7fc3826b56c2a462d85e4cb1496938a46afcb88c36bd6451a21d8561f1a.jpg",
+          "coverSourceUrl": "https://cdn-origin.cool-style.com.tw/cool/2026/07/639192028880370000.jpg",
+          "activeOffers": []
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "本次找到同一作品的四個實體版本：一般版、博客來限定封面版、誠品限定封面版、尖端限定特裝版；將它們保留為同一作品下的版次。",
+    "金渡兒專屬數位版本次未找到可核實的書店頁，因此沒有建立digital版次；未把實體書改標為數位。",
+    "一般版ISBN 9786264553773、144頁；誠品限定封面商品頁列EAN 4717702301859及176頁，數值差異保留原始來源，不互相覆蓋。博客來限定封面版直接規格欄未能取證，ISBN及頁數留空。",
+    "特裝版官方預購公告列NT$1,680及9月8日起出貨，預購已結束；沒有把這個歷史預購價記作現行價。特裝版公告展示兩張不同書封示意圖，但沒有說明封面是否可選、隨機或另有識別碼，因此僅建一個特裝版版次。",
+    "Sanmin一般版NT$719及誠品限定封面NT$631為頁面當時的書店標價且可購買，屬retail asking price，不是二手市場成交價。",
+    "搜尋到Ruten一般版賣場摘要標價NT$720且顯示成交0，但賣場頁現場開啟取證失敗、預計出貨區間已過；未把它寫成目前active listing。未核實到任何完成交易的sold price。",
+    "四張封面均已上傳R2並以公開GET回讀SHA-256核對；正式版與兩個通路版封面來自零售商品頁，特裝版代表圖來自該特裝預購專題。"
+  ],
+  "changes": {
+    "newWorks": 1,
+    "newPhysicalEditions": 4,
+    "newDigitalEditions": 0,
+    "verifiedActiveBookstoreOffers": 2,
+    "newR2CoverUploads": 4,
+    "verifiedMarketplaceListings": 0,
+    "verifiedSoldListings": 0
+  }
+}

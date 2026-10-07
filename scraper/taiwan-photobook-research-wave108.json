@@ -1,0 +1,179 @@
+{
+  "batch": 108,
+  "verifiedAt": "2026-10-07",
+  "purpose": "Catalog three newly verified Taiwan photobooks with format-specific physical and digital editions, separate covers, and only currently orderable retail offers.",
+  "models": [
+    "邱宇辰、黃宏軒",
+    "謝佳見",
+    "陳彥名"
+  ],
+  "works": [
+    {
+      "model": "邱宇辰、黃宏軒",
+      "title": "遠在謙邊：關於未知的我們 CP寫真書",
+      "photographer": "",
+      "publisher": "台灣角川",
+      "workId": "work-tw-de65729ff4d6bdc4f1813f7b",
+      "sources": [
+        "https://www.kadokawa.com.tw/products/9786264001472",
+        "https://www.bookwalker.com.tw/product/202174"
+      ],
+      "composition": "BL劇《關於未知的我們》遠在謙邊CP邱宇辰與黃宏軒的全新合拍寫真，描繪戲劇之外的未來甜蜜日常，收錄多樣造型與約150張新拍照片；紙本首刷附隨機復刻拍立得。",
+      "editions": [
+        {
+          "format": "physical",
+          "label": "精裝大開本紙本寫真書",
+          "url": "https://www.kadokawa.com.tw/products/9786264001472",
+          "releaseDate": "2024-05-03",
+          "pageCount": 0,
+          "isbnOrEisbn": "9786264001472",
+          "metadataNote": "台灣角川產品頁確認紙本上市日2024-05-03、售價NT$600、內容含約150張全新合拍照片及首刷隨機復刻拍立得；目前顯示售完，未記錄為可購買商品。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/8f146459a0347f53573be688840c217a95cdc18b6a145d2da03c1bf0bde0243d.webp",
+          "coverSourceUrl": "https://shoplineimg.com/655b0f3c9b81d900188b35f1/663fbe921f09030022a640cb/800x.webp?source_format=jpg",
+          "activeOffers": []
+        },
+        {
+          "format": "digital",
+          "label": "固定版面 EPUB",
+          "url": "https://www.bookwalker.com.tw/product/202174",
+          "releaseDate": "2024-05-17",
+          "pageCount": 0,
+          "isbnOrEisbn": "9786264001465",
+          "metadataNote": "BOOK☆WALKER固定版面EPUB電子版；EISBN 9786264001465，與紙本 ISBN 9786264001472 分開辨識，電子封面亦與紙本不同。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/d98765d7f7bf1c3491a402f11565ecf981344098bee3787b4de4fa1aff7906bd.jpg",
+          "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/202174/zoom_big_202174.jpg",
+          "activeOffers": [
+            {
+              "sourceId": "bookwalker-tw",
+              "url": "https://www.bookwalker.com.tw/product/202174",
+              "priceTWD": 450,
+              "evidence": "BOOK☆WALKER Taiwan product page showed active digital checkout at NT$450, fixed-layout EPUB and EISBN 9786264001465. This is a current digital asking price, not a completed sale."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "謝佳見",
+      "title": "謝佳見：臨界之地Land Boundary",
+      "photographer": "謝宏奕",
+      "publisher": "尖端出版",
+      "workId": "work-tw-391b908cc139d8218afe03e1",
+      "sources": [
+        "https://www.sanmin.com.tw/product/index/009716769",
+        "https://www.bookwalker.com.tw/product/128320",
+        "https://www.sanmin.com.tw/product/index/013426269"
+      ],
+      "composition": "謝佳見第二本個人寫真書，以14種造型拍攝其不同面貌，結合照片、日記式文字、自我反思及陳怡庭插畫。",
+      "editions": [
+        {
+          "format": "physical",
+          "label": "平裝版",
+          "url": "https://www.sanmin.com.tw/product/index/009716769",
+          "releaseDate": "2021-09-03",
+          "pageCount": 144,
+          "isbnOrEisbn": "9786263160231",
+          "metadataNote": "三民紙本頁確認平裝、144頁、ISBN 9786263160231、攝影謝宏奕；頁面目前無現貨，但可下單採購，預估4至10個工作天。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/954d6c3e66987d990e41ae66e5004215f8d59344bb23bf496b83067b9ca1ab52.jpg",
+          "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/626/626316023.jpg",
+          "activeOffers": [
+            {
+              "sourceId": "sanmin-print-tw",
+              "url": "https://www.sanmin.com.tw/product/index/009716769",
+              "priceTWD": 612,
+              "evidence": "Sanmin Taiwan showed NT$612 and an enabled add-to-cart/order path, with procurement estimated at 4–10 business days despite out-of-stock status. This is an orderable backorder asking price, not an in-stock offer or completed sale."
+            }
+          ]
+        },
+        {
+          "format": "digital",
+          "label": "固定版面 EPUB",
+          "url": "https://www.bookwalker.com.tw/product/128320",
+          "releaseDate": "2021-11-28",
+          "pageCount": 145,
+          "isbnOrEisbn": "9786263161634",
+          "metadataNote": "BOOK☆WALKER固定版面EPUB列145頁、EISBN 9786263161634；電子版獨立使用電子封面。內容概述與紙本相同，但紙本頁數不套用到電子版。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/4a15d3aa76f47d28bb1b98f13c05716b68f5f0eb7e0077c76fe7d4aa5d3bb2fc.jpg",
+          "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/128320/zoom_big_128320.jpg",
+          "activeOffers": [
+            {
+              "sourceId": "bookwalker-tw",
+              "url": "https://www.bookwalker.com.tw/product/128320",
+              "priceTWD": 408,
+              "evidence": "BOOK☆WALKER Taiwan showed active fixed-layout EPUB checkout at NT$408 and EISBN 9786263161634. This is a current digital asking price, not a completed sale."
+            },
+            {
+              "sourceId": "sanmin-books-tw",
+              "url": "https://www.sanmin.com.tw/product/index/013426269",
+              "priceTWD": 408,
+              "evidence": "Sanmin Bookroll Taiwan showed the EPUB product with active add-to-cart at NT$408 and EISBN 9786263161634. This is a current digital asking price, not a completed sale."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "model": "陳彥名",
+      "title": "陳彥名#Y1闖入",
+      "photographer": "",
+      "publisher": "質男幫",
+      "workId": "work-tw-f51a9455c7e76507e0058849",
+      "sources": [
+        "https://www.books.com.tw/products/R030074490",
+        "https://www.bookwalker.com.tw/product/50761",
+        "https://www.buybook.tw/book-R030074490.htm"
+      ],
+      "composition": "陳彥名的影像日記寫真，以咖啡廳打工時的觀察與咖啡筆記、籃球場上的熱血及居家生活呈現演戲之外細膩的一面。",
+      "editions": [
+        {
+          "format": "physical",
+          "label": "台灣特刊紙本寫真書",
+          "url": "https://www.books.com.tw/products/R030074490",
+          "releaseDate": "2018-07-12",
+          "pageCount": 0,
+          "isbnOrEisbn": "",
+          "metadataNote": "博客來確認台灣出版、出版社質男幫、封面人物陳彥名、出版日期2018-07-12、條碼4718008486882；產品明確顯示已售完且不能購買，因此此紙本版僅保留出版紀錄，沒有建立有效價格或把條碼誤存為ISBN。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/43baa39e24e0905f62f731a5093bd2e27c43ff43e006ec97af8e69d1a05d51d5.jpg",
+          "coverSourceUrl": "https://www.books.com.tw/img/R03/007/44/R030074490.jpg",
+          "activeOffers": []
+        },
+        {
+          "format": "digital",
+          "label": "固定版面 EPUB",
+          "url": "https://www.bookwalker.com.tw/product/50761",
+          "releaseDate": "2018-10-26",
+          "pageCount": 110,
+          "isbnOrEisbn": "",
+          "metadataNote": "BOOK☆WALKER列固定版面EPUB、110頁；頁面未列ISBN/EISBN，故留空。電子版另使用BOOK☆WALKER封面，不混用紙本博客來封面。",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/96c967d1364f4f3d4db372ed1296c9dbc7be679a68d69cff6efdba23d08d782f.jpg",
+          "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/50761/zoom_big_50761.jpg",
+          "activeOffers": [
+            {
+              "sourceId": "bookwalker-tw",
+              "url": "https://www.bookwalker.com.tw/product/50761",
+              "priceTWD": 399,
+              "evidence": "BOOK☆WALKER Taiwan showed the fixed-layout EPUB with active checkout at NT$399 and 110 pages. No ISBN/EISBN was exposed on the product page. This is a current digital asking price, not a completed sale."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Three new works and six separate format editions are prepared. Print and digital covers are distinct where publisher and retailer artwork differ.",
+    "Five current offers are recorded: one orderable Sanmin physical backorder and four authorized digital-store asking prices. These are not completed-sale prices.",
+    "The 遠在謙邊 print edition and 陳彥名#Y1闖入 print edition remain cataloged without offers because Kadokawa and Books.com explicitly show sold out/unavailable.",
+    "陳彥名's Books.com barcode 4718008486882 is recorded as a product-code note and not mislabeled as an ISBN.",
+    "Each new R2 cover was uploaded and verified by public GET SHA-256 readback before manifest generation.",
+    "The discovered male-photo category contains further candidates; this is an incremental catalog batch, not an exhaustive publication history."
+  ],
+  "changes": {
+    "newWorks": 3,
+    "newPhysicalEditions": 3,
+    "newDigitalEditions": 3,
+    "verifiedActivePhysicalOffers": 1,
+    "verifiedActiveDigitalOffers": 4,
+    "newR2CoverUploads": 6,
+    "pendingCovers": 0
+  }
+}

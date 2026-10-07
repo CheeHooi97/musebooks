@@ -1,0 +1,60 @@
+{
+  "pending": [
+    {
+      "model": "許瑜",
+      "title": "夏の瑜",
+      "format": "physical",
+      "url": "https://www.ruten.com.tw/item/22618630445731/",
+      "sellerReportedComposition": {
+        "pages": 32,
+        "size": "A4",
+        "outfits": 9,
+        "bundle": [
+          "2025年曆掛軸60×40cm",
+          "滑鼠墊25×30cm",
+          "膠片三格卡",
+          "預購簽名照片"
+        ]
+      },
+      "reason": "Marketplace seller evidence only; verify exact book cover and official publication metadata. Calendar is a bundle component, not a separate photobook."
+    },
+    {
+      "model": "許瑜",
+      "title": "LOVE UU",
+      "format": "physical",
+      "reason": "Marketplace title lead; official primary metadata and cover pending"
+    },
+    {
+      "model": "許瑜",
+      "title": "Oh My UU",
+      "format": "physical",
+      "reason": "Marketplace title lead; official primary metadata and cover pending"
+    },
+    {
+      "model": "許瑜",
+      "title": "U.U 臀蜜桃的專屬寫真書",
+      "format": "physical",
+      "reason": "Marketplace title lead; official primary metadata and cover pending"
+    },
+    {
+      "model": "許瑜",
+      "title": "Only UU",
+      "format": "physical",
+      "reason": "2026 marketplace title lead; official primary metadata and cover pending"
+    }
+  ],
+  "duplicateLeadsReviewed": [
+    {
+      "model": "甄馨",
+      "reason": "Existing ISBN 9786269687756; no duplicate imported"
+    },
+    {
+      "model": "安生",
+      "reason": "Existing ISBN 9786269687794; no duplicate imported"
+    },
+    {
+      "model": "陳葳",
+      "reason": "Existing ISBN 9786269687770; no duplicate imported"
+    }
+  ]
+}

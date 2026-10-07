@@ -1,0 +1,635 @@
+{
+  "batch": 84,
+  "verifiedAt": "2026-10-07",
+  "models": [
+    {
+      "name": "毛祁生",
+      "aliases": [
+        "毛祁生",
+        "毛祈生",
+        "Parker"
+      ],
+      "identityNote": "台灣角川將作者列為毛祁生，並列攝影師藍陳福堂；同一作品有獨立紙本與 EPUB 版。",
+      "identitySourceUrls": [
+        "https://www.kadokawa.com.tw/products/9786263784604",
+        "https://www.bookwalker.com.tw/product/188914",
+        "https://reading.udn.com/ebook/store/store_product.do?pid=135608"
+      ],
+      "physicalStatus": "已核實實體版；本批沒有核實到可連結至此版次的實體市場在售或成交記錄。",
+      "digitalStatus": "已核實數位版與平台現售價格；價格只代表零售平台售價。",
+      "works": [
+        {
+          "workId": "work-tw-f843f21750c3f8f71a4ad6ca",
+          "title": "為愛而生：毛祁生寫真書",
+          "photographer": "藍陳福堂",
+          "editions": [
+            {
+              "editionId": "edition-75feecd269cd616b46fe9b24",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "台灣角川",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.bookwalker.com.tw/product/188914",
+              "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/188914/188914_1.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/3f30f1294ea8c698e7bc1b71800af044bce4a6d6d77409450f2eec9c986063dd.jpg",
+              "coverObjectKey": "musebooks/covers/3f30f1294ea8c698e7bc1b71800af044bce4a6d6d77409450f2eec9c986063dd.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "bookwalker-tw",
+                  "retailer": "bookwalker-tw",
+                  "externalId": "188914",
+                  "url": "https://www.bookwalker.com.tw/product/188914",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 45000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:52:01.035696+08:00"
+                }
+              ]
+            },
+            {
+              "editionId": "edition-d4ee342a613bd5881c564809",
+              "format": "physical",
+              "label": "標準版",
+              "variant": "standard",
+              "isbn": "9786263784604",
+              "pageCount": 144,
+              "dimensions": "25.6 cm × 18 cm × 1 cm",
+              "releaseDate": "2024-01-29",
+              "releasePrecision": "day",
+              "publisher": "台灣角川",
+              "contentSummary": "以街頭漫步、時尚造型、自然景色與運動場景呈現毛祁生；包含辦公室、籃球場、城市巷弄、海灘、近郊與設計旅店等拍攝場景，並收錄作者心情文字。",
+              "sourceUrl": "https://www.kadokawa.com.tw/products/9786263784604",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/663fd4a59f12c4001f3aae9a/original.jpg?1715459237",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/4916f295349df7a8d8f388037a849f0c32330b307c678281c627792917115e4a.jpg",
+              "coverObjectKey": "musebooks/covers/4916f295349df7a8d8f388037a849f0c32330b307c678281c627792917115e4a.jpg",
+              "retailOffers": []
+            }
+          ],
+          "sourceUrls": [
+            "https://www.bookwalker.com.tw/product/188914",
+            "https://www.kadokawa.com.tw/products/9786263784604"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "吳俊",
+      "aliases": [
+        "吳俊",
+        "junwu185"
+      ],
+      "identityNote": "台灣角川與 Google Play 將作品署名為吳俊／junwu185；紙本版與數位特別版共用作品，但使用不同 ISBN、封面和版次資料。",
+      "identitySourceUrls": [
+        "https://www.kadokawa.com.tw/zh-hant/products/9789865245689",
+        "https://play.google.com/store/books/details/Your_Man_%E5%90%B3%E4%BF%8Ajunwu185%E5%AF%AB%E7%9C%9F%E6%9B%B8_%E6%95%B8%E4%BD%8D%E7%89%B9%E5%88%A5%E7%89%88?id=LdQ3EAAAQBAJ&hl=zh_TW&gl=TW",
+        "https://reading.udn.com/ebook/store/store_product.do?pid=120687"
+      ],
+      "physicalStatus": "已核實實體版；本批沒有核實到可連結至此版次的實體市場在售或成交記錄。",
+      "digitalStatus": "已核實數位版與平台現售價格；價格只代表零售平台售價。",
+      "works": [
+        {
+          "workId": "work-tw-3b99ee1707a51f0087efeb40",
+          "title": "Your Man：吳俊junwu185寫真書",
+          "photographer": "藍陳福堂",
+          "editions": [
+            {
+              "editionId": "edition-6434b0231108b305c5b60e9d",
+              "format": "digital",
+              "label": "數位特別版",
+              "variant": "unspecified",
+              "isbn": "9789865245801",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://play.google.com/store/books/details/Your_Man_%E5%90%B3%E4%BF%8Ajunwu185%E5%AF%AB%E7%9C%9F%E6%9B%B8_%E6%95%B8%E4%BD%8D%E7%89%B9%E5%88%A5%E7%89%88?id=LdQ3EAAAQBAJ&hl=zh_TW&gl=TW",
+              "coverSourceUrl": "https://play.google.com/books/publisher/content/images/frontcover/LdQ3EAAAQBAJ?fife",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/042c5c86a5d7a8a20ae50f988883d6c62be525cce56137df0bb9b6d54108de4d.jpg",
+              "coverObjectKey": "musebooks/covers/042c5c86a5d7a8a20ae50f988883d6c62be525cce56137df0bb9b6d54108de4d.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "google-play-books-tw",
+                  "retailer": "Google Play Books Taiwan",
+                  "externalId": "LdQ3EAAAQBAJ",
+                  "url": "https://play.google.com/store/books/details/Your_Man_%E5%90%B3%E4%BF%8Ajunwu185%E5%AF%AB%E7%9C%9F%E6%9B%B8_%E6%95%B8%E4%BD%8D%E7%89%B9%E5%88%A5%E7%89%88?id=LdQ3EAAAQBAJ&hl=zh_TW&gl=TW",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 28500,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:18:02.693075+08:00"
+                }
+              ]
+            },
+            {
+              "editionId": "edition-222f329662a60d4bb6d98614",
+              "format": "physical",
+              "label": "標準版",
+              "variant": "standard",
+              "isbn": "9789865245689",
+              "pageCount": 160,
+              "dimensions": "25.6 cm × 18 cm × 1.1 cm",
+              "releaseDate": "2021-05-26",
+              "releasePrecision": "day",
+              "publisher": "台灣角川",
+              "contentSummary": "以辦公室、酒吧、居家、民宿、海灘、泳池、田野與咖啡館為場景；包含襯衫、西裝、泳裝與沐浴造型。初刷另有量尺贈品，隨書海報款式隨機。",
+              "sourceUrl": "https://www.kadokawa.com.tw/zh-hant/products/9789865245689",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/664028e88034ca39bbb8dc0c/original.jpg?1715480807",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/ade35df02d303b081c717bdc7ae11393a17a81d595aad2a5f3532e9e463c6fa3.jpg",
+              "coverObjectKey": "musebooks/covers/ade35df02d303b081c717bdc7ae11393a17a81d595aad2a5f3532e9e463c6fa3.jpg",
+              "retailOffers": []
+            }
+          ],
+          "sourceUrls": [
+            "https://play.google.com/store/books/details/Your_Man_%E5%90%B3%E4%BF%8Ajunwu185%E5%AF%AB%E7%9C%9F%E6%9B%B8_%E6%95%B8%E4%BD%8D%E7%89%B9%E5%88%A5%E7%89%88?id=LdQ3EAAAQBAJ&hl=zh_TW&gl=TW",
+            "https://www.kadokawa.com.tw/zh-hant/products/9789865245689"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mier",
+      "aliases": [
+        "Mier",
+        "medea0212"
+      ],
+      "identityNote": "TAAZE 商品介紹逐本署名模特 Mier（@medea0212），攝影為拾捌（@18photo_studio）。",
+      "identitySourceUrls": [
+        "https://www.taaze.tw/products/14100142100.html",
+        "https://www.taaze.tw/products/14100142313.html",
+        "https://www.taaze.tw/products/14100142315.html",
+        "https://www.taaze.tw/products/14100142341.html"
+      ],
+      "physicalStatus": "本批未核實到實體版。",
+      "digitalStatus": "已核實數位版與平台現售價格；價格只代表零售平台售價。",
+      "works": [
+        {
+          "workId": "work-tw-e3ecff52958e92447bc0f35c",
+          "title": "凝視-Mier性感寫真集",
+          "photographer": "拾捌",
+          "editions": [
+            {
+              "editionId": "edition-1f385a2dd2aff990e6efb2a3",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "拾捌寫真製作所",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.taaze.tw/products/14100142315.html",
+              "coverSourceUrl": "https://media.taaze.tw/showProdImage.html?sc=14100142315&width=200&height=283",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/de4d7fd08c0fa549aee83b347fd92ace105cb254a1895be2dbd7877f59bf98ac.jpg",
+              "coverObjectKey": "musebooks/covers/de4d7fd08c0fa549aee83b347fd92ace105cb254a1895be2dbd7877f59bf98ac.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "taaze-books-tw",
+                  "retailer": "taaze-books-tw",
+                  "externalId": "14100142315",
+                  "url": "https://www.taaze.tw/products/14100142315.html",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 29900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:30:23.471827+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.taaze.tw/products/14100142315.html"
+          ]
+        },
+        {
+          "workId": "work-tw-ac9db74e36e867c9430c13c7",
+          "title": "柔和日光-Mier",
+          "photographer": "拾捌",
+          "editions": [
+            {
+              "editionId": "edition-fccb0a41d60e8961c57da195",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "拾捌寫真製作所",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.taaze.tw/products/14100142341.html",
+              "coverSourceUrl": "https://media.taaze.tw/showProdImage.html?sc=14100142341&width=200&height=283",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/f339399793d1138e6d6286b1015c7d78b744e2cfa893b116c44f5a9de5245005.jpg",
+              "coverObjectKey": "musebooks/covers/f339399793d1138e6d6286b1015c7d78b744e2cfa893b116c44f5a9de5245005.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "taaze-books-tw",
+                  "retailer": "taaze-books-tw",
+                  "externalId": "14100142341",
+                  "url": "https://www.taaze.tw/products/14100142341.html",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 29900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:32:52.81886+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.taaze.tw/products/14100142341.html"
+          ]
+        },
+        {
+          "workId": "work-tw-3b0d5d37f4b619be5f1a93a7",
+          "title": "殘垣綺夢-Mier性感寫真集",
+          "photographer": "拾捌",
+          "editions": [
+            {
+              "editionId": "edition-947817a372b0aff7d6ce0cd9",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "拾捌寫真製作所",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.taaze.tw/products/14100142100.html",
+              "coverSourceUrl": "https://media.taaze.tw/showProdImage.html?sc=14100142100&width=200&height=283",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/a271df8c00fe196a4b095fb1c52b68cccb7e3ab5c4f30ddb3e464f1feedfe679.jpg",
+              "coverObjectKey": "musebooks/covers/a271df8c00fe196a4b095fb1c52b68cccb7e3ab5c4f30ddb3e464f1feedfe679.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "taaze-books-tw",
+                  "retailer": "taaze-books-tw",
+                  "externalId": "14100142100",
+                  "url": "https://www.taaze.tw/products/14100142100.html",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 29900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:30:38.30563+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.taaze.tw/products/14100142100.html"
+          ]
+        },
+        {
+          "workId": "work-tw-5b93c5192f51e07b305835b0",
+          "title": "野性之誘-Mier性感寫真集",
+          "photographer": "拾捌",
+          "editions": [
+            {
+              "editionId": "edition-af1d6f063123b748db74981e",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "拾捌寫真製作所",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.taaze.tw/products/14100142313.html",
+              "coverSourceUrl": "https://media.taaze.tw/showProdImage.html?sc=14100142313&width=200&height=283",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/860c691b51d771c4a00a1acaa609ac1ab67ac0777b72d13a755a3efaac98cff3.jpg",
+              "coverObjectKey": "musebooks/covers/860c691b51d771c4a00a1acaa609ac1ab67ac0777b72d13a755a3efaac98cff3.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "taaze-books-tw",
+                  "retailer": "taaze-books-tw",
+                  "externalId": "14100142313",
+                  "url": "https://www.taaze.tw/products/14100142313.html",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 29900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:25:10.657842+08:00"
+                },
+                {
+                  "sourceId": "google-play-books-tw",
+                  "retailer": "Google Play Books Taiwan",
+                  "externalId": "iNgUEgAAQBAJ",
+                  "url": "https://play.google.com/store/books/details/%E6%8B%BE%E6%8D%8C_%E9%87%8E%E6%80%A7%E4%B9%8B%E8%AA%98_Mier%E6%80%A7%E6%84%9F%E5%AF%AB%E7%9C%9F%E9%9B%86?id=iNgUEgAAQBAJ&hl=zh_TW&gl=TW",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 21400,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:19:42.926267+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.taaze.tw/products/14100142313.html",
+            "https://play.google.com/store/books/details/%E6%8B%BE%E6%8D%8C_%E9%87%8E%E6%80%A7%E4%B9%8B%E8%AA%98_Mier%E6%80%A7%E6%84%9F%E5%AF%AB%E7%9C%9F%E9%9B%86?id=iNgUEgAAQBAJ&hl=zh_TW&gl=TW"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "木子",
+      "aliases": [
+        "木子",
+        "muzi_0t.3o"
+      ],
+      "identityNote": "TAAZE 商品介紹署名模特木子（@muzi_0t.3o），攝影為拾捌（@18photo_studio）；另核對 Rakuten Kobo Taiwan 的《鏡中迷情》。",
+      "identitySourceUrls": [
+        "https://play.google.com/store/books/details/%E6%8B%BE%E6%8D%8C_%E6%99%A8%E5%85%89%E7%A7%81%E8%AA%9E_%E6%9C%A8%E5%AD%90%E6%80%A7%E6%84%9F%E5%AF%AB%E7%9C%9F%E9%9B%86?id=jNgUEgAAQBAJ",
+        "https://www.rakuten.com.tw/shop/kobo/product/154b4821-edfb-3eb7-8c42-0f7b6685e63d/",
+        "https://www.taaze.tw/products/14100142314.html",
+        "https://www.taaze.tw/products/14100142316.html",
+        "https://www.taaze.tw/products/14100142342.html"
+      ],
+      "physicalStatus": "本批未核實到實體版。",
+      "digitalStatus": "已核實數位版與平台現售價格；價格只代表零售平台售價。",
+      "works": [
+        {
+          "workId": "work-tw-376fcb3f4f7a83de9306ffe3",
+          "title": "午後的慵懶-木子性感寫真集",
+          "photographer": "拾捌",
+          "editions": [
+            {
+              "editionId": "edition-4d8e91fc3d6c6cdb88eac9cb",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "拾捌寫真製作所",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.taaze.tw/products/14100142316.html",
+              "coverSourceUrl": "https://media.taaze.tw/showProdImage.html?sc=14100142316&width=200&height=283",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/2b39d0de8676885f03cd0ae03b524e1ba039a7e63df2037f3bb62d2545b37907.jpg",
+              "coverObjectKey": "musebooks/covers/2b39d0de8676885f03cd0ae03b524e1ba039a7e63df2037f3bb62d2545b37907.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "taaze-books-tw",
+                  "retailer": "taaze-books-tw",
+                  "externalId": "14100142316",
+                  "url": "https://www.taaze.tw/products/14100142316.html",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 29900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:30:08.739979+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.taaze.tw/products/14100142316.html"
+          ]
+        },
+        {
+          "workId": "work-tw-75dbabfcd1f13f56402524c5",
+          "title": "回眸-木子性感寫真集",
+          "photographer": "拾捌",
+          "editions": [
+            {
+              "editionId": "edition-f8bd4e3dd9bf75a776fc512a",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "拾捌寫真製作所",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.taaze.tw/products/14100142314.html",
+              "coverSourceUrl": "https://media.taaze.tw/showProdImage.html?sc=14100142314&width=200&height=283",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/fac7377fba6f3735b4e3446c09f09226e05998eab8fa399924d3040f05669fc9.jpg",
+              "coverObjectKey": "musebooks/covers/fac7377fba6f3735b4e3446c09f09226e05998eab8fa399924d3040f05669fc9.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "taaze-books-tw",
+                  "retailer": "taaze-books-tw",
+                  "externalId": "14100142314",
+                  "url": "https://www.taaze.tw/products/14100142314.html",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 29900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:24:40.89608+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.taaze.tw/products/14100142314.html"
+          ]
+        },
+        {
+          "workId": "work-tw-51a259e2d69d7656d597c3cb",
+          "title": "夢境夏娃-木子性感寫真集",
+          "photographer": "拾捌",
+          "editions": [
+            {
+              "editionId": "edition-e59d9a23e0b5e1dbd05e61bc",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "拾捌寫真製作所",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.taaze.tw/products/14100142342.html",
+              "coverSourceUrl": "https://media.taaze.tw/showProdImage.html?sc=14100142342&width=200&height=283",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/cacdbd3c757110db6446c6cdf3d47964e38deae581850b51ca029576a2e3a042.jpg",
+              "coverObjectKey": "musebooks/covers/cacdbd3c757110db6446c6cdf3d47964e38deae581850b51ca029576a2e3a042.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "taaze-books-tw",
+                  "retailer": "taaze-books-tw",
+                  "externalId": "14100142342",
+                  "url": "https://www.taaze.tw/products/14100142342.html",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 29900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:24:25.400777+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.taaze.tw/products/14100142342.html"
+          ]
+        },
+        {
+          "workId": "work-tw-7ec232bb12aee9304695e49d",
+          "title": "晨光私語-木子性感寫真集",
+          "photographer": "拾捌",
+          "editions": [
+            {
+              "editionId": "edition-a3ec59ab237753980ca7629a",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://play.google.com/store/books/details/%E6%8B%BE%E6%8D%8C_%E6%99%A8%E5%85%89%E7%A7%81%E8%AA%9E_%E6%9C%A8%E5%AD%90%E6%80%A7%E6%84%9F%E5%AF%AB%E7%9C%9F%E9%9B%86?id=jNgUEgAAQBAJ&hl=zh_TW&gl=TW",
+              "coverSourceUrl": "https://play.google.com/books/publisher/content/images/frontcover/jNgUEgAAQBAJ?fife",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/ca6f0b3d8132fb18560ab8cf49fdc2fbba6a5462ce9b96ebb2ae34680b96aa1c.jpg",
+              "coverObjectKey": "musebooks/covers/ca6f0b3d8132fb18560ab8cf49fdc2fbba6a5462ce9b96ebb2ae34680b96aa1c.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "google-play-books-tw",
+                  "retailer": "Google Play Books Taiwan",
+                  "externalId": "jNgUEgAAQBAJ",
+                  "url": "https://play.google.com/store/books/details/%E6%8B%BE%E6%8D%8C_%E6%99%A8%E5%85%89%E7%A7%81%E8%AA%9E_%E6%9C%A8%E5%AD%90%E6%80%A7%E6%84%9F%E5%AF%AB%E7%9C%9F%E9%9B%86?id=jNgUEgAAQBAJ&hl=zh_TW&gl=TW",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 21400,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:30:55.682297+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://play.google.com/store/books/details/%E6%8B%BE%E6%8D%8C_%E6%99%A8%E5%85%89%E7%A7%81%E8%AA%9E_%E6%9C%A8%E5%AD%90%E6%80%A7%E6%84%9F%E5%AF%AB%E7%9C%9F%E9%9B%86?id=jNgUEgAAQBAJ&hl=zh_TW&gl=TW"
+          ]
+        },
+        {
+          "workId": "work-tw-664756afd819cb1fa0e4571f",
+          "title": "鏡中迷情-木子性感寫真集【電子書】",
+          "photographer": "拾捌",
+          "editions": [
+            {
+              "editionId": "edition-d4be0bb613206d6bcb1b6fb3",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.rakuten.com.tw/shop/kobo/product/154b4821-edfb-3eb7-8c42-0f7b6685e63d/",
+              "coverSourceUrl": "https://tshop.r10s.com/17d/375/30c4/5c67/8112/84bb/97d8/4305ab98786bd2fbda65ee.jpg?_ex=330x330",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/21a4dc7fe809e1b41ff17b4941189375fc198ecc38f2ac5c4417ddd62da2c1ac.jpg",
+              "coverObjectKey": "musebooks/covers/21a4dc7fe809e1b41ff17b4941189375fc198ecc38f2ac5c4417ddd62da2c1ac.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "rakuten-kobo-tw",
+                  "retailer": "Rakuten Kobo Taiwan 樂天Kobo",
+                  "externalId": "154b4821-edfb-3eb7-8c42-0f7b6685e63d",
+                  "url": "https://www.rakuten.com.tw/shop/kobo/product/154b4821-edfb-3eb7-8c42-0f7b6685e63d/",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 29900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:31:08.448556+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.rakuten.com.tw/shop/kobo/product/154b4821-edfb-3eb7-8c42-0f7b6685e63d/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sunny",
+      "aliases": [
+        "Sunny"
+      ],
+      "identityNote": "BOOK☆WALKER 的 Journey Girl Vol.23 產品頁署名 Sunny，出版社為滾石移動；攝影／一加（@yichiaguo）。",
+      "identitySourceUrls": [
+        "https://www.bookwalker.com.tw/product/308235"
+      ],
+      "physicalStatus": "本批未核實到實體版。",
+      "digitalStatus": "已核實數位版與平台現售價格；價格只代表零售平台售價。",
+      "works": [
+        {
+          "workId": "work-tw-a31dab827d4ce0bd28bdbe0c",
+          "title": "Journey Girl Vol.23 Sunny",
+          "photographer": "一加（@yichiaguo）",
+          "editions": [
+            {
+              "editionId": "edition-cd93f832233c5e78df5e458f",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "releasePrecision": "",
+              "publisher": "滾石移動",
+              "contentSummary": "電子寫真；平台未明確標示是否含影音。",
+              "sourceUrl": "https://www.bookwalker.com.tw/product/308235",
+              "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/308235/308235_1.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/f79fddeba49d46d602bfcfcaa4ae47758ef06c31d171eab6e5ab6b16f13073d5.jpg",
+              "coverObjectKey": "musebooks/covers/f79fddeba49d46d602bfcfcaa4ae47758ef06c31d171eab6e5ab6b16f13073d5.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "bookwalker-tw",
+                  "retailer": "bookwalker-tw",
+                  "externalId": "308235",
+                  "url": "https://www.bookwalker.com.tw/product/308235",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 17900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T00:25:25.716132+08:00"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.bookwalker.com.tw/product/308235"
+          ]
+        }
+      ]
+    }
+  ]
+}

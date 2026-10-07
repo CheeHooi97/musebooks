@@ -1,0 +1,994 @@
+{
+  "checkedModelSourceQueries": 50,
+  "pendingQueries": [
+    {
+      "model": "艾蜜絲",
+      "sourceId": "pubu-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "子婷",
+      "sourceId": "pubu-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "陳怡叡",
+      "sourceId": "readmoo-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "陳怡叡",
+      "sourceId": "pubu-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "張景嵐",
+      "sourceId": "pubu-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "謝侑芯",
+      "sourceId": "readmoo-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "謝侑芯",
+      "sourceId": "pubu-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "許薇安",
+      "sourceId": "readmoo-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "許薇安",
+      "sourceId": "pubu-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "許維恩",
+      "sourceId": "pubu-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "張安琪",
+      "sourceId": "readmoo-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "張安琪",
+      "sourceId": "pubu-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "周甄娜",
+      "sourceId": "readmoo-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "周甄娜",
+      "sourceId": "pubu-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "小映",
+      "sourceId": "readmoo-tw",
+      "reason": "Not checked in this bounded research batch"
+    },
+    {
+      "model": "小映",
+      "sourceId": "pubu-tw",
+      "reason": "Not checked in this bounded research batch"
+    }
+  ],
+  "remainingSearches": [
+    {
+      "model": "梁凱莉",
+      "sourceId": "bookwalker-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.bookwalker.com.tw/search?w=%E6%A2%81%E5%87%B1%E8%8E%89\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "梁凱莉",
+      "sourceId": "readmoo-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://readmoo.com/search/keyword?q=%E6%A2%81%E5%87%B1%E8%8E%89\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "謝艾娜",
+      "sourceId": "pubu-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.pubu.com.tw/search?q=%E8%AC%9D%E8%89%BE%E5%A8%9C\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "蘇心甯",
+      "sourceId": "bookwalker-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.bookwalker.com.tw/search?w=%E8%98%87%E5%BF%83%E7%94%AF\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "蘇心甯",
+      "sourceId": "pubu-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.pubu.com.tw/search?q=%E8%98%87%E5%BF%83%E7%94%AF\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "謝薇安",
+      "sourceId": "bookwalker-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.bookwalker.com.tw/search?w=%E8%AC%9D%E8%96%87%E5%AE%89\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "謝薇安",
+      "sourceId": "pubu-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.pubu.com.tw/search?q=%E8%AC%9D%E8%96%87%E5%AE%89\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "謝薇安",
+      "sourceId": "readmoo-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://readmoo.com/search/keyword?q=%E8%AC%9D%E8%96%87%E5%AE%89\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "蔡黃汝",
+      "sourceId": "bookwalker-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.bookwalker.com.tw/search?w=%E8%94%A1%E9%BB%83%E6%B1%9D\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "雪碧",
+      "sourceId": "readmoo-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://readmoo.com/search/keyword?q=%E9%9B%AA%E7%A2%A7\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "安心亞",
+      "sourceId": "pubu-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.pubu.com.tw/search?q=%E5%AE%89%E5%BF%83%E4%BA%9E\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "蔡黃汝",
+      "sourceId": "pubu-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.pubu.com.tw/search?q=%E8%94%A1%E9%BB%83%E6%B1%9D\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "韓智恩",
+      "sourceId": "bookwalker-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.bookwalker.com.tw/search?w=%E9%9F%93%E6%99%BA%E6%81%A9\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "安心亞",
+      "sourceId": "readmoo-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://readmoo.com/search/keyword?q=%E5%AE%89%E5%BF%83%E4%BA%9E\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "林岱縈",
+      "sourceId": "pubu-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.pubu.com.tw/search?q=%E6%9E%97%E5%B2%B1%E7%B8%88\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "張景嵐",
+      "sourceId": "bookwalker-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.bookwalker.com.tw/search?w=%E5%BC%B5%E6%99%AF%E5%B5%90\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "黃上晏",
+      "sourceId": "pubu-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.pubu.com.tw/search?q=%E9%BB%83%E4%B8%8A%E6%99%8F\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "謝侑芯",
+      "sourceId": "bookwalker-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.bookwalker.com.tw/search?w=%E8%AC%9D%E4%BE%91%E8%8A%AF\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "舒子晨",
+      "sourceId": "readmoo-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://readmoo.com/search/keyword?q=%E8%88%92%E5%AD%90%E6%99%A8\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "許薇安",
+      "sourceId": "bookwalker-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.bookwalker.com.tw/search?w=%E8%A8%B1%E8%96%87%E5%AE%89\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "許維恩",
+      "sourceId": "bookwalker-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.bookwalker.com.tw/search?w=%E8%A8%B1%E7%B6%AD%E6%81%A9\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    },
+    {
+      "model": "韓智恩",
+      "sourceId": "pubu-tw",
+      "cursor": "{\"page\":1,\"offset\":8,\"url\":\"https://www.pubu.com.tw/search?q=%E9%9F%93%E6%99%BA%E6%81%A9\"}",
+      "reason": "Further results available; name search may include unrelated products"
+    }
+  ],
+  "failedQueries": [
+    {
+      "model": "籃籃",
+      "sourceId": "pubu-tw",
+      "reason": "pubu-tw: product grid did not render and no explicit empty-results message was found"
+    },
+    {
+      "model": "梁凱莉",
+      "sourceId": "pubu-tw",
+      "reason": "BLOCKED_SOURCE: pubu-tw: verification prevented qualifying detail collection; skipped restricted items"
+    },
+    {
+      "model": "蘇心甯",
+      "sourceId": "readmoo-tw",
+      "reason": "Page.wait_for_timeout: Connection closed while reading from the driver"
+    },
+    {
+      "model": "舒子晨",
+      "sourceId": "pubu-tw",
+      "reason": "BLOCKED_SOURCE: pubu-tw: verification prevented qualifying detail collection; skipped restricted items"
+    }
+  ],
+  "additionalPublisherResearch": [
+    {
+      "url": "https://www.fan520.net/categories/book",
+      "models": [
+        "蔡瑛紋",
+        "莫葵",
+        "小桃子",
+        "沐雨柔",
+        "伊芙琳",
+        "黃靜",
+        "魚魚",
+        "雀兒喜",
+        "語瞳",
+        "雅捷",
+        "艾緒莉",
+        "龔映璇",
+        "晞晞",
+        "冰熙"
+      ],
+      "status": "Publisher category candidates; individual book editions and covers not yet verified"
+    }
+  ],
+  "publisherCategoryReview": {
+    "url": "https://www.fan520.net/categories/book",
+    "pages": 3,
+    "verifiedBookProducts": 60,
+    "reviewOnlyProducts": [
+      {
+        "url": "https://www.fan520.net/products/hitomi-20book",
+        "reason": "Mixed merchandise bundle or electronic photo package; book edition needs separate verification"
+      },
+      {
+        "url": "https://www.fan520.net/products/0102",
+        "reason": "Mixed merchandise bundle or electronic photo package; book edition needs separate verification"
+      },
+      {
+        "url": "https://www.fan520.net/products/sprite0719ss-21specialbook2",
+        "reason": "Mixed merchandise bundle or electronic photo package; book edition needs separate verification"
+      }
+    ],
+    "identityNotes": "梓梓 and 兔兔 are retained as publisher-scoped credits until cross-publisher identity is verified."
+  },
+  "retailerWave5": {
+    "checkedAuthors": [
+      "林莎",
+      "郭雪芙",
+      "邵雨薇",
+      "林予晞",
+      "王樂妍",
+      "曾莞婷",
+      "吳映潔",
+      "李佳穎",
+      "夏語心",
+      "李芷霖",
+      "許瑜"
+    ],
+    "review": [
+      {
+        "url": "https://www.sanmin.com.tw/product/index/012848977",
+        "reason": "Same-title physical product as 012006358; needs reprint/ISBN reconciliation."
+      },
+      {
+        "url": "https://www.sanmin.com.tw/product/index/015876950",
+        "reason": "Title names 李芷霖 but description credits 楊比 (Genie); identity conflict."
+      }
+    ],
+    "followUp": [
+      "林莎 Honey official edition page",
+      "梓梓／林莎／元元 三倍心跳 official set composition and participant credits",
+      "許瑜 LOVE UU / Oh My UU / U.U official book pages",
+      "郭雪芙 蛻變Reborn primary book metadata"
+    ]
+  },
+  "officialWave6": {
+    "verified": [
+      "吳卓源 ju&u official physical book"
+    ],
+    "checkedAuthors": [
+      "林明禎",
+      "江佑真",
+      "黃喬歆",
+      "曾甜",
+      "紀艾希",
+      "林佩瑤",
+      "王晴",
+      "蔡小潔"
+    ],
+    "review": [
+      {
+        "model": "林莎",
+        "title": "Honey",
+        "reason": "Official product URL returns live HTTP 404; indexed content alone insufficient for cover import."
+      },
+      {
+        "model": "鄔唯",
+        "title": "只因唯你",
+        "reason": "TAAZE TLS verification failed; alternate Kobo/Google Play primary pages remain to inspect."
+      }
+    ],
+    "pendingSeries": [
+      "許瑜 LOVE UU / Oh My UU / Only UU / 夏の瑜",
+      "呼呼 水著少女 / 居家寫真"
+    ]
+  },
+  "retailerWave7": {
+    "verified": [
+      "鄔唯 只因唯你 digital with five videos",
+      "李藹蔚 蔚你著迷 digital"
+    ],
+    "checkedAuthors": [
+      "鄔唯",
+      "呼呼",
+      "邱曼晴",
+      "林芷瑩",
+      "林舒語",
+      "洪詩",
+      "楊比",
+      "張立亞",
+      "李藹蔚",
+      "周曉涵",
+      "陳語安",
+      "溫妮"
+    ],
+    "review": [
+      {
+        "model": "周曉涵",
+        "url": "https://www.eslite.com/product/1001261682624089",
+        "reason": "Title/model identity not verified"
+      }
+    ]
+  },
+  "retailerWave8": {
+    "checkedAuthors": [
+      "黃沛妍",
+      "解婕翎",
+      "Aries艾瑞絲",
+      "林采婕",
+      "潘映竹",
+      "茵芙",
+      "周曉涵"
+    ],
+    "verified": [
+      "解婕翎 同名寫真",
+      "解婕翎 我就是任性 日系性感合購限定版",
+      "林采婕 A SLOWER SUMMER 小卡親簽版"
+    ],
+    "excluded": [
+      "解婕翎 2016寫真桌曆"
+    ],
+    "pending": [
+      "解婕翎 0324 official product",
+      "黃沛妍 Sweet Pig primary detail",
+      "周曉涵 BE MINE be yours primary detail"
+    ]
+  },
+  "retailerWave9": {
+    "checkedAuthors": [
+      "周曉涵",
+      "黃沛妍",
+      "艾瑞絲",
+      "邵岱兒",
+      "李宓",
+      "王俐人"
+    ],
+    "verified": [
+      "周曉涵 BE MINE，be yours 共二冊 ISBN9789869535724"
+    ],
+    "pending": [
+      "艾瑞絲 夏日漫步／美尻的誘惑",
+      "黃沛妍 Sweet Pig",
+      "李宓 無極限Unlimit CDbook"
+    ]
+  },
+  "retailerWave10": {
+    "checkedAuthors": [
+      "張小筑",
+      "林亞萱",
+      "簡懿佳",
+      "林茉晶",
+      "張宇婷",
+      "陳若穎",
+      "路雨希"
+    ],
+    "verified": [
+      "張小筑 Chu一個吧",
+      "路雨希 Lucy Blue Sea"
+    ],
+    "pending": [
+      "林茉晶 晶不起誘惑 digital full/parts on Hami and momo",
+      "艾瑞絲 Aries夏日漫步 Kingstone product2019990168513"
+    ]
+  },
+  "retailerWave11": {
+    "verified": [
+      "林茉晶 晶不起誘惑 Hami digital",
+      "艾瑞絲 Aries夏日漫步 Kingstone physical"
+    ],
+    "pending": [
+      "林茉晶 separately sold digital parts; content comparison",
+      "艾瑞絲 美尻的誘惑 primary product"
+    ],
+    "review": [
+      {
+        "model": "林茉晶",
+        "url": "https://books.apple.com/gb/book/id6760791664",
+        "reason": "Title/model identity not verified"
+      }
+    ]
+  },
+  "digitalSeriesComparison": {
+    "model": "林茉晶",
+    "checkedAt": "2026-10-06",
+    "products": [
+      {
+        "title": "晶不起誘惑-林茉晶個人寫真",
+        "url": "https://www.hamibook.com.tw/book/0100285028",
+        "format": "digital",
+        "fileFormat": "PDF",
+        "status": "Imported previously; title has no part suffix; not proven complete edition."
+      },
+      {
+        "title": "晶不起誘惑-林茉晶個人寫真(下)",
+        "url": "https://www.momoshop.com.tw/product/13187083",
+        "format": "digital",
+        "status": "Primary retailer indexed title supports separate lower-volume product; live HTTP406 blocks cover/content verification."
+      }
+    ],
+    "mergeDecision": "Keep distinct; content equivalence and upper-volume identity unverified",
+    "remaining": [
+      "Find live lower-volume product metadata and cover",
+      "Find primary upper-volume product",
+      "Compare identifiers, page counts and contents before linking editions"
+    ]
+  },
+  "retailerWave13": {
+    "verified": [
+      "何念兹 念在你身邊 physical",
+      "林艾璇 數到3之後 physical"
+    ],
+    "pending": [
+      "林艾璇 大元 earlier 2011 book; primary edition details",
+      "郭書瑤文字寫真 exact title and product"
+    ]
+  },
+  "retailerWave14": {
+    "verified": [
+      "安以軒 我不乖 physical"
+    ],
+    "pending": [
+      {
+        "model": "大元",
+        "title": "Girl Friend 元氣女友",
+        "url": "https://www.kingstone.com.tw/basic/2029580011402/",
+        "reason": "Indexed retailer and HIM release record confirm title; live product title not usable. Cover and edition details need alternate source."
+      }
+    ]
+  },
+  "retailerWave15": {
+    "verified": [
+      "郭書瑤 19歲的微熱 simplified-Chinese physical Taiwan-retailer edition"
+    ],
+    "pending": [
+      {
+        "title": "郭書瑤 愛．無限大",
+        "isbn": "9789869355117",
+        "evidence": "https://nclfile.ncl.edu.tw/files/201701/d21d27bc-5faa-4f3e-b49f-f72509d89904.pdf",
+        "reason": "Publication identity confirmed; product cover and edition metadata outstanding",
+        "status": "Resolved and imported in retailerWave16"
+      }
+    ]
+  },
+  "retailerWave16": {
+    "verified": [
+      "郭書瑤 愛，無限大∞ physical ISBN9789869355117"
+    ],
+    "resolvedProduct": "https://www.sanmin.com.tw/product/index/005952046"
+  },
+  "retailerWave17": {
+    "verified": [
+      "簡懿佳 簡單說懿佳 physical"
+    ],
+    "pending": [
+      {
+        "model": "簡懿佳",
+        "format": "digital",
+        "url": "https://www.kingstone.com.tw/basic/2800000111228/",
+        "reason": "Digital listing discovered; exact edition metadata and cover need verification",
+        "status": "Verified and imported in retailerWave18"
+      },
+      {
+        "model": "簡懿佳",
+        "format": "digital",
+        "url": "https://play.google.com/store/books/details?id=zGKPDwAAQBAJ",
+        "reason": "Primary digital listing discovered"
+      }
+    ]
+  },
+  "retailerWave18": {
+    "verified": [
+      "簡懿佳 簡單說懿佳 Kingstone digital edition"
+    ],
+    "identityNote": "Retailer repeats paper ISBN; digital EISBN and exact page count kept unverified. Shares work with physical edition."
+  },
+  "publisherWave19": {
+    "verified": [
+      "張語芯 YUXIN CHANG 同名寫真 physical ISBN9789869947640",
+      "潘映竹 Jennifer 同名寫真書 physical ISBN9789869947626"
+    ],
+    "pending": [
+      {
+        "model": "瑞比",
+        "url": "https://www.iwinimc.com/products/raby-photobook",
+        "reason": "Primary product discovered; live metadata and cover review pending",
+        "status": "Standard physical edition verified and imported in publisherWave20"
+      },
+      {
+        "model": "子喵",
+        "isbn": "9789869947664",
+        "reason": "NCL publication confirmed; exact publisher product and cover pending",
+        "status": "Standalone second printing verified and imported in publisherWave23"
+      },
+      {
+        "model": "雪岑",
+        "url": "https://www.iwinimc.com/products/snowy-photobook-preorderonly",
+        "reason": "Primary product discovered; standard edition versus preorder composition needs review",
+        "status": "Standard physical edition verified and imported in publisherWave20"
+      }
+    ]
+  },
+  "publisherWave20": {
+    "verified": [
+      "瑞比RABY 同名寫真 physical ISBN9789869947671",
+      "〈雪之下．岑之名〉SNOWY雪岑首部同名寫真詩集 standard physical ISBN9786269273317"
+    ],
+    "pending": [
+      {
+        "model": "子喵",
+        "url": "https://www.iwinimc.com/products/koneko-vvip1",
+        "reason": "Bundle composition verified online; standalone book cover/product still needs verification",
+        "status": "Standalone second printing verified and imported in publisherWave23"
+      }
+    ],
+    "discrepancy": "Snowy publisher specifies152pages; NCL registered144pages. Publisher current specification retained."
+  },
+  "publisherWave21": {
+    "verified": [
+      "夏涵芝CHIH同名寫真 ISBN9789869947688",
+      "〈庭在一瞬間〉瑋庭Angela寫真書 ISBN9789869947695"
+    ],
+    "discrepancy": "夏涵芝 publisher lists2023-03-14 but NCL2024-02; date left unknown. General product title conflicts with preorder jacket description; composition note preserves uncertainty.",
+    "pending": [
+      {
+        "model": "張瑋庭",
+        "url": "https://www.iwinimc.com/products/angela-photobook-familymartonly",
+        "reason": "Retailer-exclusive cover edition composition pending"
+      },
+      {
+        "model": "張瑋庭",
+        "url": "https://www.iwinimc.com/products/angela-photobook-iwinonly",
+        "reason": "Publisher-exclusive cover edition composition pending"
+      },
+      {
+        "model": "美家",
+        "url": "https://www.iwinimc.com/products/miga0908-photobook",
+        "reason": "Product discovered; model identity, metadata and cover pending",
+        "status": "Verified and imported in publisherWave22"
+      },
+      {
+        "model": "芷媗",
+        "url": "https://www.iwinimc.com/products/candy1023-photobook",
+        "reason": "Product discovered; publication status and cover pending",
+        "status": "Verified and imported in publisherWave22"
+      }
+    ]
+  },
+  "publisherWave22": {
+    "verified": [
+      "美家MIGA 2025 PHOTO BOOK physical152pages2025-07-14",
+      "芷想被你收藏Candy芷媗首本個人實體寫真 physical144pages2025-10-23"
+    ],
+    "identityNote": "Publisher pages omit ISBN. Identifiers left blank; exact product URLs and model/title used for collision review."
+  },
+  "publisherWave23": {
+    "verified": [
+      "KONEKO子喵同名寫真 second printing ISBN9789869947664",
+      "敏綺Miki同名寫真 full physical edition",
+      "凱蒂老師Teacher Keidi同名寫真 ISBN9786269847303"
+    ],
+    "categoryDiscovery": [
+      {
+        "url": "https://www.iwinimc.com/categories/koneko0305",
+        "products": [
+          "https://www.iwinimc.com/products/koneko-photobook"
+        ]
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/miki0810",
+        "products": [
+          "https://www.iwinimc.com/products/miki0810-photobook",
+          "https://www.iwinimc.com/products/miki0810-photobook-preorderonly"
+        ]
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/teacherkeidi",
+        "products": [
+          "https://www.iwinimc.com/products/teacherkeidi-photobook",
+          "https://www.iwinimc.com/products/teacherkeidi-photobook-familymartonly",
+          "https://www.iwinimc.com/products/teacherkeidi-photobook-iwinonly"
+        ]
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/54jojo",
+        "products": []
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/link95412",
+        "products": [
+          "https://www.iwinimc.com/products/link-photobook",
+          "https://www.iwinimc.com/products/link-photobook-2nd",
+          "https://www.iwinimc.com/products/link-photobook-set"
+        ]
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/milkshake0622",
+        "products": []
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/mobecarrie0223",
+        "products": [
+          "https://www.iwinimc.com/products/mobecarrie0223-photobook-justforyu",
+          "https://www.iwinimc.com/products/mobecarrie0223-photobook-lovewithyu",
+          "https://www.iwinimc.com/products/mobecarrie0223-photobook-photobook-set",
+          "https://www.iwinimc.com/products/mobecarrie0223-photobook-preorderonly-set"
+        ]
+      }
+    ],
+    "pending": [
+      "林可 first and second photobooks; edition and reprint matching pending",
+      "陳鈺勳 Just For Yu and Love With Yu; format and composition pending",
+      "凱蒂老師 exclusive cover editions pending"
+    ]
+  },
+  "publisherWave24": {
+    "verified": [
+      "林可 可。已愛 original physical2021-12-20 and second printing2022-10-08 sameISBN9789869947633",
+      "陳鈺勳 色鈺勳心 physical64pages",
+      "陳鈺勳 鈺求不滿 physical64pages"
+    ],
+    "resolved": "publisherWave23 林可 and 陳鈺勳 standalone titles verified. Bundles remain separate composition research."
+  },
+  "publisherWave25": {
+    "verified": [
+      "雙囍 囍歡你 physical ISBN9786269847341 144pages2025-02-14"
+    ],
+    "categoryDiscovery": [
+      {
+        "url": "https://www.iwinimc.com/categories/1223fan",
+        "products": [
+          "https://www.iwinimc.com/products/1223fan-photobook",
+          "https://www.iwinimc.com/products/1223fan-photobook-iwinonly",
+          "https://www.iwinimc.com/products/1223fan-photobook-preorderonly",
+          "https://www.iwinimc.com/products/1223fan-photobook-valentine"
+        ]
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/justadream",
+        "products": [
+          "https://www.iwinimc.com/products/justadream-calendar",
+          "https://www.iwinimc.com/products/justadream-miniset",
+          "https://www.iwinimc.com/products/justadream-photobook",
+          "https://www.iwinimc.com/products/justadream-poster",
+          "https://www.iwinimc.com/products/justadream-posterset",
+          "https://www.iwinimc.com/products/justadream-vip",
+          "https://www.iwinimc.com/products/justadream-vvip"
+        ]
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/sutuotuo",
+        "products": [
+          "https://www.iwinimc.com/products/sutuotuo-2025miniphotobook",
+          "https://www.iwinimc.com/products/sutuotuo-2025miniphotobook-preorder"
+        ]
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/mini0223",
+        "products": [
+          "https://www.iwinimc.com/products/mini-photobook"
+        ]
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/anguscheung",
+        "products": [
+          "https://www.iwinimc.com/products/anguscheung01",
+          "https://www.iwinimc.com/products/anguscheung02",
+          "https://www.iwinimc.com/products/anguscheung03",
+          "https://www.iwinimc.com/products/anguscheung04",
+          "https://www.iwinimc.com/products/anguscheung05",
+          "https://www.iwinimc.com/products/anguscheung06"
+        ]
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/catgirls",
+        "products": []
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/tiny219",
+        "products": [
+          "https://www.iwinimc.com/products/tiny-10th-photobook",
+          "https://www.iwinimc.com/products/tiny-10th-specialedition-photobook"
+        ]
+      },
+      {
+        "url": "https://www.iwinimc.com/categories/dmuze0903",
+        "products": []
+      }
+    ],
+    "pending": [
+      "Sutin托托迷你寫真: author identity and composition review",
+      "Just A dReam group photobook: featured credits and composition review",
+      "黎茉 唯。愛: exact metadata review",
+      "胎尼10th photobook and special edition: identity and date review"
+    ]
+  },
+  "publisherWave26": {
+    "verified": [
+      "黎茉 MINI肉包 唯。愛 physical140pages2022-09-21",
+      "Just A dReam shared physical hardcover56pages2022-05-20 JOJO ABBY RAMI"
+    ],
+    "resolved": "publisherWave25 黎茉 and shared book verified"
+  },
+  "publisherWave27": {
+    "verified": [
+      "Sutin托托2025聯名迷你寫真 physical16pages2025-01-01"
+    ],
+    "pending": [
+      {
+        "model": "胎尼",
+        "url": "https://www.iwinimc.com/products/tiny-10th-photobook",
+        "reason": "Title/model identity not verified",
+        "status": "Resolved publisher category Tiny胎尼 credit; imported wave28"
+      },
+      {
+        "model": "胎尼",
+        "url": "https://www.iwinimc.com/products/tiny-10th-specialedition-photobook",
+        "reason": "Title/model identity not verified",
+        "status": "Resolved publisher category Tiny胎尼 credit; imported wave28"
+      }
+    ]
+  },
+  "publisherWave28": {
+    "verified": [
+      "胎尼 Tiny TENY80page hardcover",
+      "胎尼 Tiny TENY96page special edition"
+    ],
+    "identityNote": "Publisher category explicitly credits Tiny胎尼. Special product adds photographs/pages and redesign to same work. ISBN/date not provided."
+  },
+  "publisherWave29": {
+    "verified": [
+      "張若錡 錡遇Angus墾丁 physical144pages2019-05",
+      "張若錡 錡遇Angus高雄 physical144pages2019-05 ISBN9789887738701"
+    ],
+    "excludedProducts": [
+      "anguscheung03 pillow",
+      "anguscheung04 transitcard",
+      "anguscheung05 transitcard",
+      "anguscheung06 mousepad"
+    ],
+    "pending": [
+      {
+        "model": "張若錡",
+        "format": "digital",
+        "url": "https://play.google.com/store/books/details?id=Zmj9DwAAQBAJ",
+        "reason": "Kenting upper volume; exact composition/cover and cross-format matching pending",
+        "status": "Verified and imported wave30"
+      },
+      {
+        "model": "張若錡",
+        "format": "digital",
+        "url": "https://www.momoshop.com.tw/product/13844329",
+        "reason": "Kenting lower volume; exact composition and cover pending",
+        "status": "Same lower title verified on GooglePlay and imported; momo edition equivalence pending"
+      }
+    ]
+  },
+  "publisherWave30": {
+    "verified": [
+      "張若錡 錡遇Angus墾丁 digital上冊116pagesGooglePlay Zmj9DwAAQBAJ",
+      "張若錡 錡遇Angus墾丁 digital下冊116pagesGooglePlay ZGj9DwAAQBAJ"
+    ],
+    "identityNote": "Upper/lower volumes separate; equivalence with144page full physical book unconfirmed. No recurring GooglePlay price worker configured."
+  },
+  "publisherWave31": {
+    "verified": [
+      "貓樣女孩 太平洋の味 shared168page hardcover ISBN9789869947619 fivecovervariants2020-10-01"
+    ],
+    "credits": [
+      "馨馨",
+      "李岱倫",
+      "雪岑",
+      "柯姿",
+      "張安娜"
+    ]
+  },
+  "researchWave32": {
+    "newCandidates": [
+      {
+        "model": "鄭羽凡",
+        "title": "其實我有點壞 Si’era’s photobook 鄭羽凡寫真書",
+        "url": "https://www.kingstone.com.tw/basic/2019910048444/",
+        "publisher": "水靈文創",
+        "releaseDate": "2022-09-26",
+        "status": "Retailer indexed title/author/date confirmed; live cover metadata and R2/database import pending"
+      },
+      {
+        "model": "舒舒",
+        "url": "https://www.kingstone.com.tw/monthpublish/book/fh/?dis=pic&m=6&sort=2&tp=0&y=2026",
+        "status": "June2026 category discovery lead; exact book title/product and author identity pending"
+      },
+      {
+        "model": "希兒",
+        "url": "https://www.kingstone.com.tw/book/fhc/?page=2",
+        "status": "Retailer category describes2022personal photobook; exact product pending"
+      }
+    ],
+    "seriesAudit": [
+      {
+        "model": "藍星蕾",
+        "url": "https://www.kingstone.com.tw/basic/2019590013251/",
+        "titles": [
+          "真心愛上蕾",
+          "真星愛上你Addicted to you",
+          "布蕾甜你心",
+          "星有所屬",
+          "怦然星動"
+        ],
+        "result": "Retailer published bibliography lists five titles; all five already represented in current local catalog. No duplicate import."
+      }
+    ],
+    "blockedActions": "Network shell uploads/database verification require approval review; last review failed because account usage limit was reached. No alternate route attempted."
+  },
+  "researchWave33": {
+    "verifiedPublicationLeads": [
+      {
+        "model": "希兒",
+        "title": "Angel：希兒寫真書",
+        "url": "https://www.kadokawa.com.tw/products/9786263213838",
+        "isbn": "9786263213838",
+        "format": "physical",
+        "publisher": "台灣角川",
+        "releaseDate": "2022-04-27",
+        "composition": "Publisher specifies random reproduction polaroid1,6.3×8.9cm,two variants. Current inclusion needs seller confirmation.",
+        "status": "Primary publisher title/author/date verified; exact cover upload and database import pending"
+      },
+      {
+        "model": "希兒",
+        "title": "Angel：希兒寫真書 特裝版",
+        "url": "https://www.kingstone.com.tw/basic/2019910047522/",
+        "format": "physical",
+        "status": "Retailer product identified; special edition ISBN/contents/cover pending"
+      },
+      {
+        "model": "希兒",
+        "title": "Angel：希兒寫真書",
+        "url": "https://www.airitibooks.com/Publication/Details?publicationID=P20240918238",
+        "format": "digital",
+        "status": "Primary ebook platform identified; edition composition/cover pending"
+      },
+      {
+        "model": "舒舒",
+        "title": "舒舒19歲寫真=Shushu19s photography",
+        "publisher": "水靈文創",
+        "releaseDate": "2026-06-05",
+        "format": "physical",
+        "url": "https://www.kingstone.com.tw/basic/2019910059303/",
+        "status": "Exact title/author/date resolved from retailer catalog; exact product page and cover pending",
+        "isbn": "9786267742280",
+        "pageCount": 160,
+        "supportingSource": "https://www.taaze.tw/products/11101091408.html",
+        "dateDiscrepancy": "TAAZE and Kingstone catalog2026-06-05; book4u2026-06-10. Review before database import."
+      },
+      {
+        "model": "余家儀",
+        "title": "余家儀同名寫真",
+        "publisher": "水靈文創",
+        "releaseDate": "2025-09-01",
+        "format": "physical",
+        "url": "https://www.sanmin.com.tw/search?fp=%E6%B0%B4%E9%9D%88%E6%96%87%E5%89%B5&fu=2&k=%E5%AF%AB%E7%9C%9F%E6%9B%B8",
+        "status": "Duplicate lead resolved: already imported physical ISBN9786267742020,160pages with verified R2 cover. No import needed."
+      }
+    ]
+  },
+  "researchWave34": {
+    "resolvedDuplicate": "余家儀 physical already represented in authoritative catalog",
+    "verifiedIdentifier": "舒舒19歲寫真 ISBN9786267742280,160pages",
+    "pending": "舒舒 and希兒 exact covers/R2/import; 希兒 special edition composition and identifier; post-wave31 database readback. Prior automatic approval review failed from usage limit; no bypass attempted."
+  },
+  "researchWave35": {
+    "verified": [
+      {
+        "model": "希兒",
+        "title": "Angel：希兒寫真書",
+        "format": "digital",
+        "url": "https://www.bookwalker.com.tw/product/138324",
+        "pageCount": 144,
+        "releaseDate": "2022-04-29",
+        "publisher": "台灣角川",
+        "composition": "Fixed-layout EPUB; retail source paper/digital simultaneous label. Printed bonuses excluded."
+      },
+      {
+        "model": "希兒",
+        "title": "Angel：希兒寫真書 特裝版",
+        "format": "physical",
+        "url": "https://www.sanmin.com.tw/product/index/010351055",
+        "composition": "Book plus box,45×45cm pillowcase(random1of2),29.7×42cm folded poster,and2postcards10.5×14.8cm. Current bonus inclusion unverified."
+      },
+      {
+        "model": "鄭羽凡",
+        "title": "其實我有點壞",
+        "format": "physical",
+        "isbn": "9786269640614",
+        "evidence": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1665540832.pdf"
+      },
+      {
+        "model": "鄭羽凡",
+        "title": "其實我有點壞",
+        "format": "digital",
+        "isbn": "9786267742044",
+        "fileFormat": "PDF",
+        "evidence": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1755143472.pdf",
+        "status": "NCL registration2025-08 verified; public retail product still pending"
+      }
+    ],
+    "pending": "Exact cover receipt/R2 and database import unavailable until approval-review usage limit resolves. No alternate route attempted."
+  },
+  "importWave36": {
+    "verified": [
+      "希兒 Angel physical standard and special editions",
+      "舒舒19歲寫真 physical160pagesISBN9786267742280",
+      "鄭羽凡其實我有點壞 physical128pagesISBN9786269640614"
+    ],
+    "status": "Four editions committed; approval review available again; wave31 database readback passed."
+  },
+  "researchWave99": {
+    "verified": [
+      "Bella — Journey Girl Vol.12 Bella 貝拉, digital EPUB, BOOK☆WALKER product 254904, NT$179"
+    ],
+    "checked": [
+      "子婷/readmoo: existing catalog edition confirmed",
+      "許維恩/readmoo: no qualifying photobook listing",
+      "張景嵐/readmoo: no qualifying photobook listing"
+    ],
+    "remainingQueries": 38
+  }
+}

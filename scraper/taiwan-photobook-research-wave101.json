@@ -1,0 +1,116 @@
+{
+  "batch": 101,
+  "verifiedAt": "2026-10-07T07:15:10Z",
+  "purpose": "Add BOOK☆WALKER digital photobooks as separate works and editions; retain each active digital asking price and verified cover; do not infer physical editions.",
+  "notes": [
+    "菲菲另以 YuYu 名義發行日文標題數位寫真；官方商品頁說明兩本影像內容完全不同，因此建立兩個獨立數位作品。",
+    "兩件商品皆未顯示 ISBN/EISBN，使用 BOOK☆WALKER 商品 ID 作為來源 listing 識別碼，不虛構 ISBN。",
+    "封面已存入 R2，並以公開讀回 SHA-256 驗證。價格是平台目前標價，不是成交價。",
+    "BOOK☆WALKER 的 product 94282 是 bestie 閨蜜的另一 EISBN/封面與頁面順序版；依其 ISBN 連結既有數位版次，內容影像相同，沒有重複建立作品。"
+  ],
+  "sources": [
+    "https://www.bookwalker.com.tw/product/162224",
+    "https://www.bookwalker.com.tw/product/162225",
+    "https://www.bookwalker.com.tw/product/94282"
+  ],
+  "changes": {
+    "newWorks": 2,
+    "newDigitalEditions": 2,
+    "newActiveDigitalOffers": 2,
+    "existingActiveDigitalOffersAdded": 1,
+    "newR2CoverUploads": 2
+  },
+  "models": [
+    {
+      "name": "李恩菲",
+      "aliases": [
+        "李恩菲",
+        "菲菲",
+        "YuYu"
+      ],
+      "identityNote": "BOOK☆WALKER lists the model as 菲菲; the existing Taiwan catalog uses 李恩菲 as her canonical name. BOOK☆WALKER lists the model as 菲菲/YuYu; the Japanese-titled photobook is cataloged as a separate work because the product page explicitly says its images differ entirely from the Chinese edition.",
+      "works": [
+        {
+          "workId": "work-tw-bb29c83f5cf348d07ac7150b",
+          "title": "菲你莫屬-菲菲數位寫真書-中文版",
+          "photographer": "莉奈",
+          "editions": [
+            {
+              "editionId": "edition-f2ab6f57601605d7c236ead0",
+              "format": "digital",
+              "label": "數位版",
+              "isbn": "",
+              "identifierNote": "No ISBN/EISBN is displayed on the verified BOOK☆WALKER page; the product ID is retained as the listing identifier.",
+              "publisher": "滾石移動",
+              "releaseDate": "2023-05-03",
+              "pageCount": 257,
+              "fileFormat": "EPUB（固定版面）",
+              "contentSummary": "官方商品介紹概述戶外到室內、鄰里街景、薄紗與浴泡等拍攝情境；這是商品簡介摘要，非逐張影像清單。",
+              "metadataSourceUrl": "https://www.bookwalker.com.tw/product/162224",
+              "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/162224/162224_1.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/8a41b2fb430b472a4e5fd433fc69258636ce54f98d303a47ac65df3adebc1b09.jpg",
+              "coverObjectKey": "musebooks/covers/8a41b2fb430b472a4e5fd433fc69258636ce54f98d303a47ac65df3adebc1b09.jpg",
+              "coverSHA256": "8a41b2fb430b472a4e5fd433fc69258636ce54f98d303a47ac65df3adebc1b09",
+              "retailOffers": [
+                {
+                  "sourceId": "bookwalker-tw",
+                  "externalId": "162224",
+                  "url": "https://www.bookwalker.com.tw/product/162224",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 36900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T07:15:10Z"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "workId": "work-tw-251bb59b48293b06776ca8fe",
+          "title": "台湾グラドルYuYu 1stデジタル写真集「君だけのYuYu」",
+          "photographer": "莉奈",
+          "editions": [
+            {
+              "editionId": "edition-d4e8fe8ee86ab5fb6bd1da47",
+              "format": "digital",
+              "label": "數位版",
+              "isbn": "",
+              "identifierNote": "No ISBN/EISBN is displayed on the verified BOOK☆WALKER page; the product ID is retained as the listing identifier.",
+              "publisher": "滾石移動",
+              "releaseDate": "2023-05-03",
+              "pageCount": 271,
+              "fileFormat": "EPUB（固定版面）",
+              "contentSummary": "BOOK☆WALKER稱本書為 YuYu 首本數位寫真，並明確表示影像內容與同日發行的中文版《菲你莫屬》完全不同；此為商品簡介摘要，非逐張影像清單。",
+              "metadataSourceUrl": "https://www.bookwalker.com.tw/product/162225",
+              "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/162225/162225_1.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/28bfcd5882c78f2b19f3ce202bcb1526c1dd3c8bdc57c921a3ee228547ddb4bb.jpg",
+              "coverObjectKey": "musebooks/covers/28bfcd5882c78f2b19f3ce202bcb1526c1dd3c8bdc57c921a3ee228547ddb4bb.jpg",
+              "coverSHA256": "28bfcd5882c78f2b19f3ce202bcb1526c1dd3c8bdc57c921a3ee228547ddb4bb",
+              "retailOffers": [
+                {
+                  "sourceId": "bookwalker-tw",
+                  "externalId": "162225",
+                  "url": "https://www.bookwalker.com.tw/product/162225",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 36900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T07:15:10Z"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sameSeriesEditionCheck": {
+    "bookwalkerProduct": "94282",
+    "isbn": "9789571095714",
+    "editionId": "edition-b2f614988acbf124fa61a333",
+    "action": "Added NT$299 active BOOK☆WALKER digital offer to existing bestie digital edition; no new work or cover."
+  }
+}

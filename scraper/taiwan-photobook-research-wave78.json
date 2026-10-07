@@ -1,0 +1,41 @@
+{
+  "model": "妮可／Nicole（楊昀蓁）",
+  "identityNote": "Sanmin author bio identifies 妮可Nicole as a Passion Sisters member and gives IG @nicole840629; the publisher storefront uses publication date 2025-04-29.",
+  "workId": "work-tw-e23888df7c68a3c7d3bc18ea",
+  "editions": [
+    {
+      "format": "physical",
+      "isbn": "9786267683088",
+      "pages": 144,
+      "dimensions": "26 × 18.5 × 1.1 cm",
+      "publisherReleaseDate": "2025-04-29",
+      "retailerDate": "2025-05-02",
+      "photographer": "陳伸維",
+      "extra": "One 33 × 49 cm poster, randomly selected from four designs",
+      "sourceUrl": "https://www.sanmin.com.tw/product/index/014272084",
+      "publisherPageUrl": "https://www.cite.com.tw/book?id=103389"
+    },
+    {
+      "format": "digital",
+      "eisbn": "9786267683064",
+      "container": "EPUB fixed layout",
+      "releaseDate": "2025-04-29",
+      "sourceUrl": "https://www.sanmin.com.tw/product/index/014381528"
+    }
+  ],
+  "description": "《想見妮》documents her nine-year cheerleading journey and daily life. The paperback has its own random poster; the EPUB stays digital-only and has no paper size, page count, or poster metadata.",
+  "workTitle": "想見妮‧Nicole妮可寫真書",
+  "editionRecords": [
+    {
+      "id": "edition-24c91095b8f7bdeb764b335f",
+      "format": "physical",
+      "isbn": "9786267683088",
+      "pages": 144,
+      "dimensions": "26cm*18.50cm*1.1cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/dfe9430c7769cd108827d31cd2af75d710b196df6e8bb7d8942b1891e3061d61.jpg",
+      "coverObjectKey": "musebooks/covers/dfe9430c7769cd108827d31cd2af75d710b196df6e8bb7d8942b1891e3061d61.jpg",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014272084",
+      "contentSummary": "144頁紙本寫真書，收錄妮可球場與生活影像，由陳伸維攝影；附33×49公分海報一張，四款隨機。"
+    }
+  ]
+}

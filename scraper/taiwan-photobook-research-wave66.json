@@ -1,0 +1,26 @@
+{
+  "pending": [
+    {
+      "model": "翁子涵",
+      "title": "FANCY GREEN：ZIHAN WENG 首本個人寫真",
+      "isbn": "9789860635010",
+      "format": "physical",
+      "url": "https://tplaza.com.au/shop/books/life-style/isbn9789860635010/",
+      "reason": "Web primary page lists print book, date 2021-06-04 and 15 looks; direct fetch returns 403. Exact cover upload pending.",
+      "dateConflict": {
+        "retailerDate": "2021-06-04",
+        "earlierReporting": "2019 original book mentioned in 2019 reporting and 2020 publisher/media article",
+        "reason": "Do not equate first publication date with ISBN-linked retailer release without edition confirmation",
+        "source": "https://mypaper.pchome.com.tw/roam_magazine/post/1380521812"
+      }
+    }
+  ],
+  "resolved": [
+    {
+      "model": "翁子涵",
+      "title": "ZIHAN WENG：「Z」紀念寫真",
+      "manifest": ".tmp/catalog-wave66-manifest.json",
+      "reason": "R2 verified and database transaction committed"
+    }
+  ]
+}

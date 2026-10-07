@@ -1,0 +1,842 @@
+{
+  "batch": 82,
+  "models": [
+    {
+      "name": "林莎",
+      "aliases": [
+        "林莎",
+        "Super Lisa"
+      ],
+      "identityNote": "Official release reporting identifies Honey as a physical-only photobook; the Ruten listing distinguishes the second-print standalone book from the limited merchandise bundle.",
+      "identitySourceUrls": [
+        "https://www.ruten.com.tw/item/22613373876604/",
+        "https://www.nownews.com/news/6791189",
+        "https://bee3shine.com/product/2026%E3%80%8Ahoney%E3%80%8B%E6%9E%97%E8%8E%8E%E5%AF%AB%E7%9C%9F%E6%9B%B8-%E5%96%AE%E6%9C%AC/"
+      ],
+      "digitalStatus": "Verified physical edition(s); no standalone digital edition was found in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-ace459d30c84e9a74ca7619f",
+          "title": "2026《Honey》林莎寫真書",
+          "editions": [
+            {
+              "editionId": "edition-3c70d289609fa053852d3a21",
+              "sourceTitle": "2026《Honey》林莎寫真書",
+              "format": "physical",
+              "label": "二刷單本版",
+              "variant": "second_printing",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "實體寫真書二刷單本版，沒有周邊商品。ISBN、頁數與書本尺寸未確認；未找到數位版。",
+              "sourceUrl": "https://www.ruten.com.tw/item/22613373876604/",
+              "coverSourceUrl": "https://gcs.rimg.com.tw/g2/9/45/7c/22613373876604_461.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/a3e0f748c04d69dcdf5a3c4bb9c340475fc27288441ef460bad7799688c0634d.jpg",
+              "coverObjectKey": "musebooks/covers/a3e0f748c04d69dcdf5a3c4bb9c340475fc27288441ef460bad7799688c0634d.jpg"
+            },
+            {
+              "editionId": "edition-30cae489b71aa0fe22cf739f",
+              "sourceTitle": "2026《Honey》林莎寫真書",
+              "format": "physical",
+              "label": "限量周邊套組",
+              "variant": "limited",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "實體寫真書1本、無摺海報2張（4款隨機）、應援扇1把（2款隨機）、明信片4張。ISBN、頁數與書本尺寸未確認；配件只屬套組。",
+              "sourceUrl": "https://www.ruten.com.tw/item/22613373876604/",
+              "coverSourceUrl": "https://gcs.rimg.com.tw/g2/9/45/7c/22613373876604_461.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/a3e0f748c04d69dcdf5a3c4bb9c340475fc27288441ef460bad7799688c0634d.jpg",
+              "coverObjectKey": "musebooks/covers/a3e0f748c04d69dcdf5a3c4bb9c340475fc27288441ef460bad7799688c0634d.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "劉淇",
+      "aliases": [
+        "劉淇"
+      ],
+      "identityNote": "Pubu lists two separate digital PDF products for SOAKING WET: the standard ebook and a video edition. Their separate product covers and product IDs are retained.",
+      "identitySourceUrls": [
+        "https://www.pubu.com.tw/magazine/686437",
+        "https://www.pubu.com.tw/magazine/686433"
+      ],
+      "digitalStatus": "Verified digital edition(s); no physical edition was added in this research batch.",
+      "works": [
+        {
+          "workId": "work-tw-eb156b0615005365d78916bb",
+          "title": "濕樂園：劉淇《SOAKING WET》寫真書",
+          "editions": [
+            {
+              "editionId": "edition-ecd90d51e7d23b543494ca73",
+              "sourceTitle": "濕樂園：劉淇《SOAKING WET》寫真書",
+              "format": "digital",
+              "label": "PDF電子版",
+              "variant": "without_video",
+              "isbn": "",
+              "pageCount": 106,
+              "dimensions": "",
+              "contentSummary": "PDF數位寫真，106頁（31MB）；棚拍雕塑感人像與日夜泳池主題。此為一般電子書版，Pubu另售含影片版。",
+              "sourceUrl": "https://www.pubu.com.tw/magazine/686437",
+              "coverSourceUrl": "https://res1.pubu.tw/docs/586276/67808/2SyinL_l.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/ae7abe2a22a7f8e47f7ff0db9014a4aeb6a1128e826b017b86f5d3e6272663aa.jpg",
+              "coverObjectKey": "musebooks/covers/ae7abe2a22a7f8e47f7ff0db9014a4aeb6a1128e826b017b86f5d3e6272663aa.jpg"
+            },
+            {
+              "editionId": "edition-e7229205490000ea2ec259d9",
+              "sourceTitle": "濕樂園：劉淇《SOAKING WET》寫真書",
+              "format": "digital",
+              "label": "PDF影音版",
+              "variant": "with_video",
+              "isbn": "",
+              "pageCount": 106,
+              "dimensions": "",
+              "contentSummary": "PDF數位寫真，106頁（31MB），另含影片內容；影片數量未公布。棚拍與泳池主題。",
+              "sourceUrl": "https://www.pubu.com.tw/magazine/686433",
+              "coverSourceUrl": "https://res2.pubu.tw/docs/586273/78984/xbyGCv_l.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/a93159532f12731b21728714ff232deae823d0fb774a05e247a653dbcabd1199.jpg",
+              "coverObjectKey": "musebooks/covers/a93159532f12731b21728714ff232deae823d0fb774a05e247a653dbcabd1199.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "曼容",
+      "aliases": [
+        "曼容",
+        "高曼容"
+      ],
+      "identityNote": "The Sanmin EPUB record identifies one fixed-layout ebook with EISBN 9786264036115 and nine behind-the-scenes videos. Three advertised cover designs are not split into separate editions because the identifier is shared.",
+      "identitySourceUrls": [
+        "https://tw.buy.yahoo.com/gdsale/gdsale.asp?act=ACT251125012&gdid=11737942&hpp=ACT251125012"
+      ],
+      "digitalStatus": "Verified digital edition(s); no physical edition was added in this research batch.",
+      "works": [
+        {
+          "workId": "work-tw-03c5ae12b61ad3d1e9c5b3b5",
+          "title": "曼曼喜歡你 曼容數位寫真（含影音）",
+          "editions": [
+            {
+              "editionId": "edition-a0a17dce1636ff2ff25d3ebb",
+              "sourceTitle": "曼曼喜歡你 曼容數位寫真（含影音）",
+              "format": "digital",
+              "label": "EPUB固定版面含影音",
+              "variant": "with_video",
+              "isbn": "9786264036115",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "EPUB固定版面數位寫真，含9支側拍花絮影音。公開宣傳提及3款封面設計；同一EISBN商品以Yahoo零售頁展示封面，未拆成不同ISBN版次。",
+              "sourceUrl": "https://tw.buy.yahoo.com/gdsale/gdsale.asp?act=ACT251125012&gdid=11737942&hpp=ACT251125012",
+              "coverSourceUrl": "https://img.yec.tw/zp/MerchandiseImages/5BDC652DBB-SP-20794178.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/15146c36ec6d1023beb807b87c67cb08b8b1f1942d109c720bc34f53ed775b14.jpg",
+              "coverObjectKey": "musebooks/covers/15146c36ec6d1023beb807b87c67cb08b8b1f1942d109c720bc34f53ed775b14.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "宋羽葤",
+      "aliases": [
+        "宋羽葤",
+        "Bastet Song"
+      ],
+      "identityNote": "Sanmin lists a fixed-layout EPUB with EISBN 9786263381780. The creator’s official link identifies the same digital title as including video; page count and video count remain unspecified.",
+      "identitySourceUrls": [
+        "https://www.sanmin.com.tw/product/index/013427987",
+        "https://linktr.ee/songyu.chou"
+      ],
+      "digitalStatus": "Verified digital edition(s); no physical edition was added in this research batch.",
+      "works": [
+        {
+          "workId": "work-tw-2323df19f2b7adab65b127ff",
+          "title": "羽葤的小宇宙：宋羽葤數位寫真",
+          "editions": [
+            {
+              "editionId": "edition-c4791d81857c36c833ca110d",
+              "sourceTitle": "羽葤的小宇宙：宋羽葤數位寫真",
+              "format": "digital",
+              "label": "EPUB固定版式",
+              "variant": "with_video",
+              "isbn": "9786263381780",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "EPUB固定版式數位寫真；商品文案確認池邊泳裝、棚內造型與居家人像概念。官方作者連結所列同名版標示含影音，但片數與數位頁數未公布。",
+              "sourceUrl": "https://www.sanmin.com.tw/product/index/013427987",
+              "coverSourceUrl": "https://books.google.com/books/publisher/content/images/frontcover/S2dzEAAAQBAJ?fife",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/f49b33a63010c49925dc8002ca7f5bf07dae4223116e5b0153b77bed6d5b4de8.jpg",
+              "coverObjectKey": "musebooks/covers/f49b33a63010c49925dc8002ca7f5bf07dae4223116e5b0153b77bed6d5b4de8.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "言嘉佑",
+      "aliases": [
+        "言嘉佑"
+      ],
+      "identityNote": "Momo lists Virtual 虛擬情人 as a Taiwan Kadokawa digital title with EISBN 9786264159883; file format and page count are not exposed.",
+      "identitySourceUrls": [
+        "https://www.momoshop.com.tw/product/14197050"
+      ],
+      "digitalStatus": "Verified digital edition(s); no physical edition was added in this research batch.",
+      "works": [
+        {
+          "workId": "work-tw-1acb30d3b59f6c6d88a70e55",
+          "title": "Virtual 虛擬情人：言嘉佑數位寫真",
+          "editions": [
+            {
+              "editionId": "edition-288c77305b00b5bbcb8f190a",
+              "sourceTitle": "Virtual 虛擬情人：言嘉佑數位寫真",
+              "format": "digital",
+              "label": "電子書版",
+              "variant": "unspecified",
+              "isbn": "9786264159883",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "台灣角川數位寫真電子書；EISBN 9786264159883。零售頁未公布頁數與檔案格式。",
+              "sourceUrl": "https://www.momoshop.com.tw/product/14197050",
+              "coverSourceUrl": "https://i2.momoshop.com.tw/1752008938/goodsimg/0014/197/050/14197050_R_m.webp",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/5c5b7e31b989904a53fb14182c72e6247a871ace66ca69d4d4ed07ef047a3925.webp",
+              "coverObjectKey": "musebooks/covers/5c5b7e31b989904a53fb14182c72e6247a871ace66ca69d4d4ed07ef047a3925.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "芷媗",
+      "aliases": [
+        "芷媗"
+      ],
+      "identityNote": "IWIN’s official product page and National Central Library ISBN deposit identify the same 144-page physical edition; no digital edition was added.",
+      "identitySourceUrls": [
+        "https://www.iwinimc.com/products/candy1023-photobook",
+        "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1763434068.pdf"
+      ],
+      "digitalStatus": "Verified physical edition(s); no standalone digital edition was found in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-bd736260748f93769128a0f1",
+          "title": "芷想被你收藏Candy芷媗首本個人實體寫真",
+          "editions": [
+            {
+              "editionId": "edition-65e97ae96f67c57043dfa960",
+              "sourceTitle": "芷想被你收藏Candy芷媗首本個人實體寫真",
+              "format": "physical",
+              "label": "標準版",
+              "variant": "standard",
+              "isbn": "9786269273300",
+              "pageCount": 144,
+              "dimensions": "18cm×25.6cm×1.2cm",
+              "contentSummary": "144頁平裝膠裝實體寫真，18×25.6×1.2cm；商品內容為寫真書1本。補入ISBN 9786269273300與正式發行日。",
+              "sourceUrl": "https://www.iwinimc.com/products/candy1023-photobook",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/68af0e20630c3c0010c28b86/original.jpg?1756302878=&owner_id=5d425a123781fc0001c438fd",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/c993f877b73a6a7a0b5fbf4021d24e4e7c6afebd65df8a7d533aa5954af4a4a6.jpg",
+              "coverObjectKey": "musebooks/covers/c993f877b73a6a7a0b5fbf4021d24e4e7c6afebd65df8a7d533aa5954af4a4a6.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "董梓甯、林莎、吳元元",
+      "aliases": [
+        "董梓甯",
+        "梓梓",
+        "梓甯",
+        "林莎",
+        "Super Lisa",
+        "吳元元",
+        "吳婕安",
+        "元元"
+      ],
+      "identityNote": "Bee3Shine’s official listing identifies a three-model physical photo book. The listing records the first-wave signed-board bundle; no digital edition or book pagination was published.",
+      "identitySourceUrls": [
+        "https://bee3shine.com/product/%E3%80%8A%E4%B8%89%E5%80%8D%E5%BF%83%E8%B7%B3%E3%80%8B%E6%A2%93%E6%A2%93x%E6%9E%97%E8%8E%8Ex%E5%85%83%E5%85%83-%E9%99%90%E9%87%8F%E4%B8%89%E4%BA%BA%E5%AF%AB%E7%9C%9F%E5%A5%97%E7%B5%84/"
+      ],
+      "digitalStatus": "Verified physical edition(s); no standalone digital edition was found in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-96926b38696ba73e299897d0",
+          "title": "《三倍心跳》梓梓×林莎×元元寫真書",
+          "editions": [
+            {
+              "editionId": "edition-2aacde30ca082f374c8041ab",
+              "sourceTitle": "《三倍心跳》梓梓×林莎×元元寫真書",
+              "format": "physical",
+              "label": "首波親簽板限量套組",
+              "variant": "limited",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "董梓甯（梓梓）、林莎、吳元元三人合體實體寫真套組。首波限量含三人親筆簽名板；頁數、書本尺寸與其他隨附物未公布。未找到數位版。",
+              "sourceUrl": "https://bee3shine.com/product/%E3%80%8A%E4%B8%89%E5%80%8D%E5%BF%83%E8%B7%B3%E3%80%8B%E6%A2%93%E6%A2%93x%E6%9E%97%E8%8E%8Ex%E5%85%83%E5%85%83-%E9%99%90%E9%87%8F%E4%B8%89%E4%BA%BA%E5%AF%AB%E7%9C%9F%E5%A5%97%E7%B5%84/",
+              "coverSourceUrl": "https://bee3shine.com/wp-content/uploads/2026/06/%E5%AF%AB%E7%9C%9F%E6%9B%B8-1080x1350-1-819x1024.png",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/505930470276b7ad7cb23bd0727ea6a2bfdb3013247722a0713f6c0192d7e870.png",
+              "coverObjectKey": "musebooks/covers/505930470276b7ad7cb23bd0727ea6a2bfdb3013247722a0713f6c0192d7e870.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "蘋蘋澎澎、湘綾",
+      "aliases": [
+        "蘋蘋澎澎",
+        "阿蘋",
+        "PINPINPONPON",
+        "湘綾"
+      ],
+      "identityNote": "The creator storefront lists a 128-page physical book with a random ID card. A VIP package includes digital files with physical merchandise, so it is not treated as a standalone digital edition.",
+      "identitySourceUrls": [
+        "https://pinpinponpon627.waca.tw/product/detail/2589988"
+      ],
+      "digitalStatus": "Verified physical edition(s); no standalone digital edition was found in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-8ce4dd25e173839b10d88706",
+          "title": "2026「純·欲姊姊特休中」寫真單書",
+          "editions": [
+            {
+              "editionId": "edition-51b040d29f2ce074f6e91c36",
+              "sourceTitle": "2026「純·欲姊姊特休中」寫真單書",
+              "format": "physical",
+              "label": "實體單書版",
+              "variant": "standard",
+              "isbn": "",
+              "pageCount": 128,
+              "dimensions": "",
+              "contentSummary": "128頁雙人實體寫真單書，含兩款識別證小卡隨機1張；主題由蘋蘋澎澎與湘綾共同拍攝。另有含實體周邊及電子檔的VIP組合，未列為獨立數位版。",
+              "sourceUrl": "https://pinpinponpon627.waca.tw/product/detail/2589988",
+              "coverSourceUrl": "https://img.cloudimg.in/uploads/shops/39641/products/16/16a1bf0de8cdb253b8bcd7f9f1a31995.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/a88f9b052189d59514873fae650176fa2dce1d64c694a55d879da126ad011445.jpg",
+              "coverObjectKey": "musebooks/covers/a88f9b052189d59514873fae650176fa2dce1d64c694a55d879da126ad011445.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "吳元元",
+      "aliases": [
+        "吳元元",
+        "吳婕安",
+        "元元"
+      ],
+      "identityNote": "The six older Cite editions had verified metadata but missing catalog cover links; their existing edition IDs were preserved while attaching the official publisher images.",
+      "identitySourceUrls": [
+        "https://www.cite.com.tw/book?id=82767",
+        "https://www.cite.com.tw/book?id=84369",
+        "https://www.cite.com.tw/book?id=76596",
+        "https://www.cite.com.tw/book?id=93763"
+      ],
+      "digitalStatus": "Verified physical edition(s); no standalone digital edition was found in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-58351c46675a4f14d7e25932",
+          "title": "元氣東京：吳婕安寫真書",
+          "editions": [
+            {
+              "editionId": "edition-589dceab473eda2e57267917",
+              "sourceTitle": "《元氣東京》吳婕安寫真書 特裝版-城邦讀書花園網路書店",
+              "format": "physical",
+              "label": "特裝版",
+              "variant": "special",
+              "isbn": "",
+              "pageCount": 144,
+              "dimensions": "18cm×25.6cm",
+              "contentSummary": "寫真書1本、隨機海報1張（2款）、隨機抱枕套1個（2款），含外盒。",
+              "sourceUrl": "https://www.cite.com.tw/book?id=82767",
+              "coverSourceUrl": "https://d4dpzjhk0g50s.cloudfront.net/images/s/SPB1A000164.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/31aedbd88cba7789ee8eee28186c28fd571ba34eb1eac8ebc59544ae25e0d07e.jpg",
+              "coverObjectKey": "musebooks/covers/31aedbd88cba7789ee8eee28186c28fd571ba34eb1eac8ebc59544ae25e0d07e.jpg"
+            },
+            {
+              "editionId": "edition-bd2b8694677566edf9708188",
+              "sourceTitle": "《元氣東京》吳婕安寫真書 通路限定版-城邦讀書花園網路書店",
+              "format": "physical",
+              "label": "通路限定版",
+              "variant": "limited",
+              "isbn": "",
+              "pageCount": 144,
+              "dimensions": "18cm×25.6cm",
+              "contentSummary": "144頁寫真書。通路限定贈品為4款親簽寫真卡中的隨機1款，數量有限；是否仍隨書附贈須向賣家確認。",
+              "sourceUrl": "https://www.cite.com.tw/book?id=84369",
+              "coverSourceUrl": "https://d4dpzjhk0g50s.cloudfront.net/images/s/SPB1A000171.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/6da22dae3eca51e02a539d2e645f305863df0442c7e04f30587a7c177e06d752.jpg",
+              "coverObjectKey": "musebooks/covers/6da22dae3eca51e02a539d2e645f305863df0442c7e04f30587a7c177e06d752.jpg"
+            }
+          ]
+        },
+        {
+          "workId": "work-tw-05ea1088425e89aa5c0004e4",
+          "title": "元氣滿滿：吳元元寫真書",
+          "editions": [
+            {
+              "editionId": "edition-d6d51dc14ea7d9908412e077",
+              "sourceTitle": "《元氣滿滿》吳元元寫真書 特裝版-城邦讀書花園網路書店",
+              "format": "physical",
+              "label": "特裝版",
+              "variant": "special",
+              "isbn": "",
+              "pageCount": 144,
+              "dimensions": "21cm×25.6cm",
+              "contentSummary": "寫真書1本、隨機海報1張（2款）、隨機A5資料夾2個（4款）、隨機抱枕套1個（2款），含外盒。",
+              "sourceUrl": "https://www.cite.com.tw/book?id=76596",
+              "coverSourceUrl": "https://d4dpzjhk0g50s.cloudfront.net/images/s/SPB1A000120.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/489f01b34d1a39bbf29ffc80e48d317f617db6a2a98830f0ad21df7a0acbaba6.jpg",
+              "coverObjectKey": "musebooks/covers/489f01b34d1a39bbf29ffc80e48d317f617db6a2a98830f0ad21df7a0acbaba6.jpg"
+            }
+          ]
+        },
+        {
+          "workId": "work-tw-0ee54eafe73f15073c4b2751",
+          "title": "元元：吳婕安寫真書",
+          "editions": [
+            {
+              "editionId": "edition-78fab16ea16d6e8e982ea301",
+              "sourceTitle": "《元元》吳婕安寫真書 慶功版-城邦讀書花園網路書店",
+              "format": "physical",
+              "label": "慶功版",
+              "variant": "celebration",
+              "isbn": "9786263384750",
+              "pageCount": 184,
+              "dimensions": "18cm×25.6cm",
+              "contentSummary": "紙本寫真書，共184頁。",
+              "sourceUrl": "https://www.cite.com.tw/book?id=93763",
+              "coverSourceUrl": "https://d4dpzjhk0g50s.cloudfront.net/images/s/SPB3F000009.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/2f1d2b1ddc1b82121d01995e3981a95aca74b908d107a33bbd8a8ab4f0a14373.jpg",
+              "coverObjectKey": "musebooks/covers/2f1d2b1ddc1b82121d01995e3981a95aca74b908d107a33bbd8a8ab4f0a14373.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "巫苡萱",
+      "aliases": [
+        "巫苡萱"
+      ],
+      "identityNote": "The existing 80-page Cite limited edition’s publisher cover link was restored to the same edition ID.",
+      "identitySourceUrls": [
+        "https://www.cite.com.tw/book?id=78441"
+      ],
+      "digitalStatus": "Verified physical edition(s); no standalone digital edition was found in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-77f03aac5e3753ef1b96279f",
+          "title": "天天和你在苡起：巫苡萱寫真",
+          "editions": [
+            {
+              "editionId": "edition-6e4133176efe9cc0fe79371a",
+              "sourceTitle": "《天天和你在苡起》巫苡萱寫真書(限量版)",
+              "format": "physical",
+              "label": "限定版",
+              "variant": "limited",
+              "isbn": "",
+              "pageCount": 80,
+              "dimensions": "18cm×25.6cm",
+              "contentSummary": "紙本寫真書，共80頁。",
+              "sourceUrl": "https://www.cite.com.tw/book?id=78441",
+              "coverSourceUrl": "https://d4dpzjhk0g50s.cloudfront.net/images/s/SPB1A000136.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/8a1b6650291a719284a25ee2b21084baf4e7c4826994ece51596248ec89c8f97.jpg",
+              "coverObjectKey": "musebooks/covers/8a1b6650291a719284a25ee2b21084baf4e7c4826994ece51596248ec89c8f97.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "黃上晏",
+      "aliases": [
+        "黃上晏"
+      ],
+      "identityNote": "The existing 144-page Cite special edition’s publisher cover link was restored to the same edition ID.",
+      "identitySourceUrls": [
+        "https://www.cite.com.tw/book?id=83222"
+      ],
+      "digitalStatus": "Verified physical edition(s); no standalone digital edition was found in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-7403bb83e9631ff3152abd7f",
+          "title": "仲夏晏之夢：黃上晏寫真",
+          "editions": [
+            {
+              "editionId": "edition-aad1bd75960ed120ebc46363",
+              "sourceTitle": "《仲夏晏之夢》黃上晏寫真書 特裝版",
+              "format": "physical",
+              "label": "特裝版",
+              "variant": "special",
+              "isbn": "",
+              "pageCount": 144,
+              "dimensions": "18cm×25.6cm",
+              "contentSummary": "紙本寫真書，共144頁。",
+              "sourceUrl": "https://www.cite.com.tw/book?id=83222",
+              "coverSourceUrl": "https://d4dpzjhk0g50s.cloudfront.net/images/s/SPB1A000180.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/9e03f6b41c7339dcc84a99f693f2bdf95eb651cb07f3fd69a452a626abcf91e0.jpg",
+              "coverObjectKey": "musebooks/covers/9e03f6b41c7339dcc84a99f693f2bdf95eb651cb07f3fd69a452a626abcf91e0.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "禾羽",
+      "aliases": [
+        "禾羽"
+      ],
+      "identityNote": "Kaboom lists a standard book-only offer and a collector merchandise bundle. The official image showing the book face is used for both physical bundles; page count and ISBN are undisclosed.",
+      "identitySourceUrls": [
+        "https://www.kaboom.tw/products/2026-kimi-in-okinawa-photo-book"
+      ],
+      "digitalStatus": "Verified physical edition(s); no standalone digital edition was found in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-d83d47417493a7a1f42f626e",
+          "title": "2026《禾你相羽 in Okinawa》寫真書",
+          "editions": [
+            {
+              "editionId": "edition-4cc35fcac09a8d9cde684102",
+              "sourceTitle": "2026《禾你相羽 in Okinawa》寫真書",
+              "format": "physical",
+              "label": "一般版",
+              "variant": "standard",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "沖繩取景寫真書1本，不含周邊；17.6×25.0cm。梓梓友情客串。頁數、ISBN及正式出版日未公開；2026-09-15為預計出貨日。封面影像取自官方商品圖中展示的寫真書封面。",
+              "sourceUrl": "https://www.kaboom.tw/products/2026-kimi-in-okinawa-photo-book",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/6a5f51e0cc5079a368f39a47/original.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/6a451ca19202638d93ec3b05c057ef4087904a8df6490685b8a5ab31612e923e.jpg",
+              "coverObjectKey": "musebooks/covers/6a451ca19202638d93ec3b05c057ef4087904a8df6490685b8a5ab31612e923e.jpg"
+            },
+            {
+              "editionId": "edition-428ac34e1f9d0ee40ea68ae5",
+              "sourceTitle": "2026《禾你相羽 in Okinawa》寫真書",
+              "format": "physical",
+              "label": "精裝收藏版",
+              "variant": "special",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "寫真書1本、精美書盒、隨機人形立牌1款（共4款）、隨機行李吊牌1款（共4款）、明信片5張。書尺寸17.6×25.0cm；官方稱精裝版，裝訂細節未確認。2026-09-15為預計出貨日；ISBN及頁數未公開。",
+              "sourceUrl": "https://www.kaboom.tw/products/2026-kimi-in-okinawa-photo-book",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/6a5f51e0cc5079a368f39a47/original.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/6a451ca19202638d93ec3b05c057ef4087904a8df6490685b8a5ab31612e923e.jpg",
+              "coverObjectKey": "musebooks/covers/6a451ca19202638d93ec3b05c057ef4087904a8df6490685b8a5ab31612e923e.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "editionRecords": [
+    {
+      "model": "林莎",
+      "workId": "work-tw-ace459d30c84e9a74ca7619f",
+      "workTitle": "2026《Honey》林莎寫真書",
+      "id": "edition-3c70d289609fa053852d3a21",
+      "format": "physical",
+      "editionLabel": "二刷單本版",
+      "editionVariant": "second_printing",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/a3e0f748c04d69dcdf5a3c4bb9c340475fc27288441ef460bad7799688c0634d.jpg",
+      "coverObjectKey": "musebooks/covers/a3e0f748c04d69dcdf5a3c4bb9c340475fc27288441ef460bad7799688c0634d.jpg",
+      "metadataSourceUrl": "https://www.ruten.com.tw/item/22613373876604/",
+      "contentSummary": "實體寫真書二刷單本版，沒有周邊商品。ISBN、頁數與書本尺寸未確認；未找到數位版。"
+    },
+    {
+      "model": "林莎",
+      "workId": "work-tw-ace459d30c84e9a74ca7619f",
+      "workTitle": "2026《Honey》林莎寫真書",
+      "id": "edition-30cae489b71aa0fe22cf739f",
+      "format": "physical",
+      "editionLabel": "限量周邊套組",
+      "editionVariant": "limited",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/a3e0f748c04d69dcdf5a3c4bb9c340475fc27288441ef460bad7799688c0634d.jpg",
+      "coverObjectKey": "musebooks/covers/a3e0f748c04d69dcdf5a3c4bb9c340475fc27288441ef460bad7799688c0634d.jpg",
+      "metadataSourceUrl": "https://www.ruten.com.tw/item/22613373876604/",
+      "contentSummary": "實體寫真書1本、無摺海報2張（4款隨機）、應援扇1把（2款隨機）、明信片4張。ISBN、頁數與書本尺寸未確認；配件只屬套組。"
+    },
+    {
+      "model": "劉淇",
+      "workId": "work-tw-eb156b0615005365d78916bb",
+      "workTitle": "濕樂園：劉淇《SOAKING WET》寫真書",
+      "id": "edition-ecd90d51e7d23b543494ca73",
+      "format": "digital",
+      "editionLabel": "PDF電子版",
+      "editionVariant": "without_video",
+      "isbn": "",
+      "pageCount": 106,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/ae7abe2a22a7f8e47f7ff0db9014a4aeb6a1128e826b017b86f5d3e6272663aa.jpg",
+      "coverObjectKey": "musebooks/covers/ae7abe2a22a7f8e47f7ff0db9014a4aeb6a1128e826b017b86f5d3e6272663aa.jpg",
+      "metadataSourceUrl": "https://www.pubu.com.tw/magazine/686437",
+      "contentSummary": "PDF數位寫真，106頁（31MB）；棚拍雕塑感人像與日夜泳池主題。此為一般電子書版，Pubu另售含影片版。"
+    },
+    {
+      "model": "劉淇",
+      "workId": "work-tw-eb156b0615005365d78916bb",
+      "workTitle": "濕樂園：劉淇《SOAKING WET》寫真書",
+      "id": "edition-e7229205490000ea2ec259d9",
+      "format": "digital",
+      "editionLabel": "PDF影音版",
+      "editionVariant": "with_video",
+      "isbn": "",
+      "pageCount": 106,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/a93159532f12731b21728714ff232deae823d0fb774a05e247a653dbcabd1199.jpg",
+      "coverObjectKey": "musebooks/covers/a93159532f12731b21728714ff232deae823d0fb774a05e247a653dbcabd1199.jpg",
+      "metadataSourceUrl": "https://www.pubu.com.tw/magazine/686433",
+      "contentSummary": "PDF數位寫真，106頁（31MB），另含影片內容；影片數量未公布。棚拍與泳池主題。"
+    },
+    {
+      "model": "曼容",
+      "workId": "work-tw-03c5ae12b61ad3d1e9c5b3b5",
+      "workTitle": "曼曼喜歡你 曼容數位寫真（含影音）",
+      "id": "edition-a0a17dce1636ff2ff25d3ebb",
+      "format": "digital",
+      "editionLabel": "EPUB固定版面含影音",
+      "editionVariant": "with_video",
+      "isbn": "9786264036115",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/15146c36ec6d1023beb807b87c67cb08b8b1f1942d109c720bc34f53ed775b14.jpg",
+      "coverObjectKey": "musebooks/covers/15146c36ec6d1023beb807b87c67cb08b8b1f1942d109c720bc34f53ed775b14.jpg",
+      "metadataSourceUrl": "https://tw.buy.yahoo.com/gdsale/gdsale.asp?act=ACT251125012&gdid=11737942&hpp=ACT251125012",
+      "contentSummary": "EPUB固定版面數位寫真，含9支側拍花絮影音。公開宣傳提及3款封面設計；同一EISBN商品以Yahoo零售頁展示封面，未拆成不同ISBN版次。"
+    },
+    {
+      "model": "宋羽葤",
+      "workId": "work-tw-2323df19f2b7adab65b127ff",
+      "workTitle": "羽葤的小宇宙：宋羽葤數位寫真",
+      "id": "edition-c4791d81857c36c833ca110d",
+      "format": "digital",
+      "editionLabel": "EPUB固定版式",
+      "editionVariant": "with_video",
+      "isbn": "9786263381780",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/f49b33a63010c49925dc8002ca7f5bf07dae4223116e5b0153b77bed6d5b4de8.jpg",
+      "coverObjectKey": "musebooks/covers/f49b33a63010c49925dc8002ca7f5bf07dae4223116e5b0153b77bed6d5b4de8.jpg",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/013427987",
+      "contentSummary": "EPUB固定版式數位寫真；商品文案確認池邊泳裝、棚內造型與居家人像概念。官方作者連結所列同名版標示含影音，但片數與數位頁數未公布。"
+    },
+    {
+      "model": "言嘉佑",
+      "workId": "work-tw-1acb30d3b59f6c6d88a70e55",
+      "workTitle": "Virtual 虛擬情人：言嘉佑數位寫真",
+      "id": "edition-288c77305b00b5bbcb8f190a",
+      "format": "digital",
+      "editionLabel": "電子書版",
+      "editionVariant": "unspecified",
+      "isbn": "9786264159883",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/5c5b7e31b989904a53fb14182c72e6247a871ace66ca69d4d4ed07ef047a3925.webp",
+      "coverObjectKey": "musebooks/covers/5c5b7e31b989904a53fb14182c72e6247a871ace66ca69d4d4ed07ef047a3925.webp",
+      "metadataSourceUrl": "https://www.momoshop.com.tw/product/14197050",
+      "contentSummary": "台灣角川數位寫真電子書；EISBN 9786264159883。零售頁未公布頁數與檔案格式。"
+    },
+    {
+      "model": "芷媗",
+      "workId": "work-tw-bd736260748f93769128a0f1",
+      "workTitle": "芷想被你收藏Candy芷媗首本個人實體寫真",
+      "id": "edition-65e97ae96f67c57043dfa960",
+      "format": "physical",
+      "editionLabel": "標準版",
+      "editionVariant": "standard",
+      "isbn": "9786269273300",
+      "pageCount": 144,
+      "dimensions": "18cm×25.6cm×1.2cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/c993f877b73a6a7a0b5fbf4021d24e4e7c6afebd65df8a7d533aa5954af4a4a6.jpg",
+      "coverObjectKey": "musebooks/covers/c993f877b73a6a7a0b5fbf4021d24e4e7c6afebd65df8a7d533aa5954af4a4a6.jpg",
+      "metadataSourceUrl": "https://www.iwinimc.com/products/candy1023-photobook",
+      "contentSummary": "144頁平裝膠裝實體寫真，18×25.6×1.2cm；商品內容為寫真書1本。補入ISBN 9786269273300與正式發行日。"
+    },
+    {
+      "model": "董梓甯、林莎、吳元元",
+      "workId": "work-tw-96926b38696ba73e299897d0",
+      "workTitle": "《三倍心跳》梓梓×林莎×元元寫真書",
+      "id": "edition-2aacde30ca082f374c8041ab",
+      "format": "physical",
+      "editionLabel": "首波親簽板限量套組",
+      "editionVariant": "limited",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/505930470276b7ad7cb23bd0727ea6a2bfdb3013247722a0713f6c0192d7e870.png",
+      "coverObjectKey": "musebooks/covers/505930470276b7ad7cb23bd0727ea6a2bfdb3013247722a0713f6c0192d7e870.png",
+      "metadataSourceUrl": "https://bee3shine.com/product/%E3%80%8A%E4%B8%89%E5%80%8D%E5%BF%83%E8%B7%B3%E3%80%8B%E6%A2%93%E6%A2%93x%E6%9E%97%E8%8E%8Ex%E5%85%83%E5%85%83-%E9%99%90%E9%87%8F%E4%B8%89%E4%BA%BA%E5%AF%AB%E7%9C%9F%E5%A5%97%E7%B5%84/",
+      "contentSummary": "董梓甯（梓梓）、林莎、吳元元三人合體實體寫真套組。首波限量含三人親筆簽名板；頁數、書本尺寸與其他隨附物未公布。未找到數位版。"
+    },
+    {
+      "model": "蘋蘋澎澎、湘綾",
+      "workId": "work-tw-8ce4dd25e173839b10d88706",
+      "workTitle": "2026「純·欲姊姊特休中」寫真單書",
+      "id": "edition-51b040d29f2ce074f6e91c36",
+      "format": "physical",
+      "editionLabel": "實體單書版",
+      "editionVariant": "standard",
+      "isbn": "",
+      "pageCount": 128,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/a88f9b052189d59514873fae650176fa2dce1d64c694a55d879da126ad011445.jpg",
+      "coverObjectKey": "musebooks/covers/a88f9b052189d59514873fae650176fa2dce1d64c694a55d879da126ad011445.jpg",
+      "metadataSourceUrl": "https://pinpinponpon627.waca.tw/product/detail/2589988",
+      "contentSummary": "128頁雙人實體寫真單書，含兩款識別證小卡隨機1張；主題由蘋蘋澎澎與湘綾共同拍攝。另有含實體周邊及電子檔的VIP組合，未列為獨立數位版。"
+    },
+    {
+      "model": "吳元元",
+      "workId": "work-tw-58351c46675a4f14d7e25932",
+      "workTitle": "元氣東京：吳婕安寫真書",
+      "id": "edition-589dceab473eda2e57267917",
+      "format": "physical",
+      "editionLabel": "特裝版",
+      "editionVariant": "special",
+      "isbn": "",
+      "pageCount": 144,
+      "dimensions": "18cm×25.6cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/31aedbd88cba7789ee8eee28186c28fd571ba34eb1eac8ebc59544ae25e0d07e.jpg",
+      "coverObjectKey": "musebooks/covers/31aedbd88cba7789ee8eee28186c28fd571ba34eb1eac8ebc59544ae25e0d07e.jpg",
+      "metadataSourceUrl": "https://www.cite.com.tw/book?id=82767",
+      "contentSummary": "寫真書1本、隨機海報1張（2款）、隨機抱枕套1個（2款），含外盒。"
+    },
+    {
+      "model": "吳元元",
+      "workId": "work-tw-58351c46675a4f14d7e25932",
+      "workTitle": "元氣東京：吳婕安寫真書",
+      "id": "edition-bd2b8694677566edf9708188",
+      "format": "physical",
+      "editionLabel": "通路限定版",
+      "editionVariant": "limited",
+      "isbn": "",
+      "pageCount": 144,
+      "dimensions": "18cm×25.6cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/6da22dae3eca51e02a539d2e645f305863df0442c7e04f30587a7c177e06d752.jpg",
+      "coverObjectKey": "musebooks/covers/6da22dae3eca51e02a539d2e645f305863df0442c7e04f30587a7c177e06d752.jpg",
+      "metadataSourceUrl": "https://www.cite.com.tw/book?id=84369",
+      "contentSummary": "144頁寫真書。通路限定贈品為4款親簽寫真卡中的隨機1款，數量有限；是否仍隨書附贈須向賣家確認。"
+    },
+    {
+      "model": "吳元元",
+      "workId": "work-tw-05ea1088425e89aa5c0004e4",
+      "workTitle": "元氣滿滿：吳元元寫真書",
+      "id": "edition-d6d51dc14ea7d9908412e077",
+      "format": "physical",
+      "editionLabel": "特裝版",
+      "editionVariant": "special",
+      "isbn": "",
+      "pageCount": 144,
+      "dimensions": "21cm×25.6cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/489f01b34d1a39bbf29ffc80e48d317f617db6a2a98830f0ad21df7a0acbaba6.jpg",
+      "coverObjectKey": "musebooks/covers/489f01b34d1a39bbf29ffc80e48d317f617db6a2a98830f0ad21df7a0acbaba6.jpg",
+      "metadataSourceUrl": "https://www.cite.com.tw/book?id=76596",
+      "contentSummary": "寫真書1本、隨機海報1張（2款）、隨機A5資料夾2個（4款）、隨機抱枕套1個（2款），含外盒。"
+    },
+    {
+      "model": "吳元元",
+      "workId": "work-tw-0ee54eafe73f15073c4b2751",
+      "workTitle": "元元：吳婕安寫真書",
+      "id": "edition-78fab16ea16d6e8e982ea301",
+      "format": "physical",
+      "editionLabel": "慶功版",
+      "editionVariant": "celebration",
+      "isbn": "9786263384750",
+      "pageCount": 184,
+      "dimensions": "18cm×25.6cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/2f1d2b1ddc1b82121d01995e3981a95aca74b908d107a33bbd8a8ab4f0a14373.jpg",
+      "coverObjectKey": "musebooks/covers/2f1d2b1ddc1b82121d01995e3981a95aca74b908d107a33bbd8a8ab4f0a14373.jpg",
+      "metadataSourceUrl": "https://www.cite.com.tw/book?id=93763",
+      "contentSummary": "紙本寫真書，共184頁。"
+    },
+    {
+      "model": "巫苡萱",
+      "workId": "work-tw-77f03aac5e3753ef1b96279f",
+      "workTitle": "天天和你在苡起：巫苡萱寫真",
+      "id": "edition-6e4133176efe9cc0fe79371a",
+      "format": "physical",
+      "editionLabel": "限定版",
+      "editionVariant": "limited",
+      "isbn": "",
+      "pageCount": 80,
+      "dimensions": "18cm×25.6cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/8a1b6650291a719284a25ee2b21084baf4e7c4826994ece51596248ec89c8f97.jpg",
+      "coverObjectKey": "musebooks/covers/8a1b6650291a719284a25ee2b21084baf4e7c4826994ece51596248ec89c8f97.jpg",
+      "metadataSourceUrl": "https://www.cite.com.tw/book?id=78441",
+      "contentSummary": "紙本寫真書，共80頁。"
+    },
+    {
+      "model": "黃上晏",
+      "workId": "work-tw-7403bb83e9631ff3152abd7f",
+      "workTitle": "仲夏晏之夢：黃上晏寫真",
+      "id": "edition-aad1bd75960ed120ebc46363",
+      "format": "physical",
+      "editionLabel": "特裝版",
+      "editionVariant": "special",
+      "isbn": "",
+      "pageCount": 144,
+      "dimensions": "18cm×25.6cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/9e03f6b41c7339dcc84a99f693f2bdf95eb651cb07f3fd69a452a626abcf91e0.jpg",
+      "coverObjectKey": "musebooks/covers/9e03f6b41c7339dcc84a99f693f2bdf95eb651cb07f3fd69a452a626abcf91e0.jpg",
+      "metadataSourceUrl": "https://www.cite.com.tw/book?id=83222",
+      "contentSummary": "紙本寫真書，共144頁。"
+    },
+    {
+      "model": "禾羽",
+      "workId": "work-tw-d83d47417493a7a1f42f626e",
+      "workTitle": "2026《禾你相羽 in Okinawa》寫真書",
+      "id": "edition-4cc35fcac09a8d9cde684102",
+      "format": "physical",
+      "editionLabel": "一般版",
+      "editionVariant": "standard",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/6a451ca19202638d93ec3b05c057ef4087904a8df6490685b8a5ab31612e923e.jpg",
+      "coverObjectKey": "musebooks/covers/6a451ca19202638d93ec3b05c057ef4087904a8df6490685b8a5ab31612e923e.jpg",
+      "metadataSourceUrl": "https://www.kaboom.tw/products/2026-kimi-in-okinawa-photo-book",
+      "contentSummary": "沖繩取景寫真書1本，不含周邊；17.6×25.0cm。梓梓友情客串。頁數、ISBN及正式出版日未公開；2026-09-15為預計出貨日。封面影像取自官方商品圖中展示的寫真書封面。"
+    },
+    {
+      "model": "禾羽",
+      "workId": "work-tw-d83d47417493a7a1f42f626e",
+      "workTitle": "2026《禾你相羽 in Okinawa》寫真書",
+      "id": "edition-428ac34e1f9d0ee40ea68ae5",
+      "format": "physical",
+      "editionLabel": "精裝收藏版",
+      "editionVariant": "special",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/6a451ca19202638d93ec3b05c057ef4087904a8df6490685b8a5ab31612e923e.jpg",
+      "coverObjectKey": "musebooks/covers/6a451ca19202638d93ec3b05c057ef4087904a8df6490685b8a5ab31612e923e.jpg",
+      "metadataSourceUrl": "https://www.kaboom.tw/products/2026-kimi-in-okinawa-photo-book",
+      "contentSummary": "寫真書1本、精美書盒、隨機人形立牌1款（共4款）、隨機行李吊牌1款（共4款）、明信片5張。書尺寸17.6×25.0cm；官方稱精裝版，裝訂細節未確認。2026-09-15為預計出貨日；ISBN及頁數未公開。"
+    }
+  ],
+  "coverage": {
+    "modelsAdded": 4,
+    "worksAdded": 7,
+    "editionRowsPrepared": 18,
+    "newEditionsAdded": 9,
+    "newPhysicalEditionsAdded": 4,
+    "newDigitalEditionsAdded": 5,
+    "existingEditionsEnriched": 9,
+    "existingCoverLinksRestored": 8,
+    "priceObservationsCreated": 0,
+    "pendingCoversAfterImport": 0,
+    "notes": "Added seven previously unrepresented works: five individual work records (four new subject names and a new 林莎 release) plus two collaborations. The batch adds five digital editions and four new physical editions, enriches Candy’s existing physical metadata, and restores covers for eight older editions without changing their edition IDs. Physical and digital editions remain separate. No marketplace or retail price observations were created in this metadata/cover batch.",
+    "collaborativeWorksAdded": 2
+  }
+}

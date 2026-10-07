@@ -1,0 +1,156 @@
+{
+  "batch": 107,
+  "verifiedAt": "2026-10-07",
+  "purpose": "Add newly verified Taiwan photobook records with physical print and digital ebook editions modeled separately.",
+  "models": [
+    "吳岳擎",
+    "黃信赫",
+    "林嘉威"
+  ],
+  "works": [
+    {
+      "model": "吳岳擎",
+      "title": "擎書：吳岳擎Andy寫真書",
+      "photographer": "藍陳福堂",
+      "publisher": "台灣角川",
+      "workId": "work-tw-25c59d7f105baad898b5cb5e",
+      "sources": [
+        "https://www.kadokawa.com.tw/products/9786263521810",
+        "https://www.bookwalker.com.tw/product/156484"
+      ],
+      "editions": [
+        {
+          "format": "physical",
+          "label": "紙本版",
+          "url": "https://www.kadokawa.com.tw/products/9786263521810",
+          "releaseDate": "2023-01-18",
+          "pageCount": 0,
+          "isbnOrEisbn": "9786263521810",
+          "priceTWD": null,
+          "offerEvidence": "",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/66c285f0cd7c8b200b6540ab0c9400e023ed5a9f19f749d46e78a9172128925e.jpg",
+          "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/156484/zoom_big_156484.jpg",
+          "metadataNote": "台灣角川紙本產品頁確認作者吳岳擎、攝影藍陳福堂、上市日及附首刷寫真卡說明；出版社頁目前顯示售完，未建立主觀或成交價格。"
+        },
+        {
+          "format": "digital",
+          "label": "固定版面 EPUB",
+          "url": "https://www.bookwalker.com.tw/product/156484",
+          "releaseDate": "2023-02-10",
+          "pageCount": 144,
+          "isbnOrEisbn": "9786263522060",
+          "priceTWD": 450,
+          "offerEvidence": "Live BOOK☆WALKER Taiwan product page shows an active NT$450 checkout/cart offer, fixed-layout EPUB, 144 pages, EISBN 9786263522060, release date 2023-02-10, author 吳岳擎, photographer 藍陳福堂, and publisher 台灣角川. This is a current digital asking price, not a completed sale.",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/66c285f0cd7c8b200b6540ab0c9400e023ed5a9f19f749d46e78a9172128925e.jpg",
+          "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/156484/zoom_big_156484.jpg",
+          "metadataNote": "BOOK☆WALKER列固定版面EPUB、144頁、ISBN 9786263521810、EISBN 9786263522060；內容為照片及吳岳擎隨筆。"
+        }
+      ],
+      "composition": "吳岳擎首本個人寫真與隨筆散文，取景於東台灣山海景觀及旅宿；內容包含出道歷程、友情、感情觀、旅行、自信與寫給未來自己的文字。"
+    },
+    {
+      "model": "黃信赫",
+      "title": "偽裝Camouflage：黃信赫寫真散文",
+      "photographer": "藍陳福堂",
+      "publisher": "台灣角川",
+      "workId": "work-tw-6e4ee4a7fb4b37f8d7f5b149",
+      "sources": [
+        "https://www.sanmin.com.tw/product/index/011643030",
+        "https://www.bookwalker.com.tw/product/162813"
+      ],
+      "editions": [
+        {
+          "format": "physical",
+          "label": "平裝版",
+          "url": "https://www.sanmin.com.tw/product/index/011643030",
+          "releaseDate": "2023-04-27",
+          "pageCount": 128,
+          "isbnOrEisbn": "9786263524583",
+          "priceTWD": 522,
+          "offerEvidence": "Live Sanmin Books Taiwan product page lists the physical paperback at NT$522, current stock 1, with add-to-cart enabled. It identifies ISBN 9786263524583, publication date 2023-04-27, 128 pages, publisher 台灣角川, author 黃信赫, and photographer 藍陳福堂. This is the physical-store asking price, not a completed sale.",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/9c8a70c0d9711a5ea18a9b379b3aee87823f5846c640aef43839d3299b723ddf.jpg",
+          "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/626/626352458.jpg",
+          "metadataNote": "三民確認平裝128頁、ISBN 9786263524583、出版社台灣角川、黃信赫著及藍陳福堂攝影。"
+        },
+        {
+          "format": "digital",
+          "label": "固定版面 EPUB",
+          "url": "https://www.bookwalker.com.tw/product/162813",
+          "releaseDate": "2023-05-19",
+          "pageCount": 128,
+          "isbnOrEisbn": "9786263524927",
+          "priceTWD": 435,
+          "offerEvidence": "Live BOOK☆WALKER Taiwan product page shows an active NT$435 checkout/cart offer, fixed-layout EPUB, 128 pages, EISBN 9786263524927, release date 2023-05-19, author 黃信赫, photographer 藍陳福堂, and publisher 台灣角川. This is a current digital asking price, not a completed sale.",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/e7b7f71f5b59e986887b6081f3f9ccada50ec149de89646948fc120745021e3a.jpg",
+          "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/162813/zoom_big_162813.jpg",
+          "metadataNote": "BOOK☆WALKER列固定版面EPUB、128頁、EISBN 9786263524927，搭配黃信赫照片及自傳式散文。"
+        }
+      ],
+      "composition": "黃信赫首本個人寫真散文，結合新拍攝影像與自傳式文字；章節涵蓋午後琴聲、美國求學、演員之路、感情、游泳、低潮與自我認識。"
+    },
+    {
+      "model": "林嘉威",
+      "title": "愛戀❤嘉威：林嘉威個人寫真Wico Lin Photobook",
+      "photographer": "黃天仁",
+      "publisher": "尖端出版",
+      "workId": "work-tw-dcb91f7d559fe083f92ca50a",
+      "sources": [
+        "https://www.sanmin.com.tw/product/index/010008244",
+        "https://www.bookwalker.com.tw/product/129601"
+      ],
+      "editions": [
+        {
+          "format": "physical",
+          "label": "平裝版",
+          "url": "https://www.sanmin.com.tw/product/index/010008244",
+          "releaseDate": "2021-11-05",
+          "pageCount": 160,
+          "isbnOrEisbn": "9786263161788",
+          "priceTWD": 558,
+          "offerEvidence": "Live Sanmin Books Taiwan product page lists the physical paperback at NT$558, shows add-to-cart and says it can be ordered with 4–10 business days procurement after an out-of-stock status. It identifies ISBN 9786263161788, publication date 2021-11-05, 160 pages, publisher 尖端出版, author 林嘉威, and photographer 黃天仁. This is an orderable backorder asking price, not an in-stock offer or completed sale.",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/e361574ad4e652475f7043569018bf2ce58c586248acb54a1b45a5cf53b3421d.jpg",
+          "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/626/626316178.jpg",
+          "metadataNote": "三民確認平裝160頁、ISBN 9786263161788、作者林嘉威、攝影黃天仁；紙本限定內容包括Q&A及私房照。商品目前顯示無庫存，但可下單採購，約4至10個工作天。"
+        },
+        {
+          "format": "digital",
+          "label": "固定版面 EPUB",
+          "url": "https://www.bookwalker.com.tw/product/129601",
+          "releaseDate": "2021-12-17",
+          "pageCount": 158,
+          "isbnOrEisbn": "9786263162440",
+          "priceTWD": 372,
+          "offerEvidence": "Live BOOK☆WALKER Taiwan product page shows an active NT$372 checkout/cart offer, fixed-layout EPUB, 158 pages, EISBN 9786263162440, release date 2021-12-17, author 林嘉威, photographer 黃天仁, and publisher 尖端出版. This is a current digital asking price, not a completed sale.",
+          "coverUrl": "https://img.musecards.my/musebooks/covers/a6cf62b2cfa7edfb490ab7d012136c426eb680c01c9253c8ceb6e2ef15de301b.jpg",
+          "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/129601/zoom_big_129601.jpg",
+          "metadataNote": "BOOK☆WALKER列固定版面EPUB、158頁、EISBN 9786263162440；數位頁面描述照片及心情手札，紙本限定Q&A與私房照不推定為數位內容。"
+        }
+      ],
+      "composition": "林嘉威首本個人寫真，收錄近兩百張影像與心情手札，呈現都會、山林、海邊等場景，以及純真、鄰家、魅惑、性感與氣質等造型。紙本版另收錄紙本限定Q&A與私房照。"
+    }
+  ],
+  "notes": [
+    "Three new works and six distinct editions are prepared: one physical and one fixed-layout EPUB edition per work.",
+    "Current observed physical and digital store asking prices are separate listings. They are not completed-sale prices.",
+    "Kadokawa currently marks the 擎書 print run sold out, so its physical edition has no active offer record. Sanmin shows 黃信赫's print at NT$522 with one in stock; 林嘉威's physical book is priced NT$558 and orderable on backorder with a 4–10 business day procurement estimate.",
+    "Publisher/retailer cover files were copied to R2 and verified by exact public SHA-256 readback before generating this manifest.",
+    "Model discovery is ongoing; check additional BOOK☆WALKER Taiwan male-photo listings and outstanding retailer queries before considering the catalog exhaustive."
+  ],
+  "sources": [
+    "https://www.kadokawa.com.tw/products/9786263521810",
+    "https://www.bookwalker.com.tw/product/156484",
+    "https://www.sanmin.com.tw/product/index/011643030",
+    "https://www.bookwalker.com.tw/product/162813",
+    "https://www.sanmin.com.tw/product/index/010008244",
+    "https://www.bookwalker.com.tw/product/129601"
+  ],
+  "changes": {
+    "newWorks": 3,
+    "newPhysicalEditions": 3,
+    "newDigitalEditions": 3,
+    "verifiedActivePhysicalOffers": 2,
+    "verifiedActiveDigitalOffers": 3,
+    "newR2CoverUploads": 6,
+    "pendingCovers": 0
+  }
+}

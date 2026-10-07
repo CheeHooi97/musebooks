@@ -1,0 +1,113 @@
+{
+  "batch": 106,
+  "verifiedAt": "2026-10-07",
+  "purpose": "Add newly verified Taiwan digital photobook works and platform-specific file editions while keeping digital products separate from physical marketplace inventory.",
+  "models": [
+    "羽庭",
+    "林倪安"
+  ],
+  "works": [
+    {
+      "model": "羽庭",
+      "title": "替身",
+      "format": "digital",
+      "platform": "Rakuten Kobo Taiwan",
+      "url": "https://www.rakuten.com.tw/shop/kobo/product/98cf8845-9674-3f9b-b647-4f9155105a2c/",
+      "priceTWD": 199,
+      "releaseDate": "2011-08-30",
+      "fileFormat": "EPUB3 fixed layout",
+      "publisher": "水舞演藝",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/e4f9502b998d0c3bc6e4103ddfd74ec5c71f7aacb7d5307d639e7d906d985d3f.jpg",
+      "notes": [
+        "A separate physical《替身》is mentioned by secondary references and marketplace search results, but no primary edition record was verified in this wave; no physical edition or physical asking price was added."
+      ]
+    },
+    {
+      "model": "羽庭",
+      "title": "裸心時刻 羽庭",
+      "format": "digital",
+      "editions": [
+        {
+          "platform": "HamiBook",
+          "fileFormat": "PDF",
+          "publisher": "質男幫",
+          "releaseDate": "2024-12-31",
+          "url": "https://www.hamibook.com.tw/book/0100406339",
+          "coverStatus": "Uploaded official public page preview; it is a generic 18+ placeholder, not the underlying cover."
+        },
+        {
+          "platform": "Rakuten Kobo Taiwan",
+          "fileFormat": "EPUB3 fixed layout",
+          "publisher": "米西亞",
+          "releaseDate": "2026-01-01",
+          "url": "https://www.rakuten.com.tw/shop/kobo/product/be364870-e4f7-3490-bb20-9e7810c1a5e4/",
+          "priceTWD": 399,
+          "coverStatus": "Pending; actual cover is behind the retailer's 18+ confirmation prompt."
+        }
+      ],
+      "notes": [
+        "The two store pages have matching title, model, creator, and description; they are retained as separate digital file-format editions. No physical edition was inferred."
+      ]
+    },
+    {
+      "model": "林倪安",
+      "title": "有倪真好 倪安數位寫真（含影音）",
+      "format": "digital",
+      "platform": "BOOK☆WALKER Taiwan",
+      "url": "https://www.bookwalker.com.tw/product/182855",
+      "priceTWD": 350,
+      "fileFormat": "fixed-layout EPUB",
+      "pageCount": 254,
+      "eISBN": "9786263775930",
+      "releaseDate": "2023-12-18",
+      "photographer": "達文西",
+      "publisher": "尖端出版",
+      "bonusVideos": 7,
+      "coverUrl": "https://img.musecards.my/musebooks/covers/b0ca8927f38a6048658287995adb5a436e2729315fcb65df246c3c300610cbb1.jpg",
+      "notes": [
+        "This is distinct from the existing《剛好遇見倪》digital work; the retailer page supplies a separate title and EISBN."
+      ]
+    }
+  ],
+  "notes": [
+    "Three new digital works and four digital editions were prepared. Three current active digital asking-price observations were verified in retailer pages; no sold transaction prices were inferred.",
+    "《替身》is added only as the Kobo EPUB3 digital edition. Secondary mentions of a physical issue are not treated as a verified physical edition.",
+    "《裸心時刻 羽庭》has a HamiBook PDF edition and a Kobo fixed-layout EPUB edition. HamiBook exposes only its generic 18+ preview image, which is labeled as such. The Kobo edition's actual cover remains pending because it is behind the store's 18+ confirmation prompt; the prompt was not accepted.",
+    "《有倪真好》is a new work separate from the existing《剛好遇見倪》; the live BOOK☆WALKER page gives its own title, photographer, page count, EISBN, release date, format and active NT$350 offer.",
+    "Physical and digital listings remain separate. No digital retailer price is recorded as a physical-marketplace asking or sold price."
+  ],
+  "sources": [
+    "https://www.rakuten.com.tw/shop/kobo/product/98cf8845-9674-3f9b-b647-4f9155105a2c/",
+    "https://www.hamibook.com.tw/book/0100406339",
+    "https://www.rakuten.com.tw/shop/kobo/product/be364870-e4f7-3490-bb20-9e7810c1a5e4/",
+    "https://www.bookwalker.com.tw/product/182855"
+  ],
+  "changes": {
+    "newWorks": 3,
+    "newDigitalEditions": 4,
+    "newPhysicalEditions": 0,
+    "verifiedActiveDigitalOffers": 3,
+    "newR2CoverUploads": 3,
+    "pendingCovers": 1
+  },
+  "researchQueue": [
+    {
+      "model": "羽庭",
+      "candidate": "替身 physical edition",
+      "status": "hold",
+      "reason": "Secondary references and marketplace search results exist, but no primary physical-edition metadata/cover was verified."
+    },
+    {
+      "model": "羽庭",
+      "candidate": "additional digital works",
+      "status": "continue",
+      "reason": "Continue searching public Taiwan digital storefronts and publisher catalogs."
+    },
+    {
+      "model": "Taiwan models",
+      "candidate": "additional published photobooks",
+      "status": "continue",
+      "reason": "The broader model and publisher research remains open; this batch is not exhaustive."
+    }
+  ]
+}

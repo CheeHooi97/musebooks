@@ -1,0 +1,281 @@
+{
+  "batch": 87,
+  "verifiedAt": "2026-10-07",
+  "models": [
+    {
+      "name": "馮馮",
+      "aliases": [
+        "馮馮"
+      ],
+      "identityNote": "Fan520設有馮馮GF寫真專區，四個商品頁均將馮馮列為數位寫真主角。",
+      "identitySourceUrls": [
+        "https://www.fan520.net/categories/feng",
+        "https://www.fan520.net/products/feng-20230509001",
+        "https://www.fan520.net/products/feng-20230615001",
+        "https://www.fan520.net/products/feng-2023080701",
+        "https://www.fan520.net/products/feng-072001"
+      ],
+      "physicalStatus": "本批只查核Fan520數位商品，未完成其他實體市場檢索；不能據此判定沒有實體版本。",
+      "digitalStatus": "已核實Fan520數位PDF商品頁與當前數位零售價；不代表其他平台的完整發行清單。",
+      "works": [
+        {
+          "workId": "work-tw-b94853a1df1e55d44dc33ad2",
+          "title": "馮馮 數位寫真－純享版（A）",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-8f80ee4fbe683e2f1972a14b",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "publisher": "女神範出版社",
+              "contentSummary": "Fan520商品頁列為馮馮A款數位寫真，電子照片以PDF格式交付；頁數、攝影者、發行日與影片內容未公開。",
+              "sourceUrl": "https://www.fan520.net/products/feng-20230509001",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/6459f791b61a03002078cec5/original.jpg?1683617681",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/81031f9ec81842e4d27e7622adce5968f71195736208488933b309b898903531.jpg",
+              "coverObjectKey": "musebooks/covers/81031f9ec81842e4d27e7622adce5968f71195736208488933b309b898903531.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "feng-20230509001",
+                  "url": "https://www.fan520.net/products/feng-20230509001",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 39000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T02:51:00Z"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/feng-20230509001"
+          ]
+        },
+        {
+          "workId": "work-tw-75dabe6188cfab9eeab92882",
+          "title": "馮馮 數位寫真－絕美優雅（B）",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-4a9d39a3db2449f2d6d606f0",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "publisher": "女神範出版社",
+              "contentSummary": "Fan520商品頁列為馮馮B款數位寫真，電子照片以PDF格式交付；頁數、攝影者、發行日與影片內容未公開。",
+              "sourceUrl": "https://www.fan520.net/products/feng-20230615001",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/648ac38109784c0020e057b5/original.jpg?1686815617",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/479464a2321885db64e84edb961dbce918f65eacaaf1bce6f629e7262f561f29.jpg",
+              "coverObjectKey": "musebooks/covers/479464a2321885db64e84edb961dbce918f65eacaaf1bce6f629e7262f561f29.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "feng-20230615001",
+                  "url": "https://www.fan520.net/products/feng-20230615001",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 49000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T02:51:00Z"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/feng-20230615001"
+          ]
+        },
+        {
+          "workId": "work-tw-51fcd21b3a7f3323255e0242",
+          "title": "馮馮 數位寫真－甜蜜戀校生（C）",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-591017af14161a0cbaeee897",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "publisher": "女神範出版社",
+              "contentSummary": "Fan520商品頁列為馮馮C款數位寫真，電子照片以PDF格式交付；頁數、攝影者、發行日與影片內容未公開。",
+              "sourceUrl": "https://www.fan520.net/products/feng-2023080701",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/64d08eb8d994be0016e46939/original.jpg?1691389624",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/86d02b3cf454a8f28c50535cefd7064339da86dde47c71746c3e49dff22ab086.jpg",
+              "coverObjectKey": "musebooks/covers/86d02b3cf454a8f28c50535cefd7064339da86dde47c71746c3e49dff22ab086.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "feng-2023080701",
+                  "url": "https://www.fan520.net/products/feng-2023080701",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 49000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T02:51:00Z"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/feng-2023080701"
+          ]
+        },
+        {
+          "workId": "work-tw-99ac09b3180fe2f5955f5930",
+          "title": "馮馮 數位寫真－甜甜少女 性感內衣（D）",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-cb930cf740b12d28c70f9ae5",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "releaseDate": "",
+              "publisher": "女神範出版社",
+              "contentSummary": "Fan520商品頁列為馮馮D款數位寫真，電子照片以PDF格式交付；頁數、攝影者、發行日與影片內容未公開。",
+              "sourceUrl": "https://www.fan520.net/products/feng-072001",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/64b8a1ff6478f6000e33b487/original.jpg?1689821695",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/b16b868dc2e0f6f002b72884bcbe10c605a4330da142d6aca8afb025832221d3.jpg",
+              "coverObjectKey": "musebooks/covers/b16b868dc2e0f6f002b72884bcbe10c605a4330da142d6aca8afb025832221d3.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "feng-072001",
+                  "url": "https://www.fan520.net/products/feng-072001",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 49000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T02:51:00Z"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/feng-072001"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "波多野Bella",
+      "aliases": [
+        "波多野Bella",
+        "波多"
+      ],
+      "identityNote": "Fan520的專屬商品分類標為波多野Bella；兩個商品頁使用波多作簡稱，賣場SEO欄位也列出波多與Bella。",
+      "identitySourceUrls": [
+        "https://www.fan520.net/categories/bella",
+        "https://www.fan520.net/products/bella-pohotbook070401",
+        "https://www.fan520.net/products/bella-pohotbook070401-1"
+      ],
+      "physicalStatus": "本批只查核Fan520數位商品，未完成其他實體市場檢索；不能據此判定沒有實體版本。",
+      "digitalStatus": "已核實Fan520數位PDF商品頁與當前數位零售價；不代表其他平台的完整發行清單。",
+      "works": [
+        {
+          "workId": "work-tw-59b4f14347cb7a1a614130d6",
+          "title": "波多野Bella／波多 數位寫真：性感開胸OL（A）",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-416644810a9ad08b0dd04dae",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "with_video",
+              "isbn": "",
+              "pageCount": 106,
+              "dimensions": "",
+              "releaseDate": "",
+              "publisher": "女神範出版社",
+              "contentSummary": "Fan520商品頁標示106頁PDF電子寫真，並附2分13秒MP4影片；頁面未公布攝影者、ISBN或發行日期。此為數位零售版。",
+              "sourceUrl": "https://www.fan520.net/products/bella-pohotbook070401",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/64a3888b06c87e00201aa138/original.jpg?1688438923",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/c0fda97d9cad6ef965bc5f99789581d373e2357251da75899f010e92190b7c32.jpg",
+              "coverObjectKey": "musebooks/covers/c0fda97d9cad6ef965bc5f99789581d373e2357251da75899f010e92190b7c32.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "bella-pohotbook070401",
+                  "url": "https://www.fan520.net/products/bella-pohotbook070401",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 10000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T02:51:00Z"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/bella-pohotbook070401"
+          ]
+        },
+        {
+          "workId": "work-tw-2003a5cb1cd6c5165f5ba098",
+          "title": "波多野Bella／波多 數位寫真：性治療師（B）",
+          "photographer": "",
+          "editions": [
+            {
+              "editionId": "edition-2464162a28f4bf5f1d7ebdd0",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "with_video",
+              "isbn": "",
+              "pageCount": 106,
+              "dimensions": "",
+              "releaseDate": "",
+              "publisher": "女神範出版社",
+              "contentSummary": "Fan520商品頁標示106頁PDF電子寫真，並附8分20秒MP4影片；頁面未公布攝影者、ISBN或發行日期。此為獨立的數位零售版。",
+              "sourceUrl": "https://www.fan520.net/products/bella-pohotbook070401-1",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/6868cc769453ec0011afd40e/original.jpg?1751698549",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/19333802ee079e564afb2a5db15ac13ab0ee5450c4ffef7d1905e5fca23cbefd.jpg",
+              "coverObjectKey": "musebooks/covers/19333802ee079e564afb2a5db15ac13ab0ee5450c4ffef7d1905e5fca23cbefd.jpg",
+              "retailOffers": [
+                {
+                  "sourceId": "fan520-tw",
+                  "retailer": "Fan520 女神範",
+                  "externalId": "bella-pohotbook070401-1",
+                  "url": "https://www.fan520.net/products/bella-pohotbook070401-1",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 49000,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T02:51:00Z"
+                }
+              ]
+            }
+          ],
+          "sourceUrls": [
+            "https://www.fan520.net/products/bella-pohotbook070401-1"
+          ]
+        }
+      ]
+    }
+  ]
+}

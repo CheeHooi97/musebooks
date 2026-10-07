@@ -1,0 +1,67 @@
+{
+  "batch": 92,
+  "verifiedAt": "2026-10-07T04:01:47Z",
+  "purpose": "Add T妹's independently verified digital photobook edition and a currently purchasable Sanmin digital offer without creating a physical edition or importing stale/unverified cross-retailer prices.",
+  "models": [
+    {
+      "name": "T妹",
+      "aliases": [
+        "T妹"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-1648e2b465a6831b8ea95366",
+          "title": "百變妖精：T妹數位寫真",
+          "photographer": "戴群芳",
+          "editions": [
+            {
+              "editionId": "edition-7dc009c3015d3945198f9321",
+              "format": "digital",
+              "label": "數位版",
+              "isbn": "9789571095622",
+              "eisbn": "9789571095622",
+              "publisher": "尖端出版",
+              "releaseDate": "2019-09-20",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": null,
+              "contentSummary": "固定版式 EPUB 數位寫真。Readmoo 書目列 T妹與攝影師戴群芳；頁數與完整造型／影像清單未標示。三民頁面簡介誤貼成 Chris 子婷／方糖兒的作品介紹，未用該段文字推定本書內容。",
+              "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014530039",
+              "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/222/222195411.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/2a1831cbb305f1361ddef76b9adfe4ecb24cab4dd5478e0f3db508825df6baf0.png",
+              "coverObjectKey": "musebooks/covers/2a1831cbb305f1361ddef76b9adfe4ecb24cab4dd5478e0f3db508825df6baf0.png",
+              "coverSHA256": "2a1831cbb305f1361ddef76b9adfe4ecb24cab4dd5478e0f3db508825df6baf0",
+              "coverBytes": 151292,
+              "retailOffers": [
+                {
+                  "sourceId": "sanmin-books-tw",
+                  "externalId": "014530039",
+                  "url": "https://www.sanmin.com.tw/product/index/014530039",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 23900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:01:47Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://www.sanmin.com.tw/product/index/014530039",
+        "https://reading.udn.com/ebook/store/store_product.do?pid=11601",
+        "https://www.bookwalker.com.tw/search?d=7&p=4&series_display=1&v=26",
+        "https://nclfile.ncl.edu.tw/files/202201/14a17a9b-32cc-4216-8edd-6f776cc373a2.pdf"
+      ],
+      "findings": [
+        "Sanmin live page confirmed title, author T妹, ISBN/EISBN 9789571095622, Sharp Point, 2019-09-20, fixed-layout EPUB, NT$239, and add-to-cart control.",
+        "Readmoo's indexed product detail identifies T妹 and photographer 戴群芳 and agrees on ISBN/EISBN 9789571095622; opening the prior Readmoo URL now redirects to a service-upgrade notice, so no Readmoo offer was imported.",
+        "BOOK☆WALKER search indexing lists the same digital title at NT$189, but its product page was not independently live-verified; no BOOK☆WALKER price was imported.",
+        "The National Central Library new-books PDF lists the same title and creators but ISBN 9789571096544, conflicting with both retailer EISBN listings. The verified retailer EISBN 9789571095622 is stored; the NCL discrepancy is retained here, not created as a second edition.",
+        "Sanmin's long product description is copied from Chris 子婷／方糖兒's book and conflicts with the title and author fields. It was excluded from this book's composition metadata.",
+        "No public completed-sale transaction price or verified physical edition was found for this title."
+      ]
+    }
+  ]
+}

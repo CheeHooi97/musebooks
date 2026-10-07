@@ -1,0 +1,338 @@
+{
+  "batch": 94,
+  "verifiedAt": "2026-10-07T04:26:20Z",
+  "purpose": "Add five independently verified Sharp Point digital photobook EPUBs, exact publisher-linked cover assets and only retailer asks live-verified on Sanmin/Readmoo.",
+  "models": [
+    {
+      "name": "小蘋果",
+      "aliases": [
+        "小蘋果"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-f6c71d114878c47469f5d15d",
+          "title": "蘋頻靠近你：小蘋果Apple數位寫真",
+          "photographer": "戴群芳",
+          "editions": [
+            {
+              "editionId": "edition-9fd7acd7162350140c52f24e",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571095806",
+              "eisbn": "9789571095806",
+              "publisher": "尖端出版",
+              "releaseDate": "2020-04-06",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": null,
+              "photographer": "戴群芳",
+              "contentSummary": "固定版式 EPUB 數位寫真；零售商品簡介明列睡衣與水手服造型。頁數、照片張數與完整造型清單未標示。",
+              "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014538536",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/42.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/fccceee22be14fb164d6a4f3ed69a40434b22efb5552baf0fd4758d81c9bdbb2.jpg",
+              "coverObjectKey": "musebooks/covers/fccceee22be14fb164d6a4f3ed69a40434b22efb5552baf0fd4758d81c9bdbb2.jpg",
+              "coverSHA256": "fccceee22be14fb164d6a4f3ed69a40434b22efb5552baf0fd4758d81c9bdbb2",
+              "coverBytes": 259986,
+              "retailOffers": [
+                {
+                  "sourceId": "sanmin-books-tw",
+                  "externalId": "014538536",
+                  "url": "https://www.sanmin.com.tw/product/index/014538536",
+                  "verificationUrl": "https://www.sanmin.com.tw/product/index/014538536",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 23900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:26:20Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://www.sanmin.com.tw/product/index/014538536",
+        "https://nclfile.ncl.edu.tw/files/202104/f7e692d9-fb48-4ee7-a14e-a70242acf82e.pdf"
+      ],
+      "findings": [
+        "The official Sharp Point campaign links the exact image asset to BOOK☆WALKER product card and identifies the model/photographer and digital photobook composition.",
+        "A live Sanmin or Readmoo product page confirms the EPUB edition identifier, publication date, fixed-layout format, page count when shown and the current purchasable price(s). The event campaign discount is archival and was not recorded as an active offer.",
+        "The database contains other physical 小蘋果 books; no physical edition matching this digital title or EISBN was verified."
+      ]
+    },
+    {
+      "name": "書那娜",
+      "aliases": [
+        "書那娜",
+        "NANA"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-3e945700c868364414e1ebae",
+          "title": "混血精靈NANA 書那娜數位寫真",
+          "photographer": "曾崇倫",
+          "editions": [
+            {
+              "editionId": "edition-0a388c4b6e5067448f1a9ab7",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571095844",
+              "eisbn": "9789571095844",
+              "publisher": "尖端出版",
+              "releaseDate": "2020-03-06",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 286,
+              "photographer": "曾崇倫",
+              "contentSummary": "固定版式 EPUB，286頁。Readmoo 目錄列15章：初、精靈、探險、溪戲、塵囂、暮、靜夜、花海、傳說、相遇、漾、眼眸、繁花、祈願、歸；出版社描述台灣旅拍場景，包括花東、羅東、部落、烏石港與三清宮。",
+              "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014459306",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/38.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/8261f815b4fe11754d79efa127d53c91adad54b0d88b5553c8a12c473bf754e3.jpg",
+              "coverObjectKey": "musebooks/covers/8261f815b4fe11754d79efa127d53c91adad54b0d88b5553c8a12c473bf754e3.jpg",
+              "coverSHA256": "8261f815b4fe11754d79efa127d53c91adad54b0d88b5553c8a12c473bf754e3",
+              "coverBytes": 377604,
+              "retailOffers": [
+                {
+                  "sourceId": "sanmin-books-tw",
+                  "externalId": "014459306",
+                  "url": "https://www.sanmin.com.tw/product/index/014459306",
+                  "verificationUrl": "https://www.sanmin.com.tw/product/index/014459306",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 28800,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:26:20Z"
+                },
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210133093000101",
+                  "url": "https://readmoo.com/book/210133093000101",
+                  "verificationUrl": "https://readmoo.com/book/210133093000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 28800,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:26:20Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://www.sanmin.com.tw/product/index/014459306",
+        "https://readmoo.com/book/210133093000101",
+        "https://nclfile.ncl.edu.tw/files/202104/f7e692d9-fb48-4ee7-a14e-a70242acf82e.pdf"
+      ],
+      "findings": [
+        "The official Sharp Point campaign links the exact image asset to BOOK☆WALKER product card and identifies the model/photographer and digital photobook composition.",
+        "A live Sanmin or Readmoo product page confirms the EPUB edition identifier, publication date, fixed-layout format, page count when shown and the current purchasable price(s). The event campaign discount is archival and was not recorded as an active offer.",
+        "No physical edition matching this title or EISBN was verified.",
+        "Sanmin exposes ISBN 9789571096667 and EISBN 9789571095844 on one product; NCL catalogs 9789571096667 as the PDF file. This import represents the live-sold EPUB EISBN only."
+      ]
+    },
+    {
+      "name": "溫雅云",
+      "aliases": [
+        "溫雅云",
+        "阿布舞",
+        "Abu’u"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-c6aa7651fb431a6b4a062991",
+          "title": "舞：阿布舞數位寫真",
+          "photographer": "戴群芳",
+          "editions": [
+            {
+              "editionId": "edition-0909654c44100427d0008230",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571095677",
+              "eisbn": "9789571095677",
+              "publisher": "尖端出版",
+              "releaseDate": "2019-10-04",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 206,
+              "photographer": "戴群芳",
+              "contentSummary": "固定版式 EPUB，206頁。出版社簡介稱作品集結曾特別販售的月曆、桌曆影像，也加入新拍及未公開內容；頁面未標示額外影音。",
+              "metadataSourceUrl": "https://readmoo.com/book/210117136000101",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/33.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/301d27e64406302ba13af87fec7e09af998199591fc159a96a45560e4696e295.jpg",
+              "coverObjectKey": "musebooks/covers/301d27e64406302ba13af87fec7e09af998199591fc159a96a45560e4696e295.jpg",
+              "coverSHA256": "301d27e64406302ba13af87fec7e09af998199591fc159a96a45560e4696e295",
+              "coverBytes": 320478,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210117136000101",
+                  "url": "https://readmoo.com/book/210117136000101",
+                  "verificationUrl": "https://readmoo.com/book/210117136000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 23600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:26:20Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://readmoo.com/book/210117136000101",
+        "https://reading.udn.com/ebook/store/store_product.do?pid=11703",
+        "https://nclfile.ncl.edu.tw/files/202104/f7e692d9-fb48-4ee7-a14e-a70242acf82e.pdf"
+      ],
+      "findings": [
+        "The official Sharp Point campaign links the exact image asset to BOOK☆WALKER product card and identifies the model/photographer and digital photobook composition.",
+        "A live Sanmin or Readmoo product page confirms the EPUB edition identifier, publication date, fixed-layout format, page count when shown and the current purchasable price(s). The event campaign discount is archival and was not recorded as an active offer.",
+        "No physical edition matching this title or EISBN was verified.",
+        "NCL also catalogs a PDF file as ISBN 9789571096575; this import represents the live-sold EPUB EISBN only."
+      ]
+    },
+    {
+      "name": "今井彩香",
+      "aliases": [
+        "今井彩香",
+        "今井さやか"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-90448ad036c4c6e5400decd8",
+          "title": "為你加油！今井彩香數位寫真",
+          "photographer": "戴群芳",
+          "editions": [
+            {
+              "editionId": "edition-4abed2e11dbbdbda3cf6e658",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571095639",
+              "eisbn": "9789571095639",
+              "publisher": "尖端出版",
+              "releaseDate": "2019-07-04",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 266,
+              "photographer": "戴群芳",
+              "contentSummary": "固定版式 EPUB，266頁；出版社文字與標籤確認球衣／啦啦隊及女僕裝造型。完整照片目錄與其他贈品未標示。",
+              "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/014381525",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/27.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/8c0c6e74f2cf5f319d6d65dfb0aba5ed851e43aff70cf89bf3967c2e7e23cf20.jpg",
+              "coverObjectKey": "musebooks/covers/8c0c6e74f2cf5f319d6d65dfb0aba5ed851e43aff70cf89bf3967c2e7e23cf20.jpg",
+              "coverSHA256": "8c0c6e74f2cf5f319d6d65dfb0aba5ed851e43aff70cf89bf3967c2e7e23cf20",
+              "coverBytes": 325427,
+              "retailOffers": [
+                {
+                  "sourceId": "sanmin-books-tw",
+                  "externalId": "014381525",
+                  "url": "https://www.sanmin.com.tw/product/index/014381525",
+                  "verificationUrl": "https://www.sanmin.com.tw/product/index/014381525",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 23600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:26:20Z"
+                },
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210111510000101",
+                  "url": "https://readmoo.com/book/210111510000101",
+                  "verificationUrl": "https://readmoo.com/book/210111510000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 23600,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:26:20Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://www.sanmin.com.tw/product/index/014381525",
+        "https://readmoo.com/book/210111510000101",
+        "https://nclfile.ncl.edu.tw/files/202107/54fe4753-37d3-4a44-aaa4-3e0c11fdc280.pdf"
+      ],
+      "findings": [
+        "The official Sharp Point campaign links the exact image asset to BOOK☆WALKER product card and identifies the model/photographer and digital photobook composition.",
+        "A live Sanmin or Readmoo product page confirms the EPUB edition identifier, publication date, fixed-layout format, page count when shown and the current purchasable price(s). The event campaign discount is archival and was not recorded as an active offer.",
+        "No physical edition matching this title or EISBN was verified.",
+        "NCL also catalogs ISBN 9789571096490 as a PDF file; this import represents the live-sold EPUB EISBN only."
+      ]
+    },
+    {
+      "name": "王緒緒",
+      "aliases": [
+        "王緒緒"
+      ],
+      "works": [
+        {
+          "workId": "work-tw-9175db9a9918dcdb48dd75f1",
+          "title": "和你在一起 王緒緒數位寫真書",
+          "photographer": "艾迪",
+          "editions": [
+            {
+              "editionId": "edition-104c3ac8b4a8bf3f06dee0a5",
+              "format": "digital",
+              "label": "數位版",
+              "variant": "unspecified",
+              "isbn": "9789571095332",
+              "eisbn": "9789571095332",
+              "publisher": "尖端出版",
+              "releaseDate": "2018-12-28",
+              "fileFormat": "EPUB固定版式",
+              "pageCount": 236,
+              "photographer": "艾迪",
+              "contentSummary": "固定版式 EPUB，236頁；出版社內容說明包含制服、女僕、OL與睡衣造型。完整照片目錄未標示。",
+              "metadataSourceUrl": "https://readmoo.com/book/210100743000101",
+              "coverSourceUrl": "https://cp-img.bookwalker.com.tw/event/2020/20200416/images/06.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/bd15833908d9c5a98c69acf3c8d0c136443ddeda47b8a3a30e097eff215dbd38.jpg",
+              "coverObjectKey": "musebooks/covers/bd15833908d9c5a98c69acf3c8d0c136443ddeda47b8a3a30e097eff215dbd38.jpg",
+              "coverSHA256": "bd15833908d9c5a98c69acf3c8d0c136443ddeda47b8a3a30e097eff215dbd38",
+              "coverBytes": 48590,
+              "retailOffers": [
+                {
+                  "sourceId": "readmoo-tw",
+                  "externalId": "210100743000101",
+                  "url": "https://readmoo.com/book/210100743000101",
+                  "verificationUrl": "https://readmoo.com/book/210100743000101",
+                  "status": "active",
+                  "format": "digital",
+                  "priceType": "digital",
+                  "priceMinor": 24900,
+                  "currency": "TWD",
+                  "observedAt": "2026-10-07T04:26:20Z"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "sourceUrls": [
+        "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+        "https://readmoo.com/book/210100743000101",
+        "https://reading.udn.com/ebook/store/store_product.do?pid=8728",
+        "https://nclfile.ncl.edu.tw/files/202107/54fe4753-37d3-4a44-aaa4-3e0c11fdc280.pdf"
+      ],
+      "findings": [
+        "The official Sharp Point campaign links the exact image asset to BOOK☆WALKER product card and identifies the model/photographer and digital photobook composition.",
+        "A live Sanmin or Readmoo product page confirms the EPUB edition identifier, publication date, fixed-layout format, page count when shown and the current purchasable price(s). The event campaign discount is archival and was not recorded as an active offer.",
+        "No physical edition matching this title or EISBN was verified.",
+        "NCL also lists ISBN 9789571096315 for the same work title but does not distinguish it as an EPUB. The active Readmoo EISBN 9789571095332 is retained as the cataloged EPUB; 9789571096315 was not imported as a duplicate edition."
+      ]
+    }
+  ]
+}

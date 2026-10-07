@@ -1,0 +1,574 @@
+{
+  "batch": 81,
+  "models": [
+    {
+      "name": "楊宇騰YU / YU",
+      "aliases": [
+        "楊宇騰YU",
+        "楊宇騰",
+        "YU",
+        "Yang Yu Teng"
+      ],
+      "identityNote": "Taiwan KADOKAWA, Airiti and Taiwan Tohan identify 楊宇騰YU as the subject/author. The three distinct works are Half, 光影之間 and vs YU; print and digital versions are grouped only within their matching work.",
+      "identitySourceUrls": [
+        "https://www.kadokawa.com.tw/zh-hant/products/9789865244750",
+        "https://www.airitibooks.com/Publication/Details?publicationID=P20220110162",
+        "https://www.sanmin.com.tw/product/index/010843105",
+        "https://www.kadokawa.com.tw/products/4711289612094",
+        "https://www.bookwalker.com.tw/product/154263",
+        "https://www.tohan.com.tw/product.php?act=view&id=8279"
+      ],
+      "digitalStatus": "Confirmed Airiti EPUB for Half and BOOK☆WALKER Taiwan digital special edition for 光影之間. The Light & Shadow digital listing exposes no verified EISBN or digital page count, so print metadata stays on print editions.",
+      "works": [
+        {
+          "workId": "work-tw-39d82b78ebf7a8e710169e08",
+          "title": "楊宇騰YU 1st寫真集：Half",
+          "editions": [
+            {
+              "editionId": "edition-871502c86b6d2d4858eb6dc1",
+              "sourceTitle": "楊宇騰YU 1st寫真集：Half",
+              "format": "physical",
+              "label": "標準平裝版",
+              "variant": "standard",
+              "isbn": "9789865244750",
+              "pageCount": 128,
+              "dimensions": "25.6 × 18 cm",
+              "contentSummary": "台灣角川平裝版，128頁、25.6 × 18 cm；藍陳福堂攝影，書中以影像與文字介紹楊宇騰YU的經歷及多面向。",
+              "sourceUrl": "https://www.momoshop.com.tw/goods.momo?i_code=8734336",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/66402b7417ea6a0013ae5826/original.jpg?1715481460",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/c9e8410c0a1f0f1a52c6cd617b4bfe6f63b02e08a27a5e97719a63e6961a6115.jpg",
+              "coverObjectKey": "musebooks/covers/c9e8410c0a1f0f1a52c6cd617b4bfe6f63b02e08a27a5e97719a63e6961a6115.jpg"
+            },
+            {
+              "editionId": "edition-fce5f9506ddfa7ac8d2b5c1f",
+              "sourceTitle": "楊宇騰YU 1st寫真集（電子書特別版）：Half",
+              "format": "digital",
+              "label": "EPUB電子書特別版",
+              "variant": "ebook_special",
+              "isbn": "9789865244767",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "華藝電子書EPUB特別版，收錄楊宇騰的影像、文字隨筆及粉絲百大Q&A；數位版使用獨立封面，不沿用紙本頁數、尺寸或實體贈品。",
+              "sourceUrl": "https://www.airitibooks.com/Publication/Details?publicationID=P20220110162",
+              "coverSourceUrl": "https://www.airitibooks.com/BookCover/CompressRatio_JPG/84664.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/858a29d0df9030e2bfbfdf8fddff5b31995339c1d7900e357c03fa5cfa2e1451.jpg",
+              "coverObjectKey": "musebooks/covers/858a29d0df9030e2bfbfdf8fddff5b31995339c1d7900e357c03fa5cfa2e1451.jpg"
+            }
+          ]
+        },
+        {
+          "workId": "work-tw-a2247b410361bd4293bfada5",
+          "title": "楊宇騰YU寫真集x黃中平：光影之間",
+          "editions": [
+            {
+              "editionId": "edition-601e8c8b6b73611aa1b6b63d",
+              "sourceTitle": "楊宇騰YU寫真集X黃中平：光影之間",
+              "format": "physical",
+              "label": "標準平裝版",
+              "variant": "standard",
+              "isbn": "9786263219106",
+              "pageCount": 128,
+              "dimensions": "25.6 × 18 × 1.1 cm",
+              "contentSummary": "黃中平掌鏡的128頁平裝寫真，以街頭與海岸場景、黑白及彩色影像呈現楊宇騰YU；標準版附兩款中隨機一張寫真卡。",
+              "sourceUrl": "https://www.sanmin.com.tw/product/index/010843105",
+              "coverSourceUrl": "https://cdnec.sanmin.com.tw/product_images/626/626321910.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/dc01531c3457c4955b674242a212dfdbe9547c959c45f6463c60af03261a46e1.jpg",
+              "coverObjectKey": "musebooks/covers/dc01531c3457c4955b674242a212dfdbe9547c959c45f6463c60af03261a46e1.jpg"
+            },
+            {
+              "editionId": "edition-12ed39254e7de17c7f8ba73f",
+              "sourceTitle": "楊宇騰YU寫真集x黃中平：光影之間（特裝版）",
+              "format": "physical",
+              "label": "特裝版",
+              "variant": "special",
+              "isbn": "",
+              "pageCount": 48,
+              "dimensions": "",
+              "contentSummary": "台灣角川特裝組：寫真集、書盒、壓克力人形立牌、48頁筆記手札、折疊海報及特裝版寫真卡。特裝頁面未確認寫真集本體頁數與尺寸；商品碼不當作ISBN。",
+              "sourceUrl": "https://www.kadokawa.com.tw/products/4711289612094",
+              "coverSourceUrl": "https://img.shoplineapp.com/media/image_clips/6640358db7e7c50013d013af/original.jpg?1715484045",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/10481073c9da1e9c95968621f0e4ec009f72b0ee32ae80136240fe5b9b59be4f.jpg",
+              "coverObjectKey": "musebooks/covers/10481073c9da1e9c95968621f0e4ec009f72b0ee32ae80136240fe5b9b59be4f.jpg"
+            },
+            {
+              "editionId": "edition-b156ecce9ec2e89542ffb5d6",
+              "sourceTitle": "楊宇騰YU寫真集x黃中平：光影之間（數位特別版）",
+              "format": "digital",
+              "label": "數位特別版（BOOK☆WALKER）",
+              "variant": "ebook_special",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "BOOK☆WALKER數位特別版，沿用《光影之間》作品身份並保留數位版獨立封面；未確認EISBN、數位頁數或下載附錄，不帶入紙本尺寸與寫真卡。",
+              "sourceUrl": "https://www.bookwalker.com.tw/product/154263",
+              "coverSourceUrl": "https://taiwan-image.bookwalker.com.tw/product/154263/154263_1.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/eea07d87deda52584c0c04037dcea4932289c6ef57d53dd0a0e34680458ae0df.jpg",
+              "coverObjectKey": "musebooks/covers/eea07d87deda52584c0c04037dcea4932289c6ef57d53dd0a0e34680458ae0df.jpg"
+            }
+          ]
+        },
+        {
+          "workId": "work-tw-81861a78a174171473af0b16",
+          "title": "楊宇騰YU 30th Anniversary Book「vs YU」",
+          "editions": [
+            {
+              "editionId": "edition-c376f976ea53ba68c95a0fc1",
+              "sourceTitle": "楊宇騰YU 30th Anniversary Book「vs YU」",
+              "format": "physical",
+              "label": "台灣東販平裝版",
+              "variant": "standard",
+              "isbn": "9786264370493",
+              "pageCount": 200,
+              "dimensions": "21 × 29.7 × 1.6 cm",
+              "contentSummary": "200頁台灣東販平裝紀念寫真書，含台北取景照片、YU出道檔案、歷年訪談及全新長篇專訪。",
+              "sourceUrl": "https://www.tohan.com.tw/product.php?act=view&id=8279",
+              "coverSourceUrl": "https://www.tohan.com.tw/data/goods/gallery/202508/1755856602909319926.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/f54d7ef3343f2ca61035f9df8cd8996262521ae755116cfb33d841590fc419a4.jpg",
+              "coverObjectKey": "musebooks/covers/f54d7ef3343f2ca61035f9df8cd8996262521ae755116cfb33d841590fc419a4.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "鄔又曦 / Claire / 克萊兒",
+      "aliases": [
+        "鄔又曦",
+        "鄔又曦 Claire",
+        "克萊兒"
+      ],
+      "identityNote": "Eslite lists 鄔又曦 (Claire) as author and describes her as a live streamer/creator; the book title credits 克萊兒.",
+      "identitySourceUrls": [
+        "https://www.eslite.com/product/1001261682682283023006"
+      ],
+      "digitalStatus": "No format-specific digital edition was verified in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-7219df2576175c3fa9f8cae9",
+          "title": "像我一樣甜：克萊兒甜心日記",
+          "editions": [
+            {
+              "editionId": "edition-fcb36f73172eec3eba9a275f",
+              "sourceTitle": "像我一樣甜：克萊兒甜心日記",
+              "format": "physical",
+              "label": "標準平裝版",
+              "variant": "standard",
+              "isbn": "9786269640621",
+              "pageCount": 128,
+              "dimensions": "26 × 18 × 0.7 cm",
+              "contentSummary": "鄔又曦（Claire）的首本甜點主題平裝寫真書，128頁，26 × 18 × 0.7 cm；記錄不同生活面向，包含她對甜點與烘焙的興趣。",
+              "sourceUrl": "https://www.eslite.com/product/1001261682682283023006",
+              "coverSourceUrl": "https://s.eslite.com/upload/product/o/2682283023006/20221025054136604534.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/d3de1231de5789c09bff6f3858d493c773480de21d82c4f490b5f2abe6982a9a.jpg",
+              "coverObjectKey": "musebooks/covers/d3de1231de5789c09bff6f3858d493c773480de21d82c4f490b5f2abe6982a9a.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "椎名心春 / Shiina Koharu",
+      "aliases": [
+        "椎名心春",
+        "しいなこはる",
+        "Shiina Koharu"
+      ],
+      "identityNote": "Kingstone lists 椎名心春 as author of both original Taiwan photo books, and Google Play lists her on the separate 山珍 digital-limited edition.",
+      "identitySourceUrls": [
+        "https://www.kingstone.com.tw/basic/2019910058511/",
+        "https://www.kingstone.com.tw/basic/2019910058481/",
+        "https://play.google.com/store/books/details/%E6%A4%8E%E5%90%8D%E5%BF%83%E6%98%A5_%E6%A4%8E%E5%90%8D%E5%BF%83%E6%98%A5%E5%8F%B0%E7%81%A3%E5%AF%AB%E7%9C%9F%E9%9B%86_%E5%B1%B1%E7%8F%8D_%E6%95%B8%E4%BD%8D%E9%99%90%E5%AE%9A%E7%89%88?id=exkBEgAAQBAJ"
+      ],
+      "digitalStatus": "Google Play lists a digital-limited 山珍 edition with 137 extra photos and 270 ebook pages. No EISBN is listed. No Sea digital edition was verified.",
+      "works": [
+        {
+          "workId": "work-tw-df008baeba63b72baaabbd2a",
+          "title": "海味：椎名心春台灣寫真集",
+          "editions": [
+            {
+              "editionId": "edition-f1598657a074a71d00444669",
+              "sourceTitle": "海味：椎名心春台灣寫真集",
+              "format": "physical",
+              "label": "《海味》平裝版",
+              "variant": "standard",
+              "isbn": "9786269973460",
+              "pageCount": 128,
+              "dimensions": "29.7 × 21 × 1.2 cm",
+              "contentSummary": "128頁台灣原創寫真，以海景及戶外場景為主；出版方另將山景及室內場景編為獨立的《山珍》。",
+              "sourceUrl": "https://www.kingstone.com.tw/basic/2019910058511/",
+              "coverSourceUrl": "https://i3.momoshop.com.tw/1766089083/goodsimg/0014/803/253/14803253_R_m.webp",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/6396ba744a87813a3d5d1b0ce08464ab7ed39c5e670525996fe891a8cb1b1a04.webp",
+              "coverObjectKey": "musebooks/covers/6396ba744a87813a3d5d1b0ce08464ab7ed39c5e670525996fe891a8cb1b1a04.webp"
+            }
+          ]
+        },
+        {
+          "workId": "work-tw-267252929a66b795fe19783d",
+          "title": "山珍：椎名心春台灣寫真集",
+          "editions": [
+            {
+              "editionId": "edition-38acc8660d71d1758b9e9280",
+              "sourceTitle": "山珍：椎名心春台灣寫真集",
+              "format": "physical",
+              "label": "《山珍》平裝版",
+              "variant": "standard",
+              "isbn": "9786269973477",
+              "pageCount": 128,
+              "dimensions": "21 × 28 cm",
+              "contentSummary": "128頁台灣原創寫真，以山景及室內場景為主；海景與戶外照片另編成《海味》。",
+              "sourceUrl": "https://www.kingstone.com.tw/basic/2019910058481/",
+              "coverSourceUrl": "https://excalibur-ec-dev-bucket.s3.ap-northeast-1.amazonaws.com/product/204194/tZqGcGV9OXStkcGtLyJQbTEogWOF5MRnizqQa9RZ-medium.webp",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/68961e856b3ec8386015228a478eb0bb31c7e9cc4854501dbd8a1678c0284bc1.webp",
+              "coverObjectKey": "musebooks/covers/68961e856b3ec8386015228a478eb0bb31c7e9cc4854501dbd8a1678c0284bc1.webp"
+            },
+            {
+              "editionId": "edition-f80a39507f84f58b276ceb0e",
+              "sourceTitle": "椎名心春台灣寫真集：山珍（數位限定版）",
+              "format": "digital",
+              "label": "《山珍》數位限定版",
+              "variant": "digital_limited",
+              "isbn": "",
+              "pageCount": 0,
+              "dimensions": "",
+              "contentSummary": "Google Play數位限定電子書，書目顯示270個數位頁面並加收137張未公開照片；未提供EISBN，不帶入紙本128頁與尺寸資料。",
+              "sourceUrl": "https://play.google.com/store/books/details/%E6%A4%8E%E5%90%8D%E5%BF%83%E6%98%A5_%E6%A4%8E%E5%90%8D%E5%BF%83%E6%98%A5%E5%8F%B0%E7%81%A3%E5%AF%AB%E7%9C%9F%E9%9B%86_%E5%B1%B1%E7%8F%8D_%E6%95%B8%E4%BD%8D%E9%99%90%E5%AE%9A%E7%89%88?id=exkBEgAAQBAJ",
+              "coverSourceUrl": "https://play.google.com/books/publisher/content/images/frontcover/exkBEgAAQBAJ?fife",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/f482e6976e80a1786fa7e92133e2c1ad7c01f3114cf40d6e6ca7ca9375888cd9.jpg",
+              "coverObjectKey": "musebooks/covers/f482e6976e80a1786fa7e92133e2c1ad7c01f3114cf40d6e6ca7ca9375888cd9.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "北野未奈 / Kitano Mina",
+      "aliases": [
+        "北野未奈",
+        "Kitano Mina",
+        "kitano_mina"
+      ],
+      "identityNote": "Kingstone identifies 北野未奈 as author of the 1st photobook and provides an author profile; the separate Momo listing supplied the exact product cover.",
+      "identitySourceUrls": [
+        "https://www.kingstone.com.tw/basic/2019000171908/",
+        "https://www.momoshop.com.tw/product/15076992"
+      ],
+      "digitalStatus": "An iRead page exposes an ebook option on a shared product page, but no file-specific identifier or separate digital cover metadata was verified, so only the physical edition was imported.",
+      "works": [
+        {
+          "workId": "work-tw-2b461eaa885a5e7ba2cf184a",
+          "title": "Look at Me：北野未奈1st寫真集",
+          "editions": [
+            {
+              "editionId": "edition-ed3fd0d5b26804f3dcc5a8e5",
+              "sourceTitle": "Look at Me：北野未奈1st寫真集（日本正式授權中文版）",
+              "format": "physical",
+              "label": "繁體中文版平裝版",
+              "variant": "standard",
+              "isbn": "9786269294817",
+              "pageCount": 112,
+              "dimensions": "21 × 28 cm",
+              "contentSummary": "北野未奈首本個人寫真集的繁體中文版，112頁平裝；攝影：野澤亘伸。商品資料未確認隨書贈品。",
+              "sourceUrl": "https://www.kingstone.com.tw/basic/2019000171908/",
+              "coverSourceUrl": "https://i3.momoshop.com.tw/1774335243/goodsimg/0015/076/992/15076992_R_m.webp",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/2fe70ac24f385fe4f2be615ba17e03fdc6616876fd8c6b9190a7d15018231121.webp",
+              "coverObjectKey": "musebooks/covers/2fe70ac24f385fe4f2be615ba17e03fdc6616876fd8c6b9190a7d15018231121.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "汐世 / Shiose",
+      "aliases": [
+        "汐世",
+        "Shiose"
+      ],
+      "identityNote": "TAAZE and NCL identify 汐世 as the author/subject of 愛之炎; its cover image was verified from the matching Momo product number.",
+      "identitySourceUrls": [
+        "https://www.taaze.tw/products/11101087042.html",
+        "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1771918869.pdf",
+        "https://www.momoshop.com.tw/product/15076991"
+      ],
+      "digitalStatus": "No format-specific digital edition was verified in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-5ca29f1ea070d66f004f6d01",
+          "title": "愛之炎：汐世1st寫真集",
+          "editions": [
+            {
+              "editionId": "edition-dc10265cb9f35eb3632ef4c6",
+              "sourceTitle": "愛之炎：汐世1st寫真集（日本正式授權中文版）",
+              "format": "physical",
+              "label": "繁體中文版平裝版",
+              "variant": "standard",
+              "isbn": "9786269294800",
+              "pageCount": 112,
+              "dimensions": "29.7 × 21 × 1.2 cm",
+              "contentSummary": "汐世首本個人寫真集繁體中文版，112頁平裝；柳沢康太攝影。商品資料未確認隨書贈品。",
+              "sourceUrl": "https://www.taaze.tw/products/11101087042.html",
+              "coverSourceUrl": "https://i3.momoshop.com.tw/1774335243/goodsimg/0015/076/991/15076991_R_m.webp",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/48c85663745e9c50af8fdc1fee86ebe975333cf9011a6a89c1bc5cee2ed6c2ca.webp",
+              "coverObjectKey": "musebooks/covers/48c85663745e9c50af8fdc1fee86ebe975333cf9011a6a89c1bc5cee2ed6c2ca.webp"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "龍夢柔 / ロン・モンロウ",
+      "aliases": [
+        "龍夢柔",
+        "ロン・モンロウ",
+        "Long Mengrou"
+      ],
+      "identityNote": "Kingstone identifies 龍夢柔 as author and 小暮和音 as photographer; NCL deposit data confirms the ISBN and 128-page physical edition.",
+      "identitySourceUrls": [
+        "https://www.kingstone.com.tw/basic/2019910046280/",
+        "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1615610686.pdf"
+      ],
+      "digitalStatus": "No format-specific digital edition was verified in this batch.",
+      "works": [
+        {
+          "workId": "work-tw-e36eb1a6b461f7855890afbd",
+          "title": "龍夢柔寫真集 1st Photo Book「夢」",
+          "editions": [
+            {
+              "editionId": "edition-a8e94fbd306cc6257435204e",
+              "sourceTitle": "龍夢柔寫真集 1st Photo Book『夢』",
+              "format": "physical",
+              "label": "標準平裝版",
+              "variant": "standard",
+              "isbn": "9789869944670",
+              "pageCount": 128,
+              "dimensions": "26 cm",
+              "contentSummary": "128頁個人寫真集，以日本校園生活為概念，場景包含通學路、教室、課堂活動、運動與放學後；龍夢柔著、小暮和音攝影。",
+              "sourceUrl": "https://www.kingstone.com.tw/basic/2019910046280/",
+              "coverSourceUrl": "https://cdn.kingstone.com.tw/book/images/product/20199/2019910046280/2019910046280b.jpg",
+              "coverUrl": "https://img.musecards.my/musebooks/covers/62b784b3860c11531f3efc8ee74adebba207cea508827b20a883c36fd0d6901d.jpg",
+              "coverObjectKey": "musebooks/covers/62b784b3860c11531f3efc8ee74adebba207cea508827b20a883c36fd0d6901d.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "editionRecords": [
+    {
+      "model": "楊宇騰YU",
+      "workId": "work-tw-39d82b78ebf7a8e710169e08",
+      "workTitle": "楊宇騰YU 1st寫真集：Half",
+      "id": "edition-871502c86b6d2d4858eb6dc1",
+      "format": "physical",
+      "editionLabel": "標準平裝版",
+      "editionVariant": "standard",
+      "isbn": "9789865244750",
+      "pageCount": 128,
+      "dimensions": "25.6 × 18 cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/c9e8410c0a1f0f1a52c6cd617b4bfe6f63b02e08a27a5e97719a63e6961a6115.jpg",
+      "coverObjectKey": "musebooks/covers/c9e8410c0a1f0f1a52c6cd617b4bfe6f63b02e08a27a5e97719a63e6961a6115.jpg",
+      "metadataSourceUrl": "https://www.momoshop.com.tw/goods.momo?i_code=8734336",
+      "contentSummary": "台灣角川平裝版，128頁、25.6 × 18 cm；藍陳福堂攝影，書中以影像與文字介紹楊宇騰YU的經歷及多面向。"
+    },
+    {
+      "model": "楊宇騰YU",
+      "workId": "work-tw-39d82b78ebf7a8e710169e08",
+      "workTitle": "楊宇騰YU 1st寫真集：Half",
+      "id": "edition-fce5f9506ddfa7ac8d2b5c1f",
+      "format": "digital",
+      "editionLabel": "EPUB電子書特別版",
+      "editionVariant": "ebook_special",
+      "isbn": "9789865244767",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/858a29d0df9030e2bfbfdf8fddff5b31995339c1d7900e357c03fa5cfa2e1451.jpg",
+      "coverObjectKey": "musebooks/covers/858a29d0df9030e2bfbfdf8fddff5b31995339c1d7900e357c03fa5cfa2e1451.jpg",
+      "metadataSourceUrl": "https://www.airitibooks.com/Publication/Details?publicationID=P20220110162",
+      "contentSummary": "華藝電子書EPUB特別版，收錄楊宇騰的影像、文字隨筆及粉絲百大Q&A；數位版使用獨立封面，不沿用紙本頁數、尺寸或實體贈品。"
+    },
+    {
+      "model": "楊宇騰YU",
+      "workId": "work-tw-a2247b410361bd4293bfada5",
+      "workTitle": "楊宇騰YU寫真集x黃中平：光影之間",
+      "id": "edition-601e8c8b6b73611aa1b6b63d",
+      "format": "physical",
+      "editionLabel": "標準平裝版",
+      "editionVariant": "standard",
+      "isbn": "9786263219106",
+      "pageCount": 128,
+      "dimensions": "25.6 × 18 × 1.1 cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/dc01531c3457c4955b674242a212dfdbe9547c959c45f6463c60af03261a46e1.jpg",
+      "coverObjectKey": "musebooks/covers/dc01531c3457c4955b674242a212dfdbe9547c959c45f6463c60af03261a46e1.jpg",
+      "metadataSourceUrl": "https://www.sanmin.com.tw/product/index/010843105",
+      "contentSummary": "黃中平掌鏡的128頁平裝寫真，以街頭與海岸場景、黑白及彩色影像呈現楊宇騰YU；標準版附兩款中隨機一張寫真卡。"
+    },
+    {
+      "model": "楊宇騰YU",
+      "workId": "work-tw-a2247b410361bd4293bfada5",
+      "workTitle": "楊宇騰YU寫真集x黃中平：光影之間",
+      "id": "edition-12ed39254e7de17c7f8ba73f",
+      "format": "physical",
+      "editionLabel": "特裝版",
+      "editionVariant": "special",
+      "isbn": "",
+      "pageCount": 48,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/10481073c9da1e9c95968621f0e4ec009f72b0ee32ae80136240fe5b9b59be4f.jpg",
+      "coverObjectKey": "musebooks/covers/10481073c9da1e9c95968621f0e4ec009f72b0ee32ae80136240fe5b9b59be4f.jpg",
+      "metadataSourceUrl": "https://www.kadokawa.com.tw/products/4711289612094",
+      "contentSummary": "台灣角川特裝組：寫真集、書盒、壓克力人形立牌、48頁筆記手札、折疊海報及特裝版寫真卡。特裝頁面未確認寫真集本體頁數與尺寸；商品碼不當作ISBN。"
+    },
+    {
+      "model": "楊宇騰YU",
+      "workId": "work-tw-a2247b410361bd4293bfada5",
+      "workTitle": "楊宇騰YU寫真集x黃中平：光影之間",
+      "id": "edition-b156ecce9ec2e89542ffb5d6",
+      "format": "digital",
+      "editionLabel": "數位特別版（BOOK☆WALKER）",
+      "editionVariant": "ebook_special",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/eea07d87deda52584c0c04037dcea4932289c6ef57d53dd0a0e34680458ae0df.jpg",
+      "coverObjectKey": "musebooks/covers/eea07d87deda52584c0c04037dcea4932289c6ef57d53dd0a0e34680458ae0df.jpg",
+      "metadataSourceUrl": "https://www.bookwalker.com.tw/product/154263",
+      "contentSummary": "BOOK☆WALKER數位特別版，沿用《光影之間》作品身份並保留數位版獨立封面；未確認EISBN、數位頁數或下載附錄，不帶入紙本尺寸與寫真卡。"
+    },
+    {
+      "model": "楊宇騰YU",
+      "workId": "work-tw-81861a78a174171473af0b16",
+      "workTitle": "楊宇騰YU 30th Anniversary Book「vs YU」",
+      "id": "edition-c376f976ea53ba68c95a0fc1",
+      "format": "physical",
+      "editionLabel": "台灣東販平裝版",
+      "editionVariant": "standard",
+      "isbn": "9786264370493",
+      "pageCount": 200,
+      "dimensions": "21 × 29.7 × 1.6 cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/f54d7ef3343f2ca61035f9df8cd8996262521ae755116cfb33d841590fc419a4.jpg",
+      "coverObjectKey": "musebooks/covers/f54d7ef3343f2ca61035f9df8cd8996262521ae755116cfb33d841590fc419a4.jpg",
+      "metadataSourceUrl": "https://www.tohan.com.tw/product.php?act=view&id=8279",
+      "contentSummary": "200頁台灣東販平裝紀念寫真書，含台北取景照片、YU出道檔案、歷年訪談及全新長篇專訪。"
+    },
+    {
+      "model": "鄔又曦",
+      "workId": "work-tw-7219df2576175c3fa9f8cae9",
+      "workTitle": "像我一樣甜：克萊兒甜心日記",
+      "id": "edition-fcb36f73172eec3eba9a275f",
+      "format": "physical",
+      "editionLabel": "標準平裝版",
+      "editionVariant": "standard",
+      "isbn": "9786269640621",
+      "pageCount": 128,
+      "dimensions": "26 × 18 × 0.7 cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/d3de1231de5789c09bff6f3858d493c773480de21d82c4f490b5f2abe6982a9a.jpg",
+      "coverObjectKey": "musebooks/covers/d3de1231de5789c09bff6f3858d493c773480de21d82c4f490b5f2abe6982a9a.jpg",
+      "metadataSourceUrl": "https://www.eslite.com/product/1001261682682283023006",
+      "contentSummary": "鄔又曦（Claire）的首本甜點主題平裝寫真書，128頁，26 × 18 × 0.7 cm；記錄不同生活面向，包含她對甜點與烘焙的興趣。"
+    },
+    {
+      "model": "椎名心春",
+      "workId": "work-tw-df008baeba63b72baaabbd2a",
+      "workTitle": "海味：椎名心春台灣寫真集",
+      "id": "edition-f1598657a074a71d00444669",
+      "format": "physical",
+      "editionLabel": "《海味》平裝版",
+      "editionVariant": "standard",
+      "isbn": "9786269973460",
+      "pageCount": 128,
+      "dimensions": "29.7 × 21 × 1.2 cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/6396ba744a87813a3d5d1b0ce08464ab7ed39c5e670525996fe891a8cb1b1a04.webp",
+      "coverObjectKey": "musebooks/covers/6396ba744a87813a3d5d1b0ce08464ab7ed39c5e670525996fe891a8cb1b1a04.webp",
+      "metadataSourceUrl": "https://www.kingstone.com.tw/basic/2019910058511/",
+      "contentSummary": "128頁台灣原創寫真，以海景及戶外場景為主；出版方另將山景及室內場景編為獨立的《山珍》。"
+    },
+    {
+      "model": "椎名心春",
+      "workId": "work-tw-267252929a66b795fe19783d",
+      "workTitle": "山珍：椎名心春台灣寫真集",
+      "id": "edition-38acc8660d71d1758b9e9280",
+      "format": "physical",
+      "editionLabel": "《山珍》平裝版",
+      "editionVariant": "standard",
+      "isbn": "9786269973477",
+      "pageCount": 128,
+      "dimensions": "21 × 28 cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/68961e856b3ec8386015228a478eb0bb31c7e9cc4854501dbd8a1678c0284bc1.webp",
+      "coverObjectKey": "musebooks/covers/68961e856b3ec8386015228a478eb0bb31c7e9cc4854501dbd8a1678c0284bc1.webp",
+      "metadataSourceUrl": "https://www.kingstone.com.tw/basic/2019910058481/",
+      "contentSummary": "128頁台灣原創寫真，以山景及室內場景為主；海景與戶外照片另編成《海味》。"
+    },
+    {
+      "model": "椎名心春",
+      "workId": "work-tw-267252929a66b795fe19783d",
+      "workTitle": "山珍：椎名心春台灣寫真集",
+      "id": "edition-f80a39507f84f58b276ceb0e",
+      "format": "digital",
+      "editionLabel": "《山珍》數位限定版",
+      "editionVariant": "digital_limited",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/f482e6976e80a1786fa7e92133e2c1ad7c01f3114cf40d6e6ca7ca9375888cd9.jpg",
+      "coverObjectKey": "musebooks/covers/f482e6976e80a1786fa7e92133e2c1ad7c01f3114cf40d6e6ca7ca9375888cd9.jpg",
+      "metadataSourceUrl": "https://play.google.com/store/books/details/%E6%A4%8E%E5%90%8D%E5%BF%83%E6%98%A5_%E6%A4%8E%E5%90%8D%E5%BF%83%E6%98%A5%E5%8F%B0%E7%81%A3%E5%AF%AB%E7%9C%9F%E9%9B%86_%E5%B1%B1%E7%8F%8D_%E6%95%B8%E4%BD%8D%E9%99%90%E5%AE%9A%E7%89%88?id=exkBEgAAQBAJ",
+      "contentSummary": "Google Play數位限定電子書，書目顯示270個數位頁面並加收137張未公開照片；未提供EISBN，不帶入紙本128頁與尺寸資料。"
+    },
+    {
+      "model": "北野未奈",
+      "workId": "work-tw-2b461eaa885a5e7ba2cf184a",
+      "workTitle": "Look at Me：北野未奈1st寫真集",
+      "id": "edition-ed3fd0d5b26804f3dcc5a8e5",
+      "format": "physical",
+      "editionLabel": "繁體中文版平裝版",
+      "editionVariant": "standard",
+      "isbn": "9786269294817",
+      "pageCount": 112,
+      "dimensions": "21 × 28 cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/2fe70ac24f385fe4f2be615ba17e03fdc6616876fd8c6b9190a7d15018231121.webp",
+      "coverObjectKey": "musebooks/covers/2fe70ac24f385fe4f2be615ba17e03fdc6616876fd8c6b9190a7d15018231121.webp",
+      "metadataSourceUrl": "https://www.kingstone.com.tw/basic/2019000171908/",
+      "contentSummary": "北野未奈首本個人寫真集的繁體中文版，112頁平裝；攝影：野澤亘伸。商品資料未確認隨書贈品。"
+    },
+    {
+      "model": "汐世",
+      "workId": "work-tw-5ca29f1ea070d66f004f6d01",
+      "workTitle": "愛之炎：汐世1st寫真集",
+      "id": "edition-dc10265cb9f35eb3632ef4c6",
+      "format": "physical",
+      "editionLabel": "繁體中文版平裝版",
+      "editionVariant": "standard",
+      "isbn": "9786269294800",
+      "pageCount": 112,
+      "dimensions": "29.7 × 21 × 1.2 cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/48c85663745e9c50af8fdc1fee86ebe975333cf9011a6a89c1bc5cee2ed6c2ca.webp",
+      "coverObjectKey": "musebooks/covers/48c85663745e9c50af8fdc1fee86ebe975333cf9011a6a89c1bc5cee2ed6c2ca.webp",
+      "metadataSourceUrl": "https://www.taaze.tw/products/11101087042.html",
+      "contentSummary": "汐世首本個人寫真集繁體中文版，112頁平裝；柳沢康太攝影。商品資料未確認隨書贈品。"
+    },
+    {
+      "model": "龍夢柔",
+      "workId": "work-tw-e36eb1a6b461f7855890afbd",
+      "workTitle": "龍夢柔寫真集 1st Photo Book「夢」",
+      "id": "edition-a8e94fbd306cc6257435204e",
+      "format": "physical",
+      "editionLabel": "標準平裝版",
+      "editionVariant": "standard",
+      "isbn": "9789869944670",
+      "pageCount": 128,
+      "dimensions": "26 cm",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/62b784b3860c11531f3efc8ee74adebba207cea508827b20a883c36fd0d6901d.jpg",
+      "coverObjectKey": "musebooks/covers/62b784b3860c11531f3efc8ee74adebba207cea508827b20a883c36fd0d6901d.jpg",
+      "metadataSourceUrl": "https://www.kingstone.com.tw/basic/2019910046280/",
+      "contentSummary": "128頁個人寫真集，以日本校園生活為概念，場景包含通學路、教室、課堂活動、運動與放學後；龍夢柔著、小暮和音攝影。"
+    }
+  ],
+  "coverage": {
+    "modelsAdded": 6,
+    "works": 9,
+    "editions": 13,
+    "physical": 10,
+    "digital": 3,
+    "priceObservationsCreated": 0,
+    "notes": "All covers use exact edition/product images mirrored to R2. Digital editions keep independent covers and contain no inherited print page count, dimensions or physical bonus items. No listing prices were inferred or added."
+  }
+}
