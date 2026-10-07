@@ -1,7 +1,9 @@
+import SeoHead from "../components/SeoHead";
 const privacyContact = "musecards67@gmail.com";
 const sections = [
     ["data-we-handle", "Information the service handles"],
     ["device-storage", "Saved collection and settings"],
+    ["website-analytics", "Website analytics"],
     ["sharing", "Sharing and external links"],
     ["use-and-disclosure", "How information is used"],
     ["retention", "Retention and deletion"],
@@ -11,6 +13,7 @@ const sections = [
 ];
 export default function PrivacyPolicyPage() {
     return (<div className="site-shell privacy-page">
+      <SeoHead path="/privacy-policy" />
       <a className="skip-link" href="#policy-content">Skip to privacy policy</a>
       <header className="site-header privacy-header">
         <a className="wordmark" href="/" aria-label="MuseBooks home">MuseBooks</a>
@@ -23,7 +26,7 @@ export default function PrivacyPolicyPage() {
         <section className="privacy-intro" aria-labelledby="policy-title">
           <h1 id="policy-title">Privacy Policy</h1>
           <p>This policy explains how MuseBooks handles information when you use the MuseBooks website and Android app.</p>
-          <p className="privacy-updated">Last updated October 7, 2026</p>
+          <p className="privacy-updated">Last updated October 8, 2026</p>
         </section>
 
         <div className="privacy-layout">
@@ -43,7 +46,13 @@ export default function PrivacyPolicyPage() {
 
             <section id="device-storage" className="privacy-section">
               <h2>Saved collection and settings</h2>
-              <p>Your saved book list and light or dark appearance setting are stored in browser storage on the device you use. They stay on that device and are not synced to a MuseBooks account or uploaded to our catalog API.</p>
+              <p>Your saved book list, interface language, display currency, and light or dark appearance setting are stored in browser storage on the device you use. They stay on that device and are not synced to a MuseBooks account or uploaded to our catalog API. When you select a display currency, your browser or app requests exchange rates from Frankfurter. These requests contain currency codes, not your saved collection. Converted prices are estimates. Select Original currency to view the source amounts.</p>
+            </section>
+
+            <section id="website-analytics" className="privacy-section">
+              <h2>Website analytics</h2>
+              <p>The MuseBooks website uses Google Analytics to measure visits and understand how visitors use the catalog. The Google tag sends page and browser information to Google and may use cookies to distinguish visits. Your saved collection and appearance setting are not sent as custom analytics data. The Google tag is excluded from the Android and iOS app builds.</p>
+              <p>Learn more about how Google handles this information in <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google’s Privacy Policy</a>.</p>
             </section>
 
             <section id="sharing" className="privacy-section">
@@ -85,7 +94,7 @@ export default function PrivacyPolicyPage() {
         <span>MuseBooks</span>
         <a href="/">Back to catalog</a>
         <a href={`mailto:${privacyContact}`}>Privacy contact</a>
-        <span>Updated October 7, 2026</span>
+        <span>Updated October 8, 2026</span>
       </footer>
     </div>);
 }

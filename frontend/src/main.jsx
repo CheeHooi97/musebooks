@@ -10,4 +10,5 @@ import "@fontsource/azeret-mono/400.css";
 import "@fontsource/azeret-mono/500.css";
 import "./styles.css";
 import "./catalog.css";
-createRoot(document.getElementById("root")).render(<React.StrictMode>{window.location.pathname.startsWith("/privacy-policy") ? <PrivacyPolicy /> : <Home />}</React.StrictMode>);
+import { PreferencesProvider } from "./lib/preferences";
+createRoot(document.getElementById("root")).render(<React.StrictMode><PreferencesProvider>{window.location.pathname.startsWith("/privacy-policy") ? <PrivacyPolicy /> : <Home />}</PreferencesProvider></React.StrictMode>);
