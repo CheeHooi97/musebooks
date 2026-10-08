@@ -1,6 +1,8 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import Home from "./pages/Home";
+import About from "./pages/About";
+import SeoHead from "./components/SeoHead";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import "@fontsource/gloock/400.css";
 import "@fontsource/hanken-grotesk/400.css";
@@ -10,5 +12,6 @@ import "@fontsource/azeret-mono/400.css";
 import "@fontsource/azeret-mono/500.css";
 import "./styles.css";
 import "./catalog.css";
+import "./seo.css";
 import { PreferencesProvider } from "./lib/preferences";
-createRoot(document.getElementById("root")).render(<React.StrictMode><PreferencesProvider>{window.location.pathname.startsWith("/privacy-policy") ? <PrivacyPolicy /> : <Home />}</PreferencesProvider></React.StrictMode>);
+createRoot(document.getElementById("root")).render(<React.StrictMode><PreferencesProvider>{window.location.pathname.replace(/\/+$/, "") === "/privacy-policy" ? <PrivacyPolicy /> : window.location.pathname.replace(/\/+$/, "") === "/about" ? <About /> : /^(?:\/|\/(?:models|publishers|active|sold)\/?|\/(?:books|models|publishers)\/[^/]+\/?)$/.test(window.location.pathname) ? <Home /> : <div className="site-shell"><SeoHead path="/404" /><h1>Page not found</h1><a href="/">Explore photobooks</a></div>}</PreferencesProvider></React.StrictMode>);

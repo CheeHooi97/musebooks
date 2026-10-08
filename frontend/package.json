@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
+    "test:seo": "node --test scripts/seo-build.test.mjs src/lib/*.test.js",
     "build": "vite build",
     "build:mobile": "vite build --mode mobile",
     "cap:sync": "npm run build:mobile && cap sync",

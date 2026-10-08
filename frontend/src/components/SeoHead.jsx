@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { pageSeo } from "../lib/seo";
 
-export default function SeoHead({ path, book, profile, noindex = false }) {
+export default function SeoHead({ path, book, profile, noindex = false, pending = false }) {
   useEffect(() => {
+    if (pending) return;
     const seo = pageSeo(path, book, profile);
     document.title = seo.title;
     const set = (attribute, key, content) => {
@@ -21,6 +22,6 @@ export default function SeoHead({ path, book, profile, noindex = false }) {
     let json = document.getElementById("musebooks-seo-jsonld");
     if (!json) { json = document.createElement("script"); json.id = "musebooks-seo-jsonld"; json.type = "application/ld+json"; document.head.appendChild(json); }
     json.textContent = JSON.stringify(seo.structuredData);
-  }, [path, book, profile, noindex]);
+  }, [path, book, profile, noindex, pending]);
   return null;
 }

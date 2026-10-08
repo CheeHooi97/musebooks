@@ -90,3 +90,18 @@ The deploy script rolls the active release links and configs back if the local A
 
 
 PostgreSQL and application structure follow MuseCards. See [catalog implementation](docs/catalog-implementation.md) for normalized tables, migration commands, shared connection settings, and ownership requirements. Active React/Vite code is under `frontend/src`; obsolete Next.js files and TypeScript application sources have been removed.
+
+
+## SEO snapshots and catalog updates
+
+The website build now publishes readable HTML for catalog routes, a sitemap, robots.txt, and a noindex 404 page. Nginx serves only generated page entries and real assets; unknown paths return HTTP 404. Public catalog read APIs remain available to crawlers for client rendering. The API endpoints remain responsible for their own authentication and authorization.
+
+Set `VITE_SITE_URL` to the website origin and `SEO_API_URL` to the catalog API origin if overriding musebooks.my. Build and client canonical URLs use the same normalized origin. The build requires real books, directory, and listing API responses; an unavailable endpoint fails the build rather than publishing test records or an empty fallback.
+
+After a catalog import, identity change, or record removal, trigger **Deploy MuseBooks → Run workflow** on main. Integrations can also send a GitHub `repository_dispatch` event with `event_type` set to `catalog-updated` using their existing repository authorization. The workflow now accepts that event and runs the SEO regression tests before building. No periodic deployment or integration credential is configured by this change.
+
+Until rebuilt, generated HTML and sitemap entries retain the previous catalog snapshot. A newly imported page has no generated entry and returns 404; a removed record can keep its old HTML response until rebuild. The browser confirms API 404s with noindex, but this does not replace rebuilding the static snapshot.
+
+Before activating the new Nginx configuration, run `nginx -t`. After deployment, verify clean and trailing-slash book/profile URLs, a real unknown URL, robots.txt, sitemap.xml, and one original-script slug. Use Search Console URL Inspection to confirm page text, canonical URLs, and indexing directives. The repository tests cover fixture content and client behavior; they do not prove live DNS, CDN rules, or search indexing.
+
+Run local SEO regression tests from frontend with `npm run test:seo`. See [SEO-GEO.md](SEO-GEO.md) for implementation status and the remaining measurement work.

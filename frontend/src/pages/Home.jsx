@@ -5,6 +5,8 @@ import BookDetail from "./BookDetail";
 import CatalogPages from "./CatalogPages";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { apiUrl } from "../lib/api";
+import { hasSearchFilters } from "../lib/seo";
+import { bookSlugFromPath } from "../lib/routes";
 import { editionListings, priceLabel, primaryListing, visibleEditions } from "../lib/price-policy";
 const isCapacitorBuild = import.meta.env.MODE === "mobile" || import.meta.env.VITE_APP_TARGET === "mobile";
 function Icon({ name, size = 18 }) {
@@ -44,7 +46,7 @@ function editionFormatLabel(format) {
 function BookCover({ book, edition: selectedEdition, compact = false, loading = "lazy" }) {const { t, formatPrice } = usePreferences();
   const image = selectedEdition?.coverUrl || book.coverUrl;
   return <div className={`cover-art${image ? " cover-art--image" : ""}${compact ? " cover-art--compact" : ""}`}>
-    {image && <img src={image} alt="" loading={loading} fetchPriority={loading === "eager" ? "high" : "auto"} />}
+    {image && <img src={image} alt={compact ? "" : `${book.originalTitle} cover`} loading={loading} fetchPriority={loading === "eager" ? "high" : "auto"} />}
     <div className="cover-art__wash" />
     <span className="cover-art__mark">{book.originalTitle.slice(0, 2)}</span>
     <span className="cover-art__title">{book.englishTitle || book.originalTitle}</span>
@@ -60,8 +62,11 @@ function releaseTimestamp(book) {
   return Math.max(0, ...book.editions.map((item) => item.releaseDate ? Date.parse(item.releaseDate) || 0 : 0));
 }
 export default function Home() {const { t, formatPrice } = usePreferences();
-  const [bookSlug, setBookSlug] = useState(() => {try {return window.location.pathname.startsWith("/books/") ? decodeURIComponent(window.location.pathname.slice(7)) : "";} catch {return "invalid-book";}});
-  const [books, setBooks] = useState([]);
+  const [bookSlug, setBookSlug] = useState(() => bookSlugFromPath(window.location.pathname));
+  const [books, setBooks] = useState(() => {
+    try { const book = JSON.parse(document.getElementById("musebooks-bootstrap")?.textContent || "{}").book; return book?.slug === bookSlug ? [book] : []; }
+    catch { return []; }
+  });
   const [origins, setOrigins] = useState([]);
   const [query, setQuery] = useState("");
   const [origin, setOrigin] = useState("");
@@ -74,8 +79,10 @@ export default function Home() {const { t, formatPrice } = usePreferences();
   const [mobileFilters, setMobileFilters] = useState(false);
   const [activeView, setActiveView] = useState(() => {const route = window.location.pathname.split("/")[1];return ["models", "publishers", "active", "sold"].includes(route) ? route : "browse";});
   const [sortBy, setSortBy] = useState("newest");
-  const [apiState, setApiState] = useState("loading");
+  const [apiState, setApiState] = useState(() => books.length ? "live" : "loading");
   const [retry, setRetry] = useState(0);
+  const [missingBookSlug, setMissingBookSlug] = useState("");
+  const isMissingBook = apiState === "missing" && missingBookSlug === bookSlug;
   const [theme, setTheme] = useState("light");
   const [themeReady, setThemeReady] = useState(false);
   const nativeBackState = useRef({ activeView, mobileFilters, bookSlug });
@@ -121,25 +128,27 @@ export default function Home() {const { t, formatPrice } = usePreferences();
     }}, [saved]);
   useEffect(() => {
     const controller = new AbortController();
-    setApiState("loading");
-    Promise.all([
-    (async () => {const load = async (page) => {const response = await fetch(apiUrl(`/v1/books?pageSize=50&page=${page}`), { signal: controller.signal });if (!response.ok)
-        throw new Error("Catalog unavailable");return response.json();};const first = await load(1);const rest = await Promise.all(Array.from({ length: Math.max(0, first.totalPages - 1) }, (_, index) => load(index + 2)));return { items: [first, ...rest].flatMap((result) => result.items) };})(),
-    fetch(apiUrl("/v1/origins"), { signal: controller.signal }).then((response) => response.ok ? response.json() : Promise.reject(response.status))]
-    ).
-    then(([bookResponse, originResponse]) => {
-      if (controller.signal.aborted)
-      return;
-      setBooks(Array.isArray(bookResponse.items) ? bookResponse.items : []);
-      setOrigins(Array.isArray(originResponse) ? originResponse : []);
-      setApiState("live");
-    }).
-    catch(() => {
-      if (!controller.signal.aborted)
-      setApiState("error");
-    });
+    if (bookSlug) {
+      setApiState(books.some(book => book.slug === bookSlug) ? "live" : "loading");
+      fetch(apiUrl(`/v1/books/${encodeURIComponent(bookSlug)}`), { signal: controller.signal })
+        .then(async response => { if (!response.ok) throw new Error(response.status === 404 ? "missing" : "error"); return response.json(); })
+        .then(book => { if (!controller.signal.aborted) { setBooks(current => [...current.filter(item => item.slug !== book.slug), book]); setApiState("live"); } })
+        .catch(error => { if (!controller.signal.aborted) { if (error.message === "missing") setMissingBookSlug(bookSlug); setApiState(error.message === "missing" ? "missing" : "error"); } });
+    } else if (activeView === "browse" || activeView === "collection") {
+      setApiState("loading");
+      const load = async page => {
+        const response = await fetch(apiUrl(`/v1/books?pageSize=50&page=${page}`), { signal: controller.signal });
+        if (!response.ok) throw new Error("Catalog unavailable");
+        return response.json();
+      };
+      Promise.all([
+        (async () => { const first = await load(1); const rest = await Promise.all(Array.from({ length: Math.max(0, first.totalPages - 1) }, (_, index) => load(index + 2))); return [first, ...rest].flatMap(result => result.items); })(),
+        fetch(apiUrl("/v1/origins"), { signal: controller.signal }).then(response => { if (!response.ok) throw new Error("Catalog unavailable"); return response.json(); }),
+      ]).then(([items, origins]) => { if (!controller.signal.aborted) { setBooks(items); setOrigins(origins); setApiState("live"); } })
+        .catch(() => { if (!controller.signal.aborted) setApiState("error"); });
+    }
     return () => controller.abort();
-  }, [retry]);
+  }, [retry, bookSlug, activeView]);
   const filteredBooks = useMemo(() => {
     const normalized = query.trim().toLocaleLowerCase();
     const results = books.filter((book) => {
@@ -157,7 +166,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
     return results;
   }, [availability, books, format, origin, query, sortBy]);
   const visibleBooks = activeView === "collection" ? filteredBooks.filter((book) => saved.includes(book.id)) : filteredBooks;
-  const selectedBook = bookSlug ? books.find((book) => book.slug === bookSlug) : visibleBooks.find((book) => book.id === selectedId) || visibleBooks[0];
+  const selectedBook = bookSlug ? isMissingBook ? undefined : books.find((book) => book.slug === bookSlug) : visibleBooks.find((book) => book.id === selectedId) || visibleBooks[0];
   const selectedEditions = selectedBook ? bookSlug ? selectedBook.editions : visibleEditions(selectedBook, { format, availability }) : [];
   const selectedEdition = selectedEditions.find((item) => item.id === selectedEditionId) || selectedEditions[0];
   const selectedListing = primaryListing(selectedEdition, bookSlug ? "" : availability);
@@ -283,7 +292,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
   };
   useEffect(() => {
     const syncRoute = () => {
-      try {setBookSlug(window.location.pathname.startsWith("/books/") ? decodeURIComponent(window.location.pathname.slice(7)) : "");} catch {setBookSlug("invalid-book");}
+      setBookSlug(bookSlugFromPath(window.location.pathname));
       const route = window.location.pathname.split("/")[1];
       setActiveView(["models", "publishers", "active", "sold"].includes(route) ? route : "browse");
       setSelectedEditionId(new URLSearchParams(window.location.search).get("edition") || "");
@@ -311,7 +320,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
     window.requestAnimationFrame(() => document.getElementById("book-title")?.focus());
   };
   return <div className={`site-shell${isCapacitorBuild ? " native-mobile-build" : ""}`}>
-    {!(["models", "publishers"].includes(activeView) && window.location.pathname.split("/")[2]) && <SeoHead path={bookSlug ? `/books/${encodeURIComponent(bookSlug)}` : ["models", "publishers", "active", "sold"].includes(activeView) ? `/${activeView}` : "/"} book={bookSlug ? selectedBook : undefined} noindex={activeView === "collection" || Boolean(window.location.search)} />}
+    {!(["models", "publishers"].includes(activeView) && window.location.pathname.split("/")[2]) && <SeoHead path={bookSlug ? `/books/${encodeURIComponent(bookSlug)}` : ["models", "publishers", "active", "sold"].includes(activeView) ? `/${activeView}` : "/"} book={bookSlug && !isMissingBook ? selectedBook : undefined} pending={Boolean(bookSlug) && !selectedBook && !isMissingBook} noindex={activeView === "collection" || hasSearchFilters(window.location.search) || isMissingBook} />}
     <a className="skip-link" href="#main-content">{t("Skip to catalog")}</a>
     <header className="site-header">
       <a className="wordmark" href="/" aria-label={t("MuseBooks home")}>{t("MuseBooks")}</a>
@@ -407,7 +416,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
       </>}
     </main>
 
-    <footer className="site-footer"><span>{t("MuseBooks")}</span><span>{t("Listings keep their source, format, and availability context.")}</span><a href="/privacy-policy">{t("Privacy Policy")}</a><span className={`connection-status connection-status--${apiState}`}>{apiState === "live" ? t("Catalog connected") : apiState === "loading" ? t("Connecting to catalog") : t("Catalog unavailable")}</span></footer>
+    <footer className="site-footer"><span>{t("MuseBooks")}</span><span>{t("Listings keep their source, format, and availability context.")}</span><a href="/about">{t("About MuseBooks")}</a><a href="/privacy-policy">{t("Privacy Policy")}</a><span className={`connection-status connection-status--${apiState}`}>{apiState === "live" ? t("Catalog connected") : apiState === "loading" ? t("Connecting to catalog") : t("Catalog unavailable")}</span></footer>
 
     {isCapacitorBuild && <nav className="mobile-tabbar" aria-label={t("App navigation")}>
       <button type="button" className={activeView === "browse" ? "is-active" : ""} aria-current={activeView === "browse" ? "page" : undefined} onClick={() => navigateView("browse")}><Icon name="book" size={20} /><span>{t("Browse")}</span></button>

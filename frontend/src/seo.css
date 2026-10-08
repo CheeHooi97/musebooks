@@ -1,0 +1,9 @@
+.seo-static-content { padding: 2rem 0; max-width: 72rem; }
+.seo-static-content h1, .seo-static-content h2, .seo-static-content h3 { margin: 1.5rem 0 .75rem; }
+.seo-static-content p { max-width: 65ch; line-height: 1.7; margin: .75rem 0; }
+.seo-static-content dl { display: grid; grid-template-columns: minmax(7rem, 1fr) minmax(0, 3fr); gap: .5rem 1rem; max-width: 45rem; }
+.seo-static-content dt { font-weight: 600; }
+.seo-static-content dd { margin: 0; overflow-wrap: anywhere; }
+.seo-static-content li { margin: .75rem 0; line-height: 1.6; overflow-wrap: anywhere; }
+.seo-static-content img { max-width: min(16rem, 100%); height: auto; }
+.seo-static-content section { margin: 2rem 0; }

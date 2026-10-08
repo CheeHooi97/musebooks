@@ -5,6 +5,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+  repository_dispatch:
+    types: [catalog-updated]
 
 permissions:
   contents: read
@@ -46,6 +48,7 @@ jobs:
         working-directory: frontend
         run: |
           npm ci
+          npm run test:seo
           npm run build
 
       - name: Set up Go
