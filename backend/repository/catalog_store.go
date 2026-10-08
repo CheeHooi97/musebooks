@@ -24,14 +24,14 @@ func (r *CatalogRepository) ListBooks(ctx context.Context, params model.ListBook
 	works := []model.Work{}
 	err := query.Distinct("works.*").Preload("Origin").Preload("Editions", func(db *gorm.DB) *gorm.DB {
 		return db.Where("status <> ?", "superseded").Order("release_date DESC NULLS LAST, edition_label ASC")
-	}).Preload("Editions.Listings").Preload("Editions.Listings.Source").Order("works.updated_at DESC, works.id ASC").Offset((params.Page - 1) * params.PageSize).Limit(params.PageSize).Find(&works).Error
+	}).Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source").Order("works.updated_at DESC, works.id ASC").Offset((params.Page - 1) * params.PageSize).Limit(params.PageSize).Find(&works).Error
 	return works, total, err
 }
 func (r *CatalogRepository) GetBook(work *model.Work, key string) CatalogResult {
-	return result(r.db.Where("works.status = ?", "published").Where("works.id = ? OR works.slug = ?", key, key).Preload("Origin").Preload("Editions", "status <> ?", "superseded").Preload("Editions.Listings").Preload("Editions.Listings.Source").First(work))
+	return result(r.db.Where("works.status = ?", "published").Where("works.id = ? OR works.slug = ?", key, key).Preload("Origin").Preload("Editions", "status <> ?", "superseded").Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source").First(work))
 }
 func (r *CatalogRepository) GetEdition(edition *model.Edition, id string) CatalogResult {
-	return result(r.db.Joins("JOIN works ON works.id = editions.work_id AND works.status = 'published'").Preload("Listings").Preload("Listings.Source").Where("editions.status <> ?", "superseded").Where("editions.id = ?", id).First(edition))
+	return result(r.db.Joins("JOIN works ON works.id = editions.work_id AND works.status = 'published'").Preload("PublisherCompany").Preload("Listings").Preload("Listings.Source").Where("editions.status <> ?", "superseded").Where("editions.id = ?", id).First(edition))
 }
 func (r *CatalogRepository) GetEditionIdentity(edition *model.Edition, id string) CatalogResult {
 	return result(r.db.Select("id", "format").First(edition, "id = ?", id))

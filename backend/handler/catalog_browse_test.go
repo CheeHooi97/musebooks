@@ -17,3 +17,16 @@ func TestListingFiltersRejectInvalidInputsBeforePersistence(t *testing.T) {
 		}
 	}
 }
+
+func TestDirectoryFiltersRejectInvalidInputsBeforePersistence(t *testing.T) {
+	for _, query := range []string{"format=poster", "year=abc", "year=999", "page=1000001"} {
+		e := echo.New()
+		c := e.NewContext(httptest.NewRequest("GET", "/v1/publishers/press/books?"+query, nil), httptest.NewRecorder())
+		c.SetPath("/v1/publishers/:id/books")
+		err := NewCatalogBrowseHandler(nil).DirectoryBooks(c)
+		httpErr, ok := err.(*echo.HTTPError)
+		if !ok || httpErr.Code != 400 {
+			t.Fatalf("%s: expected 400, got %v", query, err)
+		}
+	}
+}

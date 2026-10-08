@@ -1,6 +1,9 @@
 package model
 
 type DirectoryEntry struct {
+	OfficialURL  string `json:"officialUrl,omitempty"`
+	OriginalName string `json:"originalName,omitempty"`
+	EnglishName  string `json:"englishName,omitempty"`
 	ID           string `json:"id"`
 	Name         string `json:"name"`
 	WorkCount    int    `json:"workCount"`
@@ -20,8 +23,8 @@ type MarketEntry struct {
 	CoverURL          string   `json:"coverUrl,omitempty"`
 }
 type CatalogBrowseQuery struct {
-	Query, Kind, ID, Status, Format, Source, Person, Publisher string
-	Page, PageSize                                             int
+	Query, Kind, ID, Status, Format, Source, Person, Publisher, Language, Year string
+	Page, PageSize                                                             int
 }
 
 func (entry *MarketEntry) SetFeaturedNames() {

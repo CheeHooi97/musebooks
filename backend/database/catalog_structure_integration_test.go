@@ -94,6 +94,34 @@ func TestCatalogPostgresIntegration(t *testing.T) {
 	if total != 1 || len(books) != 1 || books[0].ID != work.ID {
 		t.Fatal("person relationship lost")
 	}
+	response := books[0].Response()
+	if len(response.Models) != 2 || response.Editions[0].PublisherProfile == nil {
+		t.Fatalf("canonical profile links missing: %+v", response)
+	}
+	query = model.CatalogBrowseQuery{Kind: "publisher", ID: publishers[0].ID, Page: 1, PageSize: 24, Format: "digital"}
+	books, total, err = repo.DirectoryBooks(ctx, query)
+	must(t, err)
+	if total != 1 || len(books) != 1 || len(books[0].Editions) != 1 || books[0].Editions[0].Format != "digital" {
+		t.Fatalf("publisher format filter mixed editions: %+v", books)
+	}
+	query.Person = "Bob"
+	_, total, err = repo.DirectoryBooks(ctx, query)
+	must(t, err)
+	if total != 1 {
+		t.Fatal("publisher model filter lost featured person")
+	}
+	query.Year = "1900"
+	_, total, err = repo.DirectoryBooks(ctx, query)
+	must(t, err)
+	if total != 0 {
+		t.Fatal("empty publisher filter returned unrelated books")
+	}
+	query = model.CatalogBrowseQuery{Kind: "publisher", ID: publishers[0].ID, Page: 1, PageSize: 1}
+	profiles, total, err := repo.Directory(ctx, query)
+	must(t, err)
+	if total != 1 || len(profiles) != 1 || profiles[0].WorkCount != 1 {
+		t.Fatal("publisher profile duplicated a work across editions")
+	}
 	query = model.CatalogBrowseQuery{Status: "active", Page: 1, PageSize: 24}
 	active, total, err := repo.Listings(ctx, query)
 	must(t, err)

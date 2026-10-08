@@ -5,6 +5,7 @@ import (
 	"musebooks/model"
 	"musebooks/service"
 	"net/http"
+	"strconv"
 	"strings"
 )
 
@@ -43,12 +44,29 @@ func (h *CatalogBrowseHandler) DirectoryBooks(c echo.Context) error {
 	if p.Page > 1000000 {
 		return echo.NewHTTPError(400, "page is too large")
 	}
+	p.Format = c.QueryParam("format")
+	p.Language = strings.TrimSpace(c.QueryParam("language"))
+	p.Year = c.QueryParam("year")
+	p.Person = c.QueryParam("model")
+	if p.Format != "" && p.Format != "physical" && p.Format != "digital" {
+		return echo.NewHTTPError(400, "format must be physical or digital")
+	}
+	if p.Year != "" {
+		year, err := strconv.Atoi(p.Year)
+		if err != nil || year < 1000 || year > 9999 {
+			return echo.NewHTTPError(400, "year must be a four-digit year")
+		}
+	}
+	profile, _, err := h.service.Directory(c.Request().Context(), model.CatalogBrowseQuery{Kind: p.Kind, ID: p.ID, Page: 1, PageSize: 1})
+	if err != nil {
+		return echo.NewHTTPError(500, "failed to load catalog profile")
+	}
+	if len(profile) == 0 {
+		return echo.NewHTTPError(404, "directory entry not found")
+	}
 	works, total, err := h.service.DirectoryBooks(c.Request().Context(), p)
 	if err != nil {
 		return echo.NewHTTPError(500, "failed to load directory books")
-	}
-	if total == 0 {
-		return echo.NewHTTPError(404, "directory entry not found")
 	}
 	items := make([]model.BookResponse, 0, len(works))
 	for _, work := range works {
@@ -83,4 +101,22 @@ func (h *CatalogBrowseHandler) Listings(c echo.Context) error {
 		return echo.NewHTTPError(500, "failed to load listings")
 	}
 	return catalogPage(c, items, total, p)
+}
+
+func (h *CatalogBrowseHandler) Profile(c echo.Context) error {
+	p := browseQuery(c)
+	p.Page = 1
+	p.PageSize = 1
+	p.Kind = "model"
+	if strings.HasPrefix(c.Path(), "/v1/publishers") {
+		p.Kind = "publisher"
+	}
+	entries, _, err := h.service.Directory(c.Request().Context(), p)
+	if err != nil {
+		return echo.NewHTTPError(500, "failed to load catalog profile")
+	}
+	if len(entries) == 0 {
+		return echo.NewHTTPError(404, "directory entry not found")
+	}
+	return c.JSON(http.StatusOK, entries[0])
 }

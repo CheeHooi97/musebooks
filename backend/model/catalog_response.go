@@ -5,7 +5,13 @@ import (
 	"time"
 )
 
+type CatalogLink struct {
+	ID   string `json:"id"`
+	Name string `json:"name"`
+}
+
 type BookResponse struct {
+	Models        []CatalogLink     `json:"models"`
 	ID            string            `json:"id"`
 	Slug          string            `json:"slug"`
 	OriginalTitle string            `json:"originalTitle"`
@@ -26,6 +32,7 @@ type OriginResponse struct {
 }
 
 type EditionResponse struct {
+	PublisherProfile  *CatalogLink      `json:"publisherProfile,omitempty"`
 	ID                string            `json:"id"`
 	Format            string            `json:"format"`
 	Language          string            `json:"language,omitempty"`
@@ -112,6 +119,12 @@ func (w Work) Response() BookResponse {
 		CoverURL:      w.CoverURL,
 		Editions:      make([]EditionResponse, 0, len(w.Editions)),
 	}
+	result.Models = []CatalogLink{}
+	for _, credit := range w.Credits {
+		if credit.Role == "featured" && credit.Person.Slug != "" {
+			result.Models = append(result.Models, CatalogLink{ID: credit.Person.Slug, Name: credit.Person.CanonicalPublicName})
+		}
+	}
 	for _, edition := range w.Editions {
 		if edition.Status == "superseded" {
 			continue
@@ -143,6 +156,9 @@ func (e Edition) Response() EditionResponse {
 		ActiveListings:    []ListingResponse{},
 		SoldListings:      []ListingResponse{},
 		RetailOffers:      []ListingResponse{},
+	}
+	if e.PublisherCompany != nil {
+		result.PublisherProfile = &CatalogLink{ID: e.PublisherCompany.Slug, Name: e.PublisherCompany.CanonicalName}
 	}
 	for _, listing := range e.Listings {
 		if !listingMatchesEdition(listing, e.Format) {

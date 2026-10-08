@@ -1,3 +1,4 @@
+import EditionPrices from "../components/EditionPrices";
 import SeoHead from "../components/SeoHead";
 import { usePreferences } from "../lib/preferences";import HeaderControls from "../components/HeaderControls";
 import BookDetail from "./BookDetail";
@@ -40,27 +41,6 @@ function Icon({ name, size = 18 }) {
 function editionFormatLabel(format) {
   return format === "digital" ? "Digital edition" : "Physical book";
 }
-function EditionPrices({ edition }) {const { t, formatPrice } = usePreferences();
-  const listings = editionListings(edition);
-  const groups = edition.format === "digital" ?
-  [{ title: "Digital retail prices", items: listings }] :
-  [
-  { title: "Marketplace active asking prices", items: listings.filter((item) => item.status === "active" && item.priceCategory !== "physical_retail") },
-  { title: "Marketplace sold prices", items: listings.filter((item) => item.status === "completed" && item.priceCategory !== "physical_retail") },
-  { title: "Physical retailer asking prices", items: listings.filter((item) => item.priceCategory === "physical_retail") }];
-
-  return <section className="price-history" aria-label={edition.format === "digital" ? t("Digital retail offers") : t("Physical marketplace and retailer prices")}>
-    {groups.map((group) => <div key={group.title}>
-      <div className="edition-heading"><h3>{t(group.title)}</h3></div>
-      {!group.items.length && <p className="quiet-state">{t("No records found.")}</p>}
-      {group.items.map((item) => <div className="edition-row" key={item.id}>
-        <div><strong>{item.source.name}</strong><span>{item.status === "completed" ? t("Completed sale") : item.status === "active" ? t("Available") : item.status === "ended" ? t("Unavailable") : t("Availability unknown")}</span></div>
-        <strong>{formatPrice(item.priceMinor, item.currency)}</strong>
-        <a href={item.url} target="_blank" rel="noreferrer" data-external-link><Icon name="external" size={14} />{t("View source")}</a>
-      </div>)}
-    </div>)}
-  </section>;
-}
 function BookCover({ book, edition: selectedEdition, compact = false, loading = "lazy" }) {const { t, formatPrice } = usePreferences();
   const image = selectedEdition?.coverUrl || book.coverUrl;
   return <div className={`cover-art${image ? " cover-art--image" : ""}${compact ? " cover-art--compact" : ""}`}>
@@ -88,7 +68,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
   const [format, setFormat] = useState("");
   const [availability, setAvailability] = useState("");
   const [selectedId, setSelectedId] = useState("");
-  const [selectedEditionId, setSelectedEditionId] = useState("");
+  const [selectedEditionId, setSelectedEditionId] = useState(() => new URLSearchParams(window.location.search).get("edition") || "");
   const [saved, setSaved] = useState([]);
   const [shareState, setShareState] = useState("idle");
   const [mobileFilters, setMobileFilters] = useState(false);
@@ -304,6 +284,9 @@ export default function Home() {const { t, formatPrice } = usePreferences();
   useEffect(() => {
     const syncRoute = () => {
       try {setBookSlug(window.location.pathname.startsWith("/books/") ? decodeURIComponent(window.location.pathname.slice(7)) : "");} catch {setBookSlug("invalid-book");}
+      const route = window.location.pathname.split("/")[1];
+      setActiveView(["models", "publishers", "active", "sold"].includes(route) ? route : "browse");
+      setSelectedEditionId(new URLSearchParams(window.location.search).get("edition") || "");
     };
     window.addEventListener("popstate", syncRoute);
     return () => window.removeEventListener("popstate", syncRoute);
@@ -313,6 +296,10 @@ export default function Home() {const { t, formatPrice } = usePreferences();
     setBookSlug("");
     setActiveView(view);
     window.history.pushState(null, "", "/");
+  };
+  const selectEdition = (id) => {
+    setSelectedEditionId(id);
+    if (bookSlug) { const params = new URLSearchParams(window.location.search); params.set("edition", id); window.history.replaceState(null, "", `${window.location.pathname}?${params}${window.location.hash}`); }
   };
   const chooseBook = (book, edition) => {
     window.history.pushState(null, "", `/books/${encodeURIComponent(book.slug)}`);
@@ -324,7 +311,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
     window.requestAnimationFrame(() => document.getElementById("book-title")?.focus());
   };
   return <div className={`site-shell${isCapacitorBuild ? " native-mobile-build" : ""}`}>
-    <SeoHead path={bookSlug ? `/books/${encodeURIComponent(bookSlug)}` : ["models", "publishers", "active", "sold"].includes(activeView) ? `/${activeView}` : "/"} book={bookSlug ? selectedBook : undefined} noindex={activeView === "collection" || Boolean(window.location.search)} />
+    {!(["models", "publishers"].includes(activeView) && window.location.pathname.split("/")[2]) && <SeoHead path={bookSlug ? `/books/${encodeURIComponent(bookSlug)}` : ["models", "publishers", "active", "sold"].includes(activeView) ? `/${activeView}` : "/"} book={bookSlug ? selectedBook : undefined} noindex={activeView === "collection" || Boolean(window.location.search)} />}
     <a className="skip-link" href="#main-content">{t("Skip to catalog")}</a>
     <header className="site-header">
       <a className="wordmark" href="/" aria-label={t("MuseBooks home")}>{t("MuseBooks")}</a>
@@ -337,7 +324,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
     </header>
 
     <main id="main-content">
-      {bookSlug ? <>{apiState === "loading" ? <div className="detail-route-state" role="status">{t("Loading photobook\u2026")}</div> : apiState === "error" ? <div className="detail-route-state" role="alert"><h1>{t("This photobook couldn\u2019t be loaded.")}</h1><button onClick={() => setRetry((value) => value + 1)}>{t("Retry connection")}</button></div> : !selectedBook ? <div className="detail-route-state"><h1>{t("Photobook not found.")}</h1><a href="/">{t("Home")}</a></div> : selectedEdition ? <BookDetail {...{ selectedBook, selectedEdition, selectedEditions, selectedListing, availability, saved, shareState, setSelectedEditionId, toggleSaved, shareSelected, BookCover, EditionPrices, Icon, primaryListing, formatPrice, priceLabel, editionFormatLabel }} /> : <div className="detail-route-state"><h1>{selectedBook.originalTitle}</h1><p>{t("No editions recorded yet.")}</p><a href="/">{t("Home")}</a></div>}</> : activeView !== "browse" && activeView !== "collection" ? <CatalogPages key={activeView} section={activeView} /> : <>
+      {bookSlug ? <>{apiState === "loading" ? <div className="detail-route-state" role="status">{t("Loading photobook\u2026")}</div> : apiState === "error" ? <div className="detail-route-state" role="alert"><h1>{t("This photobook couldn\u2019t be loaded.")}</h1><button onClick={() => setRetry((value) => value + 1)}>{t("Retry connection")}</button></div> : !selectedBook ? <div className="detail-route-state"><h1>{t("Photobook not found.")}</h1><a href="/">{t("Home")}</a></div> : selectedEdition ? <BookDetail {...{ selectedBook, selectedEdition, selectedEditions, selectedListing, availability, saved, shareState, setSelectedEditionId: selectEdition, toggleSaved, shareSelected, BookCover, EditionPrices, Icon, primaryListing, formatPrice, priceLabel, editionFormatLabel }} /> : <div className="detail-route-state"><h1>{selectedBook.originalTitle}</h1><p>{t("No editions recorded yet.")}</p><a href="/">{t("Home")}</a></div>}</> : activeView !== "browse" && activeView !== "collection" ? <CatalogPages key={activeView} section={activeView} /> : <>
       <section className="hero" aria-labelledby="page-title">
         <div className="hero-copy">
           <h1 id="page-title">{t("Find the next book worth keeping.")}</h1>

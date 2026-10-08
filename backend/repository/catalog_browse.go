@@ -8,7 +8,7 @@ import (
 
 func (r *CatalogRepository) Directory(ctx context.Context, p model.CatalogBrowseQuery) ([]model.DirectoryEntry, int64, error) {
 	query := r.db.WithContext(ctx).Table("people AS directory")
-	columns := `directory.slug AS id, directory.canonical_public_name AS name,
+	columns := `directory.slug AS id, directory.canonical_public_name AS name,directory.original_name,directory.english_name,directory.verification_source_url AS official_url,
  (SELECT COUNT(DISTINCT w.id) FROM work_people wp JOIN works w ON w.id=wp.work_id WHERE wp.person_id=directory.id AND wp.role='featured' AND w.status='published') AS work_count,
  (SELECT COUNT(DISTINCT e.id) FROM work_people wp JOIN works w ON w.id=wp.work_id JOIN editions e ON e.work_id=w.id WHERE wp.person_id=directory.id AND wp.role='featured' AND w.status='published' AND e.status<>'superseded') AS edition_count,
  (SELECT COALESCE(NULLIF(e.cover_url,''),w.cover_url) FROM work_people wp JOIN works w ON w.id=wp.work_id LEFT JOIN editions e ON e.work_id=w.id AND e.status<>'superseded' WHERE wp.person_id=directory.id AND wp.role='featured' AND w.status='published' ORDER BY w.id,e.id LIMIT 1) AS cover_url`
@@ -17,12 +17,18 @@ func (r *CatalogRepository) Directory(ctx context.Context, p model.CatalogBrowse
 	if p.Kind == "publisher" {
 		query = r.db.WithContext(ctx).Table("companies AS directory").Where("EXISTS (SELECT 1 FROM editions e JOIN works w ON w.id=e.work_id WHERE e.publisher_company_id=directory.id AND e.status<>'superseded' AND w.status='published')")
 		name = "directory.canonical_name"
-		columns = `directory.slug AS id,directory.canonical_name AS name,
+		columns = `directory.slug AS id,directory.canonical_name AS name,directory.official_url,
  (SELECT COUNT(DISTINCT w.id) FROM editions e JOIN works w ON w.id=e.work_id WHERE e.publisher_company_id=directory.id AND e.status<>'superseded' AND w.status='published') AS work_count,
  (SELECT COUNT(*) FROM editions e JOIN works w ON w.id=e.work_id WHERE e.publisher_company_id=directory.id AND e.status<>'superseded' AND w.status='published') AS edition_count,
  (SELECT COALESCE(NULLIF(e.cover_url,''),w.cover_url) FROM editions e JOIN works w ON w.id=e.work_id WHERE e.publisher_company_id=directory.id AND e.status<>'superseded' AND w.status='published' ORDER BY w.id,e.id LIMIT 1) AS cover_url`
 	}
-	if p.Query != "" {
+	if p.ID != "" {
+		query = query.Where("directory.slug = ?", p.ID)
+	}
+	if p.Query != "" && p.Kind == "model" {
+		term := "%" + p.Query + "%"
+		query = query.Where("directory.canonical_public_name ILIKE ? OR directory.original_name ILIKE ? OR directory.english_name ILIKE ? OR directory.traditional_chinese_name ILIKE ? OR directory.simplified_chinese_name ILIKE ?", term, term, term, term, term)
+	} else if p.Query != "" {
 		query = query.Where(name+" ILIKE ?", "%"+p.Query+"%")
 	}
 	var total int64
@@ -40,6 +46,32 @@ func (r *CatalogRepository) DirectoryBooks(ctx context.Context, p model.CatalogB
 	} else {
 		query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=works.id AND wp.role='featured' AND p.slug=?)", p.ID)
 	}
+	if p.Query != "" {
+		term := "%" + p.Query + "%"
+		query = query.Where("works.original_title ILIKE ? OR works.english_title ILIKE ? OR works.featured_names ILIKE ?", term, term, term)
+	}
+	if p.Person != "" {
+		query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=works.id AND wp.role='featured' AND (p.slug=? OR p.canonical_public_name ILIKE ?))", p.Person, "%"+p.Person+"%")
+	}
+	editionFilter := "e.work_id=works.id AND e.status<>'superseded'"
+	args := []any{}
+	if p.Kind == "publisher" {
+		editionFilter += " AND e.publisher_company_id IN (SELECT id FROM companies WHERE slug=?)"
+		args = append(args, p.ID)
+	}
+	if p.Format != "" {
+		editionFilter += " AND e.format=?"
+		args = append(args, p.Format)
+	}
+	if p.Language != "" {
+		editionFilter += " AND e.language ILIKE ?"
+		args = append(args, "%"+p.Language+"%")
+	}
+	if p.Year != "" {
+		editionFilter += " AND EXTRACT(YEAR FROM e.release_date)=?"
+		args = append(args, p.Year)
+	}
+	query = query.Where("EXISTS (SELECT 1 FROM editions e WHERE "+editionFilter+")", args...)
 	var total int64
 	if err := query.Session(&gorm.Session{}).Count(&total).Error; err != nil {
 		return nil, 0, err
@@ -50,8 +82,17 @@ func (r *CatalogRepository) DirectoryBooks(ctx context.Context, p model.CatalogB
 		if p.Kind == "publisher" {
 			db = db.Where("publisher_company_id IN (SELECT id FROM companies WHERE slug=?)", p.ID)
 		}
+		if p.Format != "" {
+			db = db.Where("format=?", p.Format)
+		}
+		if p.Language != "" {
+			db = db.Where("language ILIKE ?", "%"+p.Language+"%")
+		}
+		if p.Year != "" {
+			db = db.Where("EXTRACT(YEAR FROM release_date)=?", p.Year)
+		}
 		return db.Order("release_date DESC NULLS LAST,id")
-	}).Preload("Editions.Listings").Preload("Editions.Listings.Source")
+	}).Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source")
 	err := query.Order("works.original_title,works.id").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Find(&works).Error
 	return works, total, err
 }

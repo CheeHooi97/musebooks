@@ -3,8 +3,8 @@ import path from 'node:path'
 import { pageSeo, SITE_URL } from '../src/lib/seo.js'
 
 const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[char]))
-export function renderSeo(html, pathname, book) {
-  const seo = pageSeo(pathname, book)
+export function renderSeo(html, pathname, book, profile) {
+  const seo = pageSeo(pathname, book, profile)
   const meta = (key, value, attribute = 'name') => `<meta ${attribute}="${key}" content="${escape(value)}"/>`
   const tags = [meta('description', seo.description), meta('robots', 'index,follow,max-image-preview:large'), `<link rel="canonical" href="${escape(seo.url)}"/>`,
     ...Object.entries({ title: seo.title, description: seo.description, url: seo.url, type: 'website', site_name: 'MuseBooks', ...(seo.image ? { image: seo.image } : {}) }).map(([key, value]) => meta(`og:${key}`, value, 'property')),
@@ -29,6 +29,25 @@ export async function buildSeo(outputDir) {
   const books = [...first.items]
   for (let page = 2; page <= first.totalPages; page++) books.push(...(await load(page)).items)
   const routes = ['/', '/models', '/publishers', '/active', '/sold', '/privacy-policy']
+  for (const kind of ['models', 'publishers']) {
+    let page = 1
+    let totalPages = 1
+    do {
+      const response = await fetch(`${api}/v1/${kind}?pageSize=50&page=${page}`, { signal: AbortSignal.timeout(30000) })
+      if (!response.ok) throw new Error(`SEO ${kind} request failed: ${response.status}`)
+      const data = await response.json()
+      if (!Array.isArray(data.items) || !Number.isInteger(data.totalPages)) throw new Error(`Invalid ${kind} directory response`)
+      totalPages = data.totalPages
+      for (const profile of data.items) {
+        const route = `/${kind}/${encodeURIComponent(profile.id)}`
+        routes.push(route)
+        const directory = path.join(outputDir, kind, encodeURIComponent(profile.id))
+        await fs.mkdir(directory, { recursive: true })
+        await fs.writeFile(path.join(directory, 'index.html'), renderSeo(template, route, undefined, profile))
+      }
+      page++
+    } while (page <= totalPages)
+  }
   for (const book of books) {
     if (!book.slug || !book.originalTitle) throw new Error('Catalog record missing a slug or title')
     const route = `/books/${encodeURIComponent(book.slug)}`
@@ -37,7 +56,7 @@ export async function buildSeo(outputDir) {
     await fs.mkdir(directory, { recursive: true })
     await fs.writeFile(path.join(directory, 'index.html'), renderSeo(template, route, book))
   }
-  for (const route of routes.filter(route => !route.startsWith('/books/'))) {
+  for (const route of routes.filter(route => !route.startsWith('/books/') && route.split('/').length <= 2)) {
     const directory = path.join(outputDir, route.slice(1))
     await fs.mkdir(directory, { recursive: true })
     await fs.writeFile(path.join(directory, 'index.html'), renderSeo(template, route))

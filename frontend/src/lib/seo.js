@@ -1,6 +1,6 @@
 export const SITE_URL = (import.meta.env?.VITE_SITE_URL || "https://musebooks.my").replace(/\/$/, "");
 export const DEFAULT_DESCRIPTION = "Discover model, idol, influencer, and celebrity photobooks. Explore physical and digital editions, publishers, and source-backed active and sold prices.";
-export function pageSeo(path = "/", book) {
+export function pageSeo(path = "/", book, profile) {
   const pages = {
     "/": ["MuseBooks — Photobook archive", DEFAULT_DESCRIPTION],
     "/models": ["Models & featured people — MuseBooks", "Explore photobooks by models, idols, influencers, and entertainers, with physical and digital edition records."],
@@ -17,5 +17,10 @@ export function pageSeo(path = "/", book) {
       { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${SITE_URL}/` }, { "@type": "ListItem", position: 2, name: book.originalTitle, item: url }] },
     ],
   } : { "@context": "https://schema.org", "@type": path === "/" ? "WebSite" : "WebPage", name: title, url, description };
+  if (profile) {
+    const profileTitle = `${profile.name} photobooks — MuseBooks`;
+    const profileDescription = `Explore ${profile.name} photobooks, physical and digital editions, and prices from different platforms.`;
+    return { title: profileTitle, description: profileDescription.slice(0, 160), url, image: profile.coverUrl, structuredData: { "@context": "https://schema.org", "@type": "CollectionPage", name: profileTitle, url, description: profileDescription }, noindex: false };
+  }
   return { title, description: description.replace(/\s+/g, " ").trim().slice(0, 160), url, image: book?.coverUrl, structuredData, noindex: !book && !pages[path] };
 }

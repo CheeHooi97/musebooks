@@ -11,6 +11,7 @@ import { usePreferences } from "../lib/preferences";export default function Book
           </div>
           <div className="detail-copy">
             <h1 id="book-title" tabIndex={-1}>{selectedBook.originalTitle}</h1>
+            <div className="book-model-links" aria-label={t("Models & featured people")}>{selectedBook.models?.length ? selectedBook.models.map(model => <a key={model.id} href={`/models/${encodeURIComponent(model.id)}`}>{model.name}</a>) : selectedBook.featuredNames?.join(" · ")}</div>
             {selectedBook.englishTitle && <p className="detail-title">{selectedBook.englishTitle}</p>}
             {selectedBook.summary && <p className="book-summary">{selectedBook.summary}</p>}
             <div className="detail-facts">
@@ -20,7 +21,7 @@ import { usePreferences } from "../lib/preferences";export default function Book
               <span><b>{t("Language")}</b>{selectedEdition.language || t("Not recorded")}</span>
               <span><b>{t("Pages")}</b>{selectedEdition.pageCount ? `${selectedEdition.pageCount} pages` : t("Not recorded")}</span>
               <span><b>{t("Published")}</b>{selectedEdition.releaseDate ? new Date(selectedEdition.releaseDate).getFullYear() : t("Not recorded")}</span>
-              <span><b>{t("Publisher")}</b>{selectedEdition.publisher || t("Not recorded")}</span>
+              <span><b>{t("Publisher")}</b>{selectedEdition.publisherProfile?.id ? <a href={`/publishers/${encodeURIComponent(selectedEdition.publisherProfile.id)}`}>{selectedEdition.publisherProfile.name}</a> : selectedEdition.publisher || t("Not recorded")}</span>
               <span><b>{t("Market")}</b>{selectedEdition.editionMarket || t("Not recorded")}</span>
             </div>
             <div className="edition-heading" id="available-editions"><h3>{t("Available editions")}</h3><a href="#edition-list">{t("View all")}</a></div>
