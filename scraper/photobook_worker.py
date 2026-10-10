@@ -15,13 +15,14 @@ import os
 import re
 import sys
 import time
+import unicodedata
 from contextlib import contextmanager, redirect_stdout
 from datetime import datetime, timezone
 from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
 from urllib.parse import urljoin, urlparse
 
 from cloakbrowser import launch
-from cover_policy import bookwalker_product_cover
+from cover_policy import bookwalker_product_cover, select_cover_url
 from digital_storefronts import EXTRA_DIGITAL_SOURCES, MIXED_DIGITAL_SOURCES, selected_book_schema
 from marketplace_adapters import (
     AdapterConfigurationError,
@@ -880,7 +881,7 @@ def detail_snapshot(
         "structured": structured,
         "metadata": metadata,
         "transaction": transaction,
-        "imageUrl": metadata.get("image") or structured.get("image") or "",
+        "imageUrl": select_cover_url(metadata.get("image"), structured.get("image")),
     }
 
 
@@ -1306,6 +1307,21 @@ def is_marketplace_price_source(source_id: str, source: dict) -> bool:
 
 
 def photobook_title_exclusion(title: str) -> str:
+    title = unicodedata.normalize("NFKC", title)
+    if re.search(r"写真集クオリティ|グラビアザテレビジョン|特別付録.*MINIブック", title, re.I):
+        return "magazine_or_supplement"
+    if re.search(r"ギュンター.?ブルム|G[uü]nter\s+Blum", title, re.I):
+        return "artist_monograph"
+    if re.search(r"AI[\s・_-]*(?:アート|美女|生成|グラビア)|生成AI|AI-generated", title, re.I):
+        return "synthetic_subject"
+    if re.search(r"写真データ|画像データ|ダウンロード販売", title):
+        return "download_resale"
+    if re.search(r"(?:ジュニア|Jr\.).*(?:グラビア|水着)|(?:グラビア|水着).*(?:ジュニア|Jr\.)", title, re.I):
+        return "junior_gravure"
+    if re.search(r"Chu[→\s-]*Boh|チューボー|ホイップ", title, re.I):
+        return "junior_gravure"
+    if re.search(r"\d{4}年\d{1,2}月号|特集号|(?:熱烈投稿|雑誌)", title) and not STRONG_PHOTOBOOK_SIGNAL_RE.search(title):
+        return "magazine_only"
     if re.search(r"插畫|插画|イラスト|illustrat(?:ed|ion)", title, re.I):
         return "illustrated_book"
     if re.search(r"月曆|月历|桌曆|桌历|日曆|日历|掛曆|挂历|年曆|年历|カレンダー|\bcalendar\b", title, re.I) and not STRONG_PHOTOBOOK_SIGNAL_RE.search(title):
@@ -1507,7 +1523,7 @@ def make_observation(
         "seriesName": compact(structured.get("isPartOf", {}).get("name"), 180) if isinstance(structured.get("isPartOf"), dict) else "",
         "editionVariant": digital_edition_variant(title) if format_value == "digital" else "",
         "shippingText": "",
-        "imageUrl": compact((detail.get("imageUrl") or candidate.get("imageUrl")) if source_id == "bookwalker-tw" else (candidate.get("imageUrl") or detail.get("imageUrl")), 500),
+        "imageUrl": compact(select_cover_url(detail.get("imageUrl"), candidate.get("imageUrl")) if source_id == "bookwalker-tw" else select_cover_url(candidate.get("imageUrl"), detail.get("imageUrl")), 500),
         "observedAt": iso_utc(),
         "statusEvidence": status_evidence,
         "timestampPrecision": "observed",
@@ -1775,7 +1791,7 @@ def collect(request: dict) -> dict:
                         # condition, distinct from a challenge/empty document.
                         next_page_possible = False
                         break
-                    page_full = len(candidates) >= candidate_limit
+                    page_full = len(candidates) >= min(candidate_limit, page_size)
                     numbered_pagination = adapter.key in {
                         "yahoo-auctions-jp",
                         "ebay",

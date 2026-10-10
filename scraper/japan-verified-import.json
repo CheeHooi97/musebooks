@@ -1,0 +1,101 @@
+[
+  {
+    "work": {
+      "id": "jp-enako-epilogue",
+      "slug": "jp-enako-epilogue",
+      "originalTitle": "えなこ写真集『エピローグ』",
+      "originCode": "JP",
+      "featuredNames": "えなこ",
+      "photographer": "藤本 和典",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/255c11fccfbd10ad30f1b7dd65045e164ec1c7a971d5ceadc5a2d9c9e1d55a0f.jpg"
+    },
+    "edition": {
+      "id": "jp-isbn-9784087902075",
+      "workId": "jp-enako-epilogue",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "集英社",
+      "isbn": "9784087902075",
+      "releaseDate": "2025-09-03T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 112,
+      "dimensions": "A4",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-790207-5",
+      "originalCoverUrl": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784087902075/240/9784087902075.jpg",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/255c11fccfbd10ad30f1b7dd65045e164ec1c7a971d5ceadc5a2d9c9e1d55a0f.jpg",
+      "coverObjectKey": "musebooks/covers/255c11fccfbd10ad30f1b7dd65045e164ec1c7a971d5ceadc5a2d9c9e1d55a0f.jpg"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
+  },
+  {
+    "work": {
+      "id": "jp-shiroma-miru-love-rush",
+      "slug": "jp-shiroma-miru-love-rush",
+      "originalTitle": "白間美瑠 写真集 「LOVE RUSH」",
+      "originCode": "JP",
+      "featuredNames": "白間美瑠",
+      "photographer": "中村 和孝",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/1fa76898d75cbc666883d402f116c96809b4cae326adc779bc8b3f43ed2af860.jpg"
+    },
+    "edition": {
+      "id": "jp-isbn-9784087808674",
+      "workId": "jp-shiroma-miru-love-rush",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "集英社",
+      "isbn": "9784087808674",
+      "releaseDate": "2019-06-19T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 144,
+      "dimensions": "AB判変型",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-780867-4",
+      "originalCoverUrl": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784087808674/240/9784087808674.jpg",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/1fa76898d75cbc666883d402f116c96809b4cae326adc779bc8b3f43ed2af860.jpg",
+      "coverObjectKey": "musebooks/covers/1fa76898d75cbc666883d402f116c96809b4cae326adc779bc8b3f43ed2af860.jpg"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
+  },
+  {
+    "work": {
+      "id": "jp-enako-cosplayer",
+      "slug": "jp-enako-cosplayer",
+      "originalTitle": "えなこ 1st メジャー写真集 『えなこ cosplayer』",
+      "originCode": "JP",
+      "featuredNames": "えなこ",
+      "photographer": "桑島 智輝",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/6a02f58531e548d8dcac773eaf7d000a16a8a712495116c81658ca58fab2b6db.jpg"
+    },
+    "edition": {
+      "id": "jp-isbn-9784087808612",
+      "workId": "jp-enako-cosplayer",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "集英社",
+      "isbn": "9784087808612",
+      "releaseDate": "2019-03-28T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 128,
+      "dimensions": "A4",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://books.shueisha.co.jp/items/contents.html?isbn=978-4-08-780861-2",
+      "originalCoverUrl": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784087808612/240/9784087808612.jpg",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/6a02f58531e548d8dcac773eaf7d000a16a8a712495116c81658ca58fab2b6db.jpg",
+      "coverObjectKey": "musebooks/covers/6a02f58531e548d8dcac773eaf7d000a16a8a712495116c81658ca58fab2b6db.jpg"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
+  }
+]

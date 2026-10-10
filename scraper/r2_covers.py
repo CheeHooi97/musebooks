@@ -7,7 +7,7 @@ import os
 import socket
 from urllib.parse import quote, urlsplit
 import requests
-from cover_policy import validate_cover_url
+from cover_policy import validate_cover_url, validate_cover_bytes
 
 
 def load_env(path):
@@ -92,6 +92,7 @@ def download_cover(url):
         elif data[:6] in (b'GIF87a',b'GIF89a'): mime='image/gif'
         elif data[:4]==b'RIFF' and data[8:12]==b'WEBP': mime='image/webp'
         else: raise ValueError('Cover response is not a supported image')
+        validate_cover_bytes(data)
         return data,mime
     raise ValueError('Too many cover redirects')
 
