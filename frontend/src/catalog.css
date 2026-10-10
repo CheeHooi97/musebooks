@@ -33,6 +33,15 @@
 .catalog-pagination button:disabled { opacity: .5; cursor: default; }
 .japan-marketplace-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 24px; }
 .japan-marketplace-entry { min-width: 0; }
+.home-marketplace { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--muted); }
+.home-marketplace > p { max-width: 70ch; color: var(--muted); line-height: 1.6; }
+.home-marketplace h3 { overflow-wrap: anywhere; }
+.home-marketplace summary { cursor: pointer; min-height: 44px; padding: 12px 0; color: var(--accent); }
+.home-marketplace summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.home-marketplace .platform-offer { grid-template-columns: minmax(0, 1fr); }
+.home-marketplace .offer-context, .home-marketplace .offer-amount { min-width: 0; overflow-wrap: anywhere; }
+.home-marketplace .offer-link { grid-column: 1; }
+.origin-offer-count { display: block; color: var(--muted); font-size: 11px; line-height: 1.5; }
 .japan-marketplace-entry__image { display: grid; place-items: center; height: 280px; padding: 12px; background: color-mix(in srgb, var(--ink) 4%, var(--paper)); color: var(--muted); text-decoration: none; }
 .japan-marketplace-entry__image img { width: 100%; height: 100%; object-fit: contain; }
 .japan-marketplace-entry__image:focus-visible, .japan-marketplace-entry__links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }

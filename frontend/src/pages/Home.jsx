@@ -1,4 +1,5 @@
 import EditionPrices from "../components/EditionPrices";
+import HomeMarketplace from "../components/HomeMarketplace";
 import SeoHead from "../components/SeoHead";
 import { usePreferences } from "../lib/preferences";import HeaderControls from "../components/HeaderControls";
 import BookDetail from "./BookDetail";
@@ -68,6 +69,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
     catch { return []; }
   });
   const [origins, setOrigins] = useState([]);
+  const [marketplaceTotal, setMarketplaceTotal] = useState(null);
   const [query, setQuery] = useState("");
   const [origin, setOrigin] = useState("");
   const [format, setFormat] = useState("");
@@ -355,7 +357,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
           <FilterGroup title={t("Origins")} id="origins">
             {origins.map((item) => <label className="check-row" key={item.code}>
               <input type="checkbox" checked={origin === item.code} onChange={() => setOrigin(origin === item.code ? "" : item.code)} />
-              <span>{t(item.name)}</span>{item.count !== undefined && <em>{item.count}</em>}
+              <span>{t(item.name)}{item.code === "JP" && marketplaceTotal !== null && <small className="origin-offer-count">{item.count} {t("books")} · {marketplaceTotal} {t("offers")}</small>}</span>{item.count !== undefined && !(item.code === "JP" && marketplaceTotal !== null) && <em>{item.count}</em>}
             </label>)}
           </FilterGroup>
           <FilterGroup title={t("Format")}>
@@ -401,7 +403,8 @@ export default function Home() {const { t, formatPrice } = usePreferences();
               </article>;
               })}
           </div>}
-          {apiState === "live" && visibleBooks.length === 0 && <div className="empty-state">
+          {activeView === "browse" && (!origin || origin === "JP") && format !== "digital" && <HomeMarketplace {...{ query, format, availability, sortBy }} onTotal={setMarketplaceTotal} />}
+          {apiState === "live" && visibleBooks.length === 0 && !(activeView === "browse" && (!origin || origin === "JP") && format !== "digital") && <div className="empty-state">
             <Icon name={activeView === "collection" ? "bookmark" : "search"} size={24} />
             <h3>{activeView === "collection" && saved.length === 0 ? t("Your collection is ready.") : activeView === "collection" ? t("No saved books match.") : t("No titles match those filters.")}</h3>
             <p>{activeView === "collection" && saved.length === 0 ? t("Save a photobook to keep its editions and source prices close.") : t("Try clearing a filter or searching a wider title, artist, or place.")}</p>

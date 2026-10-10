@@ -1,5 +1,9 @@
 {
   "ja": {
+    "Marketplace offers are grouped by verified book or identical listing title. Unmatched titles and bundles are awaiting catalog matching. Bundle prices apply to the whole listing.": "確認済みの本または同じ出品タイトルで販売情報をまとめています。未照合のタイトルやセットはカタログとの照合待ちです。セット価格は出品全体の価格です。",
+    "Loading marketplace offers…": "マーケットプレイスの販売情報を読み込み中…",
+    "title groups": "タイトルグループ",
+    "Marketplace results pages": "マーケットプレイスの結果ページ",
     "No records found.": "記録が見つかりません。",
     "Home": "ホーム",
     "Models": "モデル",
@@ -191,6 +195,10 @@
     "Profile source": "プロフィールの情報源"
   },
   "zh-Hans": {
+    "Marketplace offers are grouped by verified book or identical listing title. Unmatched titles and bundles are awaiting catalog matching. Bundle prices apply to the whole listing.": "商品按已验证书目或相同商品标题分组。未匹配的标题和套装等待目录匹配。套装价格对应整条商品记录。",
+    "Loading marketplace offers…": "正在加载市场报价…",
+    "title groups": "个标题分组",
+    "Marketplace results pages": "市场结果分页",
     "No records found.": "未找到记录。",
     "Home": "首页",
     "Models": "模特",
@@ -382,6 +390,10 @@
     "Profile source": "资料来源"
   },
   "zh-Hant": {
+    "Marketplace offers are grouped by verified book or identical listing title. Unmatched titles and bundles are awaiting catalog matching. Bundle prices apply to the whole listing.": "商品按已驗證書目或相同商品標題分組。未匹配的標題和套裝等待目錄匹配。套裝價格對應整筆商品紀錄。",
+    "Loading marketplace offers…": "正在載入市場報價…",
+    "title groups": "個標題分組",
+    "Marketplace results pages": "市場結果分頁",
     "No records found.": "找不到紀錄。",
     "Home": "首頁",
     "Models": "模特兒",
