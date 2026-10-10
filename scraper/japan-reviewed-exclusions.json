@@ -158,5 +158,25 @@
     "sourceId": "rakuma",
     "externalId": "a9846a2d2ec22550fa46770869bde3b0",
     "reason": "nonhuman_subject"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "q1245638954",
+    "reason": "nonbook_product"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "c1231837547",
+    "reason": "magazine_only"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "j1244789453",
+    "reason": "magazine_only"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "m1234246646",
+    "reason": "subject_publication_age_unverified"
   }
 ]

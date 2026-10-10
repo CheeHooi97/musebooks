@@ -1310,6 +1310,16 @@ def photobook_title_exclusion(title: str) -> str:
     title = unicodedata.normalize("NFKC", title)
     if re.search(r"リカちゃん人形|LICCA\s+IN\s+SOUTHERN\s+ISLAND", title, re.I):
         return "nonhuman_subject"
+    if re.search(r"生写真.*ブロマイド.*セット.*ポストカード|写真集.*映画パンフレット", title):
+        return "nonbook_product"
+    if re.search(r"写真集系雑誌|グラビアマガジン|月刊メルフレボンバー", title):
+        return "magazine_only"
+    if re.search(r"テレホンカード.*度数", title):
+        return "nonbook_product"
+    if re.search(r"表紙.*洋書\s*ELLE|NEO\s*GRAVURE\s*MAGAZINE", title, re.I):
+        return "magazine_only"
+    if re.search(r"17ans.*川上礼", title, re.I):
+        return "subject_publication_age_unverified"
     if re.search(r"雑誌付録DVD|写真集SE\s*DVD", title, re.I):
         return "disc_only"
     if re.search(r"^DVD\s*写真集|DVD写真集\[", title, re.I):
