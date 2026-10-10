@@ -54,6 +54,15 @@ func validCatalogOrigin(code string) bool {
 	}
 }
 
+func validExclusionReason(reason string) bool {
+	switch reason {
+	case "calendar_only", "illustrated_book", "disc_only", "magazine_only", "magazine_or_supplement", "junior_gravure", "artist_monograph", "synthetic_subject", "download_resale":
+		return true
+	default:
+		return false
+	}
+}
+
 func validateMediaInput(record Record) error {
 	if len(record.Media) == 0 {
 		return nil
@@ -126,7 +135,7 @@ func main() {
 		}
 		if err = db.Transaction(func(tx *gorm.DB) error {
 			for _, entry := range entries {
-				if entry.SourceID == "" || entry.ExternalID == "" || (entry.Reason != "calendar_only" && entry.Reason != "illustrated_book") {
+				if entry.SourceID == "" || entry.ExternalID == "" || !validExclusionReason(entry.Reason) {
 					return fmt.Errorf("invalid exclusion identity or reason")
 				}
 				if err := tx.Model(&model.Listing{}).Where("source_id = ? AND external_id = ?", entry.SourceID, entry.ExternalID).Updates(map[string]any{"status": "excluded", "edition_id": nil}).Error; err != nil {

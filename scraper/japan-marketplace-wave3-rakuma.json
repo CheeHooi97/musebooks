@@ -1,0 +1,133 @@
+[
+  {
+    "origin": {
+      "code": "JP",
+      "name": "Japan",
+      "nativeName": "日本"
+    },
+    "work": {},
+    "edition": {},
+    "source": {
+      "id": "rakuma",
+      "name": "Rakuma",
+      "region": "JP",
+      "locale": "ja-JP",
+      "timezone": "Asia/Tokyo",
+      "kind": "marketplace",
+      "adapter": "rakuma_jp",
+      "accessMethod": "browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://fril.jp",
+      "allowedHosts": "fril.jp,item.fril.jp",
+      "capabilities": "active_discovery,sold_discovery,listing_detail",
+      "accessStatus": "browser_review",
+      "termsUrl": "https://fril.jp/info/policy",
+      "ratePerMinute": 6,
+      "enabled": true
+    },
+    "batch": {
+      "jobId": "",
+      "workerId": "",
+      "leaseToken": "",
+      "sourceId": "rakuma",
+      "parserVersion": "python-photobook-browser-v6",
+      "retrievedAt": "2026-10-10T11:35:16.013092Z",
+      "pageNumber": 2,
+      "nextCursor": "{\"page\":4,\"offset\":0,\"url\":\"https://fril.jp/s?order=desc&page=4&query=%E3%82%B0%E3%83%A9%E3%83%93%E3%82%A2+%E5%86%99%E7%9C%9F%E9%9B%86&sort=relevance\"}",
+      "hasMore": true,
+      "items": [
+        {
+          "observationId": "95f588dc01c4fc6ebb0bf49514adcf07823f0e57",
+          "externalId": "4dfc40cdcd73431ac8a7e86b888049be",
+          "url": "https://item.fril.jp/4dfc40cdcd73431ac8a7e86b888049be",
+          "title": "乙葉写真集 otoha",
+          "sellerLocation": "",
+          "condition": "",
+          "status": "active",
+          "priceMinor": 1800,
+          "currency": "JPY",
+          "priceType": "fixed",
+          "format": "physical",
+          "digitalAccess": "",
+          "isbn": "",
+          "publisher": "",
+          "contentSummary": "乙葉さんの写真集「otoha」です。週刊プレイボーイ特別編集の作品です。 【商品詳細】 タイトル：otoha 編集：週刊プレイボーイ特別編集 中古品ですが、大切に保管していたため目立った傷や汚れはなく、状態は良好です。経年による多少の劣化はご了承ください。 ファンの方やコレクションされている方、いかがでしょうか。 よろしくお願いいたします。 #乙葉 #グラビア #アイドル #水着",
+          "pageCount": 0,
+          "releaseDate": "",
+          "seriesName": "",
+          "editionVariant": "",
+          "shippingText": "",
+          "imageUrl": "https://img.musecards.my/musebooks/covers/3fd3ca29f2a72ea7a22581ae5fb5e55f218e12538c9332fec428a3c43b65d186.jpg",
+          "observedAt": "2026-10-10T11:25:40.152721Z",
+          "statusEvidence": "購入に進む",
+          "timestampPrecision": "observed"
+        },
+        {
+          "observationId": "b0937b69498607fe11ef97a8c4031e17c19b14d6",
+          "externalId": "2e740625ea9a884927248ca152618cc5",
+          "url": "https://item.fril.jp/2e740625ea9a884927248ca152618cc5",
+          "title": "稼農楓//グラビアコレクション//写真集//SUPER☆GiRLS!",
+          "sellerLocation": "",
+          "condition": "",
+          "status": "active",
+          "priceMinor": 800,
+          "currency": "JPY",
+          "priceType": "fixed",
+          "format": "physical",
+          "digitalAccess": "",
+          "isbn": "",
+          "publisher": "",
+          "contentSummary": "稼農楓//グラビアコレクション//写真集//SUPER☆GiRLS!",
+          "pageCount": 0,
+          "releaseDate": "",
+          "seriesName": "",
+          "editionVariant": "",
+          "shippingText": "",
+          "imageUrl": "https://img.musecards.my/musebooks/covers/13e3f51e01c7f1d37be9f8692abdf64c2dadb46aeccd8cc0a78d6d759ded3e2b.jpg",
+          "observedAt": "2026-10-10T11:33:08.953657Z",
+          "statusEvidence": "購入に進む",
+          "timestampPrecision": "observed"
+        }
+      ],
+      "warnings": [
+        "detail or batch limit reached; the current page will be resumed"
+      ],
+      "diagnostics": {
+        "renderedCandidates": 120,
+        "accepted": 4,
+        "rejected": 56,
+        "detailPages": 60,
+        "detailErrors": 0,
+        "pagesLoaded": 3,
+        "sourceAccessMethod": "browser",
+        "adapter": "rakuma-jp",
+        "targetScope": "people",
+        "humanModelOnly": "true",
+        "marketplaceOnly": "true",
+        "rejected_active_status_unverified": 22,
+        "rejected_magazine_or_supplement": 16,
+        "rejected_not_a_photobook": 18,
+        "runtimeMs": 633218
+      }
+    },
+    "media": [
+      {
+        "externalId": "4dfc40cdcd73431ac8a7e86b888049be",
+        "mediaType": "listing_image",
+        "originalUrl": "https://img.fril.jp/img/852280021/m/2945978157.jpg?1788947355",
+        "storageUrl": "https://img.musecards.my/musebooks/covers/3fd3ca29f2a72ea7a22581ae5fb5e55f218e12538c9332fec428a3c43b65d186.jpg",
+        "sourceUrl": "https://item.fril.jp/4dfc40cdcd73431ac8a7e86b888049be",
+        "isPrimary": true
+      },
+      {
+        "externalId": "2e740625ea9a884927248ca152618cc5",
+        "mediaType": "listing_image",
+        "originalUrl": "https://img.fril.jp/img/828222387/m/2849169646.JPG?1777204233",
+        "storageUrl": "https://img.musecards.my/musebooks/covers/13e3f51e01c7f1d37be9f8692abdf64c2dadb46aeccd8cc0a78d6d759ded3e2b.jpg",
+        "sourceUrl": "https://item.fril.jp/2e740625ea9a884927248ca152618cc5",
+        "isPrimary": true
+      }
+    ]
+  }
+]

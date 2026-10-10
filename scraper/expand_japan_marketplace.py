@@ -47,11 +47,11 @@ def main():
     for item in batch.get('items', []):
         excluded = photobook_worker.photobook_title_exclusion(item['title'])
         if excluded:
-            failures.append({'externalId': item['externalId'], 'error': excluded})
+            failures.append({'externalId': item['externalId'], 'phase': 'scope', 'error': excluded})
             continue
         original = item.get('imageUrl', '')
         if not original:
-            failures.append({'externalId': item['externalId'], 'error': 'No source image'})
+            failures.append({'externalId': item['externalId'], 'phase': 'image', 'error': 'No source image'})
             continue
         try:
             if original not in cached:
@@ -63,13 +63,15 @@ def main():
                               sourceUrl=item['url'], isPrimary=True))
             print('R2:', item['externalId'], flush=True)
         except Exception as exc:
-            failures.append({'externalId': item['externalId'], 'error': str(exc)})
+            failures.append({'externalId': item['externalId'], 'phase': 'image', 'error': str(exc)})
     batch['items'] = accepted
-    output.write_text(json.dumps([dict(origin=dict(code='JP', name='Japan', nativeName='日本'),
+    output.write_text(json.dumps([dict(collection=dict(query=args.query, operation=args.operation, inputCursor=args.cursor), origin=dict(code='JP', name='Japan', nativeName='日本'),
                      work={}, edition={}, source=source, batch=batch, media=media)],
                      ensure_ascii=False, indent=2), encoding='utf-8')
     output.with_suffix('.failures.json').write_text(json.dumps(failures, ensure_ascii=False, indent=2), encoding='utf-8')
-    print('Prepared', len(accepted), 'observations; image failures:', len(failures), flush=True)
+    print('Prepared', len(accepted), 'observations; image failures:',
+          sum(entry['phase'] == 'image' for entry in failures),
+          '; scope exclusions:', sum(entry['phase'] == 'scope' for entry in failures), flush=True)
 
 if __name__ == '__main__':
     main()

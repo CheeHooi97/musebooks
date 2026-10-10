@@ -1310,8 +1310,16 @@ def photobook_title_exclusion(title: str) -> str:
     title = unicodedata.normalize("NFKC", title)
     if re.search(r"写真集クオリティ|グラビアザテレビジョン|特別付録.*MINIブック", title, re.I):
         return "magazine_or_supplement"
-    if re.search(r"ギュンター.?ブルム|G[uü]nter\s+Blum", title, re.I):
+    if re.search(r"ギュンター.?ブルム|G[uü]nter\s+Blum|村田\s*兼一写真集", title, re.I):
         return "artist_monograph"
+    if re.search(r"(?:CD|Blu[ -]?ray|ブルーレイ)写真集|^アイドルDVD", title, re.I):
+        return "disc_only"
+    if re.search(r"DVD|Blu[ -]?ray|ブルーレイ", title, re.I) and not STRONG_PHOTOBOOK_SIGNAL_RE.search(title):
+        return "disc_only"
+    if re.search(r"増刊|FRIDAY\s*GOLD", title, re.I) and not STRONG_PHOTOBOOK_SIGNAL_RE.search(title):
+        return "magazine_only"
+    if re.search(r"\bJK\b|女子高生|制服なう|エンジェルプロダクション|エンプロ|お菓子系|大倉梓|折山みゆ", title, re.I):
+        return "junior_gravure"
     if re.search(r"AI[\s・_-]*(?:アート|美女|生成|グラビア)|生成AI|AI-generated", title, re.I):
         return "synthetic_subject"
     if re.search(r"写真データ|画像データ|ダウンロード販売", title):
