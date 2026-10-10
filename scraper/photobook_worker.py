@@ -1324,6 +1324,16 @@ def photobook_title_exclusion(title: str) -> str:
         return "magazine_or_supplement"
     if re.search(r"小泉今日子.*デラックス近代映画.*水着", title):
         return "subject_publication_age_unverified"
+    if re.search(r"BRODY.*月号|旧雑誌|SIX\s*PAPER.*表紙", title, re.I):
+        return "magazine_only"
+    if re.search(r"AIポスター", title, re.I):
+        return "synthetic_subject"
+    if re.search(r"ROM写真集", title, re.I):
+        return "disc_only"
+    if re.search(r"^チバゆな\s*ブロマイド", title):
+        return "nonbook_product"
+    if re.search(r"スクールガール.*小林基行", title):
+        return "artist_monograph"
     if re.search(r"雑誌付録DVD|写真集SE\s*DVD", title, re.I):
         return "disc_only"
     if re.search(r"^DVD\s*写真集|DVD写真集\[", title, re.I):

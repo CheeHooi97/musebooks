@@ -1,0 +1,30 @@
+[
+  {
+    "externalId": "z689303882",
+    "reason": "magazine_only"
+  },
+  {
+    "externalId": "z696419848",
+    "reason": "magazine_only"
+  },
+  {
+    "externalId": "z660282666",
+    "reason": "magazine_only"
+  },
+  {
+    "externalId": "z654966698",
+    "reason": "synthetic_subject"
+  },
+  {
+    "externalId": "z675652694",
+    "reason": "nonbook_product"
+  },
+  {
+    "externalId": "z660343506",
+    "reason": "artist_monograph"
+  },
+  {
+    "externalId": "z96129008",
+    "reason": "disc_only"
+  }
+]
