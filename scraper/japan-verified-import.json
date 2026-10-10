@@ -129,5 +129,69 @@
     "batch": {
       "items": []
     }
+  },
+  {
+    "work": {
+      "id": "jp-iori-moe-naishobanashi",
+      "slug": "jp-iori-moe-naishobanashi",
+      "originalTitle": "伊織もえ写真集 内緒話",
+      "originCode": "JP",
+      "featuredNames": "伊織もえ",
+      "photographer": "Takeo Dec.",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/0cdb3cc3f40b7eed86f4973b071436e5e70b14848de6d17098c4a20658f794de.jpg"
+    },
+    "edition": {
+      "id": "jp-isbn-9784253011112",
+      "workId": "jp-iori-moe-naishobanashi",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "秋田書店",
+      "isbn": "9784253011112",
+      "releaseDate": "2021-10-01T00:00:00Z",
+      "releasePrecision": "day",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://www.akitashoten.co.jp/comics/425301111X",
+      "originalCoverUrl": "https://www.akitashoten.co.jp/comics/425301111X/cover",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/0cdb3cc3f40b7eed86f4973b071436e5e70b14848de6d17098c4a20658f794de.jpg",
+      "coverObjectKey": "musebooks/covers/0cdb3cc3f40b7eed86f4973b071436e5e70b14848de6d17098c4a20658f794de.jpg"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
+  },
+  {
+    "work": {
+      "id": "jp-yukihira-risa-torokeru",
+      "slug": "jp-yukihira-risa-torokeru",
+      "originalTitle": "雪平莉左 ファースト写真集 『とろける。』",
+      "originCode": "JP",
+      "featuredNames": "雪平莉左",
+      "photographer": "佐藤 佑一",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/a1860ed75aa1e164b952fcedc004ef2a42f3818abfb515f031fd497e72f57f36.jpg"
+    },
+    "edition": {
+      "id": "jp-isbn-9784087900729",
+      "workId": "jp-yukihira-risa-torokeru",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "集英社",
+      "isbn": "9784087900729",
+      "releaseDate": "2022-04-21T00:00:00Z",
+      "releasePrecision": "day",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-790072-9",
+      "originalCoverUrl": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784087900729/240/9784087900729.jpg",
+      "pageCount": 112,
+      "dimensions": "A4",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/a1860ed75aa1e164b952fcedc004ef2a42f3818abfb515f031fd497e72f57f36.jpg",
+      "coverObjectKey": "musebooks/covers/a1860ed75aa1e164b952fcedc004ef2a42f3818abfb515f031fd497e72f57f36.jpg"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
   }
 ]
