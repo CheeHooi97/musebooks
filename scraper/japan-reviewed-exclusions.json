@@ -1,4 +1,67 @@
 [
- {"sourceId":"rakuma","externalId":"1283657d83236d032f42ecf7a91ddafa","reason":"disc_only"},
- {"sourceId":"rakuma","externalId":"0c732957e6a942789dee981489c3883c","reason":"magazine_only"}
+  {
+    "sourceId": "rakuma",
+    "externalId": "1283657d83236d032f42ecf7a91ddafa",
+    "reason": "disc_only"
+  },
+  {
+    "sourceId": "rakuma",
+    "externalId": "0c732957e6a942789dee981489c3883c",
+    "reason": "magazine_only"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "c1244959129",
+    "reason": "nonbook_product"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "c1247703284",
+    "reason": "magazine_only"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "1246519049",
+    "reason": "magazine_only"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "c1236236631",
+    "reason": "subject_publication_age_unverified"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "p1244376490",
+    "reason": "subject_publication_age_unverified"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "m1244826266",
+    "reason": "nonbook_product"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "d1240743001",
+    "reason": "nonbook_product"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "m1236379025",
+    "reason": "nonbook_product"
+  },
+  {
+    "sourceId": "yahoo-furima-jp",
+    "externalId": "z680969620",
+    "reason": "magazine_only"
+  },
+  {
+    "sourceId": "yahoo-furima-jp",
+    "externalId": "z682661000",
+    "reason": "subject_publication_age_unverified"
+  },
+  {
+    "sourceId": "yahoo-furima-jp",
+    "externalId": "z656871290",
+    "reason": "subject_publication_age_unverified"
+  }
 ]

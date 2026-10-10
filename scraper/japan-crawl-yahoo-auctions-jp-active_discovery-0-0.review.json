@@ -1,0 +1,34 @@
+[
+  {
+    "externalId": "c1244959129",
+    "reason": "nonbook_product"
+  },
+  {
+    "externalId": "c1247703284",
+    "reason": "magazine_only"
+  },
+  {
+    "externalId": "1246519049",
+    "reason": "magazine_only"
+  },
+  {
+    "externalId": "c1236236631",
+    "reason": "subject_publication_age_unverified"
+  },
+  {
+    "externalId": "p1244376490",
+    "reason": "subject_publication_age_unverified"
+  },
+  {
+    "externalId": "m1244826266",
+    "reason": "nonbook_product"
+  },
+  {
+    "externalId": "d1240743001",
+    "reason": "nonbook_product"
+  },
+  {
+    "externalId": "m1236379025",
+    "reason": "nonbook_product"
+  }
+]

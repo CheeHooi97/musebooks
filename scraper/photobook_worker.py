@@ -1308,6 +1308,12 @@ def is_marketplace_price_source(source_id: str, source: dict) -> bool:
 
 def photobook_title_exclusion(title: str) -> str:
     title = unicodedata.normalize("NFKC", title)
+    if re.search(r"アート\s*ポスター|^\[中古\s*セル版\s*DVD\]|カレンダーブック", title, re.I):
+        return "nonbook_product"
+    if re.search(r"\d{4}年\s*\d{1,2}月号|週刊現代\s*SPECIAL|映画ファン.*臨時増刊", title, re.I):
+        return "magazine_only"
+    if re.search(r"制コレ.*水着|石川佳奈.*kana|前田愛.*眠り姫|宮沢ゆうな.*Pretty\s*Peach", title, re.I):
+        return "subject_publication_age_unverified"
     if re.search(r"写真集クオリティ|グラビアザテレビジョン|特別付録.*MINIブック", title, re.I):
         return "magazine_or_supplement"
     if re.search(r"ギュンター.?ブルム|G[uü]nter\s+Blum|村田\s*兼一写真集", title, re.I):
