@@ -1312,7 +1312,7 @@ def photobook_title_exclusion(title: str) -> str:
         return "nonhuman_subject"
     if re.search(r"生写真.*ブロマイド.*セット.*ポストカード|写真集.*映画パンフレット", title):
         return "nonbook_product"
-    if re.search(r"写真集系雑誌|グラビアマガジン|月刊メルフレボンバー", title):
+    if re.search(r"写真集系雑誌|グラビアマガジン.*コスプレ.*ポトレアーカイブス|月刊メルフレボンバー", title):
         return "magazine_only"
     if re.search(r"テレホンカード.*度数", title):
         return "nonbook_product"
