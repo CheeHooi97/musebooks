@@ -327,7 +327,6 @@ export default function Home() {const { t, formatPrice } = usePreferences();
       <nav className="main-nav" aria-label={t("Main navigation")}>
         <button type="button" className={activeView === "browse" ? "active" : ""} aria-current={activeView === "browse" ? "page" : undefined} onClick={() => navigateView("browse")}>{t("Home")}</button>
         {["models", "publishers", "active", "sold"].map((section) => <a key={section} href={`/${section}`} className={activeView === section ? "active" : ""} aria-current={activeView === section ? "page" : undefined}>{section === "models" ? t("Models") : section === "publishers" ? t("Publishers") : section === "active" ? t("Active listings") : t("Sold listings")}</a>)}
-        <a href="/japan" className={activeView === "japan" ? "active" : ""} aria-current={activeView === "japan" ? "page" : undefined}>{t("Japan marketplace")}</a>
         <button type="button" className={activeView === "collection" ? "active" : ""} aria-current={activeView === "collection" ? "page" : undefined} onClick={() => navigateView("collection")}>{t("Saved collection")}<span className="saved-count">{saved.length}</span></button>
       </nav>
       <HeaderControls theme={theme} setTheme={setTheme} savedCount={saved.length} onCollection={() => navigateView("collection")} />
