@@ -1312,6 +1312,8 @@ def photobook_title_exclusion(title: str) -> str:
         return "magazine_or_supplement"
     if re.search(r"ギュンター.?ブルム|G[uü]nter\s+Blum|村田\s*兼一写真集", title, re.I):
         return "artist_monograph"
+    if re.search(r"染色体.*野川イサム|野川イサム.*染色体|快楽の館", title):
+        return "artist_monograph"
     if re.search(r"(?:CD|Blu[ -]?ray|ブルーレイ)写真集|^アイドルDVD", title, re.I):
         return "disc_only"
     if re.search(r"DVD|Blu[ -]?ray|ブルーレイ", title, re.I) and not STRONG_PHOTOBOOK_SIGNAL_RE.search(title):
