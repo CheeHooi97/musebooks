@@ -1691,6 +1691,7 @@ def collect(request: dict) -> dict:
     limiter = NavigationRateLimiter(source, request)
     items: list[dict] = []
     seen_ids: set[str] = set()
+    inspected_candidate_urls: set[str] = set()
     diagnostics: dict[str, int | str] = {
         "renderedCandidates": 0,
         "accepted": 0,
@@ -1821,6 +1822,10 @@ def collect(request: dict) -> dict:
                     start_index = min(start_index, len(candidates))
                     for candidate_index in range(start_index, len(candidates)):
                         candidate = candidates[candidate_index]
+                        candidate_url = candidate.get("url", "")
+                        if candidate_url and candidate_url in inspected_candidate_urls:
+                            rejection_counts["duplicate_candidate"] = rejection_counts.get("duplicate_candidate", 0) + 1
+                            continue
                         if len(items) >= max_items:
                             resume_cursor_value = resume_cursor(page_number, candidate_index, page_url)
                             next_page_possible = True
@@ -1852,6 +1857,8 @@ def collect(request: dict) -> dict:
                         item, reason = make_observation(
                             request, source, candidate, detail, operation, detail_required
                         )
+                        if candidate_url and not detail.get("detailError"):
+                            inspected_candidate_urls.add(candidate_url)
                         if item is None:
                             diagnostics["rejected"] = int(diagnostics["rejected"]) + 1
                             rejection_counts[reason] = rejection_counts.get(reason, 0) + 1

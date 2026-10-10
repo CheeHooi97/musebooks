@@ -1,4 +1,9 @@
 > Current policy: retail bookstores and digital stores are excluded from all scraping operations. Retail live results below describe earlier inspection only. Marketplace active and sold scraping remains supported.
+>
+> Current collection access policy (2026-10-10): Mercari remains disabled pending
+> access/terms approval, as specified in `scraper.md`. The historical successful
+> browser checks below do not authorize or enable its collection. Current Japan
+> imports use Yahoo Auctions, Yahoo Flea Market, and Rakuma.
 
 # Japan book scraper verification — 2026-10-05
 
