@@ -34,5 +34,14 @@
     "evidenceUrl": "https://www.gentosha.co.jp/book/detail/9784344042247/",
     "matchMethod": "reviewed_title_cover",
     "evidence": "Listing title, named publisher, and photographed physical cover match the publisher edition; publisher verifies ISBN, release date, dimensions and page count."
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "p1246907283",
+    "expectedTitle": "T530 篠田麻里子 写真集「麻里子」AKB48 水着 グラビア アイドル 女優 初期写真集 撮影・曽根将樹 ISBN9784087805703 ②",
+    "editionId": "jp-isbn-9784087805703",
+    "evidenceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-780570-3",
+    "matchMethod": "reviewed_isbn",
+    "evidence": "Listing title explicitly states ISBN9784087805703; title, featured model and photographer agree with the publisher physical edition. Price is a current auction bid, not a completed sale."
   }
 ]

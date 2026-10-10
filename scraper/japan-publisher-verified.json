@@ -175,5 +175,35 @@
     "batch": {
       "items": []
     }
+  },
+  {
+    "work": {
+      "id": "jp-shinoda-mariko-mariko",
+      "slug": "jp-shinoda-mariko-mariko",
+      "originalTitle": "篠田麻里子写真集 「麻里子」",
+      "originCode": "JP",
+      "featuredNames": "篠田麻里子",
+      "photographer": "曽根 将樹"
+    },
+    "edition": {
+      "id": "jp-isbn-9784087805703",
+      "workId": "jp-shinoda-mariko-mariko",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "集英社",
+      "isbn": "9784087805703",
+      "releaseDate": "2010-07-02T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 96,
+      "dimensions": "A4判変型",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-780570-3",
+      "originalCoverUrl": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784087805703/1200/9784087805703.jpg"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
   }
 ]
