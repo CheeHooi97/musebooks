@@ -4,6 +4,7 @@ import (
 	"context"
 	"gorm.io/gorm"
 	"musebooks/model"
+	"strings"
 )
 
 func (r *CatalogRepository) Directory(ctx context.Context, p model.CatalogBrowseQuery) ([]model.DirectoryEntry, int64, error) {
@@ -37,6 +38,9 @@ func (r *CatalogRepository) Directory(ctx context.Context, p model.CatalogBrowse
 	}
 	entries := []model.DirectoryEntry{}
 	err := query.Select(columns).Order(name + " ASC,directory.id ASC").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Scan(&entries).Error
+	for i := range entries {
+		entries[i].CoverURL = model.PublicCoverURL(entries[i].CoverURL)
+	}
 	return entries, total, err
 }
 func (r *CatalogRepository) DirectoryBooks(ctx context.Context, p model.CatalogBrowseQuery) ([]model.Work, int64, error) {
@@ -138,6 +142,52 @@ func (r *CatalogRepository) Listings(ctx context.Context, p model.CatalogBrowseQ
 	err := query.Select(columns).Order("feed.observed_at DESC,feed.source_listing_id ASC").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Scan(&entries).Error
 	for i := range entries {
 		entries[i].SetFeaturedNames()
+		entries[i].CoverURL = model.PublicCoverURL(entries[i].CoverURL)
+	}
+	return entries, total, err
+}
+
+// MarketplaceListings returns current source records independently of catalog
+// edition matching. This lets visitors inspect Japan marketplace evidence
+// without presenting an unmatched listing as a verified catalog book.
+func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.CatalogBrowseQuery) ([]model.MarketplaceListingEntry, int64, error) {
+	query := r.db.WithContext(ctx).Table("listings AS listing").
+		Joins("JOIN sources AS source ON source.id=listing.source_id").
+		Joins("LEFT JOIN editions AS edition ON edition.id=listing.edition_id AND edition.status<>'superseded'").
+		Joins("LEFT JOIN works AS work ON work.id=edition.work_id AND work.status='published'").
+		Where("upper(source.region)=?", strings.ToUpper(strings.TrimSpace(p.Region))).
+		Where("lower(source.kind)=?", "marketplace").
+		Where("listing.status <> ?", "excluded")
+	if p.Status == "active" || p.Status == "completed" {
+		query = query.Where("listing.status = ?", p.Status)
+	}
+	if p.Format != "" {
+		query = query.Where("listing.format_candidate = ?", p.Format)
+	}
+	if p.Source != "" {
+		query = query.Where("listing.source_id = ?", p.Source)
+	}
+	if p.Query != "" {
+		term := "%" + p.Query + "%"
+		query = query.Where("listing.title ILIKE ? OR work.original_title ILIKE ? OR work.featured_names ILIKE ? OR edition.publisher ILIKE ?", term, term, term, term)
+	}
+	var total int64
+	if err := query.Session(&gorm.Session{}).Count(&total).Error; err != nil {
+		return nil, 0, err
+	}
+	columns := `listing.id,listing.external_id,listing.url,listing.title,listing.seller_location,listing.condition,
+ listing.format_candidate AS format,listing.status,listing.price_minor,listing.currency,listing.price_type,
+ listing.shipping_text,listing.observed_at,listing.last_seen_at,listing.image_url,
+ source.id AS source_id,source.name AS source_name,source.region AS source_region,source.kind AS source_kind,
+ listing.format_candidate AS source_photobook_format,
+ CASE WHEN listing.format_candidate='digital' THEN 'digital_retail' WHEN source.kind='bookstore' THEN 'physical_retail'
+ WHEN listing.status='completed' THEN 'marketplace_sold' ELSE 'marketplace_asking' END AS price_category,
+ (work.id IS NOT NULL) AS catalog_matched,work.original_title AS work_title,work.slug AS work_slug,
+ edition.edition_label,edition.publisher`
+	entries := []model.MarketplaceListingEntry{}
+	err := query.Select(columns).Order("listing.observed_at DESC,listing.id ASC").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Scan(&entries).Error
+	for i := range entries {
+		entries[i].ImageURL = model.PublicCoverURL(entries[i].ImageURL)
 	}
 	return entries, total, err
 }

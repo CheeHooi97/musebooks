@@ -22,9 +22,18 @@ type MarketEntry struct {
 	Publisher         string   `json:"publisher,omitempty"`
 	CoverURL          string   `json:"coverUrl,omitempty"`
 }
+type MarketplaceListingEntry struct {
+	ListingResponse `gorm:"embedded"`
+	ImageURL        string `json:"imageUrl,omitempty"`
+	CatalogMatched  bool   `json:"catalogMatched"`
+	WorkTitle       string `json:"workTitle,omitempty"`
+	WorkSlug        string `json:"workSlug,omitempty"`
+	EditionLabel    string `json:"editionLabel,omitempty"`
+	Publisher       string `json:"publisher,omitempty"`
+}
 type CatalogBrowseQuery struct {
-	Query, Kind, ID, Status, Format, Source, Person, Publisher, Language, Year string
-	Page, PageSize                                                             int
+	Query, Kind, ID, Status, Format, Source, Person, Publisher, Language, Year, Region string
+	Page, PageSize                                                                     int
 }
 
 func (entry *MarketEntry) SetFeaturedNames() {

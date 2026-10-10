@@ -27,6 +27,7 @@ func main() {
 	e.GET("/v1/models/:id/books", browse.DirectoryBooks)
 	e.GET("/v1/publishers/:id/books", browse.DirectoryBooks)
 	e.GET("/v1/listings", browse.Listings)
+	e.GET("/v1/marketplace-listings", browse.MarketplaceListings)
 	e.GET("/v1/books", existing.ListBooks)
 	e.GET("/v1/origins", existing.ListOrigins)
 	e.GET("/v1/sources", existing.ListSources)

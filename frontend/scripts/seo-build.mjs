@@ -54,6 +54,7 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
   await write('/publishers', { profiles: publishers })
   await write('/active', { listings: active })
   await write('/sold', { listings: sold })
+  await write('/japan')
   await write('/about')
   await write('/privacy-policy')
   for (const [kind, profiles] of [['models', models], ['publishers', publishers]]) {
@@ -70,6 +71,6 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
   await write('/404')
   await fs.writeFile(path.join(outputDir, '404.html'), await fs.readFile(path.join(outputDir, '404/index.html')))
   await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemapXML(routes.filter(route => route !== '/404'), siteURL))
-  await fs.writeFile(path.join(outputDir, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /v1/\nAllow: /v1/books\nAllow: /v1/models\nAllow: /v1/publishers\nAllow: /v1/listings\nAllow: /v1/origins\nAllow: /v1/sources\n\nSitemap: ${siteURL}/sitemap.xml\n`)
+  await fs.writeFile(path.join(outputDir, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /v1/\nAllow: /v1/books\nAllow: /v1/models\nAllow: /v1/publishers\nAllow: /v1/listings\nAllow: /v1/marketplace-listings\nAllow: /v1/origins\nAllow: /v1/sources\n\nSitemap: ${siteURL}/sitemap.xml\n`)
   console.log(`SEO: rendered ${books.length} photobook pages and ${routes.length - 1} sitemap URLs`)
 }

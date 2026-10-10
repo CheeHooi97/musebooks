@@ -31,10 +31,25 @@
 .listing-price { white-space: nowrap; }
 .catalog-pagination { display: flex; align-items: center; justify-content: center; gap: 24px; margin-top: 32px; }
 .catalog-pagination button:disabled { opacity: .5; cursor: default; }
+.japan-marketplace-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 36px 24px; }
+.japan-marketplace-entry { min-width: 0; }
+.japan-marketplace-entry__image { display: grid; place-items: center; height: 280px; padding: 12px; background: color-mix(in srgb, var(--ink) 4%, var(--paper)); color: var(--muted); text-decoration: none; }
+.japan-marketplace-entry__image img { width: 100%; height: 100%; object-fit: contain; }
+.japan-marketplace-entry__image:focus-visible, .japan-marketplace-entry__links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.japan-marketplace-entry__body { padding-top: 14px; }
+.japan-marketplace-entry__status { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 11px; }
+.japan-marketplace-entry__status span:first-child { color: var(--accent); font-weight: 600; }
+.japan-marketplace-entry h2 { margin: 10px 0 6px; font-size: 17px; line-height: 1.4; font-weight: 600; overflow-wrap: anywhere; }
+.japan-marketplace-entry__source-title, .japan-marketplace-entry__source, .japan-marketplace-entry__condition, .japan-marketplace-entry time { margin: 6px 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.japan-marketplace-entry__price { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 12px 0 4px; color: var(--ink); font-size: 21px; font-variant-numeric: tabular-nums; font-weight: 600; }
+.japan-marketplace-entry__price small { color: var(--muted); font-size: 11px; font-weight: 400; text-align: right; }
+.japan-marketplace-entry__links { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 12px; }
+.japan-marketplace-entry__links a { min-height: 36px; color: var(--accent); text-decoration: underline; text-underline-offset: 4px; }
 .main-nav { flex-wrap: nowrap; }
 .native-mobile-build .main-nav { display:flex; grid-column:1 / -1; height:48px; overflow-x:auto; flex-wrap:nowrap; }
 @media(max-width:1000px) { .directory-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .site-header { flex-wrap: wrap; } }
-@media(max-width:640px) { .directory-grid, .directory-books { grid-template-columns: 1fr; } .catalog-browser { padding-top: 28px; } .browser-filters { gap: 12px; } .main-nav { display:flex; width:100%; overflow-x:auto; flex-wrap:nowrap; order:3; gap:18px; padding:12px 0; } .main-nav a, .main-nav button { white-space:nowrap; } .listing-ledger td { padding:16px 12px; } }
+@media(max-width:1000px) { .japan-marketplace-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media(max-width:640px) { .directory-grid, .directory-books, .japan-marketplace-grid { grid-template-columns: 1fr; } .catalog-browser { padding-top: 28px; } .browser-filters { gap: 12px; } .main-nav { display:flex; width:100%; overflow-x:auto; flex-wrap:nowrap; order:3; gap:18px; padding:12px 0; } .main-nav a, .main-nav button { white-space:nowrap; } .listing-ledger td { padding:16px 12px; } .japan-marketplace-entry__image { height: min(104vw, 400px); } }
 .profile-heading { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding: 32px 0; }
 .profile-heading h1 { margin-bottom: 14px; overflow-wrap: anywhere; }
 .profile-heading p { color: var(--muted); margin: 8px 0; }

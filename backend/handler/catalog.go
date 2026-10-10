@@ -222,7 +222,7 @@ func (h *CatalogHandler) IngestBatch(c echo.Context) error {
 			listing.Currency = item.Currency
 			listing.PriceType = priceType
 			listing.ShippingText = item.ShippingText
-			listing.ImageURL = item.ImageURL
+			listing.ImageURL = model.PublicCoverURL(item.ImageURL)
 			listing.ObservedAt = seenAt
 			listing.LastSeenAt = seenAt
 			if err := tx.SaveListing(&listing).Error; err != nil {

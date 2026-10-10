@@ -103,6 +103,40 @@ func (h *CatalogBrowseHandler) Listings(c echo.Context) error {
 	return catalogPage(c, items, total, p)
 }
 
+func (h *CatalogBrowseHandler) MarketplaceListings(c echo.Context) error {
+	p := browseQuery(c)
+	p.Region = strings.ToUpper(strings.TrimSpace(c.QueryParam("region")))
+	if p.Region == "" {
+		p.Region = "JP"
+	}
+	if len(p.Region) != 2 {
+		return echo.NewHTTPError(400, "region must be a two-letter country code")
+	}
+	p.Status = strings.ToLower(strings.TrimSpace(c.QueryParam("status")))
+	if p.Status == "" {
+		p.Status = "all"
+	}
+	if p.Status == "sold" {
+		p.Status = "completed"
+	}
+	if p.Status != "all" && p.Status != "active" && p.Status != "completed" {
+		return echo.NewHTTPError(400, "status must be all, active, or completed")
+	}
+	p.Format = strings.TrimSpace(c.QueryParam("format"))
+	if p.Format != "" && p.Format != "physical" && p.Format != "digital" {
+		return echo.NewHTTPError(400, "format must be physical or digital")
+	}
+	if p.Page > 1000000 {
+		return echo.NewHTTPError(400, "page is too large")
+	}
+	p.Source = strings.TrimSpace(c.QueryParam("source"))
+	items, total, err := h.service.MarketplaceListings(c.Request().Context(), p)
+	if err != nil {
+		return echo.NewHTTPError(500, "failed to load marketplace listings")
+	}
+	return catalogPage(c, items, total, p)
+}
+
 func (h *CatalogBrowseHandler) Profile(c echo.Context) error {
 	p := browseQuery(c)
 	p.Page = 1

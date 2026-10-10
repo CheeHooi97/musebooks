@@ -29,6 +29,10 @@ npm run dev
 
 The Vite development server proxies `/v1/*` to `http://127.0.0.1:2002` by default. Override its proxy target with `VITE_API_PROXY` when needed. Production uses the existing Nginx API proxy or `VITE_API_BASE_URL`. The catalog displays an explicit loading, error, or empty state rather than substituting sample records when the API is unavailable.
 
+The native mobile app omits catalog photographs and cover images. Book covers use text placeholders, and directories and profiles show text only. The website continues to show images on desktop and mobile browsers.
+
+Rollup is pinned to `4.63.0` because `4.64.1` stalls during tree-shaking for this app. Keep the pin when installing dependencies; tree-shaking remains enabled.
+
 Build and sync the Android/iOS web bundle from `frontend/`:
 
 ```powershell
@@ -42,9 +46,10 @@ The mobile build defaults to `https://musebooks.my` for both API and shared-link
 
 - `/models` and `/publishers`: searchable, paginated directories derived from published work credits and edition publishers, with linked photobooks.
 - `/active` and `/sold`: searchable, paginated ledgers with source/format filters, original currencies, condition, observation dates, book details, and external source links.
-- API: `GET /v1/models`, `/v1/publishers`, `/{models|publishers}/:id/books`, and `/v1/listings?status=active|sold`. All accept pagination; directories and listings accept `q`. Listings also accept `source`, `format`, `model`, and `publisher`.
+- `/japan`: captured Japanese marketplace listings, with latest listing images and prices, source filters, and active/completed status. Unmatched records stay separate from verified photobook works.
+- API: `GET /v1/models`, `/v1/publishers`, `/{models|publishers}/:id/books`, `/v1/listings?status=active|sold`, and `/v1/marketplace-listings?region=JP&status=all|active|completed`. All accept pagination; browse endpoints accept `q`. Listings accept `source` and `format` where applicable.
 - New read paths follow `router → handler → service → repository → database`. Existing scraper ingestion contracts remain intact.
-- Sold records require completed physical marketplace status; ended listings and digital retail offers are excluded. Unmatched listings remain outside the public ledger until linked to a published work and compatible edition.
+- Sold records require completed physical marketplace status; ended listings and digital retail offers are excluded. The general `/active` and `/sold` ledgers stay edition-linked; the Japan page separately labels and shows unmatched marketplace records.
 - Directory identities currently derive from normalized catalog credit names. Alias merging and independently curated person/publisher profiles remain future work.
 
 Implementation and validation notes, including the read-only API preview command, are in [docs/catalog-implementation.md](docs/catalog-implementation.md).

@@ -116,7 +116,7 @@ func (w Work) Response() BookResponse {
 		},
 		FeaturedNames: splitNames(w.FeaturedNames),
 		Photographer:  w.Photographer,
-		CoverURL:      w.CoverURL,
+		CoverURL:      PublicCoverURL(w.CoverURL),
 		Editions:      make([]EditionResponse, 0, len(w.Editions)),
 	}
 	result.Models = []CatalogLink{}
@@ -151,7 +151,7 @@ func (e Edition) Response() EditionResponse {
 		MetadataSourceURL: e.MetadataSourceURL,
 		SeriesName:        e.SeriesName,
 		EditionLabel:      e.EditionLabel,
-		CoverURL:          e.CoverURL,
+		CoverURL:          PublicCoverURL(e.CoverURL),
 		Listings:          make([]ListingResponse, 0, len(e.Listings)),
 		ActiveListings:    []ListingResponse{},
 		SoldListings:      []ListingResponse{},

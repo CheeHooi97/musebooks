@@ -20,6 +20,7 @@ export function pageSeo(path = "/", book, profile, siteURL = SITE_URL) {
     "/publishers": ["Photobook publishers — MuseBooks", "Browse photobook publishers and discover their physical and digital editions with source-backed catalog records."],
     "/active": ["Active photobook listings — MuseBooks", "Browse available physical and digital photobook offers. Compare source prices and follow retailer and marketplace links."],
     "/sold": ["Sold photobook listings — MuseBooks", "Explore completed physical photobook marketplace sales, with original source prices and edition context."],
+    "/japan": ["Japan marketplace photobook listings — MuseBooks", "Browse captured photobook listings from Japanese marketplaces, compare current bids, fixed asks, and completed prices, and follow each source listing."],
     "/privacy-policy": ["Privacy Policy — MuseBooks", "Learn how MuseBooks handles saved collections, account preferences, website analytics, and privacy questions."],
     "/about": ["About MuseBooks — Photobook catalog methodology", "How MuseBooks records photobooks, editions, source-backed offers, and completed physical sales. Catalog scope, sources, and corrections."],
     "/404": ["Page not found — MuseBooks", "This catalog page could not be found. Explore the MuseBooks photobook catalog."],

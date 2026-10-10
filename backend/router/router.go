@@ -24,6 +24,7 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	v.GET("/publishers/:id", browse.Profile)
 	v.GET("/publishers/:id/books", browse.DirectoryBooks)
 	v.GET("/listings", browse.Listings)
+	v.GET("/marketplace-listings", browse.MarketplaceListings)
 	v.GET("/books", catalogHandler.ListBooks)
 	v.GET("/books/:id", catalogHandler.GetBook)
 	v.GET("/editions/:id", catalogHandler.GetEdition)

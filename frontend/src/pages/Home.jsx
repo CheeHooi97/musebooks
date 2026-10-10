@@ -8,7 +8,7 @@ import { apiUrl } from "../lib/api";
 import { hasSearchFilters } from "../lib/seo";
 import { bookSlugFromPath } from "../lib/routes";
 import { editionListings, priceLabel, primaryListing, visibleEditions } from "../lib/price-policy";
-const isCapacitorBuild = import.meta.env.MODE === "mobile" || import.meta.env.VITE_APP_TARGET === "mobile";
+import { isMobileApp as isCapacitorBuild, showCatalogImages } from "../lib/platform";
 function Icon({ name, size = 18 }) {
   const common = {
     width: size,
@@ -44,7 +44,7 @@ function editionFormatLabel(format) {
   return format === "digital" ? "Digital edition" : "Physical book";
 }
 function BookCover({ book, edition: selectedEdition, compact = false, loading = "lazy" }) {const { t, formatPrice } = usePreferences();
-  const image = selectedEdition?.coverUrl || book.coverUrl;
+  const image = showCatalogImages && (selectedEdition?.coverUrl || book.coverUrl);
   return <div className={`cover-art${image ? " cover-art--image" : ""}${compact ? " cover-art--compact" : ""}`}>
     {image && <img src={image} alt={compact ? "" : `${book.originalTitle} cover`} loading={loading} fetchPriority={loading === "eager" ? "high" : "auto"} />}
     <div className="cover-art__wash" />
@@ -77,7 +77,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
   const [saved, setSaved] = useState([]);
   const [shareState, setShareState] = useState("idle");
   const [mobileFilters, setMobileFilters] = useState(false);
-  const [activeView, setActiveView] = useState(() => {const route = window.location.pathname.split("/")[1];return ["models", "publishers", "active", "sold"].includes(route) ? route : "browse";});
+  const [activeView, setActiveView] = useState(() => {const route = window.location.pathname.split("/")[1];return ["models", "publishers", "active", "sold", "japan"].includes(route) ? route : "browse";});
   const [sortBy, setSortBy] = useState("newest");
   const [apiState, setApiState] = useState(() => books.length ? "live" : "loading");
   const [retry, setRetry] = useState(0);
@@ -294,7 +294,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
     const syncRoute = () => {
       setBookSlug(bookSlugFromPath(window.location.pathname));
       const route = window.location.pathname.split("/")[1];
-      setActiveView(["models", "publishers", "active", "sold"].includes(route) ? route : "browse");
+      setActiveView(["models", "publishers", "active", "sold", "japan"].includes(route) ? route : "browse");
       setSelectedEditionId(new URLSearchParams(window.location.search).get("edition") || "");
     };
     window.addEventListener("popstate", syncRoute);
@@ -320,13 +320,14 @@ export default function Home() {const { t, formatPrice } = usePreferences();
     window.requestAnimationFrame(() => document.getElementById("book-title")?.focus());
   };
   return <div className={`site-shell${isCapacitorBuild ? " native-mobile-build" : ""}`}>
-    {!(["models", "publishers"].includes(activeView) && window.location.pathname.split("/")[2]) && <SeoHead path={bookSlug ? `/books/${encodeURIComponent(bookSlug)}` : ["models", "publishers", "active", "sold"].includes(activeView) ? `/${activeView}` : "/"} book={bookSlug && !isMissingBook ? selectedBook : undefined} pending={Boolean(bookSlug) && !selectedBook && !isMissingBook} noindex={activeView === "collection" || hasSearchFilters(window.location.search) || isMissingBook} />}
+    {!(["models", "publishers"].includes(activeView) && window.location.pathname.split("/")[2]) && <SeoHead path={bookSlug ? `/books/${encodeURIComponent(bookSlug)}` : ["models", "publishers", "active", "sold", "japan"].includes(activeView) ? `/${activeView}` : "/"} book={bookSlug && !isMissingBook ? selectedBook : undefined} pending={Boolean(bookSlug) && !selectedBook && !isMissingBook} noindex={activeView === "collection" || hasSearchFilters(window.location.search) || isMissingBook} />}
     <a className="skip-link" href="#main-content">{t("Skip to catalog")}</a>
     <header className="site-header">
       <a className="wordmark" href="/" aria-label={t("MuseBooks home")}>{t("MuseBooks")}</a>
       <nav className="main-nav" aria-label={t("Main navigation")}>
         <button type="button" className={activeView === "browse" ? "active" : ""} aria-current={activeView === "browse" ? "page" : undefined} onClick={() => navigateView("browse")}>{t("Home")}</button>
         {["models", "publishers", "active", "sold"].map((section) => <a key={section} href={`/${section}`} className={activeView === section ? "active" : ""} aria-current={activeView === section ? "page" : undefined}>{section === "models" ? t("Models") : section === "publishers" ? t("Publishers") : section === "active" ? t("Active listings") : t("Sold listings")}</a>)}
+        <a href="/japan" className={activeView === "japan" ? "active" : ""} aria-current={activeView === "japan" ? "page" : undefined}>{t("Japan marketplace")}</a>
         <button type="button" className={activeView === "collection" ? "active" : ""} aria-current={activeView === "collection" ? "page" : undefined} onClick={() => navigateView("collection")}>{t("Saved collection")}<span className="saved-count">{saved.length}</span></button>
       </nav>
       <HeaderControls theme={theme} setTheme={setTheme} savedCount={saved.length} onCollection={() => navigateView("collection")} />

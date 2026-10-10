@@ -24,3 +24,6 @@ func (s *CatalogService) DirectoryBooks(ctx context.Context, p model.CatalogBrow
 func (s *CatalogService) Listings(ctx context.Context, p model.CatalogBrowseQuery) ([]model.MarketEntry, int64, error) {
 	return s.repo.Listings(ctx, p)
 }
+func (s *CatalogService) MarketplaceListings(ctx context.Context, p model.CatalogBrowseQuery) ([]model.MarketplaceListingEntry, int64, error) {
+	return s.repo.MarketplaceListings(ctx, p)
+}
