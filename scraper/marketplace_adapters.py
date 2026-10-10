@@ -411,7 +411,7 @@ class MarketplaceAdapter:
         if self.key == "rakuma-jp":
             return host.endswith("fril.jp") and (host == "item.fril.jp" or "/item/" in path or "/product/" in path)
         if self.key == "yahoo-furima-jp":
-            return host.endswith("paypayfleamarket.yahoo.co.jp") and "/item/" in path
+            return host.endswith("paypayfleamarket.yahoo.co.jp") and bool(re.fullmatch(r"/item/[A-Za-z0-9]+/?", path))
         if self.key == "surugaya-jp":
             return host.endswith("suruga-ya.jp") and "/product/detail/" in path
         if self.key == "mandarake-jp":
