@@ -1334,6 +1334,12 @@ def photobook_title_exclusion(title: str) -> str:
         return "nonbook_product"
     if re.search(r"スクールガール.*小林基行", title):
         return "artist_monograph"
+    if re.search(r"名作写真集ガイド", title):
+        return "reference_book"
+    if re.search(r"アクチュール.*表紙.*インタビュー", title):
+        return "magazine_only"
+    if re.search(r"畠田理恵.*RIE.*水着", title, re.I):
+        return "subject_publication_age_unverified"
     if re.search(r"雑誌付録DVD|写真集SE\s*DVD", title, re.I):
         return "disc_only"
     if re.search(r"^DVD\s*写真集|DVD写真集\[", title, re.I):
