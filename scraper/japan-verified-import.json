@@ -226,5 +226,38 @@
     "batch": {
       "items": []
     }
+  },
+  {
+    "work": {
+      "id": "jp-hongo-yuzuha-utsukushii-kajitsu",
+      "slug": "jp-hongo-yuzuha-utsukushii-kajitsu",
+      "originalTitle": "NMB48本郷柚巴1st写真集 美しい果実",
+      "originCode": "JP",
+      "featuredNames": "本郷柚巴",
+      "photographer": "Takeo Dec.",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/b1caa3ad5ebf09da5294b713afc831d1ded1cc71a5da15d3b686cf8d6c583231.jpg"
+    },
+    "edition": {
+      "id": "jp-isbn-9784065286432",
+      "workId": "jp-hongo-yuzuha-utsukushii-kajitsu",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "講談社",
+      "isbn": "9784065286432",
+      "releaseDate": "2022-06-29T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 144,
+      "dimensions": "B5",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://www.kodansha.co.jp/comic/products/0000367870",
+      "originalCoverUrl": "https://dvs-cover.kodansha.co.jp/0000367870/5NuYmjv5CBmxPNptXUrYkDoNHVeP6fSfFGQ2ju8S.jpg",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/b1caa3ad5ebf09da5294b713afc831d1ded1cc71a5da15d3b686cf8d6c583231.jpg",
+      "coverObjectKey": "musebooks/covers/b1caa3ad5ebf09da5294b713afc831d1ded1cc71a5da15d3b686cf8d6c583231.jpg"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
   }
 ]

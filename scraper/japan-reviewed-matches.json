@@ -43,5 +43,23 @@
     "evidenceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-780570-3",
     "matchMethod": "reviewed_isbn",
     "evidence": "Listing title explicitly states ISBN9784087805703; title, featured model and photographer agree with the publisher physical edition. Price is a current auction bid, not a completed sale."
+  },
+  {
+    "sourceId": "rakuma",
+    "externalId": "cf97e08c05f5489946d2ad54d92b16e1",
+    "expectedTitle": "ＮＭＢ４８本郷柚巴１ｓｔ写真集 美しい果実",
+    "editionId": "jp-isbn-9784065286432",
+    "evidenceUrl": "https://www.kodansha.co.jp/comic/products/0000367870",
+    "matchMethod": "reviewed_title_metadata",
+    "evidence": "Exact first-book title and listing description agree with the publisher title, setting, model and physical edition. Listing image is an interior spread, not barcode evidence."
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "b1246735898",
+    "expectedTitle": "6 【中古保管品】NMB48 本郷柚巴 1st写真集 美しい果実 帯付き 第2刷 Takeo Dec. 講談社 水着 グラビア",
+    "editionId": "jp-isbn-9784065286432",
+    "evidenceUrl": "https://www.kodansha.co.jp/comic/products/0000367870",
+    "matchMethod": "reviewed_title_cover",
+    "evidence": "Photographed cover, exact first-book title, photographer and publisher agree. Second printing retained in listing title; price is a current bid."
   }
 ]

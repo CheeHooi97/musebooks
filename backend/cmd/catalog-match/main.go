@@ -43,7 +43,7 @@ func main() {
 	err = db.Transaction(func(tx *gorm.DB) error {
 		for _, match := range matches {
 			if match.SourceID == "" || match.ExternalID == "" || match.ExpectedTitle == "" || match.Evidence == "" ||
-				(match.MatchMethod != "reviewed_isbn" && match.MatchMethod != "reviewed_title_cover") {
+				(match.MatchMethod != "reviewed_isbn" && match.MatchMethod != "reviewed_title_cover" && match.MatchMethod != "reviewed_title_metadata") {
 				return fmt.Errorf("incomplete reviewed match")
 			}
 			var edition model.Edition
