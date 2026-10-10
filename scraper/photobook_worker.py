@@ -1308,6 +1308,8 @@ def is_marketplace_price_source(source_id: str, source: dict) -> bool:
 
 def photobook_title_exclusion(title: str) -> str:
     title = unicodedata.normalize("NFKC", title)
+    if re.search(r"リカちゃん人形|LICCA\s+IN\s+SOUTHERN\s+ISLAND", title, re.I):
+        return "nonhuman_subject"
     if re.search(r"雑誌付録DVD|写真集SE\s*DVD", title, re.I):
         return "disc_only"
     if re.search(r"^DVD\s*写真集|DVD写真集\[", title, re.I):

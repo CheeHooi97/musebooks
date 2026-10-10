@@ -153,5 +153,10 @@
     "sourceId": "yahoo-auctions-jp",
     "externalId": "d1247720641",
     "reason": "nonbook_product"
+  },
+  {
+    "sourceId": "rakuma",
+    "externalId": "a9846a2d2ec22550fa46770869bde3b0",
+    "reason": "nonhuman_subject"
   }
 ]

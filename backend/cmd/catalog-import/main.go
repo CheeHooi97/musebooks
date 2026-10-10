@@ -56,7 +56,7 @@ func validCatalogOrigin(code string) bool {
 
 func validExclusionReason(reason string) bool {
 	switch reason {
-	case "calendar_only", "illustrated_book", "disc_only", "magazine_only", "magazine_or_supplement", "junior_gravure", "artist_monograph", "synthetic_subject", "download_resale", "nonbook_product", "subject_publication_age_unverified":
+	case "calendar_only", "illustrated_book", "disc_only", "magazine_only", "magazine_or_supplement", "junior_gravure", "artist_monograph", "synthetic_subject", "download_resale", "nonbook_product", "subject_publication_age_unverified", "nonhuman_subject":
 		return true
 	default:
 		return false
