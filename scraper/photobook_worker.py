@@ -1308,19 +1308,31 @@ def is_marketplace_price_source(source_id: str, source: dict) -> bool:
 
 def photobook_title_exclusion(title: str) -> str:
     title = unicodedata.normalize("NFKC", title)
-    if re.search(r"アート\s*ポスター|\[(?:中古\s*セル版|新品\s*未開封)\s*DVD\]|カレンダーブック|フォトCD|Photo\s*CD|額入り|舞台.*パンフレット|振袖カタログ", title, re.I):
+    if re.search(r"アート\s*ポスター|\[(?:中古(?:\s*セル版)?|新品\s*未開封)\s*DVD\]|カレンダーブック|フォトCD|Photo\s*CD|額入り|舞台.*パンフレット|振袖カタログ", title, re.I):
         return "nonbook_product"
     if re.search(r"\d{4}年\s*\d{1,2}月(?:\d{1,2}日)?号|週刊現代|週刊プレイボーイ|TVガイド\s*Stage\s*Stars|EX大衆|UTB.*アップ|ヤングチャンピオン.*袋とじ|Cream\s*クリーム|映画ファン.*臨時増刊", title, re.I):
         return "magazine_only"
     if re.search(r"制コレ.*水着|石川佳奈.*kana|前田愛.*眠り姫|宮沢ゆうな.*Pretty\s*Peach|菅谷梨沙子.*梨想|かわいい同級生|石川花.*写真集|写真集.*石川花|新原里彩.*学校なう", title, re.I):
         return "subject_publication_age_unverified"
+    if re.search(r"Moecco|モエッコ", title, re.I):
+        return "junior_gravure"
+    if re.search(r"学校なう.*水着|水着.*学校なう", title):
+        return "junior_gravure"
+    if re.search(r"宮脇咲良.*さくら.*水着|水谷果穂.*写真集3冊", title):
+        return "subject_publication_age_unverified"
+    if re.search(r"宝生舞.*17歳|外岡えりか.*ひまわり|山中知恵.*花鳥風月|咲坂あいり.*Colorful", title, re.I):
+        return "subject_publication_age_unverified"
+    if re.search(r"グラビアチャンピオン|月刊ザ・テンメイ", title):
+        return "magazine_only"
+    if re.search(r"透けパイ.*青山裕企", title):
+        return "artist_monograph"
     if re.search(r"写真集クオリティ|グラビアザテレビジョン|特別付録.*MINIブック", title, re.I):
         return "magazine_or_supplement"
     if re.search(r"ギュンター.?ブルム|G[uü]nter\s+Blum|村田\s*兼一写真集", title, re.I):
         return "artist_monograph"
     if re.search(r"染色体.*野川イサム|野川イサム.*染色体|快楽の館", title):
         return "artist_monograph"
-    if re.search(r"(?:CD|Blu[ -]?ray|ブルーレイ)\s*写真集|^アイドルDVD", title, re.I):
+    if re.search(r"(?:CD|BD|Blu[ -]?ray|ブルーレイ)\s*写真集|^アイドルDVD", title, re.I):
         return "disc_only"
     if re.search(r"DVD|Blu[ -]?ray|ブルーレイ", title, re.I) and not STRONG_PHOTOBOOK_SIGNAL_RE.search(title):
         return "disc_only"

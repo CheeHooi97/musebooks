@@ -108,5 +108,20 @@
     "sourceId": "rakuma",
     "externalId": "3a3e23999f4af424edc282e671f8019a",
     "reason": "nonbook_product"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "w1247822959",
+    "reason": "junior_gravure"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "v1247252300",
+    "reason": "subject_publication_age_unverified"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "1247229125",
+    "reason": "subject_publication_age_unverified"
   }
 ]
