@@ -25,16 +25,97 @@
       "originalCoverUrl": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784087902075/240/9784087902075.jpg"
     },
     "source": {},
-    "batch": {"items": []}
+    "batch": {
+      "items": []
+    }
   },
   {
-    "work": {"id": "jp-shiroma-miru-love-rush", "slug": "jp-shiroma-miru-love-rush", "originalTitle": "白間美瑠 写真集 「LOVE RUSH」", "originCode": "JP", "featuredNames": "白間美瑠", "photographer": "中村 和孝"},
-    "edition": {"id": "jp-isbn-9784087808674", "workId": "jp-shiroma-miru-love-rush", "format": "physical", "language": "ja", "editionMarket": "JP", "publisher": "集英社", "isbn": "9784087808674", "releaseDate": "2019-06-19T00:00:00Z", "releasePrecision": "day", "pageCount": 144, "dimensions": "AB判変型", "editionLabel": "紙版", "metadataSourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-780867-4", "originalCoverUrl": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784087808674/240/9784087808674.jpg"},
-    "source": {}, "batch": {"items": []}
+    "work": {
+      "id": "jp-shiroma-miru-love-rush",
+      "slug": "jp-shiroma-miru-love-rush",
+      "originalTitle": "白間美瑠 写真集 「LOVE RUSH」",
+      "originCode": "JP",
+      "featuredNames": "白間美瑠",
+      "photographer": "中村 和孝"
+    },
+    "edition": {
+      "id": "jp-isbn-9784087808674",
+      "workId": "jp-shiroma-miru-love-rush",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "集英社",
+      "isbn": "9784087808674",
+      "releaseDate": "2019-06-19T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 144,
+      "dimensions": "AB判変型",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-780867-4",
+      "originalCoverUrl": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784087808674/240/9784087808674.jpg"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
   },
   {
-    "work": {"id": "jp-enako-cosplayer", "slug": "jp-enako-cosplayer", "originalTitle": "えなこ 1st メジャー写真集 『えなこ cosplayer』", "originCode": "JP", "featuredNames": "えなこ", "photographer": "桑島 智輝"},
-    "edition": {"id": "jp-isbn-9784087808612", "workId": "jp-enako-cosplayer", "format": "physical", "language": "ja", "editionMarket": "JP", "publisher": "集英社", "isbn": "9784087808612", "releaseDate": "2019-03-28T00:00:00Z", "releasePrecision": "day", "pageCount": 128, "dimensions": "A4", "editionLabel": "紙版", "metadataSourceUrl": "https://books.shueisha.co.jp/items/contents.html?isbn=978-4-08-780861-2", "originalCoverUrl": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784087808612/240/9784087808612.jpg"},
-    "source": {}, "batch": {"items": []}
+    "work": {
+      "id": "jp-enako-cosplayer",
+      "slug": "jp-enako-cosplayer",
+      "originalTitle": "えなこ 1st メジャー写真集 『えなこ cosplayer』",
+      "originCode": "JP",
+      "featuredNames": "えなこ",
+      "photographer": "桑島 智輝"
+    },
+    "edition": {
+      "id": "jp-isbn-9784087808612",
+      "workId": "jp-enako-cosplayer",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "集英社",
+      "isbn": "9784087808612",
+      "releaseDate": "2019-03-28T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 128,
+      "dimensions": "A4",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://books.shueisha.co.jp/items/contents.html?isbn=978-4-08-780861-2",
+      "originalCoverUrl": "https://dosbg3xlm0x1t.cloudfront.net/images/items/9784087808612/240/9784087808612.jpg"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
+  },
+  {
+    "work": {
+      "id": "jp-mori-kasumi-sunokasumi",
+      "slug": "jp-mori-kasumi-sunokasumi",
+      "originalTitle": "森香澄ファースト写真集 『すのかすみ。』",
+      "originCode": "JP",
+      "featuredNames": "森香澄"
+    },
+    "edition": {
+      "id": "jp-isbn-9784344042247",
+      "workId": "jp-mori-kasumi-sunokasumi",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "幻冬舎",
+      "isbn": "9784344042247",
+      "releaseDate": "2024-02-28T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 152,
+      "dimensions": "A4判変型",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://www.gentosha.co.jp/book/detail/9784344042247/",
+      "originalCoverUrl": "https://img.gentosha.co.jp/_cover_/9784344042247.jpg?p=book-sd&v=00"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
   }
 ]

@@ -97,5 +97,37 @@
     "batch": {
       "items": []
     }
+  },
+  {
+    "work": {
+      "id": "jp-mori-kasumi-sunokasumi",
+      "slug": "jp-mori-kasumi-sunokasumi",
+      "originalTitle": "森香澄ファースト写真集 『すのかすみ。』",
+      "originCode": "JP",
+      "featuredNames": "森香澄",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/3943d13ae82059f1163368d53207dc80c43ba1dc8b4f0331b80b70833e057063.jpg"
+    },
+    "edition": {
+      "id": "jp-isbn-9784344042247",
+      "workId": "jp-mori-kasumi-sunokasumi",
+      "format": "physical",
+      "language": "ja",
+      "editionMarket": "JP",
+      "publisher": "幻冬舎",
+      "isbn": "9784344042247",
+      "releaseDate": "2024-02-28T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 152,
+      "dimensions": "A4判変型",
+      "editionLabel": "紙版",
+      "metadataSourceUrl": "https://www.gentosha.co.jp/book/detail/9784344042247/",
+      "originalCoverUrl": "https://img.gentosha.co.jp/_cover_/9784344042247.jpg?p=book-sd&v=00",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/3943d13ae82059f1163368d53207dc80c43ba1dc8b4f0331b80b70833e057063.jpg",
+      "coverObjectKey": "musebooks/covers/3943d13ae82059f1163368d53207dc80c43ba1dc8b4f0331b80b70833e057063.jpg"
+    },
+    "source": {},
+    "batch": {
+      "items": []
+    }
   }
 ]

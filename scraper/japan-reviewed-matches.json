@@ -1,5 +1,38 @@
 [
-  {"sourceId":"rakuma","externalId":"5b53076cb0ccb56fe2620973d9d33d32","expectedTitle":"えなこ写真集 エピローグ","editionId":"jp-isbn-9784087902075","evidenceUrl":"https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-790207-5","matchMethod":"reviewed_isbn","evidence":"Listing image barcode reads 9784087902075; publisher confirms the physical edition."},
-  {"sourceId":"yahoo-furima-jp","externalId":"z701362702","expectedTitle":"★えなこ写真集 「エピローグ」セブンネット限定生写真付","editionId":"jp-isbn-9784087902075","evidenceUrl":"https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-790207-5","matchMethod":"reviewed_title_cover","evidence":"Listing title and photographed physical cover match Epilogue. Listing includes an extra promotional photo, retained in the listing title."},
-  {"sourceId":"yahoo-auctions-jp","externalId":"o1237209176","expectedTitle":"写真集 白間美瑠 LOVE RUSH 撮影/中村和孝 集英社","editionId":"jp-isbn-9784087808674","evidenceUrl":"https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-780867-4","matchMethod":"reviewed_title_cover","evidence":"Listing title, publisher, photographer, and photographed LOVE RUSH cover match the physical publisher edition."}
+  {
+    "sourceId": "rakuma",
+    "externalId": "5b53076cb0ccb56fe2620973d9d33d32",
+    "expectedTitle": "えなこ写真集 エピローグ",
+    "editionId": "jp-isbn-9784087902075",
+    "evidenceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-790207-5",
+    "matchMethod": "reviewed_isbn",
+    "evidence": "Listing image barcode reads 9784087902075; publisher confirms the physical edition."
+  },
+  {
+    "sourceId": "yahoo-furima-jp",
+    "externalId": "z701362702",
+    "expectedTitle": "★えなこ写真集 「エピローグ」セブンネット限定生写真付",
+    "editionId": "jp-isbn-9784087902075",
+    "evidenceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-790207-5",
+    "matchMethod": "reviewed_title_cover",
+    "evidence": "Listing title and photographed physical cover match Epilogue. Listing includes an extra promotional photo, retained in the listing title."
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "o1237209176",
+    "expectedTitle": "写真集 白間美瑠 LOVE RUSH 撮影/中村和孝 集英社",
+    "editionId": "jp-isbn-9784087808674",
+    "evidenceUrl": "https://www.shueisha.co.jp/books/items/contents.html?isbn=978-4-08-780867-4",
+    "matchMethod": "reviewed_title_cover",
+    "evidence": "Listing title, publisher, photographer, and photographed LOVE RUSH cover match the physical publisher edition."
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "c1247548244",
+    "expectedTitle": "すのかすみ。 森香澄 1st写真集 幻冬舎【ac02b】",
+    "editionId": "jp-isbn-9784344042247",
+    "evidenceUrl": "https://www.gentosha.co.jp/book/detail/9784344042247/",
+    "matchMethod": "reviewed_title_cover",
+    "evidence": "Listing title, named publisher, and photographed physical cover match the publisher edition; publisher verifies ISBN, release date, dimensions and page count."
+  }
 ]
