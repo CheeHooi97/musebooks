@@ -1334,6 +1334,8 @@ def photobook_title_exclusion(title: str) -> str:
         return "nonbook_product"
     if re.search(r"スクールガール.*小林基行", title):
         return "artist_monograph"
+    if re.search(r"感性のバケモノになりたい.*十文字美信", title):
+        return "artist_monograph"
     if re.search(r"名作写真集ガイド", title):
         return "reference_book"
     if re.search(r"アクチュール.*表紙.*インタビュー", title):

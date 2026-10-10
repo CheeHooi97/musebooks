@@ -1,0 +1,142 @@
+[
+  {
+    "collection": {
+      "query": "グラビア 写真集",
+      "operation": "active_discovery",
+      "inputCursor": "{\"page\":16,\"offset\":0,\"url\":\"https://fril.jp/s?order=desc&page=16&query=%E3%82%B0%E3%83%A9%E3%83%93%E3%82%A2+%E5%86%99%E7%9C%9F%E9%9B%86&sort=relevance\"}"
+    },
+    "origin": {
+      "code": "JP",
+      "name": "Japan",
+      "nativeName": "日本"
+    },
+    "work": {},
+    "edition": {},
+    "source": {
+      "id": "rakuma",
+      "name": "Rakuma",
+      "region": "JP",
+      "locale": "ja-JP",
+      "timezone": "Asia/Tokyo",
+      "kind": "marketplace",
+      "adapter": "rakuma_jp",
+      "accessMethod": "browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://fril.jp",
+      "allowedHosts": "fril.jp,item.fril.jp",
+      "capabilities": "active_discovery,sold_discovery,listing_detail",
+      "accessStatus": "browser_review",
+      "termsUrl": "https://fril.jp/info/policy",
+      "ratePerMinute": 6,
+      "enabled": true
+    },
+    "batch": {
+      "jobId": "",
+      "workerId": "",
+      "leaseToken": "",
+      "sourceId": "rakuma",
+      "parserVersion": "python-photobook-browser-v6",
+      "retrievedAt": "2026-10-10T13:14:24.432759Z",
+      "pageNumber": 16,
+      "nextCursor": "{\"page\":17,\"offset\":20,\"url\":\"https://fril.jp/s?order=desc&page=17&query=%E3%82%B0%E3%83%A9%E3%83%93%E3%82%A2+%E5%86%99%E7%9C%9F%E9%9B%86&sort=relevance\"}",
+      "hasMore": true,
+      "items": [
+        {
+          "observationId": "b85845a1aa68b6375898c58a1905ae6ddda85171",
+          "externalId": "45d09a41d985266a1e58037054c5d712",
+          "url": "https://item.fril.jp/45d09a41d985266a1e58037054c5d712",
+          "title": "更に値下げ【第一刷 帯付】木下優樹菜写真集 ＣＯＲＲＥＣＴ 沢渡朔/橋本憲和撮影",
+          "sellerLocation": "",
+          "condition": "",
+          "status": "active",
+          "priceMinor": 3200,
+          "currency": "JPY",
+          "priceType": "fixed",
+          "format": "physical",
+          "digitalAccess": "",
+          "isbn": "",
+          "publisher": "",
+          "contentSummary": "※更に値下げしました。 【商品】木下優樹菜 写真集 『CORRECT』 著書:木下優樹菜 第1刷発行 撮影:沢渡朔、橋本憲和 判型:B5版(18.2cm×25.7cm×1.2cm) ページ数:128ページ 発行人:島野浩二 【状態】新品同等一度開封 【定価】¥2,750 (税込) 【詳細】木下優樹菜14年ぶりの写真集『CORRECT』芸能界を引退した木下優樹菜が、一般人として初の写真集を出版！「裸一貫」でリスタートする現在の彼女の「美」を詰め込んだ一冊となっており、撮り下ろしグラビアをはじめ、最新私服写真、エッセイや彼女にとって最も身近な男性のインタビューも掲載。カメラマンは、沢渡朔氏と橋本憲和氏。髪の色も変えて挑んだそれぞれの写真は、”大人な姿”と”ファッショナブルな姿”というふうに、全く異なる雰囲気となった。 【注意】 ・商品確認のため一度開封致しました。 ・プロフィール、商品説明を必ずご確認の上ご購入下さい。 ・即購入可。 ・〝発送までの日数〟はあくまでも〝目安〟となります。基本的に24時間以内の発送を心掛けておりますが、状況により発送できない場合もございます。お急ぎの方は必ずご購入前にコメント欄にてご相談ください。 ・神経質な方は念のため、入札をご遠慮下さい。 #木下優樹菜 #CORRECT #沢渡朔 #橋本憲和 #コレクト #エンタメ/ホビー #写真集 #アート/エンタメ #本 #生活／諸芸・娯楽",
+          "pageCount": 0,
+          "releaseDate": "",
+          "seriesName": "",
+          "editionVariant": "",
+          "shippingText": "",
+          "imageUrl": "https://img.musecards.my/musebooks/covers/77aef0a9225fa77851067fd9c913c54f50a43d2a3d172325ebc06997b07ce769.jpg",
+          "observedAt": "2026-10-10T13:12:33.518394Z",
+          "statusEvidence": "購入に進む",
+          "timestampPrecision": "observed"
+        },
+        {
+          "observationId": "189f042541f31380295a948bb0e03e8cad4a91c2",
+          "externalId": "2b79d9cd09022ed3ad00cba47ddb408e",
+          "url": "https://item.fril.jp/2b79d9cd09022ed3ad00cba47ddb408e",
+          "title": "杉本有美 写真集 『 蝶光 』舞山 秀一 (写真)",
+          "sellerLocation": "",
+          "condition": "",
+          "status": "active",
+          "priceMinor": 1560,
+          "currency": "JPY",
+          "priceType": "fixed",
+          "format": "physical",
+          "digitalAccess": "",
+          "isbn": "",
+          "publisher": "",
+          "contentSummary": "杉本有美 写真集 『 蝶光 』 舞山 秀一 (写真) 出版社 : ワニブックス グラビアやモデルを経て、現在は俳優として舞台やドラマで活躍する杉本有美が、5年ぶりに写真集をリリース。 13作目となる本作は、これまでの作品にはない「和」の雰囲気が舞台。「蝶」をテーマとし、趣のある旅館や温泉のほか、海、森、竹林などの情緒ある自然の中で撮影を行いました。 すぐ傍らにいるような近い距離感で屈託のない笑顔を向けてくれる一方で、どこか寂し気な切なさを感じたりと表情の幅は広く見どころは満載。定評のある美しいプロポーションは以前と変わらぬままキープされ、成熟した大人の魅力がふんだんに詰め込まれた一冊となりました。 ◆本の状態 中古品です。 目立った傷・汚れなどはなく、良い状態です。 中に書き込みなどもありませんでした。 見開き1ページほど、開き癖があるかな？と感じる部分がありました。",
+          "pageCount": 0,
+          "releaseDate": "",
+          "seriesName": "",
+          "editionVariant": "",
+          "shippingText": "",
+          "imageUrl": "https://img.musecards.my/musebooks/covers/2abd24ad681636f4db53fd4d4e38cb0af115f2911055cd6ab0cadb09e753222c.jpg",
+          "observedAt": "2026-10-10T13:13:12.874132Z",
+          "statusEvidence": "購入に進む",
+          "timestampPrecision": "observed"
+        }
+      ],
+      "warnings": [
+        "detail or batch limit reached; the current page will be resumed"
+      ],
+      "diagnostics": {
+        "renderedCandidates": 80,
+        "accepted": 3,
+        "rejected": 57,
+        "detailPages": 60,
+        "detailErrors": 0,
+        "pagesLoaded": 2,
+        "sourceAccessMethod": "browser",
+        "adapter": "rakuma-jp",
+        "targetScope": "people",
+        "humanModelOnly": "true",
+        "marketplaceOnly": "true",
+        "rejected_active_status_unverified": 22,
+        "rejected_disc_only": 1,
+        "rejected_illustrated_book": 1,
+        "rejected_magazine_only": 2,
+        "rejected_nonbook_product": 8,
+        "rejected_not_a_photobook": 20,
+        "rejected_synthetic_subject": 3,
+        "runtimeMs": 693343
+      }
+    },
+    "media": [
+      {
+        "externalId": "45d09a41d985266a1e58037054c5d712",
+        "mediaType": "listing_image",
+        "originalUrl": "https://img.fril.jp/img/513836457/m/2802968335.jpg?1771495993",
+        "storageUrl": "https://img.musecards.my/musebooks/covers/77aef0a9225fa77851067fd9c913c54f50a43d2a3d172325ebc06997b07ce769.jpg",
+        "sourceUrl": "https://item.fril.jp/45d09a41d985266a1e58037054c5d712",
+        "isPrimary": true
+      },
+      {
+        "externalId": "2b79d9cd09022ed3ad00cba47ddb408e",
+        "mediaType": "listing_image",
+        "originalUrl": "https://img.fril.jp/img/836578865/m/2882827841.jpg?1781202706",
+        "storageUrl": "https://img.musecards.my/musebooks/covers/2abd24ad681636f4db53fd4d4e38cb0af115f2911055cd6ab0cadb09e753222c.jpg",
+        "sourceUrl": "https://item.fril.jp/2b79d9cd09022ed3ad00cba47ddb408e",
+        "isPrimary": true
+      }
+    ]
+  }
+]

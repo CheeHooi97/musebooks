@@ -208,5 +208,10 @@
     "sourceId": "yahoo-auctions-jp",
     "externalId": "s1231765351",
     "reason": "magazine_only"
+  },
+  {
+    "sourceId": "rakuma",
+    "externalId": "11d2c12eac146f83280e4691bd138ece",
+    "reason": "artist_monograph"
   }
 ]
