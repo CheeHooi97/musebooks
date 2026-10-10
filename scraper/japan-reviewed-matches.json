@@ -61,5 +61,23 @@
     "evidenceUrl": "https://www.kodansha.co.jp/comic/products/0000367870",
     "matchMethod": "reviewed_title_cover",
     "evidence": "Photographed cover, exact first-book title, photographer and publisher agree. Second printing retained in listing title; price is a current bid."
+  },
+  {
+    "sourceId": "rakuma",
+    "externalId": "a9e01dde00f8403ef559f361c44f1071",
+    "expectedTitle": "NMB48 本郷柚巴 １ｓｔ写真集 美しい果実",
+    "editionId": "jp-isbn-9784065286432",
+    "evidenceUrl": "https://www.kodansha.co.jp/comic/products/0000367870",
+    "matchMethod": "reviewed_title_metadata",
+    "evidence": "Exact first-book title, featured model and physical listing description agree with the verified publisher edition and Hokkaido setting. This is metadata evidence, not a barcode or cover comparison. Listing fixed price is preserved separately from the quoted publisher list price."
+  },
+  {
+    "sourceId": "rakuma",
+    "externalId": "2e832fcce0d9963b0159c2a03a0d7a5e",
+    "expectedTitle": "ＮＭＢ４８本郷柚巴１ｓｔ写真集 美しい果実",
+    "editionId": "jp-isbn-9784065286432",
+    "evidenceUrl": "https://www.kodansha.co.jp/comic/products/0000367870",
+    "matchMethod": "reviewed_title_metadata",
+    "evidence": "Exact first-book title, featured model and physical listing description agree with the verified publisher edition and Hokkaido setting. This is metadata evidence, not a barcode or cover comparison. Listing fixed price is preserved separately from the quoted publisher list price."
   }
 ]
