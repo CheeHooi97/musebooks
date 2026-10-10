@@ -1320,6 +1320,10 @@ def photobook_title_exclusion(title: str) -> str:
         return "magazine_only"
     if re.search(r"17ans.*川上礼", title, re.I):
         return "subject_publication_age_unverified"
+    if re.search(r"漫画アクション|ヤングジャンプ.*\d+号", title):
+        return "magazine_or_supplement"
+    if re.search(r"小泉今日子.*デラックス近代映画.*水着", title):
+        return "subject_publication_age_unverified"
     if re.search(r"雑誌付録DVD|写真集SE\s*DVD", title, re.I):
         return "disc_only"
     if re.search(r"^DVD\s*写真集|DVD写真集\[", title, re.I):
