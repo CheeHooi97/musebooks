@@ -1308,6 +1308,12 @@ def is_marketplace_price_source(source_id: str, source: dict) -> bool:
 
 def photobook_title_exclusion(title: str) -> str:
     title = unicodedata.normalize("NFKC", title)
+    if re.search(r"雑誌付録DVD|写真集SE\s*DVD", title, re.I):
+        return "disc_only"
+    if re.search(r"^DVD\s*写真集|DVD写真集\[", title, re.I):
+        return "disc_only"
+    if re.search(r"ミニ写真集付き.*漫画アクション", title):
+        return "magazine_or_supplement"
     if re.search(r"アート\s*ポスター|\[(?:中古(?:\s*セル版)?|新品\s*未開封)\s*DVD\]|カレンダーブック|フォトCD|Photo\s*CD|額入り|舞台.*パンフレット|振袖カタログ", title, re.I):
         return "nonbook_product"
     if re.search(r"\d{4}年\s*\d{1,2}月(?:\d{1,2}日)?号|週刊現代|週刊プレイボーイ|TVガイド\s*Stage\s*Stars|EX大衆|UTB.*アップ|ヤングチャンピオン.*袋とじ|Cream\s*クリーム|映画ファン.*臨時増刊", title, re.I):
@@ -1322,7 +1328,7 @@ def photobook_title_exclusion(title: str) -> str:
         return "subject_publication_age_unverified"
     if re.search(r"宝生舞.*17歳|外岡えりか.*ひまわり|山中知恵.*花鳥風月|咲坂あいり.*Colorful", title, re.I):
         return "subject_publication_age_unverified"
-    if re.search(r"グラビアチャンピオン|月刊ザ・テンメイ", title):
+    if re.search(r"グラビアチャンピオン|月刊(?:ザ・)?テンメイ", title):
         return "magazine_only"
     if re.search(r"透けパイ.*青山裕企", title):
         return "artist_monograph"
