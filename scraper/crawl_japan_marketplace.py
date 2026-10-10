@@ -35,7 +35,7 @@ def main():
         if state['source'] != args.source or state['operation'] != args.operation:
             parser.error('State source/operation mismatch')
     else:
-        state = dict(source=args.source, operation=args.operation, queryIndex=0,
+        state = dict(source=args.source, operation=args.operation, queryIndex=0, queryOrder=list(range(len(QUERIES))),
                      cursor='', batchIndex=0, history=[], status='running')
         if args.resume_from:
             records = json.loads((ROOT / args.resume_from).read_text(encoding='utf-8'))
@@ -48,7 +48,8 @@ def main():
                 parser.error('Resume manifest needs a recognized query or explicit --resume-query')
             if collection.get('operation', args.operation) != args.operation:
                 parser.error('Resume manifest operation mismatch')
-            state['queryIndex'] = QUERIES.index(resume_query)
+            resume_index = QUERIES.index(resume_query)
+            state['queryOrder'] = [resume_index] + [index for index in range(len(QUERIES)) if index != resume_index]
             if batch['hasMore']:
                 if not batch['nextCursor']:
                     parser.error('Batch reports more results without a cursor')
@@ -57,7 +58,7 @@ def main():
                 state['queryIndex'] += 1
         save(path, state)
     while state['queryIndex'] < len(QUERIES):
-        query = QUERIES[state['queryIndex']]
+        query = QUERIES[state.get('queryOrder', list(range(len(QUERIES))))[state['queryIndex']]]
         output = ROOT / 'scraper' / f"japan-crawl-{args.source}-{args.operation}-{state['queryIndex']}-{state['batchIndex']}.json"
         state['status'] = 'running'
         state['pending'] = str(output.relative_to(ROOT))
