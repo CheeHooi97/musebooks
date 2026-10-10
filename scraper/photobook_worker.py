@@ -1312,6 +1312,16 @@ def photobook_title_exclusion(title: str) -> str:
         return "disc_only"
     if re.search(r"^DVD\s*写真集|DVD写真集\[", title, re.I):
         return "disc_only"
+    if re.search(r"\[中古[^\]]*DVD\]|写真集.*メイキングDVD.*枚セット", title, re.I):
+        return "disc_only"
+    if re.search(r"L判写真\s*\d+枚", title, re.I):
+        return "nonbook_product"
+    if "ボールマーカー" in title:
+        return "nonbook_product"
+    if re.search(r"田村りおん.*まぶしいあの夏の日", title):
+        return "subject_publication_age_unverified"
+    if re.search(r"石田未来.*sugar\s*time|sugar\s*time.*石田未来|浅川梨奈.*なないろ|なないろ.*浅川梨奈|新関亜希.*HEAT\s*UP|河合美果.*風がおしえて", title, re.I):
+        return "subject_publication_age_unverified"
     if re.search(r"ミニ写真集付き.*漫画アクション", title):
         return "magazine_or_supplement"
     if re.search(r"アート\s*ポスター|\[(?:中古(?:\s*セル版)?|新品\s*未開封)\s*DVD\]|カレンダーブック|フォトCD|Photo\s*CD|額入り|舞台.*パンフレット|振袖カタログ", title, re.I):

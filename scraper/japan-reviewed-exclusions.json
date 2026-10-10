@@ -133,5 +133,25 @@
     "sourceId": "rakuma",
     "externalId": "e07291dc3f91a7adb3e96391d08e617b",
     "reason": "magazine_or_supplement"
+  },
+  {
+    "sourceId": "yahoo-furima-jp",
+    "externalId": "v1247712746",
+    "reason": "disc_only"
+  },
+  {
+    "sourceId": "yahoo-furima-jp",
+    "externalId": "z587359704",
+    "reason": "subject_publication_age_unverified"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "1217540456",
+    "reason": "subject_publication_age_unverified"
+  },
+  {
+    "sourceId": "yahoo-auctions-jp",
+    "externalId": "d1247720641",
+    "reason": "nonbook_product"
   }
 ]
