@@ -96,3 +96,21 @@ test('unsafe catalog text cannot inject scripts into body or bootstrap', async (
   assert.match(head, /A \$&amp;/)
   assert.ok(!head.includes('<title>Old</title>'))
 })
+
+test('overlapping catalog pages render each identity once with its latest facts', async () => {
+  const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'musebooks-seo-overlap-'))
+  try {
+    await fs.writeFile(path.join(directory, 'index.html'), '<html><head><title>Old</title></head><body><div id="root"></div></body></html>')
+    await buildSeo(directory, { fetcher: async url => ({ ok: true, json: async () => {
+      const result = fixtureResponse(url)
+      const parsed = new URL(url)
+      if (parsed.pathname === '/v1/models') return { ...result, totalPages: 2, items: result.items.map(item => ({ ...item, name: parsed.searchParams.get('page') === '2' ? 'Updated Person' : item.name })) }
+      return result
+    } }) })
+    const sitemap = await fs.readFile(path.join(directory, 'sitemap.xml'), 'utf8')
+    assert.equal((sitemap.match(/<loc>https:\/\/musebooks.my\/models\/test-person<\/loc>/g) || []).length, 1)
+    assert.match(await fs.readFile(path.join(directory, 'models/test-person/index.html'), 'utf8'), /Updated Person/)
+  } finally {
+    await fs.rm(directory, { recursive: true, force: true })
+  }
+})

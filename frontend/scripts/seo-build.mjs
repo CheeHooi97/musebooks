@@ -32,7 +32,7 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
   const template = await fs.readFile(path.join(outputDir, 'index.html'), 'utf8')
   const api = apiURL.replace(/\/$/, '')
   const loadAll = async endpoint => {
-    const items = []
+    const items = new Map()
     let totalPages = 1
     for (let page = 1; page <= totalPages; page++) {
       const response = await fetcher(`${api}/v1/${endpoint}${endpoint.includes('?') ? '&' : '?'}pageSize=50&page=${page}`, { signal: AbortSignal.timeout(30000) })
@@ -40,9 +40,13 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
       const data = await response.json()
       if (!Array.isArray(data.items) || !Number.isInteger(data.totalPages) || data.totalPages < 0) throw new Error(`Invalid SEO ${endpoint} response`)
       totalPages = data.totalPages
-      items.push(...data.items)
+      for (const item of data.items) {
+        const identity = endpoint === 'books' ? item.slug : item.id
+        if (!identity) throw new Error(`SEO ${endpoint} record missing identity`)
+        items.set(identity, item)
+      }
     }
-    return items
+    return [...items.values()]
   }
   const [books, models, publishers, active, sold] = await Promise.all([
     loadAll('books'), loadAll('models'), loadAll('publishers'), loadAll('listings?status=active'), loadAll('listings?status=sold'),
