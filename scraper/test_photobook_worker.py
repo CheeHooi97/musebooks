@@ -1,10 +1,14 @@
 """Regression tests for the human-model-only Python scraper gate."""
 
 import unittest
+from contextlib import nullcontext
+from unittest.mock import MagicMock, patch
 
 try:
+    import photobook_worker as worker
     from photobook_worker import collect, make_observation
 except ModuleNotFoundError:  # Run from the repository root as a unittest module.
+    from scraper import photobook_worker as worker
     from scraper.photobook_worker import collect, make_observation
 
 
@@ -72,6 +76,7 @@ def load_tests(loader: unittest.TestLoader, tests: unittest.TestSuite, pattern: 
         test_ended_listing_is_not_active,
         test_seller_sales_counter_is_not_a_completed_sale,
         test_sold_listing_requires_sale_evidence,
+        test_pre_detail_candidate_skip_is_not_a_detail_error,
     )
     return unittest.TestSuite(unittest.FunctionTestCase(function) for function in functions)
 
@@ -235,3 +240,40 @@ def test_sold_listing_requires_sale_evidence() -> None:
     assert reason == "accepted"
     assert item is not None
     assert item["status"] == "completed"
+
+
+def test_pre_detail_candidate_skip_is_not_a_detail_error() -> None:
+    browser = MagicMock()
+    browser.new_page.side_effect = [MagicMock(), MagicMock()]
+    request_data = {
+        "sourceId": SOURCE["id"],
+        "source": SOURCE,
+        "format": "physical",
+        "operation": "active_discovery",
+        "query": "Alice Smith photobook",
+        "humanModelKeywords": ["Alice Smith"],
+        "maxPages": 1,
+        "pageSize": 1,
+        "maxCandidates": 1,
+        "maxDetailPages": 1,
+        "maxItems": 1,
+    }
+
+    with (
+        patch.object(worker, "browser_launch_lock", return_value=nullcontext()),
+        patch.object(worker, "launch", return_value=browser),
+        patch.object(worker, "navigate_page"),
+        patch.object(worker, "collect_anchor_candidates", return_value=[candidate("Unrelated card")]),
+        patch.object(worker, "next_page_url", return_value=""),
+        patch.object(
+            worker,
+            "detail_snapshot",
+            side_effect=worker.CandidateSkippedBeforeDetail("filtered before navigation"),
+        ),
+    ):
+        result = collect(request_data)
+
+    assert result["diagnostics"]["detailPages"] == 0
+    assert result["diagnostics"]["detailErrors"] == 0
+    assert result["diagnostics"]["preDetailSkipped"] == 1
+    assert result["diagnostics"]["rejected"] == 1

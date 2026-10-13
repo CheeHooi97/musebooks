@@ -105,6 +105,10 @@ func (h *CatalogBrowseHandler) Listings(c echo.Context) error {
 
 func (h *CatalogBrowseHandler) MarketplaceListings(c echo.Context) error {
 	p := browseQuery(c)
+	p.Kind = strings.TrimSpace(c.QueryParam("scope"))
+	if p.Kind != "" && p.Kind != "offers" {
+		return echo.NewHTTPError(400, "scope must be offers")
+	}
 	p.Region = strings.ToUpper(strings.TrimSpace(c.QueryParam("region")))
 	if p.Region == "" {
 		p.Region = "JP"

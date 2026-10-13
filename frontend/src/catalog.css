@@ -42,8 +42,9 @@
 .home-marketplace .offer-context, .home-marketplace .offer-amount { min-width: 0; overflow-wrap: anywhere; }
 .home-marketplace .offer-link { grid-column: 1; }
 .origin-offer-count { display: block; color: var(--muted); font-size: 11px; line-height: 1.5; }
-.japan-marketplace-entry__image { display: grid; place-items: center; height: 280px; padding: 12px; background: color-mix(in srgb, var(--ink) 4%, var(--paper)); color: var(--muted); text-decoration: none; }
-.japan-marketplace-entry__image img { width: 100%; height: 100%; object-fit: contain; }
+.japan-marketplace-entry__image { display: grid; grid-template-rows: minmax(0, 1fr); grid-template-columns: minmax(0, 1fr); place-items: center; height: 280px; padding: 12px; background: color-mix(in srgb, var(--ink) 4%, var(--paper)); color: var(--muted); text-decoration: none; }
+.japan-marketplace-entry__image img { min-width: 0; min-height: 0; width: 100%; height: 100%; object-fit: contain; }
+.japan-marketplace-entry__edition { margin-block: 16px; }
 .japan-marketplace-entry__image:focus-visible, .japan-marketplace-entry__links a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .japan-marketplace-entry__body { padding-top: 14px; }
 .japan-marketplace-entry__status { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; color: var(--muted); font-size: 11px; }

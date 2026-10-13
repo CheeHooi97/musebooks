@@ -16,6 +16,17 @@ export function renderSeo(html, pathname, book, profile, siteURL = SITE_URL) {
 export function sitemapXML(paths, siteURL = SITE_URL) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[...new Set(paths)].map(route => `<url><loc>${escape(siteURL + route)}</loc></url>`).join('')}</urlset>\n`
 }
+export function renderPublishedPage(template, route, data = {}, siteURL = SITE_URL) {
+  if (!template.includes('<div id="root">') || !template.includes('</body>')) throw new Error('Invalid built page template')
+  const clean = template
+    .replace(/<script\b[^>]*id=["']musebooks-seo-jsonld["'][^>]*>[\s\S]*?<\/script>/gi, '')
+    .replace(/<meta\b[^>]*(?:name=["'](?:description|robots|twitter:[^"']+)["']|property=["']og:[^"']+["'])[^>]*>/gi, '')
+    .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, '')
+    .replace(/(<div id="root">)[\s\S]*(<\/body>)/, '$1</div>$2')
+  const bootstrap = data.book ? `<script id="musebooks-bootstrap" type="application/json">${json({ book: data.book })}</script>` : ''
+  return renderSeo(clean, route, data.book, data.profile, siteURL)
+    .replace('<div id="root"></div>', () => `<div id="root">${renderContent(route, data)}</div>${bootstrap}`)
+}
 export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.env.SEO_API_URL || 'https://musebooks.my', siteURL = SITE_URL } = {}) {
   siteURL = normalizeSiteURL(siteURL)
   const template = await fs.readFile(path.join(outputDir, 'index.html'), 'utf8')

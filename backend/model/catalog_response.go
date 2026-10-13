@@ -1,6 +1,7 @@
 package model
 
 import (
+	"net/url"
 	"strings"
 	"time"
 )
@@ -32,6 +33,7 @@ type OriginResponse struct {
 }
 
 type EditionResponse struct {
+	Gallery           []CatalogMedia    `gorm:"-" json:"gallery,omitempty"`
 	PublisherProfile  *CatalogLink      `json:"publisherProfile,omitempty"`
 	ID                string            `json:"id"`
 	Format            string            `json:"format"`
@@ -56,6 +58,7 @@ type EditionResponse struct {
 }
 
 type ListingResponse struct {
+	Gallery        []CatalogMedia `gorm:"-" json:"gallery,omitempty"`
 	ID             string         `json:"id"`
 	ExternalID     string         `json:"externalId"`
 	URL            string         `json:"url"`
@@ -136,6 +139,7 @@ func (w Work) Response() BookResponse {
 
 func (e Edition) Response() EditionResponse {
 	result := EditionResponse{
+		Gallery:           publicGallery(e.Media),
 		ID:                e.ID,
 		Format:            e.Format,
 		Language:          e.Language,
@@ -182,6 +186,7 @@ func (e Edition) Response() EditionResponse {
 
 func (l Listing) Response() ListingResponse {
 	return ListingResponse{
+		Gallery:        publicGallery(l.Media),
 		ID:             l.ID,
 		ExternalID:     l.ExternalID,
 		URL:            l.URL,
@@ -206,6 +211,19 @@ func (l Listing) Response() ListingResponse {
 			PhotobookFormat: SourcePhotobookFormat(l.Source),
 		},
 	}
+}
+
+func publicGallery(media []CatalogMedia) []CatalogMedia {
+	result := []CatalogMedia{}
+	for _, asset := range media {
+		image, err := url.Parse(asset.StorageURL)
+		source, sourceErr := url.Parse(asset.SourceURL)
+		if err != nil || sourceErr != nil || image.Scheme != "https" || image.Host == "" || image.User != nil || source.Scheme != "https" || source.Host == "" || source.User != nil || PublicCoverURL(asset.StorageURL) == "" {
+			continue
+		}
+		result = append(result, asset)
+	}
+	return result
 }
 
 func listingPhotobookFormat(listing Listing) string {

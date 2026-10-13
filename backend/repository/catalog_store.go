@@ -25,10 +25,17 @@ func (r *CatalogRepository) ListBooks(ctx context.Context, params model.ListBook
 	err := query.Distinct("works.*").Preload("Origin").Preload("Editions", func(db *gorm.DB) *gorm.DB {
 		return db.Where("status <> ?", "superseded").Order("release_date DESC NULLS LAST, edition_label ASC")
 	}).Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source").Order("works.updated_at DESC, works.id ASC").Offset((params.Page - 1) * params.PageSize).Limit(params.PageSize).Find(&works).Error
+	if err == nil {
+		err = r.loadBookMedia(ctx, works)
+	}
 	return works, total, err
 }
 func (r *CatalogRepository) GetBook(work *model.Work, key string) CatalogResult {
-	return result(r.db.Where("works.status = ?", "published").Where("works.id = ? OR works.slug = ?", key, key).Preload("Origin").Preload("Editions", "status <> ?", "superseded").Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source").First(work))
+	found := r.db.Where("works.status = ?", "published").Where("works.id = ? OR works.slug = ?", key, key).Preload("Origin").Preload("Editions", "status <> ?", "superseded").Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source").First(work)
+	if found.Error != nil {
+		return result(found)
+	}
+	return CatalogResult{Error: r.loadBookMedia(context.Background(), []model.Work{*work})}
 }
 func (r *CatalogRepository) GetEdition(edition *model.Edition, id string) CatalogResult {
 	return result(r.db.Joins("JOIN works ON works.id = editions.work_id AND works.status = 'published'").Preload("PublisherCompany").Preload("Listings").Preload("Listings.Source").Where("editions.status <> ?", "superseded").Where("editions.id = ?", id).First(edition))

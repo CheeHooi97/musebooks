@@ -1,5 +1,7 @@
 package model
 
+import "time"
+
 type DirectoryEntry struct {
 	OfficialURL  string `json:"officialUrl,omitempty"`
 	OriginalName string `json:"originalName,omitempty"`
@@ -23,13 +25,16 @@ type MarketEntry struct {
 	CoverURL          string   `json:"coverUrl,omitempty"`
 }
 type MarketplaceListingEntry struct {
-	ListingResponse `gorm:"embedded"`
-	ImageURL        string `json:"imageUrl,omitempty"`
-	CatalogMatched  bool   `json:"catalogMatched"`
-	WorkTitle       string `json:"workTitle,omitempty"`
-	WorkSlug        string `json:"workSlug,omitempty"`
-	EditionLabel    string `json:"editionLabel,omitempty"`
-	Publisher       string `json:"publisher,omitempty"`
+	ListingResponse  `gorm:"embedded"`
+	FeaturedNames    string     `json:"featuredNames,omitempty"`
+	ReleaseDate      *time.Time `json:"releaseDate,omitempty"`
+	ReleasePrecision string     `json:"releasePrecision,omitempty"`
+	ImageURL         string     `json:"imageUrl,omitempty"`
+	CatalogMatched   bool       `json:"catalogMatched"`
+	WorkTitle        string     `json:"workTitle,omitempty"`
+	WorkSlug         string     `json:"workSlug,omitempty"`
+	EditionLabel     string     `json:"editionLabel,omitempty"`
+	Publisher        string     `json:"publisher,omitempty"`
 }
 type CatalogBrowseQuery struct {
 	Query, Kind, ID, Status, Format, Source, Person, Publisher, Language, Year, Region string

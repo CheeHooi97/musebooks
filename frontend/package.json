@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "vite",
     "test:seo": "node --test scripts/seo-build.test.mjs src/lib/*.test.js",
+    "verify:japan-homepage": "node scripts/verify-japan-homepage.mjs",
+    "verify:japan-homepage-live": "node scripts/verify-japan-homepage.mjs --live",
     "build": "vite build",
     "build:mobile": "vite build --mode mobile",
     "cap:sync": "npm run build:mobile && cap sync",

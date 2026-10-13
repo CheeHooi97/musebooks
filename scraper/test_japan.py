@@ -3,10 +3,34 @@ from unittest.mock import MagicMock, patch
 from urllib.parse import parse_qs, urlparse
 
 from marketplace_adapters import resolve_adapter
-from photobook_worker import collect, make_observation, status_for, SourceBlockedError, ensure_rendered_page, detail_snapshot, NavigationRateLimiter
+from photobook_worker import collect, make_observation, status_for, SourceBlockedError, ensure_rendered_page, detail_snapshot, NavigationRateLimiter, japan_publication_date
 
 
 class JapanTests(unittest.TestCase):
+    def test_publication_date_labels_and_validation(self):
+        for text in ['発売日：2024年6月21日', '発行年月日 2024/06/21', '出版日 ２０２４年６月２１日']:
+            self.assertEqual(japan_publication_date({}, text), '2024-06-21')
+        for text in ['出品日 2024年6月21日', '発売日 2024年2月30日', '発売日 2024年6月',
+                     '発売日 2024年6月21日 発行日 2024年7月1日']:
+            self.assertEqual(japan_publication_date({}, text), '')
+        self.assertEqual(japan_publication_date({'datePublished': '2024-06-21'}, ''), '')
+        self.assertEqual(japan_publication_date({'bookPublicationDate': '2024-06-21'}, ''), '2024-06-21')
+        self.assertEqual(japan_publication_date({}, 'おすすめ商品 発売日 2024年6月21日'), '')
+
+    def test_observation_preserves_book_release_date_with_price(self):
+        item, reason = self.observation('rakuma', '購入に進む 商品説明 発売日：2024年6月21日', 'active_discovery', price=1600)
+        self.assertEqual(reason, 'accepted')
+        self.assertEqual((item['releaseDate'], item['priceMinor'], item['currency']), ('2024-06-21', 1600, 'JPY'))
+
+    def test_detail_retains_release_date_before_status_panel_trim(self):
+        page = MagicMock()
+        with patch('photobook_worker.navigate_page', return_value='購入に進む 商品説明 発売日：2024年6月21日'), \
+             patch('photobook_worker.structured_product', return_value={'name': 'えなこ 写真集', 'availability': 'InStock'}), \
+             patch('photobook_worker.page_metadata', return_value={}):
+            detail = detail_snapshot(page, 'https://item.fril.jp/5b53076cb0ccb56fe2620973d9d33d32', {'item.fril.jp'}, 'rakuma', MagicMock())
+        self.assertNotIn('発売日', detail['body'])
+        self.assertEqual(detail['structured']['bookPublicationDate'], '2024-06-21')
+
     def observation(self, source_id, body, operation, availability='', price=1760, category=''):
         source = {'id':source_id,'region':'JP','kind':'marketplace','allowedFormats':['physical']}
         urls = {'yahoo-auctions-jp':'https://auctions.yahoo.co.jp/jp/auction/q1243985894',

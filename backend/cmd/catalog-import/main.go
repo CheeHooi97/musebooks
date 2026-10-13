@@ -18,6 +18,7 @@ import (
 	"net/http/httptest"
 	"net/url"
 	"os"
+	"regexp"
 	"strings"
 )
 
@@ -34,10 +35,12 @@ type Record struct {
 	SupersedesEditionID string                 `json:"supersedesEditionId,omitempty"`
 	Origin              *model.Origin          `json:"origin,omitempty"`
 	Work                model.Work             `json:"work"`
+	FeaturedPerson      *model.Person          `json:"featuredPerson,omitempty"`
 	Edition             model.Edition          `json:"edition"`
 	Source              model.Source           `json:"source"`
 	Batch               model.ObservationBatch `json:"batch"`
 	Media               []ListingMediaInput    `json:"media,omitempty"`
+	PublisherMedia      []ListingMediaInput    `json:"publisherMedia,omitempty"`
 }
 
 func validHTTPSURL(value string) bool {
@@ -56,7 +59,7 @@ func validCatalogOrigin(code string) bool {
 
 func validExclusionReason(reason string) bool {
 	switch reason {
-	case "calendar_only", "illustrated_book", "disc_only", "magazine_only", "magazine_or_supplement", "junior_gravure", "artist_monograph", "synthetic_subject", "download_resale", "nonbook_product", "subject_publication_age_unverified", "nonhuman_subject", "reference_book":
+	case "calendar_only", "illustrated_book", "disc_only", "magazine_only", "magazine_or_supplement", "junior_gravure", "artist_monograph", "synthetic_subject", "download_resale", "free_preview", "nonbook_product", "subject_publication_age_unverified", "nonhuman_subject", "reference_book":
 		return true
 	default:
 		return false
@@ -64,6 +67,11 @@ func validExclusionReason(reason string) bool {
 }
 
 func validateMediaInput(record Record) error {
+	for _, media := range record.PublisherMedia {
+		if record.Edition.ID == "" || !validHTTPSURL(media.OriginalURL) || !validHTTPSURL(media.StorageURL) || media.SourceURL != record.Edition.MetadataSourceURL || !validHTTPSURL(media.SourceURL) || !regexp.MustCompile(`^publisher_(cover|sample_[0-9]{3})$`).MatchString(media.MediaType) || (media.IsPrimary && (media.MediaType != "publisher_cover" || media.StorageURL != record.Edition.CoverURL)) {
+			return fmt.Errorf("publisher image provenance does not match the reviewed edition")
+		}
+	}
 	if len(record.Media) == 0 {
 		return nil
 	}
@@ -73,10 +81,11 @@ func validateMediaInput(record Record) error {
 	}
 	for _, media := range record.Media {
 		item, ok := items[media.ExternalID]
-		if !ok || strings.TrimSpace(media.ExternalID) == "" || media.MediaType != "listing_image" ||
+		gallery := regexp.MustCompile(`^listing_image_[0-9]{3}$`).MatchString(media.MediaType)
+		if !ok || strings.TrimSpace(media.ExternalID) == "" || (media.MediaType != "listing_image" && !gallery) ||
 			strings.TrimSpace(media.OriginalURL) == "" || strings.TrimSpace(media.StorageURL) == "" ||
 			!validHTTPSURL(media.OriginalURL) || !validHTTPSURL(media.StorageURL) ||
-			media.StorageURL != item.ImageURL || media.SourceURL != item.URL {
+			(media.IsPrimary && media.StorageURL != item.ImageURL) || media.SourceURL != item.URL {
 			return fmt.Errorf("listing image provenance does not match an imported item")
 		}
 	}
@@ -233,6 +242,9 @@ func main() {
 	}
 	listingMediaCount := 0
 	for i, r := range records {
+		if r.FeaturedPerson != nil && (r.FeaturedPerson.ID != 0 || r.FeaturedPerson.Slug != model.CatalogIdentity("model", r.FeaturedPerson.CanonicalPublicName) || strings.TrimSpace(r.FeaturedPerson.CanonicalPublicName) == "") {
+			fail(fmt.Errorf("record %d has invalid featured person identity", i))
+		}
 		if r.Origin != nil && (!validCatalogOrigin(r.Origin.Code) || strings.TrimSpace(r.Origin.Name) == "") {
 			fail(fmt.Errorf("record %d has an invalid origin", i))
 		}
@@ -283,10 +295,16 @@ func main() {
 		fail(e)
 	}
 	e = db.Transaction(func(tx *gorm.DB) error {
+		// A lost network connection must not leave an abandoned import holding locks.
+		if err := tx.Exec("SET LOCAL idle_in_transaction_session_timeout = '120s'").Error; err != nil {
+			return err
+		}
+		featuredPeople := map[string]model.Person{}
+		knownSources := map[string]bool{}
 		if err := tx.Clauses(clause.OnConflict{DoNothing: true}).Create(&model.Origin{Code: "TW", Name: "Taiwan", NativeName: "台灣"}).Error; err != nil {
 			return err
 		}
-		for _, r := range records {
+		for recordIndex, r := range records {
 			if r.Origin != nil {
 				if err := tx.Clauses(clause.OnConflict{DoNothing: true}).Create(r.Origin).Error; err != nil {
 					return err
@@ -315,11 +333,51 @@ func main() {
 					editionUpdates = append(editionUpdates, "cover_url", "cover_object_key")
 				}
 
+				var existingWork model.Work
+				previous := tx.Select("featured_names").Where("id = ?", r.Work.ID).Find(&existingWork)
+				if previous.Error != nil {
+					return previous.Error
+				}
+				if previous.RowsAffected > 0 && existingWork.FeaturedNames != "" {
+					names, seen := []string{}, map[string]bool{}
+					for _, name := range strings.Split(existingWork.FeaturedNames+","+r.Work.FeaturedNames, ",") {
+						name = strings.TrimSpace(name)
+						if name != "" && !seen[name] {
+							names = append(names, name)
+							seen[name] = true
+						}
+					}
+					r.Work.FeaturedNames = strings.Join(names, ",")
+				}
 				if err := tx.Omit("Origin", "Editions").Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "id"}}, DoUpdates: clause.AssignmentColumns(workUpdates)}).Create(&r.Work).Error; err != nil {
 					return err
 				}
 				if err := tx.Omit("Listings").Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "id"}}, DoUpdates: clause.AssignmentColumns(editionUpdates)}).Create(&r.Edition).Error; err != nil {
 					return err
+				}
+				if r.FeaturedPerson != nil {
+					person := *r.FeaturedPerson
+					if known, ok := featuredPeople[person.Slug]; ok {
+						person = known
+					} else {
+						if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "slug"}}, DoNothing: true}).Create(&person).Error; err != nil {
+							return err
+						}
+						if err := tx.Where("slug = ?", person.Slug).First(&person).Error; err != nil {
+							return err
+						}
+						featuredPeople[person.Slug] = person
+					}
+					credit := model.WorkPerson{WorkID: r.Work.ID, PersonID: person.ID, Role: "featured", CreditedName: person.CanonicalPublicName, CreditSource: "verified_model_capture"}
+					if err := tx.Omit("Work", "Person").Clauses(clause.OnConflict{DoNothing: true}).Create(&credit).Error; err != nil {
+						return err
+					}
+				}
+				for _, image := range r.PublisherMedia {
+					asset := model.CatalogMedia{EntityType: "edition", EntityID: r.Edition.ID, MediaType: image.MediaType, OriginalURL: image.OriginalURL, StorageURL: image.StorageURL, SourceURL: image.SourceURL, IsPrimary: image.IsPrimary}
+					if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "entity_type"}, {Name: "entity_id"}, {Name: "media_type"}}, DoUpdates: clause.AssignmentColumns([]string{"original_url", "storage_url", "source_url", "is_primary", "updated_at"})}).Create(&asset).Error; err != nil {
+						return err
+					}
 				}
 
 				if r.SupersedesEditionID != "" && r.SupersedesEditionID != r.Edition.ID {
@@ -347,13 +405,16 @@ func main() {
 			if len(r.Batch.Items) == 0 {
 				continue
 			}
-			var source model.Source
-			if result := tx.First(&source, "id = ?", r.Source.ID); result.Error == gorm.ErrRecordNotFound {
-				if err := tx.Create(&r.Source).Error; err != nil {
-					return err
+			if !knownSources[r.Source.ID] {
+				var source model.Source
+				if result := tx.First(&source, "id = ?", r.Source.ID); result.Error == gorm.ErrRecordNotFound {
+					if err := tx.Create(&r.Source).Error; err != nil {
+						return err
+					}
+				} else if result.Error != nil {
+					return result.Error
 				}
-			} else if result.Error != nil {
-				return result.Error
+				knownSources[r.Source.ID] = true
 			}
 			payload, _ := json.Marshal(r.Batch)
 			req := httptest.NewRequest("POST", "/internal/import", strings.NewReader(string(payload)))
@@ -362,6 +423,9 @@ func main() {
 			rec := httptest.NewRecorder()
 			ctx := echo.New().NewContext(req, rec)
 			if err := handler.NewCatalogHandler(service.NewCatalogService(repository.NewCatalogRepository(tx))).IngestBatch(ctx); err != nil {
+				if failure, ok := err.(*echo.HTTPError); ok && failure.Internal != nil {
+					return fmt.Errorf("record %d source %s observation ingestion failed: %w", recordIndex, r.Batch.SourceID, failure.Internal)
+				}
 				return err
 			}
 			var result struct {
@@ -373,10 +437,17 @@ func main() {
 			if result.Rejected != 0 {
 				return fmt.Errorf("ingestion rejected %d items; rollback", result.Rejected)
 			}
+			listingImages := map[string]model.Listing{}
+			assets := []model.CatalogMedia{}
 			for _, image := range r.Media {
 				var listing model.Listing
-				if err := tx.Where("source_id = ? AND external_id = ?", r.Batch.SourceID, image.ExternalID).First(&listing).Error; err != nil {
-					return fmt.Errorf("could not resolve imported listing image %s", image.ExternalID)
+				if known, ok := listingImages[image.ExternalID]; ok {
+					listing = known
+				} else {
+					if err := tx.Where("source_id = ? AND external_id = ?", r.Batch.SourceID, image.ExternalID).First(&listing).Error; err != nil {
+						return fmt.Errorf("could not resolve imported listing image %s", image.ExternalID)
+					}
+					listingImages[image.ExternalID] = listing
 				}
 				asset := model.CatalogMedia{
 					EntityType:  "listing",
@@ -387,13 +458,16 @@ func main() {
 					SourceURL:   image.SourceURL,
 					IsPrimary:   image.IsPrimary,
 				}
+				assets = append(assets, asset)
+				listingMediaCount++
+			}
+			if len(assets) > 0 {
 				if err := tx.Clauses(clause.OnConflict{
 					Columns:   []clause.Column{{Name: "entity_type"}, {Name: "entity_id"}, {Name: "media_type"}},
 					DoUpdates: clause.AssignmentColumns([]string{"original_url", "storage_url", "source_url", "is_primary", "updated_at"}),
-				}).Create(&asset).Error; err != nil {
+				}).Create(&assets).Error; err != nil {
 					return err
 				}
-				listingMediaCount++
 			}
 		}
 		return nil
@@ -401,5 +475,5 @@ func main() {
 	if e != nil {
 		fail(e)
 	}
-	fmt.Printf("Catalog records and price observations committed; R2 listing images with source attribution: %d\n", listingMediaCount)
+	fmt.Printf("Catalog records and price observations committed; listing image provenance records: %d\n", listingMediaCount)
 }

@@ -98,6 +98,9 @@ func (r *CatalogRepository) DirectoryBooks(ctx context.Context, p model.CatalogB
 		return db.Order("release_date DESC NULLS LAST,id")
 	}).Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source")
 	err := query.Order("works.original_title,works.id").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Find(&works).Error
+	if err == nil {
+		err = r.loadBookMedia(ctx, works)
+	}
 	return works, total, err
 }
 func (r *CatalogRepository) Listings(ctx context.Context, p model.CatalogBrowseQuery) ([]model.MarketEntry, int64, error) {
@@ -156,8 +159,12 @@ func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.Cat
 		Joins("LEFT JOIN editions AS edition ON edition.id=listing.edition_id AND edition.status<>'superseded'").
 		Joins("LEFT JOIN works AS work ON work.id=edition.work_id AND work.status='published'").
 		Where("upper(source.region)=?", strings.ToUpper(strings.TrimSpace(p.Region))).
-		Where("lower(source.kind)=?", "marketplace").
 		Where("listing.status <> ?", "excluded")
+	if p.Kind == "offers" {
+		query = query.Where("lower(source.kind) = ? OR (lower(source.kind) IN ? AND listing.digital_access = ? AND listing.format_candidate = ?)", "marketplace", []string{"bookstore", "digital_store"}, "authorized_store", "digital")
+	} else {
+		query = query.Where("lower(source.kind)=?", "marketplace")
+	}
 	if p.Status == "active" || p.Status == "completed" {
 		query = query.Where("listing.status = ?", p.Status)
 	}
@@ -182,8 +189,8 @@ func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.Cat
  listing.format_candidate AS source_photobook_format,
  CASE WHEN listing.format_candidate='digital' THEN 'digital_retail' WHEN source.kind='bookstore' THEN 'physical_retail'
  WHEN listing.status='completed' THEN 'marketplace_sold' ELSE 'marketplace_asking' END AS price_category,
- (work.id IS NOT NULL) AS catalog_matched,work.original_title AS work_title,work.slug AS work_slug,
- edition.edition_label,edition.publisher`
+ (work.id IS NOT NULL) AS catalog_matched,work.original_title AS work_title,work.slug AS work_slug,work.featured_names,
+ edition.edition_label,edition.publisher,edition.release_date,edition.release_precision`
 	entries := []model.MarketplaceListingEntry{}
 	err := query.Select(columns).Order("listing.observed_at DESC,listing.id ASC").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Scan(&entries).Error
 	for i := range entries {

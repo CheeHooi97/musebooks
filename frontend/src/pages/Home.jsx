@@ -403,8 +403,8 @@ export default function Home() {const { t, formatPrice } = usePreferences();
               </article>;
               })}
           </div>}
-          {activeView === "browse" && (!origin || origin === "JP") && format !== "digital" && <HomeMarketplace {...{ query, format, availability, sortBy }} onTotal={setMarketplaceTotal} />}
-          {apiState === "live" && visibleBooks.length === 0 && !(activeView === "browse" && (!origin || origin === "JP") && format !== "digital") && <div className="empty-state">
+          {activeView === "browse" && (!origin || origin === "JP") && <HomeMarketplace {...{ query, format, availability, sortBy }} onTotal={setMarketplaceTotal} />}
+          {apiState === "live" && visibleBooks.length === 0 && !(activeView === "browse" && (!origin || origin === "JP")) && <div className="empty-state">
             <Icon name={activeView === "collection" ? "bookmark" : "search"} size={24} />
             <h3>{activeView === "collection" && saved.length === 0 ? t("Your collection is ready.") : activeView === "collection" ? t("No saved books match.") : t("No titles match those filters.")}</h3>
             <p>{activeView === "collection" && saved.length === 0 ? t("Save a photobook to keep its editions and source prices close.") : t("Try clearing a filter or searching a wider title, artist, or place.")}</p>

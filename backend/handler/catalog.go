@@ -272,7 +272,7 @@ func (h *CatalogHandler) IngestBatch(c echo.Context) error {
 		return nil
 	})
 	if err != nil {
-		return echo.NewHTTPError(http.StatusInternalServerError, "failed to ingest observation batch")
+		return echo.NewHTTPError(http.StatusInternalServerError, "failed to ingest observation batch").SetInternal(err)
 	}
 	return c.JSON(http.StatusAccepted, map[string]any{
 		"jobId": batch.JobID, "sourceId": batch.SourceID, "created": created, "updated": updated,

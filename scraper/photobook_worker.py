@@ -48,9 +48,17 @@ class SourceBlockedError(RuntimeError):
 class RenderedPageError(RuntimeError):
     """The browser did not produce a usable rendered page."""
 
+    def __init__(self, message, *, evidence=None):
+        super().__init__(message)
+        self.evidence = evidence
+
 
 class DetailSnapshotError(RuntimeError):
     """A product detail page could not be inspected reliably."""
+
+
+class CandidateSkippedBeforeDetail(RuntimeError):
+    """A search candidate was intentionally excluded before product navigation."""
 
 PHOTBOOK_SIGNAL_RE = re.compile(
     r"(?:\bphoto\s*book\b|\bphotobook\b|\bphotography\s*book\b|"
@@ -356,6 +364,14 @@ def ensure_rendered_page(body: str, source_id: str, *, allow_empty: bool = False
         raise RenderedPageError(f"empty rendered page for source {source_id}")
 
 
+def has_explicit_empty_results(body: str) -> bool:
+    return re.search(
+        r"沒有找到|找不到符合|查無|無搜尋結果|沒有符合|找到\s*0\s*筆|共\s*0\s*筆|"
+        r"検索結果.{0,10}0件|該当する商品.{0,10}(?:ありません|見つかりません)|"
+        r"(?:検索)?条件に一致する商品(?:は|が)?(?:ありません|見つかりません)(?:でした)?|"
+        r"no\s+(?:results|items|products)", body, re.I) is not None
+
+
 class NavigationRateLimiter:
     """Throttle all search and detail navigations for one claimed job."""
 
@@ -597,7 +613,10 @@ def structured_product(page) -> dict:
             is_product = type_value == "Product" or (
                 isinstance(type_value, list) and "Product" in type_value
             )
-            if is_product or offers:
+            is_book = type_value == "Book" or (
+                isinstance(type_value, list) and "Book" in type_value
+            )
+            if is_product or offers or is_book:
                 return {
                     "name": compact(value.get("name"), 500),
                     "description": compact(value.get("description"), 4_000),
@@ -609,6 +628,7 @@ def structured_product(page) -> dict:
                     "publisher": structured_value_text(value.get("publisher"), 180),
                     "numberOfPages": value.get("numberOfPages"),
                     "datePublished": value.get("datePublished"),
+                    "bookPublicationDate": value.get("datePublished") if is_book else "",
                     "isPartOf": value.get("isPartOf"),
                     "sku": compact(value.get("sku") or value.get("productID"), 180),
                     "productID": compact(value.get("productID"), 180),
@@ -769,6 +789,9 @@ def detail_snapshot(
             # The page repeats its title above recommendations before the
             # actual auction panel. Use the last title preceding its fields.
             body = body[body.rfind(title):]
+        # Keep book-release evidence before removing seller descriptions from
+        # the status/price panel. Release labels commonly live in that prose.
+        structured["bookPublicationDate"] = japan_publication_date(structured, body)
         # Keep selected offer controls, excluding seller prose and related items.
         body = re.split(r"「[^」]+」に近い商品|商品説明|商品の説明|こちらの商品もおすすめ|この商品をみている人にオススメ|この商品を見ている人におすすめ|見た目が似ている商品|お探しの商品からのおすすめ", body, maxsplit=1)[0]
         if source_id == "yahoo-furima-jp":
@@ -1599,7 +1622,7 @@ def make_observation(
         "publisher": compact(structured.get("publisher"), 180),
         "contentSummary": compact(structured.get("description"), 1000),
         "pageCount": int(structured.get("numberOfPages")) if str(structured.get("numberOfPages", "")).isdigit() else 0,
-        "releaseDate": compact(structured.get("datePublished"), 32),
+        "releaseDate": japan_publication_date(structured, detail.get("body", "")) if source_id in JAPAN_SOURCE_IDS else compact(structured.get("datePublished"), 32),
         "seriesName": compact(structured.get("isPartOf", {}).get("name"), 180) if isinstance(structured.get("isPartOf"), dict) else "",
         "editionVariant": digital_edition_variant(title) if format_value == "digital" else "",
         "shippingText": "",
@@ -1608,6 +1631,31 @@ def make_observation(
         "statusEvidence": status_evidence,
         "timestampPrecision": "observed",
     }, "accepted"
+
+
+def japan_publication_date(structured: dict, detail_body: str) -> str:
+    """Read a book release date, never an auction/listing publication timestamp."""
+    text = unicodedata.normalize("NFKC", detail_body or "")
+    # Recommendations can describe a different book.
+    text = re.split(r"おすすめ商品|関連商品|こちらもおすすめ|この商品を見た人", text, maxsplit=1)[0]
+    dates = re.findall(
+        r"(?:発売年月日|発売日|発行年月日|発行日|出版年月日|出版日)\s*[:：]?\s*"
+        r"(\d{4})\s*(?:年|[-/.])\s*(\d{1,2})\s*(?:月|[-/.])\s*(\d{1,2})(?:日)?",
+        text,
+    )
+    verified = set()
+    for year, month, day in dates:
+        try:
+            verified.add(datetime(int(year), int(month), int(day)).date().isoformat())
+        except ValueError:
+            pass
+    book_date = compact(structured.get("bookPublicationDate"), 40)
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}(?:T.*)?", book_date):
+        try:
+            verified.add(datetime.strptime(book_date[:10], "%Y-%m-%d").date().isoformat())
+        except ValueError:
+            pass
+    return next(iter(verified)) if len(verified) == 1 else ""
 
 
 def page_number_from_cursor(value: str, fallback: int = 1) -> int:
@@ -1842,8 +1890,11 @@ def collect(request: dict) -> dict:
                                     break
                             if not candidates:
                                 body = page_body(search_page)
-                                if not re.search(r"沒有找到|找不到符合|查無|無搜尋結果|沒有符合|找到\s*0\s*筆|共\s*0\s*筆|検索結果.{0,10}0件|該当する商品.{0,10}(?:ありません|見つかりません)|no\s+(?:results|items|products)", body, re.I):
-                                    raise RenderedPageError(f"{source_id}: product grid did not render and no explicit empty-results message was found")
+                                if not has_explicit_empty_results(body):
+                                    raise RenderedPageError(
+                                        f"{source_id}: product grid did not render and no explicit empty-results message was found",
+                                        evidence=dict(sourceId=source_id, url=page_url,
+                                            renderedUrl=current_page_url(search_page), body=body, observedAt=iso_utc()))
                         rendered_next_url = next_page_url(search_page, page_url, hosts)
                     if digital_retail and not direct_listing:
                         diagnostics["retailSearchCandidates"] = int(diagnostics.get("retailSearchCandidates", 0)) + len(candidates)
@@ -1919,6 +1970,11 @@ def collect(request: dict) -> dict:
                                     diagnostics["rejected"] = int(diagnostics["rejected"]) + 1
                                     rejection_counts["detail_verification_required"] = rejection_counts.get("detail_verification_required", 0) + 1
                                     warnings.append(f"skipped verification-required detail: {candidate['url']}")
+                                    continue
+                                except CandidateSkippedBeforeDetail:
+                                    diagnostics["preDetailSkipped"] = int(diagnostics.get("preDetailSkipped", 0)) + 1
+                                    diagnostics["rejected"] = int(diagnostics["rejected"]) + 1
+                                    rejection_counts["pre_detail_excluded"] = rejection_counts.get("pre_detail_excluded", 0) + 1
                                     continue
                                 except DetailSnapshotError as exc:
                                     detail = {"detailError": str(exc)}

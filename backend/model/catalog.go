@@ -57,60 +57,62 @@ type Work struct {
 }
 
 type Edition struct {
-	PublisherCompanyID *string      `gorm:"size:100;index" json:"publisherCompanyId,omitempty"`
-	PublisherCompany   *Company     `gorm:"foreignKey:PublisherCompanyID" json:"publisherCompany,omitempty"`
-	ProductLineID      *int64       `gorm:"index" json:"productLineId,omitempty"`
-	ProductLine        *ProductLine `gorm:"foreignKey:ProductLineID" json:"productLine,omitempty"`
-	OriginalCoverURL   string       `gorm:"size:1000" json:"originalCoverUrl,omitempty"`
-	CoverObjectKey     string       `gorm:"size:180" json:"coverObjectKey,omitempty"`
-	ID                 string       `gorm:"primaryKey;size:100" json:"id"`
-	WorkID             string       `gorm:"size:100;index;not null" json:"workId"`
-	Format             string       `gorm:"size:32;index;not null" json:"format"`
-	Language           string       `gorm:"size:32;index" json:"language"`
-	EditionMarket      string       `gorm:"size:32;index" json:"editionMarket"`
-	Publisher          string       `gorm:"size:160" json:"publisher,omitempty"`
-	ReleaseDate        *time.Time   `gorm:"index" json:"releaseDate,omitempty"`
-	ReleasePrecision   string       `gorm:"size:16" json:"releasePrecision,omitempty"`
-	ISBN               string       `gorm:"size:32;index" json:"isbn,omitempty"`
-	PageCount          int          `json:"pageCount,omitempty"`
-	Dimensions         string       `gorm:"size:80" json:"dimensions,omitempty"`
-	EditionVariant     string       `gorm:"size:40" json:"editionVariant,omitempty"`
-	ContentSummary     string       `gorm:"type:text" json:"contentSummary,omitempty"`
-	MetadataSourceURL  string       `gorm:"size:1000" json:"metadataSourceUrl,omitempty"`
-	SeriesName         string       `gorm:"size:180" json:"seriesName,omitempty"`
-	EditionLabel       string       `gorm:"size:180" json:"editionLabel"`
-	CoverURL           string       `gorm:"size:500" json:"coverUrl,omitempty"`
-	Status             string       `gorm:"size:24;index;default:published" json:"status"`
-	Listings           []Listing    `gorm:"foreignKey:EditionID" json:"listings,omitempty"`
-	CreatedAt          time.Time    `json:"createdAt"`
-	UpdatedAt          time.Time    `json:"updatedAt"`
+	Media              []CatalogMedia `gorm:"-" json:"-"`
+	PublisherCompanyID *string        `gorm:"size:100;index" json:"publisherCompanyId,omitempty"`
+	PublisherCompany   *Company       `gorm:"foreignKey:PublisherCompanyID" json:"publisherCompany,omitempty"`
+	ProductLineID      *int64         `gorm:"index" json:"productLineId,omitempty"`
+	ProductLine        *ProductLine   `gorm:"foreignKey:ProductLineID" json:"productLine,omitempty"`
+	OriginalCoverURL   string         `gorm:"size:1000" json:"originalCoverUrl,omitempty"`
+	CoverObjectKey     string         `gorm:"size:180" json:"coverObjectKey,omitempty"`
+	ID                 string         `gorm:"primaryKey;size:100" json:"id"`
+	WorkID             string         `gorm:"size:100;index;not null" json:"workId"`
+	Format             string         `gorm:"size:32;index;not null" json:"format"`
+	Language           string         `gorm:"size:32;index" json:"language"`
+	EditionMarket      string         `gorm:"size:32;index" json:"editionMarket"`
+	Publisher          string         `gorm:"size:160" json:"publisher,omitempty"`
+	ReleaseDate        *time.Time     `gorm:"index" json:"releaseDate,omitempty"`
+	ReleasePrecision   string         `gorm:"size:16" json:"releasePrecision,omitempty"`
+	ISBN               string         `gorm:"size:32;index" json:"isbn,omitempty"`
+	PageCount          int            `json:"pageCount,omitempty"`
+	Dimensions         string         `gorm:"size:80" json:"dimensions,omitempty"`
+	EditionVariant     string         `gorm:"size:40" json:"editionVariant,omitempty"`
+	ContentSummary     string         `gorm:"type:text" json:"contentSummary,omitempty"`
+	MetadataSourceURL  string         `gorm:"size:1000" json:"metadataSourceUrl,omitempty"`
+	SeriesName         string         `gorm:"size:180" json:"seriesName,omitempty"`
+	EditionLabel       string         `gorm:"size:180" json:"editionLabel"`
+	CoverURL           string         `gorm:"size:500" json:"coverUrl,omitempty"`
+	Status             string         `gorm:"size:24;index;default:published" json:"status"`
+	Listings           []Listing      `gorm:"foreignKey:EditionID" json:"listings,omitempty"`
+	CreatedAt          time.Time      `json:"createdAt"`
+	UpdatedAt          time.Time      `json:"updatedAt"`
 }
 
 type Listing struct {
-	ID              string    `gorm:"primaryKey;size:180" json:"id"`
-	EditionID       string    `gorm:"size:100;index" json:"editionId,omitempty"`
-	SourceID        string    `gorm:"size:80;index;uniqueIndex:idx_listing_source_external;not null" json:"sourceId"`
-	ExternalID      string    `gorm:"size:180;uniqueIndex:idx_listing_source_external;not null" json:"externalId"`
-	URL             string    `gorm:"size:1000;not null" json:"url"`
-	Title           string    `gorm:"size:300;not null" json:"title"`
-	SellerLocation  string    `gorm:"size:120" json:"sellerLocation,omitempty"`
-	Condition       string    `gorm:"size:80" json:"condition,omitempty"`
-	FormatCandidate string    `gorm:"size:16;index" json:"formatCandidate,omitempty"`
-	DigitalAccess   string    `gorm:"size:24" json:"digitalAccess,omitempty"`
-	ISBN            string    `gorm:"size:32;index" json:"isbn,omitempty"`
-	Publisher       string    `gorm:"size:180" json:"publisher,omitempty"`
-	EditionVariant  string    `gorm:"size:40" json:"editionVariant,omitempty"`
-	Status          string    `gorm:"size:24;index;default:unknown" json:"status"`
-	PriceMinor      int64     `json:"priceMinor,omitempty"`
-	Currency        string    `gorm:"size:8" json:"currency,omitempty"`
-	PriceType       string    `gorm:"size:24" json:"priceType,omitempty"`
-	ShippingText    string    `gorm:"size:240" json:"shippingText,omitempty"`
-	ImageURL        string    `gorm:"size:500" json:"imageUrl,omitempty"`
-	ObservedAt      time.Time `gorm:"index" json:"observedAt"`
-	LastSeenAt      time.Time `gorm:"index" json:"lastSeenAt"`
-	Source          Source    `gorm:"foreignKey:SourceID;references:ID" json:"source"`
-	CreatedAt       time.Time `json:"createdAt"`
-	UpdatedAt       time.Time `json:"updatedAt"`
+	Media           []CatalogMedia `gorm:"-" json:"-"`
+	ID              string         `gorm:"primaryKey;size:180" json:"id"`
+	EditionID       string         `gorm:"size:100;index" json:"editionId,omitempty"`
+	SourceID        string         `gorm:"size:80;index;uniqueIndex:idx_listing_source_external;not null" json:"sourceId"`
+	ExternalID      string         `gorm:"size:180;uniqueIndex:idx_listing_source_external;not null" json:"externalId"`
+	URL             string         `gorm:"size:1000;not null" json:"url"`
+	Title           string         `gorm:"size:300;not null" json:"title"`
+	SellerLocation  string         `gorm:"size:120" json:"sellerLocation,omitempty"`
+	Condition       string         `gorm:"size:80" json:"condition,omitempty"`
+	FormatCandidate string         `gorm:"size:16;index" json:"formatCandidate,omitempty"`
+	DigitalAccess   string         `gorm:"size:24" json:"digitalAccess,omitempty"`
+	ISBN            string         `gorm:"size:32;index" json:"isbn,omitempty"`
+	Publisher       string         `gorm:"size:180" json:"publisher,omitempty"`
+	EditionVariant  string         `gorm:"size:40" json:"editionVariant,omitempty"`
+	Status          string         `gorm:"size:24;index;default:unknown" json:"status"`
+	PriceMinor      int64          `json:"priceMinor,omitempty"`
+	Currency        string         `gorm:"size:8" json:"currency,omitempty"`
+	PriceType       string         `gorm:"size:24" json:"priceType,omitempty"`
+	ShippingText    string         `gorm:"size:240" json:"shippingText,omitempty"`
+	ImageURL        string         `gorm:"size:500" json:"imageUrl,omitempty"`
+	ObservedAt      time.Time      `gorm:"index" json:"observedAt"`
+	LastSeenAt      time.Time      `gorm:"index" json:"lastSeenAt"`
+	Source          Source         `gorm:"foreignKey:SourceID;references:ID" json:"source"`
+	CreatedAt       time.Time      `json:"createdAt"`
+	UpdatedAt       time.Time      `json:"updatedAt"`
 }
 
 // ScrapeJob is the durable hand-off between the Go API and a marketplace

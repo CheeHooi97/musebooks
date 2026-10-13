@@ -9,6 +9,18 @@ import { usePreferences } from "../lib/preferences";export default function Book
               {selectedBook.editions.map((item) => <button key={item.id} type="button" className={item.id === selectedEdition.id ? "thumb--selected" : ""} onClick={() => setSelectedEditionId(item.id)} aria-label={`View ${item.editionLabel}`} aria-pressed={item.id === selectedEdition.id}><BookCover book={selectedBook} edition={item} compact /></button>)}
               {selectedBook.editions.length > 1 && <a className="more-thumb" href="#available-editions">{t("All editions")}</a>}
             </div>
+            {(selectedEdition.gallery?.length > 0 || selectedEdition.listings?.some(listing => listing.gallery?.length > 0)) && <section className="detail-product-gallery" aria-label="Public product images">
+              <h2>Public product images</h2>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "12px" }}>
+                {Array.from(new Map([
+                  ...(selectedEdition.gallery || []).map(asset => ({ ...asset, attribution: "Publisher" })),
+                  ...(selectedEdition.listings || []).flatMap(listing => (listing.gallery || []).map(asset => ({ ...asset, attribution: listing.source?.name || "Listing source" }))),
+                ].map(asset => [asset.storageUrl, asset])).values()).map(asset => <figure key={asset.storageUrl} style={{ margin: 0 }}>
+                  <a href={asset.sourceUrl} target="_blank" rel="noreferrer" data-external-link><img src={asset.storageUrl} alt={`${selectedEdition.editionLabel} — ${asset.attribution} product image`} loading="lazy" style={{ display: "block", width: "100%", height: "auto" }} /></a>
+                  <figcaption><a href={asset.sourceUrl} target="_blank" rel="noreferrer" data-external-link>{asset.attribution}</a></figcaption>
+                </figure>)}
+              </div>
+            </section>}
           </div>
           <div className="detail-copy">
             <h1 id="book-title" tabIndex={-1}>{selectedBook.originalTitle}</h1>
@@ -21,7 +33,7 @@ import { usePreferences } from "../lib/preferences";export default function Book
               <span><b>{t("Format")}</b>{t(editionFormatLabel(selectedEdition.format))}</span>
               <span><b>{t("Language")}</b>{selectedEdition.language || t("Not recorded")}</span>
               <span><b>{t("Pages")}</b>{selectedEdition.pageCount ? `${selectedEdition.pageCount} pages` : t("Not recorded")}</span>
-              <span><b>{t("Published")}</b>{publicationDate(selectedEdition) || t("Not recorded")}</span>
+              <span><b>{t(selectedEdition.format === "digital" ? "Store release" : "Published")}</b>{publicationDate(selectedEdition) || t("Not recorded")}</span>
               <span><b>ISBN</b>{selectedEdition.isbn || t("Not recorded")}</span>
               <span><b>{t("Dimensions")}</b>{selectedEdition.dimensions || t("Not recorded")}</span>
               <span><b>{t("Publisher")}</b>{selectedEdition.publisherProfile?.id ? <a href={`/publishers/${encodeURIComponent(selectedEdition.publisherProfile.id)}`}>{selectedEdition.publisherProfile.name}</a> : selectedEdition.publisher || t("Not recorded")}</span>

@@ -1,0 +1,143 @@
+{
+  "basis": "Publisher ISBN/title/model corroborated by the Kobo paper/e-book edition selector",
+  "pairs": [
+    {
+      "musecardsPersonId": 1,
+      "title": "岸明日香 写真集『Trajectory』",
+      "publisher": "ワニブックス",
+      "isbn": "9784847086731",
+      "physicalEditionId": "edition-jp-5d6b8071ca8839eddb0eca27",
+      "physicalWorkId": "work-jp-187d9e4c4676b4b0f9368d0e",
+      "digitalEditionId": "edition-jp-a525c64a6911e33264db82c1",
+      "digitalWorkId": "work-jp-77fcbabd4c6e007762d3d7f2",
+      "publisherUrl": "https://www.wani.co.jp/event.php?id=8975",
+      "storeUrl": "https://books.rakuten.co.jp/rk/64353d5b09b43fb383cd84942ea2f9cc/",
+      "paperTitle": "岸明日香 写真集 『 Trajectory 』",
+      "evidence": [
+        {
+          "path": "scraper/japan-models/1/wani-detail-8975.json",
+          "sha256": "2f3d4cdc36b64f56b9e70f77140d507723a249ed640a92228e377b46e141829e"
+        },
+        {
+          "path": "scraper/japan-models/1/kobo-detail-64353d5b09b43fb383cd84942ea2f9cc.json",
+          "sha256": "67e640eb7689db794a60d3bb8f48a17838564165ec4312ab5a337cb7a542a67d"
+        }
+      ]
+    },
+    {
+      "musecardsPersonId": 1,
+      "title": "岸明日香写真集『Second Coming』",
+      "publisher": "ワニブックス",
+      "isbn": "9784847047695",
+      "physicalEditionId": "edition-jp-2ba65b052bcb290cda3d0677",
+      "physicalWorkId": "work-jp-c5cf41ee892ca4724576b9f3",
+      "digitalEditionId": "edition-jp-2f51b3d806bf1bba51743db2",
+      "digitalWorkId": "work-jp-c2312e42d2f7ff30330ff75f",
+      "publisherUrl": "https://www.wani.co.jp/event.php?id=4790",
+      "storeUrl": "https://books.rakuten.co.jp/rk/58fee73a15f73a2d88c35a04b691f005/",
+      "paperTitle": "Second　Coming",
+      "evidence": [
+        {
+          "path": "scraper/japan-models/1/wani-detail-4790.json",
+          "sha256": "59d609fe7c5570e2fc7ad0f29e629a1f4297c4b068dd5663b790ac33d9ed0b7c"
+        },
+        {
+          "path": "scraper/japan-models/1/kobo-detail-58fee73a15f73a2d88c35a04b691f005.json",
+          "sha256": "abc3226525748bf35f8b1dbd7057040b782c9af140a8445f028d14826a7e0082"
+        }
+      ]
+    },
+    {
+      "musecardsPersonId": 13,
+      "title": "長澤茉里奈ファースト写真集『20歳の約束』",
+      "publisher": "ワニブックス",
+      "isbn": "9784847048654",
+      "physicalEditionId": "edition-jp-4db73ce51d85c7454056718e",
+      "physicalWorkId": "work-jp-cc7c8e6d3d50de933d215cc5",
+      "digitalEditionId": "edition-jp-87ecb21ceb87107accc19471",
+      "digitalWorkId": "work-jp-48fe4d32a05850f0ef7a3057",
+      "publisherUrl": "https://www.wani.co.jp/event.php?id=5174",
+      "storeUrl": "https://books.rakuten.co.jp/rk/c704bf36e640327bac4ae55a7518b091/",
+      "paperTitle": "20歳の約束",
+      "evidence": [
+        {
+          "path": "scraper/japan-models/13/wani-detail-5174.json",
+          "sha256": "5f375bee18602f700f1139e1970911018706e863410c9f141f6fdc04538467a4"
+        },
+        {
+          "path": "scraper/japan-models/13/kobo-detail-c704bf36e640327bac4ae55a7518b091.json",
+          "sha256": "f105361c0c892b36943efebf5a7d0153041d787fd14ba74b3cd1bad25e771634"
+        }
+      ]
+    },
+    {
+      "musecardsPersonId": 7,
+      "title": "小池里奈写真集『RINA REAL』",
+      "publisher": "ワニブックス",
+      "isbn": "9784847046698",
+      "physicalEditionId": "edition-jp-93d9e88d750a63f3a22d4a3e",
+      "physicalWorkId": "work-jp-068bbc263eb111eedaf570a5",
+      "digitalEditionId": "edition-jp-d76520f99ce3eff529ff2140",
+      "digitalWorkId": "work-jp-ecf10815cad5fc0486dda382",
+      "publisherUrl": "https://www.wani.co.jp/event.php?id=4386",
+      "storeUrl": "https://books.rakuten.co.jp/rk/caa60251a21436eda7488a252aa2b256/",
+      "paperTitle": "RINA REAL",
+      "evidence": [
+        {
+          "path": "scraper/japan-models/7/wani-detail-4386.json",
+          "sha256": "2fc1a5f2be11baaf81e09257884c562916eb8799336c9459aa8d3bfda475e197"
+        },
+        {
+          "path": "scraper/japan-models/7/kobo-detail-caa60251a21436eda7488a252aa2b256.json",
+          "sha256": "67bf644f39e30bda418ae53f18a48c1a9b3ffab5136de11c2713c0ca5d131eb6"
+        }
+      ]
+    },
+    {
+      "musecardsPersonId": 7,
+      "title": "小池里奈写真集『そのまんま。』",
+      "publisher": "ワニブックス",
+      "isbn": "9784847042003",
+      "physicalEditionId": "edition-jp-13198821cccbd77ec7121997",
+      "physicalWorkId": "work-jp-33248e613f867cddf3e4b89f",
+      "digitalEditionId": "edition-jp-938be0e5730a5818744c05af",
+      "digitalWorkId": "work-jp-f91e6161e442a9fc09502088",
+      "publisherUrl": "https://www.wani.co.jp/event.php?id=2309",
+      "storeUrl": "https://books.rakuten.co.jp/rk/248057e48b583f20a01b4b100b510a65/",
+      "paperTitle": "そのまんま。",
+      "evidence": [
+        {
+          "path": "scraper/japan-models/7/wani-detail-2309.json",
+          "sha256": "6d8d26f615db5e26abc1c03f5eba0016a8aee0e42520978a242fb727b697c26c"
+        },
+        {
+          "path": "scraper/japan-models/7/kobo-detail-248057e48b583f20a01b4b100b510a65.json",
+          "sha256": "357c03a651151d7893e8299c2f3d56736f62f51dd9ec9880e83e0486b8626e14"
+        }
+      ]
+    },
+    {
+      "musecardsPersonId": 7,
+      "title": "小池里奈写真集『里奈の旅』",
+      "publisher": "ワニブックス",
+      "isbn": "9784847041174",
+      "physicalEditionId": "edition-jp-357551a72a23f227799aa8e2",
+      "physicalWorkId": "work-jp-fe0da18ed7054a792919a5f0",
+      "digitalEditionId": "edition-jp-b481a225d7abc7050cf7b0f5",
+      "digitalWorkId": "work-jp-cbf38e448dd9d86deb989467",
+      "publisherUrl": "https://www.wani.co.jp/event.php?id=183",
+      "storeUrl": "https://books.rakuten.co.jp/rk/9598f1426f723c0c99fae7c44f4908ff/",
+      "paperTitle": "里奈の旅",
+      "evidence": [
+        {
+          "path": "scraper/japan-models/7/wani-detail-183.json",
+          "sha256": "95c4c8e645b09c0dc4c9a77e02b49252fbc67d172195d90295687e6a1b944e4d"
+        },
+        {
+          "path": "scraper/japan-models/7/kobo-detail-9598f1426f723c0c99fae7c44f4908ff.json",
+          "sha256": "fa50f2302653fe0266cdffb3c0844e6958ca8b723ca106068bbd6343a364ba9f"
+        }
+      ]
+    }
+  ]
+}

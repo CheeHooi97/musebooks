@@ -71,6 +71,40 @@ do not use photographer names in that field.
 
 ## API-controlled worker flow
 
+### Japan photobook fields
+
+Japan uses the same discovery/detail/normalization pipeline as Taiwan through
+`japan_photobook_worker.py`. The batch's `sourceId` identifies the platform;
+each item includes `title`, `url`, `priceMinor`, `currency`, `priceType`, and
+`releaseDate`. JPY amounts have no fractional minor units.
+
+`releaseDate` is the book publication date in `YYYY-MM-DD` form. Japanese
+detail pages must provide an explicit 発売日/発行日/出版日 label (including
+their 年月日 forms), or a typed Book schema publication date. Marketplace
+Product `datePublished`, listing dates, observation dates, partial dates,
+and conflicting book dates do not establish a release date; it remains empty.
+Existing marketplace restrictions and source enablement still apply.
+
+Offline regression checks:
+
+```powershell
+python -m unittest discover -s scraper -p 'test_japan.py'
+```
+
+Capture a bounded local snapshot across Yahoo Auctions, Yahoo Flea Market, and
+Rakuma, using the checked-in source settings and their navigation rate limits:
+
+```powershell
+python scraper/run_japan_snapshot.py --output scraper/japan-snapshot --details 10
+```
+
+The runner saves per-platform raw captures plus `photobooks.json` and
+`photobooks.csv` with platform, title, source URL, JPY price, price basis,
+publication date, and observation time. It records source failures and excludes
+zero-price results from the summary. Use `--source` to select a platform and
+`--query` to search a different title or model. This snapshot does not import
+records or upload covers. Bundle prices are whole-listing prices.
+
 The standard runner uses `scraper/musebooks_api.py` to claim a job, passes
 the source configuration to the Python browser adapter, ingests the batch, and
 completes the lease:
@@ -133,6 +167,129 @@ Use `yahoo-auctions-jp` for JDirectItems Auction as well. The Python adapter
 accepts `jdirectitems-auction-jp`/`jdirectmarket` as compatibility aliases, but
 the API keeps one canonical Yahoo source and auction ID so one listing is not
 counted twice.
+
+## Resume Japan models from MuseCards
+
+The read-only `gravure_model` export is stored in
+`japan-models/musecards-models.json`. Run `prepare_japan_model_queue.py` after
+refreshing that export; it updates names and aliases while retaining queue
+state and existing captures. This selects people associated with Japan-market
+releases; it does not infer nationality.
+
+```powershell
+python scraper/prepare_japan_model_queue.py
+python scraper/run_japan_model_queue.py --source physical
+python scraper/run_japan_model_queue.py --source grajapa
+python scraper/run_japan_model_queue.py --source kobo
+python scraper/run_japan_model_queue.py --source wani
+```
+
+Each source queue owns an OS file lock. Independent sources can run together;
+a second queue for the same source is rejected. Completed queries are retained.
+Failed searches/details and missing name queries remain pending. Physical
+completion is checked per platform and query, including relevance-limited
+stops. Repeated source failures stop the queue with checkpoints intact. Use
+`--dry-run` to inspect pending models or `--limit 1` for a bounded retry.
+
+Collectors and newly launched queues use `capture_checkpoint.save_json` to
+stage JSON beside its destination, then replace it atomically. Brief Windows
+file locks receive bounded retries; a permanent failure preserves the last
+valid checkpoint and remains an error. Staging names are unique to each write.
+
+Physical captures retain qualifying failed product pages in `pendingDetails`,
+independently of pagination. They retry each pending public detail once after
+the model's search pass and remain incomplete while any detail is unresolved.
+Recovered details retain offers and cached evidence; a completed rejection
+also resolves its pending page. Legacy recovery uses retained model-matching
+candidate evidence. Search coverage is restored only after its pending details
+are resolved, and failed searches are never cleared by detail recovery.
+
+Reviewed physical/digital publication relationships are stored in
+`japan-cross-format-identities.json`, with publisher ISBN and store format-pair
+evidence. The work repair retains every source edition and price. The homepage
+shows one verified publication card with separate paper/e-book price panels;
+unmatched titles keep their format boundaries.
+
+Build the import tools from `backend`, then return to the repository root:
+
+```powershell
+go build -o ../.tmp/japan-catalog-import-v2.exe ./cmd/catalog-import
+go build -o ../.tmp/japan-work-repair.exe ./cmd/japan-work-repair
+go build -o ../.tmp/verify-japan-import.exe ./cmd/japan-import-verify
+```
+
+```powershell
+python scraper/import_japan_model_captures.py
+python scraper/import_japan_model_captures.py --apply
+```
+
+The apply workflow reads current database ownership, extends exact
+model/title/publisher work identities, requires a passing capture-quality audit,
+validates and applies the repair, imports
+offers transactionally, saves content-hash checkpoints, and verifies prices,
+formats, media and edition-to-work ownership. Partly imported groups retain the
+existing work ID. Source editions, seller offers and observations remain
+separate. Title qualifiers and volumes are retained; ambiguous products remain
+unmerged. An import failure leaves its database transaction unapplied.
+
+For explicitly authorized automatic imports while queues run, use
+`watch_japan_model_imports.py --collector-pid <confirmed-pid> --interval 300`,
+repeating `--collector-pid` for each main and serialized retry queue. The watcher
+holds an exclusive lock, imports changed captures, and verifies database readback
+after each batch. It stops after three consecutive failures and performs a final
+import once all attached queues exit. Its interval is the delay between completed
+batches; a large transaction may take longer than five minutes. Captures and
+content-hash checkpoints remain available if the watcher stops.
+If the local public IP changes outside the database allowlist, supply
+`--database-ssh-host root@<existing-server> --database-ssh-key <existing-key>`.
+The watcher forwards localhost port 4187 to the server's existing localhost
+PostgreSQL listener, verifies the known SSH host key, and overrides host/port
+only for its import child process. It retains database credentials and TLS mode,
+does not change access rules, reconnects a terminated tunnel before the next
+batch, and closes its managed connection when it exits.
+
+Add `--publish-pages` to the SSH-configured watcher to publish working detail
+routes after each verified database batch. The private server helper must be
+installed at `/opt/musebooks/japan-import-pages`; it uses the repository's SEO
+renderer and existing deployed assets. It stages changed book pages, creates
+missing linked model/publisher profiles, retains rollback backups, and updates
+the sitemap. Unverified records are never publication targets. Failed refresh
+scopes remain in `japan-models/page-publication-pending.json` for retry even when
+the database transaction already committed. The report is
+`japan-models/page-publication-verification.json`.
+
+For a bounded route repair, run `publish_japan_import_pages.py --ssh-host
+<verified-production-host> --ssh-key <existing-key> --refresh-all` for a dry run,
+then add `--apply` to publish the verified snapshot. This command holds the
+import lock and requires cumulative database verification to pass first.
+
+`npm run verify:japan-homepage-live` from `frontend` checks model search,
+format filters and the expected shared work IDs against every live Japan offer
+page. `japan-models/REPORT.md` reports captures, imports and unresolved searches
+separately.
+
+Kobo name coverage requires the photobook genre, not a broad author query.
+Publisher queues keep the remaining pagination URLs per name so interrupted
+searches resume at the unvisited page. Physical batches retain source timing
+across page-sized jobs and preserve public render-failure evidence. Explicit
+Yahoo zero-result messages terminate normally; blank/loading or blocked
+documents remain failures.
+
+Derived date normalization also applies to preserved model captures: a
+retailer's release date is a `storeReleaseDate`, not proof of the original
+publication date. Raw captures stay unchanged.
+
+`python scraper/audit_japan_model_captures.py` audits the generated snapshot
+and grouping proposal without database changes. It checks prices, currency,
+digital authorization, covers, catalog/media ownership and shared offers,
+retaining explicit preview exclusions.
+
+Standalone digital photo books under magazine brands are accepted after all
+other exclusions are rechecked. Obsolete magazine rejections remain pending
+until reassessed. Both `collect_model_kobo.py --offline` and
+`collect_model_digital.py --offline` reuse saved product evidence without
+launching a browser. Incomplete queries, uncaptured details and pagination
+stalls stay pending. Observation timestamps remain those of the saved evidence.
 
 See [marketplace-research.md](marketplace-research.md) for the current
 browser-only access matrix and review/disabled sources.
