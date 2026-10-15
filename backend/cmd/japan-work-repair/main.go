@@ -250,10 +250,11 @@ func main() {
 				if (w.OriginalTitle != m.Title && !(w.ID == g.WorkID && e.EditionLabel == m.Title)) || w.OriginCode != "JP" || e.Publisher != m.Publisher || e.Format != m.Format || (e.WorkID != m.WorkID && e.WorkID != g.WorkID) {
 					return fmt.Errorf("reviewed identity changed: %s", m.EditionID)
 				}
-				if !credited[fmt.Sprint(w.ID, ":", person.ID)] {
+				alreadyMerged := m.WorkID != g.WorkID && e.WorkID == g.WorkID && w.Status == "superseded"
+				if !alreadyMerged && !credited[fmt.Sprint(w.ID, ":", person.ID)] {
 					return fmt.Errorf("model attribution changed for %s: %s", g.PersonSlug, m.WorkID)
 				}
-				if m.WorkID != g.WorkID {
+				if m.WorkID != g.WorkID && !alreadyMerged {
 					for _, id := range editionsByWork[m.WorkID] {
 						if id != m.EditionID {
 							return fmt.Errorf("work gained unreviewed editions: %s", m.WorkID)
