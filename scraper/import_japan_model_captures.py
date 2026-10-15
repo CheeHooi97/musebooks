@@ -13,6 +13,12 @@ ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'scraper/japan-models'
 
 
+def missing_current_records(expected_records, checkpoint_records):
+    """Check the current manifest without requiring retired ledger entries."""
+    return [key for key, digest in expected_records.items()
+        if checkpoint_records.get(key) != digest]
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--apply', action='store_true')
@@ -41,12 +47,13 @@ def import_captures(args):
     subprocess.run([sys.executable, '-X', 'utf8', str(ROOT / 'scraper/audit_japan_model_captures.py'),
         '--output', 'scraper/japan-models/automatic-import-quality-audit.json'], cwd=ROOT, check=True)
     checkpoint = json.loads(checkpoint_path.read_text(encoding='utf-8')) if checkpoint_path.exists() else {'records': {}}
-    pending, keys = [], []
+    pending, keys, expected_records = [], [], {}
     for path in sorted(OUT.glob('*/home-import.json')):
         for record in json.loads(path.read_text(encoding='utf-8')):
             item = record['batch']['items'][0]
             key = path.parent.name + ':' + record['source']['id'] + ':' + item['externalId']
             digest = hashlib.sha256(json.dumps(record, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
+            expected_records[key] = digest
             if checkpoint['records'].get(key) != digest:
                 pending.append(record)
                 keys.append((key, digest))
@@ -70,17 +77,20 @@ def import_captures(args):
     if exclusions.exists() and json.loads(exclusions.read_text(encoding='utf-8')):
         subprocess.run([str(ROOT / args.importer), '-exclude-listings', str(exclusions)], cwd=ROOT / 'backend', check=True)
         print('Reapplied reviewed listing exclusions; source captures and observations are retained', flush=True)
-    verified_records = []
+    verified_records = {}
     for path in sorted(OUT.glob('*/home-import.json')):
         for record in json.loads(path.read_text(encoding='utf-8')):
             item = record['batch']['items'][0]
             key = path.parent.name + ':' + record['source']['id'] + ':' + item['externalId']
             digest = hashlib.sha256(json.dumps(record, ensure_ascii=False, sort_keys=True).encode()).hexdigest()
             if checkpoint['records'].get(key) == digest:
-                verified_records.append(record)
-    if len(verified_records) != len(checkpoint['records']):
-        raise RuntimeError('Applied record snapshot incomplete; inspect checkpoint before cumulative verification')
-    (OUT / 'verification-manifest.json').write_text(json.dumps(verified_records, ensure_ascii=False, indent=2), encoding='utf-8')
+                verified_records[key] = (digest, record)
+    missing_records = missing_current_records(expected_records,
+        {key: digest for key, (digest, _record) in verified_records.items()})
+    if missing_records:
+        raise RuntimeError(f'Applied record snapshot incomplete; {len(missing_records)} current manifest records are not checkpointed')
+    verification_manifest = [record for _digest, record in verified_records.values()]
+    (OUT / 'verification-manifest.json').write_text(json.dumps(verification_manifest, ensure_ascii=False, indent=2), encoding='utf-8')
     if verified_records:
         subprocess.run([str(ROOT / args.verifier)], cwd=ROOT / 'backend', check=True)
         if getattr(args, 'page_ssh_host', None):

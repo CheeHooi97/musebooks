@@ -10,6 +10,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urlparse
 from kobo_search_scope import search_scope, PHOTOBOOK_GENRE_ID
 from digital_photobook_titles import pending_title_reviews
+from japan_model_search_names import physical_model_search_names
 from capture_checkpoint import save_json
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -40,9 +41,7 @@ def collection_complete(source, model, state):
         if state.get('pendingDetails'):
             return False
         person = model['models'][0]
-        names = list(dict.fromkeys(n for n in [person.get('original_name'),
-            person.get('canonical_public_name'), person.get('english_name'),
-            *person.get('aliases', [])] if n))
+        names = physical_model_search_names(person)
         queries = list(dict.fromkeys([names[0] + ' 写真集', *names]))
         runs = state.get('runs', {})
         return all(runs.get(s + ':' + q, {}).get('status') in

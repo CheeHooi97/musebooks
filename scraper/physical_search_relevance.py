@@ -15,13 +15,14 @@ def has_photobook_title_signal(title):
     return bool(PHOTOBOOK_TITLE_RE.search(title or ""))
 
 
-def matching_candidate_count(candidates, names, subject_matches, title_exclusion):
+def matching_candidate_count(candidates, names, subject_matches, title_exclusion, candidate_matches=None):
     """Count cards that meet the collector's model and photobook title rules."""
     request = {"humanModelKeywords": names}
     count = 0
     for candidate in candidates:
         title = candidate.get("title") or candidate.get("text") or ""
-        if has_photobook_title_signal(title) and not title_exclusion(title) and subject_matches(request, title):
+        if (has_photobook_title_signal(title) and not title_exclusion(title)
+                and (candidate_matches(candidate) if candidate_matches else subject_matches(request, title))):
             count += 1
     return count
 

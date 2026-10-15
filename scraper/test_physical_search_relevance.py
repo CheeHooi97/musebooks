@@ -42,6 +42,20 @@ class PhysicalSearchRelevanceTests(unittest.TestCase):
             streak = next_irrelevant_page_count(streak, 0)
         self.assertEqual(streak, IRRELEVANT_PAGE_LIMIT)
 
+    def test_relevance_can_be_decided_from_the_primary_title(self):
+        cards = [
+            {"title": "七海ひろき 写真集", "text": "seller keywords include 兒玉七海"},
+            {"title": "兒玉七海 写真集", "text": "seller keywords include 七海ひろき"},
+        ]
+        self.assertEqual(
+            matching_candidate_count(
+                cards, self.names, lambda _request, _title: True,
+                lambda _title: "",
+                lambda card: card["title"].startswith("兒玉七海"),
+            ),
+            1,
+        )
+
     def test_resume_recovers_the_streak_from_saved_candidate_evidence(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)

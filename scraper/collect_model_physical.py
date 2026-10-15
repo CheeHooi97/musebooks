@@ -6,6 +6,7 @@ import time
 from pathlib import Path
 
 import photobook_worker as worker
+from japan_model_search_names import physical_model_search_names
 from source_navigation import SourceNavigationLimiters
 from capture_checkpoint import save_json as write
 from physical_detail_coverage import recover_pending_details, update_detail_coverage
@@ -32,13 +33,32 @@ def main():
         parser.error('Output must stay inside workspace')
     output.mkdir(parents=True, exist_ok=True)
     model = json.loads((root / args.model_file).read_text(encoding='utf-8'))['models'][0]
-    names = list(dict.fromkeys(name for name in [model.get('original_name'), model.get('canonical_public_name'), model.get('english_name'), *model.get('aliases', [])] if name))
+    names = physical_model_search_names(model)
     queries = list(dict.fromkeys([names[0] + ' 写真集', *names]))
     sources = {x['source']['id']: x['source'] for x in json.loads((root / 'scraper/japan-marketplace-import-20261010.json').read_text(encoding='utf-8-sig'))}
     state_path = output / 'physical-state.json'
     state = json.loads(state_path.read_text(encoding='utf-8')) if state_path.exists() else dict(items={}, runs={}, details={}, status='running')
     state['status'] = 'running'
     state['collectorStartedAt'] = worker.iso_utc()
+    for run in state.get('runs', {}).values():
+        if run.get('query') not in queries and run.get('status') not in (
+                'public_search_exhausted', 'query_relevance_exhausted',
+                'ambiguous_alias_skipped'):
+            run.update(status='ambiguous_alias_skipped',
+                stopReason='Skipped because this short alias is not a specific model search name.')
+        elif run.get('query') in queries and run.get('status') == 'running':
+            # Recount the saved trailing pages against title-only, specific
+            # model names so older seller-text matches cannot keep a broad query alive.
+            run.pop('consecutiveIrrelevantPages', None)
+    removed_items = []
+    request = {'humanModelKeywords': names}
+    for item_key, item in list(state.get('items', {}).items()):
+        if not worker.marketplace_subject_matches(request, item.get('title', '')):
+            removed_items.append(item.get('title', item_key))
+            del state['items'][item_key]
+    if removed_items:
+        state['removedFalseModelAssociations'] = state.get('removedFalseModelAssociations', []) + removed_items
+        print('Removed unrelated alias matches:', len(removed_items), flush=True)
     recover_pending_details(state, output, names, worker)
     write(state_path, state)
     original_snapshot = worker.detail_snapshot
@@ -90,7 +110,9 @@ def main():
                 run.setdefault('previousErrors', []).append(run.pop('error', ''))
                 run['status'] = 'running'
             count_matches = lambda candidates: matching_candidate_count(candidates, names,
-                worker.marketplace_subject_matches, worker.photobook_title_exclusion)
+                worker.marketplace_subject_matches, worker.photobook_title_exclusion,
+                lambda candidate: worker.marketplace_subject_matches(
+                    {'humanModelKeywords': names}, candidate.get('title') or candidate.get('text') or ''))
             irrelevant_pages = run.get('consecutiveIrrelevantPages')
             if irrelevant_pages is None:
                 irrelevant_pages = trailing_irrelevant_page_count(run, output, count_matches)
@@ -188,10 +210,15 @@ def main():
         update_detail_coverage(state)
         write(state_path, state)
     update_detail_coverage(state)
-    state['status'] = 'finished' if not state['pendingDetails'] and all(r['status'] in ('public_search_exhausted',
-        'query_relevance_exhausted') for r in state['runs'].values()) else 'incomplete'
+    expected_runs = [state['runs'].get(source_id + ':' + query, {})
+        for source_id in ['yahoo-auctions-jp', 'yahoo-furima-jp', 'rakuma']
+        for query in queries]
+    state['status'] = 'finished' if not state['pendingDetails'] and all(r.get('status') in (
+        'public_search_exhausted', 'query_relevance_exhausted') for r in expected_runs) else 'incomplete'
     write(state_path, state)
-    write(output / 'physical-listings.json', dict(retrievedAt=worker.iso_utc(), model=model, items=list(state['items'].values()), coverage=list(state['runs'].values())))
+    write(output / 'physical-listings.json', dict(retrievedAt=worker.iso_utc(), model=model,
+        items=list(state['items'].values()), coverage=[r for r in state['runs'].values()
+        if r.get('query') in queries]))
 
 
 if __name__ == '__main__':
