@@ -1,0 +1,19 @@
+{
+  "musecardsPersonId": 303,
+  "books": [
+    {
+      "id": "jp-isbn-9784065258934",
+      "title": "金子智美写真集　美しい人",
+      "titleAlias": "美しい人",
+      "format": "physical",
+      "isbn": "9784065258934",
+      "publisher": "講談社",
+      "publicationDate": "2021-10-21",
+      "publicationPrecision": "day",
+      "metadataSourceUrl": "https://www.kodansha.co.jp/book/products/0000357701",
+      "observedAt": "2026-10-17T10:50:31Z",
+      "publisherListPriceJPY": 4180,
+      "pageCount": 100
+    }
+  ]
+}
