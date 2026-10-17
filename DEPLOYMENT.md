@@ -2,7 +2,7 @@
 
 The `Deploy MuseBooks` GitHub Actions workflow builds the website and Linux API on every push to `main`, then deploys them to the same server as MuseCards. It publishes an independent MuseBooks web root, installs its Nginx host config, restarts the API, and checks the public website and API.
 
-The live `musebooks.my` page was inspected and currently serves MuseCards content. The MuseBooks export in this repository is branded MuseBooks. That points to the shared server routing `musebooks.my` to its MuseCards/default site. The deployment installs a specific `musebooks.my` Nginx host so the domain uses MuseBooks' own document root. If another active Nginx config already claims that host, deployment stops and reports the conflicting file rather than altering MuseCards' configuration.
+An earlier inspection found `musebooks.my` serving MuseCards content. A public check on 2026-10-11 returned MuseBooks-branded HTML. The deployment installs a specific `musebooks.my` Nginx host so the domain uses MuseBooks' own document root. If another active Nginx config already claims that host, deployment stops and reports the conflicting file rather than altering MuseCards' configuration.
 
 Cloudflare DNS for `musebooks.my` and `www.musebooks.my` is already proxied to the MuseCards server address, `157.245.200.202`.
 

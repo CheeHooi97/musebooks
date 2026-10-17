@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import patch
 from run_japan_model_queue import collection_complete
 
 
@@ -28,6 +29,18 @@ class ResumeTests(unittest.TestCase):
         self.assertTrue(collection_complete('physical', self.model, state))
         runs['rakuma:Model']['status'] = 'source_failed'
         self.assertFalse(collection_complete('physical', self.model, state))
+
+    def test_blocked_physical_source_is_accounted_for_only_during_cooldown(self):
+        runs = {s + ':' + q: {'status': 'public_search_exhausted'}
+            for s in ('yahoo-auctions-jp', 'yahoo-furima-jp', 'rakuma')
+            for q in ('Model 写真集', 'Model')}
+        runs['yahoo-furima-jp:Model']['status'] = 'source_blocked'
+        state = dict(status='finished_with_source_blocks', runs=runs)
+        with patch('run_japan_model_queue.source_is_blocked',
+                side_effect=lambda source_id: source_id == 'yahoo-furima-jp'):
+            self.assertTrue(collection_complete('physical', self.model, state))
+        with patch('run_japan_model_queue.source_is_blocked', return_value=False):
+            self.assertFalse(collection_complete('physical', self.model, state))
 
     def test_broad_kobo_author_search_does_not_complete_photobook_search(self):
         state = dict(status='public_search_exhausted', pages=['https://books.rakuten.co.jp/search?pname=Model'], errors={})

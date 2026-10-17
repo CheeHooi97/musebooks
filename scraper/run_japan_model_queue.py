@@ -12,6 +12,7 @@ from kobo_search_scope import search_scope, PHOTOBOOK_GENRE_ID
 from digital_photobook_titles import pending_title_reviews
 from japan_model_search_names import physical_model_search_names
 from capture_checkpoint import save_json
+from physical_source_blocks import source_is_blocked
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -38,15 +39,20 @@ def collection_complete(source, model, state):
     if source in ('grajapa', 'kobo') and pending_title_reviews(state):
         return False
     if source == 'physical':
-        if state.get('pendingDetails'):
-            return False
+        for pending in state.get('pendingDetails', {}).values():
+            if not (pending.get('status') == 'source_blocked'
+                    and source_is_blocked(pending.get('sourceId', ''))):
+                return False
         person = model['models'][0]
         names = physical_model_search_names(person)
         queries = list(dict.fromkeys([names[0] + ' 写真集', *names]))
         runs = state.get('runs', {})
-        return all(runs.get(s + ':' + q, {}).get('status') in
-            ('public_search_exhausted', 'query_relevance_exhausted')
-            for s in ('yahoo-auctions-jp', 'yahoo-furima-jp', 'rakuma') for q in queries)
+        def run_is_accounted_for(source_id, query):
+            status = runs.get(source_id + ':' + query, {}).get('status')
+            return status in ('public_search_exhausted', 'query_relevance_exhausted') or (
+                status == 'source_blocked' and source_is_blocked(source_id))
+        return all(run_is_accounted_for(source_id, query)
+            for source_id in ('yahoo-auctions-jp', 'yahoo-furima-jp', 'rakuma') for query in queries)
     return (state.get('status') == 'public_search_exhausted'
         and not state.get('errors') and not state.get('error') and not state.get('nextUrl')
         and not state.get('pendingSearches'))

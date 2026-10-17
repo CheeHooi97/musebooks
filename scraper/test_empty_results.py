@@ -17,6 +17,12 @@ class EmptyResultTests(unittest.TestCase):
         with self.assertRaises(SourceBlockedError):
             ensure_rendered_page(body, 'yahoo-auctions-jp')
 
+    def test_yahoo_temporary_access_restriction_is_not_a_no_results_page(self):
+        body = 'お客様から弊社システムへ大量のアクセスが確認できたため、一時的に利用を制限しています。'
+        with self.assertRaises(SourceBlockedError) as caught:
+            ensure_rendered_page(body, 'yahoo-furima-jp')
+        self.assertIn('大量のアクセスが確認', caught.exception.evidence['body'])
+
 
 if __name__ == '__main__':
     unittest.main()

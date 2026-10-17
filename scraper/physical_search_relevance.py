@@ -51,3 +51,23 @@ def trailing_irrelevant_page_count(run, output_dir, count_matches):
 
 def next_irrelevant_page_count(previous, matching_candidates):
     return 0 if matching_candidates else previous + 1
+
+
+def next_batch_search_status(*, has_more, repeated, cursor_repeats, irrelevant_pages):
+    """Classify a page before treating a repeated irrelevant result as a stall."""
+    if not has_more:
+        return "public_search_exhausted"
+    if irrelevant_pages >= IRRELEVANT_PAGE_LIMIT:
+        return "query_relevance_exhausted"
+    if repeated or cursor_repeats:
+        return "pagination_stalled"
+    return "running"
+
+
+def resume_pagination_stalled_run(run):
+    """Retry a saved stall once so new relevance evidence can close the query."""
+    if run.get("status") != "pagination_stalled":
+        return False
+    run["paginationStallRetries"] = int(run.get("paginationStallRetries", 0) or 0) + 1
+    run["status"] = "running"
+    return True

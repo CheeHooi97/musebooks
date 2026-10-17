@@ -10,11 +10,19 @@ from japan_model_search_names import physical_model_search_names
 from source_navigation import SourceNavigationLimiters
 from capture_checkpoint import save_json as write
 from physical_detail_coverage import recover_pending_details, update_detail_coverage
+from physical_source_blocks import (
+    block_is_active,
+    load_source_blocks,
+    record_source_block,
+    save_source_blocks,
+)
 from physical_search_relevance import (
     IRRELEVANT_PAGE_LIMIT,
     has_photobook_title_signal,
     matching_candidate_count,
     next_irrelevant_page_count,
+    next_batch_search_status,
+    resume_pagination_stalled_run,
     trailing_irrelevant_page_count,
 )
 
@@ -38,6 +46,7 @@ def main():
     sources = {x['source']['id']: x['source'] for x in json.loads((root / 'scraper/japan-marketplace-import-20261010.json').read_text(encoding='utf-8-sig'))}
     state_path = output / 'physical-state.json'
     state = json.loads(state_path.read_text(encoding='utf-8')) if state_path.exists() else dict(items={}, runs={}, details={}, status='running')
+    source_blocks = load_source_blocks()
     state['status'] = 'running'
     state['collectorStartedAt'] = worker.iso_utc()
     for run in state.get('runs', {}).values():
@@ -50,6 +59,8 @@ def main():
             # Recount the saved trailing pages against title-only, specific
             # model names so older seller-text matches cannot keep a broad query alive.
             run.pop('consecutiveIrrelevantPages', None)
+        elif run.get('query') in queries:
+            resume_pagination_stalled_run(run)
     removed_items = []
     request = {'humanModelKeywords': names}
     for item_key, item in list(state.get('items', {}).items()):
@@ -101,11 +112,29 @@ def main():
     # Page-sized jobs must not reset the platform's navigation clock.
     worker.NavigationRateLimiter = SourceNavigationLimiters(worker.NavigationRateLimiter)
     for source_id in ['yahoo-auctions-jp', 'yahoo-furima-jp', 'rakuma']:
+        block = source_blocks.get(source_id)
+        if block and not block_is_active(block):
+            source_blocks.pop(source_id, None)
+            save_source_blocks(source_blocks)
         source = dict(sources[source_id])
         source.update(allowedHosts=source['allowedHosts'].split(','), allowedFormats=['physical'])
         for query in queries:
             key = source_id + ':' + query
             run = state['runs'].setdefault(key, dict(sourceId=source_id, query=query, cursor='', batches=[], status='running'))
+            block = source_blocks.get(source_id)
+            if block_is_active(block):
+                if run.get('status') not in ('public_search_exhausted', 'query_relevance_exhausted'):
+                    if run.get('status') == 'source_failed':
+                        run.setdefault('previousErrors', []).append(run.pop('error', ''))
+                    run.update(status='source_blocked', sourceBlockReason=block.get('reason', ''),
+                        retryAfter=block.get('retryAfter', ''),
+                        stopReason='Paused after the marketplace explicitly restricted access; no further requests will be sent during the cooldown.')
+                    write(state_path, state)
+                continue
+            if run.get('status') == 'source_blocked':
+                run['status'] = 'running'
+                run.pop('sourceBlockReason', None)
+                run.pop('retryAfter', None)
             if run['status'] == 'source_failed':
                 run.setdefault('previousErrors', []).append(run.pop('error', ''))
                 run['status'] = 'running'
@@ -151,21 +180,21 @@ def main():
                     run['batches'].append(dict(file=f'physical-{batch_id}.json', diagnostics=batch['diagnostics'], hasMore=batch['hasMore'], nextCursor=batch['nextCursor'], candidateFingerprint=fingerprint))
                     irrelevant_pages = next_irrelevant_page_count(irrelevant_pages, relevant_count)
                     run['consecutiveIrrelevantPages'] = irrelevant_pages
-                    if repeated and batch['hasMore']:
-                        run['status'] = 'pagination_stalled'
-                    elif batch['hasMore']:
-                        if not batch['nextCursor'] or batch['nextCursor'] == cursor or any(b['nextCursor']==batch['nextCursor'] for b in run['batches'][:-1]):
-                            run['status'] = 'pagination_stalled'
-                        else:
-                            run['cursor'] = batch['nextCursor']
-                    else:
-                        run['status'] = 'public_search_exhausted'
-                    if run['status'] == 'running' and irrelevant_pages >= IRRELEVANT_PAGE_LIMIT:
-                        run.update(status='query_relevance_exhausted',
-                            stopReason=f'Stopped after {irrelevant_pages} consecutive pages without a photobook-title card naming this model; unrelated fallback results were not paginated further.')
+                    cursor_repeats = (not batch['nextCursor'] or batch['nextCursor'] == cursor
+                        or any(b['nextCursor'] == batch['nextCursor'] for b in run['batches'][:-1]))
+                    run['status'] = next_batch_search_status(
+                        has_more=batch['hasMore'], repeated=repeated,
+                        cursor_repeats=cursor_repeats, irrelevant_pages=irrelevant_pages)
+                    if run['status'] == 'query_relevance_exhausted':
+                        run.update(stopReason=f'Stopped after {irrelevant_pages} consecutive pages without a photobook-title card naming this model; unrelated fallback results were not paginated further.')
+                    elif run['status'] == 'pagination_stalled':
+                        run.update(stopReason='The source repeated or returned a non-advancing page while matching model photobook candidates remained.')
+                    elif run['status'] == 'running':
+                        run['cursor'] = batch['nextCursor']
                     print('Batch:', source_id, len(batch['items']), 'unique total:', len(state['items']), run['status'], flush=True)
                 except Exception as exc:
                     evidence = getattr(exc, 'evidence', None)
+                    evidence_file = ''
                     if evidence:
                         files = run.setdefault('errorEvidenceFiles', [])
                         failure_id = hashlib.sha256((key + ':' + cursor).encode()).hexdigest()[:16]
@@ -173,22 +202,46 @@ def main():
                         write(output / filename, dict(evidence, query=query, cursor=cursor,
                             error=f'{type(exc).__name__}: {exc}'))
                         files.append(filename)
-                    retryable = isinstance(exc, worker.RenderedPageError) or type(exc).__name__ == 'TimeoutError'
-                    if retryable:
-                        transient_failures += 1
-                        if transient_failures <= TRANSIENT_PAGE_RETRIES:
-                            run.setdefault('transientRetryErrors', []).append(f'{type(exc).__name__}: {exc}')
-                            print('Retrying rendered marketplace page:', source_id, query,
-                                'attempt:', transient_failures, 'error:', str(exc), flush=True)
-                            write(state_path, state)
-                            time.sleep(TRANSIENT_RETRY_DELAY_SECONDS * transient_failures)
-                            continue
-                    run.update(status='source_failed', error=f'{type(exc).__name__}: {exc}')
-                    print('Source failed:', source_id, str(exc), flush=True)
+                        evidence_file = filename
+                    if isinstance(exc, worker.SourceBlockedError):
+                        block = record_source_block(source_id, str(exc), details=dict(
+                            musecardsPersonId=model.get('id'), query=query,
+                            evidenceFile=evidence_file))
+                        source_blocks[source_id] = block
+                        run.update(status='source_blocked', sourceBlockReason=block['reason'],
+                            retryAfter=block['retryAfter'], stopReason=
+                            'Marketplace access was explicitly restricted; paused this source for 24 hours.')
+                        for pending in state.get('pendingDetails', {}).values():
+                            if pending.get('sourceId') == source_id:
+                                pending.update(status='source_blocked', retryAfter=block['retryAfter'],
+                                    error='Paused because the marketplace explicitly restricted access.')
+                        print('Pausing marketplace source after explicit access restriction:',
+                            source_id, 'retry after:', block['retryAfter'], flush=True)
+                    else:
+                        retryable = isinstance(exc, worker.RenderedPageError) or type(exc).__name__ == 'TimeoutError'
+                        if retryable:
+                            transient_failures += 1
+                            if transient_failures <= TRANSIENT_PAGE_RETRIES:
+                                run.setdefault('transientRetryErrors', []).append(f'{type(exc).__name__}: {exc}')
+                                print('Retrying rendered marketplace page:', source_id, query,
+                                    'attempt:', transient_failures, 'error:', str(exc), flush=True)
+                                write(state_path, state)
+                                time.sleep(TRANSIENT_RETRY_DELAY_SECONDS * transient_failures)
+                                continue
+                        run.update(status='source_failed', error=f'{type(exc).__name__}: {exc}')
+                        print('Source failed:', source_id, str(exc), flush=True)
                 update_detail_coverage(state)
                 write(state_path, state)
     for url, pending in list(state['pendingDetails'].items()):
         source_id = pending['sourceId']
+        block = source_blocks.get(source_id)
+        if block_is_active(block):
+            pending.update(status='source_blocked', retryAfter=block.get('retryAfter', ''),
+                error='Paused because the marketplace explicitly restricted access.')
+            write(state_path, state)
+            continue
+        pending.pop('status', None)
+        pending.pop('retryAfter', None)
         key = pending['runKeys'][0]
         source = dict(sources[source_id])
         source.update(allowedHosts=source['allowedHosts'].split(','), allowedFormats=['physical'])
@@ -213,8 +266,16 @@ def main():
     expected_runs = [state['runs'].get(source_id + ':' + query, {})
         for source_id in ['yahoo-auctions-jp', 'yahoo-furima-jp', 'rakuma']
         for query in queries]
-    state['status'] = 'finished' if not state['pendingDetails'] and all(r.get('status') in (
-        'public_search_exhausted', 'query_relevance_exhausted') for r in expected_runs) else 'incomplete'
+    terminal_statuses = ('public_search_exhausted', 'query_relevance_exhausted', 'source_blocked')
+    all_searches_accounted_for = all(r.get('status') in terminal_statuses for r in expected_runs)
+    pending_details_accounted_for = all(
+        pending.get('status') == 'source_blocked' and block_is_active(source_blocks.get(pending.get('sourceId')))
+        for pending in state['pendingDetails'].values())
+    if all_searches_accounted_for and (not state['pendingDetails'] or pending_details_accounted_for):
+        state['status'] = 'finished_with_source_blocks' if any(
+            run.get('status') == 'source_blocked' for run in expected_runs) else 'finished'
+    else:
+        state['status'] = 'incomplete'
     write(state_path, state)
     write(output / 'physical-listings.json', dict(retrievedAt=worker.iso_utc(), model=model,
         items=list(state['items'].values()), coverage=[r for r in state['runs'].values()

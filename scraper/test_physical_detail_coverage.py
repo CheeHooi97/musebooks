@@ -40,6 +40,7 @@ class PhysicalDetailCoverageTests(unittest.TestCase):
                 return batch
 
             with patch('sys.argv', ['collector', '--output', str(output), '--model-file', str(model_file)]), \
+                    patch.object(collector, 'load_source_blocks', return_value={}), \
                     patch.object(collector.worker, 'collect', side_effect=collect), \
                     patch.object(collector.worker, 'collect_anchor_candidates', return_value=[dict(url=url, title='Model 写真集')]), \
                     patch.object(collector.worker, 'detail_snapshot', side_effect=[collector.worker.DetailSnapshotError('temporary failure'), {'title': 'Model 写真集'}]), \

@@ -44,6 +44,10 @@ MAX_BATCH_ITEMS = 450
 class SourceBlockedError(RuntimeError):
     """The rendered page is a challenge/login/access-denied surface."""
 
+    def __init__(self, message, *, evidence=None):
+        super().__init__(message)
+        self.evidence = evidence
+
 
 class RenderedPageError(RuntimeError):
     """The browser did not produce a usable rendered page."""
@@ -179,6 +183,8 @@ CHALLENGE_MARKERS = (
     "アクセスが集中",
     "不正なアクセス",
     "access denied",
+    "一時的に利用を制限しています",
+    "大量のアクセスが確認",
     "too many requests",
     "temporarily blocked",
     "rate limit exceeded",
@@ -359,7 +365,8 @@ def challenge_reason(body: str) -> str:
 def ensure_rendered_page(body: str, source_id: str, *, allow_empty: bool = False) -> None:
     reason = challenge_reason(body)
     if reason:
-        raise SourceBlockedError(f"BLOCKED_SOURCE: {source_id}: rendered page contains {reason!r}")
+        raise SourceBlockedError(f"BLOCKED_SOURCE: {source_id}: rendered page contains {reason!r}",
+            evidence=dict(sourceId=source_id, body=compact(body), observedAt=iso_utc()))
     if not allow_empty and not body.strip():
         raise RenderedPageError(f"empty rendered page for source {source_id}")
 
@@ -974,7 +981,8 @@ def looks_like_photobook(text: str) -> bool:
 
 
 def normalized_match_text(value: object) -> str:
-    return re.sub(r"[^0-9a-z\u3040-\u30ff\u3400-\u9fff]+", "", str(value or "").casefold())
+    normalized = unicodedata.normalize("NFKC", str(value or "")).casefold()
+    return re.sub(r"[^0-9a-z\u3040-\u30ff\u3400-\u9fff]+", "", normalized)
 
 
 PEOPLE_PHOTOBOOK_RE = re.compile(
@@ -1435,15 +1443,19 @@ def photobook_title_exclusion(title: str) -> str:
 def marketplace_subject_matches(request: dict, title: str) -> bool:
     names = request_keywords(request, "humanModelKeywords", "modelKeywords")
     if not names: return True
+    name_keys = [key for name in names if (key := normalized_match_text(name))]
+    if not name_keys:
+        return False
     prefix = re.split(r"寫真書|寫真集|數位寫真|写真集|photobook|photo\s*book", title, maxsplit=1, flags=re.I)[0]
     verified_subjects = request_keywords(request, "catalogModelNames")
     # Seller SEO strings often append unrelated names after the actual subject.
     prefix_key = normalized_match_text(prefix)
-    if any(normalized_match_text(name) in prefix_key for name in verified_subjects):
-        return any(normalized_match_text(name) in prefix_key for name in names)
+    verified_keys = [key for name in verified_subjects if (key := normalized_match_text(name))]
+    if any(key in prefix_key for key in verified_keys):
+        return any(key in prefix_key for key in name_keys)
     # A listing that omits every requested subject cannot be safely linked to
     # a person's photobook merely because it appeared in a broad search.
-    return any(normalized_match_text(name) in prefix_key for name in names)
+    return any(key in prefix_key for key in name_keys)
 
 
 def make_observation(

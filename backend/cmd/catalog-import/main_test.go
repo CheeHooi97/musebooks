@@ -46,3 +46,9 @@ func TestVerifiedFreePreviewCanBeExcludedWithoutDeletingItsObservation(t *testin
 		t.Fatal("unreviewed exclusion reason should not be accepted")
 	}
 }
+
+func TestIncorrectModelAssociationIsAReviewedExclusionReason(t *testing.T) {
+	if !validExclusionReason("incorrect_model_association") {
+		t.Fatal("verified wrong-model marketplace capture should be excludable")
+	}
+}

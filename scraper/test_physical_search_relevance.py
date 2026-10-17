@@ -6,7 +6,9 @@ from physical_search_relevance import (
     IRRELEVANT_PAGE_LIMIT,
     has_photobook_title_signal,
     matching_candidate_count,
+    next_batch_search_status,
     next_irrelevant_page_count,
+    resume_pagination_stalled_run,
     trailing_irrelevant_page_count,
 )
 
@@ -84,6 +86,34 @@ class PhysicalSearchRelevanceTests(unittest.TestCase):
                 ),
                 IRRELEVANT_PAGE_LIMIT + 1,
             )
+
+    def test_repeated_irrelevant_page_at_limit_finishes_as_relevance_exhausted(self):
+        self.assertEqual(
+            next_batch_search_status(
+                has_more=True,
+                repeated=False,
+                cursor_repeats=True,
+                irrelevant_pages=IRRELEVANT_PAGE_LIMIT,
+            ),
+            "query_relevance_exhausted",
+        )
+
+    def test_repeated_page_with_remaining_relevant_results_stays_incomplete(self):
+        self.assertEqual(
+            next_batch_search_status(
+                has_more=True,
+                repeated=True,
+                cursor_repeats=True,
+                irrelevant_pages=0,
+            ),
+            "pagination_stalled",
+        )
+
+    def test_saved_pagination_stall_is_retried(self):
+        run = {"status": "pagination_stalled", "paginationStallRetries": 2}
+
+        self.assertTrue(resume_pagination_stalled_run(run))
+        self.assertEqual(run, {"status": "running", "paginationStallRetries": 3})
 
 
 if __name__ == "__main__":

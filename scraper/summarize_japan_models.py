@@ -12,6 +12,7 @@ from physical_book_match import match_physical_book
 from run_japan_model_queue import pending_names, capture_hash
 from model_offer_dates import normalized_offer_dates
 from digital_photobook_titles import pending_title_reviews
+from listing_images import listing_image_urls
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'scraper/japan-models'
@@ -67,6 +68,9 @@ for row in queue:
                 coverage[source]['failedQueries'] = [dict(sourceId=run.get('sourceId', ''), query=run.get('query', ''),
                     status=run.get('status', ''), error=run.get('error', ''))
                     for run in state.get('runs', {}).values() if run.get('status') in ('source_failed', 'pagination_stalled')]
+                coverage[source]['blockedQueries'] = [dict(sourceId=run.get('sourceId', ''), query=run.get('query', ''),
+                    retryAfter=run.get('retryAfter', ''), reason=run.get('sourceBlockReason', ''))
+                    for run in state.get('runs', {}).values() if run.get('status') == 'source_blocked']
             if source in ('grajapa', 'kobo', 'wani'):
                 expected_names = set(name for name in [person.get('original_name'), person['canonical_public_name'], person.get('english_name'), *person.get('aliases', [])] if name)
                 parameter = {'grajapa': 'keyword', 'kobo': 'pname', 'wani': 'tag'}[source]
@@ -81,6 +85,9 @@ for row in queue:
                 continue
             for item in state.get('items', {}).values():
                 item = dict(item)
+                item['imageUrls'] = listing_image_urls(item, state.get('details', {}).get(item.get('url'), {}))
+                if not item.get('imageUrl') and item['imageUrls']:
+                    item['imageUrl'] = item['imageUrls'][0]
                 book, match_method = match_physical_book(item, bibliography)
                 if book:
                     item.update(editionId=book['id'], publicationDate=book['publicationDate'],
@@ -139,7 +146,7 @@ lines = ['# Japan-model photobook collection coverage', '',
     '| Model | Imported | Physical captures | Digital captures | Unknown publication dates | Unknown store release dates | Missing covers | Source state |',
     '| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |']
 for row in summary:
-    states = ', '.join(source + ': ' + (state.get('status', 'pending') + (f"; {len(state['pendingNameQueries'])} name queries pending" if state.get('pendingNameQueries') else '') + (f"; {len(state['relevanceLimitedQueries'])} broad queries stopped after unrelated results" if state.get('relevanceLimitedQueries') else '') + (f"; {len(state['failedQueries'])} failed or stalled queries" if state.get('failedQueries') else '') + (f"; {len(state['pendingDetails'])} product details pending" if state.get('pendingDetails') else '') if isinstance(state, dict) else state) for source, state in row['coverage'].items())
+    states = ', '.join(source + ': ' + (state.get('status', 'pending') + (f"; {len(state['pendingNameQueries'])} name queries pending" if state.get('pendingNameQueries') else '') + (f"; {len(state['relevanceLimitedQueries'])} broad queries stopped after unrelated results" if state.get('relevanceLimitedQueries') else '') + (f"; {len(state['failedQueries'])} failed or stalled queries" if state.get('failedQueries') else '') + (f"; {len(state['blockedQueries'])} queries paused by marketplace access restriction" if state.get('blockedQueries') else '') + (f"; {len(state['pendingDetails'])} product details pending" if state.get('pendingDetails') else '') if isinstance(state, dict) else state) for source, state in row['coverage'].items())
     name = row['name'].replace('|', '\\|')
     lines.append(f"| {name} | {row['imported']} | {row['physical']} | {row['digital']} | {row['unknownDates']} | {row['unknownStoreReleaseDates']} | {row['missingCovers']} | {states} |")
 lines += ['', 'Counts are model-offer associations. Shared works can appear under multiple models; source/external IDs identify offers. A digital store release date is not treated as the original print publication date. Prices and availability reflect the recorded observation, not guaranteed current stock. Raw evidence and the original Fumina pilot remain preserved. Import verification is recorded separately in import-verification.json.']
