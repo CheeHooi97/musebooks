@@ -1,4 +1,5 @@
 import EditionPrices from "../components/EditionPrices";
+import { WebsiteAds } from "../components/WebsiteAds";
 import HomeMarketplace from "../components/HomeMarketplace";
 import SeoHead from "../components/SeoHead";
 import { usePreferences } from "../lib/preferences";import HeaderControls from "../components/HeaderControls";
@@ -417,6 +418,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
 
       </section>
       </>}
+      <WebsiteAds />
     </main>
 
     <footer className="site-footer"><span>{t("MuseBooks")}</span><span>{t("Listings keep their source, format, and availability context.")}</span><a href="/about">{t("About MuseBooks")}</a><a href="/privacy-policy">{t("Privacy Policy")}</a><span className={`connection-status connection-status--${apiState}`}>{apiState === "live" ? t("Catalog connected") : apiState === "loading" ? t("Connecting to catalog") : t("Catalog unavailable")}</span></footer>

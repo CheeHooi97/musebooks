@@ -55,6 +55,11 @@ export default function PrivacyPolicyPage() {
               <p>Learn more about how Google handles this information in <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">Google’s Privacy Policy</a>.</p>
             </section>
 
+            <section id="website-advertising" className="privacy-section">
+              <h2>Website advertising</h2>
+              <p>The website displays sponsored links and loads a third-party HilltopAds script that may open advertising tabs or windows when you interact with the page. Ad providers and destinations receive technical information such as your IP address and browser information and may use cookies or similar technologies under their own privacy policies. These website ads are excluded from the Android and iOS app builds.</p>
+            </section>
+
             <section id="sharing" className="privacy-section">
               <h2>Sharing and external links</h2>
               <p>If you choose to share a book, MuseBooks passes that book’s title and link to your device’s share interface. The app you select receives the information you choose to share and handles it under its own privacy policy.</p>
@@ -63,7 +68,7 @@ export default function PrivacyPolicyPage() {
 
             <section id="use-and-disclosure" className="privacy-section">
               <h2>How information is used</h2>
-              <p>MuseBooks uses catalog requests to return books, editions, origins, listings, and cover images. Limited technical request information may be used to keep the service reliable and secure. MuseBooks does not sell personal information or use it for targeted advertising.</p>
+              <p>MuseBooks uses catalog requests to return books, editions, origins, listings, and cover images. Limited technical request information may be used to keep the service reliable and secure. Website advertising providers process information as described in the Website advertising section above. Your saved collection and settings are not sent to ad providers as custom data.</p>
             </section>
 
             <section id="retention" className="privacy-section">

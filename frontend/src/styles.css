@@ -409,6 +409,9 @@ input { caret-color: var(--accent); }
 .check-row:has(input:disabled) { cursor: not-allowed; }
 .check-row em { font: 500 11px/1.4 var(--body); font-variant-numeric: tabular-nums; }
 @media (forced-colors: active) { .check-row input { appearance: auto; } .check-row input:checked::before { content: none; } }
+.sponsored-offer { display: grid; justify-items: center; gap: 10px; margin: 24px 0; padding: 20px; border-block: 1px solid var(--line); text-align: center; }
+.sponsored-offer span { color: var(--ink); font-size: 11px; letter-spacing: .06em; }
+.sponsored-offer a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }
 .account-preferences { margin: 8px 0; padding: 12px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .account-preferences label { display: grid; gap: 7px; margin-bottom: 14px; color: var(--ink); font-size: 13px; font-weight: 600; }
 .account-preferences label:last-of-type { margin-bottom: 0; }
