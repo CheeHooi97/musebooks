@@ -1,5 +1,6 @@
 import EditionPrices from "../components/EditionPrices";
 import { WebsiteAds } from "../components/WebsiteAds";
+import { BannerAds } from "../components/BannerAds";
 import HomeMarketplace from "../components/HomeMarketplace";
 import SeoHead from "../components/SeoHead";
 import { usePreferences } from "../lib/preferences";import HeaderControls from "../components/HeaderControls";
@@ -418,6 +419,7 @@ export default function Home() {const { t, formatPrice } = usePreferences();
 
       </section>
       </>}
+      <BannerAds />
       <WebsiteAds />
     </main>
 
