@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 from urllib.parse import urlsplit
 from functools import lru_cache
+from model_title_match import classify_title, model_names
 
 
 @lru_cache(maxsize=4)
@@ -90,6 +91,16 @@ def prepare(capture, source_manifest):
             work_title = shared['title'] if shared else title
             if shared:
                 wid = shared['id']
+            # A store search for a short name also returns other people's books
+            # (藤田もも for もも). Unless a reviewed identity or a reviewed item says
+            # otherwise, only credit the model when the title names the model; the
+            # offer stays unlinked and is flagged for review.
+            match, proposed = classify_title(title, model_names(model))
+            if not shared and not item.get('creditReviewed') and match != 'named':
+                record['creditReview'] = dict(model=model.get('canonical_public_name', ''), title=title,
+                                              match=match, proposedName=proposed)
+                records.append(record)
+                continue
             cover = book.get('coverImageUrl') or item['imageUrl']
             record['work'] = dict(id=wid, slug=wid, originalTitle=work_title, originCode='JP',
                                  featuredNames=','.join(dict.fromkeys(name for name in [model.get('canonical_public_name'), model.get('original_name'), model.get('english_name'), *model.get('aliases', [])] if name)), coverUrl=cover)
@@ -128,4 +139,8 @@ if __name__ == '__main__':
     records = prepare(json.loads(Path(args.capture).read_text(encoding='utf-8')),
                       json.loads(Path(args.sources).read_text(encoding='utf-8')))
     Path(args.output).write_text(json.dumps(records, ensure_ascii=False, indent=2), encoding='utf-8')
-    print(f'Prepared {len(records)} offers; original captures unchanged')
+    held = [r for r in records if r.get('creditReview')]
+    print(f'Prepared {len(records)} offers; {len(held)} kept unlinked because the title does not name the model; original captures unchanged')
+    for r in held[:20]:
+        review = r['creditReview']
+        print(f"  {review['match']:6} {review['proposedName'] or '-':10} {review['title']}")

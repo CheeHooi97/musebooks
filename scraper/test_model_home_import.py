@@ -21,7 +21,7 @@ class ModelHomeIdentityTests(unittest.TestCase):
 
     def test_digital_store_release_date_does_not_require_a_print_publication_date(self):
         item = dict(sourceId='store-test', platform='Test', externalId='ebook',
-            url='https://store.example/book', format='digital', title='Example photo book',
+            url='https://store.example/book', format='digital', title='鈴木ふみ奈 Example photo book',
             publisher='Example', imageUrl='https://store.example/cover.jpg',
             releaseDate='2025-03-04', storeReleaseDate='2025-03-04', publicationDate=None,
             observedAt='2026-10-11T00:00:00Z')
@@ -31,7 +31,7 @@ class ModelHomeIdentityTests(unittest.TestCase):
 
     def test_digital_edition_stores_store_date_when_original_publication_is_known(self):
         item = dict(sourceId='store-test', platform='Test', externalId='ebook-dates',
-            url='https://store.example/book', format='digital', title='Example photo book',
+            url='https://store.example/book', format='digital', title='鈴木ふみ奈 Example photo book',
             publisher='Example', imageUrl='', releaseDate='2025-03-04',
             storeReleaseDate='2025-03-04', publicationDate='2020-06-01',
             observedAt='2026-10-13T00:00:00Z')
@@ -88,6 +88,31 @@ class ModelHomeIdentityTests(unittest.TestCase):
             records = prepare(dict(physicalBooks=[], items=items), [])
             self.assertNotEqual(records[0]['work']['id'], records[1]['work']['id'])
             self.assertNotEqual(records[0]['edition']['id'], records[1]['edition']['id'])
+
+    def test_search_hits_for_other_people_stay_unlinked_for_review(self):
+        model = dict(id=999998, canonical_public_name='もも', english_name='Momo')
+        items = [dict(sourceId='store-test', platform='Test', externalId=str(i), url='https://store.example/' + str(i),
+                      format='digital', title=title, publisher='Example', imageUrl='', observedAt='2026-10-20T00:00:00Z')
+                 for i, title in enumerate(['MOMO 藤田もも写真集', '[ハレム]もも from 63ANGEL', '12th Birthday Party!'])]
+        records = prepare(dict(model=model, physicalBooks=[], items=items), [])
+        self.assertEqual([r['creditReview']['match'] for r in records], ['other', 'weak', 'absent'])
+        self.assertEqual(records[0]['creditReview']['proposedName'], '藤田もも')
+        for record in records:
+            # The catalog importer keeps these as unlinked offers.
+            self.assertEqual(record['work'], {})
+            self.assertEqual(record['edition'], {})
+            self.assertNotIn('featuredPerson', record)
+            self.assertNotIn('editionId', record['batch']['items'][0])
+
+    def test_named_and_reviewed_items_credit_the_model(self):
+        model = dict(id=999997, canonical_public_name='兒玉七海', english_name='Nanami Kodama', aliases=['七海', 'Nanami'])
+        base = dict(sourceId='store-test', platform='Test', format='digital', publisher='Example', imageUrl='', observedAt='2026-10-20T00:00:00Z')
+        items = [dict(base, externalId='a', url='https://store.example/a', title='兒玉七海 写真集'),
+                 dict(base, externalId='b', url='https://store.example/b', title='VIVID GIRL 七海 Chapter1', creditReviewed=True)]
+        records = prepare(dict(model=model, physicalBooks=[], items=items), [])
+        for record in records:
+            self.assertNotIn('creditReview', record)
+            self.assertEqual(record['work']['featuredNames'], '兒玉七海,Nanami Kodama,七海,Nanami')
 
 if __name__ == '__main__':
     unittest.main()
