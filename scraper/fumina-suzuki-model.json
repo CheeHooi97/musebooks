@@ -1,0 +1,21 @@
+{
+  "careerNames": [],
+  "database": "gravure_model",
+  "models": [
+    {
+      "adult_confirmed": false,
+      "birth_date": null,
+      "canonical_public_name": "鈴木ふみ奈",
+      "english_name": "Fumina Suzuki",
+      "id": 6,
+      "original_name": "鈴木ふみ奈",
+      "person_type": "gravure_model",
+      "phonetic_name": "",
+      "simplified_chinese_name": null,
+      "slug": "鈴木ふみ奈",
+      "traditional_chinese_name": null,
+      "verification_source_url": "https://wpb.shueisha.co.jp/gravure/20250713-127649/"
+    }
+  ],
+  "table": "people"
+}

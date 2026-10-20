@@ -11,6 +11,8 @@ type DirectoryEntry struct {
 	WorkCount    int    `json:"workCount"`
 	EditionCount int    `json:"editionCount"`
 	CoverURL     string `json:"coverUrl,omitempty"`
+	// Other recorded names for a model, comma-separated (see person_aliases).
+	Aliases string `json:"aliases,omitempty"`
 }
 type MarketEntry struct {
 	ListingResponse   `gorm:"embedded"`
@@ -37,8 +39,8 @@ type MarketplaceListingEntry struct {
 	Publisher        string     `json:"publisher,omitempty"`
 }
 type CatalogBrowseQuery struct {
-	Query, Kind, ID, Status, Format, Source, Person, Publisher, Language, Year, Region string
-	Page, PageSize                                                                     int
+	Query, Kind, ID, Status, Format, PublicationType, Source, Person, Publisher, Language, Year, Region string
+	Page, PageSize                                                                                      int
 }
 
 func (entry *MarketEntry) SetFeaturedNames() {

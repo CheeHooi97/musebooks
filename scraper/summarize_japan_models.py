@@ -32,6 +32,29 @@ process_progress = {}
 for source in ('physical', 'grajapa', 'kobo', 'wani'):
     progress_path = OUT / (source + '-progress.json')
     process_progress[source] = json.loads(progress_path.read_text(encoding='utf-8')) if progress_path.exists() else {}
+physical_rows = [row for row in queue if row['status'] != 'reuse_fumina_capture']
+physical_outcomes = [process_progress['physical'].get(str(row['musecardsPersonId']), {}).get('status', 'pending')
+    for row in physical_rows]
+physical_finished = physical_outcomes.count('finished')
+physical_blocked_finished = physical_outcomes.count('finished_with_source_blocks')
+physical_failed = physical_outcomes.count('process_failed')
+physical_interrupted = physical_outcomes.count('interrupted')
+physical_pending = len(physical_rows) - physical_finished - physical_blocked_finished - physical_failed - physical_interrupted
+physical_queue_line = (f'Physical marketplace queue: {physical_finished} finished; '
+    f'{physical_blocked_finished} finished with source blocks; {physical_failed} process failures; '
+    f'{physical_interrupted} interrupted; {physical_pending} pending or incomplete of {len(physical_rows)} non-Fumina models.')
+physical_sources = [entry['source'] for entry in sources
+    if entry['source'].get('kind') == 'marketplace'
+    and entry['source'].get('defaultFormat') == 'physical'
+    and entry['source'].get('enabled')]
+physical_source_line = ('Active physical marketplace sources: ' + ', '.join(
+    f"{source['name']} ({source['id']})" for source in physical_sources)
+    + '. Rakuten Books is excluded pending confirmation of the current terms’ application to its consumer '
+    + 'pages or prior permission; other Japanese bookstore coverage is incomplete. See '
+    + '[Rakuten terms](https://www.rakuten.co.jp/doc/info/rule/ichiba_shopping.html).')
+digital_source_line = ('Saved digital or publisher captures: Grajapa, Rakuten Kobo, and Wani Books. '
+    + 'Future Rakuten Kobo runs are held pending terms clarification or prior permission; BOOK☆WALKER Japan '
+    + 'is not scheduled pending prior consent for collecting and retaining store content.')
 for row in queue:
     directory = ROOT / row['directory']
     person = json.loads((directory / 'model.json').read_text(encoding='utf-8'))['models'][0]
@@ -86,7 +109,7 @@ for row in queue:
             for item in state.get('items', {}).values():
                 item = dict(item)
                 item['imageUrls'] = listing_image_urls(item, state.get('details', {}).get(item.get('url'), {}))
-                if not item.get('imageUrl') and item['imageUrls']:
+                if item['imageUrls']:
                     item['imageUrl'] = item['imageUrls'][0]
                 book, match_method = match_physical_book(item, bibliography)
                 if book:
@@ -129,7 +152,9 @@ if homepage_verification:
     live_api = homepage_verification.get('liveApi') or {}
     live_count = live_api.get('uniqueOffers')
     checked_offers = f'{live_count:,} live marketplace offers' if live_count is not None else f'{homepage_verification.get("importedModelAssociations", 0):,} imported associations'
-    live_api_note = (f" Live public API snapshot: {live_api['uniqueOffers']:,} unique offers across {live_api['totalPages']:,} pages."
+    checked_at = str(homepage_verification.get('checkedAt', ''))[:10]
+    live_api_note = (f" Live public API snapshot: {live_api['uniqueOffers']:,} unique offers across {live_api['totalPages']:,} pages"
+        + (f" (checked {checked_at})" if checked_at else '') + '.'
         if live_api.get('uniqueOffers') is not None and live_api.get('totalPages') is not None else '')
     homepage_line = (f'Homepage model search and physical/digital filters: {homepage_passed}/{len(homepage_results)} model identities passed against {checked_offers}; {pending_import_associations:,} prepared associations await import.' + live_api_note)
 else:
@@ -137,11 +162,14 @@ else:
     homepage_line = 'Homepage search verification has not been generated yet.'
 lines = ['# Japan-model photobook collection coverage', '',
     f'{len(summary)} MuseCards Japan-market model identities. Collection and verification are ongoing; pending searches are not no-result searches.', '',
+    physical_queue_line, '',
+    physical_source_line,
+    digital_source_line, '',
     f'Checkpointed imports: {sum(row["imported"] for row in summary):,} records. Fumina Suzuki includes 150 preserved and previously imported offers.', '',
     f'Captured offer associations: {captured_physical + captured_digital:,} ({captured_physical:,} physical, {captured_digital:,} digital) across {models_with_captures} models.',
     f'Unknown original publication dates: {sum(row["unknownDates"] for row in summary):,}; unknown digital store release dates: {sum(row["unknownStoreReleaseDates"] for row in summary):,}; missing covers: {sum(row["missingCovers"] for row in summary):,}.', '',
     homepage_line,
-    f'Read-only database verification: {database_verification["result"]["present"]:,}/{database_verification["result"]["expected"]:,} records present; price mismatches {database_verification["result"]["priceMismatches"]}, format mismatches {database_verification["result"]["formatMismatches"]}, missing galleries {database_verification["result"]["missingMedia"]}, missing publisher media {database_verification["result"]["missingPublisherMedia"]}.' if database_verification else 'Database readback verification has not been generated yet.', '',
+    f'Read-only database verification: {database_verification["result"]["present"]:,}/{database_verification["result"]["expected"]:,} records present; price mismatches {database_verification["result"]["priceMismatches"]}, format mismatches {database_verification["result"]["formatMismatches"]}, publication-date mismatches {database_verification["result"].get("releaseDateMismatches", "not checked")}, missing galleries {database_verification["result"]["missingMedia"]}, missing publisher media {database_verification["result"]["missingPublisherMedia"]}, work mismatches {database_verification["result"].get("workMismatches", "not checked")}, exclusion mismatches {database_verification["result"].get("exclusionMismatches", "not checked")}.' if database_verification else 'Database readback verification has not been generated yet.', '',
     f'Paid-offer scope excludes {len(excluded_listings):,} verified free preview(s); their original captures and price observations remain preserved.', '',
     '| Model | Imported | Physical captures | Digital captures | Unknown publication dates | Unknown store release dates | Missing covers | Source state |',
     '| --- | ---: | ---: | ---: | ---: | ---: | ---: | --- |']

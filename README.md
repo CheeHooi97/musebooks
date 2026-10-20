@@ -1,10 +1,10 @@
 # MuseBooks
 
-MuseBooks is a catalog and discovery site for physical and authorized digital photobooks from Japan, Taiwan, China, Malaysia, and additional origins over time. It separates a publication work, its editions, and marketplace listings so users can compare the right things.
+MuseBooks is a catalog and discovery site for physical and authorized digital photobooks, plus separately classified magazine issues. It separates a publication work, its editions, and marketplace listings so users can compare the right things.
 
 ## Current implementation
 
-- `frontend/` — React + Vite + JavaScript catalog UI, matching MuseCards' frontend stack. Includes models, publishers, active/sold listing ledgers, origin/format filters, edition comparison, local collections, and source links. Application pages are in `frontend/src/pages/`.
+- `frontend/` — React + Vite + JavaScript catalog UI, matching MuseCards' frontend stack. Includes models, publishers, active/sold listing ledgers, origin/publication/format filters, edition comparison, local collections, and source links. Magazine issues have their own issue-month and cover-model credits.
 - `frontend/` also builds a separate locally bundled Capacitor app for Android and iOS. The native build calls the configured HTTPS API directly; it does not load the website remotely.
 - `backend/` — Go + Echo + GORM + PostgreSQL API. It migrates and seeds the catalog, exposes browse endpoints, and provides an authenticated scrape control plane for job leasing, heartbeats, idempotent observation batches, and run completion.
 - `scraper/` — Go contract/types and legacy generic collector retained for local smoke tests; it does not call marketplace APIs.
@@ -29,6 +29,8 @@ npm run dev
 
 The Vite development server proxies `/v1/*` to `http://127.0.0.1:2002` by default. Override its proxy target with `VITE_API_PROXY` when needed. Production uses the existing Nginx API proxy or `VITE_API_BASE_URL`. The catalog displays an explicit loading, error, or empty state rather than substituting sample records when the API is unavailable.
 
+See [the Korean-model source map](docs/korean-model-photobook-sources.md) for page-based source research, magazine fields, image-use notes, and the import workflow.
+
 The native mobile app omits catalog photographs and cover images. Book covers use text placeholders, and directories and profiles show text only. The website continues to show images on desktop and mobile browsers.
 
 Rollup is pinned to `4.63.0` because `4.64.1` stalls during tree-shaking for this app. Keep the pin when installing dependencies; tree-shaking remains enabled.
@@ -44,11 +46,11 @@ The mobile build defaults to `https://musebooks.my` for both API and shared-link
 
 ## Models, publishers, and listings
 
-- `/models` and `/publishers`: searchable, paginated directories derived from published work credits and edition publishers, with linked photobooks.
+- `/models` and `/publishers`: searchable, paginated directories derived from published featured/cover-model credits and edition publishers, with linked catalog records.
 - `/active` and `/sold`: searchable, paginated ledgers with source/format filters, original currencies, condition, observation dates, book details, and external source links.
 - `/japan`: captured Japanese marketplace listings, with latest listing images and prices, source filters, and active/completed status. Unmatched records stay separate from verified photobook works.
 - The homepage also loads Japan marketplace offers under the existing origin, search, format, and availability filters. Offers group by verified work slug or identical normalized listing title; unmatched groups remain explicitly pending and do not create catalog books. Expand a group to compare individual offers by platform. Book counts and offer counts remain separate.
-- API: `GET /v1/models`, `/v1/publishers`, `/{models|publishers}/:id/books`, `/v1/listings?status=active|sold`, and `/v1/marketplace-listings?region=JP&status=all|active|completed`. All accept pagination; browse endpoints accept `q`. Listings accept `source` and `format` where applicable.
+- API: `GET /v1/models`, `/v1/publishers`, `/{models|publishers}/:id/books`, `/v1/listings?status=active|sold`, and `/v1/marketplace-listings?region=JP&status=all|active|completed`. Catalog listing endpoints accept `publicationType=photobook|magazine_issue` where applicable.
 - New read paths follow `router → handler → service → repository → database`. Existing scraper ingestion contracts remain intact.
 - Sold records require completed physical marketplace status; ended listings and digital retail offers are excluded. The general `/active` and `/sold` ledgers stay edition-linked; the Japan page separately labels and shows unmatched marketplace records.
 - Directory identities currently derive from normalized catalog credit names. Alias merging and independently curated person/publisher profiles remain future work.

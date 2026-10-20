@@ -2,12 +2,13 @@
 import re
 import unicodedata
 
+from photobook_title_rules import photobook_title_exclusion
+
 MAGAZINE_REASONS = {'magazine_only', 'magazine_or_supplement'}
 BRANDS = re.compile(r'週刊現代|週刊プレイボーイ|EX大衆|漫画アクション')
 
 
 def digital_title_exclusion(title):
-    from photobook_worker import photobook_title_exclusion
     reason = photobook_title_exclusion(title)
     normalized = unicodedata.normalize('NFKC', title)
     explicit = 'デジタル写真集' in normalized or ('グラビアン魂' in normalized and '写真集' in normalized)

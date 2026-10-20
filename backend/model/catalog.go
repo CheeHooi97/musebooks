@@ -2,6 +2,11 @@ package model
 
 import "time"
 
+const (
+	PublicationTypePhotobook     = "photobook"
+	PublicationTypeMagazineIssue = "magazine_issue"
+)
+
 type Origin struct {
 	Code       string    `gorm:"primaryKey;size:32" json:"code"`
 	Name       string    `gorm:"size:80;not null" json:"name"`
@@ -37,23 +42,26 @@ type Source struct {
 }
 
 type Work struct {
-	OriginMarketID *int64       `gorm:"index" json:"originMarketId,omitempty"`
-	OriginMarket   *Market      `gorm:"foreignKey:OriginMarketID" json:"originMarket,omitempty"`
-	Credits        []WorkPerson `gorm:"foreignKey:WorkID" json:"credits,omitempty"`
-	ID             string       `gorm:"primaryKey;size:100" json:"id"`
-	Slug           string       `gorm:"uniqueIndex;size:140;not null" json:"slug"`
-	OriginalTitle  string       `gorm:"size:240;not null" json:"originalTitle"`
-	EnglishTitle   string       `gorm:"size:240" json:"englishTitle,omitempty"`
-	Summary        string       `gorm:"type:text" json:"summary,omitempty"`
-	OriginCode     string       `gorm:"size:32;index;not null" json:"originCode"`
-	FeaturedNames  string       `gorm:"type:text" json:"featuredNames,omitempty"`
-	Photographer   string       `gorm:"size:160" json:"photographer,omitempty"`
-	CoverURL       string       `gorm:"size:500" json:"coverUrl,omitempty"`
-	Status         string       `gorm:"size:24;index;default:published" json:"status"`
-	Origin         Origin       `gorm:"foreignKey:OriginCode;references:Code" json:"origin"`
-	Editions       []Edition    `gorm:"foreignKey:WorkID" json:"editions,omitempty"`
-	CreatedAt      time.Time    `json:"createdAt"`
-	UpdatedAt      time.Time    `json:"updatedAt"`
+	OriginMarketID  *int64       `gorm:"index" json:"originMarketId,omitempty"`
+	OriginMarket    *Market      `gorm:"foreignKey:OriginMarketID" json:"originMarket,omitempty"`
+	Credits         []WorkPerson `gorm:"foreignKey:WorkID" json:"credits,omitempty"`
+	ID              string       `gorm:"primaryKey;size:100" json:"id"`
+	Slug            string       `gorm:"uniqueIndex;size:140;not null" json:"slug"`
+	PublicationType string       `gorm:"size:32;index;not null;default:photobook" json:"publicationType"`
+	IssueMonth      string       `gorm:"size:7;index" json:"issueMonth,omitempty"`
+	IssueNumber     string       `gorm:"size:80" json:"issueNumber,omitempty"`
+	OriginalTitle   string       `gorm:"size:240;not null" json:"originalTitle"`
+	EnglishTitle    string       `gorm:"size:240" json:"englishTitle,omitempty"`
+	Summary         string       `gorm:"type:text" json:"summary,omitempty"`
+	OriginCode      string       `gorm:"size:32;index;not null" json:"originCode"`
+	FeaturedNames   string       `gorm:"type:text" json:"featuredNames,omitempty"`
+	Photographer    string       `gorm:"size:160" json:"photographer,omitempty"`
+	CoverURL        string       `gorm:"size:500" json:"coverUrl,omitempty"`
+	Status          string       `gorm:"size:24;index;default:published" json:"status"`
+	Origin          Origin       `gorm:"foreignKey:OriginCode;references:Code" json:"origin"`
+	Editions        []Edition    `gorm:"foreignKey:WorkID" json:"editions,omitempty"`
+	CreatedAt       time.Time    `json:"createdAt"`
+	UpdatedAt       time.Time    `json:"updatedAt"`
 }
 
 type Edition struct {

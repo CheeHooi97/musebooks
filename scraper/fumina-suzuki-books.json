@@ -1,0 +1,67 @@
+{
+  "musecardsPersonId": 6,
+  "nativeName": "鈴木ふみ奈",
+  "englishName": "Fumina Suzuki",
+  "verifiedOn": "2026-10-10",
+  "books": [
+    {
+      "id": "jp-isbn-9784046053039",
+      "title": "鈴木ふみ奈写真集 Leap",
+      "titleAlias": "Leap",
+      "format": "physical",
+      "isbn": "9784046053039",
+      "publisher": "KADOKAWA",
+      "publicationDate": "2021-07-21",
+      "publicationPrecision": "day",
+      "pageCount": 128,
+      "publisherListPriceJPY": 3300,
+      "metadataSourceUrl": "https://www.kadokawa.co.jp/product/322103000545/",
+      "coverImageUrl": "https://prtimes.jp/i/7006/8624/resize/d7006-8624-220997-0.jpg",
+      "images": [
+        {"role": "cover", "url": "https://prtimes.jp/i/7006/8624/resize/d7006-8624-220997-0.jpg", "sourceUrl": "https://www.kadokawa.co.jp/topics/5880/", "credit": "(C)KADOKAWA (C) officepocket PHOTO/TANAKA TOMOHISA"},
+        {"role": "publisher_sample", "url": "https://prtimes.jp/i/7006/8624/resize/d7006-8624-500974-2.jpg", "sourceUrl": "https://www.kadokawa.co.jp/topics/5880/", "credit": "(C)KADOKAWA (C) officepocket PHOTO/TANAKA TOMOHISA"},
+        {"role": "publisher_sample", "url": "https://prtimes.jp/i/7006/8624/resize/d7006-8624-596000-3.jpg", "sourceUrl": "https://www.kadokawa.co.jp/topics/5880/", "credit": "(C)KADOKAWA (C) officepocket PHOTO/TANAKA TOMOHISA"}
+      ],
+      "imageNote": "Cover visually verified from the separate publisher announcement; the bibliographic page's noimage placeholder was excluded."
+    },
+    {
+      "id": "jp-isbn-9784768319659",
+      "title": "鈴木ふみ奈写真集 FLY HIGH",
+      "titleAlias": "FLY HIGH",
+      "format": "physical",
+      "isbn": "9784768319659",
+      "publisher": "玄光社",
+      "publicationDate": "2024-09-05",
+      "publicationPrecision": "day",
+      "pageCount": 128,
+      "publisherListPriceBeforeTaxJPY": 3200,
+      "metadataSourceUrl": "https://www.books.or.jp/book-details/9784768319659",
+      "coverImageUrl": "https://thumbnail-s.images.books.or.jp/9784768319659.jpg",
+      "images": [
+        {"role": "cover", "url": "https://thumbnail-s.images.books.or.jp/9784768319659.jpg", "sourceUrl": "https://www.books.or.jp/book-details/9784768319659"},
+        {"role": "publisher_sample", "url": "https://thumbnail-s.images.books.or.jp/9784768319659.in01.jpg", "sourceUrl": "https://www.books.or.jp/book-details/9784768319659"},
+        {"role": "publisher_sample", "url": "https://thumbnail-s.images.books.or.jp/9784768319659.in02.jpg", "sourceUrl": "https://www.books.or.jp/book-details/9784768319659"}
+      ]
+    },
+    {
+      "id": "jp-isbn-9784838733514",
+      "title": "鈴木ふみ奈 写真集 GRACE",
+      "titleAlias": "GRACE",
+      "format": "physical",
+      "isbn": "9784838733514",
+      "publisher": "日之出出版",
+      "distributor": "マガジンハウス",
+      "publicationDate": "2025-09-25",
+      "publicationPrecision": "day",
+      "pageCount": 128,
+      "publisherListPriceJPY": 3520,
+      "metadataSourceUrl": "https://prtimes.jp/main/html/rd/p/000000042.000056546.html",
+      "coverImageUrl": "https://prcdn.freetls.fastly.net/release_image/56546/42/56546-42-cb48833932604708e28ccc56c85b1058-1909x2700.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950",
+      "images": [
+        {"role": "cover", "url": "https://prcdn.freetls.fastly.net/release_image/56546/42/56546-42-cb48833932604708e28ccc56c85b1058-1909x2700.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950", "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000042.000056546.html"},
+        {"role": "publisher_sample", "url": "https://prcdn.freetls.fastly.net/release_image/56546/42/56546-42-b2d401170daf686a314fec12ab3210b3-1895x2700.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950", "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000042.000056546.html"},
+        {"role": "publisher_sample", "url": "https://prcdn.freetls.fastly.net/release_image/56546/42/56546-42-1d6236fd5176c4c0719e683e3260cada-1893x2700.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950", "sourceUrl": "https://prtimes.jp/main/html/rd/p/000000042.000056546.html"}
+      ]
+    }
+  ]
+}

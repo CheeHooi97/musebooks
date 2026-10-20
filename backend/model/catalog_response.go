@@ -12,17 +12,21 @@ type CatalogLink struct {
 }
 
 type BookResponse struct {
-	Models        []CatalogLink     `json:"models"`
-	ID            string            `json:"id"`
-	Slug          string            `json:"slug"`
-	OriginalTitle string            `json:"originalTitle"`
-	EnglishTitle  string            `json:"englishTitle,omitempty"`
-	Summary       string            `json:"summary,omitempty"`
-	Origin        OriginResponse    `json:"origin"`
-	FeaturedNames []string          `json:"featuredNames,omitempty"`
-	Photographer  string            `json:"photographer,omitempty"`
-	CoverURL      string            `json:"coverUrl,omitempty"`
-	Editions      []EditionResponse `json:"editions"`
+	Models          []CatalogLink     `json:"models"`
+	CoverModels     []CatalogLink     `json:"coverModels,omitempty"`
+	ID              string            `json:"id"`
+	Slug            string            `json:"slug"`
+	PublicationType string            `json:"publicationType"`
+	IssueMonth      string            `json:"issueMonth,omitempty"`
+	IssueNumber     string            `json:"issueNumber,omitempty"`
+	OriginalTitle   string            `json:"originalTitle"`
+	EnglishTitle    string            `json:"englishTitle,omitempty"`
+	Summary         string            `json:"summary,omitempty"`
+	Origin          OriginResponse    `json:"origin"`
+	FeaturedNames   []string          `json:"featuredNames,omitempty"`
+	Photographer    string            `json:"photographer,omitempty"`
+	CoverURL        string            `json:"coverUrl,omitempty"`
+	Editions        []EditionResponse `json:"editions"`
 }
 
 type OriginResponse struct {
@@ -95,23 +99,31 @@ type ListBooksResponse struct {
 }
 
 type ListBooksQuery struct {
-	Query        string
-	Origin       string
-	Format       string
-	Language     string
-	Availability string
-	Year         string
-	Page         int
-	PageSize     int
+	Query           string
+	Origin          string
+	PublicationType string
+	Format          string
+	Language        string
+	Availability    string
+	Year            string
+	Page            int
+	PageSize        int
 }
 
 func (w Work) Response() BookResponse {
+	publicationType := w.PublicationType
+	if publicationType == "" {
+		publicationType = PublicationTypePhotobook
+	}
 	result := BookResponse{
-		ID:            w.ID,
-		Slug:          w.Slug,
-		OriginalTitle: w.OriginalTitle,
-		EnglishTitle:  w.EnglishTitle,
-		Summary:       w.Summary,
+		ID:              w.ID,
+		Slug:            w.Slug,
+		PublicationType: publicationType,
+		IssueMonth:      w.IssueMonth,
+		IssueNumber:     w.IssueNumber,
+		OriginalTitle:   w.OriginalTitle,
+		EnglishTitle:    w.EnglishTitle,
+		Summary:         w.Summary,
 		Origin: OriginResponse{
 			Code:       w.Origin.Code,
 			Name:       w.Origin.Name,
@@ -123,9 +135,17 @@ func (w Work) Response() BookResponse {
 		Editions:      make([]EditionResponse, 0, len(w.Editions)),
 	}
 	result.Models = []CatalogLink{}
+	result.CoverModels = []CatalogLink{}
 	for _, credit := range w.Credits {
-		if credit.Role == "featured" && credit.Person.Slug != "" {
-			result.Models = append(result.Models, CatalogLink{ID: credit.Person.Slug, Name: credit.Person.CanonicalPublicName})
+		if credit.Person.Slug == "" {
+			continue
+		}
+		link := CatalogLink{ID: credit.Person.Slug, Name: credit.Person.CanonicalPublicName}
+		switch credit.Role {
+		case "featured":
+			result.Models = append(result.Models, link)
+		case "cover_model":
+			result.CoverModels = append(result.CoverModels, link)
 		}
 	}
 	for _, edition := range w.Editions {

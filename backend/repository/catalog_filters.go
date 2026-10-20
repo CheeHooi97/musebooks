@@ -6,6 +6,9 @@ import (
 )
 
 func applyWorkFilters(query *gorm.DB, params model.ListBooksQuery) *gorm.DB {
+	if params.PublicationType != "" {
+		query = query.Where("works.publication_type = ?", params.PublicationType)
+	}
 	if params.Query != "" {
 		pattern := "%" + params.Query + "%"
 		query = query.Where("works.original_title ILIKE ? OR works.english_title ILIKE ? OR works.featured_names ILIKE ?", pattern, pattern, pattern)

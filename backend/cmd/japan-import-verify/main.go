@@ -97,7 +97,7 @@ func main() {
  SELECT count(*) AS expected,count(l.id) AS present,
  count(*) FILTER(WHERE l.id IS NOT NULL AND (l.price_minor IS DISTINCT FROM x.price_minor OR l.currency IS DISTINCT FROM x.currency)) AS price_mismatches,
  count(*) FILTER(WHERE l.id IS NOT NULL AND l.format_candidate IS DISTINCT FROM x.format) AS format_mismatches,
- count(*) FILTER(WHERE x.edition_id<>'' AND (e.release_date IS DISTINCT FROM NULLIF(x.release_date,'')::timestamptz OR e.release_precision IS DISTINCT FROM NULLIF(x.release_precision,''))) AS release_date_mismatches,
+	 count(*) FILTER(WHERE NOT x.excluded AND x.edition_id<>'' AND (e.release_date IS DISTINCT FROM NULLIF(x.release_date,'')::timestamptz OR e.release_precision IS DISTINCT FROM NULLIF(x.release_precision,''))) AS release_date_mismatches,
  count(*) FILTER(WHERE l.id IS NOT NULL AND (SELECT count(*) FROM catalog_media m WHERE m.entity_type='listing' AND m.entity_id=l.id AND m.media_type LIKE 'listing_image%')<x.media_count) AS missing_media,
  count(*) FILTER(WHERE x.publisher_count>0 AND (SELECT count(*) FROM catalog_media m WHERE m.entity_type='edition' AND m.entity_id=x.edition_id AND m.media_type LIKE 'publisher_%')<x.publisher_count) AS missing_publisher_media,
  count(*) FILTER(WHERE l.edition_id IS NOT NULL AND l.edition_id<>'') AS linked_editions,
@@ -115,6 +115,32 @@ func main() {
 		ExpectedWork    string `json:"expectedWork"`
 		ActualWork      string `json:"actualWork"`
 	}
+	var releaseDateIssues []struct {
+		SourceID            string `json:"sourceId"`
+		ExternalID          string `json:"externalId"`
+		ExpectedEdition     string `json:"expectedEdition"`
+		ActualEdition       string `json:"actualEdition"`
+		ExpectedWork        string `json:"expectedWork"`
+		ActualWork          string `json:"actualWork"`
+		ExpectedReleaseDate string `json:"expectedReleaseDate"`
+		ActualReleaseDate   string `json:"actualReleaseDate"`
+		ExpectedPrecision   string `json:"expectedPrecision"`
+		ActualPrecision     string `json:"actualPrecision"`
+	}
+	if result.ReleaseDateMismatches > 0 {
+		query := `WITH expected AS (SELECT * FROM jsonb_to_recordset(?::jsonb) AS x(source_id text,external_id text,edition_id text,work_id text,excluded boolean,release_date text,release_precision text))
+		 SELECT x.source_id,x.external_id,x.edition_id AS expected_edition,l.edition_id AS actual_edition,
+		 x.work_id AS expected_work,e.work_id AS actual_work,x.release_date AS expected_release_date,
+		 e.release_date::text AS actual_release_date,x.release_precision AS expected_precision,
+		 e.release_precision AS actual_precision
+		 FROM expected x LEFT JOIN listings l ON l.source_id=x.source_id AND l.external_id=x.external_id
+		 LEFT JOIN editions e ON e.id=l.edition_id
+		 WHERE NOT x.excluded AND x.edition_id<>'' AND (e.release_date IS DISTINCT FROM NULLIF(x.release_date,'')::timestamptz
+		 OR e.release_precision IS DISTINCT FROM NULLIF(x.release_precision,''))`
+		if err := db.Raw(query, string(payload)).Scan(&releaseDateIssues).Error; err != nil {
+			panic(err)
+		}
+	}
 	if result.WorkMismatches > 0 {
 		query := `WITH expected AS (SELECT * FROM jsonb_to_recordset(?::jsonb) AS x(source_id text,external_id text,edition_id text,work_id text,excluded boolean))
 		 SELECT x.source_id,x.external_id,x.edition_id AS expected_edition,l.edition_id AS actual_edition,x.work_id AS expected_work,e.work_id AS actual_work
@@ -124,7 +150,7 @@ func main() {
 			panic(err)
 		}
 	}
-	report, err := json.MarshalIndent(map[string]any{"checkedAt": time.Now().UTC().Format(time.RFC3339), "mode": "read_only_database", "result": result, "workIdentityIssues": issues}, "", "  ")
+	report, err := json.MarshalIndent(map[string]any{"checkedAt": time.Now().UTC().Format(time.RFC3339), "mode": "read_only_database", "result": result, "workIdentityIssues": issues, "releaseDateIssues": releaseDateIssues}, "", "  ")
 	if err != nil {
 		panic(err)
 	}

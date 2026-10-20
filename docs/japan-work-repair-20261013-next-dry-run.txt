@@ -1,0 +1,5 @@
+panic: cannot connect to configured PostgreSQL database (*pgconn.ConnectError)
+
+goroutine 1 [running]:
+main.main()
+	D:/Workspace/Go/musebooks/backend/cmd/japan-work-repair/main.go:115 +0x312

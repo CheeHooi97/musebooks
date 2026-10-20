@@ -20,6 +20,7 @@ import (
 	"os"
 	"regexp"
 	"strings"
+	"time"
 )
 
 type ListingMediaInput struct {
@@ -32,15 +33,17 @@ type ListingMediaInput struct {
 }
 
 type Record struct {
-	SupersedesEditionID string                 `json:"supersedesEditionId,omitempty"`
-	Origin              *model.Origin          `json:"origin,omitempty"`
-	Work                model.Work             `json:"work"`
-	FeaturedPerson      *model.Person          `json:"featuredPerson,omitempty"`
-	Edition             model.Edition          `json:"edition"`
-	Source              model.Source           `json:"source"`
-	Batch               model.ObservationBatch `json:"batch"`
-	Media               []ListingMediaInput    `json:"media,omitempty"`
-	PublisherMedia      []ListingMediaInput    `json:"publisherMedia,omitempty"`
+	SupersedesEditionID   string                 `json:"supersedesEditionId,omitempty"`
+	Origin                *model.Origin          `json:"origin,omitempty"`
+	Work                  model.Work             `json:"work"`
+	FeaturedPerson        *model.Person          `json:"featuredPerson,omitempty"`
+	CoverPerson           *model.Person          `json:"coverPerson,omitempty"`
+	AdditionalCoverPeople []model.Person         `json:"additionalCoverPeople,omitempty"`
+	Edition               model.Edition          `json:"edition"`
+	Source                model.Source           `json:"source"`
+	Batch                 model.ObservationBatch `json:"batch"`
+	Media                 []ListingMediaInput    `json:"media,omitempty"`
+	PublisherMedia        []ListingMediaInput    `json:"publisherMedia,omitempty"`
 }
 
 func validHTTPSURL(value string) bool {
@@ -50,7 +53,7 @@ func validHTTPSURL(value string) bool {
 
 func validCatalogOrigin(code string) bool {
 	switch strings.ToUpper(strings.TrimSpace(code)) {
-	case "JP", "TW", "CN", "MY":
+	case "JP", "TW", "CN", "MY", "KR":
 		return true
 	default:
 		return false
@@ -64,6 +67,34 @@ func validExclusionReason(reason string) bool {
 	default:
 		return false
 	}
+}
+
+func validPersonIdentity(person *model.Person) bool {
+	return person != nil && person.ID == 0 && person.Slug == model.CatalogIdentity("model", person.CanonicalPublicName) && strings.TrimSpace(person.CanonicalPublicName) != ""
+}
+
+// normalizeReleaseDate stores precision-limited dates as calendar dates at UTC
+// midnight. The API serializes time values, while clients render the first ten
+// characters as a date; retaining a source timezone offset here can shift the
+// displayed publication day for readers in another timezone.
+func normalizeReleaseDate(edition *model.Edition) {
+	if edition == nil || edition.ReleaseDate == nil {
+		return
+	}
+	displayedDate := *edition.ReleaseDate
+	year, month, day := displayedDate.Date()
+	switch edition.ReleasePrecision {
+	case "day":
+		// Keep the calendar date encoded in the reviewed source timestamp.
+	case "month":
+		day = 1
+	case "year":
+		month, day = time.January, 1
+	default:
+		return
+	}
+	normalized := time.Date(year, month, day, 0, 0, 0, 0, time.UTC)
+	edition.ReleaseDate = &normalized
 }
 
 func validateMediaInput(record Record) error {
@@ -124,9 +155,14 @@ func main() {
 			fmt.Println("Created musebooks database")
 		}
 	}
-	db, e := connect(name)
-	if e != nil {
-		fail(fmt.Errorf("cannot connect to database %s; check name and server access", name))
+	var db *gorm.DB
+	needsDatabase := *manifest == "" || *apply || *exclude != "" || *verify || *create
+	if needsDatabase {
+		var err error
+		db, err = connect(name)
+		if err != nil {
+			fail(fmt.Errorf("cannot connect to database %s; check name and server access", name))
+		}
 	}
 
 	if *exclude != "" {
@@ -242,8 +278,21 @@ func main() {
 	}
 	listingMediaCount := 0
 	for i, r := range records {
-		if r.FeaturedPerson != nil && (r.FeaturedPerson.ID != 0 || r.FeaturedPerson.Slug != model.CatalogIdentity("model", r.FeaturedPerson.CanonicalPublicName) || strings.TrimSpace(r.FeaturedPerson.CanonicalPublicName) == "") {
+		if r.FeaturedPerson != nil && !validPersonIdentity(r.FeaturedPerson) {
 			fail(fmt.Errorf("record %d has invalid featured person identity", i))
+		}
+		if r.CoverPerson != nil && !validPersonIdentity(r.CoverPerson) {
+			fail(fmt.Errorf("record %d has invalid cover person identity", i))
+		}
+		seenCoverPeople := map[string]bool{}
+		if r.CoverPerson != nil {
+			seenCoverPeople[r.CoverPerson.Slug] = true
+		}
+		for _, person := range r.AdditionalCoverPeople {
+			if !validPersonIdentity(&person) || seenCoverPeople[person.Slug] {
+				fail(fmt.Errorf("record %d has invalid or duplicate additional cover person identity", i))
+			}
+			seenCoverPeople[person.Slug] = true
 		}
 		if r.Origin != nil && (!validCatalogOrigin(r.Origin.Code) || strings.TrimSpace(r.Origin.Name) == "") {
 			fail(fmt.Errorf("record %d has an invalid origin", i))
@@ -260,7 +309,20 @@ func main() {
 			continue
 		}
 
-		if r.Work.ID == "" || r.Work.OriginalTitle == "" || r.Work.FeaturedNames == "" || !validCatalogOrigin(r.Work.OriginCode) || r.Edition.ID == "" || r.Edition.WorkID != r.Work.ID || r.Edition.MetadataSourceURL == "" {
+		if r.Work.PublicationType == "" {
+			r.Work.PublicationType = model.PublicationTypePhotobook
+		}
+		if r.Work.PublicationType != model.PublicationTypePhotobook && r.Work.PublicationType != model.PublicationTypeMagazineIssue {
+			fail(fmt.Errorf("record %d has invalid publication type", i))
+		}
+		if r.Work.PublicationType == model.PublicationTypeMagazineIssue {
+			if !regexp.MustCompile(`^\d{4}-(0[1-9]|1[0-2])$`).MatchString(r.Work.IssueMonth) || !validPersonIdentity(r.CoverPerson) {
+				fail(fmt.Errorf("record %d magazine issue requires an issue month and verified cover model", i))
+			}
+		} else if strings.TrimSpace(r.Work.FeaturedNames) == "" || r.Work.IssueMonth != "" {
+			fail(fmt.Errorf("record %d photobook requires a featured model and cannot carry an issue month", i))
+		}
+		if r.Work.ID == "" || r.Work.OriginalTitle == "" || !validCatalogOrigin(r.Work.OriginCode) || r.Edition.ID == "" || r.Edition.WorkID != r.Work.ID || r.Edition.MetadataSourceURL == "" {
 			fail(fmt.Errorf("record %d lacks verified catalog identity", i))
 		}
 		if r.Edition.Format != "physical" && r.Edition.Format != "digital" {
@@ -300,11 +362,13 @@ func main() {
 			return err
 		}
 		featuredPeople := map[string]model.Person{}
+		coverPeople := map[string]model.Person{}
 		knownSources := map[string]bool{}
 		if err := tx.Clauses(clause.OnConflict{DoNothing: true}).Create(&model.Origin{Code: "TW", Name: "Taiwan", NativeName: "台灣"}).Error; err != nil {
 			return err
 		}
 		for recordIndex, r := range records {
+			normalizeReleaseDate(&r.Edition)
 			if r.Origin != nil {
 				if err := tx.Clauses(clause.OnConflict{DoNothing: true}).Create(r.Origin).Error; err != nil {
 					return err
@@ -321,7 +385,7 @@ func main() {
 				if found.Error != nil && found.Error != gorm.ErrRecordNotFound {
 					return found.Error
 				}
-				workUpdates := []string{"original_title", "featured_names", "summary", "photographer", "updated_at"}
+				workUpdates := []string{"original_title", "featured_names", "summary", "photographer", "publication_type", "issue_month", "issue_number", "updated_at"}
 				if r.Work.CoverURL != "" {
 					workUpdates = append(workUpdates, "cover_url")
 				}
@@ -373,6 +437,42 @@ func main() {
 						return err
 					}
 				}
+				if r.CoverPerson != nil {
+					person := *r.CoverPerson
+					if known, ok := coverPeople[person.Slug]; ok {
+						person = known
+					} else {
+						if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "slug"}}, DoNothing: true}).Create(&person).Error; err != nil {
+							return err
+						}
+						if err := tx.Where("slug = ?", person.Slug).First(&person).Error; err != nil {
+							return err
+						}
+						coverPeople[person.Slug] = person
+					}
+					credit := model.WorkPerson{WorkID: r.Work.ID, PersonID: person.ID, Role: "cover_model", CreditedName: person.CanonicalPublicName, CreditSource: "verified_cover_credit"}
+					if err := tx.Omit("Work", "Person").Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "work_id"}, {Name: "person_id"}, {Name: "role"}}, DoUpdates: clause.AssignmentColumns([]string{"credited_name", "credit_source", "updated_at"})}).Create(&credit).Error; err != nil {
+						return err
+					}
+				}
+				for _, additional := range r.AdditionalCoverPeople {
+					person := additional
+					if known, ok := coverPeople[person.Slug]; ok {
+						person = known
+					} else {
+						if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "slug"}}, DoNothing: true}).Create(&person).Error; err != nil {
+							return err
+						}
+						if err := tx.Where("slug = ?", person.Slug).First(&person).Error; err != nil {
+							return err
+						}
+						coverPeople[person.Slug] = person
+					}
+					credit := model.WorkPerson{WorkID: r.Work.ID, PersonID: person.ID, Role: "cover_model", CreditedName: person.CanonicalPublicName, CreditSource: "verified_cover_credit"}
+					if err := tx.Omit("Work", "Person").Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "work_id"}, {Name: "person_id"}, {Name: "role"}}, DoUpdates: clause.AssignmentColumns([]string{"credited_name", "credit_source", "updated_at"})}).Create(&credit).Error; err != nil {
+						return err
+					}
+				}
 				for _, image := range r.PublisherMedia {
 					asset := model.CatalogMedia{EntityType: "edition", EntityID: r.Edition.ID, MediaType: image.MediaType, OriginalURL: image.OriginalURL, StorageURL: image.StorageURL, SourceURL: image.SourceURL, IsPrimary: image.IsPrimary}
 					if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "entity_type"}, {Name: "entity_id"}, {Name: "media_type"}}, DoUpdates: clause.AssignmentColumns([]string{"original_url", "storage_url", "source_url", "is_primary", "updated_at"})}).Create(&asset).Error; err != nil {
@@ -414,6 +514,12 @@ func main() {
 				} else if result.Error != nil {
 					return result.Error
 				}
+				// Preserve an explicit disabled state; GORM applies the field's true default to false on Create.
+				if r.Source.Adapter == "manual_page_capture" && !r.Source.Enabled {
+					if err := tx.Model(&model.Source{}).Where("id = ?", r.Source.ID).Update("enabled", false).Error; err != nil {
+						return err
+					}
+				}
 				knownSources[r.Source.ID] = true
 			}
 			payload, _ := json.Marshal(r.Batch)
@@ -435,7 +541,11 @@ func main() {
 				return err
 			}
 			if result.Rejected != 0 {
-				return fmt.Errorf("ingestion rejected %d items; rollback", result.Rejected)
+				externalIDs := make([]string, 0, len(r.Batch.Items))
+				for _, item := range r.Batch.Items {
+					externalIDs = append(externalIDs, item.ExternalID)
+				}
+				return fmt.Errorf("record %d (work %s, source %s, external IDs %s) ingestion rejected %d of %d items; rollback", recordIndex, r.Work.ID, r.Batch.SourceID, strings.Join(externalIDs, ","), result.Rejected, len(r.Batch.Items))
 			}
 			listingImages := map[string]model.Listing{}
 			assets := []model.CatalogMedia{}

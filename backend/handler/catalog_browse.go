@@ -17,6 +17,13 @@ func NewCatalogBrowseHandler(s *service.CatalogService) *CatalogBrowseHandler {
 func browseQuery(c echo.Context) model.CatalogBrowseQuery {
 	return model.CatalogBrowseQuery{Query: strings.TrimSpace(c.QueryParam("q")), ID: c.Param("id"), Page: parsePositiveInt(c.QueryParam("page"), 1), PageSize: min(parsePositiveInt(c.QueryParam("pageSize"), 24), 50)}
 }
+func parsePublicationType(c echo.Context) (string, error) {
+	value := strings.TrimSpace(c.QueryParam("publicationType"))
+	if value != "" && value != model.PublicationTypePhotobook && value != model.PublicationTypeMagazineIssue {
+		return "", echo.NewHTTPError(400, "publicationType must be photobook or magazine_issue")
+	}
+	return value, nil
+}
 func catalogPage[T any](c echo.Context, items []T, total int64, p model.CatalogBrowseQuery) error {
 	pages := (total + int64(p.PageSize) - 1) / int64(p.PageSize)
 	return c.JSON(http.StatusOK, map[string]any{"items": items, "total": total, "totalPages": pages, "page": p.Page, "pageSize": p.PageSize})
@@ -45,6 +52,11 @@ func (h *CatalogBrowseHandler) DirectoryBooks(c echo.Context) error {
 		return echo.NewHTTPError(400, "page is too large")
 	}
 	p.Format = c.QueryParam("format")
+	publicationType, err := parsePublicationType(c)
+	if err != nil {
+		return err
+	}
+	p.PublicationType = publicationType
 	p.Language = strings.TrimSpace(c.QueryParam("language"))
 	p.Year = c.QueryParam("year")
 	p.Person = c.QueryParam("model")
@@ -87,6 +99,11 @@ func (h *CatalogBrowseHandler) Listings(c echo.Context) error {
 		return echo.NewHTTPError(400, "status must be active or sold")
 	}
 	p.Format = c.QueryParam("format")
+	publicationType, err := parsePublicationType(c)
+	if err != nil {
+		return err
+	}
+	p.PublicationType = publicationType
 	if p.Format != "" && p.Format != "physical" && p.Format != "digital" {
 		return echo.NewHTTPError(400, "format must be physical or digital")
 	}
@@ -127,6 +144,11 @@ func (h *CatalogBrowseHandler) MarketplaceListings(c echo.Context) error {
 		return echo.NewHTTPError(400, "status must be all, active, or completed")
 	}
 	p.Format = strings.TrimSpace(c.QueryParam("format"))
+	publicationType, err := parsePublicationType(c)
+	if err != nil {
+		return err
+	}
+	p.PublicationType = publicationType
 	if p.Format != "" && p.Format != "physical" && p.Format != "digital" {
 		return echo.NewHTTPError(400, "format must be physical or digital")
 	}

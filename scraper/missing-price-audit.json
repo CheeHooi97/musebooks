@@ -1,0 +1,3330 @@
+{
+  "invalid_listings": [
+    {
+      "currency": "TWD",
+      "edition_id": "edition-20d765ecc06ca5dd16afb5b9",
+      "id": "listing-4ad7d5c3cf627e7a608ace5d9a9da01a",
+      "price_minor": 0,
+      "source_id": "ruten-tw",
+      "status": "completed",
+      "title": "阿喜(林育品) 私攝概念寫真集 馬尾女孩最無敵",
+      "url": "https://www.ruten.com.tw/item/22624864044811/"
+    }
+  ],
+  "missing": [
+    {
+      "featured_names": "希兒",
+      "format": "digital",
+      "id": "edition-b4a72446a8557af3e48434c0",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.bookwalker.com.tw/product/138324",
+      "original_title": "Angel：希兒寫真書"
+    },
+    {
+      "featured_names": "BIVI華華",
+      "format": "digital",
+      "id": "edition-5254368aeb56e4076ae947e4",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/bivi001",
+      "original_title": "BIVI華華『最美好的樣子』"
+    },
+    {
+      "featured_names": "寶兒",
+      "format": "digital",
+      "id": "edition-e641bc1592a1c564d82b937b",
+      "isbn": "9786267683781",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015552499",
+      "original_title": "Babe Fantasy‧寶兒寫真書【隨書附贈寫真海報（四款隨機投入一款）】"
+    },
+    {
+      "featured_names": "芳婷",
+      "format": "digital",
+      "id": "edition-36208d51141e0e5458315ae3",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=RfJcDwAAQBAJ",
+      "original_title": "Heartbeat 芳婷電子寫真書"
+    },
+    {
+      "featured_names": "陳禹霏",
+      "format": "digital",
+      "id": "edition-c2ed47ec94600880077309e7",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://24h.pchome.com.tw/books/prod/DJBR1V-D900IQ9SB",
+      "original_title": "HyRead FAIRY陳禹霏 ShaShin首本個人寫真(電子書) - PChome 24h購物"
+    },
+    {
+      "featured_names": "李馨",
+      "format": "digital",
+      "id": "edition-ec31fa36d77175c455cff4ae",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://24h.pchome.com.tw/books/prod/DJBR5I-D900IKYFO",
+      "original_title": "HyRead 李馨CinCin:ShaShin celeb pres(電子書) - PChome 24h購物"
+    },
+    {
+      "featured_names": "謝立琪",
+      "format": "digital",
+      "id": "edition-fbc9a6611a0696a5752038ea",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876348",
+      "original_title": "KiKi謝立琪 ShaShin個人寫真書2022(電子書)"
+    },
+    {
+      "featured_names": "廉世彬",
+      "format": "digital",
+      "id": "edition-2097a35e99d26aa582551c38",
+      "isbn": "8982002000023",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kobo.com/tw/zh/ebook/ucb5JI1zFTa93qIVVPlpHg",
+      "original_title": "Rakuten Girls 迷你寫真集 廉世彬 Yanmaga Cup Yanmaga 數位寫真集"
+    },
+    {
+      "featured_names": "溫妮",
+      "format": "digital",
+      "id": "edition-a5688034fe01d00db641bdc1",
+      "isbn": "8982002000019",
+      "listing_count": 0,
+      "metadata_source_url": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAHA",
+      "original_title": "Rakuten Girls 迷你寫真集 溫妮 Yanmaga Cup Yanmaga 數位寫真集"
+    },
+    {
+      "featured_names": "禹菡",
+      "format": "digital",
+      "id": "edition-5c2973a95d0da2282cd11a47",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAGZ",
+      "original_title": "Rakuten Girls 迷你寫真集 禹菡 Yanmaga Cup Yanmaga 數位寫真集"
+    },
+    {
+      "featured_names": "穎樂",
+      "format": "digital",
+      "id": "edition-ce4697cf80112022f56cceaa",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAIL",
+      "original_title": "Rakuten Girls 迷你寫真集 穎樂 Yanmaga Cup Yanmaga 數位寫真集"
+    },
+    {
+      "featured_names": "若潼",
+      "format": "digital",
+      "id": "edition-e547773819762d3ad4337a79",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://24h.pchome.com.tw/books/prod/DJBQ4C-D900JYAJU",
+      "original_title": "Rakuten Girls 迷你寫真集 若潼 Yanmaga Cup Yanmaga 數位寫真集"
+    },
+    {
+      "featured_names": "高橋佳帆",
+      "format": "digital",
+      "id": "edition-20fd1d26b7518aba2e3f641c",
+      "isbn": "8982002000025",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kobo.com/tw/zh/ebook/YLxZIBkZVTuQgCCDkypKtg",
+      "original_title": "Rakuten Girls 迷你寫真集 高橋佳帆 Yanmaga Cup Yanmaga 數位寫真集"
+    },
+    {
+      "featured_names": "葉魚魚",
+      "format": "digital",
+      "id": "edition-e8e55da89564c50f39d6f126",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/fish08a",
+      "original_title": "SO SEXY!! 魚魚-火辣空姐 性感の熱舞"
+    },
+    {
+      "featured_names": "安希",
+      "format": "digital",
+      "id": "edition-b6311e4e87a4efaaba4ec176",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.hamibook.com.tw/book/0100225821",
+      "original_title": "Secret Girls寫真-安希 超人氣網拍甜心(PDF)"
+    },
+    {
+      "featured_names": "愛語莎Vanessa、李馨、莙莙Queena、小林兒",
+      "format": "digital",
+      "id": "edition-45092ed417a4da737bb2ec65",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://24h.pchome.com.tw/books/prod/DJBQ2E-D900DT3DQ",
+      "original_title": "ShaShin celeb present 4 in 1 四合一寫真書"
+    },
+    {
+      "featured_names": "祈錦鈅",
+      "format": "digital",
+      "id": "edition-bbcfeb54c914bbac99394727",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876985",
+      "original_title": "ShaShin-Maxine_祈錦鈅(電子書)"
+    },
+    {
+      "featured_names": "言嘉佑",
+      "format": "digital",
+      "id": "edition-288c77305b00b5bbcb8f190a",
+      "isbn": "9786264159883",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.momoshop.com.tw/product/14197050",
+      "original_title": "Virtual 虛擬情人：言嘉佑數位寫真"
+    },
+    {
+      "featured_names": "林祐青",
+      "format": "digital",
+      "id": "edition-bac6fe8d04d2dcfaf5e3f4d2",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876347",
+      "original_title": "Vivi林祐青 ShaShin首本個人寫真書(電子書)"
+    },
+    {
+      "featured_names": "NINI",
+      "format": "digital",
+      "id": "edition-1bccc212efb05dc912e384ba",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/nini001",
+      "original_title": "《 NINIBack XYAB 》"
+    },
+    {
+      "featured_names": "張若錡",
+      "format": "digital",
+      "id": "edition-631e16db5d6706bc9235cbdf",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=Zmj9DwAAQBAJ\u0026hl=zh_TW\u0026gl=TW",
+      "original_title": "《張若錡◇錡遇Angus》Kenting Taiwan 墾丁台灣版【上冊】"
+    },
+    {
+      "featured_names": "張若錡",
+      "format": "digital",
+      "id": "edition-4ab86db8ef2bd6bda8417842",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=ZGj9DwAAQBAJ\u0026hl=zh_TW\u0026gl=TW",
+      "original_title": "《張若錡◇錡遇Angus》Kenting Taiwan 墾丁台灣版【下冊】"
+    },
+    {
+      "featured_names": "蔡譯心",
+      "format": "digital",
+      "id": "edition-43be2ab396d2b61c9bb1871c",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=zJbZDwAAQBAJ",
+      "original_title": "《打開你的心》蔡譯心寫真書"
+    },
+    {
+      "featured_names": "波波蓁",
+      "format": "digital",
+      "id": "edition-1dbdd8e6da3746cfce8372dc",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0049",
+      "original_title": "《蓁・時》波波蓁首本電子寫真"
+    },
+    {
+      "featured_names": "祈錦鈅",
+      "format": "digital",
+      "id": "edition-4a338e22e4acff275ca15396",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2800000214307/",
+      "original_title": "【電子書】不祈而遇-祈錦鈅數位寫真書 －金石堂"
+    },
+    {
+      "featured_names": "袁艾菲",
+      "format": "digital",
+      "id": "edition-99df91d89e9d75145637f31d",
+      "isbn": "9789869323963",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2800000008304/",
+      "original_title": "【電子書】想入菲非"
+    },
+    {
+      "featured_names": "愛語莎Vanessa",
+      "format": "digital",
+      "id": "edition-bb10338b197cdd1ac17b19e2",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2800000161189/",
+      "original_title": "【電子書】愛語莎Vanessa - ShaShin celeb present寫真書 －金石堂"
+    },
+    {
+      "featured_names": "徐薇涵",
+      "format": "digital",
+      "id": "edition-d9afe250b87cb9d62704b240",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2800000212568/",
+      "original_title": "【電子書】海豚 徐薇涵 X Little Journey 首本個人寫真 －金石堂"
+    },
+    {
+      "featured_names": "李芷霖",
+      "format": "digital",
+      "id": "edition-38764c857333da6f6d6b66b6",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876952",
+      "original_title": "ゼロ距離 リンリン李芷霖數位寫真書（霖距離日文版）(電子書)"
+    },
+    {
+      "featured_names": "詩雅",
+      "format": "digital",
+      "id": "edition-734288f43c2cc80eb07eb301",
+      "isbn": "9789571095103",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014189633",
+      "original_title": "一起上課吧！：－詩雅數位寫真集(電子書)"
+    },
+    {
+      "featured_names": "寧寧",
+      "format": "digital",
+      "id": "edition-b3ee37ceb896cb73aae77147",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=mav7DwAAQBAJ",
+      "original_title": "不能錯過寧 寧寧數位寫真"
+    },
+    {
+      "featured_names": "冰熙",
+      "format": "digital",
+      "id": "edition-e90312a9165af0423eec0d2a",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/bingbabybaby-0707",
+      "original_title": "冰熙 數位寫真-情慾流露 夏日啦啦隊(B)"
+    },
+    {
+      "featured_names": "冰熙",
+      "format": "digital",
+      "id": "edition-064da561d7cb7798f6a9a18f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/bingbabybaby-121801",
+      "original_title": "冰熙 數位寫真-戀上冰熙學妹(A)"
+    },
+    {
+      "featured_names": "小花（UPlive）",
+      "format": "digital",
+      "id": "edition-a82d3f738cf93abbe09ef28d",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=6UwbEAAAQBAJ",
+      "original_title": "冷豔御姐型直播主-小花 Flower寫真書"
+    },
+    {
+      "featured_names": "凱琪 K7",
+      "format": "digital",
+      "id": "edition-e73ef0b0aa1873fb7cded15c",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876982",
+      "original_title": "凱琪 K7 X ShaShin \"Winner Winner\" 2020個人寫真書(電子書)"
+    },
+    {
+      "featured_names": "林倪安",
+      "format": "digital",
+      "id": "edition-fedd289b24df5764c698682a",
+      "isbn": "9786264035057",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/013664393",
+      "original_title": "剛好遇見倪：倪安數位寫真(電子書)"
+    },
+    {
+      "featured_names": "鄔唯",
+      "format": "digital",
+      "id": "edition-c317d0ed0bf84dfd7b14cc6b",
+      "isbn": "9786263779211",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/013633735",
+      "original_title": "只因唯你：鄔唯數位寫真(電子書)"
+    },
+    {
+      "featured_names": "吳慈敏",
+      "format": "digital",
+      "id": "edition-1dec13fb2d80a0f2005bd545",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876984",
+      "original_title": "啾啾Chu Chu’s 2020寫真書(電子書)"
+    },
+    {
+      "featured_names": "韓智恩",
+      "format": "digital",
+      "id": "edition-813ac2f2c9c5d6ea446220ac",
+      "isbn": "9789571095646",
+      "listing_count": 0,
+      "metadata_source_url": "https://cp.bookwalker.com.tw/event/2020/20200416/index.html",
+      "original_title": "夏日恩典：韓智恩數位寫真"
+    },
+    {
+      "featured_names": "大萌妹子",
+      "format": "digital",
+      "id": "edition-cfc5734b3e4e6f918620f3f9",
+      "isbn": "9789571095868",
+      "listing_count": 0,
+      "metadata_source_url": "https://reading.udn.com/ebook/store/store_product.do?pid=15310",
+      "original_title": "大萌妹子 同名數位寫真"
+    },
+    {
+      "featured_names": "夏晴",
+      "format": "digital",
+      "id": "edition-47e88d19c3b6455fb0731c6c",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=eLdpEAAAQBAJ",
+      "original_title": "天使と悪魔（女神系甜心夏晴）"
+    },
+    {
+      "featured_names": "黃鈺文、潘維亞、哈霓萱、凱蒂兒、安妃、雪兒（女神降臨）",
+      "format": "digital",
+      "id": "edition-d21a97221d8ef489fed80dd1",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=UrdpEAAAQBAJ",
+      "original_title": "女神降臨1"
+    },
+    {
+      "featured_names": "多麗Doris（女神降臨）、莎莎（女神降臨）、Yvonne（女神降臨）、花苡琍、徐瑜瑜、麗莎（女神降臨）",
+      "format": "digital",
+      "id": "edition-de6c1d0a78556f2bec1cd831",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=ZLdpEAAAQBAJ",
+      "original_title": "女神降臨2"
+    },
+    {
+      "featured_names": "張鳳如",
+      "format": "digital",
+      "id": "edition-fe6cb35ce76ce69fa242a012",
+      "isbn": "9789571095059",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014360184",
+      "original_title": "如影隨形： Lulu張鳳如數位寫真書(電子書)"
+    },
+    {
+      "featured_names": "小林兒",
+      "format": "digital",
+      "id": "edition-980fa2c113a953ef533e8b8d",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876978",
+      "original_title": "小林兒Royi -ShaShin celeb present寫真書(電子書)"
+    },
+    {
+      "featured_names": "椎名心春",
+      "format": "digital",
+      "id": "edition-f80a39507f84f58b276ceb0e",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details/%E6%A4%8E%E5%90%8D%E5%BF%83%E6%98%A5_%E6%A4%8E%E5%90%8D%E5%BF%83%E6%98%A5%E5%8F%B0%E7%81%A3%E5%AF%AB%E7%9C%9F%E9%9B%86_%E5%B1%B1%E7%8F%8D_%E6%95%B8%E4%BD%8D%E9%99%90%E5%AE%9A%E7%89%88?id=exkBEgAAQBAJ",
+      "original_title": "山珍：椎名心春台灣寫真集"
+    },
+    {
+      "featured_names": "藍星蕾",
+      "format": "digital",
+      "id": "edition-7289b1a9aa21ffd7e1c17492",
+      "isbn": "9789571095738",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/013426305",
+      "original_title": "布蕾甜你心：藍星蕾數位寫真(電子書)"
+    },
+    {
+      "featured_names": "陳子玄",
+      "format": "digital",
+      "id": "edition-4a8f94815039c1613f1f6c6e",
+      "isbn": "9786263770188",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/013627089",
+      "original_title": "心懸子玄：陳子玄數位寫真(電子書)"
+    },
+    {
+      "featured_names": "心玥",
+      "format": "digital",
+      "id": "edition-1c972cf48ea39a8991ee472f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=jrdpEAAAQBAJ",
+      "original_title": "心玥個人首本寫真書 傾城之玥"
+    },
+    {
+      "featured_names": "SHOYA",
+      "format": "digital",
+      "id": "edition-a234f8e1d7199024c7c75387",
+      "isbn": "9786264450362",
+      "listing_count": 0,
+      "metadata_source_url": "https://reading.udn.com/ebook/store/store_product.do?pid=139784",
+      "original_title": "慾見SHOYA：筋肉教練寫真"
+    },
+    {
+      "featured_names": "湘綾",
+      "format": "digital",
+      "id": "edition-ebc3e9f3e1401713a9d7d7f6",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/xiangling001",
+      "original_title": "我愛綾520：湘綾寫真"
+    },
+    {
+      "featured_names": "王寶珶",
+      "format": "digital",
+      "id": "edition-18d96ff89838b8cfd40487a2",
+      "isbn": "9789571095325",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014378268",
+      "original_title": "抽象畫：王寶珶Bernice數位寫真（含影音）(電子書)"
+    },
+    {
+      "featured_names": "藍星蕾",
+      "format": "digital",
+      "id": "edition-b7a5d226ee811ba7145b400d",
+      "isbn": "9786263565579",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015270152",
+      "original_title": "星有所屬：藍星蕾數位寫真(電子書)"
+    },
+    {
+      "featured_names": "林茉晶",
+      "format": "digital",
+      "id": "edition-f6ce97eb4eada0ce9f9a2d9a",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.hamibook.com.tw/book/0100285028",
+      "original_title": "晶不起誘惑-林茉晶個人寫真"
+    },
+    {
+      "featured_names": "楊宇騰YU",
+      "format": "digital",
+      "id": "edition-fce5f9506ddfa7ac8d2b5c1f",
+      "isbn": "9789865244767",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.airitibooks.com/Publication/Details?publicationID=P20220110162",
+      "original_title": "楊宇騰YU 1st寫真集：Half"
+    },
+    {
+      "featured_names": "楊宇騰YU",
+      "format": "digital",
+      "id": "edition-b156ecce9ec2e89542ffb5d6",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.bookwalker.com.tw/product/154263",
+      "original_title": "楊宇騰YU寫真集x黃中平：光影之間"
+    },
+    {
+      "featured_names": "劉淇",
+      "format": "digital",
+      "id": "edition-e7229205490000ea2ec259d9",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.pubu.com.tw/magazine/686433",
+      "original_title": "濕樂園：劉淇《SOAKING WET》寫真書"
+    },
+    {
+      "featured_names": "劉淇",
+      "format": "digital",
+      "id": "edition-ecd90d51e7d23b543494ca73",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.pubu.com.tw/magazine/686437",
+      "original_title": "濕樂園：劉淇《SOAKING WET》寫真書"
+    },
+    {
+      "featured_names": "糖果（UPlive）",
+      "format": "digital",
+      "id": "edition-9f1293c84bedd33a2c7dd754",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=2_8aEAAAQBAJ",
+      "original_title": "甜美萌主-糖果 Candy寫真書"
+    },
+    {
+      "featured_names": "藍星蕾",
+      "format": "digital",
+      "id": "edition-401ff12c65118df4a661786f",
+      "isbn": "9789571095851",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014442995",
+      "original_title": "真心愛上蕾：藍星蕾數位寫真(電子書)"
+    },
+    {
+      "featured_names": "禾羽",
+      "format": "digital",
+      "id": "edition-bf815555ab8d575ac447d0f7",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://24h.pchome.com.tw/books/prod/DJBQ2E-D900JY2UU",
+      "original_title": "禾你相羽"
+    },
+    {
+      "featured_names": "簡懿佳",
+      "format": "digital",
+      "id": "edition-f4e08d4bdbc08c4b30f6d549",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2800000111228/",
+      "original_title": "簡單說懿佳"
+    },
+    {
+      "featured_names": "潔西",
+      "format": "digital",
+      "id": "edition-f0529d56ed87df37a6e035e1",
+      "isbn": "9786263385948",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/013426291",
+      "original_title": "絕對美麗：潔西 Jessie 數位寫真(電子書)"
+    },
+    {
+      "featured_names": "葉魚魚",
+      "format": "digital",
+      "id": "edition-b194f43c65e091ab57865fa2",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/fish0824",
+      "original_title": "美乳甜心魚魚-青春無敵體育服-數位寫真"
+    },
+    {
+      "featured_names": "宋羽葤",
+      "format": "digital",
+      "id": "edition-c4791d81857c36c833ca110d",
+      "isbn": "9786263381780",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/013427987",
+      "original_title": "羽葤的小宇宙：宋羽葤數位寫真"
+    },
+    {
+      "featured_names": "莙莙Queena",
+      "format": "digital",
+      "id": "edition-7823f5f0fe0febea976718a7",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876979",
+      "original_title": "莙莙Queena - ShaShin celeb present寫真書(電子書)"
+    },
+    {
+      "featured_names": "嵐嵐（UPlive）",
+      "format": "digital",
+      "id": "edition-ce9e6015b9677ce2e29c9db4",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=QwkbEAAAQBAJ",
+      "original_title": "蜜糖型直播主-嵐嵐 LAN LAN寫真書"
+    },
+    {
+      "featured_names": "羽庭",
+      "format": "digital",
+      "id": "edition-9572e63f18aeec2d2c28fcdb",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.hamibook.com.tw/book/0100406339",
+      "original_title": "裸心時刻 羽庭"
+    },
+    {
+      "featured_names": "迷路班比",
+      "format": "digital",
+      "id": "edition-ea0e5a82d7868692e0d60073",
+      "isbn": "9789571094687",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014360187",
+      "original_title": "迷路班比寫真集：情迷義大利(電子書)"
+    },
+    {
+      "featured_names": "迷路班比",
+      "format": "digital",
+      "id": "edition-f0eb220c99cd01df18b084ae",
+      "isbn": "9789571094670",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014360188",
+      "original_title": "迷路班比寫真集：戀上馬特洪峰(電子書)"
+    },
+    {
+      "featured_names": "優菈",
+      "format": "digital",
+      "id": "edition-d3f75578fba348e20cd0248a",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=4H8aEAAAQBAJ",
+      "original_title": "鄰家女孩型直播主-優菈 YOLA寫真書"
+    },
+    {
+      "featured_names": "mi（UPlive）",
+      "format": "digital",
+      "id": "edition-b152e2065c0247a3287a18c2",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://play.google.com/store/books/details?id=j4waEAAAQBAJ",
+      "original_title": "酷艷教主-mi寫真書"
+    },
+    {
+      "featured_names": "佳娜",
+      "format": "digital",
+      "id": "edition-e6f55c6968a47c4d3c72eb3d",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0046",
+      "original_title": "開始認識佳娜-我是佳娜(ebook)"
+    },
+    {
+      "featured_names": "護理師依依",
+      "format": "digital",
+      "id": "edition-4d6fef3d878c556ef86a5d7d",
+      "isbn": "9786263388291",
+      "listing_count": 0,
+      "metadata_source_url": "https://reading.udn.com/ebook/store/store_product.do?pid=47287",
+      "original_title": "電子書〉獨依無二 護理師 依依 數位寫真"
+    },
+    {
+      "featured_names": "李芷霖",
+      "format": "digital",
+      "id": "edition-448869555644ae58b6bf5784",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876385",
+      "original_title": "霖距離實體書-李芷霖私密數位版III（無寫真影片）(電子書)"
+    },
+    {
+      "featured_names": "李芷霖",
+      "format": "digital",
+      "id": "edition-aa9ad27cf79d804f51b8ec09",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876384",
+      "original_title": "霖距離實體書-李芷霖私密數位版II（無寫真影片）(電子書)"
+    },
+    {
+      "featured_names": "李芷霖",
+      "format": "digital",
+      "id": "edition-be2e3fd3b560eacb45b6082c",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876383",
+      "original_title": "霖距離實體書-李芷霖私密數位版I（無寫真影片）(電子書)"
+    },
+    {
+      "featured_names": "願願",
+      "format": "digital",
+      "id": "edition-f90769b9989e8179374eb697",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015876394",
+      "original_title": "願願yuan《願你擁有》ShaShin個人寫真書(電子書)"
+    },
+    {
+      "featured_names": "林育品",
+      "format": "digital",
+      "id": "edition-cdb1e9c483f54d53e6d2085d",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cht.com.tw/zh-tw/home/cht/messages/2015/msg-150212-173544",
+      "original_title": "馬尾女孩最無敵：阿喜私攝概念寫真書"
+    },
+    {
+      "featured_names": "葉魚魚",
+      "format": "digital",
+      "id": "edition-74750fd61d0cfb64b475c4dd",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/fishyea33-2023101401",
+      "original_title": "魚魚 數位寫真-性感水手 130P-18禁(C)"
+    },
+    {
+      "featured_names": "葉魚魚",
+      "format": "digital",
+      "id": "edition-8cb7548d1ac58ef06aa36c4f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/fishyea33-2023111301",
+      "original_title": "魚魚 數位寫真-激薄透水手服-18禁(D)"
+    },
+    {
+      "featured_names": "葉魚魚",
+      "format": "digital",
+      "id": "edition-63fcc6956e25c92b86e39254",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/fishyea33-2082401",
+      "original_title": "魚魚 數位寫真-熱浪甜心-144P-18禁(B)"
+    },
+    {
+      "featured_names": "葉魚魚",
+      "format": "digital",
+      "id": "edition-71248acc229ebdef66f85258",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/fishyea33-2023062101",
+      "original_title": "魚魚 數位寫真-裸體圍裙-18禁(A)"
+    },
+    {
+      "featured_names": "郭書瑤",
+      "format": "physical",
+      "id": "edition-ce3cb8b5acafb5b106fc692e",
+      "isbn": "9787539254869",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/001198162",
+      "original_title": "19歲的微熱（簡體書）"
+    },
+    {
+      "featured_names": "張安琪",
+      "format": "physical",
+      "id": "edition-7fb4f0b08a1ce217e6a30ce1",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0037",
+      "original_title": "2020【琪待有你】Angela張安琪個人寫真書"
+    },
+    {
+      "featured_names": "林莎",
+      "format": "physical",
+      "id": "edition-30cae489b71aa0fe22cf739f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.ruten.com.tw/item/22613373876604/",
+      "original_title": "2026《Honey》林莎寫真書"
+    },
+    {
+      "featured_names": "林莎",
+      "format": "physical",
+      "id": "edition-3c70d289609fa053852d3a21",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.ruten.com.tw/item/22613373876604/",
+      "original_title": "2026《Honey》林莎寫真書"
+    },
+    {
+      "featured_names": "禾羽",
+      "format": "physical",
+      "id": "edition-428ac34e1f9d0ee40ea68ae5",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kaboom.tw/products/2026-kimi-in-okinawa-photo-book",
+      "original_title": "2026《禾你相羽 in Okinawa》寫真書"
+    },
+    {
+      "featured_names": "禾羽",
+      "format": "physical",
+      "id": "edition-4cc35fcac09a8d9cde684102",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kaboom.tw/products/2026-kimi-in-okinawa-photo-book",
+      "original_title": "2026《禾你相羽 in Okinawa》寫真書"
+    },
+    {
+      "featured_names": "蘋蘋澎澎、湘綾",
+      "format": "physical",
+      "id": "edition-51b040d29f2ce074f6e91c36",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://pinpinponpon627.waca.tw/product/detail/2589988",
+      "original_title": "2026「純·欲姊姊特休中」寫真單書"
+    },
+    {
+      "featured_names": "鄭家純",
+      "format": "physical",
+      "id": "edition-e7eb936d27df20e75a5b63af",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://hkroadsidestand.org/products/鄭家純-十週年紀念寫真-28純熟-硬殼精裝寫真書-熱銷慶功版",
+      "original_title": "28純熟：鄭家純十週年紀念寫真"
+    },
+    {
+      "featured_names": "林莎",
+      "format": "physical",
+      "id": "edition-b09bcc35a33c84064bfbf1fc",
+      "isbn": "9786263778269",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/013233346",
+      "original_title": "3分鐘熱度-林莎 OKINAWA 沖繩写真-"
+    },
+    {
+      "featured_names": "簡拉娜",
+      "format": "physical",
+      "id": "edition-fad2ed84ae43e6fed2becd36",
+      "isbn": "9789579199315",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900087392/",
+      "original_title": "9125 days about me 簡拉娜同名寫真書"
+    },
+    {
+      "featured_names": "李優",
+      "format": "physical",
+      "id": "edition-896c90b75ec070b5356fc698",
+      "isbn": "9789869596374",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/006769378",
+      "original_title": "ARTITUDE：李優Uriko首本寫真相冊"
+    },
+    {
+      "featured_names": "鄭若青",
+      "format": "physical",
+      "id": "edition-a41f6a5b41cf12b6942fe894",
+      "isbn": "9789860635072",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/010221840",
+      "original_title": "Aikyo鄭若青首本個人紀念寫真集：12 Secrets"
+    },
+    {
+      "featured_names": "艾蜜絲",
+      "format": "physical",
+      "id": "edition-762f9e368c05dc64a7a39c5c",
+      "isbn": "9789571069524",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/006078447",
+      "original_title": "Amis L. for you艾蜜絲浪漫寫真書"
+    },
+    {
+      "featured_names": "艾蜜絲",
+      "format": "physical",
+      "id": "edition-49f528f43e17e64ca89178e3",
+      "isbn": "9789863663713",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019990140533/",
+      "original_title": "Amis，私底下：南陽照射甜寫真"
+    },
+    {
+      "featured_names": "希兒",
+      "format": "physical",
+      "id": "edition-49f24d5dac483e29c276e561",
+      "isbn": "9786263213838",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kadokawa.com.tw/products/9786263213838",
+      "original_title": "Angel：希兒寫真書"
+    },
+    {
+      "featured_names": "希兒",
+      "format": "physical",
+      "id": "edition-21734f34d8ef9067e9383ee1",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/010351055",
+      "original_title": "Angel：希兒寫真書"
+    },
+    {
+      "featured_names": "艾瑞絲",
+      "format": "physical",
+      "id": "edition-dd15d6cad8e79188fc5b469a",
+      "isbn": "9789869596398",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019990168513/",
+      "original_title": "Aries夏日漫步"
+    },
+    {
+      "featured_names": "周曉涵",
+      "format": "physical",
+      "id": "edition-f3b84d20c1fd24ef3209f497",
+      "isbn": "9789869535724",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/006468936",
+      "original_title": "BE MINE，be yours（共二冊）"
+    },
+    {
+      "featured_names": "寶兒",
+      "format": "physical",
+      "id": "edition-b2a9959454f98bae93952c9f",
+      "isbn": "9786267683798",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910057989/",
+      "original_title": "Babe Fantasy‧寶兒寫真書【隨書附贈寫真海報（四款隨機投入一款）】"
+    },
+    {
+      "featured_names": "江紗那",
+      "format": "physical",
+      "id": "edition-0141ec78b3e0c3ac9de2ad3f",
+      "isbn": "9789869320528",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900086920/",
+      "original_title": "Chana心動霎那江紗那性感寫真書"
+    },
+    {
+      "featured_names": "周荀",
+      "format": "physical",
+      "id": "edition-a3b17fe957fe8c54efb87518",
+      "isbn": "9789869142571",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019990143329/",
+      "original_title": "DenKa百變精靈周荀個人寫真"
+    },
+    {
+      "featured_names": "陳禹霏",
+      "format": "physical",
+      "id": "edition-b9f3a7e837b46714d379f969",
+      "isbn": "9789860635027",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900098411/",
+      "original_title": "FAIRY：陳禹霏 首本個人寫真"
+    },
+    {
+      "featured_names": "李珠珢",
+      "format": "physical",
+      "id": "edition-0e90f0383790f677d1335309",
+      "isbn": "9786264342247",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014740702",
+      "original_title": "FIGHT FOR ALL：李珠珢的主場日記"
+    },
+    {
+      "featured_names": "李珠珢",
+      "format": "physical",
+      "id": "edition-41024106ea840482605ee2a9",
+      "isbn": "9786264342254",
+      "listing_count": 0,
+      "metadata_source_url": "https://isbn.ncl.edu.tw/FCKEDITOR_UploadFiles/1752563403.pdf",
+      "original_title": "FIGHT FOR ALL：李珠珢的主場日記"
+    },
+    {
+      "featured_names": "TOKKI CUTIE／李素泳、TOKKI CUTIE／恩惠、TOKKI CUTIE／高橋佳帆、TOKKI CUTIE／小婷、TOKKI CUTIE／孫孫、TOKKI CUTIE／棠棠、TOKKI CUTIE／百軒、TOKKI CUTIE／姸蓁、TOKKI CUTIE／十一、TOKKI CUTIE／貝拉、TOKKI CUTIE／飛飛、TOKKI CUTIE／小雲、TOKKI CUTIE／金世星、TOKKI CUTIE／容容、TOKKI CUTIE／娣奇D7、TOKKI CUTIE／礼美奈",
+      "format": "physical",
+      "id": "edition-b4dd69f8f6bd38f895ec4a56",
+      "isbn": "9786267776919",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015309196",
+      "original_title": "FIRST JUMP：TOKKI CUTIE 臺北伊斯特啦啦隊寫真故事 2025-2026"
+    },
+    {
+      "featured_names": "施菲亞",
+      "format": "physical",
+      "id": "edition-ad45369517a6953d720a1c95",
+      "isbn": "9789869320535",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2014200061493/",
+      "original_title": "Feiya菲你莫屬施菲亞性感寫真書"
+    },
+    {
+      "featured_names": "梁凱莉",
+      "format": "physical",
+      "id": "edition-ab901c7ad13f2cdca67c88fe",
+      "isbn": "9789571064406",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/005574348",
+      "original_title": "Girlfriend 梁凱莉寫真書"
+    },
+    {
+      "featured_names": "吳心緹",
+      "format": "physical",
+      "id": "edition-851a2fc4bc9f4b40f79f82b8",
+      "isbn": "9786263968097",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900104921/",
+      "original_title": "Holiday：吳心緹の寫真集(隨書加贈：光影四季寫真卡，四款隨機一款投入)"
+    },
+    {
+      "featured_names": "吳心緹",
+      "format": "physical",
+      "id": "edition-27fa25dc6cee5094e34c69fd",
+      "isbn": "9786269507696",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900099043/",
+      "original_title": "Hot Heart吳心緹．寫真【平裝版】"
+    },
+    {
+      "featured_names": "吳卓源",
+      "format": "physical",
+      "id": "edition-850f121327c9c196bc9eceb6",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fight30.com/zh-hant/products/julia-wu-juu-book",
+      "original_title": "Julia Wu 吳卓源 \"ju\u0026u\" 寫真書"
+    },
+    {
+      "featured_names": "啾啾JoJo、學長Abby、瑞咪Rami",
+      "format": "physical",
+      "id": "edition-686ceb0447b705081534e946",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/justadream-photobook",
+      "original_title": "Just A dReam 硬殼精裝寫真書"
+    },
+    {
+      "featured_names": "子喵",
+      "format": "physical",
+      "id": "edition-98e4bb2a5c1c95f44760e545",
+      "isbn": "9789869947664",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/koneko-photobook",
+      "original_title": "KONEKO子喵同名寫真"
+    },
+    {
+      "featured_names": "張雅涵",
+      "format": "physical",
+      "id": "edition-7342756e50eb340bf81eaac5",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0007",
+      "original_title": "Kimi23：張雅涵寫真"
+    },
+    {
+      "featured_names": "張雅涵",
+      "format": "physical",
+      "id": "edition-294811b52918cc2e9ee67f87",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0008",
+      "original_title": "Kimi23：張雅涵寫真"
+    },
+    {
+      "featured_names": "李毓芬",
+      "format": "physical",
+      "id": "edition-165a7692fb8412ef6aeafda0",
+      "isbn": "9789862377765",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/001322284",
+      "original_title": "LOVE Tia 李毓芬 1st 寫真集"
+    },
+    {
+      "featured_names": "陳艾琳",
+      "format": "physical",
+      "id": "edition-e418559713f3bacf171283e4",
+      "isbn": "9789869219204",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2018551704184/",
+      "original_title": "Lin：陳艾琳同名寫真書：關於陳艾琳的十五件事"
+    },
+    {
+      "featured_names": "北野未奈",
+      "format": "physical",
+      "id": "edition-ed3fd0d5b26804f3dcc5a8e5",
+      "isbn": "9786269294817",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019000171908/",
+      "original_title": "Look at Me：北野未奈1st寫真集"
+    },
+    {
+      "featured_names": "希維亞",
+      "format": "physical",
+      "id": "edition-dfaafb5e81357de2147d98d5",
+      "isbn": "9789869320511",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019990167721/",
+      "original_title": "Love！Sylvia！！希維亞性感寫真書"
+    },
+    {
+      "featured_names": "路雨希",
+      "format": "physical",
+      "id": "edition-9495a73373a2767fa957a3d6",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/007274601",
+      "original_title": "Lucy, Blue Sea！路雨希的性感寫真書"
+    },
+    {
+      "featured_names": "林采婕",
+      "format": "physical",
+      "id": "edition-ffcbc7dfcc7a5c7f9b6355e9",
+      "isbn": "9786267742174",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014857836",
+      "original_title": "MILA林采婕寫真書：A SLOWER SUMMER（小卡親簽版）"
+    },
+    {
+      "featured_names": "黎茉",
+      "format": "physical",
+      "id": "edition-149f53d235acd5cf9280214d",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/mini-photobook",
+      "original_title": "MINI肉包 唯。愛 實體寫真"
+    },
+    {
+      "featured_names": "何苔苔",
+      "format": "physical",
+      "id": "edition-d040e061273453ad7fb2130e",
+      "isbn": "9789869320542",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910038827/",
+      "original_title": "Nori `苔眼一笑很傾城` 何苔苔性感寫真書"
+    },
+    {
+      "featured_names": "Q匠",
+      "format": "physical",
+      "id": "edition-8f9f5faf84ef0ed3758d02b2",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/qq-book",
+      "original_title": "Q匠-遇見更好的自己寫真書"
+    },
+    {
+      "featured_names": "Q匠",
+      "format": "physical",
+      "id": "edition-ce620af69eae97e598f6de4f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/qq-photobook",
+      "original_title": "Q匠-零距離接觸寫真集"
+    },
+    {
+      "featured_names": "多莉",
+      "format": "physical",
+      "id": "edition-7b26de5f0711a0d031708731",
+      "isbn": "9786269847396",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/dory0620-sandory2025-preorderonly",
+      "original_title": "San Dory三多莉2025"
+    },
+    {
+      "featured_names": "陳肇天",
+      "format": "physical",
+      "id": "edition-b50653cefb3b596004567895",
+      "isbn": "9786263526198",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kadokawa.com.tw/products/9786263526198",
+      "original_title": "Sky：陳肇天寫真書"
+    },
+    {
+      "featured_names": "黃沐妍",
+      "format": "physical",
+      "id": "edition-c65ad4e6cfaf659002381b4d",
+      "isbn": "9789869426770",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019990164195/",
+      "original_title": "Sweet Pig黃沐妍寫真"
+    },
+    {
+      "featured_names": "TAKA",
+      "format": "physical",
+      "id": "edition-a720939afa71d82c95305f5b",
+      "isbn": "9786264681902",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910061054/",
+      "original_title": "TAKA：深夜名堂男子寫真"
+    },
+    {
+      "featured_names": "馮子紜",
+      "format": "physical",
+      "id": "edition-40575cdd144fa389d2d131b9",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/010706483",
+      "original_title": "Teresa馮子紜寫真集"
+    },
+    {
+      "featured_names": "胎尼",
+      "format": "physical",
+      "id": "edition-185edcf9e42fe1822bc39be5",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/tiny-10th-photobook",
+      "original_title": "Tiny〈TENY〉十週年紀念寫真"
+    },
+    {
+      "featured_names": "胎尼",
+      "format": "physical",
+      "id": "edition-f8df6ddef647eb3efdc5d0fe",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/tiny-10th-specialedition-photobook",
+      "original_title": "Tiny〈TENY〉十週年紀念寫真"
+    },
+    {
+      "featured_names": "胡綺",
+      "format": "physical",
+      "id": "edition-6bb4e9207a3f3626d24c1cdb",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0036",
+      "original_title": "Tokyo7『胡綺個人寫真』"
+    },
+    {
+      "featured_names": "羽庭",
+      "format": "physical",
+      "id": "edition-a086b62be9952e632f3f6548",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.taaze.tw/products/21100030956.html",
+      "original_title": "VISION MAN 質男幫特刊：雨停 羽庭"
+    },
+    {
+      "featured_names": "吳俊",
+      "format": "physical",
+      "id": "edition-222f329662a60d4bb6d98614",
+      "isbn": "9789865245689",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kadokawa.com.tw/zh-hant/products/9789865245689",
+      "original_title": "Your Man：吳俊junwu185寫真書"
+    },
+    {
+      "featured_names": "翁子涵",
+      "format": "physical",
+      "id": "edition-6161de7316666d53821bed42",
+      "isbn": "9789860635065",
+      "listing_count": 0,
+      "metadata_source_url": "https://shopping.rockmusic.co.jp/c-item-detail?ic=BK-9789860635065",
+      "original_title": "ZIHAN WENG：「Z」紀念寫真"
+    },
+    {
+      "featured_names": "林孟潔、李恩菲",
+      "format": "physical",
+      "id": "edition-62ae24992439bef8ef498532",
+      "isbn": "9789571095936",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=90765",
+      "original_title": "bestie閨蜜：孟潔×菲菲寫真"
+    },
+    {
+      "featured_names": "陳瑀希",
+      "format": "physical",
+      "id": "edition-819ccb205f86c8467a541f64",
+      "isbn": "9789571066349",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/005818860",
+      "original_title": "in love！：陳瑀希小茉莉寫真書"
+    },
+    {
+      "featured_names": "夏蕾",
+      "format": "physical",
+      "id": "edition-6fa4919e09d889ac9fa29825",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.readingtimes.com.tw/product/?pid=1VY0480",
+      "original_title": "│限量盒裝珍藏版│心動蕾達：夏蕾寫真-時報悅讀網｜時報文化官方網站 - 最新出版資訊與線上購書優惠"
+    },
+    {
+      "featured_names": "張瑋庭",
+      "format": "physical",
+      "id": "edition-008431a6ad1c9e2293bf5930",
+      "isbn": "9789869947695",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/angela-photobook",
+      "original_title": "〈庭在一瞬間〉瑋庭Angela寫真書"
+    },
+    {
+      "featured_names": "雪岑",
+      "format": "physical",
+      "id": "edition-4542fa84e6a604b1d3cfc41c",
+      "isbn": "9786269273317",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/snowy-photobook",
+      "original_title": "〈雪之下．岑之名〉SNOWY雪岑首部同名寫真詩集"
+    },
+    {
+      "featured_names": "張小筑",
+      "format": "physical",
+      "id": "edition-24f3d0d25392ec66745a75d8",
+      "isbn": "9789571084961",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/007084986",
+      "original_title": "《Chu一個吧！》張小筑寫真書"
+    },
+    {
+      "featured_names": "蘇心甯",
+      "format": "physical",
+      "id": "edition-3ec3d4065f4e0e77cbae32fc",
+      "isbn": "9789571072265",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2018560235242/",
+      "original_title": "《I Love Lala只為甯心動》蘇心甯性感寫真書"
+    },
+    {
+      "featured_names": "董梓甯、林莎、吳元元",
+      "format": "physical",
+      "id": "edition-2aacde30ca082f374c8041ab",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://bee3shine.com/product/%E3%80%8A%E4%B8%89%E5%80%8D%E5%BF%83%E8%B7%B3%E3%80%8B%E6%A2%93%E6%A2%93x%E6%9E%97%E8%8E%8Ex%E5%85%83%E5%85%83-%E9%99%90%E9%87%8F%E4%B8%89%E4%BA%BA%E5%AF%AB%E7%9C%9F%E5%A5%97%E7%B5%84/",
+      "original_title": "《三倍心跳》梓梓×林莎×元元寫真書"
+    },
+    {
+      "featured_names": "安于晴",
+      "format": "physical",
+      "id": "edition-7ab42fa03b227f477bbe1a64",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/Charlene00A",
+      "original_title": "《不安于室》-Charlene實體寫真書"
+    },
+    {
+      "featured_names": "吳元元",
+      "format": "physical",
+      "id": "edition-390ac290449cb867d94ead58",
+      "isbn": "9786264031899",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=101156",
+      "original_title": "《元味覺醒》元元寫真書"
+    },
+    {
+      "featured_names": "何念兹",
+      "format": "physical",
+      "id": "edition-5f7c2ef68a0bb64d6e261e9b",
+      "isbn": "9789571079653",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019500057115/",
+      "original_title": "《念在你身邊》何念兹寫真書 －金石堂"
+    },
+    {
+      "featured_names": "藍星蕾",
+      "format": "physical",
+      "id": "edition-97971b9729eade3ee390edec",
+      "isbn": "9786263561755",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/012537645",
+      "original_title": "《怦然星動》 藍星蕾寫真書"
+    },
+    {
+      "featured_names": "解婕翎",
+      "format": "physical",
+      "id": "edition-4467856e04715bb95d302c4a",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.ccr.com.tw/goods/355303",
+      "original_title": "《我就是任性》日系．性感合購限定版 (寫真書) by 解婕翎"
+    },
+    {
+      "featured_names": "周甄娜",
+      "format": "physical",
+      "id": "edition-85cc7ddc4e78a0e2a25f61bc",
+      "isbn": "9786263777118",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=99480",
+      "original_title": "《甄愛密碼》周甄娜寫真書"
+    },
+    {
+      "featured_names": "藍星蕾",
+      "format": "physical",
+      "id": "edition-8cf9b4013c54c8b7f31004a6",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/012006357",
+      "original_title": "《真星愛上你Addicted to you》Amber Na藍星蕾寫真書"
+    },
+    {
+      "featured_names": "舒子晨",
+      "format": "physical",
+      "id": "edition-f2e7bdd59048ad5dbf1940a7",
+      "isbn": "9789571072272",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/006253164",
+      "original_title": "《舒子晨Nikita》超激寫真全記錄"
+    },
+    {
+      "featured_names": "王芯羽",
+      "format": "physical",
+      "id": "edition-3bfb4271796c435dbbc13ae6",
+      "isbn": "9786264034050",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=102866",
+      "original_title": "《芯裡都是你》小珍奶王芯羽寫真書"
+    },
+    {
+      "featured_names": "辜莞允",
+      "format": "physical",
+      "id": "edition-00ff1cff5dc97c0629957e9f",
+      "isbn": "9789571066332",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2017310171038/",
+      "original_title": "《陪伴你的每一天》Nono辜莞允寫真書"
+    },
+    {
+      "featured_names": "貴貴",
+      "format": "physical",
+      "id": "edition-f7b161b955d72eb7f29b3f5a",
+      "isbn": "9789865534110",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910044316/",
+      "original_title": "【眾望所貴】Z咖小模 貴貴寫真書(附#貴貴畫畫繪本)"
+    },
+    {
+      "featured_names": "林真亦",
+      "format": "physical",
+      "id": "edition-db5d9c796882498acf97eb42",
+      "isbn": "9786264197328",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=104854",
+      "original_title": "亦如初見：林真亦寫真"
+    },
+    {
+      "featured_names": "短今",
+      "format": "physical",
+      "id": "edition-d940c87edb34c37ead44ee41",
+      "isbn": "9789865245627",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/009254775",
+      "original_title": "今日旅行中：短今Sammie寫真書"
+    },
+    {
+      "featured_names": "黃上晏",
+      "format": "physical",
+      "id": "edition-aad1bd75960ed120ebc46363",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=83222",
+      "original_title": "仲夏晏之夢：黃上晏寫真"
+    },
+    {
+      "featured_names": "黃上晏",
+      "format": "physical",
+      "id": "edition-10082bcf49cc1e7af0e6bb2e",
+      "isbn": "9789571088013",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=83221",
+      "original_title": "仲夏晏之夢：黃上晏寫真"
+    },
+    {
+      "featured_names": "洪仕晟",
+      "format": "physical",
+      "id": "edition-c39cc4536a4e79cadf7c2a37",
+      "isbn": "9786263211940",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kadokawa.com.tw/products/9786263211940",
+      "original_title": "似曾相識：洪仕晟寫真書 Robert's 1st Photobook"
+    },
+    {
+      "featured_names": "佐藤麻優",
+      "format": "physical",
+      "id": "edition-34530b4e9d29f4823aa0bc58",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/maniubook",
+      "original_title": "佐藤麻優- Ma Niu 個人寫真書"
+    },
+    {
+      "featured_names": "佐藤麻優",
+      "format": "physical",
+      "id": "edition-5d3e22b64dc4ab09631069f5",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/niu01-a",
+      "original_title": "佐藤麻優-求戰版 A4硬殼實體寫真集"
+    },
+    {
+      "featured_names": "余家儀",
+      "format": "physical",
+      "id": "edition-3f9c1e3704b474f0ca1937db",
+      "isbn": "9786267742020",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2015440640998/",
+      "original_title": "余家儀同名寫真= Dare to be Yolo 1st photobook"
+    },
+    {
+      "featured_names": "陳敬宣",
+      "format": "physical",
+      "id": "edition-754f8c85de09362f8e288f4e",
+      "isbn": "9789750980091",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019960398872/",
+      "original_title": "你的小精靈：陳敬宣寫真【呆萌版】photobook"
+    },
+    {
+      "featured_names": "Yilian",
+      "format": "physical",
+      "id": "edition-5f960b9daaca5fc296697856",
+      "isbn": "9789869955911",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/007914280",
+      "original_title": "你的藍色不是我的藍色：Yilian游泳教練首部寫真散文，那些歸屬感、幸福感，以及勇氣和愛"
+    },
+    {
+      "featured_names": "倪暄",
+      "format": "physical",
+      "id": "edition-7eb998222418261388ddb891",
+      "isbn": "9789571091914",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/007921346",
+      "original_title": "倪式暄言：倪暄寫真"
+    },
+    {
+      "featured_names": "周宜霈",
+      "format": "physical",
+      "id": "edition-526eb19aedbc5cd0aa119982",
+      "isbn": "9789865883065",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2018551601117/",
+      "original_title": "偷窺24hr.×周宜霈大牙寫真集"
+    },
+    {
+      "featured_names": "鄔又曦",
+      "format": "physical",
+      "id": "edition-fcb36f73172eec3eba9a275f",
+      "isbn": "9786269640621",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.eslite.com/product/1001261682682283023006",
+      "original_title": "像我一樣甜：克萊兒甜心日記"
+    },
+    {
+      "featured_names": "吳元元",
+      "format": "physical",
+      "id": "edition-78fab16ea16d6e8e982ea301",
+      "isbn": "9786263384750",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=93763",
+      "original_title": "元元：吳婕安寫真書"
+    },
+    {
+      "featured_names": "吳元元",
+      "format": "physical",
+      "id": "edition-589dceab473eda2e57267917",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=82767",
+      "original_title": "元氣東京：吳婕安寫真書"
+    },
+    {
+      "featured_names": "吳元元",
+      "format": "physical",
+      "id": "edition-bd2b8694677566edf9708188",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=84369",
+      "original_title": "元氣東京：吳婕安寫真書"
+    },
+    {
+      "featured_names": "吳元元",
+      "format": "physical",
+      "id": "edition-d6d51dc14ea7d9908412e077",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=76596",
+      "original_title": "元氣滿滿：吳元元寫真書"
+    },
+    {
+      "featured_names": "兔兔（女神範）",
+      "format": "physical",
+      "id": "edition-615fdfd86f1397f3bbcd3608",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/two1003",
+      "original_title": "兔兔-初寫真"
+    },
+    {
+      "featured_names": "兔兔（女神範）",
+      "format": "physical",
+      "id": "edition-5ada31a044dd28cd798e7b41",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/twotwo-a-1",
+      "original_title": "兔兔-小寫真書-🔥 🔥 🔥(第一本個人小寫真集-初恋の味-值的收藏) 限時優惠／預購期限時特價"
+    },
+    {
+      "featured_names": "兔兔（女神範）",
+      "format": "physical",
+      "id": "edition-1cf06d86b4ee413bfbb16f68",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/twotwo-a-2",
+      "original_title": "兔兔-小寫真書-🔥 🔥 🔥(第二本個人小寫真集-妹系寫真-值的收藏) 限時優惠／預購期限時特價"
+    },
+    {
+      "featured_names": "鄭羽凡",
+      "format": "physical",
+      "id": "edition-470b58580b430f451c5dcc24",
+      "isbn": "9786269640614",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910048444/",
+      "original_title": "其實我有點壞Si’era’s photobook鄭羽凡寫真書"
+    },
+    {
+      "featured_names": "冰熙",
+      "format": "physical",
+      "id": "edition-5061b3e9f4d9028788d5846f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/0616c1a",
+      "original_title": "冰熙-616見面會小相本"
+    },
+    {
+      "featured_names": "凱蒂老師",
+      "format": "physical",
+      "id": "edition-901b971fe88ad2319d828391",
+      "isbn": "9786269847303",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/teacherkeidi-photobook",
+      "original_title": "凱蒂老師Teacher Keidi同名寫真"
+    },
+    {
+      "featured_names": "陳紫渝",
+      "format": "physical",
+      "id": "edition-ddd169588a92a02af33e54c1",
+      "isbn": "9786263743168",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910051017/",
+      "original_title": "初年：陳紫渝寫真"
+    },
+    {
+      "featured_names": "陳紫渝",
+      "format": "physical",
+      "id": "edition-9191c8eb5f8f8dc4c1aeaead",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910050935/",
+      "original_title": "初年：陳紫渝寫真"
+    },
+    {
+      "featured_names": "蔡亞恩",
+      "format": "physical",
+      "id": "edition-b0459f5e3d9833b1937b29c8",
+      "isbn": "9786267742204",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910058061/",
+      "original_title": "初次見麵：AKB48 Team TP蔡亞恩1st寫真集"
+    },
+    {
+      "featured_names": "冼迪琦",
+      "format": "physical",
+      "id": "edition-92f384b4d43db67051800069",
+      "isbn": "9786264192552",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910054803/",
+      "original_title": "刻在心迪：冼迪琦寫真（隨書加贈：珍藏海報；二款隨機一款）"
+    },
+    {
+      "featured_names": "阿部瑪利亞",
+      "format": "physical",
+      "id": "edition-30269ae9f8125155dd75ee7c",
+      "isbn": "9786264199285",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014936599",
+      "original_title": "半分 はんぶん：阿部瑪利亞寫真"
+    },
+    {
+      "featured_names": "向理來",
+      "format": "physical",
+      "id": "edition-33c5417a1ffb4490d261c2d1",
+      "isbn": "9786264446723",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015549423",
+      "original_title": "向你走來：向理來寫真"
+    },
+    {
+      "featured_names": "周感恩",
+      "format": "physical",
+      "id": "edition-4c8d0a7f3794481824ad319a",
+      "isbn": "9786269687787",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019990187675/",
+      "original_title": "周感恩 Thank You 首本個人紀念寫真書"
+    },
+    {
+      "featured_names": "吳慈敏",
+      "format": "physical",
+      "id": "edition-e8e78cf6b48a89e0cb1aa6f0",
+      "isbn": "9789860635089",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/010221841",
+      "original_title": "啾啾2021寫真書"
+    },
+    {
+      "featured_names": "吳慈敏",
+      "format": "physical",
+      "id": "edition-feb1a7797750807d7ebee86c",
+      "isbn": "9786269687725",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2029900102070/",
+      "original_title": "啾啾2022寫真書(精裝)"
+    },
+    {
+      "featured_names": "吳慈敏",
+      "format": "physical",
+      "id": "edition-90528c3b25020d21354961db",
+      "isbn": "9786269687763",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2029970440683/",
+      "original_title": "啾啾2023寫真書(精裝)"
+    },
+    {
+      "featured_names": "陳可頡",
+      "format": "physical",
+      "id": "edition-4f1e6d3ed78dccf8765db9ad",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0041",
+      "original_title": "國民女友陳可頡個人寫真"
+    },
+    {
+      "featured_names": "張安琪",
+      "format": "physical",
+      "id": "edition-9156d853cb11b760aed0173d",
+      "isbn": "9786269709915",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900101975/",
+      "original_title": "在一琪Together with me ：張安琪寫真"
+    },
+    {
+      "featured_names": "張景嵐",
+      "format": "physical",
+      "id": "edition-df46c3a3816aeed05c1b23c1",
+      "isbn": "9789863421719",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/004554144",
+      "original_title": "夏日霓嵐：張景嵐寫真"
+    },
+    {
+      "featured_names": "夏涵芝",
+      "format": "physical",
+      "id": "edition-0c3bda9ff87fb231ae4a8cc3",
+      "isbn": "9789869947688",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/rabbitbowq-photobook",
+      "original_title": "夏涵芝CHIH同名寫真"
+    },
+    {
+      "featured_names": "多莉",
+      "format": "physical",
+      "id": "edition-4846d1035b42cb7c4350b548",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/dory0620-dory2027-photobook-preorderonly",
+      "original_title": "多莉Dory 2027聯名寫真書（暫定）"
+    },
+    {
+      "featured_names": "夏晴",
+      "format": "physical",
+      "id": "edition-727d282995d61cb999412a24",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.eslite.com/product/1002316012682029947009",
+      "original_title": "天使と悪魔：女神系甜心夏晴2021個人寫真"
+    },
+    {
+      "featured_names": "謝侑芯",
+      "format": "physical",
+      "id": "edition-c1f1227eddff5543aa0ca576",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0039",
+      "original_title": "天使芯：謝侑芯寫真"
+    },
+    {
+      "featured_names": "謝侑芯",
+      "format": "physical",
+      "id": "edition-707f5ca0ec449ab462f5f0e7",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0040",
+      "original_title": "天使芯：謝侑芯寫真"
+    },
+    {
+      "featured_names": "巫苡萱",
+      "format": "physical",
+      "id": "edition-11cb26a1ea7458e8aa0049a2",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=83492",
+      "original_title": "天天和你在苡起：巫苡萱寫真"
+    },
+    {
+      "featured_names": "巫苡萱",
+      "format": "physical",
+      "id": "edition-6e4133176efe9cc0fe79371a",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=78441",
+      "original_title": "天天和你在苡起：巫苡萱寫真"
+    },
+    {
+      "featured_names": "天燈妹",
+      "format": "physical",
+      "id": "edition-2960ecaed2a9a9ac6fcd6a78",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/eveilnn-book",
+      "original_title": "天燈妹-樂樂個人寫真書-天燈妹-💖💖天燈妹-樂樂個人寫真書 💖💖"
+    },
+    {
+      "featured_names": "奈奈",
+      "format": "physical",
+      "id": "edition-a0d96851068dab8f3b144d9f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/nana01",
+      "original_title": "奈奈首發初寫真集 ㊙️絕版寫真集㊙️㊙️"
+    },
+    {
+      "featured_names": "姬冰嫣",
+      "format": "physical",
+      "id": "edition-30032cf2a5811ef0793d7593",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/gina520book",
+      "original_title": "姬冰嫣繩縛寫真書(💓💓姬冰嫣 簽名+唇印💋💋💋版)🔓絕版倒時)"
+    },
+    {
+      "featured_names": "婕安",
+      "format": "physical",
+      "id": "edition-e2a562d7e9164066c4422992",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/hana01",
+      "original_title": "婕安-初寫真"
+    },
+    {
+      "featured_names": "安希",
+      "format": "physical",
+      "id": "edition-889841e6ed0e2c1541602448",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/010706484",
+      "original_title": "安希セクシーな写真集"
+    },
+    {
+      "featured_names": "安心亞",
+      "format": "physical",
+      "id": "edition-b663b2de5ece6f3e109276ed",
+      "isbn": "9789866570469",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019580009608/",
+      "original_title": "安心亞寫真集-魔境夢遊"
+    },
+    {
+      "featured_names": "安生",
+      "format": "physical",
+      "id": "edition-089437fb763622f666dc4c5e",
+      "isbn": "9786269687794",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019960402098/",
+      "original_title": "安生 Anshi 首本個人紀念寫真書"
+    },
+    {
+      "featured_names": "小林兒",
+      "format": "physical",
+      "id": "edition-2697e000afb28e7f8a32793c",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/royi01",
+      "original_title": "小林兒 首發初寫真集"
+    },
+    {
+      "featured_names": "小桃子",
+      "format": "physical",
+      "id": "edition-f3298b56fb29d2ce0d87fee2",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/vivi20book",
+      "original_title": "小桃子-蜜桃視角寫真書"
+    },
+    {
+      "featured_names": "小米恩",
+      "format": "physical",
+      "id": "edition-718b874a7768ff7232562492",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/mina-book",
+      "original_title": "小米恩 初慾 寫真書"
+    },
+    {
+      "featured_names": "小蘋果",
+      "format": "physical",
+      "id": "edition-09ae0a2d7ad0a17dcee261e1",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/apple20ccbook",
+      "original_title": "小蘋果-人魚公主寫真書"
+    },
+    {
+      "featured_names": "小蘋果",
+      "format": "physical",
+      "id": "edition-56d56f49a3d9c229e5c183ae",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/applenewbook",
+      "original_title": "小蘋果-心動蘋率寫真書"
+    },
+    {
+      "featured_names": "小蘋果",
+      "format": "physical",
+      "id": "edition-c90c888c39d4105233a9e2f0",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/apple-01",
+      "original_title": "小蘋果-甜蜜蘋果寫真集"
+    },
+    {
+      "featured_names": "小蘋果",
+      "format": "physical",
+      "id": "edition-af35b46fddecfe6648ae4b56",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/2021-apple-book",
+      "original_title": "小蘋果寫真書\"MI戀小蘋果"
+    },
+    {
+      "featured_names": "小蘋果",
+      "format": "physical",
+      "id": "edition-38423dda04a1dbb6d442807f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/apple-2203001",
+      "original_title": "小蘋果寫真集- The apple of one.\"s eye"
+    },
+    {
+      "featured_names": "小蘋果",
+      "format": "physical",
+      "id": "edition-7131e175c774c2bb60acfeab",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/apple-00",
+      "original_title": "小蘋果首發寫真集-全糖女孩"
+    },
+    {
+      "featured_names": "杜少榛",
+      "format": "physical",
+      "id": "edition-25f4096272586bde1495b0ce",
+      "isbn": "9789571073460",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019990163433/",
+      "original_title": "少來了！杜少榛寫真書"
+    },
+    {
+      "featured_names": "椎名心春",
+      "format": "physical",
+      "id": "edition-38acc8660d71d1758b9e9280",
+      "isbn": "9786269973477",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910058481/",
+      "original_title": "山珍：椎名心春台灣寫真集"
+    },
+    {
+      "featured_names": "張景嵐",
+      "format": "physical",
+      "id": "edition-97c91e84e32047c5445fda30",
+      "isbn": "9789575644598",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/006896128",
+      "original_title": "嵐色花漾：張景嵐寫真"
+    },
+    {
+      "featured_names": "広瀨兔",
+      "format": "physical",
+      "id": "edition-9f4bc8ecd121b573d9d01946",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/hiroseusagi-a",
+      "original_title": "広瀨兔-兔兔-尺度邊緣 寫真集 🔞🔞🔞18禁 (全裸微露)"
+    },
+    {
+      "featured_names": "張摸摸",
+      "format": "physical",
+      "id": "edition-3fda8a42b119ff3710d0f2c8",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/mo-book",
+      "original_title": "張摸摸-唯一寫真書"
+    },
+    {
+      "featured_names": "張若錡",
+      "format": "physical",
+      "id": "edition-fe749b7a042d6de77ba8941d",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/anguscheung01",
+      "original_title": "張若錡◇錡遇Angus 墾丁台灣版"
+    },
+    {
+      "featured_names": "張若錡",
+      "format": "physical",
+      "id": "edition-48f44b2d730b92bd3e8df89d",
+      "isbn": "9789887738701",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/anguscheung02",
+      "original_title": "張若錡◇錡遇Angus 高雄台灣版"
+    },
+    {
+      "featured_names": "張螞蟻、紀曉嵐",
+      "format": "physical",
+      "id": "edition-84a88e87e6ada565ccaf3ab0",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/ant201book",
+      "original_title": "張螞蟻\u0026紀曉嵐寫真書 原價880 特價 390元"
+    },
+    {
+      "featured_names": "張語芯",
+      "format": "physical",
+      "id": "edition-a0e304cea3b29a52d2b1bac2",
+      "isbn": "9789869947640",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/yuxin-photobook",
+      "original_title": "張語芯 YUXIN CHANG 同名寫真"
+    },
+    {
+      "featured_names": "彭彭",
+      "format": "physical",
+      "id": "edition-c2d2d74dc924b86b6baecd61",
+      "isbn": "9786264448420",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=108961",
+      "original_title": "彭然心動：彭彭寫真（隨書附贈海報1張：共2款，隨機投入1款）"
+    },
+    {
+      "featured_names": "夏蕾",
+      "format": "physical",
+      "id": "edition-21a1147c8c1f52e77866c7ed",
+      "isbn": "9786264446549",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015783272",
+      "original_title": "心動蕾達：夏蕾寫真"
+    },
+    {
+      "featured_names": "林育品",
+      "format": "physical",
+      "id": "edition-079ec80220b5a42eeff9fad9",
+      "isbn": "9789865882464",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/004998406",
+      "original_title": "快樂到不可能的事"
+    },
+    {
+      "featured_names": "金渡兒",
+      "format": "physical",
+      "id": "edition-668b9698b847145c48c3e13c",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.books.com.tw/products/0011061933",
+      "original_title": "想與你一起渡過：金渡兒影像紀實"
+    },
+    {
+      "featured_names": "金渡兒",
+      "format": "physical",
+      "id": "edition-3e522193d4db1930b7ef231a",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.spp.com.tw/SalePage/Index/11962162",
+      "original_title": "想與你一起渡過：金渡兒影像紀實"
+    },
+    {
+      "featured_names": "妮可",
+      "format": "physical",
+      "id": "edition-24c91095b8f7bdeb764b335f",
+      "isbn": "9786267683088",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014272084",
+      "original_title": "想見妮‧Nicole妮可寫真書"
+    },
+    {
+      "featured_names": "林岱縈",
+      "format": "physical",
+      "id": "edition-ec5b9f8b54ef5c80cc2f00c8",
+      "isbn": "9789571085715",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019890029952/",
+      "original_title": "想鹿非非：林岱縈寫真"
+    },
+    {
+      "featured_names": "汐世",
+      "format": "physical",
+      "id": "edition-dc10265cb9f35eb3632ef4c6",
+      "isbn": "9786269294800",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.taaze.tw/products/11101087042.html",
+      "original_title": "愛之炎：汐世1st寫真集"
+    },
+    {
+      "featured_names": "郭書瑤",
+      "format": "physical",
+      "id": "edition-c7902e2c75fa47878397d0ff",
+      "isbn": "9789869355117",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/005952046",
+      "original_title": "愛，無限大∞"
+    },
+    {
+      "featured_names": "SHOYA",
+      "format": "physical",
+      "id": "edition-e8a21bf65f334f41b4868fe0",
+      "isbn": "9786264359313",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kadokawa.com.tw/products/9786264359313",
+      "original_title": "慾見SHOYA：筋肉教練寫真"
+    },
+    {
+      "featured_names": "成語蕎",
+      "format": "physical",
+      "id": "edition-77dc9c6874683647f755b8a7",
+      "isbn": "9789869667425",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019500058167/",
+      "original_title": "成語蕎《另一個我/a new chapter》寫真＋EP / B款（首刷限量/白洋裝立牌） －金石堂"
+    },
+    {
+      "featured_names": "成語蕎",
+      "format": "physical",
+      "id": "edition-29366c1e2039fee8e4886e6e",
+      "isbn": "9789869316774",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019990158316/",
+      "original_title": "成語蕎同名寫真"
+    },
+    {
+      "featured_names": "安以軒",
+      "format": "physical",
+      "id": "edition-dbba246203c3ddd537de1c33",
+      "isbn": "9789571341217",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/001460890",
+      "original_title": "我不乖：安以軒寫真書－POPULAR 20"
+    },
+    {
+      "featured_names": "湘綾",
+      "format": "physical",
+      "id": "edition-9ec818ad71d84daf7f61b982",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0050",
+      "original_title": "我愛綾520：湘綾寫真"
+    },
+    {
+      "featured_names": "湘綾",
+      "format": "physical",
+      "id": "edition-f7091ab8ccdfa43d5c491361",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0051",
+      "original_title": "我愛綾520：湘綾寫真"
+    },
+    {
+      "featured_names": "安婕希",
+      "format": "physical",
+      "id": "edition-d8613a7a25f815be0b48b90e",
+      "isbn": "9789869181259",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019990144401/",
+      "original_title": "我是‧安婕希同名寫真"
+    },
+    {
+      "featured_names": "鄭家純",
+      "format": "physical",
+      "id": "edition-262d77ef01fc683cf170c48e",
+      "isbn": "9789869203203",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/005216432",
+      "original_title": "我是鄭家純"
+    },
+    {
+      "featured_names": "蔡譯心",
+      "format": "physical",
+      "id": "edition-da462eaf1140ce9cc525dbb4",
+      "isbn": "9789571082455",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019890029242/",
+      "original_title": "打開你的心 蔡譯心寫真書"
+    },
+    {
+      "featured_names": "吳翔震",
+      "format": "physical",
+      "id": "edition-d5daf238b9a453dae9d404e9",
+      "isbn": "9789869355100",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.eslite.com/product/1001296682534720",
+      "original_title": "抱你寫詩"
+    },
+    {
+      "featured_names": "林莎",
+      "format": "physical",
+      "id": "edition-e5697a8507fa92a47447db0d",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/012006358",
+      "original_title": "揭開．面莎：林莎寫真書"
+    },
+    {
+      "featured_names": "林莎",
+      "format": "physical",
+      "id": "edition-502b15889f1f08a56ef0c128",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=98724",
+      "original_title": "揭開．面莎：林莎寫真書"
+    },
+    {
+      "featured_names": "吳岳擎",
+      "format": "physical",
+      "id": "edition-ee14162e9ac0768f326019de",
+      "isbn": "9786263521810",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kadokawa.com.tw/products/9786263521810",
+      "original_title": "擎書：吳岳擎Andy寫真書"
+    },
+    {
+      "featured_names": "敏綺",
+      "format": "physical",
+      "id": "edition-2cb81afa9326ac82cdee313b",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/miki0810-photobook",
+      "original_title": "敏綺Miki同名寫真"
+    },
+    {
+      "featured_names": "林艾璇",
+      "format": "physical",
+      "id": "edition-48d159ca9950f9b3aef47a93",
+      "isbn": "9789869945936",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/007954051",
+      "original_title": "數到3之後－個人寫真Thirty Something Photography"
+    },
+    {
+      "featured_names": "施菲亞",
+      "format": "physical",
+      "id": "edition-3ae21f1ced2774117bab22d9",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/photobook-feyia",
+      "original_title": "施菲亞-寫真集"
+    },
+    {
+      "featured_names": "星野優",
+      "format": "physical",
+      "id": "edition-0c8d3fed7af306888e240a8e",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/starvip-a",
+      "original_title": "星野優-小寫真書-🔥 🔥 🔥(第一本個人小寫真集值的收藏)"
+    },
+    {
+      "featured_names": "星野優",
+      "format": "physical",
+      "id": "edition-ee4e78bcebc7eb4813eba3c0",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/starbook2",
+      "original_title": "星野優-裸逸品2寫真書(絕版個人寫真書-裸逸品2 。"
+    },
+    {
+      "featured_names": "星野優",
+      "format": "physical",
+      "id": "edition-edcdcfc6269bbfbde0e81f06",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/starbook05",
+      "original_title": "星野優-裸逸品寫真書 初寫真(絕版個人寫真書) 最後5本"
+    },
+    {
+      "featured_names": "晞晞",
+      "format": "physical",
+      "id": "edition-7da53e58914ed1810229aa0c",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/cynthia-2023photobook",
+      "original_title": "晞晞】- 2023最新寫真"
+    },
+    {
+      "featured_names": "托托",
+      "format": "physical",
+      "id": "edition-f11cf78d8a961196ad742187",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/sutuotuo-2025miniphotobook",
+      "original_title": "最美早餐店阿姨Sutin托托2025聯名迷你寫真"
+    },
+    {
+      "featured_names": "李馨",
+      "format": "physical",
+      "id": "edition-174d6a0a88ad631377039c75",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/cincinli-photobook",
+      "original_title": "李馨一馨的距璃寫真集"
+    },
+    {
+      "featured_names": "林倪安",
+      "format": "physical",
+      "id": "edition-28a2dd518624b6bb612dbef5",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/nian-photobook",
+      "original_title": "林倪安寫真書-無可比倪"
+    },
+    {
+      "featured_names": "林可",
+      "format": "physical",
+      "id": "edition-c1f6d575962bd0ae15d407ed",
+      "isbn": "9789869947633",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/link-photobook",
+      "original_title": "林可LINK 可。已愛 純愛寫真"
+    },
+    {
+      "featured_names": "林可",
+      "format": "physical",
+      "id": "edition-f76ae06d44a3751c114e8143",
+      "isbn": "9789869947633",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/link-photobook-2nd",
+      "original_title": "林可LINK 可。已愛 純愛寫真"
+    },
+    {
+      "featured_names": "林祐青",
+      "format": "physical",
+      "id": "edition-504bcfda68c67a4506002324",
+      "isbn": "9786269687718",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/011800265",
+      "original_title": "林祐青ViVi Lin首本個人寫真書"
+    },
+    {
+      "featured_names": "林襄",
+      "format": "physical",
+      "id": "edition-4cba226b6998668743e4d4e1",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.eternelluv.com/products/《襄水》林襄寫真書-1",
+      "original_title": "林襄MIZUKI寫真書 - 襄水（襄吻唇印限定版）"
+    },
+    {
+      "featured_names": "林采緹",
+      "format": "physical",
+      "id": "edition-02fee9eff509f7fc42872cb8",
+      "isbn": "9789571076713",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2016890002879/",
+      "original_title": "林采緹美麗宣言：東京x台北寫真全記錄"
+    },
+    {
+      "featured_names": "柯琳琳",
+      "format": "physical",
+      "id": "edition-5a48734201388ed206f353b0",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/kandy-20photobook",
+      "original_title": "柯琳琳-寫真書-浪漫G擊-國民人妻 寫真集"
+    },
+    {
+      "featured_names": "柯琳琳",
+      "format": "physical",
+      "id": "edition-011d06490531102afd2cb35e",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/kandybook",
+      "original_title": "柯琳琳首發寫真書-宅宅G擊手"
+    },
+    {
+      "featured_names": "梓梓（女神範）",
+      "format": "physical",
+      "id": "edition-e6a9fb7289d191a18084d235",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/ivy-2023photobook03",
+      "original_title": "梓梓寫真書】-梓可意會"
+    },
+    {
+      "featured_names": "梓梓（女神範）",
+      "format": "physical",
+      "id": "edition-c05a05a0faeff3ae0ccd6e62",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/ivy-22hphotobook",
+      "original_title": "梓梓首發初寫真書 ㊙️㊙️絕版寫真集㊙️㊙️"
+    },
+    {
+      "featured_names": "楊宇騰YU",
+      "format": "physical",
+      "id": "edition-871502c86b6d2d4858eb6dc1",
+      "isbn": "9789865244750",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.momoshop.com.tw/goods.momo?i_code=8734336",
+      "original_title": "楊宇騰YU 1st寫真集：Half"
+    },
+    {
+      "featured_names": "楊宇騰YU",
+      "format": "physical",
+      "id": "edition-c376f976ea53ba68c95a0fc1",
+      "isbn": "9786264370493",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.tohan.com.tw/product.php?act=view\u0026id=8279",
+      "original_title": "楊宇騰YU 30th Anniversary Book「vs YU」"
+    },
+    {
+      "featured_names": "楊宇騰YU",
+      "format": "physical",
+      "id": "edition-12ed39254e7de17c7f8ba73f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kadokawa.com.tw/products/4711289612094",
+      "original_title": "楊宇騰YU寫真集x黃中平：光影之間"
+    },
+    {
+      "featured_names": "楊宇騰YU",
+      "format": "physical",
+      "id": "edition-601e8c8b6b73611aa1b6b63d",
+      "isbn": "9786263219106",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/010843105",
+      "original_title": "楊宇騰YU寫真集x黃中平：光影之間"
+    },
+    {
+      "featured_names": "沈琪琪",
+      "format": "physical",
+      "id": "edition-079ef13d99f7b5281f8437ce",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/%E3%80%902022%E6%B2%88%E7%90%AA%E7%90%AA%E9%A6%96%E7%99%BC%E5%AF%AB%E7%9C%9F%E6%9B%B8%E3%80%91",
+      "original_title": "沈琪琪首發寫真書】"
+    },
+    {
+      "featured_names": "沐雨柔",
+      "format": "physical",
+      "id": "edition-cdf29aa67202935b1a1d988a",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/eve-0",
+      "original_title": "沐雨柔- 沐慾寫真集 強勢回歸 記念珍藏版寫真書"
+    },
+    {
+      "featured_names": "李雅英",
+      "format": "physical",
+      "id": "edition-a95d40cfd9cf8b6866b9af53",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.spp.com.tw/SalePage/Index/11508984",
+      "original_title": "沿著海，遇見你：英為你心動 李雅英寫真書"
+    },
+    {
+      "featured_names": "李雅英",
+      "format": "physical",
+      "id": "edition-c7f474073407f1707eda9854",
+      "isbn": "9786264349130",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015267268",
+      "original_title": "沿著海，遇見你：英為你心動 李雅英寫真書"
+    },
+    {
+      "featured_names": "泥泥",
+      "format": "physical",
+      "id": "edition-7ac1462380f99106bb5ef5d1",
+      "isbn": "9789865242169",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900095625/",
+      "original_title": "泥是唯一：泥泥JANiE寫真書"
+    },
+    {
+      "featured_names": "泥泥",
+      "format": "physical",
+      "id": "edition-28b699f3502337767a8b4b6b",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.eslite.com/product/1001125122681964558004",
+      "original_title": "泥是唯一：泥泥JANiE寫真書"
+    },
+    {
+      "featured_names": "陳怡叡",
+      "format": "physical",
+      "id": "edition-fe4404fdd97d46c126421ffe",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019570129125/",
+      "original_title": "洛入你心：陳怡叡寫真"
+    },
+    {
+      "featured_names": "陳怡叡",
+      "format": "physical",
+      "id": "edition-b0e655975b6645acc30523cd",
+      "isbn": "9786264196444",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014813838",
+      "original_title": "洛入你心：陳怡叡寫真"
+    },
+    {
+      "featured_names": "椎名心春",
+      "format": "physical",
+      "id": "edition-f1598657a074a71d00444669",
+      "isbn": "9786269973460",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910058511/",
+      "original_title": "海味：椎名心春台灣寫真集"
+    },
+    {
+      "featured_names": "潘映竹",
+      "format": "physical",
+      "id": "edition-be8c01dd6e2b64819f42c3b2",
+      "isbn": "9789869947626",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/panyingchu01",
+      "original_title": "潘映竹 Jennifer 同名寫真書"
+    },
+    {
+      "featured_names": "毛祁生",
+      "format": "physical",
+      "id": "edition-d4ee342a613bd5881c564809",
+      "isbn": "9786263784604",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kadokawa.com.tw/products/9786263784604",
+      "original_title": "為愛而生：毛祁生寫真書"
+    },
+    {
+      "featured_names": "卓毓彤",
+      "format": "physical",
+      "id": "edition-29c48143f98ce5488b4c64d8",
+      "isbn": "9789571057767",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=61149",
+      "original_title": "熊出沒 注意！卓毓彤的內心深處"
+    },
+    {
+      "featured_names": "牛奶兒",
+      "format": "physical",
+      "id": "edition-74541913a25e63b7e0fa5b7a",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/hormones",
+      "original_title": "牛奶兒-比特荷尔蒙寫真集"
+    },
+    {
+      "featured_names": "牛奶兒",
+      "format": "physical",
+      "id": "edition-bc14a5e2669f971b7d9a45a4",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/milk2020book",
+      "original_title": "牛奶兒-沙巴海外極品寫真書"
+    },
+    {
+      "featured_names": "牛奶兒",
+      "format": "physical",
+      "id": "edition-b8a2404a23e424b53b68f7e7",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/milkbook",
+      "original_title": "牛奶兒-秘密花園寫真書"
+    },
+    {
+      "featured_names": "牛奶兒",
+      "format": "physical",
+      "id": "edition-0b0fc5a4c783659eff758414",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/2021-milk-book",
+      "original_title": "牛奶兒寫真書-無與倫比的美麗"
+    },
+    {
+      "featured_names": "許玲玲",
+      "format": "physical",
+      "id": "edition-a7ff921ae0f1220ea81a362f",
+      "isbn": "9786263564169",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=95807",
+      "original_title": "玲距離的戀愛：許玲玲寫真"
+    },
+    {
+      "featured_names": "謝立琪",
+      "format": "physical",
+      "id": "edition-ddc36a0afd0b34e71d96a0a0",
+      "isbn": "9789577432629",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900090385/",
+      "original_title": "琪幻夢遊：謝立琪KiKi寫真書"
+    },
+    {
+      "featured_names": "瑞比",
+      "format": "physical",
+      "id": "edition-20db14ee39d0b6e9d1ef22f5",
+      "isbn": "9789869947671",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/raby-photobook",
+      "original_title": "瑞比RABY 同名寫真"
+    },
+    {
+      "featured_names": "甄馨",
+      "format": "physical",
+      "id": "edition-4b6e2f2e186888e6af80c052",
+      "isbn": "9786269687756",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900104051/",
+      "original_title": "甄情萬種：甄馨 Tiffany 首本個人紀念寫真書"
+    },
+    {
+      "featured_names": "畇二",
+      "format": "physical",
+      "id": "edition-825ec04e9104c17a53fe5cd8",
+      "isbn": "9786263966734",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=101340",
+      "original_title": "畇許曖昧：畇二寫真"
+    },
+    {
+      "featured_names": "林真亦",
+      "format": "physical",
+      "id": "edition-a65942f3fbb89a152d1662d7",
+      "isbn": "9786263167827",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=92219",
+      "original_title": "真心真亦：林真亦寫真"
+    },
+    {
+      "featured_names": "祈錦鈅",
+      "format": "physical",
+      "id": "edition-9785f9ba284694a23174140d",
+      "isbn": "9789860635003",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/009186075",
+      "original_title": "祈錦鈅 MAXINE：首本個人寫真"
+    },
+    {
+      "featured_names": "房思瑜",
+      "format": "physical",
+      "id": "edition-f182aeec4841aaa2ebc6cf0e",
+      "isbn": "9789571383484",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2014110852860/",
+      "original_title": "秘境呼吸：房思瑜寫真書"
+    },
+    {
+      "featured_names": "林岱縈",
+      "format": "physical",
+      "id": "edition-e5d4ba918f120a1b602fea09",
+      "isbn": "9786263740402",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=98281",
+      "original_title": "答應你：林岱縈寫真"
+    },
+    {
+      "featured_names": "簡懿佳",
+      "format": "physical",
+      "id": "edition-259ec52b641fe441f059752b",
+      "isbn": "9789575647797",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/007077699",
+      "original_title": "簡單說懿佳"
+    },
+    {
+      "featured_names": "籃籃",
+      "format": "physical",
+      "id": "edition-e12d10033bf645e2b90c8425",
+      "isbn": "9789577438942",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900093751/",
+      "original_title": "籃得遇見你：籃籃寫真"
+    },
+    {
+      "featured_names": "紀曉嵐",
+      "format": "physical",
+      "id": "edition-22f2669d4797df0966ec1fde",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/arashibook",
+      "original_title": "紀曉嵐-初寫真書。絕版寫真集剩4本)"
+    },
+    {
+      "featured_names": "紫玲",
+      "format": "physical",
+      "id": "edition-877bea1d057bcc524170e3f9",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/linling-photobook-02",
+      "original_title": "紫玲-『紫と你』個人第二本 實體寫真"
+    },
+    {
+      "featured_names": "許維恩",
+      "format": "physical",
+      "id": "edition-1b4c7509abd576b99dc141d5",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0011",
+      "original_title": "維恩的秘密莊園"
+    },
+    {
+      "featured_names": "美家",
+      "format": "physical",
+      "id": "edition-e127cda19a80e7dea8eb5dfc",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/miga0908-photobook",
+      "original_title": "美家MIGA 2025 PHOTO BOOK"
+    },
+    {
+      "featured_names": "羽晴",
+      "format": "physical",
+      "id": "edition-5cb45f3fddd1211d2a4f6cf3",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/min002",
+      "original_title": "羽過天晴：羽晴寫真"
+    },
+    {
+      "featured_names": "羽晴",
+      "format": "physical",
+      "id": "edition-1a0b03e54f508111024d9891",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/min001",
+      "original_title": "羽過天晴：羽晴寫真"
+    },
+    {
+      "featured_names": "翁捲捲",
+      "format": "physical",
+      "id": "edition-d61dfbce0872ce4297fdbf4b",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/06053",
+      "original_title": "翁捲捲首發-初寫真書"
+    },
+    {
+      "featured_names": "舒舒",
+      "format": "physical",
+      "id": "edition-b268978f3a7fd101b92c2408",
+      "isbn": "9786267742280",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910059303/",
+      "original_title": "舒舒19歲寫真= Shushu 19s photography"
+    },
+    {
+      "featured_names": "林艾融",
+      "format": "physical",
+      "id": "edition-8df8f18dcd726e09a4242166",
+      "isbn": "9786263568778",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=97211",
+      "original_title": "艾在你身邊：林艾融寫真"
+    },
+    {
+      "featured_names": "艾緒莉",
+      "format": "physical",
+      "id": "edition-a94fa740147aa296ee3665d0",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/ashley-photo-album",
+      "original_title": "艾緒莉-同名寫真書"
+    },
+    {
+      "featured_names": "艾芸",
+      "format": "physical",
+      "id": "edition-1ac43a114b7be2abe67172b0",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/arwen-2",
+      "original_title": "艾芸-寫真書-台版小倉由菜（第一本個人寫真集）"
+    },
+    {
+      "featured_names": "蔡黃汝",
+      "format": "physical",
+      "id": "edition-bfa46d17eb5a9b29565a8e41",
+      "isbn": "9789862725863",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/004445347",
+      "original_title": "花花世界看見愛：大女孩VS.小女人‧蔡黃汝VS.豆花妹的率真告白"
+    },
+    {
+      "featured_names": "芷媗",
+      "format": "physical",
+      "id": "edition-65e97ae96f67c57043dfa960",
+      "isbn": "9786269273300",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/candy1023-photobook",
+      "original_title": "芷想被你收藏Candy芷媗首本個人實體寫真"
+    },
+    {
+      "featured_names": "劉芷伊",
+      "format": "physical",
+      "id": "edition-423fb16ca0efa625e72af8f5",
+      "isbn": "9786264444811",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015881645",
+      "original_title": "芷想靠近你：劉芷伊醫師寫真（隨書附贈海報1張；共2款，隨機投入1款）"
+    },
+    {
+      "featured_names": "巫苡萱",
+      "format": "physical",
+      "id": "edition-c5e09c75cc02dffb2f8e665f",
+      "isbn": "9786263162822",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.cite.com.tw/book?id=90802",
+      "original_title": "苡見鍾情：巫苡萱寫真"
+    },
+    {
+      "featured_names": "邊荷律",
+      "format": "physical",
+      "id": "edition-049557503e2cea3b2614cd79",
+      "isbn": "9786264550413",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/015514569",
+      "original_title": "荷止微甜：邊荷律影像紀實"
+    },
+    {
+      "featured_names": "邊荷律",
+      "format": "physical",
+      "id": "edition-77a92c04b129b89f554ee240",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.spp.com.tw/SalePage/Index/11579526",
+      "original_title": "荷止微甜：邊荷律影像紀實"
+    },
+    {
+      "featured_names": "莉娜",
+      "format": "physical",
+      "id": "edition-8823f336b669a9c7690728e1",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/lena-02photobook",
+      "original_title": "莉娜-娜漾愛你 寫真集"
+    },
+    {
+      "featured_names": "莉娜",
+      "format": "physical",
+      "id": "edition-8bf5822b1ba5ca4c2a69c00c",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/2020lenabook",
+      "original_title": "莉娜-莉娜2同名寫真集"
+    },
+    {
+      "featured_names": "莫葵",
+      "format": "physical",
+      "id": "edition-d07a52dcb15c73c27f229918",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/vikabook",
+      "original_title": "莫葵-同名寫真書"
+    },
+    {
+      "featured_names": "蔡瑛紋",
+      "format": "physical",
+      "id": "edition-46b74f9cab678902fb92b20d",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/ashleybook2",
+      "original_title": "蔡瑛紋最初同名寫真集"
+    },
+    {
+      "featured_names": "許薇安",
+      "format": "physical",
+      "id": "edition-114f00a6f7262b359955dcea",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0001",
+      "original_title": "薇愛：許薇安寫真"
+    },
+    {
+      "featured_names": "許薇安",
+      "format": "physical",
+      "id": "edition-58e34cb3ad1fd61a3eec953a",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0002",
+      "original_title": "薇愛：許薇安寫真"
+    },
+    {
+      "featured_names": "蘇蘇",
+      "format": "physical",
+      "id": "edition-d2e784bf6ff6f1c58049de4f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/sue",
+      "original_title": "蘇蘇 首發初寫真集-你的專屬女友"
+    },
+    {
+      "featured_names": "解婕翎",
+      "format": "physical",
+      "id": "edition-89aba6fd30190f897c2beca6",
+      "isbn": "9789869224390",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/005481050",
+      "original_title": "解婕翎：同名寫真"
+    },
+    {
+      "featured_names": "語瞳",
+      "format": "physical",
+      "id": "edition-f8b0551c39115eff8f636f26",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/hitomi-20photobook",
+      "original_title": "語瞳- 同名寫真集(實體寫真集)- 🔞🔞🔞18禁 (全裸)"
+    },
+    {
+      "featured_names": "謝立琪",
+      "format": "physical",
+      "id": "edition-ff9d87482463bc11f03ef8ca",
+      "isbn": "9789860635096",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/010436145",
+      "original_title": "謝立琪 KiKi 2022個人寫真 ShaShin"
+    },
+    {
+      "featured_names": "謝薇安",
+      "format": "physical",
+      "id": "edition-e508a923b3227dee6111b2de",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0010",
+      "original_title": "謝薇安Vivian個人寫真書「薇加幸福」"
+    },
+    {
+      "featured_names": "馨馨、李岱倫、雪岑、柯姿、張安娜",
+      "format": "physical",
+      "id": "edition-379a8f711005780eb936072f",
+      "isbn": "9789869947619",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/catgirls01",
+      "original_title": "貓樣女孩 太平洋の味"
+    },
+    {
+      "featured_names": "馨馨、李岱倫、雪岑、柯姿、張安娜",
+      "format": "physical",
+      "id": "edition-d7518fd21473dfce71771ffe",
+      "isbn": "9789869947619",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/catgirls03",
+      "original_title": "貓樣女孩 太平洋の味"
+    },
+    {
+      "featured_names": "馨馨、李岱倫、雪岑、柯姿、張安娜",
+      "format": "physical",
+      "id": "edition-cd894b8b9d923775f4f5b379",
+      "isbn": "9789869947619",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/catgirls05",
+      "original_title": "貓樣女孩 太平洋の味"
+    },
+    {
+      "featured_names": "馨馨、李岱倫、雪岑、柯姿、張安娜",
+      "format": "physical",
+      "id": "edition-323f05c85457b7bbfc2eedd7",
+      "isbn": "9789869947619",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/catgirls04",
+      "original_title": "貓樣女孩 太平洋の味"
+    },
+    {
+      "featured_names": "馨馨、李岱倫、雪岑、柯姿、張安娜",
+      "format": "physical",
+      "id": "edition-649b3509c4b8cdda8eef8cf6",
+      "isbn": "9789869947619",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/catgirls02",
+      "original_title": "貓樣女孩 太平洋の味"
+    },
+    {
+      "featured_names": "邱宇辰、黃宏軒",
+      "format": "physical",
+      "id": "edition-e791158af1e11c4053be8ec0",
+      "isbn": "9786264001472",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kadokawa.com.tw/products/9786264001472",
+      "original_title": "遠在謙邊：關於未知的我們 CP寫真書"
+    },
+    {
+      "featured_names": "郭郭",
+      "format": "physical",
+      "id": "edition-ad5e63fd81c8373ae50beb78",
+      "isbn": "9786267742167",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/014857860",
+      "original_title": "郭郭寫真書：RAINY SUMMER SECRETS（小卡親簽版）"
+    },
+    {
+      "featured_names": "鄭家純",
+      "format": "physical",
+      "id": "edition-27443454fb4e06c441c7ae43",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://redboy.com.tw/product/redboy0009",
+      "original_title": "鄭家純泰國個人寫真書【泰純了】"
+    },
+    {
+      "featured_names": "陳婷",
+      "format": "physical",
+      "id": "edition-626730e738154adb9166e222",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/kellygirlchen-01",
+      "original_title": "陳婷- 純慾寫真集- 危險邊緣、極限震撼版寫真書 🔞🔞🔞18禁 (全裸微露)"
+    },
+    {
+      "featured_names": "陳彥名",
+      "format": "physical",
+      "id": "edition-83f947d420791b99e5eae3c0",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.books.com.tw/products/R030074490",
+      "original_title": "陳彥名#Y1闖入"
+    },
+    {
+      "featured_names": "陳瑀希",
+      "format": "physical",
+      "id": "edition-b1b6603644b75979a5724b7a",
+      "isbn": "9789571059273",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/005157818",
+      "original_title": "陳瑀希╳小茉莉：夢幻世界"
+    },
+    {
+      "featured_names": "陳瑀希",
+      "format": "physical",
+      "id": "edition-f09900d2b15e41d45546f44f",
+      "isbn": "9789571055893",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/004507797",
+      "original_title": "陳瑀希～小茉莉的美麗視界：時尚攝影大師黃天仁親手打造！"
+    },
+    {
+      "featured_names": "陳葳",
+      "format": "physical",
+      "id": "edition-8c15cb43bed1cab389565735",
+      "isbn": "9786269687770",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019900105683/",
+      "original_title": "陳葳 VV Chen首本個人紀念寫真書"
+    },
+    {
+      "featured_names": "陳鈺勳",
+      "format": "physical",
+      "id": "edition-8773a103f577639a9de09bfe",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/mobecarrie0223-photobook-justforyu",
+      "original_title": "陳鈺勳〈色鈺勳心〉寫真集"
+    },
+    {
+      "featured_names": "陳鈺勳",
+      "format": "physical",
+      "id": "edition-c0f78dd901701406a437d6c9",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/mobecarrie0223-photobook-lovewithyu",
+      "original_title": "陳鈺勳〈鈺求不滿〉寫真集"
+    },
+    {
+      "featured_names": "雀兒喜",
+      "format": "physical",
+      "id": "edition-bbcfe08729692b9017a90ea2",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/chelsea-photobook",
+      "original_title": "雀兒喜-同名寫真書"
+    },
+    {
+      "featured_names": "雅捷",
+      "format": "physical",
+      "id": "edition-e6b8d50e6e79dedc237d49d6",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/yuivy-2photobook",
+      "original_title": "雅捷首發寫真書-🔞🔞🔞 18禁 同名寫真集 (全裸)"
+    },
+    {
+      "featured_names": "雙囍",
+      "format": "physical",
+      "id": "edition-983b571cf59ad0c8b78395f6",
+      "isbn": "9786269847341",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.iwinimc.com/products/1223fan-photobook",
+      "original_title": "雙囍〈囍歡你〉2025同名寫真"
+    },
+    {
+      "featured_names": "雪碧",
+      "format": "physical",
+      "id": "edition-f5136f9ff4955d3ba9170916",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/sp-a",
+      "original_title": "雪碧-小寫真書-🔥 🔥 🔥(第一本個人小寫真集-碧心相許-值的收藏) 限時優惠／預購期限時特價"
+    },
+    {
+      "featured_names": "雪碧",
+      "format": "physical",
+      "id": "edition-0eba53e938939d3d64e39306",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/sprie0301",
+      "original_title": "雪碧-雪之戀寫真集-🔞18禁實體寫真書。"
+    },
+    {
+      "featured_names": "霍萱",
+      "format": "physical",
+      "id": "edition-d956f7101847a336471a1a38",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/irisbook",
+      "original_title": "霍萱-首發寫真書-霍萱同學寫真集"
+    },
+    {
+      "featured_names": "靜川奈",
+      "format": "physical",
+      "id": "edition-1d141e9c40b8333ca5b4148f",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/clairebook",
+      "original_title": "靜川奈淋浴寫真書"
+    },
+    {
+      "featured_names": "願願",
+      "format": "physical",
+      "id": "edition-cd5646ce48277b9359ab0f2e",
+      "isbn": "9786269687701",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/011299119",
+      "original_title": "願你擁有：願願Yuan個人寫真書"
+    },
+    {
+      "featured_names": "林育品",
+      "format": "physical",
+      "id": "edition-84e7788f1ba7c787ff096f3a",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.eslite.com/product/1001196942377701",
+      "original_title": "馬尾女孩最無敵：阿喜私攝概念寫真書"
+    },
+    {
+      "featured_names": "林育品",
+      "format": "physical",
+      "id": "edition-20d765ecc06ca5dd16afb5b9",
+      "isbn": "9789869124805",
+      "listing_count": 1,
+      "metadata_source_url": "https://www.5music.com.tw/Cdlist-C.asp?cdno=435495678816",
+      "original_title": "馬尾女孩最無敵：阿喜私攝概念寫真書"
+    },
+    {
+      "featured_names": "郭鬼鬼",
+      "format": "physical",
+      "id": "edition-ecc9c841a27f7d911f3a06e2",
+      "isbn": "9786263523463",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/011777584",
+      "original_title": "魅：郭鬼鬼Angela寫真書II"
+    },
+    {
+      "featured_names": "郭鬼鬼",
+      "format": "physical",
+      "id": "edition-f679348f59102ae1ee395838",
+      "isbn": "9789865245795",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.sanmin.com.tw/product/index/009466007",
+      "original_title": "魔鬼與天使：郭鬼鬼Angela寫真書"
+    },
+    {
+      "featured_names": "黃靜",
+      "format": "physical",
+      "id": "edition-83cc998c4716bbb548a24520",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/jingbook",
+      "original_title": "黃靜\"靜靜愛上你\"寫真書"
+    },
+    {
+      "featured_names": "黃靜",
+      "format": "physical",
+      "id": "edition-0c8fd7965bf83560764e2914",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/abbiefull-1",
+      "original_title": "黃靜-第一本個人寫真書"
+    },
+    {
+      "featured_names": "龍夢柔",
+      "format": "physical",
+      "id": "edition-a8e94fbd306cc6257435204e",
+      "isbn": "9789869944670",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.kingstone.com.tw/basic/2019910046280/",
+      "original_title": "龍夢柔寫真集 1st Photo Book「夢」"
+    },
+    {
+      "featured_names": "龔映璇",
+      "format": "physical",
+      "id": "edition-a4d30408a3d8adfce91571aa",
+      "isbn": "",
+      "listing_count": 0,
+      "metadata_source_url": "https://www.fan520.net/products/cassie01",
+      "original_title": "龔映璇 首發初寫真集"
+    }
+  ],
+  "sources": [
+    {
+      "id": "bookwalker-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 78
+    },
+    {
+      "id": "readmoo-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 64
+    },
+    {
+      "id": "ruten-tw",
+      "kind": "marketplace",
+      "missing": 1,
+      "total": 35
+    },
+    {
+      "id": "sanmin-books-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 27
+    },
+    {
+      "id": "yahoo-tw",
+      "kind": "marketplace",
+      "missing": 0,
+      "total": 21
+    },
+    {
+      "id": "pubu-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 17
+    },
+    {
+      "id": "fan520-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 14
+    },
+    {
+      "id": "taaze-books-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 8
+    },
+    {
+      "id": "google-play-books-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 5
+    },
+    {
+      "id": "sanmin-print-tw",
+      "kind": "bookstore",
+      "missing": 0,
+      "total": 5
+    },
+    {
+      "id": "rakuten-kobo-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 4
+    },
+    {
+      "id": "pchome-books-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 1
+    },
+    {
+      "id": "eslite-books-tw",
+      "kind": "bookstore",
+      "missing": 0,
+      "total": 1
+    },
+    {
+      "id": "kobo-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 1
+    },
+    {
+      "id": "momo-books-tw",
+      "kind": "digital_store",
+      "missing": 0,
+      "total": 1
+    },
+    {
+      "id": "kingstone-print-tw",
+      "kind": "bookstore",
+      "missing": 0,
+      "total": 1
+    }
+  ],
+  "summary": [
+    {
+      "format": "digital",
+      "missing_any_price": 83,
+      "total": 239
+    },
+    {
+      "format": "physical",
+      "missing_any_price": 273,
+      "total": 289
+    }
+  ]
+}

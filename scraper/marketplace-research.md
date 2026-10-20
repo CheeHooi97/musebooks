@@ -23,7 +23,8 @@ API boundary and keep the marketplace ID separate.
 | Region | Source | Access surface | What the adapter should do | Status |
 | --- | --- | --- | --- | --- |
 | Global | eBay | Rendered consumer search/detail pages | Browser search/detail adapter; preserve auction vs fixed-price evidence and split active/sold jobs | Browser review |
-| JP | Rakuten Books | Rendered consumer bookstore pages | Browser catalog/detail adapter; preserve native JPY and physical format | Browser review |
+| JP | Rakuten Books | Rendered consumer bookstore pages | Browser catalog/detail adapter; preserve native JPY and physical format | Blocked pending prior permission |
+| JP | BOOK☆WALKER Japan | Rendered authorized digital-store pages | Catalog/detail capture; keep digital offers separate from print | Blocked pending prior consent |
 | CN | JD.com | Rendered consumer search/detail pages | Browser catalog/detail adapter; do not use Open Platform endpoints | Browser review |
 | JP | Yahoo! JAPAN Auctions / JDirectItems Auction | Rendered auction pages | Low-rate browser adapter; require visible active/winning-sale evidence; one canonical Yahoo source ID | Review required |
 | TW | Books.com.tw | Rendered bookstore pages | Browser catalog/detail adapter; separate printed and authorized e-book products | Review required |
@@ -40,6 +41,20 @@ The word “API” below refers only to the MuseBooks control-plane API. It is n
 an instruction to call a marketplace API. All source rows are configured with
 `accessMethod=browser`; rows marked review should remain unscheduled until the
 operator has checked the current source terms and access behavior.
+
+Rakuten Books and Kobo remain disabled for future automated collection while
+the current official terms are clarified. The terms page prohibits automated
+product-page information retrieval without prior permission in a covered
+service and contains separate Rakuten Books conditions, but its application
+to each Books consumer surface is not conclusive. Do not schedule new
+collection until applicability is confirmed or prior permission is
+documented. Existing captures are retained. See
+<https://www.rakuten.co.jp/doc/info/rule/ichiba_shopping.html>.
+
+BOOK☆WALKER Japan remains unscheduled pending prior consent. Its current terms
+reserve rights to the service's text and images and prohibit copying or storing
+service content without the company's consent. Existing captures, if any, are
+retained. See <https://bookwalker.jp/info/eula/>.
 
 ## Resale price modes
 

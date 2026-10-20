@@ -215,9 +215,12 @@ genre, keyword and sort state; numeric page parameters have not been verified he
 Resolve detail IDs from actual product links; keep ISBN separate from a store's
 internal product number. Extract publisher, release date, binding/page count,
 format, tax-inclusive price and preorder/stock evidence from the selected edition.
-Physical active collection is live-verified. The seed supports physical and
-digital formats; Kobo digital active collection has not been live-verified in
-this inspection. No public completed-transaction feed is configured.
+The current official terms include a restriction on automated product-page
+information retrieval without prior permission in a covered service, alongside
+separate Rakuten Books terms. Their application to these consumer surfaces is
+not conclusive, so do not schedule new Rakuten Books or Kobo collection until
+the terms are clarified or prior permission is documented. Previously saved
+captures are retained. No public completed-transaction feed is configured.
 
 ### BOOK☆WALKER Japan — `bookwalker-jp`
 
@@ -237,6 +240,10 @@ identity from the actual detail URL, commonly a `de...` identifier. A series
 card is not one edition: expand it into individual books. Extract model/author,
 photographer, publisher/label, release date and the current book price. Store
 reader access as digital without assuming PDF/EPUB download availability.
+However, the current [BOOK☆WALKER terms](https://bookwalker.jp/info/eula/)
+reserve rights to service text and images and require prior consent for
+copying or retaining that content. Keep automated collection unscheduled until
+the intended metadata and image use is approved.
 
 ### Japan expansion sources from the reference
 

@@ -63,7 +63,7 @@
 
 | 已核對出版名稱 | 格式／版次 | ISBN | 出版日期 | 頁數 | 封面 |
 | --- | --- | --- | --- | --- | --- |
-| [TAKA：深夜名堂男子寫真 －金石堂](https://www.kingstone.com.tw/basic/2019910061054/) | 實體／平裝版 | 9786264681902 | 2026-09-16 | 144 | [R2](https://img.musecards.my/musebooks/covers/3c1ce976516c44566b414484ce00a85bd0da127555d7d9ff3e115c34816583c5.jpg) |
+| [TAKA：深夜名堂男子寫真 －金石堂](https://www.kingstone.com.tw/basic/2019910061054/) | 實體／平裝版 | 9786264681902 | 2026-09-16 | 144 | [R2](https://img.musecards.my/musebooks/covers/22e91a3ae4ec2636be6718585900521a5b2acd49680073e070d260432ad73d12.jpg) |
 
 ## TOKKI CUTIE／十一
 

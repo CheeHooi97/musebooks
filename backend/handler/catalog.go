@@ -26,14 +26,18 @@ func NewCatalogHandler(s *service.CatalogService) *CatalogHandler {
 }
 func (h *CatalogHandler) ListBooks(c echo.Context) error {
 	params := model.ListBooksQuery{
-		Query:        strings.TrimSpace(c.QueryParam("q")),
-		Origin:       strings.TrimSpace(c.QueryParam("origin")),
-		Format:       strings.TrimSpace(c.QueryParam("format")),
-		Language:     strings.TrimSpace(c.QueryParam("language")),
-		Availability: strings.TrimSpace(c.QueryParam("availability")),
-		Year:         strings.TrimSpace(c.QueryParam("year")),
-		Page:         parsePositiveInt(c.QueryParam("page"), 1),
-		PageSize:     min(parsePositiveInt(c.QueryParam("pageSize"), 24), 50),
+		Query:           strings.TrimSpace(c.QueryParam("q")),
+		Origin:          strings.TrimSpace(c.QueryParam("origin")),
+		PublicationType: strings.TrimSpace(c.QueryParam("publicationType")),
+		Format:          strings.TrimSpace(c.QueryParam("format")),
+		Language:        strings.TrimSpace(c.QueryParam("language")),
+		Availability:    strings.TrimSpace(c.QueryParam("availability")),
+		Year:            strings.TrimSpace(c.QueryParam("year")),
+		Page:            parsePositiveInt(c.QueryParam("page"), 1),
+		PageSize:        min(parsePositiveInt(c.QueryParam("pageSize"), 24), 50),
+	}
+	if params.PublicationType != "" && params.PublicationType != model.PublicationTypePhotobook && params.PublicationType != model.PublicationTypeMagazineIssue {
+		return echo.NewHTTPError(400, "publicationType must be photobook or magazine_issue")
 	}
 
 	works, total, err := h.service.ListBooks(c.Request().Context(), params)
@@ -120,7 +124,9 @@ func (h *CatalogHandler) IngestBatch(c echo.Context) error {
 	} else if result.Error != nil {
 		return echo.NewHTTPError(http.StatusInternalServerError, "failed to validate sourceId")
 	}
-	if !source.Enabled || source.AccessStatus == jobBlocked || strings.ToLower(strings.TrimSpace(source.AccessMethod)) != "browser" {
+	accessMethod := strings.ToLower(strings.TrimSpace(source.AccessMethod))
+	manualPageCapture := strings.EqualFold(strings.TrimSpace(source.Adapter), "manual_page_capture") && accessMethod == "manual_browser"
+	if source.AccessStatus == jobBlocked || (!manualPageCapture && (!source.Enabled || accessMethod != "browser")) {
 		return echo.NewHTTPError(http.StatusConflict, "source access is disabled or blocked")
 	}
 	var job model.ScrapeJob

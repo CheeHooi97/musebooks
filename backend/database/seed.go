@@ -12,6 +12,7 @@ func SeedCatalog(db *gorm.DB) error {
 		{Code: "TW", Name: "Taiwan", NativeName: "台灣", SortOrder: 2},
 		{Code: "CN", Name: "China", NativeName: "中国", SortOrder: 3},
 		{Code: "MY", Name: "Malaysia", NativeName: "Malaysia", SortOrder: 4},
+		{Code: "KR", Name: "South Korea", NativeName: "대한민국", SortOrder: 5},
 	}
 	for _, origin := range origins {
 		if err := db.Where("code = ?", origin.Code).FirstOrCreate(&origin).Error; err != nil {

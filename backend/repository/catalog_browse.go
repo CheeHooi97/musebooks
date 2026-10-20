@@ -7,13 +7,33 @@ import (
 	"strings"
 )
 
+// canonicalPersonSlug maps a merged alias profile (e.g. an old /models link for
+// a romanised name) to the person it was merged into. A slug that still has its
+// own credits, or an alias claimed by several people, is returned unchanged.
+func (r *CatalogRepository) canonicalPersonSlug(ctx context.Context, slug string) string {
+	if slug == "" {
+		return slug
+	}
+	var targets []string
+	err := r.db.WithContext(ctx).Raw(`SELECT p.slug FROM person_aliases pa JOIN people p ON p.id=pa.person_id
+ WHERE pa.alias_slug=? AND NOT EXISTS (SELECT 1 FROM people d JOIN work_people wp ON wp.person_id=d.id WHERE d.slug=?)`, slug, slug).Scan(&targets).Error
+	if err != nil || len(targets) != 1 {
+		return slug
+	}
+	return targets[0]
+}
+
 func (r *CatalogRepository) Directory(ctx context.Context, p model.CatalogBrowseQuery) ([]model.DirectoryEntry, int64, error) {
+	if p.Kind != "publisher" {
+		p.ID = r.canonicalPersonSlug(ctx, p.ID)
+	}
 	query := r.db.WithContext(ctx).Table("people AS directory")
 	columns := `directory.slug AS id, directory.canonical_public_name AS name,directory.original_name,directory.english_name,directory.verification_source_url AS official_url,
- (SELECT COUNT(DISTINCT w.id) FROM work_people wp JOIN works w ON w.id=wp.work_id WHERE wp.person_id=directory.id AND wp.role='featured' AND w.status='published') AS work_count,
- (SELECT COUNT(DISTINCT e.id) FROM work_people wp JOIN works w ON w.id=wp.work_id JOIN editions e ON e.work_id=w.id WHERE wp.person_id=directory.id AND wp.role='featured' AND w.status='published' AND e.status<>'superseded') AS edition_count,
- (SELECT COALESCE(NULLIF(e.cover_url,''),w.cover_url) FROM work_people wp JOIN works w ON w.id=wp.work_id LEFT JOIN editions e ON e.work_id=w.id AND e.status<>'superseded' WHERE wp.person_id=directory.id AND wp.role='featured' AND w.status='published' ORDER BY w.id,e.id LIMIT 1) AS cover_url`
-	query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN works w ON w.id=wp.work_id WHERE wp.person_id=directory.id AND wp.role='featured' AND w.status='published')")
+ (SELECT COUNT(DISTINCT w.id) FROM work_people wp JOIN works w ON w.id=wp.work_id WHERE wp.person_id=directory.id AND wp.role IN ('featured','cover_model') AND w.status='published') AS work_count,
+ (SELECT COUNT(DISTINCT e.id) FROM work_people wp JOIN works w ON w.id=wp.work_id JOIN editions e ON e.work_id=w.id WHERE wp.person_id=directory.id AND wp.role IN ('featured','cover_model') AND w.status='published' AND e.status<>'superseded') AS edition_count,
+ (SELECT COALESCE(NULLIF(e.cover_url,''),w.cover_url) FROM work_people wp JOIN works w ON w.id=wp.work_id LEFT JOIN editions e ON e.work_id=w.id AND e.status<>'superseded' WHERE wp.person_id=directory.id AND wp.role IN ('featured','cover_model') AND w.status='published' ORDER BY w.id,e.id LIMIT 1) AS cover_url,
+ (SELECT string_agg(pa.alias_name, ',' ORDER BY pa.alias_name) FROM person_aliases pa WHERE pa.person_id=directory.id) AS aliases`
+	query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN works w ON w.id=wp.work_id WHERE wp.person_id=directory.id AND wp.role IN ('featured','cover_model') AND w.status='published')")
 	name := "directory.canonical_public_name"
 	if p.Kind == "publisher" {
 		query = r.db.WithContext(ctx).Table("companies AS directory").Where("EXISTS (SELECT 1 FROM editions e JOIN works w ON w.id=e.work_id WHERE e.publisher_company_id=directory.id AND e.status<>'superseded' AND w.status='published')")
@@ -28,7 +48,7 @@ func (r *CatalogRepository) Directory(ctx context.Context, p model.CatalogBrowse
 	}
 	if p.Query != "" && p.Kind == "model" {
 		term := "%" + p.Query + "%"
-		query = query.Where("directory.canonical_public_name ILIKE ? OR directory.original_name ILIKE ? OR directory.english_name ILIKE ? OR directory.traditional_chinese_name ILIKE ? OR directory.simplified_chinese_name ILIKE ?", term, term, term, term, term)
+		query = query.Where("directory.canonical_public_name ILIKE ? OR directory.original_name ILIKE ? OR directory.english_name ILIKE ? OR directory.traditional_chinese_name ILIKE ? OR directory.simplified_chinese_name ILIKE ? OR EXISTS (SELECT 1 FROM person_aliases pa WHERE pa.person_id=directory.id AND pa.alias_name ILIKE ?)", term, term, term, term, term, term)
 	} else if p.Query != "" {
 		query = query.Where(name+" ILIKE ?", "%"+p.Query+"%")
 	}
@@ -44,18 +64,24 @@ func (r *CatalogRepository) Directory(ctx context.Context, p model.CatalogBrowse
 	return entries, total, err
 }
 func (r *CatalogRepository) DirectoryBooks(ctx context.Context, p model.CatalogBrowseQuery) ([]model.Work, int64, error) {
+	if p.Kind != "publisher" {
+		p.ID = r.canonicalPersonSlug(ctx, p.ID)
+	}
 	query := r.db.WithContext(ctx).Model(&model.Work{}).Where("works.status = ?", "published")
 	if p.Kind == "publisher" {
 		query = query.Where("EXISTS (SELECT 1 FROM editions e JOIN companies c ON c.id=e.publisher_company_id WHERE e.work_id=works.id AND e.status<>'superseded' AND c.slug=?)", p.ID)
 	} else {
-		query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=works.id AND wp.role='featured' AND p.slug=?)", p.ID)
+		query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=works.id AND wp.role IN ('featured','cover_model') AND p.slug=?)", p.ID)
+	}
+	if p.PublicationType != "" {
+		query = query.Where("works.publication_type = ?", p.PublicationType)
 	}
 	if p.Query != "" {
 		term := "%" + p.Query + "%"
-		query = query.Where("works.original_title ILIKE ? OR works.english_title ILIKE ? OR works.featured_names ILIKE ?", term, term, term)
+		query = query.Where("works.original_title ILIKE ? OR works.english_title ILIKE ? OR works.featured_names ILIKE ? OR EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=works.id AND wp.role IN ('featured','cover_model') AND p.canonical_public_name ILIKE ?)", term, term, term, term)
 	}
 	if p.Person != "" {
-		query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=works.id AND wp.role='featured' AND (p.slug=? OR p.canonical_public_name ILIKE ?))", p.Person, "%"+p.Person+"%")
+		query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=works.id AND wp.role IN ('featured','cover_model') AND (p.slug=? OR p.canonical_public_name ILIKE ?))", p.Person, "%"+p.Person+"%")
 	}
 	editionFilter := "e.work_id=works.id AND e.status<>'superseded'"
 	args := []any{}
@@ -104,6 +130,7 @@ func (r *CatalogRepository) DirectoryBooks(ctx context.Context, p model.CatalogB
 	return works, total, err
 }
 func (r *CatalogRepository) Listings(ctx context.Context, p model.CatalogBrowseQuery) ([]model.MarketEntry, int64, error) {
+	p.Person = r.canonicalPersonSlug(ctx, p.Person)
 	table, status := "active_listings", "active"
 	if p.Status == "completed" {
 		table, status = "sold_listings", "completed"
@@ -117,18 +144,21 @@ func (r *CatalogRepository) Listings(ctx context.Context, p model.CatalogBrowseQ
 	if p.Format != "" {
 		query = query.Where("feed.format = ?", p.Format)
 	}
+	if p.PublicationType != "" {
+		query = query.Where("w.publication_type = ?", p.PublicationType)
+	}
 	if p.Source != "" {
 		query = query.Where("feed.source_id = ?", p.Source)
 	}
 	if p.Person != "" {
-		query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=w.id AND wp.role='featured' AND p.slug=?)", p.Person)
+		query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=w.id AND wp.role IN ('featured','cover_model') AND p.slug=?)", p.Person)
 	}
 	if p.Publisher != "" {
 		query = query.Where("e.publisher_company_id IN (SELECT id FROM companies WHERE slug=?)", p.Publisher)
 	}
 	if p.Query != "" {
 		term := "%" + p.Query + "%"
-		query = query.Where("feed.title ILIKE ? OR w.original_title ILIKE ? OR w.featured_names ILIKE ? OR e.publisher ILIKE ?", term, term, term, term)
+		query = query.Where("feed.title ILIKE ? OR w.original_title ILIKE ? OR w.featured_names ILIKE ? OR e.publisher ILIKE ? OR EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=w.id AND wp.role IN ('featured','cover_model') AND p.canonical_public_name ILIKE ?)", term, term, term, term, term)
 	}
 	var total int64
 	if err := query.Session(&gorm.Session{}).Count(&total).Error; err != nil {
@@ -138,7 +168,7 @@ func (r *CatalogRepository) Listings(ctx context.Context, p model.CatalogBrowseQ
  feed.seller_location,feed.condition,feed.format,feed.price_minor,feed.original_currency_code AS currency,feed.price_type,
  feed.shipping_text,feed.observed_at,feed.last_seen_at,
  s.id AS source_id,s.name AS source_name,s.region AS source_region,s.kind AS source_kind,feed.format AS source_photobook_format,
- w.id AS work_id,w.slug AS work_slug,w.original_title AS work_title,w.featured_names AS featured_names_text,
+	 w.id AS work_id,w.slug AS work_slug,w.original_title AS work_title,COALESCE(NULLIF(w.featured_names,''),(SELECT string_agg(DISTINCT wp.credited_name, ', ') FROM work_people wp WHERE wp.work_id=w.id AND wp.role='cover_model')) AS featured_names_text,
  e.id AS edition_id,e.edition_label,e.publisher,COALESCE(NULLIF(e.cover_url,''),w.cover_url) AS cover_url,
  CASE WHEN feed.format='digital' THEN 'digital_retail' WHEN s.kind='bookstore' THEN 'physical_retail' WHEN ` + "'" + status + "'" + `='completed' THEN 'marketplace_sold' ELSE 'marketplace_asking' END AS price_category,` + "'" + status + "' AS status"
 	entries := []model.MarketEntry{}
@@ -171,12 +201,15 @@ func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.Cat
 	if p.Format != "" {
 		query = query.Where("listing.format_candidate = ?", p.Format)
 	}
+	if p.PublicationType != "" {
+		query = query.Where("work.publication_type = ?", p.PublicationType)
+	}
 	if p.Source != "" {
 		query = query.Where("listing.source_id = ?", p.Source)
 	}
 	if p.Query != "" {
 		term := "%" + p.Query + "%"
-		query = query.Where("listing.title ILIKE ? OR work.original_title ILIKE ? OR work.featured_names ILIKE ? OR edition.publisher ILIKE ?", term, term, term, term)
+		query = query.Where("listing.title ILIKE ? OR work.original_title ILIKE ? OR work.featured_names ILIKE ? OR edition.publisher ILIKE ? OR EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=work.id AND wp.role IN ('featured','cover_model') AND p.canonical_public_name ILIKE ?)", term, term, term, term, term)
 	}
 	var total int64
 	if err := query.Session(&gorm.Session{}).Count(&total).Error; err != nil {
@@ -189,7 +222,7 @@ func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.Cat
  listing.format_candidate AS source_photobook_format,
  CASE WHEN listing.format_candidate='digital' THEN 'digital_retail' WHEN source.kind='bookstore' THEN 'physical_retail'
  WHEN listing.status='completed' THEN 'marketplace_sold' ELSE 'marketplace_asking' END AS price_category,
- (work.id IS NOT NULL) AS catalog_matched,work.original_title AS work_title,work.slug AS work_slug,work.featured_names,
+	 (work.id IS NOT NULL) AS catalog_matched,work.original_title AS work_title,work.slug AS work_slug,COALESCE(NULLIF(work.featured_names,''),(SELECT string_agg(DISTINCT wp.credited_name, ', ') FROM work_people wp WHERE wp.work_id=work.id AND wp.role='cover_model')) AS featured_names,
  edition.edition_label,edition.publisher,edition.release_date,edition.release_precision`
 	entries := []model.MarketplaceListingEntry{}
 	err := query.Select(columns).Order("listing.observed_at DESC,listing.id ASC").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Scan(&entries).Error
