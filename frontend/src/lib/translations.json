@@ -193,7 +193,9 @@
     "Featured model name": "出演モデル名",
     "Cover unavailable": "表紙未登録",
     "Compare platform prices": "プラットフォームの価格を比較",
-    "Profile source": "プロフィールの情報源"
+    "Profile source": "プロフィールの情報源",
+    "About this photobook": "この写真集について",
+    "About this magazine issue": "この雑誌号について"
   },
   "zh-Hans": {
     "Marketplace offers are grouped by verified book or identical listing title. Unmatched titles and bundles are awaiting catalog matching. Bundle prices apply to the whole listing.": "商品按已验证书目或相同商品标题分组。未匹配的标题和套装等待目录匹配。套装价格对应整条商品记录。",
@@ -389,7 +391,9 @@
     "Featured model name": "出镜模特姓名",
     "Cover unavailable": "暂无封面",
     "Compare platform prices": "比较各平台价格",
-    "Profile source": "资料来源"
+    "Profile source": "资料来源",
+    "About this photobook": "关于这本写真集",
+    "About this magazine issue": "关于这期杂志"
   },
   "zh-Hant": {
     "Marketplace offers are grouped by verified book or identical listing title. Unmatched titles and bundles are awaiting catalog matching. Bundle prices apply to the whole listing.": "商品按已驗證書目或相同商品標題分組。未匹配的標題和套裝等待目錄匹配。套裝價格對應整筆商品紀錄。",
@@ -585,6 +589,8 @@
     "Featured model name": "出鏡模特姓名",
     "Cover unavailable": "暫無封面",
     "Compare platform prices": "比較各平台價格",
-    "Profile source": "資料來源"
+    "Profile source": "資料來源",
+    "About this photobook": "關於這本寫真集",
+    "About this magazine issue": "關於這期雜誌"
   }
 }

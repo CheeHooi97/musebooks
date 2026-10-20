@@ -1,4 +1,5 @@
 import { publicationDate } from "../lib/seo";
+import { bookAnswers, bookFactSummary } from "../lib/book-answers";
 import { usePreferences } from "../lib/preferences";export default function BookDetail({ selectedBook, selectedEdition, selectedEditions, selectedListing, availability, saved, shareState, setSelectedEditionId, toggleSaved, shareSelected, BookCover, EditionPrices, Icon, primaryListing, formatPrice, priceLabel, editionFormatLabel }) {const { t } = usePreferences();
   return <article className="book-detail-page" aria-labelledby="book-title">
       <nav className="book-breadcrumb" aria-label={t("Breadcrumb")}><a href="/">{t("Home")}</a><span aria-hidden="true">/</span><span>{selectedBook.originalTitle}</span></nav>
@@ -62,6 +63,11 @@ import { usePreferences } from "../lib/preferences";export default function Book
               <button type="button" onClick={shareSelected}><Icon name="share" size={16} /> {shareState === "shared" ? t("Share sheet opened") : shareState === "copied" ? t("Link copied") : t("Share")}</button>
             </div>
           </div>
+        </section>
+        <section className="book-questions" aria-labelledby="book-questions-title">
+          <h2 id="book-questions-title">{t(selectedBook.publicationType === "magazine_issue" ? "About this magazine issue" : "About this photobook")}</h2>
+          <p>{bookFactSummary(selectedBook)}</p>
+          {bookAnswers(selectedBook).map(({ question, answer }) => <div key={question}><h3>{question}</h3><p>{answer}</p></div>)}
         </section>
     </article>;
 }

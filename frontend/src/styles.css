@@ -424,3 +424,9 @@ input { caret-color: var(--accent); }
 .account-preferences select { width: 100%; min-height: 42px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); background: var(--paper); font-size: 14px; }
 .account-preferences p { margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
 .account-dropdown { max-height: calc(100dvh - 130px); overflow-y: auto; }
+
+/* Direct answers about the record; mirrored in prerendered HTML and markdown. */
+.book-questions { max-width: 72ch; padding: 28px 0 36px; border-top: 1px solid var(--line); }
+.book-questions h2 { margin: 0 0 12px; }
+.book-questions h3 { margin: 20px 0 6px; font-size: 1rem; }
+.book-questions p { margin: 0; color: var(--muted); line-height: 1.6; }

@@ -4,6 +4,8 @@ import os from 'node:os'
 import crypto from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { renderPublishedPage } from './seo-build.mjs'
+import { pageMarkdown } from './agent-files.mjs'
+import { SITE_URL } from '../src/lib/seo.js'
 
 const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[char]))
 const safeSegment = value => typeof value === 'string' && value.length > 0 && value.length <= 140 && value !== '.' && value !== '..' && !/[\/\\\u0000]/.test(value)
@@ -43,12 +45,16 @@ export async function publishImportedPages(outputDir, manifest, { apply = false,
   const plan = async (kind, id, data) => {
     const target = await checkedTarget(kind, id)
     const route = '/' + kind + '/' + encodeURIComponent(id)
-    const html = renderPublishedPage(template, route, data)
+    await stageFile(route, target, renderPublishedPage(template, route, data), false)
+    // The markdown twin is staged and rolled back with its page.
+    await stageFile(route + '.md', path.join(path.dirname(target) + '.md'), pageMarkdown(route, data, SITE_URL), true)
+  }
+  const stageFile = async (route, target, bytes, markdown) => {
     const old = await exists(target) ? await fs.readFile(target, 'utf8') : null
-    if (old === html) return
-    const staged = path.join(stage, String(plans.length) + '.html')
-    await fs.writeFile(staged, html)
-    plans.push({ route, target, staged, existed: old !== null, sha256: crypto.createHash('sha256').update(html).digest('hex') })
+    if (old === bytes) return
+    const staged = path.join(stage, String(plans.length) + (markdown ? '.md' : '.html'))
+    await fs.writeFile(staged, bytes)
+    plans.push({ route, target, staged, markdown, existed: old !== null, sha256: crypto.createHash('sha256').update(bytes).digest('hex') })
   }
   const touched = []
   try {
@@ -80,7 +86,7 @@ export async function publishImportedPages(outputDir, manifest, { apply = false,
       }
       await plan(kind, id, { profile: { ...profile, books }, books })
     }
-    const routes = [...slugs.map(slug => '/books/' + encodeURIComponent(slug)), ...plans.map(item => item.route)]
+    const routes = [...slugs.map(slug => '/books/' + encodeURIComponent(slug)), ...plans.filter(item => !item.markdown).map(item => item.route)]
     const additions = [...new Set(routes)].filter(route => !sitemap.includes('<loc>https://musebooks.my' + escape(route) + '</loc>'))
     const nextSitemap = sitemap.replace('</urlset>', additions.map(route => '<url><loc>https://musebooks.my' + escape(route) + '</loc></url>').join('') + '</urlset>')
     if (apply && (plans.length || additions.length)) {
@@ -100,7 +106,7 @@ export async function publishImportedPages(outputDir, manifest, { apply = false,
     }
     return { checkedAt: new Date().toISOString(), mode: apply ? 'applied_verified_catalog_pages' : 'dry_run',
       outputDir: root, requestedBooks: slugs.length, skippedExistingBooks: skipped,
-      changedPages: plans.length, newPages: plans.filter(item => !item.existed).length,
+      changedPages: plans.filter(item => !item.markdown).length, newPages: plans.filter(item => !item.markdown && !item.existed).length,
       sitemapAdditions: additions.length, backupDirectory: backup || null,
       pages: plans.map(({ route, sha256 }) => ({ route, sha256 })) }
   } catch (error) {
