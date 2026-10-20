@@ -110,6 +110,7 @@ func buildPlan(db *gorm.DB) (report, error) {
 
 func main() {
 	apply := flag.Bool("apply", false, "record the planned aliases and rebuild credits (writes to the database)")
+	evidence := flag.String("evidence", "", "read-only: write review evidence for unconfirmed credits on bucket models to this path")
 	audit := flag.String("audit", "", "read-only: audit credited titles against model names; write JSON to this path (- for none)")
 	personName := flag.String("person", "", "read-only: list works credited to this display name")
 	pairs := flag.Bool("pairs", false, "read-only: list people still credited on exactly the same works")
@@ -126,6 +127,13 @@ func main() {
 	var applied []string
 	db.Raw(`SELECT version FROM schema_migrations ORDER BY version`).Scan(&applied)
 	fmt.Printf("Applied catalog migrations: %s\n\n", strings.Join(applied, ", "))
+	if *evidence != "" {
+		if err := reviewEvidence(db, *evidence); err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(1)
+		}
+		return
+	}
 	if *audit != "" {
 		path := *audit
 		if path == "-" {

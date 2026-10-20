@@ -308,3 +308,21 @@ These works stay credited as they are. A title with only a short alias or no nam
 ## Importer fix
 
 `scraper/prepare_model_home_import.py` credits every search hit to the searched model. Before crediting, require that the product title contains one of the model's names of three or more characters (or its full name), and reject hits where a short name appears with a surname before it or a hiragana given name after it — the same rules as the audit's `classifyTitle` in `backend/cmd/people-merge/audit.go`. Unmatched hits should go to a review queue instead of the catalog.
+
+## Manual review — completed 2026-10-20
+
+All 204 unconfirmed credits on the bucket models were checked against the store product pages (Rakuten Kobo author field, Shueisha Grajapa model field). Decisions and evidence for every book: [model-bucket-review-2026-10-20.json](model-bucket-review-2026-10-20.json).
+
+- **Re-credited: 163 books** (applied). The store names the featured person: 葵成美, 葵井えりか, 佐藤葵, 宮瀬葵菜, 権藤葵, 溝端葵, 川口葵, 萌木七海, 戸咲七海, 七海マキ, 篠崎こころ, 須羽こころ, 池本しおり, ももせもも, もものすけ, とももともも, 月野もも, 椎名もも, 大河もも and others. Kobo author fields that hold a photographer or company were ignored.
+- **もも（バーレスク東京）/ 63ANGEL is さくらもも.** Grajapa (Shueisha) lists さくらもも(Toi Toi Toi) as the model of these books, so they and their Kobo copies are credited to さくらもも.
+- **Group books** credit everyone the store or title lists (「Summer of Love」 9 members, HoneyDripper 5, 「聖女伝説」, 「もも＆神山みれい」). Their members now share identical book sets, so the duplicate-pair check reports 28 co-star pairs; they are not duplicates.
+- **Compilations** whose store page names only a lead model are credited to that model (e.g. PPE books → えなこ / 伊織もえ); the unevidenced bucket credit is removed.
+- **Kept: 32 books** where the store also uses only the model's short name (つぼみ, めぐり, みひろ, VIVID GIRL 七海, Nanami 「Departure」, もも 「Peach Time」…). Nothing contradicts the current credit.
+- **Flagged, unchanged: 7 books**:
+  - もも色100％ (もも) — no name on the store page
+  - PPEデジタル写真集　虎GIRLSパーティー　（ヤングキング） (浅野こころ) — store lists only the photographer/company
+  - 【デジタル限定】PPEデジタル写真集 夏カノコレクション　（ヤングキング） (浅野こころ) — store lists only the photographer/company
+  - 会えるAI美少女 未来　（ピュアマーメイド） (兒玉七海) — not a person's photobook (camera manual / AI model)
+  - F2.8標準ズーム1本勝負 Canon RF28-70mm F2.8 IS STMはここまで撮れる WMC003（Wrist Machine日本語版別冊） (神木麗) — not a person's photobook (camera manual / AI model)
+  - しおり、まっさら (神木麗) — no name on the store page
+  - 坂道を駆け抜けて (寧々) — no name on the store page
