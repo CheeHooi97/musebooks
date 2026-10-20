@@ -2,7 +2,11 @@ import { readFile, writeFile } from "node:fs/promises";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { marketplaceGroups } from "../src/lib/marketplace-groups.js";
+import { aliasIndex, marketplaceGroups } from "../src/lib/marketplace-groups.js";
+// The scraper queue was built from the MuseCards model export; this back-office
+// check keeps using it. The website itself only uses MuseBooks catalog names.
+import modelSearchAliases from "../src/lib/model-search-aliases.js";
+const aliases = aliasIndex(modelSearchAliases);
 
 const scriptDir = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(scriptDir, "../..");
@@ -210,9 +214,9 @@ for (const row of queue) {
   const modelId = String(row.musecardsPersonId);
   const query = row.name;
   const expected = expectedByModel.get(modelId) || new Map();
-  const visible = new Set(marketplaceGroups(items, { query }).flatMap(group => group.items.map(item => item.id)));
-  const physical = new Set(marketplaceGroups(items, { query, format: "physical" }).flatMap(group => group.items.map(item => item.id)));
-  const digital = new Set(marketplaceGroups(items, { query, format: "digital" }).flatMap(group => group.items.map(item => item.id)));
+  const visible = new Set(marketplaceGroups(items, { query, aliases }).flatMap(group => group.items.map(item => item.id)));
+  const physical = new Set(marketplaceGroups(items, { query, aliases, format: "physical" }).flatMap(group => group.items.map(item => item.id)));
+  const digital = new Set(marketplaceGroups(items, { query, aliases, format: "digital" }).flatMap(group => group.items.map(item => item.id)));
   const physicalExpected = [...expected].filter(([, format]) => format === "physical");
   const digitalExpected = [...expected].filter(([, format]) => format === "digital");
   const visibleCount = [...expected.keys()].filter(key => visible.has(key)).length;

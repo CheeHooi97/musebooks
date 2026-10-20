@@ -74,6 +74,8 @@ export function pageMarkdown(route, { book, profile, books = [], profiles = [], 
   } else if (route === '/') {
     lines = ['# MuseBooks photobook and magazine catalog', '', `Source: ${url}`, '', SUMMARY, '', '## Newest publications', '',
       ...newestBooks(books, 100).map(({ book, date }) => `${bookLine(siteURL, book)} — ${date}`), '', `Every catalog page is listed in ${siteURL}/sitemap.xml.`]
+  } else if (route === '/books') {
+    lines = ['# Browse photobooks and magazine issues', '', `Source: ${url}`, '', ...books.map(item => bookLine(siteURL, item))]
   } else if (route === '/models' || route === '/publishers') {
     lines = [`# ${route === '/models' ? 'Models & featured people' : 'Photobook publishers'}`, '', `Source: ${url}`, '', ...profiles.map(entry => `- ${link(entry.name, `${siteURL}${route}/${encodeURIComponent(entry.id)}`)}`)]
   } else if (route === '/active' || route === '/sold') {

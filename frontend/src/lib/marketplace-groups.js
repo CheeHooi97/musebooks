@@ -1,19 +1,25 @@
 // A catalog match is authoritative. Resale titles alone are only provisional
 // groups; preserve punctuation, edition wording, and bundle descriptions.
-import modelSearchAliases from "./model-search-aliases.js";
+export const normalizeSearch = value => String(value || "").normalize("NFKC").toLocaleLowerCase().replace(/\s+/gu, "");
 
-const normalizeSearch = value => String(value || "").normalize("NFKC").toLocaleLowerCase().replace(/\s+/gu, "");
-const aliasesByName = new Map();
-for (const names of modelSearchAliases) {
-  const normalized = names.map(normalizeSearch).filter(Boolean);
-  for (const name of normalized) {
-    const aliases = aliasesByName.get(name) || new Set();
-    normalized.forEach(alias => aliases.add(alias));
-    aliasesByName.set(name, aliases);
+/**
+ * Builds a name → aliases lookup from lists of equivalent names, e.g. a
+ * MuseBooks model's display, original and English names.
+ */
+export function aliasIndex(nameLists = []) {
+  const index = new Map();
+  for (const names of nameLists) {
+    const normalized = names.map(normalizeSearch).filter(Boolean);
+    for (const name of normalized) {
+      const aliases = index.get(name) || new Set();
+      normalized.forEach(alias => aliases.add(alias));
+      index.set(name, aliases);
+    }
   }
+  return index;
 }
 
-export function marketplaceGroups(items, { query = "", format = "", availability = "" } = {}) {
+export function marketplaceGroups(items, { query = "", format = "", availability = "", aliases } = {}) {
   const groups = new Map();
   for (const item of items) {
     if (format && item.format !== format) continue;
@@ -30,7 +36,8 @@ export function marketplaceGroups(items, { query = "", format = "", availability
     group.items.push(item);
   }
   const needle = normalizeSearch(query.trim());
-  const needles = [...(aliasesByName.get(needle) || [needle])];
+  const index = aliases instanceof Map ? aliases : aliasIndex(aliases);
+  const needles = [...(index.get(needle) || [needle])];
   return [...groups.values()].filter(group => {
     if (!needle) return true;
     const haystack = normalizeSearch([group.title, ...group.items.flatMap(item => [item.title, item.featuredNames])].join(" "));

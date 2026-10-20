@@ -14,3 +14,19 @@ scraper_exp/__pycache__/
 *.log
 
 frontend/dist/
+
+# Local tooling and packaging outputs
+.claude/settings.local.json
+.impeccable/
+frontend/dist-*/
+frontend/android/.idea/
+*.tar.gz
+
+# Raw scraper captures stay local; reviewed identity files and reports are tracked
+scraper/japan-models/
+scraper/fumina-suzuki-expanded/
+scraper/fumina-suzuki-pilot/
+scraper/japan-snapshot-*/
+scraper/*.capture.json
+scraper/*.failures.json
+scraper/japan-crawl-*[0-9].json

@@ -23,6 +23,10 @@ export function renderContent(route, { book, profile, books = [], profiles = [],
     content = '<h1>Page not found</h1><p>This catalog page could not be found.</p><a href="/">Explore photobooks</a>';
   } else if (route === '/privacy-policy') {
     content = '<h1>Privacy Policy</h1><p>MuseBooks stores saved collections and interface preferences in browser storage on your device. They are not synced to a MuseBooks account or uploaded to the catalog API.</p><h2>Website analytics</h2><p>The website uses Google Analytics. Catalog source links open external sites with their own privacy practices.</p><h2>Website advertising</h2><p>The website displays sponsored links and loads a third-party HilltopAds script that may open advertising tabs or windows. Advertising providers may receive your IP address and browser information and use cookies under their own privacy policies. Website ads are excluded from Android and iOS app builds.</p><h2>Contact</h2><p>For privacy questions or data requests, email <a href="mailto:musecards67@gmail.com">musecards67@gmail.com</a> and identify MuseBooks in your message.</p>';
+  } else if (route === '/books') {
+    content = `<h1>Browse photobooks and magazine issues</h1><p>Every verified publication in the MuseBooks catalog, with editions and source-backed prices.</p>${catalog(books)}`;
+  } else if (route === '/saved') {
+    content = '<h1>Saved collection</h1><p>Publications you save are kept in browser storage on this device.</p>';
   } else if (route === '/models' || route === '/publishers') {
     content = `<h1>${route === '/models' ? 'Models & featured people' : 'Photobook publishers'}</h1><ul>${profiles.map(entry => `<li><a href="${route}/${encodeURIComponent(entry.id)}">${escape(entry.name)}</a></li>`).join('')}</ul>`;
   } else if (route === '/active' || route === '/sold') {
@@ -32,5 +36,5 @@ export function renderContent(route, { book, profile, books = [], profiles = [],
   } else {
     content = `<h1>MuseBooks photobook catalog</h1><p>Discover published photobooks from Japan, Taiwan, China, and Malaysia. Compare physical and digital editions and source-backed prices.</p>${catalog(books)}`;
   }
-  return `<div class="site-shell"><header class="site-header"><a href="/">MuseBooks</a><nav aria-label="Main navigation"><a href="/models">Models</a> · <a href="/publishers">Publishers</a> · <a href="/active">Active listings</a> · <a href="/sold">Sold listings</a> · <a href="/japan">Japan marketplace</a> · <a href="/about">About</a></nav></header><main id="main-content" class="seo-static-content">${content}</main><footer><a href="/about">Catalog methodology and corrections</a> · <a href="/privacy-policy">Privacy Policy</a></footer></div>`;
+  return `<div class="site-shell"><header class="site-header"><a href="/">MuseBooks</a><nav aria-label="Main navigation"><a href="/books">Browse</a> · <a href="/models">Models</a> · <a href="/publishers">Publishers</a> · <a href="/active">For sale</a> · <a href="/sold">Sold</a> · <a href="/japan">Japan marketplace</a> · <a href="/about">About</a></nav></header><main id="main-content" class="seo-static-content">${content}</main><footer><a href="/about">Catalog methodology and corrections</a> · <a href="/privacy-policy">Privacy Policy</a></footer></div>`;
 }

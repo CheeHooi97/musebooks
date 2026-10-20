@@ -3,11 +3,12 @@ import assert from "node:assert/strict";
 import { marketplaceGroups } from "./marketplace-groups.js";
 
 const offer = (id, title, extra = {}) => ({ id, title, format: "physical", status: "active", ...extra });
-test("database career aliases find unmatched offers under a model's earlier name", () => {
-  const result = marketplaceGroups([offer("legacy", "山岸 逢花 写真集")], { query: "山岸あや花" });
+test("catalog model aliases find unmatched offers under a model's other recorded name", () => {
+  const aliases = [["山岸あや花", "山岸逢花", "Aika Yamagishi"]];
+  const result = marketplaceGroups([offer("legacy", "山岸 逢花 写真集")], { query: "山岸あや花", aliases });
   assert.equal(result.length, 1);
   assert.equal(result[0].workSlug, undefined);
-  assert.equal(marketplaceGroups([offer("other", "Other model 写真集")], { query: "山岸あや花" }).length, 0);
+  assert.equal(marketplaceGroups([offer("other", "Other model 写真集")], { query: "山岸あや花", aliases }).length, 0);
 });
 test("one verified publication combines formats while format filters retain separate offers", () => {
   const items = [offer("a", "Book", { catalogMatched: true, workSlug: "book" }), offer("b", "Book", { catalogMatched: true, workSlug: "book", format: "digital" })];

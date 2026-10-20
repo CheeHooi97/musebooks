@@ -1,62 +1,80 @@
 import { useEffect, useState } from "react";
-import { apiUrl } from "../lib/api";
-import { usePreferences } from "../lib/preferences";
 import SeoHead from "../components/SeoHead";
+import Icon from "../components/Icon";
+import BookCard from "../components/BookCard";
+import ListingsView from "../components/ListingsView";
+import { Breadcrumb, LoadState, Pagination } from "../components/Page";
+import { usePreferences } from "../lib/preferences";
 import { showCatalogImages } from "../lib/platform";
+import { useResource } from "../lib/catalog";
 
-function useResource(path) {
-  const [result, setResult] = useState({ state: "loading" });
-  const [attempt, setAttempt] = useState(0);
+const EMPTY = { q: "", publicationType: "", format: "", language: "", year: "", model: "" };
+
+function Works({ kind, id }) {
+  const { t } = usePreferences();
+  const initial = new URLSearchParams(window.location.search);
+  const [filters, setFilters] = useState(() => Object.fromEntries(Object.keys(EMPTY).map(key => [key, initial.get(key) || ""])));
+  const [page, setPage] = useState(Number(initial.get("page")) || 1);
+  const params = new URLSearchParams({ ...filters, page: String(page), pageSize: "24" });
+  if (filters.year && !/^[1-9]\d{3}$/.test(filters.year)) params.delete("year");
+  const books = useResource(`/v1/${kind}/${id}/books?${params}`);
   useEffect(() => {
-    const controller = new AbortController();
-    setResult({ state: "loading" });
-    fetch(apiUrl(path), { signal: controller.signal }).then(async response => {
-      if (!response.ok) throw new Error(response.status === 404 ? "missing" : "error");
-      return response.json();
-    }).then(data => { if (!controller.signal.aborted) setResult({ state: "live", data }); })
-      .catch(error => { if (!controller.signal.aborted) setResult({ state: error.message === "missing" ? "missing" : "error" }); });
-    return () => controller.abort();
-  }, [path, attempt]);
-  return { ...result, retry: () => setAttempt(value => value + 1) };
+    const search = new URLSearchParams({ ...filters, page: page > 1 ? String(page) : "" });
+    for (const [key, value] of [...search]) if (!value) search.delete(key);
+    window.history.replaceState(null, "", `${window.location.pathname}${search.size ? `?${search}` : ""}`);
+  }, [filters, page]);
+  const update = (key, value) => { setFilters(current => ({ ...current, [key]: value })); setPage(1); };
+  const filtered = Object.values(filters).some(Boolean);
+  return <>
+    <form className="toolbar toolbar--wrap" onSubmit={event => event.preventDefault()}>
+      <label className="search-field"><Icon name="search" size={18} /><input type="search" value={filters.q} onChange={event => update("q", event.target.value)} placeholder={t("Title or featured person")} aria-label={t("Search catalog records")} /></label>
+      <label className="select-field"><span>{t("Type")}</span><select value={filters.publicationType} onChange={event => update("publicationType", event.target.value)}><option value="">{t("All publication types")}</option><option value="photobook">{t("Photobooks")}</option><option value="magazine_issue">{t("Magazine issues")}</option></select></label>
+      <label className="select-field"><span>{t("Format")}</span><select value={filters.format} onChange={event => update("format", event.target.value)}><option value="">{t("All formats")}</option><option value="physical">{t("Physical")}</option><option value="digital">{t("Digital")}</option></select></label>
+      <label className="select-field select-field--narrow"><span>{t("Year")}</span><input type="number" min="1000" max="9999" value={filters.year} onChange={event => update("year", event.target.value)} placeholder={t("Any")} /></label>
+      <label className="select-field select-field--narrow"><span>{t("Language")}</span><input value={filters.language} onChange={event => update("language", event.target.value)} placeholder={t("Any")} /></label>
+      {kind === "publishers" && <label className="select-field"><span>{t("Model")}</span><input value={filters.model} onChange={event => update("model", event.target.value)} placeholder={t("Featured model name")} /></label>}
+      {filtered && <button type="button" className="text-link" onClick={() => { setFilters(EMPTY); setPage(1); }}>{t("Clear filters")}</button>}
+    </form>
+    {books.state === "live" && <p className="results-count" role="status">{books.data.total} {t(books.data.total === 1 ? "publication" : "publications")}</p>}
+    <LoadState state={books.state} retry={books.retry} empty={books.state === "live" && !books.data.items.length} loadingMessage="Loading photobooks…" />
+    {books.state === "live" && books.data.items.length > 0 && <>
+      <div className="book-grid">{books.data.items.map(book => <BookCard key={book.id} book={book} showPrice={false} />)}</div>
+      <Pagination page={page} pages={books.data.totalPages} onPage={next => { setPage(next); window.scrollTo(0, 0); }} />
+    </>}
+  </>;
 }
 
 export default function DirectoryProfile({ kind, id }) {
   const { t } = usePreferences();
-  const initial = new URLSearchParams(window.location.search);
-  const [filters, setFilters] = useState(() => ({ q: initial.get("q") || "", format: initial.get("format") || "", language: initial.get("language") || "", year: initial.get("year") || "", model: initial.get("model") || "" }));
-  const [page, setPage] = useState(Number(initial.get("page")) || 1);
+  const [tab, setTab] = useState(() => ["active", "sold"].includes(new URLSearchParams(window.location.search).get("tab")) ? new URLSearchParams(window.location.search).get("tab") : "works");
   const profile = useResource(`/v1/${kind}/${id}`);
-  const params = new URLSearchParams({ ...filters, page: String(page), pageSize: "24" });
-  if (filters.year && !/^[1-9]\d{3}$/.test(filters.year)) params.delete("year");
-  const books = useResource(`/v1/${kind}/${id}/books?${params}`);
-  const models = useResource("/v1/models?pageSize=50");
-  useEffect(() => { const search = new URLSearchParams({ ...filters, page: page > 1 ? String(page) : "" }); for (const [key, value] of [...search]) if (!value) search.delete(key); window.history.replaceState(null, "", `${window.location.pathname}?${search}`); }, [filters, page]);
-  const update = (key, value) => { setFilters(current => ({ ...current, [key]: value })); setPage(1); };
+  const preview = useResource(`/v1/${kind}/${id}/books?pageSize=24`);
   const entry = profile.data;
-  const error = resource => <div className="profile-state" role="alert"><p>{t(resource.state === "missing" ? "Catalog profile not found." : "These catalog records could not be loaded.")}</p>{resource.state !== "missing" && <button onClick={resource.retry}>{t("Retry connection")}</button>}</div>;
-  return <div className="directory-profile">
-    <SeoHead path={`/${kind}/${id}`} profile={entry ? { ...entry, books: books.data?.items || [] } : undefined} pending={profile.state === "loading" || profile.state === "error"} noindex={profile.state === "missing" || Object.values(filters).some(Boolean)} />
-    <nav className="book-breadcrumb" aria-label={t("Breadcrumb")}><a href="/">{t("Home")}</a><span>/</span><a href={`/${kind}`}>{t(kind === "models" ? "Models" : "Publishers")}</a>{entry && <><span>/</span><span>{entry.name}</span></>}</nav>
-    {profile.state === "loading" ? <p role="status">{t("Loading catalog records…")}</p> : profile.state !== "live" ? error(profile) : <>
-      <header className="profile-heading"><div><h1 id="browser-title">{entry.name}</h1>{[entry.originalName, entry.englishName].filter((name, index, names) => name && name !== entry.name && names.indexOf(name) === index).map(name => <p key={name} className="profile-alias">{name}</p>)}<p>{entry.workCount} {t(entry.workCount === 1 ? "photobook" : "photobooks")} · {entry.editionCount} {t(entry.editionCount === 1 ? "edition" : "editions")}</p>{entry.officialUrl && <a href={entry.officialUrl} target="_blank" rel="noreferrer" data-external-link>{t(kind === "publishers" ? "Official source" : "Profile source")}</a>}</div>{showCatalogImages && entry.coverUrl && <img src={entry.coverUrl} alt="" />}</header>
-      <nav className="profile-navigation" aria-label={t("Catalog sections")}><a href="#profile-books">{t("Photobooks")}</a><a href={`/active?${kind === "models" ? "model" : "publisher"}=${id}&name=${encodeURIComponent(entry.name)}`}>{t("Active listings")}</a><a href={`/sold?${kind === "models" ? "model" : "publisher"}=${id}&name=${encodeURIComponent(entry.name)}`}>{t("Sold listings")}</a></nav>
-      <section id="profile-books"><h2>{t("Photobooks")}</h2><form className="browser-filters profile-filters" onSubmit={event => event.preventDefault()}>
-        <label>{t("Search photobooks")}<input type="search" value={filters.q} onChange={event => update("q", event.target.value)} placeholder={t("Title or featured person")} /></label>
-        <label>{t("Format")}<select value={filters.format} onChange={event => update("format", event.target.value)}><option value="">{t("All formats")}</option><option value="physical">{t("Physical")}</option><option value="digital">{t("Digital")}</option></select></label>
-        <label>{t("Language")}<input value={filters.language} onChange={event => update("language", event.target.value)} placeholder={t("Any language")} /></label>
-        <label>{t("Release year")}<input type="number" min="1000" max="9999" value={filters.year} onChange={event => update("year", event.target.value)} placeholder={t("Any year")} /></label>
-        {kind === "publishers" && <label>{t("Model")}<input list="profile-models" value={filters.model} onChange={event => update("model", event.target.value)} placeholder={t("Featured model name")} /><datalist id="profile-models">{models.data?.items?.map(model => <option key={model.id} value={model.name}>{model.name}</option>)}</datalist></label>}
-        {Object.values(filters).some(Boolean) && <button type="button" onClick={() => {setFilters({q:"",format:"",language:"",year:"",model:""});setPage(1);}}>{t("Clear filters")}</button>}
-      </form>
-      {books.state === "loading" ? <p className="profile-state" role="status">{t("Loading photobooks…")}</p> : books.state !== "live" ? error(books) : <>
-        <p className="browser-count" role="status">{books.data.total} {t(books.data.total === 1 ? "photobook" : "photobooks")}</p>
-        {!books.data.items.length && <p className="profile-state">{t("No verified records match these filters.")}</p>}
-        <div className="profile-book-grid">{books.data.items.map(book => <article className="profile-book" key={book.id}>
-          {showCatalogImages && <a href={`/books/${encodeURIComponent(book.slug)}`} className="profile-book-cover">{book.coverUrl ? <img src={book.coverUrl} alt="" loading="lazy" /> : <span>{t("Cover unavailable")}</span>}</a>}
-          <div><h3><a href={`/books/${encodeURIComponent(book.slug)}`}>{book.originalTitle}</a></h3><p className="profile-book-models">{book.models?.map((model, index) => <span key={model.id}>{index > 0 && " · "}<a href={`/models/${encodeURIComponent(model.id)}`}>{model.name}</a></span>)}</p><ul className="profile-editions">{book.editions.map(edition => <li key={edition.id}><span>{t(edition.format === "digital" ? "Digital" : "Physical")}</span> {edition.editionLabel}{edition.releaseDate && <small> · {new Date(edition.releaseDate).getFullYear()}</small>}</li>)}</ul><a className="profile-book-link" href={`/books/${encodeURIComponent(book.slug)}#platform-prices-title`}>{t("Compare platform prices")}</a></div>
-        </article>)}</div>
-        {books.data.totalPages > 1 && <nav className="catalog-pagination" aria-label={t("Results pages")}>{page > 1 && <a href={`?${new URLSearchParams({ ...filters, page: String(page - 1) })}`} onClick={event => {event.preventDefault();setPage(page - 1);}}>{t("Previous")}</a>}<span>{t("Page")} {page} {t("of")} {books.data.totalPages}</span>{page < books.data.totalPages && <a href={`?${new URLSearchParams({ ...filters, page: String(page + 1) })}`} onClick={event => {event.preventDefault();setPage(page + 1);}}>{t("Next")}</a>}</nav>}
-      </>}
+  const models = kind === "models";
+  const aliases = entry ? [entry.originalName, entry.englishName].filter((name, index, names) => name && name !== entry.name && names.indexOf(name) === index) : [];
+  const scope = { [models ? "model" : "publisher"]: id, name: entry?.name };
+  return <div className="page-width">
+    <SeoHead path={`/${kind}/${id}`} profile={entry ? { ...entry, books: preview.data?.items || [] } : undefined} pending={profile.state === "loading" || profile.state === "error"} noindex={profile.state === "missing" || window.location.search.length > 1} />
+    <Breadcrumb items={[[t(models ? "Models" : "Publishers"), `/${kind}`], [entry?.name || "…"]]} />
+    {profile.state !== "live" ? <LoadState state={profile.state} retry={profile.retry} /> : <>
+      <header className="profile-header">
+        <div className="profile-header__portrait">{showCatalogImages && entry.coverUrl ? <img src={entry.coverUrl} alt="" /> : <span aria-hidden="true">{entry.name.slice(0, 1)}</span>}</div>
+        <div>
+          <p className="eyebrow">{t(models ? "Model" : "Publisher")}</p>
+          <h1 id="page-title" tabIndex={-1}>{entry.name}</h1>
+          {aliases.length > 0 && <p className="profile-header__aliases">{aliases.join(" · ")}</p>}
+          <dl className="profile-header__stats">
+            <div><dt>{t("Publications")}</dt><dd>{entry.workCount}</dd></div>
+            <div><dt>{t("Editions")}</dt><dd>{entry.editionCount}</dd></div>
+          </dl>
+          {entry.officialUrl && <a className="text-link" href={entry.officialUrl} target="_blank" rel="noreferrer" data-external-link>{t(models ? "Profile source" : "Official source")} ↗</a>}
+        </div>
+      </header>
+      <div className="tabs" role="tablist" aria-label={t("Catalog sections")}>
+        {[["works", "Publications"], ["active", "For sale"], ["sold", "Sold"]].map(([key, label]) => <button key={key} type="button" role="tab" id={`tab-${key}`} aria-selected={tab === key} aria-controls="profile-panel" className={tab === key ? "is-active" : ""} onClick={() => setTab(key)}>{t(label)}</button>)}
+      </div>
+      <section id="profile-panel" role="tabpanel" aria-labelledby={`tab-${tab}`}>
+        {tab === "works" ? <Works kind={kind} id={id} /> : <ListingsView key={tab} status={tab} scope={scope} />}
       </section>
     </>}
   </div>;

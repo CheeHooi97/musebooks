@@ -86,6 +86,8 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
     if (markdown) await fs.writeFile(parts.length ? path.join(outputDir, ...parts.slice(0, -1), `${parts.at(-1)}.md`) : path.join(outputDir, 'index.md'), markdown)
   }
   await write('/', { books })
+  await write('/books', { books })
+  await write('/saved')
   await write('/models', { profiles: models })
   await write('/publishers', { profiles: publishers })
   await write('/active', { listings: active })
@@ -106,7 +108,7 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
   }
   await write('/404')
   await fs.writeFile(path.join(outputDir, '404.html'), await fs.readFile(path.join(outputDir, '404/index.html')))
-  await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemapXML(routes.filter(route => route !== '/404'), siteURL))
+  await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemapXML(routes.filter(route => route !== '/404' && route !== '/saved'), siteURL))
   await fs.writeFile(path.join(outputDir, 'robots.txt'), robotsTxt(siteURL))
   const catalog = { books, models, publishers }
   await fs.writeFile(path.join(outputDir, 'llms.txt'), llmsTxt(siteURL, catalog))

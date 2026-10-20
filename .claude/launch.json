@@ -1,0 +1,40 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "musebooks-web-live-api",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "frontend"
+      ],
+      "env": {
+        "VITE_API_PROXY": "https://musebooks.my"
+      },
+      "port": 4173
+    },
+    {
+      "name": "musebooks-app-shell",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--prefix",
+        "frontend",
+        "--",
+        "--mode",
+        "mobile",
+        "--port",
+        "4174"
+      ],
+      "env": {
+        "VITE_API_PROXY": "https://musebooks.my",
+        "VITE_APP_TARGET": "mobile",
+        "VITE_API_BASE_URL": "/"
+      },
+      "port": 4174
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import { editionListings, formatPrice as nativePrice } from "../lib/price-policy
 import { platformGroups } from "../lib/platform-prices";
 import { useId } from "react";
 
-export default function EditionPrices({ edition }) {
+export default function EditionPrices({ edition, publicationType }) {
   const { t } = usePreferences();
   const headingId = useId();
   const listings = editionListings(edition);
@@ -14,7 +14,7 @@ export default function EditionPrices({ edition }) {
     { title: "Previous offers", items: listings.filter(item => item.status === "ended" || (item.status === "unknown" && !item.priceCategory?.endsWith("retail"))) },
   ];
   return <section className="platform-comparison" aria-labelledby={headingId}>
-    <header className="comparison-heading"><h2 id={headingId}>{t("Prices by platform")}</h2><p>{edition.editionLabel} · {t(edition.format === "digital" ? "Digital edition" : "Physical book")}</p></header>
+    <header className="comparison-heading"><h2 id={headingId}>{t("Prices by platform")}</h2><p>{edition.editionLabel} · {t(publicationType === "magazine_issue" ? edition.format === "digital" ? "Digital magazine issue" : "Print magazine issue" : edition.format === "digital" ? "Digital edition" : "Physical book")}</p></header>
     <p className="comparison-note">{t("Original currencies. Availability and prices reflect the last recorded observation.")}</p>
     {!listings.length && <p className="comparison-empty" role="status">{t("No platform offers recorded for this edition.")}</p>}
     {sections.filter(section => section.items.length).map(section => <section className="comparison-section" key={section.title}>
