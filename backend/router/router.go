@@ -30,6 +30,7 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	v.GET("/editions/:id", catalogHandler.GetEdition)
 	v.GET("/origins", catalogHandler.ListOrigins)
 	v.GET("/sources", catalogHandler.ListSources)
+	v.GET("/catalog/media/redirect", h.Media.Redirect)
 	v.POST("/internal/scrape/jobs", catalogHandler.CreateScrapeJob, requireScraperToken(os.Getenv("SCRAPER_INGEST_TOKEN")))
 	v.POST("/internal/scrape/jobs/claim", catalogHandler.ClaimScrapeJob, requireScraperToken(os.Getenv("SCRAPER_INGEST_TOKEN")))
 	v.POST("/internal/scrape/jobs/:id/heartbeat", catalogHandler.HeartbeatScrapeJob, requireScraperToken(os.Getenv("SCRAPER_INGEST_TOKEN")))

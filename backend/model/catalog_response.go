@@ -221,6 +221,7 @@ func publicGallery(media []CatalogMedia) []CatalogMedia {
 		if err != nil || sourceErr != nil || image.Scheme != "https" || image.Host == "" || image.User != nil || source.Scheme != "https" || source.Host == "" || source.User != nil || PublicCoverURL(asset.StorageURL) == "" {
 			continue
 		}
+		asset.StorageURL = PublicCoverURL(asset.StorageURL)
 		result = append(result, asset)
 	}
 	return result

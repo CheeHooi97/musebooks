@@ -38,6 +38,11 @@ HTTP_ADDR=127.0.0.1:2002
 POSTGRES_AUTO_MIGRATE=false
 POSTGRES_SKIP_STARTUP_MIGRATIONS=false
 CORS_ALLOWED_ORIGINS=https://musebooks.my,capacitor://localhost,https://localhost,http://localhost
+# Cover images: see deploy/media-worker/README.md
+CLOUDFLARE_R2_PUBLIC_BASE_URL=https://img.musecards.my
+CLOUDFLARE_R2_MEDIA_BASE_URL=https://media.musebooks.my
+CLOUDFLARE_R2_MEDIA_SIGNING_SECRET=same-value-as-the-media-Worker-secret
+CLOUDFLARE_R2_MEDIA_URL_WINDOW_SECONDS=86400
 ~~~
 
 Set the file permissions:

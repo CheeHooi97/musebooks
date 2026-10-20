@@ -12,9 +12,11 @@ import (
 	"musebooks/config"
 	"musebooks/database"
 	"musebooks/handler"
+	"musebooks/model"
 	"musebooks/repository"
 	"musebooks/router"
 	service "musebooks/service"
+	"musebooks/storage"
 	"time"
 
 	"github.com/labstack/echo/v4"
@@ -51,6 +53,20 @@ func main() {
 
 	// Initialize message handler
 	h := handler.NewHandler(services)
+
+	mediaSigner, err := storage.NewMediaSigner(storage.MediaConfig{
+		LegacyBaseURLs: []string{config.CloudflareR2PublicBaseURL},
+		MediaBaseURL:   config.CloudflareR2MediaBaseURL,
+		SigningSecret:  config.CloudflareR2MediaSigningSecret,
+		Window:         config.CloudflareR2MediaURLWindow,
+	})
+	if err != nil {
+		log.Fatal("Failed to configure Cloudflare R2 media: ", err)
+	}
+	if mediaSigner != nil {
+		model.MediaURL = mediaSigner.URL
+		h.Media.Signer = mediaSigner
+	}
 
 	// Setup API routes
 	api := router.SetupRoutes(h, db)

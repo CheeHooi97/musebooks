@@ -3,7 +3,9 @@ package config
 import (
 	"log"
 	"os"
+	"strconv"
 	"strings"
+	"time"
 
 	"github.com/joho/godotenv"
 )
@@ -26,6 +28,11 @@ var (
 	HTTPAddr                string
 	CORSOrigins             string
 	SystemAesKey            string
+	// Cloudflare R2 media Worker (deploy/media-worker).
+	CloudflareR2PublicBaseURL      string
+	CloudflareR2MediaBaseURL       string
+	CloudflareR2MediaSigningSecret string
+	CloudflareR2MediaURLWindow     time.Duration
 )
 
 // LoadConfig
@@ -50,6 +57,22 @@ func LoadConfig() {
 	HTTPAddr = GetEnvOrDefault("HTTP_ADDR", ":2002")
 	CORSOrigins = GetEnvOrDefault("CORS_ALLOWED_ORIGINS", "http://localhost:4173,http://127.0.0.1:4173,capacitor://localhost,https://localhost,http://localhost")
 	SystemAesKey = GetEnv("SYSTEM_AES_KEY")
+	CloudflareR2PublicBaseURL = GetEnvOrDefault("CLOUDFLARE_R2_PUBLIC_BASE_URL", "")
+	CloudflareR2MediaBaseURL = GetEnvOrDefault("CLOUDFLARE_R2_MEDIA_BASE_URL", "")
+	CloudflareR2MediaSigningSecret = GetEnvOrDefault("CLOUDFLARE_R2_MEDIA_SIGNING_SECRET", "")
+	CloudflareR2MediaURLWindow = time.Duration(GetEnvIntOrDefault("CLOUDFLARE_R2_MEDIA_URL_WINDOW_SECONDS", 86400)) * time.Second
+}
+
+func GetEnvIntOrDefault(key string, fallback int) int {
+	value := strings.TrimSpace(GetEnvOrDefault(key, ""))
+	if value == "" {
+		return fallback
+	}
+	parsed, err := strconv.Atoi(value)
+	if err != nil {
+		log.Fatalf("%s must be an integer", key)
+	}
+	return parsed
 }
 
 func GetEnvOrDefault(key, fallback string) string {

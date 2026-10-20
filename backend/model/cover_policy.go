@@ -25,9 +25,13 @@ func IsWarningCover(raw string) bool {
 	return strings.EqualFold(parsed.Hostname(), "taiwan-image.bookwalker.com.tw") && strings.HasSuffix(strings.TrimSuffix(name, path.Ext(name)), "_mask")
 }
 
+// MediaURL rewrites stored R2 URLs into browser-loadable media Worker URLs.
+// main replaces it when the Worker is configured; tools keep the identity.
+var MediaURL = func(raw string) string { return raw }
+
 func PublicCoverURL(raw string) string {
 	if IsWarningCover(raw) {
 		return ""
 	}
-	return raw
+	return MediaURL(raw)
 }

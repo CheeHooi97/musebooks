@@ -11,6 +11,7 @@ import (
 type Handler struct {
 	Catalog *CatalogHandler
 	Browse  *CatalogBrowseHandler
+	Media   *MediaRedirectHandler
 	User    *service.UserService
 	Admin   *service.AdminService
 }
@@ -19,6 +20,7 @@ func NewHandler(services *service.Services) *Handler {
 	h := &Handler{
 		Catalog: NewCatalogHandler(services.CatalogService),
 		Browse:  NewCatalogBrowseHandler(services.CatalogService),
+		Media:   &MediaRedirectHandler{},
 		User:    services.UserService,
 		Admin:   services.AdminService,
 	}

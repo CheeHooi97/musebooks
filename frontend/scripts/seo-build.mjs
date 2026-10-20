@@ -4,6 +4,20 @@ import { pageSeo, SITE_URL, normalizeSiteURL } from '../src/lib/seo.js'
 import { renderContent, json } from './seo-content.mjs'
 
 const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[char]))
+// The API returns R2 images as media Worker URLs whose signature expires, but
+// prerendered HTML lives until the next deploy. Point those images at the
+// API redirect, which signs a fresh URL on every request.
+const MEDIA_HOSTS = (process.env.SEO_MEDIA_HOSTS || 'media.musebooks.my,img.musecards.my').split(',').map(host => host.trim().toLowerCase()).filter(Boolean)
+export function stableMediaURLs(value, siteURL = SITE_URL) {
+  if (Array.isArray(value)) return value.map(item => stableMediaURLs(item, siteURL))
+  if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, stableMediaURLs(item, siteURL)]))
+  if (typeof value !== 'string' || !value.startsWith('https://')) return value
+  let parsed
+  try { parsed = new URL(value) } catch { return value }
+  if (!MEDIA_HOSTS.includes(parsed.hostname.toLowerCase())) return value
+  parsed.search = ''
+  return `${normalizeSiteURL(siteURL)}/v1/catalog/media/redirect?${new URLSearchParams({ source: parsed.href })}`
+}
 export function renderSeo(html, pathname, book, profile, siteURL = SITE_URL) {
   const seo = pageSeo(pathname, book, profile, siteURL)
   const meta = (key, value, attribute = 'name') => `<meta ${attribute}="${key}" content="${escape(value)}"/>`
@@ -18,6 +32,7 @@ export function sitemapXML(paths, siteURL = SITE_URL) {
 }
 export function renderPublishedPage(template, route, data = {}, siteURL = SITE_URL) {
   if (!template.includes('<div id="root">') || !template.includes('</body>')) throw new Error('Invalid built page template')
+  data = stableMediaURLs(data, siteURL)
   const clean = template
     .replace(/<script\b[^>]*id=["']musebooks-seo-jsonld["'][^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/<meta\b[^>]*(?:name=["'](?:description|robots|twitter:[^"']+)["']|property=["']og:[^"']+["'])[^>]*>/gi, '')
@@ -40,7 +55,7 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
       const data = await response.json()
       if (!Array.isArray(data.items) || !Number.isInteger(data.totalPages) || data.totalPages < 0) throw new Error(`Invalid SEO ${endpoint} response`)
       totalPages = data.totalPages
-      for (const item of data.items) {
+      for (const item of stableMediaURLs(data.items, siteURL)) {
         const identity = endpoint === 'books' ? item.slug : item.id
         if (!identity) throw new Error(`SEO ${endpoint} record missing identity`)
         items.set(identity, item)

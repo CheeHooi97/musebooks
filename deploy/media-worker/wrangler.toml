@@ -1,0 +1,21 @@
+name = "musebooks-media"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+
+# The edge Cache API only works on a custom domain, not on workers.dev.
+workers_dev = false
+routes = [
+  { pattern = "media.musebooks.my", custom_domain = true },
+]
+
+# MuseBooks shares MuseCards' bucket; KEY_PREFIX keeps this Worker to
+# MuseBooks objects.
+[[r2_buckets]]
+binding = "MEDIA_BUCKET"
+bucket_name = "musecards"
+
+[vars]
+KEY_PREFIX = "musebooks/"
+
+# Set with: npx wrangler secret put MEDIA_SIGNING_SECRET
+# It must match CLOUDFLARE_R2_MEDIA_SIGNING_SECRET on the API server.

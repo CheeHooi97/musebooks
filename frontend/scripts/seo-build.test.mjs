@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { buildSeo, renderSeo, sitemapXML } from './seo-build.mjs'
+import { buildSeo, renderSeo, sitemapXML, stableMediaURLs } from './seo-build.mjs'
 import { pageSeo, hasSearchFilters, publicationDate } from '../src/lib/seo.js'
 import fs from 'node:fs/promises'
 import os from 'node:os'
@@ -113,4 +113,11 @@ test('overlapping catalog pages render each identity once with its latest facts'
   } finally {
     await fs.rm(directory, { recursive: true, force: true })
   }
+})
+
+test('prerendered R2 images use the stable media redirect', () => {
+  const data = stableMediaURLs({ book: { coverUrl: 'https://media.musebooks.my/musebooks/covers/a.jpg?exp=1&sig=x', editions: [{ coverUrl: 'https://img.musecards.my/musebooks/covers/b.jpg' }], other: 'https://example.com/c.jpg' } }, 'https://musebooks.my')
+  assert.equal(data.book.coverUrl, 'https://musebooks.my/v1/catalog/media/redirect?source=https%3A%2F%2Fmedia.musebooks.my%2Fmusebooks%2Fcovers%2Fa.jpg')
+  assert.equal(data.book.editions[0].coverUrl, 'https://musebooks.my/v1/catalog/media/redirect?source=https%3A%2F%2Fimg.musecards.my%2Fmusebooks%2Fcovers%2Fb.jpg')
+  assert.equal(data.book.other, 'https://example.com/c.jpg')
 })
