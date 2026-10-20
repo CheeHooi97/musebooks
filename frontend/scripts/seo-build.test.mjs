@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { buildSeo, renderSeo, sitemapXML, stableMediaURLs } from './seo-build.mjs'
+import { aliasRedirect, buildSeo, modelSlug, renderSeo, sitemapXML, stableMediaURLs } from './seo-build.mjs'
 import { pageSeo, hasSearchFilters, publicationDate } from '../src/lib/seo.js'
 import fs from 'node:fs/promises'
 import os from 'node:os'
@@ -146,4 +146,14 @@ test('prerendered R2 images use the stable media redirect', () => {
   assert.equal(data.book.coverUrl, 'https://musebooks.my/v1/catalog/media/redirect?source=https%3A%2F%2Fmedia.musebooks.my%2Fmusebooks%2Fcovers%2Fa.jpg')
   assert.equal(data.book.editions[0].coverUrl, 'https://musebooks.my/v1/catalog/media/redirect?source=https%3A%2F%2Fimg.musecards.my%2Fmusebooks%2Fcovers%2Fb.jpg')
   assert.equal(data.book.other, 'https://example.com/c.jpg')
+})
+
+test('merged alias profiles redirect to the canonical model without being indexed', () => {
+  // Same identity as the API's CatalogIdentity for 岸明日香.
+  assert.equal(modelSlug(' 岸明日香 '), 'model-dcded0848f57acaa3afb43a6f3361ca8e7123f97d8d9a624556163f744b163a5')
+  const html = aliasRedirect('https://musebooks.my/models/model-abc', 'A & B</script>')
+  assert.match(html, /noindex,follow/)
+  assert.match(html, /rel="canonical" href="https:\/\/musebooks.my\/models\/model-abc"/)
+  assert.doesNotMatch(html, /<\/script>"/)
+  assert.match(html, /A &amp; B&lt;\/script&gt;/)
 })

@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
+import { createHash } from 'node:crypto'
 import { pageSeo, SITE_URL, normalizeSiteURL } from '../src/lib/seo.js'
 import { renderContent, json } from './seo-content.mjs'
 import { apiCatalog, atomFeed, llmsFullTxt, llmsTxt, markdownURL, openAPI, pageMarkdown, robotsTxt } from './agent-files.mjs'
@@ -28,6 +29,11 @@ export function renderSeo(html, pathname, book, profile, siteURL = SITE_URL) {
     ...Object.entries({ card: seo.image ? 'summary_large_image' : 'summary', title: seo.title, description: seo.description, ...(seo.image ? { image: seo.image } : {}) }).map(([key, value]) => meta(`twitter:${key}`, value)),
     `<script id="musebooks-seo-jsonld" type="application/ld+json">${json(seo.structuredData)}</script>`].join('\n')
   return html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escape(seo.title)}</title>`).replace(/<meta name="description"[^>]*\/?\s*>/, '').replace('</head>', () => `${tags}\n</head>`)
+}
+// Profile slugs are "model-" + sha256 of the lower-cased name (CatalogIdentity in the API).
+export const modelSlug = name => `model-${createHash('sha256').update(String(name).trim().toLowerCase()).digest('hex')}`
+export function aliasRedirect(url, name) {
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>${escape(name)} — MuseBooks</title><meta name="robots" content="noindex,follow"/><link rel="canonical" href="${escape(url)}"/><meta http-equiv="refresh" content="0;url=${escape(url)}"/><script>location.replace(${json(url)})</script></head><body><p>This profile moved to <a href="${escape(url)}">${escape(name)}</a>.</p></body></html>\n`
 }
 export function sitemapXML(paths, siteURL = SITE_URL) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[...new Set(paths)].map(route => `<url><loc>${escape(siteURL + route)}</loc></url>`).join('')}</urlset>\n`
@@ -105,6 +111,19 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
   for (const book of books) {
     if (!book.slug || !book.originalTitle) throw new Error('Catalog record missing a slug or title')
     await write(`/books/${encodeURIComponent(book.slug)}`, { book })
+  }
+  // Names merged into a model (person_aliases) keep their old profile URLs as
+  // redirects to the canonical profile; they stay out of the sitemap.
+  const aliasRoutes = new Set()
+  for (const profile of models) {
+    for (const alias of String(profile.aliases || '').split(',').map(name => name.trim()).filter(Boolean)) {
+      const slug = modelSlug(alias)
+      const route = `/models/${slug}`
+      if (slug === profile.id || routes.includes(route) || aliasRoutes.has(route)) continue
+      aliasRoutes.add(route)
+      await fs.mkdir(path.join(outputDir, 'models', slug), { recursive: true })
+      await fs.writeFile(path.join(outputDir, 'models', slug, 'index.html'), aliasRedirect(`${siteURL}/models/${encodeURIComponent(profile.id)}`, profile.name))
+    }
   }
   await write('/404')
   await fs.writeFile(path.join(outputDir, '404.html'), await fs.readFile(path.join(outputDir, '404/index.html')))
