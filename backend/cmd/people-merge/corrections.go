@@ -1,10 +1,31 @@
 package main
 
 import (
+	_ "embed"
+	"encoding/json"
 	"fmt"
 
 	"gorm.io/gorm"
 )
+
+// bucketCorrections is the reviewed output of the name-search bucket audit
+// (docs/model-bucket-audit-2026-10-20.md): works whose title names a different
+// person than the model their credit list came from.
+//
+//go:embed bucket_corrections.json
+var bucketCorrectionsJSON []byte
+
+func allCorrections() ([]correction, error) {
+	var bucket []struct{ Title, From, To string }
+	if err := json.Unmarshal(bucketCorrectionsJSON, &bucket); err != nil {
+		return nil, fmt.Errorf("bucket corrections: %w", err)
+	}
+	result := append([]correction{}, corrections...)
+	for _, b := range bucket {
+		result = append(result, correction{Title: b.Title, From: b.From, To: b.To})
+	}
+	return result, nil
+}
 
 // correction rewrites the credit list of works whose title names a different
 // model than the importer's search bucket. Each row matches on both the exact
@@ -42,7 +63,11 @@ var corrections = []correction{
 // rebuilds those works' credits. Returns how many works changed.
 func applyCorrections(tx *gorm.DB) (int64, error) {
 	var changed int64
-	for _, c := range corrections {
+	list, err := allCorrections()
+	if err != nil {
+		return 0, err
+	}
+	for _, c := range list {
 		result := tx.Exec(`UPDATE works SET featured_names=? WHERE original_title=? AND featured_names=?`, c.To, c.Title, c.From)
 		if result.Error != nil {
 			return changed, fmt.Errorf("correct %q: %w", c.Title, result.Error)
