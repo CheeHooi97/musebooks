@@ -76,6 +76,17 @@ func applyPlan(db *gorm.DB, r report, rehearse bool) (before, after snapshot, mi
 				return err
 			}
 		}
+		corrected, err := applyCorrections(tx)
+		if err != nil {
+			return err
+		}
+		fmt.Printf("Corrected credit lists on %d works\n", corrected)
+		// Corrected lists can form new alias groups (e.g. 七海なな,Nana Nanami).
+		if corrected > 0 {
+			if r, err = buildPlan(tx); err != nil {
+				return err
+			}
+		}
 		ids := map[string]int64{}
 		for _, a := range r.Aliases {
 			id, ok := ids[a.OwnerSlug]
