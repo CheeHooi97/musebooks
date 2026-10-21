@@ -14,11 +14,43 @@
 var d = document,
     s = d.createElement('script'),
     l = d.currentScript || d.scripts[d.scripts.length - 1];
+// A successful script download does not guarantee an ad was served.
+// Report runtime failures and scripts that never insert an ad container.
+// Cross-origin frame contents cannot be inspected for empty inventory here.
+var finished = false;
+var timer;
+var observer;
+function report(type) {
+  if (finished) return;
+  finished = true;
+  clearTimeout(timer);
+  if (observer) observer.disconnect();
+  window.parent.postMessage({ type: type }, '*');
+}
+function checkCreative() {
+  var creatives = d.body.querySelectorAll('iframe, img, video, canvas, object, embed, a[href]');
+  for (var i = 0; i < creatives.length; i++) {
+    var rect = creatives[i].getBoundingClientRect();
+    if (rect.width >= 100 && rect.height >= 50) {
+      report('musebooks:banner-ready');
+      return;
+    }
+  }
+}
+window.addEventListener('error', function (event) {
+  if (event.target === s || event.filename) report('musebooks:banner-error');
+}, true);
+observer = new MutationObserver(checkCreative);
+observer.observe(d.body, { childList: true, subtree: true, attributes: true });
+timer = setTimeout(function () {
+  checkCreative();
+  report('musebooks:banner-error');
+}, 15000);
 s.settings = mvd || {};
-s.src = "//nervousstroke.com/b.XRVns/dGGhlO0PYjWLcZ/Zelmq9UuhZtUDl/kpP/T_cG1BMSztEm3-OLTMMEtxNuz_UuzxMeTBcJ5rN/wv";
+s.src = "https://trickyclub.com/b.XdVjsydZG/lX0-Y/W_ca/eeTm-9/uHZ/UUllkrPFTqc/1QMUzsEh3RORTBMWtAN/zzU/zbMUTucl5jNIwv";
 s.async = true;
 s.referrerPolicy = 'no-referrer-when-downgrade';
-s.onerror = function () { window.parent.postMessage({ type: 'musebooks:banner-error' }, '*'); };
+s.onerror = function () { report('musebooks:banner-error'); };
 l.parentNode.insertBefore(s, l);
 })({})
 </script>

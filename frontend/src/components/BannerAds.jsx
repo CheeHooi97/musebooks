@@ -12,10 +12,11 @@ function BannerAd() {
     window.addEventListener("message", receive);
     return () => window.removeEventListener("message", receive);
   }, []);
-  return <aside className="website-banner" aria-label="Banner advertisement">
+  return <aside className="website-banner" data-failed={failed || undefined} aria-label="Banner advertisement">
     <span>Advertisement</span>
-    {failed ? <a href="https://thoroughgear.com/bP3sVx0.P/3yp/vubOmDVSJ-ZyD/0f3RN/T/M/xxNQz/go1cLjTjcr1/MbzDE/3YODD/k-" target="_blank" rel="sponsored noopener noreferrer">Explore this sponsored offer</a> :
+    {failed ? <a href="https://thoroughgear.com/bp3.Vr0PPb3xp/vabUmcV/J_ZuDN0B3/N/TOMCxVNuzOgT1rLwTzcm1NMHz/Ea3COID/kV" target="_blank" rel="sponsored noopener noreferrer">Explore this sponsored offer</a> :
       <iframe ref={frame} title="Banner advertisement" src="/hilltop-banner.html" width="300" height="250" loading="lazy"
+        onError={() => setFailed(true)}
         sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox" referrerPolicy="no-referrer-when-downgrade" />}
   </aside>;
 }

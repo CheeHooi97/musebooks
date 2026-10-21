@@ -415,6 +415,7 @@ a.chip:hover, button.chip:hover { border-color: var(--ink); }
 .website-banner-group[data-banner-count="0"] { margin: 0; }
 .website-banner-group[data-banner-count="2"] { grid-template-columns: repeat(2, minmax(0, 336px)); }
 .website-banner { display: grid; justify-items: center; align-content: start; gap: 6px; min-width: 0; min-height: 280px; padding: 8px 0; }
+.website-banner[data-failed] { min-height: 0; }
 .website-banner span, .sponsored-offer span { color: var(--muted); font: 500 10px/1.4 var(--label); letter-spacing: .08em; text-transform: uppercase; }
 .website-banner iframe { display: block; width: 300px; max-width: 100%; height: 250px; border: 0; }
 .website-banner a, .sponsored-offer a { color: var(--ink); text-decoration: underline; text-underline-offset: 4px; }

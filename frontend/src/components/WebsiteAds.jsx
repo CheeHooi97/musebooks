@@ -3,8 +3,8 @@ import { Capacitor } from "@capacitor/core";
 import { isMobileApp } from "../lib/platform";
 
 const scriptId = "musebooks-hilltop-popunder";
-const scriptURL = "https://surprisedplate.com/c.DE9K6KbM2Y5/l/SDWXQ/9kNXzEU/zqMFTtcD4xNPSp0F3-NDTqMpxlNUz/g/5a";
-const directURL = "https://thoroughgear.com/bP3sVx0.P/3yp/vubOmDVSJ-ZyD/0f3RN/T/M/xxNQz/go1cLjTjcr1/MbzDE/3YODD/k-";
+const scriptURL = "https://surprisedplate.com/cyD.9s6/bP2U5PlxSpWgQ/9dNvz/Umz-M/Twck4INZSb0b3/NHTvMCxZNyzCgJ5O";
+const directURL = "https://thoroughgear.com/bp3.Vr0PPb3xp/vabUmcV/J_ZuDN0B3/N/TOMCxVNuzOgT1rLwTzcm1NMHz/Ea3COID/kV";
 
 export function WebsiteAds() {
   useEffect(() => {
