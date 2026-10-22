@@ -206,15 +206,18 @@ a.chip:hover, button.chip:hover { border-color: var(--ink); }
 
 /* ── Discover ───────────────────────────────────────────── */
 .hero { border-bottom: 1px solid var(--line); }
-.hero__inner { display: grid; gap: 20px; padding-block: clamp(48px, 9vw, 120px) clamp(40px, 6vw, 72px); }
-.hero h1 { max-width: 14ch; font: 400 clamp(46px, 8vw, 112px)/.94 var(--display); letter-spacing: -.035em; text-wrap: balance; }
-.hero__intro { max-width: 56ch; color: var(--muted); font-size: clamp(16px, 1.4vw, 19px); line-height: 1.55; }
-.search-field--hero { width: min(100%, 640px); min-height: 56px; margin-top: 8px; border-color: var(--line-strong); }
-.search-field--hero .button { min-height: 48px; }
-.hero__stats { display: flex; flex-wrap: wrap; gap: 12px 48px; margin-top: 20px; }
+/* Two columns on wide screens: the pitch on the left, the working tools (search + counts) on the right. */
+.hero__inner { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 32px clamp(40px, 6vw, 96px); align-items: end; padding-block: clamp(36px, 5vw, 72px) clamp(32px, 4vw, 56px); }
+.hero__copy { display: grid; gap: 16px; }
+.hero__aside { display: grid; gap: 24px; }
+.hero h1 { max-width: 16ch; font: 400 clamp(38px, 4.8vw, 68px)/1 var(--display); letter-spacing: -.03em; text-wrap: balance; }
+.hero__intro { max-width: 52ch; color: var(--muted); font-size: clamp(15px, 1.2vw, 17px); line-height: 1.55; }
+.search-field--hero { width: 100%; min-height: 52px; border-color: var(--line-strong); }
+.search-field--hero .button { min-height: 44px; }
+.hero__stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 16px 24px; padding-top: 20px; border-top: 1px solid var(--line); }
 .hero__stats div { display: grid; gap: 2px; }
 .hero__stats dt { color: var(--muted); font: 500 10px/1.4 var(--label); letter-spacing: .08em; text-transform: uppercase; }
-.hero__stats dd { font: 400 32px/1.1 var(--display); font-variant-numeric: tabular-nums; }
+.hero__stats dd { font: 400 28px/1.1 var(--display); font-variant-numeric: tabular-nums; }
 .discover__section { padding-top: clamp(48px, 7vw, 88px); }
 .origin-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
 .origin-tile { position: relative; display: grid; align-content: end; gap: 4px; min-height: 160px; padding: 18px; overflow: hidden; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: background .15s; }
@@ -477,6 +480,7 @@ a.chip:hover, button.chip:hover { border-color: var(--ink); }
   .filter-panel__groups { flex: 1; overflow-y: auto; padding: 0 var(--gutter); }
   .filter-panel__foot { display: block; padding: 12px var(--gutter) calc(12px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); }
   .sheet-backdrop { position: fixed; z-index: 45; inset: 0; display: block; background: rgba(0, 0, 0, .4); }
+  .hero__inner { grid-template-columns: 1fr; gap: 24px; }
   .book-hero { grid-template-columns: 1fr; gap: 24px; }
   .book-hero__media { position: static; width: min(100%, 460px); justify-self: center; }
   .market-pulse { grid-template-columns: 1fr; gap: 0; }
@@ -506,8 +510,8 @@ a.chip:hover, button.chip:hover { border-color: var(--ink); }
   .book-grid { gap: 28px 14px; }
   .book-card h3 { font-size: 16px; }
   .book-card__save { top: 6px; right: 6px; width: 36px; height: 36px; }
-  .hero__stats { gap: 12px 28px; }
-  .hero__stats dd { font-size: 26px; }
+  .hero__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 20px; }
+  .hero__stats dd { font-size: 24px; }
   .search-field--hero { flex-wrap: wrap; padding: 6px; }
   .search-field--hero > svg { margin-left: 8px; }
   .search-field--hero input { flex-basis: calc(100% - 40px); }

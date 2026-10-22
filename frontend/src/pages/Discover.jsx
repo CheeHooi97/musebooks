@@ -41,20 +41,24 @@ export default function Discover() {
     <SeoHead path="/" />
     <section className="hero" aria-labelledby="page-title">
       <div className="page-width hero__inner">
-        <p className="eyebrow">{t("Photobooks · Magazine issues · Editions · Prices")}</p>
-        <h1 id="page-title">{t("Find the next publication worth keeping.")}</h1>
-        <p className="hero__intro">{t("Photobooks and magazine issues from Japan, Taiwan, China, Malaysia, and Korea — with editions and source-backed prices.")}</p>
-        <form className="search-field search-field--hero" role="search" onSubmit={event => { event.preventDefault(); navigate(`/books${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`); }}>
-          <Icon name="search" size={20} />
-          <input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={t("Search by title, model, or publisher")} aria-label={t("Search the catalog")} />
-          <button type="submit" className="button">{t("Search")}</button>
-        </form>
-        {books.state === "live" && <dl className="hero__stats">
-          <div><dt>{t("Publications")}</dt><dd>{books.data.length.toLocaleString()}</dd></div>
-          <div><dt>{t("Editions")}</dt><dd>{editionCount.toLocaleString()}</dd></div>
-          {modelTotal.state === "live" && <div><dt>{t("Models")}</dt><dd>{modelTotal.data.toLocaleString()}</dd></div>}
-          {origins.state === "live" && <div><dt>{t("Origins")}</dt><dd>{origins.data.length}</dd></div>}
-        </dl>}
+        <div className="hero__copy">
+          <p className="eyebrow">{t("Photobooks · Magazine issues · Editions · Prices")}</p>
+          <h1 id="page-title">{t("Find the next publication worth keeping.")}</h1>
+          <p className="hero__intro">{t("Photobooks and magazine issues from Japan, Taiwan, China, Malaysia, and Korea — with editions and source-backed prices.")}</p>
+        </div>
+        <div className="hero__aside">
+          <form className="search-field search-field--hero" role="search" onSubmit={event => { event.preventDefault(); navigate(`/books${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`); }}>
+            <Icon name="search" size={20} />
+            <input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={t("Search by title, model, or publisher")} aria-label={t("Search the catalog")} />
+            <button type="submit" className="button">{t("Search")}</button>
+          </form>
+          {books.state === "live" && <dl className="hero__stats">
+            <div><dt>{t("Publications")}</dt><dd>{books.data.length.toLocaleString()}</dd></div>
+            <div><dt>{t("Editions")}</dt><dd>{editionCount.toLocaleString()}</dd></div>
+            {modelTotal.state === "live" && <div><dt>{t("Models")}</dt><dd>{modelTotal.data.toLocaleString()}</dd></div>}
+            {origins.state === "live" && <div><dt>{t("Origins")}</dt><dd>{origins.data.length}</dd></div>}
+          </dl>}
+        </div>
       </div>
     </section>
 
