@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { pageSeo } from "../lib/seo";
+import { languageAlternates } from "../lib/catalog-languages";
 
 export default function SeoHead({ path, book, profile, noindex = false, pending = false }) {
   useEffect(() => {
@@ -19,6 +20,12 @@ export default function SeoHead({ path, book, profile, noindex = false, pending 
     let canonical = document.head.querySelector('link[rel="canonical"]');
     if (!canonical) { canonical = document.createElement("link"); canonical.rel = "canonical"; document.head.appendChild(canonical); }
     canonical.href = seo.url;
+    document.head.querySelectorAll('link[hreflang]').forEach(element => element.remove());
+    if (!noindex && !seo.noindex) for (const item of languageAlternates(path, new URL(seo.url).origin)) {
+      const alternate = document.createElement("link");
+      alternate.rel = "alternate"; alternate.hreflang = item.code; alternate.href = item.url;
+      document.head.appendChild(alternate);
+    }
     let json = document.getElementById("musebooks-seo-jsonld");
     if (!json) { json = document.createElement("script"); json.id = "musebooks-seo-jsonld"; json.type = "application/ld+json"; document.head.appendChild(json); }
     json.textContent = JSON.stringify(seo.structuredData);

@@ -154,6 +154,11 @@ func (w Work) Response() BookResponse {
 		}
 		result.Editions = append(result.Editions, edition.Response())
 	}
+	series := make([]string, 0, len(result.Editions))
+	for _, edition := range result.Editions {
+		series = append(series, edition.SeriesName)
+	}
+	result.OriginalTitle = TitleWithoutSeries(w.OriginalTitle, series...)
 	return result
 }
 
@@ -174,7 +179,7 @@ func (e Edition) Response() EditionResponse {
 		ContentSummary:    e.ContentSummary,
 		MetadataSourceURL: e.MetadataSourceURL,
 		SeriesName:        e.SeriesName,
-		EditionLabel:      e.EditionLabel,
+		EditionLabel:      TitleWithoutSeries(e.EditionLabel, e.SeriesName),
 		CoverURL:          PublicCoverURL(e.CoverURL),
 		Listings:          make([]ListingResponse, 0, len(e.Listings)),
 		ActiveListings:    []ListingResponse{},
@@ -235,6 +240,7 @@ func (l Listing) Response() ListingResponse {
 
 func publicGallery(media []CatalogMedia) []CatalogMedia {
 	result := []CatalogMedia{}
+	seen := map[string]bool{}
 	for _, asset := range media {
 		image, err := url.Parse(asset.StorageURL)
 		source, sourceErr := url.Parse(asset.SourceURL)
@@ -242,6 +248,10 @@ func publicGallery(media []CatalogMedia) []CatalogMedia {
 			continue
 		}
 		asset.StorageURL = PublicCoverURL(asset.StorageURL)
+		if seen[asset.StorageURL] {
+			continue
+		}
+		seen[asset.StorageURL] = true
 		result = append(result, asset)
 	}
 	return result
@@ -286,10 +296,12 @@ func listingPriceCategory(listing Listing) string {
 	if listingPhotobookFormat(listing) == formatDigital {
 		return "digital_retail"
 	}
-	if isPhysicalRetailSource(listing.Source) {
+	// Korean bookstore marketplaces explicitly prefix seller inventory with [중고].
+	// Keep those asking/sold offers separate from the store's new-copy price.
+	if isPhysicalRetailSource(listing.Source) && !strings.HasPrefix(strings.TrimSpace(listing.Title), "[중고]") {
 		return "physical_retail"
 	}
-	if listing.Status == "completed" {
+	if listing.Status == "completed" || listing.Status == "sold" {
 		return "marketplace_sold"
 	}
 	return "marketplace_asking"

@@ -1,0 +1,50 @@
+{
+  "capturedAt": "2026-10-25T13:15:41.0844486+08:00",
+  "method": "Rendered public product page; DOM enabled-cart check, no API",
+  "source": {
+    "id": "maruzen-junkudo-manual",
+    "name": "Maruzen Junkudo (manual public page capture)",
+    "region": "JP",
+    "locale": "ja-JP",
+    "timezone": "Asia/Tokyo",
+    "kind": "bookstore",
+    "adapter": "manual_page_capture",
+    "accessMethod": "manual_browser",
+    "defaultFormat": "physical",
+    "allowedFormats": "physical",
+    "baseUrl": "https://www.maruzenjunkudo.co.jp",
+    "allowedHosts": "www.maruzenjunkudo.co.jp,maruzenjunkudo.co.jp",
+    "capabilities": "listing_detail",
+    "accessStatus": "review",
+    "termsUrl": "https://www.maruzenjunkudo.co.jp/policies/terms-of-service",
+    "ratePerMinute": 1,
+    "enabled": false
+  },
+  "item": {
+    "externalId": "9784087901566",
+    "observationId": "maruzen-20261025-9784087901566",
+    "editionId": "korea-dj-soda-candid-2024-jp-print",
+    "url": "https://www.maruzenjunkudo.co.jp/products/9784087901566",
+    "title": "DJ SODA写真集『Candid』",
+    "status": "active",
+    "priceMinor": 3630,
+    "currency": "JPY",
+    "priceType": "retail",
+    "format": "physical",
+    "publisher": "集英社",
+    "editionVariant": "Print",
+    "shippingText": "Partner warehouse stock (在庫△ 提携倉庫在庫あり); shipping fee and delivery date not verified",
+    "observedAt": "2026-10-25T13:15:41.0844486+08:00",
+    "timestampPrecision": "minute",
+    "statusEvidence": "Live public rendered product page displays tax-inclusive normal selling priceJPY3630, ISBN9784087901566, release2024/04/05 and net-store stock 在庫△ 提携倉庫在庫あり. Product cart button is enabled. This is partner warehouse stock, not guaranteed local branch stock. No purchase, login, cart modification or region entitlement verified. Physical publisher cover and print specifications remain independently sourced."
+  },
+  "publicationDate": "2024-04-05",
+  "isbn": "9784087901566",
+  "taxIncluded": true,
+  "rights": "Unconfirmed. No retailer image accepted; publisher image references preserved.",
+  "blockedLead": {
+    "url": "https://www.kinokuniya.co.jp/f/dsg-01-9784087901566",
+    "result": "403 Forbidden",
+    "action": "No bypass; no offer captured"
+  }
+}

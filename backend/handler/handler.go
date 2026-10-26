@@ -14,6 +14,8 @@ type Handler struct {
 	Media   *MediaRedirectHandler
 	User    *service.UserService
 	Admin   *service.AdminService
+	Auth    *service.AuthService
+	OAuth   *GoogleOAuth
 }
 
 func NewHandler(services *service.Services) *Handler {
@@ -23,6 +25,7 @@ func NewHandler(services *service.Services) *Handler {
 		Media:   &MediaRedirectHandler{},
 		User:    services.UserService,
 		Admin:   services.AdminService,
+		Auth:    services.AuthService,
 	}
 
 	return h

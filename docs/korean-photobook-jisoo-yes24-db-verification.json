@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T14:11:03.5804381+08:00",
+  "before": "korean-photobook-jisoo-yes24-before.json",
+  "preapplyAliasSnapshot": "korean-photobook-jisoo-yes24-preapply-alias-snapshot.json",
+  "readback": "korean-photobook-jisoo-yes24-readback.json",
+  "canonicalPersonId": 16986,
+  "retainedLegacyPersonId": 16985,
+  "publicSubjectsBefore": 2,
+  "publicSubjectsAfter": 1,
+  "alias": "지수 (JISOO)",
+  "oldObservationsPreserved": true,
+  "newUnavailableDisplayedPriceKRW": 39000,
+  "printSpecificationsAndImagesPreserved": true,
+  "cohortAudit": {
+    "listingItemReferences": 353,
+    "linkedPeopleWithoutVerificationSource": 0,
+    "editions": 196,
+    "passed": true,
+    "explicitMediaReferences": 134,
+    "works": 110
+  },
+  "goalComplete": false,
+  "remaining": "Dates, page counts, canonical covers, source coverage, freshness and exact image reuse permissions remain incomplete.",
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5024,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 169,
+    "databaseCounts": {
+      "listings": 8330,
+      "sources": 31,
+      "editions": 6813,
+      "listing_observations": 8379,
+      "works": 6064
+    },
+    "log": "korean-photobook-jisoo-yes24-catalog-verify.log"
+  }
+}

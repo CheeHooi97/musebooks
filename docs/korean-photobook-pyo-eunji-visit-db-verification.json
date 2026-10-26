@@ -1,0 +1,457 @@
+{
+  "databaseCounts": {
+    "editions": 6800,
+    "listing_observations": 8327,
+    "listings": 8287,
+    "sources": 29,
+    "works": 6061
+  },
+  "edition": {
+    "originalCoverUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+    "id": "korea-pyo-eunji-fanclub-first-2022-jp-visit-cover",
+    "workId": "korea-pyo-eunji-fanclub-first-2022",
+    "format": "physical",
+    "language": "ja-JP",
+    "editionMarket": "JP",
+    "pageCount": 168,
+    "dimensions": "A4",
+    "editionVariant": "First Visit Commemorative Cover",
+    "contentSummary": "First Visit to Japan Commemorative Edition of Pyo Eunji Japan fanclub photobook. The artist-store page snapshot (crawled last month) explicitly says this special cover celebrates the May 2022 first Japan visit and that contents are identical to the original fanclub book: 168 pages, A4, reference JPY 4,800 including tax. The live localized page displays MYR 141.00 tax included, disabled SOLD OUT button and members-only notice. Actual commemorative-edition publication date and publisher imprint/ISBN are unverified; May 2022 is an event reference, not a stored release date. A clean cover thumbnail is selected for the edition; the separate Sold Out overlay image is retained as listing promotional provenance. No interior-page sample verified. Remote image URLs only; no pixels mirrored or reuse license asserted.",
+    "metadataSourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition",
+    "editionLabel": "First Visit to Japan commemorative cover",
+    "coverUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+    "status": "published",
+    "createdAt": "2026-10-23T23:44:30.180933+08:00",
+    "updatedAt": "2026-10-23T23:44:30.180933+08:00"
+  },
+  "featuredCredits": [
+    {
+      "workId": "korea-pyo-eunji-fanclub-first-2022",
+      "personId": 67104,
+      "role": "featured",
+      "creditedName": "표은지",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 67104,
+        "slug": "model-9bd8619dfd3bbfa5ee26b615b34cc92228a220383c647b621f99dadc5a391a77",
+        "canonicalPublicName": "표은지",
+        "originalName": "표은지",
+        "englishName": "Pyo Eunji",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+        "profileSourceConfidence": "official_model_store",
+        "createdAt": "2026-10-23T22:54:47.069009+08:00",
+        "updatedAt": "2026-10-23T22:54:47.069009+08:00"
+      },
+      "createdAt": "2026-10-23T23:04:39.879036+08:00",
+      "updatedAt": "2026-10-23T23:44:30.299374+08:00"
+    }
+  ],
+  "limitations": "Commemorative release date unknown; May 2022 is an event. Specifications/same-content claim attributed to last-month artist-store snapshot. Live stock sold-out/restricted, stored unknown; no reuse license asserted.",
+  "listing": {
+    "id": "listing-48d91f76b46a2e402143c5970e06dc1e",
+    "editionId": "korea-pyo-eunji-fanclub-first-2022-jp-visit-cover",
+    "sourceId": "pyoeunji-jp-manual",
+    "externalId": "pyoeunji-first-visit-to-japan-commemorative-edition:41660028846262",
+    "url": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+    "title": "Pyo Eunji First Visit to Japan Commemorative Edition",
+    "formatCandidate": "physical",
+    "editionVariant": "First Visit Commemorative Cover",
+    "status": "unknown",
+    "priceMinor": 14100,
+    "currency": "MYR",
+    "priceType": "fixed",
+    "shippingText": "Additional fee varies by domestic/international region; international shipping available, with possible transit damage noted in store description",
+    "imageUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+    "observedAt": "2026-10-23T23:43:00+08:00",
+    "lastSeenAt": "2026-10-23T23:43:00+08:00",
+    "source": {
+      "id": "",
+      "name": "",
+      "region": "",
+      "locale": "",
+      "timezone": "",
+      "kind": "",
+      "adapter": "",
+      "accessMethod": "",
+      "defaultFormat": "",
+      "allowedFormats": "",
+      "baseUrl": "",
+      "accessStatus": "",
+      "ratePerMinute": 0,
+      "enabled": false,
+      "createdAt": "0001-01-01T00:00:00Z",
+      "updatedAt": "0001-01-01T00:00:00Z"
+    },
+    "createdAt": "2026-10-23T23:43:00+08:00",
+    "updatedAt": "2026-10-23T23:44:30.540352+08:00"
+  },
+  "media": [
+    {
+      "id": 84398,
+      "entityType": "listing",
+      "entityId": "listing-48d91f76b46a2e402143c5970e06dc1e",
+      "mediaType": "listing_image",
+      "originalUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+      "storageUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+      "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+      "isPrimary": true,
+      "createdAt": "2026-10-23T23:44:30.680081+08:00",
+      "updatedAt": "2026-10-23T23:44:30.680081+08:00"
+    },
+    {
+      "id": 84399,
+      "entityType": "listing",
+      "entityId": "listing-48d91f76b46a2e402143c5970e06dc1e",
+      "mediaType": "listing_image_001",
+      "originalUrl": "https://pyoeunji.com/cdn/shop/files/Sold_Out_1_grande.png?v=1724490231",
+      "storageUrl": "https://pyoeunji.com/cdn/shop/files/Sold_Out_1_grande.png?v=1724490231",
+      "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+      "isPrimary": false,
+      "createdAt": "2026-10-23T23:44:30.680081+08:00",
+      "updatedAt": "2026-10-23T23:44:30.680081+08:00"
+    }
+  ],
+  "observations": [
+    {
+      "id": "observation-9108c1b8e042f4291830e3565027d30ae7c71594",
+      "observationKey": "observation-9108c1b8e042f4291830e3565027d30ae7c71594",
+      "listingId": "listing-48d91f76b46a2e402143c5970e06dc1e",
+      "jobId": "manual-pyoeunji-visit-cover-20261023",
+      "parserVersion": "manual-page-capture-v1",
+      "observedAt": "2026-10-23T23:43:00+08:00",
+      "status": "unknown",
+      "format": "physical",
+      "priceMinor": 14100,
+      "currency": "MYR",
+      "priceType": "fixed",
+      "shippingText": "Additional fee varies by domestic/international region; international shipping available, with possible transit damage noted in store description",
+      "statusEvidence": "Live public artist-store page reviewed on 2026-10-23 around 23:42-23:43 SGT. Selected variant 41660028846262 shows localized MYR 141.00 tax included, disabled SOLD OUT button and members-only notice. No active purchase eligibility is inferred. Clean second thumbnail visibly prints 日本初来日記念版; the default image has a Sold Out overlay. Product description/specification relationship comes from the same artist-store public snapshot crawled last month, not a current price snapshot. JPY 4,800 is kept separately as descriptive reference; no conversion. No membership, login, cart or purchase attempted.",
+      "timestampPrecision": "minute",
+      "createdAt": "2026-10-23T23:44:30.628683+08:00",
+      "updatedAt": "2026-10-23T23:44:30.628683+08:00"
+    }
+  ],
+  "originalEdition": {
+    "id": "korea-pyo-eunji-fanclub-first-2022-jp-print",
+    "workId": "korea-pyo-eunji-fanclub-first-2022",
+    "format": "physical",
+    "language": "ja-JP",
+    "editionMarket": "JP",
+    "releaseDate": "2022-01-01T08:00:00+08:00",
+    "releasePrecision": "year",
+    "pageCount": 168,
+    "dimensions": "A4",
+    "editionVariant": "First fanclub edition",
+    "contentSummary": "Artist-store page explicitly says the first fanclub photobook was released in 2022; only year precision is known. A4, 168 pages; descriptive original price JPY 4,800 tax included. Restock offer displays MYR 141.00 and disabled SOLD OUT button plus a members-only notice. This is distinct from the 150-page annual PHOTO BOOK 2022 and from KADOKAWA Rondo. The only current product image has a Sold Out overlay; it is retained on the listing as a promotional product image, not asserted to be a clean book cover. Image URL is a remote reference, with no pixels mirrored or reuse license asserted.",
+    "metadataSourceUrl": "https://pyoeunji.com/en/products/restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+    "editionLabel": "First fanclub edition",
+    "status": "published",
+    "createdAt": "2026-10-23T23:05:37.684445+08:00",
+    "updatedAt": "2026-10-23T23:26:49.436662+08:00"
+  },
+  "passed": true,
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-9bd8619dfd3bbfa5ee26b615b34cc92228a220383c647b621f99dadc5a391a77",
+        "name": "표은지"
+      }
+    ],
+    "id": "korea-pyo-eunji-fanclub-first-2022",
+    "slug": "korea-pyo-eunji-fanclub-first-2022",
+    "publicationType": "photobook",
+    "originalTitle": "ピョ・ウンジ 写真集 日本公式ファンクラブ限定",
+    "englishTitle": "Pyo Eunji First Japan Fanclub Photobook",
+    "summary": "First Japan fanclub photobook of Korean model 표은지 (Pyo Eunji). The original 168-page book and the First Visit to Japan commemorative cover have the same contents according to the artist-store description. Original and commemorative covers are distinct physical editions; the 150-page PHOTO BOOK 2022 annual is a separate work.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "표은지"
+    ],
+    "coverUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+    "editions": [
+      {
+        "id": "korea-pyo-eunji-fanclub-first-2022-jp-print",
+        "format": "physical",
+        "language": "ja-JP",
+        "editionMarket": "JP",
+        "releaseDate": "2022-01-01T08:00:00+08:00",
+        "releasePrecision": "year",
+        "pageCount": 168,
+        "dimensions": "A4",
+        "editionVariant": "First fanclub edition",
+        "contentSummary": "Artist-store page explicitly says the first fanclub photobook was released in 2022; only year precision is known. A4, 168 pages; descriptive original price JPY 4,800 tax included. Restock offer displays MYR 141.00 and disabled SOLD OUT button plus a members-only notice. This is distinct from the 150-page annual PHOTO BOOK 2022 and from KADOKAWA Rondo. The only current product image has a Sold Out overlay; it is retained on the listing as a promotional product image, not asserted to be a clean book cover. Image URL is a remote reference, with no pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://pyoeunji.com/en/products/restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+        "editionLabel": "First fanclub edition",
+        "listings": [
+          {
+            "gallery": [
+              {
+                "id": 84291,
+                "entityType": "listing",
+                "entityId": "listing-ce6be486850f65a7e47efccfbf41b8f1",
+                "mediaType": "listing_image",
+                "originalUrl": "https://pyoeunji.com/cdn/shop/files/111Sold_Out_600x.png?v=1737367082",
+                "storageUrl": "https://pyoeunji.com/cdn/shop/files/111Sold_Out_600x.png?v=1737367082",
+                "sourceUrl": "https://pyoeunji.com/en/products/restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+                "isPrimary": true,
+                "createdAt": "2026-10-23T23:05:37.908619+08:00",
+                "updatedAt": "2026-10-23T23:26:49.554975+08:00"
+              }
+            ],
+            "id": "listing-ce6be486850f65a7e47efccfbf41b8f1",
+            "externalId": "restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+            "url": "https://pyoeunji.com/en/products/restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+            "title": "［Restock] First Edition Pyo Eunji Photo Book - Japan Official Fan Club Exclusive",
+            "format": "physical",
+            "status": "unknown",
+            "priceMinor": 14100,
+            "currency": "MYR",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "Additional fee; varies by domestic/international destination; overseas delivery may take longer and risk transit damage",
+            "observedAt": "2026-10-23T23:03:00+08:00",
+            "lastSeenAt": "2026-10-23T23:03:00+08:00",
+            "source": {
+              "id": "pyoeunji-jp-manual",
+              "name": "Pyo Eunji Japan official store (manual page capture; access under review)",
+              "region": "JP",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": [
+          {
+            "gallery": [
+              {
+                "id": 84291,
+                "entityType": "listing",
+                "entityId": "listing-ce6be486850f65a7e47efccfbf41b8f1",
+                "mediaType": "listing_image",
+                "originalUrl": "https://pyoeunji.com/cdn/shop/files/111Sold_Out_600x.png?v=1737367082",
+                "storageUrl": "https://pyoeunji.com/cdn/shop/files/111Sold_Out_600x.png?v=1737367082",
+                "sourceUrl": "https://pyoeunji.com/en/products/restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+                "isPrimary": true,
+                "createdAt": "2026-10-23T23:05:37.908619+08:00",
+                "updatedAt": "2026-10-23T23:26:49.554975+08:00"
+              }
+            ],
+            "id": "listing-ce6be486850f65a7e47efccfbf41b8f1",
+            "externalId": "restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+            "url": "https://pyoeunji.com/en/products/restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+            "title": "［Restock] First Edition Pyo Eunji Photo Book - Japan Official Fan Club Exclusive",
+            "format": "physical",
+            "status": "unknown",
+            "priceMinor": 14100,
+            "currency": "MYR",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "Additional fee; varies by domestic/international destination; overseas delivery may take longer and risk transit damage",
+            "observedAt": "2026-10-23T23:03:00+08:00",
+            "lastSeenAt": "2026-10-23T23:03:00+08:00",
+            "source": {
+              "id": "pyoeunji-jp-manual",
+              "name": "Pyo Eunji Japan official store (manual page capture; access under review)",
+              "region": "JP",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ]
+      },
+      {
+        "gallery": [
+          {
+            "id": 84397,
+            "entityType": "edition",
+            "entityId": "korea-pyo-eunji-fanclub-first-2022-jp-visit-cover",
+            "mediaType": "cover",
+            "originalUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+            "storageUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+            "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition",
+            "isPrimary": true,
+            "createdAt": "2026-10-23T23:44:29.597517+08:00",
+            "updatedAt": "2026-10-23T23:44:29.597517+08:00"
+          }
+        ],
+        "id": "korea-pyo-eunji-fanclub-first-2022-jp-visit-cover",
+        "format": "physical",
+        "language": "ja-JP",
+        "editionMarket": "JP",
+        "pageCount": 168,
+        "dimensions": "A4",
+        "editionVariant": "First Visit Commemorative Cover",
+        "contentSummary": "First Visit to Japan Commemorative Edition of Pyo Eunji Japan fanclub photobook. The artist-store page snapshot (crawled last month) explicitly says this special cover celebrates the May 2022 first Japan visit and that contents are identical to the original fanclub book: 168 pages, A4, reference JPY 4,800 including tax. The live localized page displays MYR 141.00 tax included, disabled SOLD OUT button and members-only notice. Actual commemorative-edition publication date and publisher imprint/ISBN are unverified; May 2022 is an event reference, not a stored release date. A clean cover thumbnail is selected for the edition; the separate Sold Out overlay image is retained as listing promotional provenance. No interior-page sample verified. Remote image URLs only; no pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition",
+        "editionLabel": "First Visit to Japan commemorative cover",
+        "coverUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+        "listings": [
+          {
+            "gallery": [
+              {
+                "id": 84398,
+                "entityType": "listing",
+                "entityId": "listing-48d91f76b46a2e402143c5970e06dc1e",
+                "mediaType": "listing_image",
+                "originalUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+                "storageUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+                "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+                "isPrimary": true,
+                "createdAt": "2026-10-23T23:44:30.680081+08:00",
+                "updatedAt": "2026-10-23T23:44:30.680081+08:00"
+              },
+              {
+                "id": 84399,
+                "entityType": "listing",
+                "entityId": "listing-48d91f76b46a2e402143c5970e06dc1e",
+                "mediaType": "listing_image_001",
+                "originalUrl": "https://pyoeunji.com/cdn/shop/files/Sold_Out_1_grande.png?v=1724490231",
+                "storageUrl": "https://pyoeunji.com/cdn/shop/files/Sold_Out_1_grande.png?v=1724490231",
+                "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+                "isPrimary": false,
+                "createdAt": "2026-10-23T23:44:30.680081+08:00",
+                "updatedAt": "2026-10-23T23:44:30.680081+08:00"
+              }
+            ],
+            "id": "listing-48d91f76b46a2e402143c5970e06dc1e",
+            "externalId": "pyoeunji-first-visit-to-japan-commemorative-edition:41660028846262",
+            "url": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+            "title": "Pyo Eunji First Visit to Japan Commemorative Edition",
+            "format": "physical",
+            "status": "unknown",
+            "priceMinor": 14100,
+            "currency": "MYR",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "Additional fee varies by domestic/international region; international shipping available, with possible transit damage noted in store description",
+            "observedAt": "2026-10-23T23:43:00+08:00",
+            "lastSeenAt": "2026-10-23T23:43:00+08:00",
+            "source": {
+              "id": "pyoeunji-jp-manual",
+              "name": "Pyo Eunji Japan official store (manual page capture; access under review)",
+              "region": "JP",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": [
+          {
+            "gallery": [
+              {
+                "id": 84398,
+                "entityType": "listing",
+                "entityId": "listing-48d91f76b46a2e402143c5970e06dc1e",
+                "mediaType": "listing_image",
+                "originalUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+                "storageUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+                "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+                "isPrimary": true,
+                "createdAt": "2026-10-23T23:44:30.680081+08:00",
+                "updatedAt": "2026-10-23T23:44:30.680081+08:00"
+              },
+              {
+                "id": 84399,
+                "entityType": "listing",
+                "entityId": "listing-48d91f76b46a2e402143c5970e06dc1e",
+                "mediaType": "listing_image_001",
+                "originalUrl": "https://pyoeunji.com/cdn/shop/files/Sold_Out_1_grande.png?v=1724490231",
+                "storageUrl": "https://pyoeunji.com/cdn/shop/files/Sold_Out_1_grande.png?v=1724490231",
+                "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+                "isPrimary": false,
+                "createdAt": "2026-10-23T23:44:30.680081+08:00",
+                "updatedAt": "2026-10-23T23:44:30.680081+08:00"
+              }
+            ],
+            "id": "listing-48d91f76b46a2e402143c5970e06dc1e",
+            "externalId": "pyoeunji-first-visit-to-japan-commemorative-edition:41660028846262",
+            "url": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+            "title": "Pyo Eunji First Visit to Japan Commemorative Edition",
+            "format": "physical",
+            "status": "unknown",
+            "priceMinor": 14100,
+            "currency": "MYR",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "Additional fee varies by domestic/international region; international shipping available, with possible transit damage noted in store description",
+            "observedAt": "2026-10-23T23:43:00+08:00",
+            "lastSeenAt": "2026-10-23T23:43:00+08:00",
+            "source": {
+              "id": "pyoeunji-jp-manual",
+              "name": "Pyo Eunji Japan official store (manual page capture; access under review)",
+              "region": "JP",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scope": "Pyo Eunji first-visit cover edition under existing fanclub work; one MYR display observation, clean cover and promotional overlay",
+  "source": {
+    "marketplaceId": 246,
+    "id": "pyoeunji-jp-manual",
+    "name": "Pyo Eunji Japan official store (manual page capture; access under review)",
+    "region": "JP",
+    "locale": "en-JP",
+    "timezone": "Asia/Tokyo",
+    "kind": "bookstore",
+    "adapter": "manual_page_capture",
+    "accessMethod": "manual_browser",
+    "defaultFormat": "physical",
+    "allowedFormats": "physical",
+    "baseUrl": "https://pyoeunji.com",
+    "allowedHosts": "pyoeunji.com",
+    "capabilities": "listing_detail",
+    "accessStatus": "review",
+    "termsUrl": "https://pyoeunji.com/pages/terms",
+    "ratePerMinute": 1,
+    "enabled": false,
+    "createdAt": "2026-10-23T22:55:37.847984+08:00",
+    "updatedAt": "2026-10-23T23:44:30.375784+08:00"
+  },
+  "verifiedAt": "2026-10-23T15:45:29.6463292Z",
+  "work": {
+    "originMarketId": 10544,
+    "id": "korea-pyo-eunji-fanclub-first-2022",
+    "slug": "korea-pyo-eunji-fanclub-first-2022",
+    "publicationType": "photobook",
+    "originalTitle": "ピョ・ウンジ 写真集 日本公式ファンクラブ限定",
+    "englishTitle": "Pyo Eunji First Japan Fanclub Photobook",
+    "summary": "First Japan fanclub photobook of Korean model 표은지 (Pyo Eunji). The original 168-page book and the First Visit to Japan commemorative cover have the same contents according to the artist-store description. Original and commemorative covers are distinct physical editions; the 150-page PHOTO BOOK 2022 annual is a separate work.",
+    "originCode": "KR",
+    "featuredNames": "표은지",
+    "coverUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+    "status": "published",
+    "origin": {
+      "code": "",
+      "name": "",
+      "sortOrder": 0,
+      "createdAt": "0001-01-01T00:00:00Z",
+      "updatedAt": "0001-01-01T00:00:00Z"
+    },
+    "createdAt": "2026-10-23T23:05:37.665883+08:00",
+    "updatedAt": "2026-10-23T23:44:30.14099+08:00"
+  },
+  "workEditionCount": 2,
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 337,
+    "digitalWorks": 5448,
+    "unlinkedVerifiedListings": 1509,
+    "editionsWithPendingCovers": 177,
+    "scope": "All public catalogue pagination, cross-format listing and digital sold-history checks"
+  }
+}

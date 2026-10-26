@@ -1,0 +1,35 @@
+{
+  "capturedAt": "2026-10-25T15:10:12.3316299+08:00",
+  "url": "https://www.ebay.com.my/help/policies/member-behaviour-policies/user-agreement?id=4259",
+  "method": "public rendered browser DOM",
+  "pageTitle": "User Agreement",
+  "displayedEffectiveDate": "2021-06-16 for existing users",
+  "sections": [
+    {
+      "section": "3. Using eBay",
+      "finding": "Explicitly prohibits robots, spiders, scrapers and other automated means of access for any purpose."
+    },
+    {
+      "section": "3. Using eBay",
+      "finding": "Protected eBay, user and third-party content reproduction/display requires prior express permission from the relevant rightsholder."
+    },
+    {
+      "section": "9. Content",
+      "finding": "Catalog content permission described is for eBay listings; not an independent MuseBooks reuse grant."
+    }
+  ],
+  "decision": {
+    "automatedCollectionApproved": false,
+    "browserAutomationApproved": false,
+    "imageReuseApproved": false,
+    "furtherEbayProductCollection": "excluded pending explicit platform permission",
+    "APIRequested": false,
+    "contactSent": false,
+    "existingEvidence": "Retained as historical source assertions, not proof of permission",
+    "databaseMutationRequired": false,
+    "reason": "Existing ebay-public-manual source is already disabled; this is a policy-evidence review, not a product list."
+  },
+  "acceptedProductRecords": 0,
+  "databaseRowsRequired": 0,
+  "goalComplete": false
+}

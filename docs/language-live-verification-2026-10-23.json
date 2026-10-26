@@ -1,0 +1,232 @@
+{
+  "checkedAt": "2026-10-23T13:25:35.380Z",
+  "sitemapUrls": 33250,
+  "checkedHtmlPages": 28,
+  "results": [
+    {
+      "path": "/jp",
+      "status": 200,
+      "lang": "ja",
+      "canonical": "https://musebooks.my/jp",
+      "title": "写真集・雑誌カタログ — 写真集・雑誌カタログ — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/jp/books",
+      "status": 200,
+      "lang": "ja",
+      "canonical": "https://musebooks.my/jp/books",
+      "title": "写真集・雑誌 — 写真集・雑誌カタログ — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/jp/models",
+      "status": 200,
+      "lang": "ja",
+      "canonical": "https://musebooks.my/jp/models",
+      "title": "モデル・出演者 — 写真集・雑誌カタログ — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/jp/publishers",
+      "status": 200,
+      "lang": "ja",
+      "canonical": "https://musebooks.my/jp/publishers",
+      "title": "出版社 — 写真集・雑誌カタログ — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/jp/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "status": 200,
+      "lang": "ja",
+      "canonical": "https://musebooks.my/jp/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "title": "맥심 MAXIM 2024. 8월호 — 写真集・雑誌カタログ — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/jp/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "status": 200,
+      "lang": "ja",
+      "canonical": "https://musebooks.my/jp/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "title": "AIKA — 写真集・雑誌カタログ — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/jp/publishers/publisher-74c1a1ec0a7cfc0e19463a310848b200c90a1aa782b21c9163883a53a8e4ddee",
+      "status": 200,
+      "lang": "ja",
+      "canonical": "https://musebooks.my/jp/publishers/publisher-74c1a1ec0a7cfc0e19463a310848b200c90a1aa782b21c9163883a53a8e4ddee",
+      "title": "AIconiQ — 写真集・雑誌カタログ — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/tw",
+      "status": 200,
+      "lang": "zh-Hant",
+      "canonical": "https://musebooks.my/tw",
+      "title": "寫真集與雜誌目錄 — 寫真集與雜誌目錄 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/tw/books",
+      "status": 200,
+      "lang": "zh-Hant",
+      "canonical": "https://musebooks.my/tw/books",
+      "title": "寫真集與雜誌 — 寫真集與雜誌目錄 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/tw/models",
+      "status": 200,
+      "lang": "zh-Hant",
+      "canonical": "https://musebooks.my/tw/models",
+      "title": "模特兒與演出者 — 寫真集與雜誌目錄 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/tw/publishers",
+      "status": 200,
+      "lang": "zh-Hant",
+      "canonical": "https://musebooks.my/tw/publishers",
+      "title": "出版社 — 寫真集與雜誌目錄 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/tw/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "status": 200,
+      "lang": "zh-Hant",
+      "canonical": "https://musebooks.my/tw/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "title": "맥심 MAXIM 2024. 8월호 — 寫真集與雜誌目錄 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/tw/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "status": 200,
+      "lang": "zh-Hant",
+      "canonical": "https://musebooks.my/tw/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "title": "AIKA — 寫真集與雜誌目錄 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/tw/publishers/publisher-74c1a1ec0a7cfc0e19463a310848b200c90a1aa782b21c9163883a53a8e4ddee",
+      "status": 200,
+      "lang": "zh-Hant",
+      "canonical": "https://musebooks.my/tw/publishers/publisher-74c1a1ec0a7cfc0e19463a310848b200c90a1aa782b21c9163883a53a8e4ddee",
+      "title": "AIconiQ — 寫真集與雜誌目錄 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/cn",
+      "status": 200,
+      "lang": "zh-Hans",
+      "canonical": "https://musebooks.my/cn",
+      "title": "写真集与杂志目录 — 写真集与杂志目录 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/cn/books",
+      "status": 200,
+      "lang": "zh-Hans",
+      "canonical": "https://musebooks.my/cn/books",
+      "title": "写真集与杂志 — 写真集与杂志目录 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/cn/models",
+      "status": 200,
+      "lang": "zh-Hans",
+      "canonical": "https://musebooks.my/cn/models",
+      "title": "模特与出演者 — 写真集与杂志目录 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/cn/publishers",
+      "status": 200,
+      "lang": "zh-Hans",
+      "canonical": "https://musebooks.my/cn/publishers",
+      "title": "出版社 — 写真集与杂志目录 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/cn/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "status": 200,
+      "lang": "zh-Hans",
+      "canonical": "https://musebooks.my/cn/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "title": "맥심 MAXIM 2024. 8월호 — 写真集与杂志目录 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/cn/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "status": 200,
+      "lang": "zh-Hans",
+      "canonical": "https://musebooks.my/cn/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "title": "AIKA — 写真集与杂志目录 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/cn/publishers/publisher-74c1a1ec0a7cfc0e19463a310848b200c90a1aa782b21c9163883a53a8e4ddee",
+      "status": 200,
+      "lang": "zh-Hans",
+      "canonical": "https://musebooks.my/cn/publishers/publisher-74c1a1ec0a7cfc0e19463a310848b200c90a1aa782b21c9163883a53a8e4ddee",
+      "title": "AIconiQ — 写真集与杂志目录 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/kr",
+      "status": 200,
+      "lang": "ko",
+      "canonical": "https://musebooks.my/kr",
+      "title": "사진집·잡지 카탈로그 — 사진집·잡지 카탈로그 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/kr/books",
+      "status": 200,
+      "lang": "ko",
+      "canonical": "https://musebooks.my/kr/books",
+      "title": "사진집·잡지 — 사진집·잡지 카탈로그 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/kr/models",
+      "status": 200,
+      "lang": "ko",
+      "canonical": "https://musebooks.my/kr/models",
+      "title": "모델·출연자 — 사진집·잡지 카탈로그 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/kr/publishers",
+      "status": 200,
+      "lang": "ko",
+      "canonical": "https://musebooks.my/kr/publishers",
+      "title": "출판사 — 사진집·잡지 카탈로그 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/kr/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "status": 200,
+      "lang": "ko",
+      "canonical": "https://musebooks.my/kr/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "title": "맥심 MAXIM 2024. 8월호 — 사진집·잡지 카탈로그 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/kr/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "status": 200,
+      "lang": "ko",
+      "canonical": "https://musebooks.my/kr/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "title": "AIKA — 사진집·잡지 카탈로그 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    },
+    {
+      "path": "/kr/publishers/publisher-74c1a1ec0a7cfc0e19463a310848b200c90a1aa782b21c9163883a53a8e4ddee",
+      "status": 200,
+      "lang": "ko",
+      "canonical": "https://musebooks.my/kr/publishers/publisher-74c1a1ec0a7cfc0e19463a310848b200c90a1aa782b21c9163883a53a8e4ddee",
+      "title": "AIconiQ — 사진집·잡지 카탈로그 — MuseBooks",
+      "cfCacheStatus": "DYNAMIC"
+    }
+  ],
+  "extraChecks": "Each language: slash redirect, direct Markdown, negotiated Markdown, missing-page HTTP 404"
+}

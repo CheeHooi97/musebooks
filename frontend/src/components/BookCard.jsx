@@ -23,9 +23,9 @@ export default function BookCard({ book, filters = {}, loading = "lazy", showPri
   const listing = primaryListing(edition, filters.availability);
   const people = bookPeople(book).map(person => person.name).filter(Boolean).slice(0, 2).join(" · ");
   const saved = isSaved(book.id);
-  return <article className="book-card">
+  return <article className={`book-card${showCatalogImages ? "" : " book-card--text"}`}>
     <a className="book-card__link" href={bookPath(book)} aria-label={`${bookTitle(book)}${people ? `, ${people}` : ""}`}>
-      <div className="book-card__cover"><BookCover book={book} edition={edition} loading={loading} /></div>
+      {showCatalogImages && <div className="book-card__cover"><BookCover book={book} edition={edition} loading={loading} /></div>}
       <div className="book-card__body">
         <p className="eyebrow">{t(book.origin?.name)} · {t(editionFormatLabel(edition, book))}</p>
         <h3>{book.originalTitle}</h3>
@@ -42,6 +42,6 @@ export default function BookCard({ book, filters = {}, loading = "lazy", showPri
 export function BookGridSkeleton({ count = 8 }) {
   const { t } = usePreferences();
   return <div className="book-grid" role="status" aria-label={t("Loading catalog records")}>
-    {Array.from({ length: count }, (_, index) => <div className="book-skeleton" key={index}><span /><i /><i /></div>)}
+    {Array.from({ length: count }, (_, index) => <div className="book-skeleton" key={index}>{showCatalogImages && <span />}<i /><i /></div>)}
   </div>;
 }

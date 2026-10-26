@@ -1,0 +1,34 @@
+{
+  "capturedAt": "2026-10-25T15:11:52.6470671+08:00",
+  "model": "Pyo Eunji / 표은지 / ピョ・ウンジ",
+  "method": "Public rendered browser DOM; original publisher guidance verified after search translation redirect",
+  "policyUrl": "https://www.kadokawa.co.jp/support/b/media/",
+  "exceptionListUrl": "https://media-cdn.kadokawa.co.jp/ijwyneak/hgdliokbjr/shoei.pdf",
+  "conditions": [
+    "Applies to publisher-issued books and qualifying corporate/group/media book introductions; not a blanket commercial license.",
+    "Official product-page cover must allow ordinary right-click saving; otherwise inquire.",
+    "Check title-specific special conditions and cover variants even when ISBN is unchanged.",
+    "No cropping or compositing; use cover without promotional band.",
+    "Credit title, author and full-width uppercase ＫＡＤＯＫＡＷＡ / imprint.",
+    "Advertising, merchandise/sales and other non-introduction uses are outside this conditional route.",
+    "Interior pages require separate inquiry; no general automated collection permission established."
+  ],
+  "exactTitle": {
+    "title": "ピョ・ウンジ1st写真集 輪舞曲",
+    "isbn": "9784048976268",
+    "previousExactEvidence": "korean-photobook-pyo-eunji-rondo-hanmoto-permission-capture.json",
+    "previousReuseLabel": "書影利用可否不明",
+    "exceptionListVerified": false,
+    "exceptionListObservation": "Public PDF opened, but browser accessibility output contains only the page URL and no readable document text; no absence-from-list inferred.",
+    "exactAssetApproved": false,
+    "decision": "Keep all captured Pyo Eunji assets unconfirmed; do not extend generic policy to exact title or interior pages."
+  },
+  "newProductRecords": 0,
+  "databaseRowsRequired": 0,
+  "databaseMutation": false,
+  "imagesApproved": 0,
+  "imagesDownloaded": 0,
+  "contactSent": false,
+  "goalComplete": false,
+  "stopRequest": "Finish current model review then pause; unresolved rights are explicitly retained."
+}

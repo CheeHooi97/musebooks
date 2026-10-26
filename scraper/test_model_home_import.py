@@ -89,6 +89,21 @@ class ModelHomeIdentityTests(unittest.TestCase):
             self.assertNotEqual(records[0]['work']['id'], records[1]['work']['id'])
             self.assertNotEqual(records[0]['edition']['id'], records[1]['edition']['id'])
 
+    def test_kobo_label_is_recorded_as_the_edition_series(self):
+        base = dict(platform='Kobo', format='digital', publisher='Example', imageUrl='', observedAt='2026-10-24T00:00:00Z')
+        items = [dict(base, sourceId='rakuten-kobo-jp', externalId='a', url='https://books.rakuten.co.jp/rk/a/',
+                      title='鈴木ふみ奈 Example　（FLASHデジタル写真集）'),
+                 dict(base, sourceId='rakuten-kobo-jp', externalId='b', url='https://books.rakuten.co.jp/rk/b/',
+                      title='鈴木ふみ奈 Example（１）'),
+                 dict(base, sourceId='grajapa-jp', externalId='c', url='https://www.grajapa.shueisha.co.jp/c',
+                      title='鈴木ふみ奈 Example　（FLASHデジタル写真集）')]
+        records = prepare(dict(physicalBooks=[], items=items), [])
+        self.assertEqual(records[0]['edition']['seriesName'], 'FLASHデジタル写真集')
+        # The captured title stays as the store's product label.
+        self.assertEqual(records[0]['edition']['editionLabel'], items[0]['title'])
+        self.assertNotIn('seriesName', records[1]['edition'])
+        self.assertNotIn('seriesName', records[2]['edition'])
+
     def test_search_hits_for_other_people_stay_unlinked_for_review(self):
         model = dict(id=999998, canonical_public_name='もも', english_name='Momo')
         items = [dict(sourceId='store-test', platform='Test', externalId=str(i), url='https://store.example/' + str(i),

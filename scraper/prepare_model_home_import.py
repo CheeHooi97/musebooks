@@ -2,6 +2,7 @@
 import argparse
 import hashlib
 import json
+import re
 from pathlib import Path
 from urllib.parse import urlsplit
 from functools import lru_cache
@@ -40,6 +41,20 @@ def publication_for_edition(edition_id):
             if shared:
                 return shared
     return None
+
+
+# Rakuten Kobo appends a product's label to its title, set apart by whitespace:
+# '紫藤るい「Healing」　（漫画アクションデジタル写真集）'. Joined parentheses
+# such as '萌木七海（１）' are part of the title.
+STORE_SERIES_SUFFIX = re.compile(r'[\s　]+（([^（）]+)）[\s　]*$')
+
+
+def store_series(title):
+    match = STORE_SERIES_SUFFIX.search(title)
+    if not match or not title[:match.start()].strip():
+        return title, ''
+    base, series = title[:match.start()].strip(), match.group(1).strip()
+    return base, '' if series == base else series
 
 
 def identity(prefix, value):
@@ -113,6 +128,9 @@ def prepare(capture, source_manifest):
                 publisher=book.get('publisher', ''), isbn=book.get('isbn', ''), editionLabel=title,
                 metadataSourceUrl=book.get('metadataSourceUrl') or item['url'], coverUrl=cover,
                 originalCoverUrl=cover)
+            series = store_series(title)[1] if sid == 'rakuten-kobo-jp' else ''
+            if series:
+                record['edition']['seriesName'] = series
             if fmt == 'physical':
                 publisher_images = list(dict.fromkeys(image['url'] for image in book.get('images', [])
                     if image.get('sourceUrl') == record['edition']['metadataSourceUrl'] and

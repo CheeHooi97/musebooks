@@ -1,0 +1,36 @@
+{
+  "observedAt": "2026-10-23T21:57:00+08:00",
+  "method": "Manual live public product and seller-list browser review; no retailer API",
+  "issueMonth": "2024-02",
+  "pageCount": 192,
+  "dimensions": "210×297mm (A4)",
+  "weightGrams": 518,
+  "issn": "2233-4270",
+  "listPriceKRW": 8900,
+  "lastDisplayedSalePriceKRW": 8450,
+  "retailState": "Both variants show sold-out/discontinued messaging; sale prices are historical displayed prices",
+  "seriesUrl": "https://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=1164543",
+  "coverCreditSource": "https://www.yes24.com/product/goods/124866932",
+  "coverCredit": "박민정; both Aladin print titles also explicitly name her",
+  "imageState": "Asset URLs recorded only as provenance. Reuse permission unconfirmed; no cover or gallery copied or embedded.",
+  "variants": [
+    {
+      "key": "a", "variant": "A형", "itemId": "332752962", "isbn": "K102938777", "releaseDate": "2024-01-22",
+      "productUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332752962",
+      "coverAssetUrl": "https://image.aladin.co.kr/product/33275/29/cover500/k102938777_1.jpg",
+      "inventoryUrl": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=332752962&start=newproduct",
+      "displayedActiveCount": 0, "displayedPages": 0, "offers": []
+    },
+    {
+      "key": "b", "variant": "B형", "itemId": "332753150", "isbn": "K122938777", "releaseDate": "2024-01-22",
+      "productUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=332753150",
+      "coverAssetUrl": "https://image.aladin.co.kr/product/33275/31/cover500/k122938777_1.jpg",
+      "inventoryUrl": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=332753150&start=newproduct",
+      "displayedActiveCount": 1, "displayedPages": 1,
+      "offers": [
+        {"itemId": "396473163", "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396473163", "seller": "알낳아딘 중고서점", "condition": "상", "priceKRW": 59900, "shippingText": "택배 3,000원", "status": "active", "evidence": "Exact live inventory row shows basket and immediate-purchase controls."}
+      ]
+    }
+  ],
+  "staleSearchDifferences": "Search snapshots showed an A-type offer at KRW 50,000 and a B-type floor at KRW 60,000. Neither stale assertion was imported; the live A list is empty and the exact live B offer is KRW 59,900."
+}

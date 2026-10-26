@@ -1,0 +1,19 @@
+{
+  "capturedAt": "2026-10-25T15:06:04.8627652+08:00",
+  "url": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012407155",
+  "discoveryUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/sam/E000012407155",
+  "method": "public rendered browser DOM",
+  "acceptedRecords": 1,
+  "releaseDate": "2026-01-02",
+  "pageCount": 165,
+  "fileSizeMB": "123.61",
+  "displayedISSN": "00000000",
+  "identifierDecision": "placeholder; no ISBN or verified ISSN imported",
+  "ordinaryPriceKRW": 5500,
+  "couponPriceExcludedKRW": 4950,
+  "purchaseControlEnabled": true,
+  "TTS": "available",
+  "contentsSubject": "치어리더 조예린",
+  "evidence": "Public Kyobo January2026 purchase PDF: release2026-01-02,165pages,123.61MB,TTS available. Displayed ISSN00000000 is a placeholder,not a verified identifier; ISBN blank. Ordinary purchaseKRW5500 with enabled purchase control; conditional coupon4950 excluded. Public contents identify 치어리더 조예린 edition theme; existing canonical issue cover credit retained without new lineup credits. Linked print2025-12-26 context only; existing print and YES24PDF metadata unchanged. No preview,reader,login,purchase or image collection; reuse permission unconfirmed.",
+  "imagesAccepted": 0
+}

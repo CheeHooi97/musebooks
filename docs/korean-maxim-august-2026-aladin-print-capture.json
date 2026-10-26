@@ -1,0 +1,62 @@
+{
+  "capturedAt": "2026-10-25T13:24:02.9412320+08:00",
+  "method": "Manual rendered Aladin product/series pages, public cover screenshots and DOM; no API",
+  "seriesUrl": "https://www.aladin.co.kr/shop/common/wseriesitem.aspx?srid=1366196",
+  "items": [
+    {
+      "externalId": "398885034",
+      "observationId": "aladin-20261025-august-398885034",
+      "editionId": "korea-maxim-2026-08-seo-yeojin-print-a-yes24",
+      "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885034",
+      "title": "맥심 Maxim A형 2026.8",
+      "status": "unknown",
+      "priceMinor": 9120,
+      "currency": "KRW",
+      "priceType": "fixed",
+      "format": "physical",
+      "publisher": "와이미디어(잡지)",
+      "editionVariant": "A형",
+      "imageUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+      "shippingText": "Paid shipping belowKRW15000; exact fee unknown; separate supplements excluded from overseas delivery",
+      "observedAt": "2026-10-25T13:24:02.9412320+08:00",
+      "timestampPrecision": "minute",
+      "statusEvidence": "Live rendered Aladin A August2026 product checked2026-10-25; release2026-07-22,176pages,A4 210×297mm,475g,shop keyK952130723,ISSN2233-4270. ListKRW9600,displayed saleKRW9120. Explicit품절 and distribution-stopped message; no purchasable current new stock asserted, statusunknown. B includes historical sold-out confirmation2026-08-04, not publication or current stock date. PriorYES24AJuly23 conflict retained. Public retailer cover inspected; no publisher gate bypass or paid content accessed. Supplement names do not add cover credits. Used inventory not collected in this batch."
+    },
+    {
+      "externalId": "398885187",
+      "observationId": "aladin-20261025-august-398885187",
+      "editionId": "korea-maxim-2026-08-print-b",
+      "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885187",
+      "title": "맥심 Maxim B형 2026.8",
+      "status": "unknown",
+      "priceMinor": 9120,
+      "currency": "KRW",
+      "priceType": "fixed",
+      "format": "physical",
+      "publisher": "와이미디어(잡지)",
+      "editionVariant": "B형",
+      "imageUrl": "https://image.aladin.co.kr/product/39888/51/cover500/k932130723_1.jpg",
+      "shippingText": "Paid shipping belowKRW15000; exact fee unknown; separate supplements excluded from overseas delivery",
+      "observedAt": "2026-10-25T13:24:02.9412320+08:00",
+      "timestampPrecision": "minute",
+      "statusEvidence": "Live rendered Aladin B August2026 product checked2026-10-25; release2026-07-22,176pages,A4 210×297mm,475g,shop keyK932130723,ISSN2233-4270. ListKRW9600,displayed saleKRW9120. Explicit품절 and distribution-stopped message; no purchasable current new stock asserted, statusunknown. B includes historical sold-out confirmation2026-08-04, not publication or current stock date. PriorYES24AJuly23 conflict retained. Public retailer cover inspected; no publisher gate bypass or paid content accessed. Supplement names do not add cover credits. Used inventory not collected in this batch."
+    }
+  ],
+  "releaseDateAssertion": "2026-07-22",
+  "AdateConflict": "Prior YES24A2026-07-23 remains canonical pending publisher confirmation",
+  "pageCount": 176,
+  "dimensions": "210×297mm (A4)",
+  "weightGrams": 475,
+  "shopKeys": [
+    "K952130723",
+    "K932130723"
+  ],
+  "issn": "2233-4270",
+  "rights": "Unconfirmed; remote public cover URLs only, no pixels mirrored",
+  "blockedLead": {
+    "url": "https://www.yes24.com/product/goods/194312077",
+    "result": "전시제한된 상품입니다.",
+    "action": "No bypass or product data accepted"
+  },
+  "limitations": "Sold-out displayed prices, not current purchasable offers. No individual A/B cover identity inferred by face. No used inventory accepted."
+}

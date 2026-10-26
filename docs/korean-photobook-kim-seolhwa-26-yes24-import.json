@@ -1,0 +1,128 @@
+[
+  {
+    "work": {
+      "id": "korea-kim-seolhwa-26",
+      "slug": "korea-kim-seolhwa-26",
+      "publicationType": "photobook",
+      "originalTitle": "김설화 26",
+      "summary": "First solo photobook of MAXIM model 김설화, who debuted through the 2020 Miss Maxim contest. Standalone print photobook with two randomly supplied covers; YES24 new-copy listing temporarily unavailable at the 2026-10-24 capture.",
+      "originCode": "KR",
+      "featuredNames": "김설화",
+      "coverUrl": "https://image.yes24.com/goods/116981923/XL"
+    },
+    "featuredPerson": {
+      "slug": "model-f6d7078ae24654cdee96accc9b0499f7c1b445a0f5f6c913afc99df3cb435019",
+      "canonicalPublicName": "김설화",
+      "originalName": "김설화",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/116981923",
+      "profileSourceConfidence": "explicit_model_photobook_description"
+    },
+    "edition": {
+      "id": "korea-kim-seolhwa-26-print-yes24",
+      "workId": "korea-kim-seolhwa-26",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "아이다호",
+      "releaseDate": "2022-12-05T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "9791198100504",
+      "pageCount": 252,
+      "dimensions": "215×270×15mm",
+      "editionVariant": "Random cover",
+      "contentSummary": "252-page standalone model photobook, published by 아이다호 on 2022-12-05, ISBN 9791198100504, 215×270×15mm. Product author credit 로글(rogle); featured model 김설화. YES24 on 2026-10-24 displayed list KRW 49,800 and discounted KRW 44,820, but marked 일시품절 and said new copies cannot be purchased. The amount is a displayed unavailable retail price, not a live offer or completed sale. Two cover designs are randomly supplied; no separate selectable cover offers are inferred. Exact primary cover and one public promotional detail panel are linked remotely with provenance; no pixels mirrored or reuse license asserted.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/116981923",
+      "editionLabel": "2022 print edition",
+      "coverUrl": "https://image.yes24.com/goods/116981923/XL",
+      "originalCoverUrl": "https://image.yes24.com/goods/116981923/XL"
+    },
+    "source": {
+      "id": "yes24-kr-print",
+      "name": "YES24 Korea print (manual page capture)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.yes24.com",
+      "allowedHosts": "www.yes24.com",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.yes24.com/notice/service.aspx",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "batch": {
+      "jobId": "manual-yes24-kim-seolhwa-26-20261024",
+      "sourceId": "yes24-kr-print",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-24T00:11:00+08:00",
+      "items": [
+        {
+          "externalId": "116981923",
+          "observationId": "yes24-20261024-kim-seolhwa-26-116981923",
+          "editionId": "korea-kim-seolhwa-26-print-yes24",
+          "url": "https://www.yes24.com/product/goods/116981923",
+          "title": "김설화 26",
+          "status": "unknown",
+          "priceMinor": 44820,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "isbn": "9791198100504",
+          "publisher": "아이다호",
+          "editionVariant": "Random cover",
+          "shippingText": "YES24 delivery; displayed free shipping; overseas delivery possible, destination costs unverified",
+          "imageUrl": "https://image.yes24.com/goods/116981923/XL",
+          "observedAt": "2026-10-24T00:10:00+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public YES24 product checked on 2026-10-24 around 00:10 SGT. List KRW 49,800 and discounted displayed price KRW 44,820. Status 일시품절; page explicitly says current new copies cannot be purchased, with no enabled purchase control. Catalog availability unknown; price is an unavailable retail display, not a completed sale. Release 2022-12-05, 252 pages, 900g, 215×270×15mm, ISBN 9791198100504. Two cover designs randomly supplied; not two selectable offers. Exact main cover and one loaded public 상세 이미지 panel retained as remote references. No seller-specific used offer captured or disallowed used-shop route opened."
+        }
+      ]
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://image.yes24.com/goods/116981923/XL",
+        "storageUrl": "https://image.yes24.com/goods/116981923/XL",
+        "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+        "isPrimary": true
+      },
+      {
+        "mediaType": "publisher_sample_001",
+        "originalUrl": "https://image.yes24.com/momo/TopCate4082/MidCate009/408189518.jpg",
+        "storageUrl": "https://image.yes24.com/momo/TopCate4082/MidCate009/408189518.jpg",
+        "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+        "isPrimary": false
+      }
+    ],
+    "media": [
+      {
+        "externalId": "116981923",
+        "mediaType": "listing_image",
+        "originalUrl": "https://image.yes24.com/goods/116981923/XL",
+        "storageUrl": "https://image.yes24.com/goods/116981923/XL",
+        "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+        "isPrimary": true
+      },
+      {
+        "externalId": "116981923",
+        "mediaType": "listing_image_001",
+        "originalUrl": "https://image.yes24.com/momo/TopCate4082/MidCate009/408189518.jpg",
+        "storageUrl": "https://image.yes24.com/momo/TopCate4082/MidCate009/408189518.jpg",
+        "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+        "isPrimary": false
+      }
+    ]
+  }
+]

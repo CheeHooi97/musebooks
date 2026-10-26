@@ -1,0 +1,44 @@
+{
+  "capturedAt": "2026-10-25T13:13:23.2502169+08:00",
+  "method": "Manual rendered publisher page / accessible DOM and visual image inspection; no API",
+  "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+  "articleUpdatedAt": "2024-02-16T17:00:00+08:00",
+  "workId": "korea-dj-soda-candid-2024",
+  "editionId": "korea-dj-soda-candid-2024-jp-print",
+  "releaseDate": "2024-04-05",
+  "pageCount": 128,
+  "size": "A4",
+  "photographer": "ND CHOW",
+  "historicalPlannedPrice": {
+    "amount": 3630,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "currentSellingOffer": false
+  },
+  "images": [
+    {
+      "mediaType": "publisher_cover",
+      "originalUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+      "storageUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+      "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+      "isPrimary": true
+    },
+    {
+      "mediaType": "publisher_sample_001",
+      "originalUrl": "https://wpb.shueisha.co.jp/gravure/info/images/1929c2250f9f68dd539ba392f8bfe25cc94a7334.jpg",
+      "storageUrl": "https://wpb.shueisha.co.jp/gravure/info/images/1929c2250f9f68dd539ba392f8bfe25cc94a7334.jpg",
+      "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_002",
+      "originalUrl": "https://wpb.shueisha.co.jp/gravure/info/images/9784087901566_170.jpg",
+      "storageUrl": "https://wpb.shueisha.co.jp/gravure/info/images/9784087901566_170.jpg",
+      "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+      "isPrimary": false
+    }
+  ],
+  "excluded": "Sales carousel duplicate cover, unrelated Weekly Playboy magazine, ads and recommendation images",
+  "rights": "Publisher footer forbids unauthorized reproduction. Remote public image references only; no copying of pixels or assertion of reuse rights. Hanmoto exact-title image permission remains unknown.",
+  "limitations": "No current price/availability or digital metadata accepted from this announcement."
+}

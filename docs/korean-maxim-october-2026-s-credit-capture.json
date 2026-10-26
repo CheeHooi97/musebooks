@@ -1,0 +1,28 @@
+{
+  "observedAt": "2026-10-23T23:31:00+08:00",
+  "method": "Manual public publisher cover-image review at full size; no API/key, OCR service or face recognition",
+  "scope": "Printed S-cover credit only; no new price or release assertion",
+  "publisherPage": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+  "publicCoverUrl": "https://www.maximkorea.net/magdb/file/386/386_img3_1789949029_1215.jpg",
+  "imageDimensions": "1215×1585",
+  "printedIssue": "No.281 S type",
+  "printedCredit": "COVER MODEL 미스맥심 유디",
+  "canonicalPerson": {
+    "id": 17665,
+    "name": "유디",
+    "slug": "model-b5c806ec7e8843dcd4ea015c8d07b7829d107eaa3391318e96f48807d7b76d71",
+    "existingIdentitySource": "https://www.yes24.com/product/goods/147017456"
+  },
+  "identityHandling": "Reuse existing 유디 person; 미스맥심 is the printed credit prefix, not a new person identity",
+  "unknownFields": [
+    "S original release date",
+    "S page count",
+    "S dimensions",
+    "S ISBN",
+    "S ordinary single-copy price"
+  ],
+  "databaseMutation": "One metadata-only record update, adding the verified Yudi issue-cover credit and refining S/work summary; no listings or observations added",
+  "scopedImport": "korean-maxim-october-2026-s-credit-import.json",
+  "masterManifestRecords": 216,
+  "imageRights": "Existing remote public cover reference retained; no image file mirrored or reuse license asserted"
+}

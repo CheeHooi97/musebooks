@@ -21,6 +21,7 @@ func Migrate(db *gorm.DB) error {
 			&model.ProductLine{},
 			&model.Marketplace{},
 			&model.User{},
+			&model.AuthSession{},
 			&model.Admin{},
 			&model.Origin{},
 			&model.Source{},

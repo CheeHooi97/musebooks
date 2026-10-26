@@ -1,0 +1,760 @@
+{
+  "credits": [
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17016,
+      "role": "featured",
+      "creditedName": "이미진",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17016,
+        "slug": "model-fe527b581ffb30c92ec71e8ba4672fc1d07b3a5cc8ed6d45d905787786d784d6",
+        "canonicalPublicName": "이미진",
+        "originalName": "이미진",
+        "englishName": "Lee Mi Jin",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/126289609",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:23:50.950668+08:00",
+        "updatedAt": "2026-10-20T13:23:50.950668+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:14.806192+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17020,
+      "role": "featured",
+      "creditedName": "이예림",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17020,
+        "slug": "model-89e1816582befa56d458e71d949b0c87553a9faba9430f688bafded75a89bd90",
+        "canonicalPublicName": "이예림",
+        "originalName": "이예림",
+        "englishName": "Lee Ye Rim",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/126289609",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:23:50.950668+08:00",
+        "updatedAt": "2026-10-20T13:23:50.950668+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:12.025387+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17021,
+      "role": "featured",
+      "creditedName": "조남숙",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17021,
+        "slug": "model-8af3dfded8a20141ebdb19f6e87bdd1e41c084d96ec960d53e14590ac7b282ed",
+        "canonicalPublicName": "조남숙",
+        "originalName": "조남숙",
+        "englishName": "Jo Nam Suk",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/126289609",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:23:50.950668+08:00",
+        "updatedAt": "2026-10-20T13:23:50.950668+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:11.826915+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17022,
+      "role": "featured",
+      "creditedName": "장미화",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17022,
+        "slug": "model-9210dc0173e33afbef133d531c35e6081948b6c7f59d0b751d90e4f987a0b160",
+        "canonicalPublicName": "장미화",
+        "originalName": "장미화",
+        "englishName": "Jang mi hwa",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/126289609",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:23:50.950668+08:00",
+        "updatedAt": "2026-10-20T13:23:50.950668+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:13.636153+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17029,
+      "role": "featured",
+      "creditedName": "이지유",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17029,
+        "slug": "model-27bafb8bd97158a27141f3dba3bdaf9a75dd712394ab3c8d226aae2216a76300",
+        "canonicalPublicName": "이지유",
+        "originalName": "이지유",
+        "englishName": "Lee Ji Yu",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/126289609",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:23:50.950668+08:00",
+        "updatedAt": "2026-10-20T13:23:50.950668+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:12.426892+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17077,
+      "role": "featured",
+      "creditedName": "진서현",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17077,
+        "slug": "model-feec65418f36fc208081114ffcfe88d0c8a5b373081de73f7ea642e7fb6ed11e",
+        "canonicalPublicName": "진서현",
+        "originalName": "진서현",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:13.802589+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17078,
+      "role": "featured",
+      "creditedName": "이진",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17078,
+        "slug": "model-eb3880c1c3f8210970b15c4c741d6e75d9128e6f18dd948226e8f52915e811fb",
+        "canonicalPublicName": "이진",
+        "originalName": "이진",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:11.442077+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17079,
+      "role": "featured",
+      "creditedName": "나효숙",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17079,
+        "slug": "model-a8dd231f3d96db5eafe59f6f0022a866936f4f8610bf07be47a7dba20244b4d1",
+        "canonicalPublicName": "나효숙",
+        "originalName": "나효숙",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:12.584997+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17080,
+      "role": "featured",
+      "creditedName": "김이정",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17080,
+        "slug": "model-936b38306dc85dfa4f448f6aa024873da9c38c8d58ae3397ea99812e742408e2",
+        "canonicalPublicName": "김이정",
+        "originalName": "김이정",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:14.42686+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17081,
+      "role": "featured",
+      "creditedName": "고미오",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17081,
+        "slug": "model-970337c4566b12993b6fc67b9eb8fa5a3d6f1167d79bedfe0867b7ec773eb000",
+        "canonicalPublicName": "고미오",
+        "originalName": "고미오",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:10.314965+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17083,
+      "role": "featured",
+      "creditedName": "박소연",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17083,
+        "slug": "model-36d4fca29c51750c51b6a4424e41fedc906c26e22821359b88fb5673adf6ebf8",
+        "canonicalPublicName": "박소연",
+        "originalName": "박소연",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:13.279222+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17084,
+      "role": "featured",
+      "creditedName": "고희정",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17084,
+        "slug": "model-ba44b89e42dd570db2ab83c87b42f5a804156831902c61f22b8b38b1fe1b5e9c",
+        "canonicalPublicName": "고희정",
+        "originalName": "고희정",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:13.991528+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17085,
+      "role": "featured",
+      "creditedName": "황순향",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17085,
+        "slug": "model-ae9a54d7ffc08f5e1935270800f68f6062b3917fbf14fa5e3945c1f0c33a1258",
+        "canonicalPublicName": "황순향",
+        "originalName": "황순향",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:12.957222+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17089,
+      "role": "featured",
+      "creditedName": "정미경",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17089,
+        "slug": "model-6df0e5a8baf6e930278a9eb305c9ed9087a3d0f1b9d51d07ddb1ed27e9b6ad86",
+        "canonicalPublicName": "정미경",
+        "originalName": "정미경",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:12.81326+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17090,
+      "role": "featured",
+      "creditedName": "박미숙",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17090,
+        "slug": "model-a0ced7973947519b6ac2c1ee45eaae7aeccda5afa29d7cece2c63cc2e986bc43",
+        "canonicalPublicName": "박미숙",
+        "originalName": "박미숙",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:12.276582+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17091,
+      "role": "featured",
+      "creditedName": "초경화",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17091,
+        "slug": "model-9847e49640357aa8c7a30b39e58b312d37dbde7260f9b3f74697179f986e0538",
+        "canonicalPublicName": "초경화",
+        "originalName": "초경화",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:14.250024+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17092,
+      "role": "featured",
+      "creditedName": "한영선",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17092,
+        "slug": "model-e161bf8dfdb472d1ec19a2ff8d292a2a995fcd36895b2e668309fb55cc9f65de",
+        "canonicalPublicName": "한영선",
+        "originalName": "한영선",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:13.448299+08:00"
+    },
+    {
+      "workId": "korea-the-briller-senior-models-2023",
+      "personId": 17093,
+      "role": "featured",
+      "creditedName": "신성훈",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 17093,
+        "slug": "model-983825e2f507c0b37992af8dda6f91034d506f17bf4c03afa5b3d867205b1dba",
+        "canonicalPublicName": "신성훈",
+        "originalName": "신성훈",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "profileSourceConfidence": "publisher_supplied_model_contents",
+        "createdAt": "2026-10-20T13:27:16.054236+08:00",
+        "updatedAt": "2026-10-20T13:27:16.054236+08:00"
+      },
+      "createdAt": "2026-10-25T13:54:09.307912+08:00",
+      "updatedAt": "2026-10-25T13:54:14.656526+08:00"
+    }
+  ],
+  "databaseCounts": {
+    "editions": 6813,
+    "listing_observations": 8376,
+    "listings": 8330,
+    "sources": 31,
+    "works": 6064
+  },
+  "edition": {
+    "publisherCompanyId": "publisher-0463ea8882bae4aeea4ab8ed3960f0243fad31a89a497c7d165b9a0161fa458e",
+    "id": "korea-the-briller-senior-models-2023-print-yes24",
+    "workId": "korea-the-briller-senior-models-2023",
+    "format": "physical",
+    "language": "ko-KR",
+    "editionMarket": "KR",
+    "publisher": "북엠",
+    "releaseDate": "2023-05-24T08:00:00+08:00",
+    "releasePrecision": "day",
+    "isbn": "9791192584027",
+    "pageCount": 248,
+    "dimensions": "210×297×20mm",
+    "editionVariant": "Hardcover",
+    "contentSummary": "Live YES24 confirms hardcover2023-05-24,248pages,210×297×20mm,ISBN9791192584027,publisher북엠. Contents list18 model subjects and photographer임민경 separately. Printed이 진 is matched to existing canonical이진; no English romanizations are invented. Missing이지유 work link added using existing verified person. Live ordinarypriceKRW49500,listKRW55000,판매중 andquantity/cart controls,free domestic shipping anddomestic delivery only. Prior stale49500unknown observation preserved. No new image URLs or digital edition inferred; reuse permission unconfirmed.",
+    "metadataSourceUrl": "https://www.yes24.com/product/goods/119131898",
+    "editionLabel": "2023 hardcover edition",
+    "status": "published",
+    "createdAt": "2026-10-20T13:27:22.313994+08:00",
+    "updatedAt": "2026-10-25T13:54:14.75933+08:00"
+  },
+  "limitations": "No pre-import DB snapshot. Book-context subjects only; no private identities,homonymmerges,English guesses orimagepermissionasserted. Earlier source payload and specification fields match prior saved evidence.",
+  "listing": {
+    "id": "listing-d91f8ea535e24c96223f2fec880c658b",
+    "editionId": "korea-the-briller-senior-models-2023-print-yes24",
+    "sourceId": "yes24-kr-print",
+    "externalId": "119131898",
+    "url": "https://www.yes24.com/product/goods/119131898",
+    "title": "The Briller (더 브리에)",
+    "formatCandidate": "physical",
+    "publisher": "북엠",
+    "editionVariant": "Hardcover",
+    "status": "active",
+    "priceMinor": 49500,
+    "currency": "KRW",
+    "priceType": "fixed",
+    "shippingText": "Free domestic shipping; domestic delivery only",
+    "observedAt": "2026-10-25T13:53:21.996421+08:00",
+    "lastSeenAt": "2026-10-25T13:53:21.996421+08:00",
+    "source": {
+      "marketplaceId": 32,
+      "id": "yes24-kr-print",
+      "name": "YES24 Korea print (manual page capture)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.yes24.com",
+      "allowedHosts": "www.yes24.com",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.yes24.com/notice/service.aspx",
+      "ratePerMinute": 1,
+      "enabled": false,
+      "createdAt": "2026-10-20T12:31:51.337423+08:00",
+      "updatedAt": "2026-10-25T13:54:10.408822+08:00"
+    },
+    "createdAt": "2026-10-20T13:26:00+08:00",
+    "updatedAt": "2026-10-25T13:54:10.619616+08:00"
+  },
+  "method": "Exact current PostgreSQL and publicGetBook with prior independent evidence for IDs,profiles,specifications and old observation payload",
+  "newObservation": {
+    "id": "observation-238b7d03fcbc4017abfbb7a3a34ad7b3161ed0ef",
+    "observationKey": "observation-238b7d03fcbc4017abfbb7a3a34ad7b3161ed0ef",
+    "listingId": "listing-d91f8ea535e24c96223f2fec880c658b",
+    "jobId": "manual-yes24-briller-profiles-20261025",
+    "parserVersion": "manual-page-capture-v1",
+    "observedAt": "2026-10-25T13:53:21.996421+08:00",
+    "status": "active",
+    "format": "physical",
+    "priceMinor": 49500,
+    "currency": "KRW",
+    "priceType": "fixed",
+    "shippingText": "Free domestic shipping; domestic delivery only",
+    "statusEvidence": "Live rendered YES24 product checked2026-10-25: senior-model fashion anthology,hardcover,release2023-05-24,248pages,210×297×20mm,ISBN9791192584027,listKRW55000,sellingKRW49500,판매중,quantity/cart/immediate-purchase controls,free domestic shipping anddomestic-only notice. Contents name18 model subjects including이지유 and separately임민경(사진작가); event/show heading excluded from person list. Earlier stale49500unknown observation preserved. No login,cart,purchase,API,image reuse or guessed romanization.",
+    "timestampPrecision": "minute",
+    "createdAt": "2026-10-25T13:54:10.974898+08:00",
+    "updatedAt": "2026-10-25T13:54:10.974898+08:00"
+  },
+  "newWorkSubject": "이지유",
+  "oldObservation": {
+    "id": "observation-6a8d6d5df139a21899ad0382a97bc1c7ab886903",
+    "observationKey": "observation-6a8d6d5df139a21899ad0382a97bc1c7ab886903",
+    "listingId": "listing-d91f8ea535e24c96223f2fec880c658b",
+    "parserVersion": "manual-page-capture-v1",
+    "observedAt": "2026-10-20T13:26:00+08:00",
+    "status": "unknown",
+    "format": "physical",
+    "priceMinor": 49500,
+    "currency": "KRW",
+    "priceType": "physical",
+    "statusEvidence": "The exact YES24 product-page result crawled two months before this review showed list price KRW 55,000, displayed selling price KRW 49,500, 판매중, and purchase controls. Keep KRW 49,500 as a last-observed selling price and current availability as unknown because the snapshot was stale. No seller-specific used offer was verified.",
+    "timestampPrecision": "minute",
+    "createdAt": "2026-10-20T13:27:22.49565+08:00",
+    "updatedAt": "2026-10-20T13:27:22.49565+08:00"
+  },
+  "passed": true,
+  "preImportDatabaseSnapshotAvailable": false,
+  "preservedVerifiedProfiles": 5,
+  "priorEvidence": [
+    "korean-photobook-briller-models-yes24-prior-cohort-audit.json",
+    "korean-photobook-briller-models-yes24-prior-ledger-record.json",
+    "korean-photobook-password-models-yes24-db-verification.json"
+  ],
+  "promotedMissingSourceProfiles": 13,
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-970337c4566b12993b6fc67b9eb8fa5a3d6f1167d79bedfe0867b7ec773eb000",
+        "name": "고미오"
+      },
+      {
+        "id": "model-eb3880c1c3f8210970b15c4c741d6e75d9128e6f18dd948226e8f52915e811fb",
+        "name": "이진"
+      },
+      {
+        "id": "model-8af3dfded8a20141ebdb19f6e87bdd1e41c084d96ec960d53e14590ac7b282ed",
+        "name": "조남숙"
+      },
+      {
+        "id": "model-89e1816582befa56d458e71d949b0c87553a9faba9430f688bafded75a89bd90",
+        "name": "이예림"
+      },
+      {
+        "id": "model-a0ced7973947519b6ac2c1ee45eaae7aeccda5afa29d7cece2c63cc2e986bc43",
+        "name": "박미숙"
+      },
+      {
+        "id": "model-27bafb8bd97158a27141f3dba3bdaf9a75dd712394ab3c8d226aae2216a76300",
+        "name": "이지유"
+      },
+      {
+        "id": "model-a8dd231f3d96db5eafe59f6f0022a866936f4f8610bf07be47a7dba20244b4d1",
+        "name": "나효숙"
+      },
+      {
+        "id": "model-feec65418f36fc208081114ffcfe88d0c8a5b373081de73f7ea642e7fb6ed11e",
+        "name": "진서현"
+      },
+      {
+        "id": "model-6df0e5a8baf6e930278a9eb305c9ed9087a3d0f1b9d51d07ddb1ed27e9b6ad86",
+        "name": "정미경"
+      },
+      {
+        "id": "model-ae9a54d7ffc08f5e1935270800f68f6062b3917fbf14fa5e3945c1f0c33a1258",
+        "name": "황순향"
+      },
+      {
+        "id": "model-36d4fca29c51750c51b6a4424e41fedc906c26e22821359b88fb5673adf6ebf8",
+        "name": "박소연"
+      },
+      {
+        "id": "model-e161bf8dfdb472d1ec19a2ff8d292a2a995fcd36895b2e668309fb55cc9f65de",
+        "name": "한영선"
+      },
+      {
+        "id": "model-9210dc0173e33afbef133d531c35e6081948b6c7f59d0b751d90e4f987a0b160",
+        "name": "장미화"
+      },
+      {
+        "id": "model-ba44b89e42dd570db2ab83c87b42f5a804156831902c61f22b8b38b1fe1b5e9c",
+        "name": "고희정"
+      },
+      {
+        "id": "model-9847e49640357aa8c7a30b39e58b312d37dbde7260f9b3f74697179f986e0538",
+        "name": "초경화"
+      },
+      {
+        "id": "model-936b38306dc85dfa4f448f6aa024873da9c38c8d58ae3397ea99812e742408e2",
+        "name": "김이정"
+      },
+      {
+        "id": "model-983825e2f507c0b37992af8dda6f91034d506f17bf4c03afa5b3d867205b1dba",
+        "name": "신성훈"
+      },
+      {
+        "id": "model-fe527b581ffb30c92ec71e8ba4672fc1d07b3a5cc8ed6d45d905787786d784d6",
+        "name": "이미진"
+      }
+    ],
+    "id": "korea-the-briller-senior-models-2023",
+    "slug": "korea-the-briller-senior-models-2023",
+    "publicationType": "photobook",
+    "originalTitle": "The Briller (더 브리에)",
+    "summary": "Korean senior-model fashion anthology The Briller. Live publisher-supplied contents identify18 model subjects, including이지유 previously omitted from the catalog, and separately label임민경 as photographer. Existing canonical people are reused; author credits이미진/신성훈 also have their own named subject sections. Event/show section and photographer are not extra model subjects. No magazine issue fields or cover-model role.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "고미오",
+      "이진",
+      "조남숙",
+      "이예림",
+      "박미숙",
+      "나효숙",
+      "정미경",
+      "황순향",
+      "박소연",
+      "한영선",
+      "장미화",
+      "진서현",
+      "고희정",
+      "초경화",
+      "김이정",
+      "신성훈",
+      "이미진",
+      "이지유"
+    ],
+    "photographer": "임민경",
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-0463ea8882bae4aeea4ab8ed3960f0243fad31a89a497c7d165b9a0161fa458e",
+          "name": "북엠"
+        },
+        "id": "korea-the-briller-senior-models-2023-print-yes24",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "북엠",
+        "releaseDate": "2023-05-24T08:00:00+08:00",
+        "releasePrecision": "day",
+        "isbn": "9791192584027",
+        "pageCount": 248,
+        "dimensions": "210×297×20mm",
+        "editionVariant": "Hardcover",
+        "contentSummary": "Live YES24 confirms hardcover2023-05-24,248pages,210×297×20mm,ISBN9791192584027,publisher북엠. Contents list18 model subjects and photographer임민경 separately. Printed이 진 is matched to existing canonical이진; no English romanizations are invented. Missing이지유 work link added using existing verified person. Live ordinarypriceKRW49500,listKRW55000,판매중 andquantity/cart controls,free domestic shipping anddomestic delivery only. Prior stale49500unknown observation preserved. No new image URLs or digital edition inferred; reuse permission unconfirmed.",
+        "metadataSourceUrl": "https://www.yes24.com/product/goods/119131898",
+        "editionLabel": "2023 hardcover edition",
+        "listings": [
+          {
+            "id": "listing-d91f8ea535e24c96223f2fec880c658b",
+            "externalId": "119131898",
+            "url": "https://www.yes24.com/product/goods/119131898",
+            "title": "The Briller (더 브리에)",
+            "format": "physical",
+            "status": "active",
+            "priceMinor": 49500,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "Free domestic shipping; domestic delivery only",
+            "observedAt": "2026-10-25T13:53:21.996421+08:00",
+            "lastSeenAt": "2026-10-25T13:53:21.996421+08:00",
+            "source": {
+              "id": "yes24-kr-print",
+              "name": "YES24 Korea print (manual page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": [
+          {
+            "id": "listing-d91f8ea535e24c96223f2fec880c658b",
+            "externalId": "119131898",
+            "url": "https://www.yes24.com/product/goods/119131898",
+            "title": "The Briller (더 브리에)",
+            "format": "physical",
+            "status": "active",
+            "priceMinor": 49500,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "Free domestic shipping; domestic delivery only",
+            "observedAt": "2026-10-25T13:53:21.996421+08:00",
+            "lastSeenAt": "2026-10-25T13:53:21.996421+08:00",
+            "source": {
+              "id": "yes24-kr-print",
+              "name": "YES24 Korea print (manual page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "verificationIncident": "Temporary audit helper did not compile before import, so no pre-import DB snapshot exists. Post-import state is compared with the preserved pre-import cohort audit, original ledger record and earlier Password profile verification; no post-import snapshot is presented as before.",
+  "verifiedAt": "2026-10-25T05:55:36.4020937Z",
+  "work": {
+    "originMarketId": 10544,
+    "id": "korea-the-briller-senior-models-2023",
+    "slug": "korea-the-briller-senior-models-2023",
+    "publicationType": "photobook",
+    "originalTitle": "The Briller (더 브리에)",
+    "summary": "Korean senior-model fashion anthology The Briller. Live publisher-supplied contents identify18 model subjects, including이지유 previously omitted from the catalog, and separately label임민경 as photographer. Existing canonical people are reused; author credits이미진/신성훈 also have their own named subject sections. Event/show section and photographer are not extra model subjects. No magazine issue fields or cover-model role.",
+    "originCode": "KR",
+    "featuredNames": "고미오,이진,조남숙,이예림,박미숙,나효숙,정미경,황순향,박소연,한영선,장미화,진서현,고희정,초경화,김이정,신성훈,이미진,이지유",
+    "photographer": "임민경",
+    "status": "published",
+    "origin": {
+      "code": "",
+      "name": "",
+      "sortOrder": 0,
+      "createdAt": "0001-01-01T00:00:00Z",
+      "updatedAt": "0001-01-01T00:00:00Z"
+    },
+    "createdAt": "2026-10-20T13:27:22.293376+08:00",
+    "updatedAt": "2026-10-25T13:54:14.708044+08:00"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5024,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 169,
+    "databaseCounts": {
+      "works": 6064,
+      "editions": 6813,
+      "listings": 8330,
+      "sources": 31,
+      "listing_observations": 8376
+    },
+    "log": "korean-photobook-briller-models-yes24-catalog-verify.log"
+  },
+  "cohortAudit": {
+    "ledgerIntegrityPassed": true,
+    "works": 110,
+    "editions": 196,
+    "listingItemReferences": 350,
+    "explicitMediaReferences": 134,
+    "peopleWithoutVerificationSource": 27,
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  }
+}

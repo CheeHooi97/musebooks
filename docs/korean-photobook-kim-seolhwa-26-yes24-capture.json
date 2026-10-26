@@ -1,0 +1,42 @@
+{
+  "observedAt": "2026-10-24T00:10:00+08:00",
+  "imagesObservedAt": "2026-10-24T00:11:00+08:00",
+  "method": "Manual live public YES24 product DOM and rendered detail-image review; no API/key",
+  "url": "https://www.yes24.com/product/goods/116981923",
+  "title": "김설화 26",
+  "model": "김설화",
+  "authorCredit": "로글(rogle), 저",
+  "publisher": "아이다호",
+  "publicationDate": "2022-12-05",
+  "releasePrecision": "day",
+  "format": "physical",
+  "language": "ko-KR",
+  "market": "KR",
+  "isbn13": "9791198100504",
+  "isbn10": "1198100508",
+  "pages": 252,
+  "weightGrams": 900,
+  "dimensions": "215×270×15mm",
+  "listPriceKRW": 49800,
+  "displayedPriceKRW": 44820,
+  "status": "unknown",
+  "availabilityEvidence": "일시품절; 현재 새 상품은 구매 할 수 없습니다. No enabled new-copy purchase controls.",
+  "shippingEvidence": "YES24 delivery, free shipping; overseas delivery possible, destination cost/eligibility not verified",
+  "variantEvidence": "표지 2종 중 1종 랜덤발송. One random-cover edition, not two independently purchasable cover offers.",
+  "modelCreditEvidence": "Product introduction explicitly identifies the MAXIM model 김설화 and her first solo photobook, describing the 2020 Miss Maxim contest debut. This remains a standalone photobook rather than a magazine issue.",
+  "images": [
+    {
+      "kind": "cover",
+      "url": "https://image.yes24.com/goods/116981923/XL",
+      "evidence": "Exact primary product image src, alt 김설화 26"
+    },
+    {
+      "kind": "public product-description promotional panel",
+      "url": "https://image.yes24.com/momo/TopCate4082/MidCate009/408189518.jpg",
+      "evidence": "Exact 상세 이미지 1 src after scrolling/clicking the public detail-image section. Initial Noimg_XL placeholder rejected; loaded panel visually prints SeolHwa Kim PHOTO BOOK and CHAPTER 1 BLUE. One composite panel, not independently captured interior images or cover variants."
+    }
+  ],
+  "usedOffers": "No seller-specific used row was exposed on this product page. Disallowed YES24 used-shop routes were not opened.",
+  "identityHandling": "Reuse existing korea-kim-seolhwa-26 work, korea-kim-seolhwa-26-print-yes24 edition and existing 김설화 featured person. Author rogle is not inferred to be a featured model or photographer. No issue month/number or cover_model role.",
+  "rights": "Remote image references with product-page provenance; no mirrored pixels or reuse license asserted. YES24 manual print source stays disabled/review. No login, cart, contact, purchase or paid viewer action."
+}

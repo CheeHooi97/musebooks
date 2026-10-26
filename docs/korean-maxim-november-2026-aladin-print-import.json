@@ -1,0 +1,210 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-11-cha-young-hyun",
+      "slug": "korea-maxim-2026-11-cha-young-hyun",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-11",
+      "issueNumber": "282",
+      "originalTitle": "맥심 MAXIM 2026. 11월호",
+      "englishTitle": "MAXIM November 2026",
+      "summary": "MAXIM November 2026 issue No.282. The publisher explicitly credits cheerleader 차영현 on A and B; the subscriber-only S cover also prints her name. A/B were published 2026-10-24 and display KRW9,600 each. Cover variants remain editions of one magazine issue, separate from standalone photobooks; S original release/specifications and ordinary single-copy price are unverified.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-f845b10c377a00bdc81ac817bf3670ee42701999dbd3b8cf45db904f401f4d73",
+      "canonicalPublicName": "차영현",
+      "originalName": "차영현",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+      "profileSourceConfidence": "explicit_publisher_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-11-print-a",
+      "workId": "korea-maxim-2026-11-cha-young-hyun",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-10-24T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 176,
+      "dimensions": "210×297mm (A4)",
+      "editionVariant": "A형",
+      "contentSummary": "MAXIM November2026 No.282 A형 physical edition featuring cover model 차영현. Official publisher release2026-10-24 remains canonical, despite Aladin asserting2026-10-21. Aladin exact product 404910497 on2026-10-25 corroborates176 pages, 210×297mm(A4),475g, listKRW9,600 and active ordinary selling priceKRW9,120. Source barcode labelled ISBN 9772233427008 and ISSN2233-4270 are source assertions; canonical ISBN stays blank because this is a magazine serial barcode. Original publisherKRW9,600 offer, exact publisher cover and seven public preview panels remain distinct and preserved. Supplement: 치어리더 차영현/미스맥심 박수민 스페셜 브로마이드 (책속부록). S specifications/date/price are not inferred. Retailer cover references stay with retailer listing; no pixels mirrored or reuse license asserted.",
+      "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+      "seriesName": "MAXIM",
+      "editionLabel": "November 2026 A-type print issue",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+      "originalCoverUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg"
+    },
+    "source": {
+      "id": "aladin-kr-manual",
+      "name": "Aladin Korea (manual page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.aladin.co.kr",
+      "allowedHosts": "www.aladin.co.kr,aladin.co.kr",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.aladin.co.kr/account/waccount_provision.aspx?pType=1",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-aladin-maxim-november-2026-print-20261025",
+      "sourceId": "aladin-kr-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T12:56:00+08:00",
+      "items": [
+        {
+          "externalId": "404910497",
+          "observationId": "aladin-20261025-maxim-november-404910497",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=404910497",
+          "title": "맥심 Maxim A형 2026.11",
+          "status": "active",
+          "priceMinor": 9120,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "와이미디어(잡지)",
+          "editionVariant": "A형",
+          "shippingText": "Paid shipping below KRW15,000 book subtotal; exact fee unverified. Separately supplied supplements excluded from overseas shipping.",
+          "imageUrl": "https://image.aladin.co.kr/product/40491/4/cover500/k702131214_1.jpg",
+          "observedAt": "2026-10-25T12:56:00+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Aladin exact A형 November2026 product checked on2026-10-25 around12:56SGT. ListKRW9,600, ordinary sellingKRW9,120; conditional card benefitKRW7,752 excluded. Quantity/cart/buy controls and current delivery estimate visible; no checkout attempted. Retailer asserts publication2026-10-21, conflicting with canonical official publisher2026-10-24. It gives176 pages,A4 210×297mm,475g; barcode labelled ISBN 9772233427008, ISSN2233-4270, shop key K702131214. Source barcode is not imported as a book ISBN. Supplement: 치어리더 차영현/미스맥심 박수민 스페셜 브로마이드 (책속부록). Shipping is paid belowKRW15,000, exact fee unverified; separately supplied supplements excluded from overseas shipments. Exact retailer cover URL retained remotely; publisher cover/gallery andKRW9,600 offer remain separate. No seller-specific used offer captured."
+        }
+      ]
+    },
+    "media": [
+      {
+        "externalId": "404910497",
+        "mediaType": "listing_image",
+        "originalUrl": "https://image.aladin.co.kr/product/40491/4/cover500/k702131214_1.jpg",
+        "storageUrl": "https://image.aladin.co.kr/product/40491/4/cover500/k702131214_1.jpg",
+        "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=404910497",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "work": {
+      "id": "korea-maxim-2026-11-cha-young-hyun",
+      "slug": "korea-maxim-2026-11-cha-young-hyun",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-11",
+      "issueNumber": "282",
+      "originalTitle": "맥심 MAXIM 2026. 11월호",
+      "englishTitle": "MAXIM November 2026",
+      "summary": "MAXIM November 2026 issue No.282. The publisher explicitly credits cheerleader 차영현 on A and B; the subscriber-only S cover also prints her name. A/B were published 2026-10-24 and display KRW9,600 each. Cover variants remain editions of one magazine issue, separate from standalone photobooks; S original release/specifications and ordinary single-copy price are unverified.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-f845b10c377a00bdc81ac817bf3670ee42701999dbd3b8cf45db904f401f4d73",
+      "canonicalPublicName": "차영현",
+      "originalName": "차영현",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+      "profileSourceConfidence": "explicit_publisher_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-11-print-b",
+      "workId": "korea-maxim-2026-11-cha-young-hyun",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-10-24T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 176,
+      "dimensions": "210×297mm (A4)",
+      "editionVariant": "B형",
+      "contentSummary": "MAXIM November2026 No.282 B형 physical edition featuring cover model 차영현. Official publisher release2026-10-24 remains canonical, despite Aladin asserting2026-10-21. Aladin exact product 404910553 on2026-10-25 corroborates176 pages, 210×297mm(A4),475g, listKRW9,600 and active ordinary selling priceKRW9,120. Source barcode labelled ISBN 9772233427039 and ISSN2233-4270 are source assertions; canonical ISBN stays blank because this is a magazine serial barcode. Original publisherKRW9,600 offer, exact publisher cover and seven public preview panels remain distinct and preserved. Supplement: 치어리더 차영현/미스맥심 지니 스페셜 브로마이드 (책속부록). S specifications/date/price are not inferred. Retailer cover references stay with retailer listing; no pixels mirrored or reuse license asserted.",
+      "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+      "seriesName": "MAXIM",
+      "editionLabel": "November 2026 B-type print issue",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+      "originalCoverUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg"
+    },
+    "source": {
+      "id": "aladin-kr-manual",
+      "name": "Aladin Korea (manual page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.aladin.co.kr",
+      "allowedHosts": "www.aladin.co.kr,aladin.co.kr",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.aladin.co.kr/account/waccount_provision.aspx?pType=1",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-aladin-maxim-november-2026-print-20261025",
+      "sourceId": "aladin-kr-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T12:56:00+08:00",
+      "items": [
+        {
+          "externalId": "404910553",
+          "observationId": "aladin-20261025-maxim-november-404910553",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=404910553",
+          "title": "맥심 Maxim B형 2026.11",
+          "status": "active",
+          "priceMinor": 9120,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "와이미디어(잡지)",
+          "editionVariant": "B형",
+          "shippingText": "Paid shipping below KRW15,000 book subtotal; exact fee unverified. Separately supplied supplements excluded from overseas shipping.",
+          "imageUrl": "https://image.aladin.co.kr/product/40491/5/cover500/k842131214_1.jpg",
+          "observedAt": "2026-10-25T12:56:00+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Aladin exact B형 November2026 product checked on2026-10-25 around12:56SGT. ListKRW9,600, ordinary sellingKRW9,120; conditional card benefitKRW7,752 excluded. Quantity/cart/buy controls and current delivery estimate visible; no checkout attempted. Retailer asserts publication2026-10-21, conflicting with canonical official publisher2026-10-24. It gives176 pages,A4 210×297mm,475g; barcode labelled ISBN 9772233427039, ISSN2233-4270, shop key K842131214. Source barcode is not imported as a book ISBN. Supplement: 치어리더 차영현/미스맥심 지니 스페셜 브로마이드 (책속부록). Shipping is paid belowKRW15,000, exact fee unverified; separately supplied supplements excluded from overseas shipments. Exact retailer cover URL retained remotely; publisher cover/gallery andKRW9,600 offer remain separate. No seller-specific used offer captured."
+        }
+      ]
+    },
+    "media": [
+      {
+        "externalId": "404910553",
+        "mediaType": "listing_image",
+        "originalUrl": "https://image.aladin.co.kr/product/40491/5/cover500/k842131214_1.jpg",
+        "storageUrl": "https://image.aladin.co.kr/product/40491/5/cover500/k842131214_1.jpg",
+        "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=404910553",
+        "isPrimary": true
+      }
+    ]
+  }
+]

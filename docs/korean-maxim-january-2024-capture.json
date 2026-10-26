@@ -1,0 +1,44 @@
+{
+  "observedAt": "2026-10-23T22:01:00+08:00",
+  "method": "Manual live public product and seller-list browser review; no retailer API",
+  "issueMonth": "2024-01",
+  "pageCount": 192,
+  "dimensions": "210×297mm (A4)",
+  "weightGrams": 518,
+  "issn": "2233-4270",
+  "listPriceKRW": 8900,
+  "lastDisplayedSalePriceKRW": 8450,
+  "retailState": "Both variants show sold-out/discontinued messaging; sale prices are historical displayed prices",
+  "supplement": "2024 신입 미스맥심 달력; advertised with both retail editions. Inclusion in each used copy is unconfirmed.",
+  "seriesUrl": "https://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=1159534",
+  "coverCreditSource": "https://www.yes24.com/product/goods/124406594",
+  "coverCredit": "묘정 is explicitly named in YES24 COVER contents; retained as issue-level credit",
+  "imageState": "Asset URLs recorded only as provenance. Reuse permission unconfirmed; no cover or gallery copied or embedded.",
+  "variants": [
+    {
+      "key": "a", "variant": "A형", "itemId": "330792771", "isbn": "K442937502", "releaseDate": "2023-12-21",
+      "productUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330792771",
+      "coverAssetUrl": "https://image.aladin.co.kr/product/33079/27/cover500/k442937502_1.jpg",
+      "inventoryUrl": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=330792771&start=newproduct",
+      "displayedActiveCount": 8, "displayedPages": 1,
+      "offers": [
+        {"itemId":"404452554","seller":"SunA","condition":"상","priceKRW":23000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"400309868","seller":"kirinji","condition":"상","priceKRW":24000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"397385929","seller":"P. J. Stahl","condition":"중","priceKRW":25000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"396473006","seller":"알낳아딘 중고서점","condition":"중","priceKRW":27900,"shippingText":"택배 3,000원"},
+        {"itemId":"363221265","seller":"P. J. Stahl","condition":"상","priceKRW":35000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"402096618","seller":"P. J. Stahl","condition":"상","priceKRW":40000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"375214597","seller":"P. J. Stahl","condition":"상","priceKRW":40000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"395469906","seller":"알낳아딘 중고서점","condition":"상","priceKRW":74900,"shippingText":"택배 3,000원"}
+      ]
+    },
+    {
+      "key": "b", "variant": "B형", "itemId": "330792924", "isbn": "K692937502", "releaseDate": "2023-12-21",
+      "productUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=330792924",
+      "coverAssetUrl": "https://image.aladin.co.kr/product/33079/29/cover500/k692937502_1.jpg",
+      "inventoryUrl": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=330792924&start=newproduct",
+      "displayedActiveCount": 0, "displayedPages": 0, "offers": []
+    }
+  ],
+  "offerStatusEvidence": "Every exact A-type inventory row exposes basket and immediate-purchase controls. Eight distinct item IDs preserve repeated seller/price rows. Active at observation time; amounts are asking prices."
+}

@@ -1,0 +1,63 @@
+{
+  "observedAt": "2026-10-23T23:37:00+08:00",
+  "method": "Manual public Joongna search and exact product DOM/visual review, no API/key",
+  "scope": "Three October 2026 S-type seller advertisements",
+  "searchUrl": "https://web.joongna.com/search/maxim%20s",
+  "editionId": "korea-maxim-2026-10-print-s-subscription",
+  "offers": [
+    {
+      "id": "233463669",
+      "title": "유디 맥심한정S판",
+      "price": 18000,
+      "shipping": "일반택배 KRW 5,000; 우체국택배 (seller description)",
+      "condition": "중고, 구성품 없음; seller claim",
+      "seller": "퓨쳐컬쳐",
+      "observedAt": "2026-10-23T23:35:00+08:00",
+      "image": "https://img2.joongna.com/media/original/2026/10/23/1792733116164znX_0XA7v.jpg?impolicy=resize&format=webp",
+      "evidence": "Title names Yudi limited S; seller photo visibly prints No.281 S type and matches the public publisher S cover. Used, no components included; seller 퓨쳐컬쳐. KRW 18,000 plus KRW 5,000 parcel shipping, described as Korea Post. Seller photo retains its emoji overlay. Chat/buy controls visible; no purchase or contact attempted."
+    },
+    {
+      "id": "233309433",
+      "title": "맥심 잡지 유디 S type 2026.10월호 미개봉 새제품",
+      "price": 29500,
+      "shipping": "무료배송; CJ대한통운 택배 (seller description)",
+      "condition": "새상품, 구성품 전체 포함; 미개봉/미열람 seller claims",
+      "seller": "큐팔이",
+      "observedAt": "2026-10-23T23:36:00+08:00",
+      "image": "https://img2.joongna.com/media/original/2026/10/17/1792243262292CO4_wyeRz.jpg?impolicy=resize&format=webp",
+      "evidence": "Exact title and seller photo identify October 2026 Yudi No.281 S type. Seller 큐팔이 asks KRW 29,500 including shipping, describes unopened/unread, individually wrapped, all components, CJ parcel delivery. Those quality/completeness statements are seller claims. Purchase button enabled; no purchase or contact attempted."
+    },
+    {
+      "id": "232833048",
+      "title": "맥심잡지 과월호 26.10 S타입 새상품",
+      "price": 30000,
+      "shipping": "무료배송; local handover also offered (신곡1동)",
+      "condition": "새상품, 구성품 없음; seller claim",
+      "seller": "광땡이이",
+      "observedAt": "2026-10-23T23:37:00+08:00",
+      "image": "https://img2.joongna.com/media/original/2026/09/30/17907493905359os_S1WD0.jpg?impolicy=resize&format=webp",
+      "evidence": "Exact title and seller photo identify October 2026 No.281 S type. Seller 광땡이이 asks KRW 30,000 with free parcel delivery and optional local handover. Page says new but no components included; these are seller claims. Chat/buy controls visible; no purchase or contact attempted."
+    }
+  ],
+  "identity": "Seller titles/photos match publisher No.281 S cover; printed Yudi credit was committed and verified before this resale list was collected",
+  "duplicates": "Read-only exact source/external ID lookup returned no existing rows",
+  "priceRules": "Asking prices only. Preserve shipping/condition separately. No transaction, paid sale amount or simultaneous distinct-copy count inferred.",
+  "unknownEditionFields": [
+    "original publication date",
+    "page count",
+    "dimensions",
+    "ISBN",
+    "ordinary publisher single-copy price"
+  ],
+  "rejectedCandidate": {
+    "discoveredUrl": "https://m.bunjang.co.kr/products/437909114",
+    "historicalSnapshot": "Two-week-old index described MAXIM No.281 Yudi and KRW 8,000",
+    "liveRedirect": "https://globalbunjang.com/product/437909114",
+    "liveTitle": "Book / 도서",
+    "liveDescription": "결제하신분 결제전용창",
+    "liveState": "Sold Out, disabled cart/buy; generic payment listing",
+    "decision": "No MAXIM price/image/stock import: current identity is not verifiably the same S issue. USD amounts on the unrelated live page are excluded."
+  },
+  "imageStorage": "Three exact seller photo URLs retained as remote listing references; canonical S cover stays the publisher image. Emoji overlay retained; no pixels mirrored or reuse license asserted.",
+  "sourceStatus": "Existing Joongna manual source stays disabled/review"
+}

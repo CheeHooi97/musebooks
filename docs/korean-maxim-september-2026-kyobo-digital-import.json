@@ -1,0 +1,94 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-09-mua-digital",
+      "slug": "korea-maxim-2026-09-mua-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-09",
+      "issueNumber": "280",
+      "originalTitle": "맥심 MAXIM 2026. 9월호",
+      "englishTitle": "MAXIM September 2026",
+      "summary": "MAXIM September2026,issueNo.280. Public Kyobo contents explicitly credit 미스맥심 뮤아. Existing A/B/S print and YES24PDF remain separate from the independently verified Kyobo183-page PDF. B-specific 윤영서 credit,subscriber metadata and publisher/retailer print-date assertions are preserved. Kyobo file details are not transferred to other editions.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-8aba74dc7fb85d97d1667c7f8ddd56a1d749907b15d2845d7dd13669c9b247e4",
+      "canonicalPublicName": "미스맥심 뮤아",
+      "originalName": "미스맥심 뮤아",
+      "englishName": "Miss Maxim Mua",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+      "profileSourceConfidence": "explicit_publisher_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-09-digital-kyobo-pdf",
+      "workId": "korea-maxim-2026-09-mua-digital",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-09-01T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 183,
+      "editionVariant": "PDF (Kyobo)",
+      "contentSummary": "Kyobo-specific September2026 PDF:183pages,83.91MB,released2026-09-01,digitalISSN25083597. Public contents explicitly표지모델 미스맥심 뮤아. Ordinary purchaseKRW5500; conditional coupon4950 excluded. Purchase enabled; sam subscription separate; TTS unavailable. No book ISBN shown; eISSN is not ISBN. Kyobo-linked domestic print date2026-08-25 is context only and does not replace publisher print dates or subscriber unknowns. Existing YES24PDF,A/B/S metadata,cover credits,price history and images remain unchanged. No preview,reader,download,login,purchase or image collection.",
+      "metadataSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013514799",
+      "seriesName": "MAXIM",
+      "editionLabel": "September 2026 Kyobo digital PDF (183 pages)",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "kyobo-kr-digital-manual",
+      "name": "Kyobo Korea ebook (manual public page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "digital_store",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "digital",
+      "allowedFormats": "digital",
+      "baseUrl": "https://ebook-product.kyobobook.co.kr",
+      "allowedHosts": "ebook-product.kyobobook.co.kr",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.kyobobook.co.kr/policy",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-kyobo-maxim-september-2026-digital-20261025",
+      "sourceId": "kyobo-kr-digital-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:48:30.9880688+08:00",
+      "items": [
+        {
+          "externalId": "E000013514799",
+          "observationId": "kyobo-20261025-maxim-september-digital-E000013514799",
+          "editionId": "korea-maxim-2026-09-digital-kyobo-pdf",
+          "url": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013514799",
+          "title": "맥심 MAXIM 2026.9월호",
+          "status": "active",
+          "priceMinor": 5500,
+          "currency": "KRW",
+          "priceType": "digital",
+          "format": "digital",
+          "digitalAccess": "authorized_store",
+          "publisher": "와이미디어",
+          "editionVariant": "PDF (Kyobo)",
+          "shippingText": "Digital purchase; no shipping; print supplements and sam subscription excluded",
+          "observedAt": "2026-10-25T14:48:30.9880688+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Kyobo ebook page2026-10-25:PDF83.91MB,183pages,release2026-09-01,digitalISSN25083597; ordinary소장KRW5500 and enabled eBook purchase control. KRW4950 is coupon price,not ordinary. Public목차 explicitly표지모델 미스맥심 뮤아. TTS unavailable. Kyobo-linked print date2026-08-25 is context only; no overwrite of publisher print dates or subscriber metadata. Kyobo file metadata stays scoped to this edition; other editions,cover credits and images preserved. No age verification,login,preview,reader,download,purchase or images accessed."
+        }
+      ]
+    }
+  }
+]

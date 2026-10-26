@@ -1,0 +1,79 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T14:23:19.7693377+08:00",
+  "checks": {
+    "magazineIdentity": true,
+    "editionIDs": true,
+    "otherEditionMetadataUnchanged": true,
+    "creditContent": true,
+    "people": true,
+    "observationsPreserved": true,
+    "listingsPreserved": true,
+    "mediaPreserved": true,
+    "canonicalA": true,
+    "price": true,
+    "counts": true,
+    "publicRetail": true,
+    "publicCredits": true,
+    "gallery": true
+  },
+  "before": "korean-maxim-july-2026-a-aladin-before.json",
+  "readback": "korean-maxim-july-2026-a-aladin-readback.json",
+  "workId": "korea-maxim-2026-07-babian-digital",
+  "editionId": "korea-maxim-2026-07-babian-print-a-yes24",
+  "canonicalReleaseDate": "2026-06-29",
+  "retailerReleaseDate": "2026-06-24",
+  "dateConflict": "unresolved; both assertions retained",
+  "unavailableDisplayedPriceKRW": 9120,
+  "newListings": 1,
+  "newObservations": 1,
+  "explicitRemoteMediaReferences": 1,
+  "coverReference": "https://image.aladin.co.kr/product/39657/58/cover500/k142130193_1.jpg",
+  "sourceAndCreditUpdatedAtRefreshed": true,
+  "sourceAndCreditContentPreserved": true,
+  "goalComplete": false,
+  "reusePermission": "unconfirmed; attributed remote reference only; no pixels mirrored",
+  "cohortAudit": {
+    "passed": true,
+    "scope": {
+      "distinctObservationKeys": 357,
+      "editions": 198,
+      "explicitMediaReferences": 136,
+      "linkedListings": 346,
+      "listingItemReferences": 357,
+      "people": 144,
+      "records": 338,
+      "sources": 10,
+      "works": 110
+    },
+    "coverageTotals": {
+      "editionsWithoutActiveListing": 141,
+      "editionsWithoutListing": 5,
+      "magazine_issue_digital": 35,
+      "magazine_issue_physical": 84,
+      "missingCover": 168,
+      "missingPageCount": 86,
+      "missingReleaseDate": 8,
+      "photobook_digital": 62,
+      "photobook_physical": 17,
+      "releaseDateNotDayPrecision": 59
+    },
+    "linkedPeopleWithoutVerificationSource": 0,
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5026,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 169,
+    "databaseCounts": {
+      "works": 6064,
+      "editions": 6815,
+      "sources": 31,
+      "listings": 8334,
+      "listing_observations": 8383
+    },
+    "log": "korean-maxim-july-2026-a-aladin-catalog-verify.log"
+  }
+}

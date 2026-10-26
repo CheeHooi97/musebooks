@@ -1,0 +1,87 @@
+[
+  {
+    "work": {
+      "id": "korea-go-so-young-santorini",
+      "slug": "korea-go-so-young-santorini",
+      "publicationType": "photobook",
+      "originalTitle": "SANTORINI 산토리니",
+      "englishTitle": "SANTORINI",
+      "summary": "Photo book featuring Korean model/actress 고소영, photographed by 조세현. The YES24 new-copy page is marked sold out.",
+      "originCode": "KR",
+      "featuredNames": "고소영",
+      "coverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "photographer": "조세현"
+    },
+    "edition": {
+      "id": "korea-go-so-young-santorini-2003-print-yes24",
+      "workId": "korea-go-so-young-santorini",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "Dreamax",
+      "releaseDate": "2003-11-29T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "9788995439500",
+      "editionVariant": "Five posters and compilation CD",
+      "contentSummary": "Standalone Go So-young photobook photographed by 조세현, Dreamax, ISBN9788995439500, release2003-11-29. Exact Aladin item445208 (https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=445208) supplies174pages,228×300mm,470g and confirms date/ISBN. Existing YES24 cover and its source URL remain intact. Aladin listKRW27000/displayKRW24300 with out-of-print notice, confirmation2013-07-30 (not publication date); YES24 unavailableKRW25650 history remains separate. Package lists five photo/poster sheets and a compilation CD; no used-copy completeness inferred. No used offers imported. Another retailer search result is a discovery lead only and is not accepted as verified bibliography. No new image, mirrored pixels or reuse permission.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/416604",
+      "editionLabel": "2003 print edition",
+      "coverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "originalCoverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "dimensions": "228×300mm",
+      "pageCount": 174
+    },
+    "source": {
+      "id": "aladin-kr-manual",
+      "name": "Aladin Korea (manual page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.aladin.co.kr",
+      "allowedHosts": "www.aladin.co.kr,aladin.co.kr",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.aladin.co.kr/account/waccount_provision.aspx?pType=1",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "batch": {
+      "jobId": "manual-aladin-santorini-20261025",
+      "sourceId": "aladin-kr-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:26:10.4231168+08:00",
+      "items": [
+        {
+          "externalId": "445208",
+          "observationId": "aladin-20261025-santorini-445208",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=445208",
+          "title": "Santorini - 고소영 화보집",
+          "status": "unknown",
+          "priceMinor": 24300,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "Dreamax",
+          "editionVariant": "Five posters and compilation CD",
+          "shippingText": "Displayed free shipping; new copies unavailable",
+          "observedAt": "2026-10-25T14:26:10.4231168+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Aladin exact ISBN9788995439500 product445208 on2026-10-25: Santorini - 고소영 화보집, photographs조세현,publisherDreamax,release2003-11-29,174pages,228×300mm,470g. ListKRW27000/displayedKRW24300; explicit절판 and no further production/distribution plan. Unknown unavailable retail display, not active offer or sold transaction. Historical out-of-print confirmation2013-07-30 is not publication date. Five photo/poster sheets and compilation CD are original package context, not seller-specific used completeness. No used inventory, API, login, purchase or new media collected.",
+          "isbn": "9788995439500"
+        }
+      ]
+    }
+  }
+]

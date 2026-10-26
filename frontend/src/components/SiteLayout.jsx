@@ -7,6 +7,7 @@ import { usePreferences } from "../lib/preferences";
 import { useCollection } from "../lib/collection";
 import { isMobileApp } from "../lib/platform";
 import { interceptLinks, navigate, runBackHandler } from "../lib/router";
+import { languageAlternates } from "../lib/catalog-languages";
 
 // Top-level sections. `match` decides which nav item is current for a path.
 export const SECTIONS = [
@@ -65,6 +66,7 @@ export default function SiteLayout({ pathname, children, showAds = true }) {
     </main>
     <footer className="site-footer">
       <div className="site-footer__inner">
+        {!isMobileApp && <nav aria-label="Languages">{languageAlternates(pathname, "").filter(item => item.code !== "x-default").map(item => <a key={item.code} href={item.url} lang={item.code} hrefLang={item.code} data-reload>{item.label}</a>)}</nav>}
         <div className="site-footer__brand">
           <a className="wordmark" href="/">MuseBooks</a>
           <p>{t("A source-backed catalog of model, idol and entertainer photobooks. Every edition keeps its own record; every price keeps its source.")}</p>

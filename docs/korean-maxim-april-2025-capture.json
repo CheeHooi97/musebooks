@@ -1,0 +1,48 @@
+{
+  "observedAt":"2026-10-23T22:20:00+08:00",
+  "method":"Manual live public product/seller-list browser review and reading printed cover credits; no retailer API",
+  "issueMonth":"2025-04","issueNumber":"4월호","issueTheme":"이불킥",
+  "pageCount":192,"dimensions":"210×297mm (A4)","weightGrams":518,"issn":"2233-4270",
+  "listPriceKRW":8900,"lastDisplayedSalePriceKRW":8450,
+  "retailState":"Both retail variants show sold-out/discontinued messaging; prices are last displayed",
+  "seriesUrl":"https://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=1248264",
+  "coverCredits":[
+    {"name":"하리","variant":"A형","sourceUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360998428","evidence":"The product's cover, read directly at its displayed asset URL, prints MODEL 미스맥심 하리 near the masthead. Identity is taken from printed text, not face recognition."},
+    {"name":"한지나","variant":"B형","sourceUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360998557","evidence":"The product's cover, read directly at its displayed asset URL, prints MODEL 미스맥심 한지나 near the masthead. Identity is taken from printed text, not face recognition."},
+    {"name":"뮤아","variant":"subscription cover; exact edition listing unresolved","sourceUrl":"https://www.mimint.co.kr/bbs/view/news/S1N18/4757340?page=280&pageblock=271","evidence":"Contemporaneous Focus Today report dated 2025-03-26 explicitly identifies the April subscriber-only cover. Retain issue-level credit; no subscription-edition date or price inferred."}
+  ],
+  "imageState":"Asset URLs retained as provenance. Images were inspected to read printed credits; no image stored or embedded in the MuseBooks catalog. Reuse permission remains unconfirmed.",
+  "variants":[
+    {
+      "key":"a","variant":"A형","itemId":"360998428","isbn":"K682038965","releaseDate":"2025-03-21",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360998428",
+      "coverAssetUrl":"https://image.aladin.co.kr/product/36099/84/cover500/k682038965_1.jpg",
+      "supplement":"미스맥심 하리/한지나 스페셜 브로마이드 (책속부록)",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=360998428&start=newproduct",
+      "displayedActiveCount":4,"displayedPages":1,
+      "offers":[
+        {"itemId":"402715623","seller":"김민수","condition":"중","priceKRW":5500,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"394036330","seller":"lee sol","condition":"상","priceKRW":16500,"shippingText":"택배 3,300원"},
+        {"itemId":"385049965","seller":"P. J. Stahl","condition":"상","priceKRW":24000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"384330697","seller":"P. J. Stahl","condition":"상","priceKRW":30000,"shippingText":"택배 3,500원, 반값택배 2,400원"}
+      ]
+    },
+    {
+      "key":"b","variant":"B형","itemId":"360998557","isbn":"K782038965","releaseDate":"2025-03-21",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360998557",
+      "coverAssetUrl":"https://image.aladin.co.kr/product/36099/85/cover500/k782038965_1.jpg",
+      "supplement":"미스맥심 한지나/뮤아 스페셜 브로마이드 (책속부록)",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=360998557&start=newproduct",
+      "displayedActiveCount":5,"displayedPages":1,
+      "offers":[
+        {"itemId":"402267145","seller":"낭만시인","condition":"최상","priceKRW":18000,"shippingText":"택배 3,000원"},
+        {"itemId":"396362143","seller":"김민수","condition":"최상","priceKRW":18000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"362051389","seller":"Danielle","condition":"최상","priceKRW":30000,"shippingText":"택배 3,500원"},
+        {"itemId":"361318029","seller":"Danielle","condition":"최상","priceKRW":30000,"shippingText":"택배 3,500원"},
+        {"itemId":"384776072","seller":"P. J. Stahl","condition":"상","priceKRW":30000,"shippingText":"택배 3,500원, 반값택배 2,400원"}
+      ]
+    }
+  ],
+  "activeEvidence":"Every exact inventory row exposes basket and immediate-purchase controls. Asking prices only; supplement inclusion with individual used copies is unconfirmed.",
+  "remainingLeads":"YES24 digital product 144441861 remains separately unresolved after an earlier adult-login redirect. This Aladin batch does not assign that PDF an exact print cover, release day or refreshed price. The subscription cover has no exact verified product offer yet."
+}

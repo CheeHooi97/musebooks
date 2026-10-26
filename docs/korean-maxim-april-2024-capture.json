@@ -1,0 +1,42 @@
+{
+  "observedAt": "2026-10-23T21:43:00+08:00",
+  "method": "Manual live browser product and seller-row review; no retailer API",
+  "issueMonth": "2024-04",
+  "releaseDate": "2024-03-21",
+  "pageCount": 192,
+  "dimensions": "210×297mm (A4)",
+  "weightGrams": 518,
+  "listPriceKRW": 8900,
+  "lastDisplayedSalePriceKRW": 8450,
+  "retailState": "All three product pages mark sold out and publisher distribution stopped; sale price is last displayed",
+  "seriesUrl": "https://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=1176868",
+  "coverCreditSource": "https://news.nate.com/view/20240329n00274",
+  "coverCreditScope": "Contemporaneous SportsDonga report identifies 김호영's special cover and 감동란's issue cover; keep credits at issue level without asserting an exact C-type assignment",
+  "imageState": "Reuse permission unconfirmed; no cover or gallery copied",
+  "variants": [
+    {
+      "key":"a", "variant":"A형", "itemId":"336663401", "isbn":"K142939734",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336663401",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=336663401&start=newproduct",
+      "displayedCount":4, "displayedPages":1,
+      "offers":[
+        {"itemId":"404452422","seller":"SunA","condition":"상","priceKRW":10000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"388122227","seller":"P. J. Stahl","condition":"중","priceKRW":10000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"395470496","seller":"알낳아딘 중고서점","condition":"중","priceKRW":28900,"shippingText":"택배 3,000원"},
+        {"itemId":"402267865","seller":"낭만시인","condition":"최상","priceKRW":30000,"shippingText":"택배 3,000원"}
+      ]
+    },
+    {
+      "key":"b", "variant":"B형", "itemId":"336663898", "isbn":"K222939734",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336663898",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=336663898&start=newproduct",
+      "displayedCount":0, "displayedPages":0, "offers":[]
+    },
+    {
+      "key":"c", "variant":"C형", "itemId":"336664075", "isbn":"K362939734",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=336664075",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=336664075&start=newproduct",
+      "displayedCount":0, "displayedPages":0, "offers":[]
+    }
+  ]
+}

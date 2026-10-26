@@ -44,6 +44,17 @@ test('edition schema preserves publication precision and never invents active so
   assert.ok(!JSON.stringify(data).includes('Offer'))
 })
 
+test('magazine schema never invents a periodical and profile lists preserve publication types', () => {
+  const issue = { ...book, publicationType: 'magazine_issue' }
+  const schema = pageSeo('/books/test-book', issue).structuredData['@graph'][0]
+  assert.equal(schema['@type'], 'PublicationIssue')
+  assert.equal(schema.isPartOf, undefined)
+  const sourced = { ...issue, editions: [{ ...issue.editions[0], seriesName: 'Recorded magazine' }] }
+  assert.equal(pageSeo('/books/test-book', sourced).structuredData['@graph'][0].isPartOf.name, 'Recorded magazine')
+  const profile = pageSeo('/models/person', null, { name: 'Person', books: [issue] }).structuredData['@graph'][0]
+  assert.equal(profile.mainEntity.itemListElement[0].item['@type'], 'PublicationIssue')
+})
+
 test('static build emits facts, citations, links, safe bootstrap and consistent origin', async () => {
   const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'musebooks-seo-'))
   try {
@@ -65,6 +76,15 @@ test('static build emits facts, citations, links, safe bootstrap and consistent 
     const profileHtml = await fs.readFile(path.join(directory, 'models/test-person/index.html'), 'utf8')
     assert.match(profileHtml, /href="\/books\/test-book"/)
     const sitemap = await fs.readFile(path.join(directory, 'sitemap.xml'), 'utf8')
+    for (const route of ['/login', '/register', '/verify-email', '/forgot-password', '/reset-password', '/account']) {
+      const accountHTML = await fs.readFile(path.join(directory, route.slice(1), 'index.html'), 'utf8')
+      assert.equal(pageSeo(route).noindex, true)
+      assert.match(accountHTML, /noindex,follow/)
+      assert.ok(!accountHTML.includes('Publication not found'))
+      assert.ok(!sitemap.includes(`https://canonical.example${route}<`))
+    }
+    assert.match(sitemap, /https:\/\/canonical.example\/books\/test-book/)
+    assert.match(sitemap, /https:\/\/canonical.example\/models\/test-person/)
     assert.match(sitemap, /https:\/\/canonical.example\/about/)
     assert.ok(!sitemap.includes('/404'))
     // Answers and agent access, matching MuseCards.

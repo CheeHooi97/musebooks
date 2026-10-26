@@ -6,7 +6,7 @@ import BookCard, { BookCover } from "../components/BookCard";
 import { Breadcrumb, LoadState, SectionHeading } from "../components/Page";
 import { usePreferences } from "../lib/preferences";
 import { useCollection } from "../lib/collection";
-import { isMobileApp } from "../lib/platform";
+import { isMobileApp, showCatalogImages } from "../lib/platform";
 import { publicationDate } from "../lib/seo";
 import { bookAnswers, bookFactSummary } from "../lib/book-answers";
 import { priceLabel, primaryListing } from "../lib/price-policy";
@@ -61,6 +61,7 @@ function Detail({ book, editionId, setEditionId }) {
   ].map(asset => [asset.storageUrl, asset])).values()), [edition]);
   const specs = [
     ["Publication type", t(publicationTypeLabel(book))],
+    edition.seriesName && ["Series", edition.seriesName],
     isMagazine(book) && ["Issue month", book.issueMonth || t("Not recorded")],
     isMagazine(book) && book.issueNumber && ["Issue number", book.issueNumber],
     ["Photographer", book.photographer || t("Not recorded")],
@@ -77,12 +78,12 @@ function Detail({ book, editionId, setEditionId }) {
   return <article className="book-detail" aria-labelledby="book-title">
     <Breadcrumb items={[[t("Browse"), "/books"], [book.originalTitle]]} />
     <section className="book-hero">
-      <div className="book-hero__media">
+      {showCatalogImages && <div className="book-hero__media">
         <BookCover book={book} edition={edition} loading="eager" />
         {book.editions.length > 1 && <div className="edition-thumbs" role="group" aria-label={t("Editions")}>
           {book.editions.map(item => <button key={item.id} type="button" className={item.id === edition.id ? "is-active" : ""} onClick={() => setEditionId(item.id)} aria-pressed={item.id === edition.id} aria-label={`${t("View")} ${item.editionLabel}`}><BookCover book={book} edition={item} compact /></button>)}
         </div>}
-      </div>
+      </div>}
       <div className="book-hero__info">
         <p className="eyebrow">{t(publicationTypeLabel(book))} · {t(book.origin.name)}{publicationDate(edition) ? ` · ${publicationDate(edition).slice(0, 4)}` : ""}</p>
         <h1 id="book-title" tabIndex={-1}>{book.originalTitle}</h1>
@@ -118,7 +119,7 @@ function Detail({ book, editionId, setEditionId }) {
           return <div role="listitem" className={`edition-row${active ? " is-active" : ""}`} key={item.id}>
             <button type="button" className="edition-row__select" onClick={() => setEditionId(item.id)} aria-pressed={active}>
               <strong>{item.editionLabel}</strong>
-              <span>{t(editionFormatLabel(item, book))}{publicationDate(item) ? ` · ${publicationDate(item)}` : ""}{item.publisher ? ` · ${item.publisher}` : ""}</span>
+              <span>{t(editionFormatLabel(item, book))}{publicationDate(item) ? ` · ${publicationDate(item)}` : ""}{item.publisher ? ` · ${item.publisher}` : ""}{item.seriesName ? ` · ${item.seriesName}` : ""}</span>
             </button>
             <span className="edition-row__price">{itemListing ? formatPrice(itemListing.priceMinor, itemListing.currency) : t("No price")}<small>{t(priceLabel(item, itemListing))}</small></span>
           </div>;
@@ -135,7 +136,7 @@ function Detail({ book, editionId, setEditionId }) {
       {/^https?:\/\//i.test(edition.metadataSourceUrl || "") && <p><a className="text-link" href={edition.metadataSourceUrl} target="_blank" rel="noreferrer" data-external-link>{t("Edition metadata source")} ↗</a></p>}
     </section>
 
-    {gallery.length > 0 && <section className="detail-section" aria-labelledby="gallery-title">
+    {showCatalogImages && gallery.length > 0 && <section className="detail-section" aria-labelledby="gallery-title">
       <SectionHeading id="gallery-title" title={t("Product images")} />
       <div className="gallery-grid">{gallery.map(asset => <figure key={asset.storageUrl}>
         <a href={asset.sourceUrl} target="_blank" rel="noreferrer" data-external-link><img src={asset.storageUrl} alt={`${edition.editionLabel} — ${asset.attribution} product image`} loading="lazy" /></a>

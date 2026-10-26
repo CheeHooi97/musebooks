@@ -1,0 +1,208 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-08-seo-yeojin-digital",
+      "slug": "korea-maxim-2026-08-seo-yeojin-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-08",
+      "issueNumber": "279",
+      "originalTitle": "맥심 MAXIM 2026. 8월호",
+      "englishTitle": "MAXIM August 2026",
+      "summary": "MAXIM August2026 No.279 issue, publisher archive titled치어리더 서여진. Separate A/B print variants and existing digitalPDF remain one magazine issue. Public Aladin pages provide176pages, A4 and covers; new-copy stock is sold out. AladinJuly22 conflicts with prior YES24AJuly23; both source assertions retained. Publisher details remain age-gated and no gated media was accessed.",
+      "originCode": "KR",
+      "coverUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-83a31e8cdc276ac509d7a2f6ba7fd5646eba44ac73f895eb16a4df30cc307a4c",
+      "canonicalPublicName": "치어리더 서여진",
+      "originalName": "치어리더 서여진",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/194622253",
+      "profileSourceConfidence": "explicit_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-08-seo-yeojin-print-a-yes24",
+      "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-07-23T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 176,
+      "dimensions": "210×297×15mm",
+      "editionVariant": "A형",
+      "contentSummary": "MAXIM August2026 No.279 A print variant. Public Aladin product lists2026-07-22,176pages,A4 210×297mm,475g,listKRW9600 and displayed saleKRW9120 with sold-out/distribution-stopped status. Retain existing YES24A2026-07-23 release and210×297×15mm dimensions; retailer date conflict is unresolved because publisher detail is gated. Aladin shop keyK952130723 is labelledISBN but is not a standards-valid book ISBN; canonical ISBN stays blank. ISSN2233-4270. Supplement치어리더 서여진/미스맥심 은지 special bromide is not an additional cover-model credit. Exact public retailer cover reference retained remotely; no mirrored pixels or reuse license asserted. Publisher archiveKRW9600 observation remains separate.",
+      "metadataSourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885034",
+      "seriesName": "MAXIM",
+      "editionLabel": "August 2026 A-type print issue",
+      "coverUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+      "originalCoverUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg"
+    },
+    "source": {
+      "id": "aladin-kr-manual",
+      "name": "Aladin Korea (manual page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.aladin.co.kr",
+      "allowedHosts": "www.aladin.co.kr,aladin.co.kr",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.aladin.co.kr/account/waccount_provision.aspx?pType=1",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-aladin-august-2026-print-20261025",
+      "sourceId": "aladin-kr-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T13:24:02.9412320+08:00",
+      "items": [
+        {
+          "externalId": "398885034",
+          "observationId": "aladin-20261025-august-398885034",
+          "editionId": "korea-maxim-2026-08-seo-yeojin-print-a-yes24",
+          "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885034",
+          "title": "맥심 Maxim A형 2026.8",
+          "status": "unknown",
+          "priceMinor": 9120,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "와이미디어(잡지)",
+          "editionVariant": "A형",
+          "imageUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+          "shippingText": "Paid shipping belowKRW15000; exact fee unknown; separate supplements excluded from overseas delivery",
+          "observedAt": "2026-10-25T13:24:02.9412320+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live rendered Aladin A August2026 product checked2026-10-25; release2026-07-22,176pages,A4 210×297mm,475g,shop keyK952130723,ISSN2233-4270. ListKRW9600,displayed saleKRW9120. Explicit품절 and distribution-stopped message; no purchasable current new stock asserted, statusunknown. B includes historical sold-out confirmation2026-08-04, not publication or current stock date. PriorYES24AJuly23 conflict retained. Public retailer cover inspected; no publisher gate bypass or paid content accessed. Supplement names do not add cover credits. Used inventory not collected in this batch."
+        }
+      ]
+    },
+    "media": [
+      {
+        "externalId": "398885034",
+        "mediaType": "listing_image",
+        "originalUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+        "storageUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+        "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885034",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "work": {
+      "id": "korea-maxim-2026-08-seo-yeojin-digital",
+      "slug": "korea-maxim-2026-08-seo-yeojin-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-08",
+      "issueNumber": "279",
+      "originalTitle": "맥심 MAXIM 2026. 8월호",
+      "englishTitle": "MAXIM August 2026",
+      "summary": "MAXIM August2026 No.279 issue, publisher archive titled치어리더 서여진. Separate A/B print variants and existing digitalPDF remain one magazine issue. Public Aladin pages provide176pages, A4 and covers; new-copy stock is sold out. AladinJuly22 conflicts with prior YES24AJuly23; both source assertions retained. Publisher details remain age-gated and no gated media was accessed.",
+      "originCode": "KR",
+      "coverUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-83a31e8cdc276ac509d7a2f6ba7fd5646eba44ac73f895eb16a4df30cc307a4c",
+      "canonicalPublicName": "치어리더 서여진",
+      "originalName": "치어리더 서여진",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/194622253",
+      "profileSourceConfidence": "explicit_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-08-print-b",
+      "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-07-22T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 176,
+      "dimensions": "210×297mm (A4)",
+      "editionVariant": "B형",
+      "contentSummary": "MAXIM August2026 No.279 B print variant. Public Aladin product lists2026-07-22,176pages,A4 210×297mm,475g,listKRW9600 and displayed saleKRW9120 with sold-out/distribution-stopped status. B release2026-07-22 and A4 dimensions come from its own product, not copied from A/PDF. Aladin shop keyK932130723 is labelledISBN but is not a standards-valid book ISBN; canonical ISBN stays blank. ISSN2233-4270. Supplement치어리더 서여진/미스맥심 은지 special bromide is not an additional cover-model credit. Exact public retailer cover reference retained remotely; no mirrored pixels or reuse license asserted. Publisher archiveKRW9600 observation remains separate.",
+      "metadataSourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885187",
+      "seriesName": "MAXIM",
+      "editionLabel": "August 2026 B-type print issue",
+      "coverUrl": "https://image.aladin.co.kr/product/39888/51/cover500/k932130723_1.jpg",
+      "originalCoverUrl": "https://image.aladin.co.kr/product/39888/51/cover500/k932130723_1.jpg"
+    },
+    "source": {
+      "id": "aladin-kr-manual",
+      "name": "Aladin Korea (manual page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.aladin.co.kr",
+      "allowedHosts": "www.aladin.co.kr,aladin.co.kr",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.aladin.co.kr/account/waccount_provision.aspx?pType=1",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-aladin-august-2026-print-20261025",
+      "sourceId": "aladin-kr-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T13:24:02.9412320+08:00",
+      "items": [
+        {
+          "externalId": "398885187",
+          "observationId": "aladin-20261025-august-398885187",
+          "editionId": "korea-maxim-2026-08-print-b",
+          "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885187",
+          "title": "맥심 Maxim B형 2026.8",
+          "status": "unknown",
+          "priceMinor": 9120,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "와이미디어(잡지)",
+          "editionVariant": "B형",
+          "imageUrl": "https://image.aladin.co.kr/product/39888/51/cover500/k932130723_1.jpg",
+          "shippingText": "Paid shipping belowKRW15000; exact fee unknown; separate supplements excluded from overseas delivery",
+          "observedAt": "2026-10-25T13:24:02.9412320+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live rendered Aladin B August2026 product checked2026-10-25; release2026-07-22,176pages,A4 210×297mm,475g,shop keyK932130723,ISSN2233-4270. ListKRW9600,displayed saleKRW9120. Explicit품절 and distribution-stopped message; no purchasable current new stock asserted, statusunknown. B includes historical sold-out confirmation2026-08-04, not publication or current stock date. PriorYES24AJuly23 conflict retained. Public retailer cover inspected; no publisher gate bypass or paid content accessed. Supplement names do not add cover credits. Used inventory not collected in this batch."
+        }
+      ]
+    },
+    "media": [
+      {
+        "externalId": "398885187",
+        "mediaType": "listing_image",
+        "originalUrl": "https://image.aladin.co.kr/product/39888/51/cover500/k932130723_1.jpg",
+        "storageUrl": "https://image.aladin.co.kr/product/39888/51/cover500/k932130723_1.jpg",
+        "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885187",
+        "isPrimary": true
+      }
+    ]
+  }
+]

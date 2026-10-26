@@ -1,0 +1,43 @@
+{
+  "capturedAt": "2026-10-25T13:18:12.4846244+08:00",
+  "method": "Manual rendered storefront DOM and screenshot, no API",
+  "sourceUrl": "https://books.apple.com/jp/book/dj-soda%E5%86%99%E7%9C%9F%E9%9B%86-candid/id6480587148",
+  "releaseDate": "2024-04-05",
+  "language": "ja-JP",
+  "pageCount": 132,
+  "fileSize": "106.3 MB",
+  "publisher": "集英社",
+  "seller": "Shueisha Inc.",
+  "item": {
+    "externalId": "6480587148",
+    "observationId": "apple-jp-20261025-6480587148",
+    "editionId": "korea-dj-soda-candid-2024-jp-digital",
+    "url": "https://books.apple.com/jp/book/dj-soda%E5%86%99%E7%9C%9F%E9%9B%86-candid/id6480587148",
+    "title": "DJ SODA写真集「Candid」",
+    "status": "unknown",
+    "priceMinor": 3400,
+    "currency": "JPY",
+    "priceType": "digital",
+    "format": "digital",
+    "digitalAccess": "authorized_store",
+    "publisher": "集英社",
+    "editionVariant": "Digital",
+    "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+    "shippingText": "Digital Apple Books product; not shipped; account/storefront purchase eligibility unverified",
+    "observedAt": "2026-10-25T13:18:12.4846244+08:00",
+    "timestampPrecision": "minute",
+    "statusEvidence": "Live Apple Books Japan rendered public preview checked2026-10-25: JPY3400, release2024-04-05,132pages,106.3MB, Japanese, publisher集英社, sellerShueisha Inc. Public price is verified; account/region entitlement and purchase availability are not. No login, purchase, paid book reader, API or download accessed."
+  },
+  "image": [
+    {
+      "externalId": "6480587148",
+      "mediaType": "listing_image",
+      "originalUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+      "storageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+      "sourceUrl": "https://books.apple.com/jp/book/dj-soda%E5%86%99%E7%9C%9F%E9%9B%86-candid/id6480587148",
+      "isPrimary": true
+    }
+  ],
+  "rights": "Unconfirmed; remote attributed cover URL only, no pixels mirrored",
+  "limitations": "No digital ISBN/file format or purchase eligibility inferred. Print128pages/ISBN/A4 metadata remain separate."
+}

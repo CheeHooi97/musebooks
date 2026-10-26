@@ -40,21 +40,28 @@ test('unavailable verified book aborts before any live route changes', async () 
 test('new book publication and sitemap are repeatable without duplicating metadata', async () => fixture(async root => {
   const options = { apply: true, fetcher: async () => response(book('a')) }
   const first = await publishImportedPages(root, manifest(['a']), options)
-  assert.equal(first.newPages, 1)
-  assert.equal(first.sitemapAdditions, 1)
+  assert.equal(first.newPages, 5)
+  assert.equal(first.sitemapAdditions, 5)
   const second = await publishImportedPages(root, manifest(['a']), options)
   assert.equal(second.changedPages, 0)
   assert.equal(second.sitemapAdditions, 0)
   assert.ok((await fs.readFile(path.join(root, 'books/a/index.html'), 'utf8')).includes('Book a'))
+  const japanese = await fs.readFile(path.join(root, 'jp/books/a/index.html'), 'utf8')
+  assert.match(japanese, /<html lang="ja">/)
+  assert.equal((japanese.match(/rel="canonical"/g) || []).length, 1)
+  assert.ok(!japanese.includes('Old home'))
+  assert.match(await fs.readFile(path.join(root, 'jp/books/a.md'), 'utf8'), /https:\/\/musebooks.my\/jp\/books\/a/)
 }))
 test('failed publication restores existing pages and does not create later routes', async () => fixture(async root => {
   await fs.mkdir(path.join(root, 'books/a'), { recursive: true })
   await fs.writeFile(path.join(root, 'books/a/index.html'), 'original a')
   await assert.rejects(publishImportedPages(root, manifest(['a', 'b']), { apply: true,
     fetcher: async url => response(book(url.split('/').at(-1))),
-    beforeWrite: async (_, index) => { if (index === 1) throw new Error('publication failure') } }), /publication failure/)
+    beforeWrite: async (_, index) => { if (index === 6) throw new Error('publication failure') } }), /publication failure/)
   assert.equal(await fs.readFile(path.join(root, 'books/a/index.html'), 'utf8'), 'original a')
   await assert.rejects(fs.access(path.join(root, 'books/b/index.html')))
+  await assert.rejects(fs.access(path.join(root, 'jp/books/a/index.html')))
+  await assert.rejects(fs.access(path.join(root, 'jp/books/a.md')))
 }))
 test('unsafe slugs are rejected before fetching or creating directories', async () => fixture(async root => {
   let fetched = false

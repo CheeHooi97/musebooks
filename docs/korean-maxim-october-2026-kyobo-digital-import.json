@@ -1,0 +1,94 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-10-joo-digital",
+      "slug": "korea-maxim-2026-10-joo-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-10",
+      "issueNumber": "281",
+      "originalTitle": "맥심 MAXIM 2026. 10월호",
+      "englishTitle": "MAXIM October 2026",
+      "summary": "MAXIM October2026,issueNo.281,Dopamine theme. Public Kyobo PDF contents explicitly credit 미스맥심 쥬. Existing A 쥬,B 조아 and subscriberS 유디 credits and print/YES24PDF editions remain preserved. Independently verified Kyobo182pages/64.05MB stay scoped to its own digital purchase edition,not sam subscription or print variants.",
+      "originCode": "KR",
+      "coverUrl": "https://image.yes24.com/goods/197225466/XL"
+    },
+    "coverPerson": {
+      "slug": "model-ae3510aa4c0b7fda55e617efa0ef0fa7093ce4b3db66be2bc4db94dec3f6c589",
+      "canonicalPublicName": "미스맥심 쥬",
+      "originalName": "미스맥심 쥬",
+      "englishName": "Miss Maxim Joo",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/197225466",
+      "profileSourceConfidence": "explicit_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-10-digital-kyobo-pdf",
+      "workId": "korea-maxim-2026-10-joo-digital",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-10-01T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 182,
+      "editionVariant": "PDF (Kyobo)",
+      "contentSummary": "Kyobo-specific October2026 PDF:182pages,64.05MB,released2026-10-01,digitalISSN25083597. Public contents explicitly표지모델 미스맥심 쥬. Ordinary purchaseKRW5500; conditional coupon4950 excluded. Enabled purchase control verified on ebook route,not sam subscription. TTS unavailable. No book ISBN shown; eISSN not stored as ISBN. Existing YES24PDF,A/B/S metadata,allcover credits,prices and images remain unchanged. No preview,reader,download,login,purchase or image collection.",
+      "metadataSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013637393",
+      "seriesName": "MAXIM",
+      "editionLabel": "October 2026 Kyobo digital PDF (182 pages)",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "kyobo-kr-digital-manual",
+      "name": "Kyobo Korea ebook (manual public page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "digital_store",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "digital",
+      "allowedFormats": "digital",
+      "baseUrl": "https://ebook-product.kyobobook.co.kr",
+      "allowedHosts": "ebook-product.kyobobook.co.kr",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.kyobobook.co.kr/policy",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-kyobo-maxim-october-2026-digital-20261025",
+      "sourceId": "kyobo-kr-digital-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:51:17.7362402+08:00",
+      "items": [
+        {
+          "externalId": "E000013637393",
+          "observationId": "kyobo-20261025-maxim-october-digital-E000013637393",
+          "editionId": "korea-maxim-2026-10-digital-kyobo-pdf",
+          "url": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013637393",
+          "title": "맥심 MAXIM 2026.10월호",
+          "status": "active",
+          "priceMinor": 5500,
+          "currency": "KRW",
+          "priceType": "digital",
+          "format": "digital",
+          "digitalAccess": "authorized_store",
+          "publisher": "와이미디어",
+          "editionVariant": "PDF (Kyobo)",
+          "shippingText": "Digital purchase; no shipping; print supplements and sam subscription excluded",
+          "observedAt": "2026-10-25T14:51:17.7362402+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Kyobo ebook route2026-10-25,followed via visible eBook link from known sam page:PDF64.05MB,182pages,release2026-10-01,digitalISSN25083597. Ordinary소장KRW5500 and enabled eBook purchase control; KRW4950 is coupon price,not ordinary. Public목차 explicitly표지모델 미스맥심 쥬. TTS unavailable. sam availability is separate and no subscription price inferred. Kyobo file metadata stays scoped to this edition; all existing print/YES24PDF metadata,cover credits,prices and images preserved. No age verification,login,preview,reader,download,purchase or image collection."
+        }
+      ]
+    }
+  }
+]

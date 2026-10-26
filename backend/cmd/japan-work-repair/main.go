@@ -52,6 +52,15 @@ func mergeFeaturedNames(values ...string) string {
 	return strings.Join(merged, ",")
 }
 
+func namesModel(featuredNames, name string) bool {
+	for _, featured := range strings.Split(featuredNames, ",") {
+		if name != "" && strings.TrimSpace(featured) == name {
+			return true
+		}
+	}
+	return false
+}
+
 func moveWorkMediaToEdition(tx *gorm.DB, sourceWorkID, editionID string) (int, error) {
 	var assets []model.CatalogMedia
 	if err := tx.Where("entity_type = ? AND entity_id = ?", "work", sourceWorkID).Find(&assets).Error; err != nil {
@@ -192,6 +201,7 @@ func main() {
 		personBySlug := map[string]model.Person{}
 		editionsByWork := map[string][]string{}
 		credited := map[string]bool{}
+		creditsByWork := map[string][]int64{}
 		for _, w := range works {
 			workByID[w.ID] = w
 		}
@@ -204,6 +214,7 @@ func main() {
 		}
 		for _, c := range credits {
 			credited[fmt.Sprint(c.WorkID, ":", c.PersonID)] = true
+			creditsByWork[c.WorkID] = append(creditsByWork[c.WorkID], c.PersonID)
 		}
 		for _, g := range plan.Groups {
 			deferGroup := func(reason string) {
@@ -251,7 +262,16 @@ func main() {
 					return fmt.Errorf("reviewed identity changed: %s", m.EditionID)
 				}
 				alreadyMerged := m.WorkID != g.WorkID && e.WorkID == g.WorkID && w.Status == "superseded"
-				if !alreadyMerged && !credited[fmt.Sprint(w.ID, ":", person.ID)] {
+				// A collaborative store copy may be credited only to its co-model
+				// while still naming this model, and a name-search capture may have
+				// been re-credited to the model it actually features. Either way the
+				// copy must still share a featured model with the canonical work
+				// (which the canonical work does when it features any model).
+				sharesModel := false
+				for _, id := range creditsByWork[w.ID] {
+					sharesModel = sharesModel || credited[fmt.Sprint(canonical.ID, ":", id)]
+				}
+				if !alreadyMerged && !credited[fmt.Sprint(w.ID, ":", person.ID)] && !namesModel(w.FeaturedNames, person.CanonicalPublicName) && !sharesModel {
 					return fmt.Errorf("model attribution changed for %s: %s", g.PersonSlug, m.WorkID)
 				}
 				if m.WorkID != g.WorkID && !alreadyMerged {

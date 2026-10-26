@@ -3,6 +3,7 @@
 //   npm run check:geo -- https://musebooks.my [book-slug]
 import assert from 'node:assert/strict'
 import { robotsAllows } from './robots-access.mjs'
+import { CATALOG_LANGUAGES, languageAlternates, languagePath } from '../src/lib/catalog-languages.js'
 
 const base = new URL(process.argv[2] || 'https://musebooks.my').origin
 const read = async (path, headers = {}) => {
@@ -15,6 +16,22 @@ const [robots, sitemap, llms, feed, openapi, catalog] = await Promise.all(['/rob
 const slug = process.argv[3] || decodeURIComponent(sitemap.text.match(/<loc>[^<]*\/books\/([^<]+)<\/loc>/)?.[1] || '')
 assert.ok(slug, 'No book URL in the sitemap')
 const bookPath = `/books/${encodeURIComponent(slug)}`
+
+// Every language edition must be a real, self-canonical document, with a
+// reciprocal link to every sibling, including English and x-default.
+for (const language of CATALOG_LANGUAGES.filter(item => item.segment)) {
+  for (const route of ['/', bookPath]) {
+    const localized = languagePath(route, language.code)
+    const page = await read(localized)
+    assert.ok(page.text.includes(`<html lang="${language.code}">`), `${localized}: wrong document language`)
+    assert.ok(page.text.includes(`rel="canonical" href="${base}${localized}"`), `${localized}: wrong canonical`)
+    assert.ok(sitemap.text.includes(`<loc>${base}${localized}</loc>`), `${localized}: missing from sitemap`)
+    assert.ok(!/<meta[^>]+name="robots"[^>]+content="[^"]*noindex/i.test(page.text), `${localized}: noindex`)
+    for (const alternate of languageAlternates(route, base)) assert.ok(page.text.includes(`hreflang="${alternate.code}" href="${alternate.url}"`), `${localized}: missing ${alternate.code} alternate`)
+    const markdown = await read(`${localized}.md`)
+    assert.match(markdown.response.headers.get('content-type') || '', /^text\/markdown/)
+  }
+}
 
 // Initial HTML answers, for crawlers that do not run JavaScript.
 for (const agent of [undefined, 'OAI-SearchBot', 'ClaudeBot', 'PerplexityBot']) {

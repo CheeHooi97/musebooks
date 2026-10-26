@@ -1,0 +1,94 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-03-kim-doa-digital",
+      "slug": "korea-maxim-2026-03-kim-doa-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-03",
+      "issueNumber": "274",
+      "originalTitle": "맥심 MAXIM 2026. 3월호",
+      "englishTitle": "MAXIM March 2026",
+      "summary": "MAXIM March2026,issueNo.274. Public Kyobo contents explicitly credit 치어리더 김도아,using the existing canonical 김도아 identity. Existing print and YES24PDF metadata,prices and history remain preserved. Kyobo181pages/93.12MB and displayedISSN22334270 stay scoped to its separate purchase PDF.",
+      "originCode": "KR",
+      "coverUrl": ""
+    },
+    "coverPerson": {
+      "slug": "model-6240010fdd0516405e2937bc6b5f929ea3d325f2edc707a35e57b9599c75c876",
+      "canonicalPublicName": "김도아",
+      "originalName": "김도아",
+      "englishName": "Kim Do-a",
+      "personType": "model",
+      "verificationSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012645261",
+      "profileSourceConfidence": "explicit_ebook_contents_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-03-digital-kyobo-pdf",
+      "workId": "korea-maxim-2026-03-kim-doa-digital",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-03-01T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 181,
+      "editionVariant": "PDF (Kyobo)",
+      "contentSummary": "Kyobo-specific March2026 PDF:181pages,93.12MB,released2026-03-01. This exact page displaysISSN22334270,unlike later25083597 entries; no ISBN inferred or identifier transferred across issues. Public contents explicitly표지모델 치어리더 김도아; canonical 김도아 reused. Ordinary purchaseKRW5500; conditional coupon4950 excluded. Purchase enabled; sam separate; TTS listed available. Linked domestic print date2026-02-27 is context only,not an overwrite of A/B print. Existing YES24PDF,print metadata,credit,prices and images unchanged. No preview,reader,download,login,purchase or image collection.",
+      "metadataSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012645261",
+      "seriesName": "MAXIM",
+      "editionLabel": "March 2026 Kyobo digital PDF (181 pages)",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "kyobo-kr-digital-manual",
+      "name": "Kyobo Korea ebook (manual public page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "digital_store",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "digital",
+      "allowedFormats": "digital",
+      "baseUrl": "https://ebook-product.kyobobook.co.kr",
+      "allowedHosts": "ebook-product.kyobobook.co.kr",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.kyobobook.co.kr/policy",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-kyobo-maxim-march-2026-digital-20261025",
+      "sourceId": "kyobo-kr-digital-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:59:25.1892422+08:00",
+      "items": [
+        {
+          "externalId": "E000012645261",
+          "observationId": "kyobo-20261025-maxim-march-digital-E000012645261",
+          "editionId": "korea-maxim-2026-03-digital-kyobo-pdf",
+          "url": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012645261",
+          "title": "맥심 MAXIM 2026.3월호",
+          "status": "active",
+          "priceMinor": 5500,
+          "currency": "KRW",
+          "priceType": "digital",
+          "format": "digital",
+          "digitalAccess": "authorized_store",
+          "publisher": "와이미디어",
+          "editionVariant": "PDF (Kyobo)",
+          "shippingText": "Digital purchase; no shipping; print supplements and sam subscription excluded",
+          "observedAt": "2026-10-25T14:59:25.1892422+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Kyobo ebook page2026-10-25:PDF93.12MB,181pages,release2026-03-01,displayedISSN22334270 (not copied from later issues;not ISBN). Ordinary소장KRW5500 and enabled purchase control; KRW4950 coupon excluded. Public목차 explicitly표지모델 치어리더 김도아; existing canonical identity reused. TTS listed available. Linked print date2026-02-27 is context only. sam excluded; no file metadata transfer to YES24PDF or print variants. No age verification,login,preview,reader,download,purchase or image collection."
+        }
+      ]
+    }
+  }
+]

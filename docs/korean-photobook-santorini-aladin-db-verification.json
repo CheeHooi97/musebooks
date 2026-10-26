@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T14:27:10.7631462+08:00",
+  "checks": {
+    "identity": true,
+    "bibliography": true,
+    "people": true,
+    "creditContent": true,
+    "observationsPreserved": true,
+    "listingsPreserved": true,
+    "mediaCount": true,
+    "mediaContentPreserved": true,
+    "price": true,
+    "counts": true,
+    "public": true
+  },
+  "before": "korean-photobook-santorini-aladin-before.json",
+  "readback": "korean-photobook-santorini-aladin-readback.json",
+  "workId": "korea-go-so-young-santorini",
+  "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+  "pageCount": 174,
+  "dimensions": "228×300mm",
+  "ISBN13": "9788995439500",
+  "releaseDate": "2003-11-29",
+  "unavailableDisplayedPriceKRW": 24300,
+  "newListings": 1,
+  "newObservations": 1,
+  "newMedia": 0,
+  "oldMediaProvenancePreserved": true,
+  "repeatedMediaUpdatedAtMayRefresh": true,
+  "goalComplete": false,
+  "reusePermission": "unconfirmed; no new images accepted",
+  "unverifiedDiscoveryLead": "Kyobo exact-ISBN result requires direct page verification before any conflicting metadata is accepted",
+  "cohortAudit": {
+    "passed": true,
+    "scope": {
+      "distinctObservationKeys": 358,
+      "editions": 198,
+      "explicitMediaReferences": 136,
+      "linkedListings": 347,
+      "listingItemReferences": 358,
+      "people": 144,
+      "records": 339,
+      "sources": 10,
+      "works": 110
+    },
+    "coverageTotals": {
+      "editionsWithoutActiveListing": 141,
+      "editionsWithoutListing": 5,
+      "magazine_issue_digital": 35,
+      "magazine_issue_physical": 84,
+      "missingCover": 168,
+      "missingPageCount": 85,
+      "missingReleaseDate": 8,
+      "photobook_digital": 62,
+      "photobook_physical": 17,
+      "releaseDateNotDayPrecision": 59
+    },
+    "linkedPeopleWithoutVerificationSource": 0,
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5026,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 169,
+    "databaseCounts": {
+      "listing_observations": 8384,
+      "listings": 8335,
+      "works": 6064,
+      "editions": 6815,
+      "sources": 31
+    },
+    "log": "korean-photobook-santorini-aladin-catalog-verify.log"
+  }
+}

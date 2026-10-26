@@ -1,0 +1,80 @@
+[
+  {
+    "work": {
+      "id": "korea-uhyun-eye-photobook-2021",
+      "slug": "korea-uhyun-eye-photobook-2021",
+      "publicationType": "photobook",
+      "originalTitle": "우현-아이 화보집",
+      "summary": "Standalone physical photobook by Korean model 김우현. Original unavailable YES24 retail price, seller-marked-sold advertised history and a separately verified active secondhand asking offer are stored separately. Restricted retailer detail is not accessed; page count,ISBN and images remain unknown.",
+      "originCode": "KR",
+      "featuredNames": "김우현",
+      "coverUrl": ""
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-uhyun-eye-2021-print-yes24",
+      "workId": "korea-uhyun-eye-photobook-2021",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "우직스타즈",
+      "releaseDate": "2021-12-09T00:00:00Z",
+      "releasePrecision": "day",
+      "contentSummary": "우현-아이 화보집,김우현,우직스타즈,stored release2021-12-09 from prior YES24 public search. Page count,ISBN,dimensions and gallery remain unknown; no age gate bypass. RetailKRW180000 is unavailable. Historical Joongna124752547 is seller-marked-sold at advertisedKRW70000,not verified final payment. Live Joongna233418359 offers used copy atKRW50000 plusKRW3000 shipping,seller mongoose08,claim구성품 없음 (no extras). Offer is not a transaction or proof of condition/completeness. No seller image or book page collected.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/106517266",
+      "editionLabel": "2021 print photobook",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "joongna-kr-manual",
+      "name": "Joongna Korea seller listings (manual page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "marketplace",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://web.joongna.com",
+      "allowedHosts": "web.joongna.com",
+      "capabilities": "listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://web.joongna.com/terms",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "sourceId": "joongna-kr-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:35:34.2663465+08:00",
+      "items": [
+        {
+          "externalId": "233418359",
+          "observationId": "joongna-20261025-uhyun-active-233418359",
+          "editionId": "korea-uhyun-eye-2021-print-yes24",
+          "url": "https://web.joongna.com/product/233418359",
+          "title": "김우현 화보 아이 팝니다",
+          "sellerLocation": "mongoose08",
+          "condition": "중고; 구성품 없음 (seller claim; no included extras)",
+          "status": "active",
+          "priceMinor": 50000,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "우직스타즈",
+          "shippingText": "KRW3000 ordinary parcel shipping; displayed item plus shipping KRW53000",
+          "observedAt": "2026-10-25T14:35:34.2663465+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Joongna exact listing checked2026-10-25. Title김우현 화보 아이 팝니다,description모델 김우현 화보 아이 팝니다 identifies same existing photobook. DisplayKRW50000,ordinary parcel shippingKRW3000,seller mongoose08,condition중고/구성품 없음 and enabled chat/purchase controls; no sold overlay. Active seller asking offer,not completed sale or verified item condition. Listing age shown only as3일 전; no exact listing/publication date inferred. Existing retailer and historical seller-sold prices stay separate. No API,login,contact,purchase,age verification or image collection."
+        }
+      ],
+      "jobId": "manual-joongna-uhyun-active-20261025"
+    }
+  }
+]

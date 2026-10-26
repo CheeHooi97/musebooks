@@ -1,0 +1,22 @@
+{
+  "observedAt":"2026-10-23T22:31:00+08:00",
+  "method":"Manual live public YES24 series-row browser review; no retailer API",
+  "issueMonth":"2025-04",
+  "productId":"144441861",
+  "productUrl":"https://www.yes24.com/product/goods/144441861",
+  "metadataSourceUrl":"https://www.yes24.com/product/category/series/017001036?SeriesNumber=231021",
+  "title":"맥심 MAXIM 2025. 4월호 '이불킥' 편",
+  "publisher":"와이미디어(맥심)",
+  "format":"PDF",
+  "publicationMonth":"2025-04",
+  "releasePrecision":"month",
+  "sellingPriceKRW":4800,
+  "couponPriceKRW":4320,
+  "status":"active",
+  "statusEvidence":"The exact live series row links product 144441861 and displays PDF, April 2025, ordinary KRW 4,800 and separate coupon price KRW 4,320, plus cart/direct-purchase controls. Active at this public-list observation time; no purchase attempted.",
+  "detailState":"Product detail redirects to AdultCheck with a login notice. No login, age submission or access bypass was performed.",
+  "unknowns":["Exact YES24 publication day from the live listing","Page count","File size","Which print cover the PDF uses"],
+  "historicalMetadataLead":"An old publicly indexed detail snapshot gives 2025-04-01, but this batch retains the live series row's month precision. Aladin and Kyobo public search results are separate follow-up leads; no offer from those sources is part of this batch.",
+  "coverCreditScope":"Reuse the already verified shared issue credits 하리, 한지나 and 뮤아; do not assert that all three appear on this PDF's cover.",
+  "imageState":"No image stored or embedded in MuseBooks; reuse permission unconfirmed"
+}

@@ -1,0 +1,44 @@
+{
+  "observedAt": "2026-10-23T23:43:00+08:00",
+  "method": "Manual live artist-store DOM/visual thumbnail review plus public product-description snapshot; no API/key",
+  "discoveryUrl": "https://pyoeunji.com/en/collections/all?page=2",
+  "productUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition",
+  "selectedVariantUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+  "title": "Pyo Eunji First Visit to Japan Commemorative Edition",
+  "sameContentsEvidence": "Artist-store snapshot crawled last month explicitly says contents are the same as the original Japan fanclub photobook; special cover renewed to commemorate May 2022 first visit",
+  "pageCount": 168,
+  "size": "A4",
+  "referencePrice": {
+    "amount": 4800,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "kind": "Descriptive store reference, not the live localized selling price"
+  },
+  "livePrice": {
+    "amount": 141,
+    "minorUnits": 14100,
+    "currency": "MYR",
+    "taxIncluded": true
+  },
+  "availability": {
+    "soldOutButtonDisabled": true,
+    "membersOnlyNoticeVisible": true,
+    "catalogStatus": "unknown, explicitly unavailable/restricted"
+  },
+  "releaseDate": null,
+  "dateNote": "May 2022 is the commemorated visit; exact cover-edition release unknown, not inferred from event or asset-upload date",
+  "images": [
+    {
+      "role": "Clean commemorative book cover; visually inspected vertical 日本初来日記念版 text",
+      "url": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338"
+    },
+    {
+      "role": "Same product cover with Sold Out promotional overlay, not an extra interior sample",
+      "url": "https://pyoeunji.com/cdn/shop/files/Sold_Out_1_grande.png?v=1724490231"
+    }
+  ],
+  "deduplication": "Read-only database query found only original fanclub edition, no commemorative product/edition. Reuse same-content work; add physical cover edition and selected-variant listing. Keep original cover edition and annual work separate.",
+  "excludedCollectionItems": "Page 2 test product and DVD-only product are not photobooks and were not imported",
+  "imageStorage": "Two source-attributed remote listing references; clean edition/work cover, no pixel mirroring or reuse license asserted",
+  "sourceStatus": "Existing manual artist-store source disabled/review"
+}

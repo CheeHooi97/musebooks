@@ -1,0 +1,43 @@
+{
+  "observedAt": "2026-10-24T00:14:00+08:00",
+  "method": "Manual live public YES24 product DOM; no API/key",
+  "url": "https://www.yes24.com/product/goods/416604",
+  "title": "SANTORINI 산토리니",
+  "subtitle": "고소영 화보집",
+  "model": "고소영",
+  "photographer": "조세현",
+  "publisher": "Dreamax",
+  "releaseDate": "2003-11-29",
+  "releasePrecision": "day",
+  "isbn13": "9788995439500",
+  "isbn10": "8995439505",
+  "format": "physical",
+  "language": "ko-KR",
+  "market": "KR",
+  "pageCount": null,
+  "dimensions": null,
+  "weightGrams": 1030,
+  "unknownSpecsEvidence": "쪽수확인중 | 1,030g | 크기확인중",
+  "package": "Five 고소영 posters and one compilation album CD; completeness of any used copy not inferred",
+  "listPriceKRW": 27000,
+  "displayedPriceKRW": 25650,
+  "status": "unknown",
+  "statusEvidence": "품절; 현재 새 상품은 구매 할 수 없습니다. No enabled new-copy cart/buy control.",
+  "shipping": "YES24 free delivery; overseas delivery possible, destination costs/eligibility unverified",
+  "cover": {
+    "url": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+    "evidence": "Exact primary image src with alt SANTORINI 산토리니",
+    "sourceUrl": "https://www.yes24.com/product/goods/416604"
+  },
+  "otherImages": "No public product-detail image section or separately usable additional image exposed. Packing images, ads and unrelated recommendations excluded.",
+  "usedInventoryContext": {
+    "count": 2,
+    "aggregateFloorKRW": 55400,
+    "link": "https://www.yes24.com/Product/UsedShopHub/Hub/416604",
+    "visited": false,
+    "importedAsOffers": false,
+    "evidence": "Public product-page aggregate only. UsedShopHub route disallowed by source robots; not opened and not converted into seller-specific offers."
+  },
+  "identityHandling": "Reuse existing SANTORINI standalone photobook work/edition and 고소영 featured person. Explicit 모델 : 고소영 and 사진 : 조세현 credits; photographer is separate from model. No magazine month/issue fields or cover_model role. Missing pages/dimensions stay unknown.",
+  "rights": "Cover stays a remote product-page reference; no pixels mirrored or reuse license asserted. Manual YES24 print source disabled/review; no paid reader, account, cart, contact or purchase."
+}

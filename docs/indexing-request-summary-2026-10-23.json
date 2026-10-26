@@ -1,0 +1,121 @@
+{
+  "checkedAt": "2026-10-23T14:14:16.010Z",
+  "accepted": [
+    {
+      "url": "https://musebooks.my/jp/books/jp-mori-kasumi-sunokasumi",
+      "language": "ja",
+      "kind": "book",
+      "label": "森香澄ファースト写真集「すのかすみ。」",
+      "acceptedAt": "2026-10-23T13:59:09.394Z"
+    },
+    {
+      "url": "https://musebooks.my/jp/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "language": "ja",
+      "kind": "model",
+      "label": "AIKA",
+      "acceptedAt": "2026-10-23T14:01:20.808Z"
+    },
+    {
+      "url": "https://musebooks.my/jp/models/model-debd07f6cc5930b2727ed2fbd53d87a2a8d101061efc8e30737dd87874efd743",
+      "language": "ja",
+      "kind": "model",
+      "label": "치어리더 조연주",
+      "acceptedAt": "2026-10-23T14:02:49.916Z"
+    },
+    {
+      "url": "https://musebooks.my/tw/books/jp-mori-kasumi-sunokasumi",
+      "language": "zh-Hant",
+      "kind": "book",
+      "label": "森香澄ファースト写真集「すのかすみ。」",
+      "acceptedAt": "2026-10-23T14:03:43.846Z"
+    },
+    {
+      "url": "https://musebooks.my/tw/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "language": "zh-Hant",
+      "kind": "model",
+      "label": "AIKA",
+      "acceptedAt": "2026-10-23T14:09:08.409Z"
+    },
+    {
+      "url": "https://musebooks.my/tw/models/model-debd07f6cc5930b2727ed2fbd53d87a2a8d101061efc8e30737dd87874efd743",
+      "language": "zh-Hant",
+      "kind": "model",
+      "label": "치어리더 조연주",
+      "acceptedAt": "2026-10-23T14:10:22.177Z"
+    },
+    {
+      "url": "https://musebooks.my/cn/books/jp-mori-kasumi-sunokasumi",
+      "language": "zh-Hans",
+      "kind": "book",
+      "label": "森香澄ファースト写真集「すのかすみ。」",
+      "acceptedAt": "2026-10-23T14:11:37.015Z"
+    },
+    {
+      "url": "https://musebooks.my/cn/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "language": "zh-Hans",
+      "kind": "book",
+      "label": "MAXIM August 2024",
+      "acceptedAt": "2026-10-23T14:12:44.535Z"
+    },
+    {
+      "url": "https://musebooks.my/kr/models/model-debd07f6cc5930b2727ed2fbd53d87a2a8d101061efc8e30737dd87874efd743",
+      "language": "ko",
+      "kind": "model",
+      "label": "치어리더 조연주",
+      "acceptedAt": "2026-10-23T13:57:47.325Z"
+    }
+  ],
+  "remaining": [
+    {
+      "url": "https://musebooks.my/jp/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "language": "ja",
+      "kind": "book",
+      "label": "MAXIM August 2024",
+      "status": "deferred_error"
+    },
+    {
+      "url": "https://musebooks.my/tw/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "language": "zh-Hant",
+      "kind": "book",
+      "label": "MAXIM August 2024",
+      "status": "deferred_error"
+    },
+    {
+      "url": "https://musebooks.my/cn/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "language": "zh-Hans",
+      "kind": "model",
+      "label": "AIKA",
+      "status": "quota_exceeded"
+    },
+    {
+      "url": "https://musebooks.my/cn/models/model-debd07f6cc5930b2727ed2fbd53d87a2a8d101061efc8e30737dd87874efd743",
+      "language": "zh-Hans",
+      "kind": "model",
+      "label": "치어리더 조연주",
+      "status": "pending"
+    },
+    {
+      "url": "https://musebooks.my/kr/books/jp-mori-kasumi-sunokasumi",
+      "language": "ko",
+      "kind": "book",
+      "label": "森香澄ファースト写真集「すのかすみ。」",
+      "status": "pending"
+    },
+    {
+      "url": "https://musebooks.my/kr/books/korea-maxim-2024-08-jo-yeon-joo-digital",
+      "language": "ko",
+      "kind": "book",
+      "label": "MAXIM August 2024",
+      "status": "pending"
+    },
+    {
+      "url": "https://musebooks.my/kr/models/model-f0297f9173a8b6fa980b0d4a0a084c0401501e42d70f83cc3f9f8d867b2b9230",
+      "language": "ko",
+      "kind": "model",
+      "label": "AIKA",
+      "status": "pending"
+    }
+  ],
+  "retrySchedule": "Daily 22:00 Asia/Singapore beginning 24 October 2026",
+  "monitorSchedule": "Daily 22:30 Asia/Singapore"
+}

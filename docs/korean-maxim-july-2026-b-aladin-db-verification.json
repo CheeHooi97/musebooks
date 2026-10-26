@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T14:20:25.8532071+08:00",
+  "checks": {
+    "sameMagazineIssue": true,
+    "editionIDsUnchanged": true,
+    "otherEditionsUnchanged": true,
+    "creditContentUnchanged": true,
+    "peopleUnchanged": true,
+    "observationsPreserved": true,
+    "listingsPreserved": true,
+    "mediaPreserved": true,
+    "bBibliography": true,
+    "unavailableDisplayedPrice": true,
+    "addedOneListingObservation": true,
+    "publicRetail": true,
+    "publicCreditsUnchanged": true,
+    "publicGallery": true
+  },
+  "before": "korean-maxim-july-2026-b-aladin-before.json",
+  "readback": "korean-maxim-july-2026-b-aladin-readback.json",
+  "workId": "korea-maxim-2026-07-babian-digital",
+  "editionId": "korea-maxim-2026-07-print-b",
+  "releaseDate": "2026-06-24",
+  "pageCount": 176,
+  "listPriceKRW": 9600,
+  "unavailableDisplayedPriceKRW": 9120,
+  "canonicalISBN": "",
+  "newListings": 1,
+  "newObservations": 1,
+  "explicitRemoteMediaReferences": 1,
+  "publicRetailOffer": {
+    "gallery": [
+      {
+        "id": 84553,
+        "entityType": "listing",
+        "entityId": "listing-fa2f7e2230e19c82d2f31c6daccd2114",
+        "mediaType": "listing_image",
+        "originalUrl": "https://image.aladin.co.kr/product/39657/60/cover500/k202130193_1.jpg",
+        "storageUrl": "https://image.aladin.co.kr/product/39657/60/cover500/k202130193_1.jpg",
+        "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396576004",
+        "isPrimary": true,
+        "createdAt": "2026-10-25T14:19:47.004989+08:00",
+        "updatedAt": "2026-10-25T14:19:47.004989+08:00"
+      }
+    ],
+    "id": "listing-fa2f7e2230e19c82d2f31c6daccd2114",
+    "externalId": "396576004",
+    "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396576004",
+    "title": "맥심 Maxim B형 2026.7",
+    "format": "physical",
+    "status": "unknown",
+    "priceMinor": 9120,
+    "currency": "KRW",
+    "priceType": "fixed",
+    "priceCategory": "physical_retail",
+    "shippingText": "Paid shipping belowKRW15000; exact fee unknown; separate supplements excluded from overseas delivery",
+    "observedAt": "2026-10-25T14:19:06.556338+08:00",
+    "lastSeenAt": "2026-10-25T14:19:06.556338+08:00",
+    "source": {
+      "id": "aladin-kr-manual",
+      "name": "Aladin Korea (manual page capture; access under review)",
+      "region": "KR",
+      "kind": "bookstore",
+      "photobookFormat": "physical"
+    }
+  },
+  "coverReference": "https://image.aladin.co.kr/product/39657/60/cover500/k202130193_1.jpg",
+  "creditUpdatedAtRefreshed": true,
+  "creditContentUnchanged": true,
+  "goalComplete": false,
+  "reusePermission": "unconfirmed; attributed remote reference only; no pixels mirrored",
+  "coverModelMapping": "Issue-level Babian credit retained; no edition-specific mapping inferred from supplement or appearance",
+  "cohortAudit": {
+    "passed": true,
+    "scope": {
+      "distinctObservationKeys": 356,
+      "editions": 198,
+      "explicitMediaReferences": 135,
+      "linkedListings": 345,
+      "listingItemReferences": 356,
+      "people": 144,
+      "records": 337,
+      "sources": 10,
+      "works": 110
+    },
+    "coverageTotals": {
+      "editionsWithoutActiveListing": 141,
+      "editionsWithoutListing": 5,
+      "magazine_issue_digital": 35,
+      "magazine_issue_physical": 84,
+      "missingCover": 169,
+      "missingPageCount": 86,
+      "missingReleaseDate": 8,
+      "photobook_digital": 62,
+      "photobook_physical": 17,
+      "releaseDateNotDayPrecision": 59
+    },
+    "linkedPeopleWithoutVerificationSource": 0,
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5026,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 170,
+    "databaseCounts": {
+      "listing_observations": 8382,
+      "works": 6064,
+      "editions": 6815,
+      "sources": 31,
+      "listings": 8333
+    },
+    "log": "korean-maxim-july-2026-b-aladin-catalog-verify.log"
+  }
+}

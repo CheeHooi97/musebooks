@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-25T15:15:25.4133355+08:00",
+  "scopedImportFiles": 47,
+  "ledgerRecords": 353,
+  "pendingObservationReferences": 0,
+  "pending": [],
+  "databaseAudit": {
+    "passed": true,
+    "auditedAt": "2026-10-25T07:15:32.3308273Z",
+    "scope": {
+      "distinctObservationKeys": 372,
+      "editions": 208,
+      "explicitMediaReferences": 136,
+      "linkedListings": 361,
+      "listingItemReferences": 372,
+      "people": 144,
+      "records": 353,
+      "sources": 13,
+      "works": 110
+    },
+    "integrityFindings": 0,
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "outcome": "All 47 scoped import files reconcile to the 353-record ledger; fresh PostgreSQL audit verifies all 110 works,208 editions,372 listing-item references and136 explicit media references. No pending inserts; no cumulative reapply needed. Policy/discovery-only evidence creates no product rows.",
+  "insertsRequired": 0,
+  "stoppedAt": "2026-10-25T15:15:40.0372452+08:00"
+}

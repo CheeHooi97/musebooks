@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T15:04:32.8624621+08:00",
+  "checks": {
+    "existingEditionsPreserved": true,
+    "people": true,
+    "credits": true,
+    "media": true,
+    "oldListingsPreserved": true,
+    "oldObservationsPreserved": true,
+    "oneEditionAdded": true,
+    "oneListingAdded": true,
+    "oneObservationAdded": true,
+    "metadata": true,
+    "price": true,
+    "sourceDisabled": true,
+    "public": true
+  },
+  "before": "docs/korean-maxim-february-2026-kyobo-digital-before.json",
+  "readback": "docs/korean-maxim-february-2026-kyobo-digital-committed-readback.json",
+  "initialValidation": "Rejected before write due required magazine cover credit; retained preexisting sourced print issue credit; no digital cover inference",
+  "goalComplete": false,
+  "cohortAudit": {
+    "passed": true,
+    "scope": {
+      "distinctObservationKeys": 370,
+      "editions": 207,
+      "explicitMediaReferences": 136,
+      "linkedListings": 359,
+      "listingItemReferences": 370,
+      "people": 144,
+      "records": 351,
+      "sources": 12,
+      "works": 110
+    },
+    "coverageTotals": {
+      "editionsWithoutActiveListing": 140,
+      "editionsWithoutListing": 5,
+      "magazine_issue_digital": 44,
+      "magazine_issue_physical": 84,
+      "missingCover": 177,
+      "missingPageCount": 85,
+      "missingReleaseDate": 8,
+      "photobook_digital": 62,
+      "photobook_physical": 17,
+      "releaseDateNotDayPrecision": 59
+    },
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "cumulativeValidation": {
+    "passed": true,
+    "records": 351,
+    "applied": false
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5026,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 178,
+    "databaseCounts": {
+      "works": 6064,
+      "listing_observations": 8396,
+      "editions": 6824,
+      "listings": 8347,
+      "sources": 33
+    },
+    "log": "korean-maxim-february-2026-kyobo-digital-catalog-verify.log"
+  }
+}

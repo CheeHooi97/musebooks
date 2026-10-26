@@ -1,0 +1,114 @@
+[
+  {
+    "work": {
+      "id": "korea-pyo-eunji-rondo-2023",
+      "slug": "korea-pyo-eunji-rondo-2023",
+      "publicationType": "photobook",
+      "originalTitle": "ピョ・ウンジ1st写真集 輪舞曲",
+      "englishTitle": "Rondo: Pyo Eunji First Photobook",
+      "summary": "Rondo, the Japanese KADOKAWA photobook of Korean model/YouTuber 표은지 (Pyo Eunji), has separate print and electronic editions released 2023-08-10. The distinct all-other-photo companion 円舞曲 is catalogued as its own title.",
+      "originCode": "KR",
+      "featuredNames": "표은지",
+      "coverUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313"
+    },
+    "featuredPerson": {
+      "slug": "model-9bd8619dfd3bbfa5ee26b615b34cc92228a220383c647b621f99dadc5a391a77",
+      "canonicalPublicName": "표은지",
+      "originalName": "표은지",
+      "englishName": "Pyo Eunji",
+      "personType": "model",
+      "verificationSourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+      "profileSourceConfidence": "official_model_store"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-pyo-eunji-rondo-2023-jp-digital",
+      "workId": "korea-pyo-eunji-rondo-2023",
+      "format": "digital",
+      "language": "ja-JP",
+      "editionMarket": "JP",
+      "publisher": "KADOKAWA",
+      "releaseDate": "2023-08-10T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "editionVariant": "Digital",
+      "contentSummary": "Official KADOKAWA electronic edition of Rondo, separately identified from print ISBN 9784048976268. Publisher confirms digital release 2023-08-10. Digital page count, file format and price have not yet been independently captured; print A4/128-page specifications, ISBN and price are not copied into digital metadata. Exact public publisher cover URL is linked remotely with source attribution; no pixels mirrored or reuse license asserted. Publisher-linked retail route is retained in capture evidence; no paid reader content accessed.",
+      "metadataSourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+      "editionLabel": "Digital Japanese photobook",
+      "coverUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+      "originalCoverUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp"
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+        "storageUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+        "sourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "work": {
+      "id": "korea-pyo-eunji-enbukyoku-2023",
+      "slug": "korea-pyo-eunji-enbukyoku-2023",
+      "publicationType": "photobook",
+      "originalTitle": "【オールアザー版】ピョ・ウンジデジタル写真集『円舞曲』",
+      "englishTitle": "Pyo Eunji Digital Photobook: Enbukyoku (All-Other Edition)",
+      "summary": "Separate KADOKAWA digital companion photobook featuring Korean model 표은지 (Pyo Eunji), titled 円舞曲 and labeled All-Other Edition. The publisher describes it as a second chapter following Rondo; its release and content identity are recorded independently.",
+      "originCode": "KR",
+      "featuredNames": "표은지",
+      "coverUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp"
+    },
+    "featuredPerson": {
+      "slug": "model-9bd8619dfd3bbfa5ee26b615b34cc92228a220383c647b621f99dadc5a391a77",
+      "canonicalPublicName": "표은지",
+      "originalName": "표은지",
+      "englishName": "Pyo Eunji",
+      "personType": "model",
+      "verificationSourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+      "profileSourceConfidence": "official_model_store"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+      "workId": "korea-pyo-eunji-enbukyoku-2023",
+      "format": "digital",
+      "language": "ja-JP",
+      "editionMarket": "JP",
+      "publisher": "KADOKAWA",
+      "releaseDate": "2023-11-30T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "editionVariant": "All-Other Digital",
+      "contentSummary": "KADOKAWA digital companion title, explicitly labeled All-Other Edition and described by the publisher as a second chapter following Rondo. Title 円舞曲 is distinct from 輪舞曲, with its own publisher product ID and release 2023-11-30; it is not a duplicate print or standard Rondo ebook edition. Digital page count, file format, ISBN and selling price are not yet verified. Exact public publisher cover URL is linked remotely with source attribution; no pixels mirrored or reuse license asserted. Publisher-linked retail route is retained in capture evidence; no paid reader content accessed.",
+      "metadataSourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+      "editionLabel": "All-Other Digital Japanese photobook",
+      "coverUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+      "originalCoverUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp"
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+        "storageUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+        "sourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+        "isPrimary": true
+      }
+    ]
+  }
+]

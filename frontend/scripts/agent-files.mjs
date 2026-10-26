@@ -6,6 +6,7 @@ import { publicationDate } from '../src/lib/seo.js'
 import { ABOUT_SECTIONS } from '../src/lib/about.js'
 import { bookAnswers, bookFactSummary, longDate } from '../src/lib/book-answers.js'
 import { editionListings, formatPrice, priceLabel } from '../src/lib/price-policy.js'
+import { CATALOG_LANGUAGES, languagePath } from '../src/lib/catalog-languages.js'
 
 const SUMMARY = 'Source-backed catalog of model, idol, influencer and celebrity photobooks and magazine issues: works, physical and digital editions, publishers, featured people, and source-linked retail offers, marketplace asking prices and confirmed completed sales. Many records are gravure photobooks; some are intended for adult readers.'
 const NOTES = [
@@ -48,7 +49,7 @@ function bookMarkdown(book, siteURL) {
   lines.push('## Editions', '')
   for (const edition of book.editions || []) {
     lines.push(`### ${text(edition.editionLabel || 'Edition')}`, '')
-    lines.push(...facts([['Format', edition.format], ['Publisher', edition.publisher], ['Published', publicationDate(edition)], ['ISBN', edition.isbn], ['Language', edition.language], ['Pages', edition.pageCount], ['Dimensions', edition.dimensions], ['Market', edition.editionMarket], ['Photographer', book.photographer], ['Origin', book.origin?.name]]))
+    lines.push(...facts([['Format', edition.format], ['Series', edition.seriesName], ['Publisher', edition.publisher], ['Published', publicationDate(edition)], ['ISBN', edition.isbn], ['Language', edition.language], ['Pages', edition.pageCount], ['Dimensions', edition.dimensions], ['Market', edition.editionMarket], ['Photographer', book.photographer], ['Origin', book.origin?.name]]))
     if (edition.publisherProfile?.id) lines.push(`- Publisher profile: ${link(edition.publisherProfile.name, `${siteURL}/publishers/${encodeURIComponent(edition.publisherProfile.id)}`)}`)
     if (safeURL(edition.metadataSourceUrl)) lines.push(`- Metadata source: ${edition.metadataSourceUrl}`)
     lines.push('')
@@ -106,6 +107,9 @@ function llmsHeader(siteURL, { books, models, publishers }) {
     `- [Active listings](${siteURL}/active): offers available at the last observation`,
     `- [Sold listings](${siteURL}/sold): confirmed completed physical sales`,
     `- [Japan marketplace](${siteURL}/japan): Yahoo! JAPAN Auctions, Yahoo! Flea Market and Rakuma snapshot`, '',
+    '## Catalog languages',
+    ...CATALOG_LANGUAGES.filter(item => item.segment).map(item => `- [${item.label}](${siteURL}${languagePath('/', item.code)}): translated catalog, publication, model and publisher documents; append .md for Markdown.`),
+    '- Publication titles and bibliographic facts retain their recorded language. Detailed prices and sales comparisons are linked in English.', '',
     '## URL patterns',
     `- Publication: ${siteURL}/books/{slug}`,
     `- Featured person: ${siteURL}/models/{id}`,
@@ -212,7 +216,7 @@ export function openAPI(siteURL) {
     components: { schemas: {
       Source: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, region: { type: 'string' }, kind: { type: 'string', description: 'bookstore, digital_store, marketplace, auction, flea_market, ...' }, photobookFormat: { type: 'string' } } },
       Listing: { type: 'object', properties: { id: { type: 'string' }, url: { type: 'string', format: 'uri' }, title: { type: 'string' }, format: { type: 'string' }, status: { type: 'string', enum: ['active', 'ended', 'completed', 'unknown'], description: 'completed means a confirmed completed sale; ended alone is not a sale.' }, priceMinor: { type: 'integer', description: 'Price in minor units of currency (JPY and KRW have none).' }, currency: { type: 'string' }, priceType: { type: 'string' }, priceCategory: { type: 'string', description: 'physical_retail, digital_retail or marketplace_asking.' }, condition: { type: 'string' }, shippingText: { type: 'string' }, observedAt: { type: 'string', format: 'date-time' }, lastSeenAt: { type: 'string', format: 'date-time' }, source: { $ref: '#/components/schemas/Source' } } },
-      Edition: { type: 'object', properties: { id: { type: 'string' }, editionLabel: { type: 'string' }, format: { type: 'string', enum: ['physical', 'digital'] }, publisher: { type: 'string' }, releaseDate: { type: 'string', format: 'date-time' }, releasePrecision: { type: 'string', enum: ['day', 'month', 'year'] }, isbn: { type: 'string' }, language: { type: 'string' }, pageCount: { type: 'integer' }, dimensions: { type: 'string' }, editionMarket: { type: 'string' }, metadataSourceUrl: { type: 'string', format: 'uri' }, coverUrl: { type: 'string', format: 'uri' }, listings: { type: 'array', items: { $ref: '#/components/schemas/Listing' } } } },
+      Edition: { type: 'object', properties: { id: { type: 'string' }, editionLabel: { type: 'string' }, seriesName: { type: 'string' }, format: { type: 'string', enum: ['physical', 'digital'] }, publisher: { type: 'string' }, releaseDate: { type: 'string', format: 'date-time' }, releasePrecision: { type: 'string', enum: ['day', 'month', 'year'] }, isbn: { type: 'string' }, language: { type: 'string' }, pageCount: { type: 'integer' }, dimensions: { type: 'string' }, editionMarket: { type: 'string' }, metadataSourceUrl: { type: 'string', format: 'uri' }, coverUrl: { type: 'string', format: 'uri' }, listings: { type: 'array', items: { $ref: '#/components/schemas/Listing' } } } },
       Book: { type: 'object', properties: { id: { type: 'string' }, slug: { type: 'string' }, originalTitle: { type: 'string' }, englishTitle: { type: 'string' }, summary: { type: 'string' }, publicationType: { type: 'string', enum: ['photobook', 'magazine_issue'] }, photographer: { type: 'string' }, coverUrl: { type: 'string', format: 'uri' }, origin: { type: 'object', properties: { code: { type: 'string' }, name: { type: 'string' } } }, models: { type: 'array', items: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' } } } }, editions: { type: 'array', items: { $ref: '#/components/schemas/Edition' } } } },
       Profile: { type: 'object', properties: { id: { type: 'string' }, name: { type: 'string' }, originalName: { type: 'string' }, englishName: { type: 'string' }, officialUrl: { type: 'string', format: 'uri' }, coverUrl: { type: 'string', format: 'uri' }, workCount: { type: 'integer' }, editionCount: { type: 'integer' } } },
     } },

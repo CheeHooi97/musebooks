@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "test:seo": "node --test scripts/seo-build.test.mjs scripts/publish-import-pages.test.mjs src/lib/*.test.js",
+    "test:seo": "node --test scripts/seo-build.test.mjs scripts/localized-catalog.test.mjs scripts/publish-import-pages.test.mjs src/lib/*.test.js",
     "check:geo": "node scripts/check-geo.mjs",
     "verify:japan-homepage": "node scripts/verify-japan-homepage.mjs",
     "verify:japan-homepage-live": "node scripts/verify-japan-homepage.mjs --live",

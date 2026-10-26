@@ -2,10 +2,12 @@ import { LANGUAGE_OPTIONS, CURRENCY_OPTIONS, usePreferences } from "../lib/prefe
 import { useCollection } from "../lib/collection";
 import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
+import { useAuth } from "../lib/auth";
 
 export default function HeaderControls() {
   const { t, language, setLanguage, currency, setCurrency, rateState } = usePreferences();
   const { saved, theme, toggleTheme } = useCollection();
+  const { user } = useAuth();
   const [open, setOpen] = useState(false);
   const root = useRef(null);
   const trigger = useRef(null);
@@ -31,6 +33,8 @@ export default function HeaderControls() {
       }}><Icon name="person" size={19} /></button>
       {open && <div className="menu__panel" id="settings-menu">
         <div className="menu__intro"><strong>{t("Your MuseBooks")}</strong><p>{t("Your collection is saved on this device.")}</p></div>
+        <a href={user ? "/account" : "/login"} onClick={() => setOpen(false)}>{t(user ? "Your account" : "Sign in")}</a>
+        {!user && <a href="/register" onClick={() => setOpen(false)}>{t("Create account")}</a>}
         <a href="/saved" ref={firstItem} onClick={() => setOpen(false)}>{t("Saved collection")}<span>{saved.length}</span></a>
         <div className="menu__prefs">
           <label><span>{t("Language")}</span><select value={language} onChange={event => setLanguage(event.target.value)}>{LANGUAGE_OPTIONS.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label>

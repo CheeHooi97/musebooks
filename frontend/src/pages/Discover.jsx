@@ -86,7 +86,7 @@ export default function Discover() {
       {featuredModels.length > 0 && <section className="discover__section" aria-labelledby="discover-models">
         <SectionHeading id="discover-models" title={t("Featured models")} action={t("All models")} href="/models" />
         <div className="person-grid person-grid--row">{featuredModels.map(model => <a key={model.id} className="person-card" href={`/models/${encodeURIComponent(model.id)}`}>
-          <span className="person-card__portrait">{showCatalogImages && model.coverUrl ? <img src={model.coverUrl} alt="" loading="lazy" /> : <span aria-hidden="true">{model.name.slice(0, 1)}</span>}</span>
+          {showCatalogImages && <span className="person-card__portrait">{model.coverUrl ? <img src={model.coverUrl} alt="" loading="lazy" /> : <span aria-hidden="true">{model.name.slice(0, 1)}</span>}</span>}
           <strong>{model.name}</strong>
           {model.alias && <small>{model.alias}</small>}
           <span>{model.workCount} {t(model.workCount === 1 ? "photobook" : "photobooks")}</span>

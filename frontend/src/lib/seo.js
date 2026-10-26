@@ -18,6 +18,12 @@ export function pageSeo(path = "/", book, profile, siteURL = SITE_URL) {
     "/": ["MuseBooks — Photobook and magazine catalog", DEFAULT_DESCRIPTION],
     "/books": ["Browse photobooks and magazine issues — MuseBooks", "Browse every verified photobook and magazine issue by origin, format and availability, with editions and source-backed prices."],
     "/saved": ["Saved collection — MuseBooks", "Publications you saved on this device."],
+    "/login": ["Sign in — MuseBooks", "Sign in to MuseBooks with Google or your verified email and password."],
+    "/register": ["Create account — MuseBooks", "Create your MuseBooks account with Google or email and password."],
+    "/verify-email": ["Verify your email — MuseBooks", "Verify your MuseBooks email address with your emailed code."],
+    "/forgot-password": ["Forgot password — MuseBooks", "Request a code to reset your MuseBooks password."],
+    "/reset-password": ["Reset password — MuseBooks", "Choose a new password for your MuseBooks account."],
+    "/account": ["Your account — MuseBooks", "Manage your MuseBooks sign-in."],
     "/models": ["Models & cover credits — MuseBooks", "Explore photobooks and magazine issues by models, idols, influencers, and entertainers, with cover credits and edition records."],
     "/publishers": ["Publishers — MuseBooks", "Browse photobook publishers and magazine issue sources with source-backed catalog records."],
     "/active": ["Active publication listings — MuseBooks", "Browse available photobook and magazine issue offers. Compare source prices and follow retailer and marketplace links."],
@@ -33,7 +39,7 @@ export function pageSeo(path = "/", book, profile, siteURL = SITE_URL) {
   const [title, description] = book ? [`${book.englishTitle || book.originalTitle} — MuseBooks`, book.summary || `Explore ${book.originalTitle}, its ${publicationLabel} details, editions, and source-backed prices.`] : pages[path] || ["Publication not found — MuseBooks", DEFAULT_DESCRIPTION];
   const structuredData = book ? {
     "@context": "https://schema.org", "@graph": [
-      { "@type": isMagazineIssue ? "PublicationIssue" : "Book", "@id": `${url}#publication`, name: book.originalTitle, ...(book.englishTitle ? { alternateName: book.englishTitle } : {}), url, ...(book.summary ? { description: book.summary } : {}), ...(book.coverUrl ? { image: book.coverUrl } : {}), ...(book.issueNumber ? { issueNumber: book.issueNumber } : {}), ...(book.issueMonth ? { datePublished: book.issueMonth } : {}), ...(isMagazineIssue ? { isPartOf: { "@type": "Periodical", name: book.editions?.[0]?.seriesName || "MAXIM" } } : {}), workExample: (book.editions || []).map(edition => ({ "@id": `${url}#edition-${encodeURIComponent(edition.id)}` })) },
+      { "@type": isMagazineIssue ? "PublicationIssue" : "Book", "@id": `${url}#publication`, name: book.originalTitle, ...(book.englishTitle ? { alternateName: book.englishTitle } : {}), url, ...(book.summary ? { description: book.summary } : {}), ...(book.coverUrl ? { image: book.coverUrl } : {}), ...(book.issueNumber ? { issueNumber: book.issueNumber } : {}), ...(book.issueMonth ? { datePublished: book.issueMonth } : {}), ...(book.editions?.[0]?.seriesName ? { isPartOf: { "@type": isMagazineIssue ? "Periodical" : "BookSeries", name: book.editions[0].seriesName } } : {}), workExample: (book.editions || []).map(edition => ({ "@id": `${url}#edition-${encodeURIComponent(edition.id)}` })) },
       ...(book.editions || []).map(edition => ({ "@type": isMagazineIssue ? "PublicationIssue" : "Book", "@id": `${url}#edition-${encodeURIComponent(edition.id)}`, name: `${book.originalTitle} — ${edition.editionLabel}`, exampleOfWork: { "@id": `${url}#publication` }, ...(edition.isbn ? { isbn: edition.isbn } : {}), ...(edition.publisher ? { publisher: { "@type": "Organization", name: edition.publisher } } : {}), ...(publicationDate(edition) ? { datePublished: publicationDate(edition) } : {}), ...(edition.language ? { inLanguage: edition.language } : {}), ...(edition.pageCount ? { numberOfPages: edition.pageCount } : {}), ...(edition.contentSummary ? { description: edition.contentSummary } : {}), ...(edition.format === "digital" ? { bookFormat: "https://schema.org/EBook" } : {}) })),
       { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${siteURL}/` }, { "@type": "ListItem", position: 2, name: book.originalTitle, item: url }] },
     ],
@@ -45,9 +51,9 @@ export function pageSeo(path = "/", book, profile, siteURL = SITE_URL) {
     const profileTitle = `${profile.name} publications — MuseBooks`;
     const profileDescription = `Explore ${profile.name} photobooks and magazine cover issues, with edition dates and prices from different platforms.`;
     return { title: profileTitle, description: profileDescription.slice(0, 160), url, image: profile.coverUrl, structuredData: { "@context": "https://schema.org", "@graph": [
-      { "@type": "CollectionPage", name: profileTitle, url, description: profileDescription, ...(profile.books?.length ? { mainEntity: { "@type": "ItemList", itemListElement: profile.books.map((item, index) => ({ "@type": "ListItem", position: index + 1, item: { "@type": "Book", name: item.originalTitle, url: `${siteURL}/books/${encodeURIComponent(item.slug)}` } })) } } : {}) },
+      { "@type": "CollectionPage", name: profileTitle, url, description: profileDescription, ...(profile.books?.length ? { mainEntity: { "@type": "ItemList", itemListElement: profile.books.map((item, index) => ({ "@type": "ListItem", position: index + 1, item: { "@type": item.publicationType === "magazine_issue" ? "PublicationIssue" : "Book", name: item.originalTitle, url: `${siteURL}/books/${encodeURIComponent(item.slug)}` } })) } } : {}) },
       { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${siteURL}/` }, { "@type": "ListItem", position: 2, name: path.startsWith("/models/") ? "Models" : "Publishers", item: `${siteURL}/${path.split("/")[1]}` }, { "@type": "ListItem", position: 3, name: profile.name, item: url }] },
     ] }, noindex: false };
   }
-  return { title, description: description.replace(/\s+/g, " ").trim().slice(0, 160), url, image: book?.coverUrl, structuredData, noindex: path === "/404" || path === "/saved" || (!book && !pages[path]) };
+  return { title, description: description.replace(/\s+/g, " ").trim().slice(0, 160), url, image: book?.coverUrl, structuredData, noindex: ["/404", "/saved", "/login", "/register", "/verify-email", "/forgot-password", "/reset-password", "/account"].includes(path) || (!book && !pages[path]) };
 }

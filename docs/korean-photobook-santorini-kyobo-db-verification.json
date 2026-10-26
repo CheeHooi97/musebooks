@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T14:29:45.5120502+08:00",
+  "checks": {
+    "identity": true,
+    "canonicalBibliographyPreserved": true,
+    "people": true,
+    "credits": true,
+    "observationsPreserved": true,
+    "listingsPreserved": true,
+    "mediaCount": true,
+    "mediaContentPreserved": true,
+    "newPrice": true,
+    "conflictStored": true,
+    "counts": true,
+    "sourceDisabled": true,
+    "publicOffer": true
+  },
+  "before": "korean-photobook-santorini-kyobo-before.json",
+  "readback": "korean-photobook-santorini-kyobo-readback.json",
+  "workId": "korea-go-so-young-santorini",
+  "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+  "canonicalReleaseDate": "2003-11-29",
+  "canonicalPages": 174,
+  "canonicalDimensions": "228×300mm",
+  "kyoboReleaseDate": "2003-09-03",
+  "kyoboPages": 170,
+  "kyoboDimensions": "297×420mm",
+  "conflict": "verified source disagreement, unresolved",
+  "unavailableDisplayedPriceKRW": 27000,
+  "newEditions": 0,
+  "newListings": 1,
+  "newObservations": 1,
+  "newMedia": 0,
+  "sourceDisabledReview": true,
+  "goalComplete": false,
+  "reusePermission": "unconfirmed; no images accepted",
+  "cohortAudit": {
+    "passed": true,
+    "scope": {
+      "distinctObservationKeys": 359,
+      "editions": 198,
+      "explicitMediaReferences": 136,
+      "linkedListings": 348,
+      "listingItemReferences": 359,
+      "people": 144,
+      "records": 340,
+      "sources": 11,
+      "works": 110
+    },
+    "coverageTotals": {
+      "editionsWithoutActiveListing": 141,
+      "editionsWithoutListing": 5,
+      "magazine_issue_digital": 35,
+      "magazine_issue_physical": 84,
+      "missingCover": 168,
+      "missingPageCount": 85,
+      "missingReleaseDate": 8,
+      "photobook_digital": 62,
+      "photobook_physical": 17,
+      "releaseDateNotDayPrecision": 59
+    },
+    "linkedPeopleWithoutVerificationSource": 0,
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5026,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 169,
+    "databaseCounts": {
+      "works": 6064,
+      "editions": 6815,
+      "listings": 8336,
+      "sources": 32,
+      "listing_observations": 8385
+    },
+    "log": "korean-photobook-santorini-kyobo-catalog-verify.log"
+  }
+}

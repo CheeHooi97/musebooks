@@ -1,0 +1,95 @@
+[
+  {
+    "work": {
+      "id": "korea-pyo-eunji-rondo-2023",
+      "slug": "korea-pyo-eunji-rondo-2023",
+      "publicationType": "photobook",
+      "originalTitle": "ピョ・ウンジ1st写真集 輪舞曲",
+      "englishTitle": "Rondo: Pyo Eunji First Photobook",
+      "summary": "Rondo, the Japanese KADOKAWA photobook of Korean model/YouTuber 표은지 (Pyo Eunji), has separate print and electronic editions released 2023-08-10. The distinct all-other-photo companion 円舞曲 is catalogued as its own title.",
+      "originCode": "KR",
+      "featuredNames": "표은지",
+      "coverUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313"
+    },
+    "featuredPerson": {
+      "slug": "model-9bd8619dfd3bbfa5ee26b615b34cc92228a220383c647b621f99dadc5a391a77",
+      "canonicalPublicName": "표은지",
+      "originalName": "표은지",
+      "englishName": "Pyo Eunji",
+      "personType": "model",
+      "verificationSourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+      "profileSourceConfidence": "official_model_store"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-pyo-eunji-rondo-2023-jp-print",
+      "workId": "korea-pyo-eunji-rondo-2023",
+      "format": "physical",
+      "language": "ja-JP",
+      "editionMarket": "JP",
+      "publisher": "KADOKAWA",
+      "releaseDate": "2023-08-10T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "9784048976268",
+      "pageCount": 128,
+      "dimensions": "297×210×10mm (A4; artist-store dimensions)",
+      "editionVariant": "Print",
+      "contentSummary": "Japanese KADOKAWA print Rondo, release2023-08-10,128pages,ISBN9784048976268,A4; artist-store dimensions297×210×10mm retained. Hanmoto corroborates print bibliography and referenceJPY3300, but exact cover permission is unknown (書影利用可否不明). Maruzen Junkudo public product captured2026-10-25 displays tax-inclusiveJPY3300 with explicit no-stock/cannot-supply message; availabilityunknown, not purchasable stock. Existing artist-storeMYR97 members-only observation and remote images remain separately sourced. Separate Apple digital136pages/JPY3400 and alternate-photo Enbukyoku are not merged with this print edition. No new image URLs or reuse license asserted.",
+      "metadataSourceUrl": "https://www.kadokawa.co.jp/product/322303002115/",
+      "editionLabel": "2023 Japanese print photobook",
+      "coverUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+      "originalCoverUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313"
+    },
+    "source": {
+      "id": "maruzen-junkudo-manual",
+      "name": "Maruzen Junkudo (manual public page capture)",
+      "region": "JP",
+      "locale": "ja-JP",
+      "timezone": "Asia/Tokyo",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.maruzenjunkudo.co.jp",
+      "allowedHosts": "www.maruzenjunkudo.co.jp,maruzenjunkudo.co.jp",
+      "capabilities": "listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.maruzenjunkudo.co.jp/policies/terms-of-service",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-maruzen-rondo-20261025",
+      "sourceId": "maruzen-junkudo-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T13:30:11.3262967+08:00",
+      "items": [
+        {
+          "externalId": "9784048976268",
+          "observationId": "maruzen-20261025-9784048976268",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+          "url": "https://www.maruzenjunkudo.co.jp/products/9784048976268",
+          "title": "ピョ・ウンジ1st写真集 輪舞曲",
+          "status": "unknown",
+          "priceMinor": 3300,
+          "currency": "JPY",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "KADOKAWA",
+          "editionVariant": "Print",
+          "isbn": "9784048976268",
+          "shippingText": "No net-store stock; cannot supply. Delivery fee/date not verified",
+          "observedAt": "2026-10-25T13:30:11.3262967+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live rendered Maruzen Junkudo product checked2026-10-25 displays normal tax-inclusiveJPY3300,ISBN9784048976268,release2023/08/10,publisherKADOKAWA. Net-store stock explicitly says 在庫なし お取り扱いできません. Cart label is not treated as stock evidence against the explicit unavailability. Price is a displayed unavailable retail amount; no purchasable offer or completed sale inferred. No login,cart,checkout,API or paid reader used. Artist-storeMYR97 membership observation and Apple digital edition remain separate."
+        }
+      ]
+    }
+  }
+]

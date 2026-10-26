@@ -1,0 +1,312 @@
+{
+  "aliases": null,
+  "capturedAt": "2026-10-25T06:31:23.7026321Z",
+  "credits": [
+    {
+      "workId": "korea-uhyun-eye-photobook-2021",
+      "personId": 16934,
+      "role": "featured",
+      "creditedName": "김우현",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 16934,
+        "slug": "model-2854011c6bab5b9cc4475762fd7dc090d49a5a66359c0a069bd6e04e935f7ee0",
+        "canonicalPublicName": "김우현",
+        "originalName": "김우현",
+        "englishName": "Kim Woo-hyun",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/Product/Search?query=%EA%B9%80%EC%9A%B0%ED%98%84+%ED%99%94%EB%B3%B4",
+        "profileSourceConfidence": "model_cross_checked_press",
+        "createdAt": "2026-10-20T13:09:17.650227+08:00",
+        "updatedAt": "2026-10-20T13:09:17.650227+08:00"
+      },
+      "createdAt": "2026-10-23T22:59:36.928673+08:00",
+      "updatedAt": "2026-10-23T23:25:56.979708+08:00"
+    }
+  ],
+  "listings": [
+    {
+      "id": "listing-1c9311fed44de5a7af5eb31ba76fccef",
+      "editionId": "korea-uhyun-eye-2021-print-yes24",
+      "sourceId": "yes24-kr-print",
+      "externalId": "106517266",
+      "url": "https://www.yes24.com/product/goods/106517266",
+      "title": "우현-아이 화보집",
+      "formatCandidate": "physical",
+      "publisher": "우직스타즈",
+      "status": "unknown",
+      "priceMinor": 180000,
+      "currency": "KRW",
+      "priceType": "physical",
+      "observedAt": "2026-10-18T23:00:00+08:00",
+      "lastSeenAt": "2026-10-18T23:00:00+08:00",
+      "source": {
+        "id": "",
+        "name": "",
+        "region": "",
+        "locale": "",
+        "timezone": "",
+        "kind": "",
+        "adapter": "",
+        "accessMethod": "",
+        "defaultFormat": "",
+        "allowedFormats": "",
+        "baseUrl": "",
+        "accessStatus": "",
+        "ratePerMinute": 0,
+        "enabled": false,
+        "createdAt": "0001-01-01T00:00:00Z",
+        "updatedAt": "0001-01-01T00:00:00Z"
+      },
+      "createdAt": "2026-10-20T15:33:00+08:00",
+      "updatedAt": "2026-10-23T23:25:57.047668+08:00"
+    }
+  ],
+  "media": [],
+  "observations": [
+    {
+      "id": "observation-8d1eeb45cd31f626603ee53ee0e13dfd5260388c",
+      "observationKey": "observation-8d1eeb45cd31f626603ee53ee0e13dfd5260388c",
+      "listingId": "listing-1c9311fed44de5a7af5eb31ba76fccef",
+      "parserVersion": "manual-page-capture-v1",
+      "observedAt": "2026-10-18T23:00:00+08:00",
+      "status": "unknown",
+      "format": "physical",
+      "priceMinor": 180000,
+      "currency": "KRW",
+      "priceType": "physical",
+      "statusEvidence": "YES24's public search result for 김우현 화보, crawled the day before review, lists this exact product by 김우현, publisher 우직스타즈, and a December 2021 release; it shows list and selling price KRW 180,000 and labels the item 품절. An older mobile YES24 search snapshot gives the exact release date 2021-12-09. Direct product access leads to an adult verification/login gate, so availability is recorded as unknown; the gate was not bypassed. No live price, used seller offer, page count, cover asset, or gallery image was verified. No image was copied.",
+      "timestampPrecision": "day",
+      "createdAt": "2026-10-20T15:34:45.105399+08:00",
+      "updatedAt": "2026-10-20T15:34:45.105399+08:00"
+    }
+  ],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 16934,
+      "slug": "model-2854011c6bab5b9cc4475762fd7dc090d49a5a66359c0a069bd6e04e935f7ee0",
+      "canonicalPublicName": "김우현",
+      "originalName": "김우현",
+      "englishName": "Kim Woo-hyun",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/Product/Search?query=%EA%B9%80%EC%9A%B0%ED%98%84+%ED%99%94%EB%B3%B4",
+      "profileSourceConfidence": "model_cross_checked_press",
+      "createdAt": "2026-10-20T13:09:17.650227+08:00",
+      "updatedAt": "2026-10-20T13:09:17.650227+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-2854011c6bab5b9cc4475762fd7dc090d49a5a66359c0a069bd6e04e935f7ee0",
+        "name": "김우현"
+      }
+    ],
+    "id": "korea-uhyun-eye-photobook-2021",
+    "slug": "korea-uhyun-eye-photobook-2021",
+    "publicationType": "photobook",
+    "originalTitle": "우현-아이 화보집",
+    "summary": "Standalone physical photobook authored by Korean model 김우현. YES24's public search listing supplies the product identity and price; contemporaneous press identifies 김우현 as a MAXIM model. The age-gated detail page was not accessed.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "김우현"
+    ],
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-eb477627883e08af348baaa3d80ca41be5d576f7a7d3a268d80f4830a524b244",
+          "name": "우직스타즈"
+        },
+        "id": "korea-uhyun-eye-2021-print-yes24",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "우직스타즈",
+        "releaseDate": "2021-12-09T08:00:00+08:00",
+        "releasePrecision": "day",
+        "contentSummary": "YES24 lists the physical photobook under author 김우현 and publisher 우직스타즈. No page count, ISBN, or image details were available in the public search result.",
+        "metadataSourceUrl": "https://www.yes24.com/product/goods/106517266",
+        "editionLabel": "2021 print photobook",
+        "listings": [
+          {
+            "id": "listing-1c9311fed44de5a7af5eb31ba76fccef",
+            "externalId": "106517266",
+            "url": "https://www.yes24.com/product/goods/106517266",
+            "title": "우현-아이 화보집",
+            "format": "physical",
+            "status": "unknown",
+            "priceMinor": 180000,
+            "currency": "KRW",
+            "priceType": "physical",
+            "priceCategory": "physical_retail",
+            "observedAt": "2026-10-18T23:00:00+08:00",
+            "lastSeenAt": "2026-10-18T23:00:00+08:00",
+            "source": {
+              "id": "yes24-kr-print",
+              "name": "YES24 Korea print (manual page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": [
+          {
+            "id": "listing-1c9311fed44de5a7af5eb31ba76fccef",
+            "externalId": "106517266",
+            "url": "https://www.yes24.com/product/goods/106517266",
+            "title": "우현-아이 화보집",
+            "format": "physical",
+            "status": "unknown",
+            "priceMinor": 180000,
+            "currency": "KRW",
+            "priceType": "physical",
+            "priceCategory": "physical_retail",
+            "observedAt": "2026-10-18T23:00:00+08:00",
+            "lastSeenAt": "2026-10-18T23:00:00+08:00",
+            "source": {
+              "id": "yes24-kr-print",
+              "name": "YES24 Korea print (manual page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-uhyun-eye-photobook-2021",
+        "personId": 16934,
+        "role": "featured",
+        "creditedName": "김우현",
+        "creditSource": "verified_model_capture",
+        "person": {
+          "id": 16934,
+          "slug": "model-2854011c6bab5b9cc4475762fd7dc090d49a5a66359c0a069bd6e04e935f7ee0",
+          "canonicalPublicName": "김우현",
+          "originalName": "김우현",
+          "englishName": "Kim Woo-hyun",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "model",
+          "verificationSourceUrl": "https://www.yes24.com/Product/Search?query=%EA%B9%80%EC%9A%B0%ED%98%84+%ED%99%94%EB%B3%B4",
+          "profileSourceConfidence": "model_cross_checked_press",
+          "createdAt": "2026-10-20T13:09:17.650227+08:00",
+          "updatedAt": "2026-10-20T13:09:17.650227+08:00"
+        },
+        "createdAt": "2026-10-23T22:59:36.928673+08:00",
+        "updatedAt": "2026-10-23T23:25:56.979708+08:00"
+      }
+    ],
+    "id": "korea-uhyun-eye-photobook-2021",
+    "slug": "korea-uhyun-eye-photobook-2021",
+    "publicationType": "photobook",
+    "originalTitle": "우현-아이 화보집",
+    "summary": "Standalone physical photobook authored by Korean model 김우현. YES24's public search listing supplies the product identity and price; contemporaneous press identifies 김우현 as a MAXIM model. The age-gated detail page was not accessed.",
+    "originCode": "KR",
+    "featuredNames": "김우현",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "publisherCompanyId": "publisher-eb477627883e08af348baaa3d80ca41be5d576f7a7d3a268d80f4830a524b244",
+        "publisherCompany": {
+          "id": "publisher-eb477627883e08af348baaa3d80ca41be5d576f7a7d3a268d80f4830a524b244",
+          "slug": "publisher-eb477627883e08af348baaa3d80ca41be5d576f7a7d3a268d80f4830a524b244",
+          "canonicalName": "우직스타즈",
+          "countryCode": "",
+          "officialUrl": "",
+          "verificationStatus": "catalog_credit",
+          "name": "우직스타즈",
+          "host": "",
+          "status": true,
+          "appId": "",
+          "appKey": "",
+          "createdAt": "2026-10-20T15:34:17.553489+08:00",
+          "updatedAt": "2026-10-20T15:34:17.553489+08:00"
+        },
+        "id": "korea-uhyun-eye-2021-print-yes24",
+        "workId": "korea-uhyun-eye-photobook-2021",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "우직스타즈",
+        "releaseDate": "2021-12-09T08:00:00+08:00",
+        "releasePrecision": "day",
+        "contentSummary": "YES24 lists the physical photobook under author 김우현 and publisher 우직스타즈. No page count, ISBN, or image details were available in the public search result.",
+        "metadataSourceUrl": "https://www.yes24.com/product/goods/106517266",
+        "editionLabel": "2021 print photobook",
+        "status": "published",
+        "listings": [
+          {
+            "id": "listing-1c9311fed44de5a7af5eb31ba76fccef",
+            "editionId": "korea-uhyun-eye-2021-print-yes24",
+            "sourceId": "yes24-kr-print",
+            "externalId": "106517266",
+            "url": "https://www.yes24.com/product/goods/106517266",
+            "title": "우현-아이 화보집",
+            "formatCandidate": "physical",
+            "publisher": "우직스타즈",
+            "status": "unknown",
+            "priceMinor": 180000,
+            "currency": "KRW",
+            "priceType": "physical",
+            "observedAt": "2026-10-18T23:00:00+08:00",
+            "lastSeenAt": "2026-10-18T23:00:00+08:00",
+            "source": {
+              "marketplaceId": 32,
+              "id": "yes24-kr-print",
+              "name": "YES24 Korea print (manual page capture)",
+              "region": "KR",
+              "locale": "ko-KR",
+              "timezone": "Asia/Seoul",
+              "kind": "bookstore",
+              "adapter": "manual_page_capture",
+              "accessMethod": "manual_browser",
+              "defaultFormat": "physical",
+              "allowedFormats": "physical",
+              "baseUrl": "https://www.yes24.com",
+              "allowedHosts": "www.yes24.com",
+              "capabilities": "catalog_discovery,active_discovery,listing_detail",
+              "accessStatus": "review",
+              "termsUrl": "https://www.yes24.com/notice/service.aspx",
+              "ratePerMinute": 1,
+              "enabled": false,
+              "createdAt": "2026-10-20T12:31:51.337423+08:00",
+              "updatedAt": "2026-10-25T14:09:56.523421+08:00"
+            },
+            "createdAt": "2026-10-20T15:33:00+08:00",
+            "updatedAt": "2026-10-23T23:25:57.047668+08:00"
+          }
+        ],
+        "createdAt": "2026-10-20T15:34:44.891923+08:00",
+        "updatedAt": "2026-10-23T23:25:56.940482+08:00"
+      }
+    ],
+    "createdAt": "2026-10-20T15:34:44.870671+08:00",
+    "updatedAt": "2026-10-23T23:25:56.927443+08:00"
+  }
+}

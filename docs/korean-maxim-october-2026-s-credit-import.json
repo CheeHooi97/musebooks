@@ -1,0 +1,79 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-10-joo-digital",
+      "slug": "korea-maxim-2026-10-joo-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-10",
+      "issueNumber": "281",
+      "originalTitle": "맥심 MAXIM 2026. 10월호",
+      "englishTitle": "MAXIM October 2026",
+      "summary": "MAXIM October 2026 issue No. 281, Dopamine theme. Publisher explicitly credits 미스맥심 쥬 for print A and 미스맥심 조아 for print B; the public S cover prints COVER MODEL 미스맥심 유디. PDF and subscriber S remain separate editions. The existing canonical 유디 identity is reused.",
+      "originCode": "KR",
+      "coverUrl": "https://image.yes24.com/goods/197225466/XL"
+    },
+    "coverPerson": {
+      "slug": "model-ae3510aa4c0b7fda55e617efa0ef0fa7093ce4b3db66be2bc4db94dec3f6c589",
+      "canonicalPublicName": "미스맥심 쥬",
+      "originalName": "미스맥심 쥬",
+      "englishName": "Miss Maxim Joo",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/197225466",
+      "profileSourceConfidence": "explicit_cover_credit"
+    },
+    "additionalCoverPeople": [
+      {
+        "slug": "model-5ef6256b73973f2e6eaf7231f9e66eef1744667c5149d6a940696b8ea7cd44f5",
+        "canonicalPublicName": "미스맥심 조아",
+        "originalName": "미스맥심 조아",
+        "englishName": "Miss Maxim Joa",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+        "profileSourceConfidence": "explicit_publisher_cover_credit"
+      },
+      {
+        "slug": "model-b5c806ec7e8843dcd4ea015c8d07b7829d107eaa3391318e96f48807d7b76d71",
+        "canonicalPublicName": "유디",
+        "originalName": "유디",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/147017456",
+        "profileSourceConfidence": "explicit_title_model_credit"
+      }
+    ],
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-10-print-s-subscription",
+      "workId": "korea-maxim-2026-10-joo-digital",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "editionVariant": "S형",
+      "contentSummary": "October 2026 MAXIM issue No. 281 subscriber-only S-type edition, established by the publisher page subscriber-only label and public cover visibly marked No.281 S type. At full size the publisher cover explicitly prints COVER MODEL 미스맥심 유디; the existing canonical 유디 model identity is reused, without face identification. Exact original release date, page count, dimensions, ISBN and ordinary single-copy price remain unverified and unknown. A/B release dates, page counts and KRW 9,600 offers are not copied into S. The public S cover is linked remotely with publisher-page attribution; no mirrored pixels or reuse license asserted.",
+      "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+      "seriesName": "MAXIM",
+      "editionLabel": "October 2026 subscriber-only S-type print issue",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/386/386_img3_1789949029_1215.jpg",
+      "originalCoverUrl": "https://www.maximkorea.net/magdb/file/386/386_img3_1789949029_1215.jpg"
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/386/386_img3_1789949029_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/386/386_img3_1789949029_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+        "isPrimary": true
+      }
+    ]
+  }
+]

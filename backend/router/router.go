@@ -5,8 +5,10 @@ import (
 	"musebooks/middleware"
 	"musebooks/utils"
 	"os"
+	"time"
 
 	"github.com/labstack/echo/v4"
+	echoMiddleware "github.com/labstack/echo/v4/middleware"
 	"gorm.io/gorm"
 )
 
@@ -15,6 +17,21 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	e.Validator = utils.NewValidator()
 
 	v := e.Group("/v1", middleware.Authenticate(db))
+	for _, prefix := range []string{"/auth", "/mobile/auth"} {
+		auth := v.Group(prefix, handler.AuthRequest, echoMiddleware.BodyLimit("8K"), echoMiddleware.RateLimiter(echoMiddleware.NewRateLimiterMemoryStoreWithConfig(echoMiddleware.RateLimiterMemoryStoreConfig{Rate: 0.5, Burst: 12, ExpiresIn: 3 * time.Minute})))
+		auth.GET("/providers", h.AuthProviders)
+		auth.GET("/me", h.CurrentAuthUser)
+		auth.POST("/register", h.Register)
+		auth.POST("/login", h.Login)
+		auth.POST("/logout", h.Logout)
+		auth.POST("/verify-email", h.VerifyEmail)
+		auth.POST("/resend-verification", h.ResendVerification)
+		auth.POST("/forgot-password", h.ForgotPassword)
+		auth.POST("/reset-password", h.ResetPassword)
+	}
+	v.GET("/auth/oauth/google", h.GoogleStart, handler.AuthRequest)
+	v.GET("/auth/oauth/google/callback", h.GoogleCallback, handler.AuthRequest)
+	v.POST("/mobile/auth/oauth/exchange", h.MobileOAuthExchange, handler.AuthRequest, echoMiddleware.BodyLimit("8K"), echoMiddleware.RateLimiter(echoMiddleware.NewRateLimiterMemoryStore(1)))
 	catalogHandler := h.Catalog
 	browse := h.Browse
 	v.GET("/models", browse.Models)
@@ -38,7 +55,7 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	v.POST("/internal/scrape/batches", catalogHandler.IngestBatch, requireScraperToken(os.Getenv("SCRAPER_INGEST_TOKEN")))
 
 	// User
-	user := v.Group("/user")
+	user := v.Group("/user", handler.RequireAccountManagementToken)
 	user.GET("", h.GetUser)
 	user.POST("/search", h.SearchUserWithoutCheckUserId)
 	user.POST("", h.CreateUser)
@@ -46,7 +63,7 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	user.DELETE("/delete/:id", h.DeleteUser)
 
 	// Admin
-	admin := v.Group("/admin")
+	admin := v.Group("/admin", handler.RequireAccountManagementToken)
 	admin.GET("", h.GetAdmin)
 	admin.GET("/admins", h.GetAllAdmins)
 	admin.POST("", h.CreateAdmin)

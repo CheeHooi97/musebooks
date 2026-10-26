@@ -3,11 +3,18 @@ import json
 import unicodedata
 from collections import defaultdict
 from pathlib import Path
-from prepare_model_home_import import identity
+from prepare_model_home_import import identity, store_series
 ROOT = Path(__file__).parent
+# Stores encode the same wave dash and title dashes differently
+# (〜 U+301C vs ～ U+FF5E, ― vs ー vs -).
+MARK_VARIANTS = str.maketrans({**dict.fromkeys('〜～~∼', '~'), **dict.fromkeys('‐‑‒–—―−ー－-', '-')})
 
 def normalized(value):
-    return ''.join(unicodedata.normalize('NFKC', value).split()).casefold()
+    return ''.join(unicodedata.normalize('NFKC', value).translate(MARK_VARIANTS).split()).casefold()
+
+
+def title_key(title):
+    return normalized(store_series(title)[0])
 
 
 def add_reviewed_cross_formats(groups, identities):
@@ -67,7 +74,7 @@ def build():
             record['work'] = dict(work, id=identity('work-jp-', record['source']['id'] + ':' + item['externalId']), originalTitle=title)
             if 'オールアザー' in title:
                 continue
-            candidates[(normalized(title), normalized(edition['publisher']))][edition['id']] = record
+            candidates[(title_key(title), normalized(edition['publisher']))][edition['id']] = record
         mapped = dict(saved.get('identities', {}).get(str(person['id']), {}))
         for records in candidates.values():
             records = sorted(records.values(), key=lambda r: r['work']['id'])

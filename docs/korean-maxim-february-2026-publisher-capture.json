@@ -1,0 +1,195 @@
+{
+  "capturedAt": "2026-10-25T13:41:05.4442688+08:00",
+  "method": "Public rendered A/B detail pages, screenshots and normal S-cover enlargement; no API",
+  "issueMonth": "2026-02",
+  "issueNumber": "273",
+  "publisherRelease": "2026-01-24",
+  "dateConflict": "Aladin2026-01-21 retained in prior evidence",
+  "coverAssignments": {
+    "A": "리리",
+    "B": "첼설아",
+    "S": "섹밍"
+  },
+  "SverificationImageUrl": "https://www.maximkorea.net/magdb/file/370/370_img3_1768857720.jpg",
+  "items": [
+    {
+      "externalId": "370",
+      "observationId": "maxim-publisher-20261025-detail-370",
+      "editionId": "korea-maxim-2026-02-print-a-aladin",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "title": "맥심273호 검스 편 2026년2월호 A형",
+      "status": "unknown",
+      "priceMinor": 9600,
+      "currency": "KRW",
+      "priceType": "fixed",
+      "format": "physical",
+      "publisher": "와이미디어",
+      "editionVariant": "A형",
+      "imageUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+      "shippingText": "Sold-out physical publisher display; delivery fees unverified",
+      "observedAt": "2026-10-25T13:41:05.4442688+08:00",
+      "timestampPrecision": "minute",
+      "statusEvidence": "Live public official A product checked2026-10-25. Explicit273호 A 타입 표지모델 미스맥심 리리, release2026-01-24,KRW9600 and완전품절 with품절 control,no cart. Availabilityunknown,not completed sale. Priorarchive observation and AladinJanuary21 source assertion retained. S public artwork independently prints미스맥심 섹밍 andNo273Stype; originaldate/spec/price unknown. Public image references only; no restricted video or paid B-cut accessed. Reusepermissionunconfirmed."
+    },
+    {
+      "externalId": "369",
+      "observationId": "maxim-publisher-20261025-detail-369",
+      "editionId": "korea-maxim-2026-02-print-b-aladin",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "title": "맥심273호 검스 편 2026년2월호 B형",
+      "status": "unknown",
+      "priceMinor": 9600,
+      "currency": "KRW",
+      "priceType": "fixed",
+      "format": "physical",
+      "publisher": "와이미디어",
+      "editionVariant": "B형",
+      "imageUrl": "https://www.maximkorea.net/magdb/file/369/369_img_1768857556_1215.jpg",
+      "shippingText": "Sold-out physical publisher display; delivery fees unverified",
+      "observedAt": "2026-10-25T13:41:05.4442688+08:00",
+      "timestampPrecision": "minute",
+      "statusEvidence": "Live public official B product checked2026-10-25. Explicit273호 B 타입 표지모델 미스맥심 첼설아, release2026-01-24,KRW9600 and완전품절 with품절 control,no cart. Availabilityunknown,not completed sale. Priorarchive observation and AladinJanuary21 source assertion retained. S public artwork independently prints미스맥심 섹밍 andNo273Stype; originaldate/spec/price unknown. Public image references only; no restricted video or paid B-cut accessed. Reusepermissionunconfirmed."
+    }
+  ],
+  "media": [
+    {
+      "mediaType": "publisher_cover",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "isPrimary": true
+    },
+    {
+      "mediaType": "publisher_sample_001",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/370/editor_1768958476915o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/370/editor_1768958476915o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_002",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644442187o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644442187o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_003",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644491413o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644491413o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_004",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644535175o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644535175o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_005",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644582855o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644582855o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_006",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644639542o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644639542o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_007",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/370/editor_1768864469579o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/370/editor_1768864469579o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "isPrimary": false
+    },
+    {
+      "externalId": "370",
+      "mediaType": "listing_image",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "isPrimary": true
+    },
+    {
+      "mediaType": "publisher_cover",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/369/369_img_1768857556_1215.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/369/369_img_1768857556_1215.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "isPrimary": true
+    },
+    {
+      "mediaType": "publisher_sample_001",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/369/editor_1768958454182o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/369/editor_1768958454182o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_002",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642725589o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642725589o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_003",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642809617o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642809617o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_004",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642850866o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642850866o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_005",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642912013o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642912013o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_006",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642975649o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642975649o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "isPrimary": false
+    },
+    {
+      "mediaType": "publisher_sample_007",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688643041876o.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688643041876o.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "isPrimary": false
+    },
+    {
+      "externalId": "369",
+      "mediaType": "listing_image",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/369/369_img_1768857556_1215.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/369/369_img_1768857556_1215.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "isPrimary": true
+    },
+    {
+      "mediaType": "publisher_cover",
+      "originalUrl": "https://www.maximkorea.net/magdb/file/370/370_img3_1768857720_1215.jpg",
+      "storageUrl": "https://www.maximkorea.net/magdb/file/370/370_img3_1768857720_1215.jpg",
+      "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "isPrimary": true
+    },
+    null
+  ],
+  "excluded": "Two Naver promotional banners per page,recent-view thumbnail,duplicate S,logos,YouTube age-restricted embedded video and paid B-cut",
+  "rights": "Unconfirmed; remote source-attributed images, no pixels mirrored",
+  "limitations": "A/B sold out; S no originaldate/specifications/price. Public panels include variant notices."
+}

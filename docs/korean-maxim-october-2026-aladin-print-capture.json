@@ -1,0 +1,50 @@
+{
+  "observedAt": "2026-10-23T23:14:00+08:00",
+  "method": "Manual public Aladin series and product DOM review plus visual cover inspection; no API/key",
+  "seriesUrl": "https://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=1373453",
+  "seriesProductCount": 2,
+  "variants": [
+    {
+      "variant": "A형",
+      "itemId": "402890491",
+      "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+      "title": "맥심 Maxim A형 2026.10",
+      "cover": "https://image.aladin.co.kr/product/40289/4/cover500/k412131583_1.jpg",
+      "sourceIdentifier": "K412131583",
+      "supplement": "미스맥심 쥬/조아 스페셜 브로마이드 (책속부록)",
+      "releaseDate": "2026-09-23"
+    },
+    {
+      "variant": "B형",
+      "itemId": "402890707",
+      "editionId": "korea-maxim-2026-10-print-b-aladin",
+      "title": "맥심 Maxim B형 2026.10",
+      "cover": "https://image.aladin.co.kr/product/40289/7/cover500/k432131583_1.jpg",
+      "sourceIdentifier": "K432131583",
+      "supplement": "미스맥심 조아/유디 스페셜 브로마이드 (책속부록)",
+      "releaseDate": "2026-09-23"
+    }
+  ],
+  "listPriceKRW": 9600,
+  "ordinarySalePriceKRW": 9120,
+  "conditionalCardBenefitKRW": 7752,
+  "availability": "Both pages show cart/buy links, quantity control and delivery estimate",
+  "publicationDateConflict": {
+    "aCanonicalFromYES24": "2026-09-24",
+    "aAladinDate": "2026-09-23",
+    "resolution": "Unresolved; existing A edition retained and linked, no duplicate edition",
+    "bAladinDate": "2026-09-23"
+  },
+  "pageCount": 176,
+  "dimensions": "210×297mm (A4)",
+  "weightGrams": 475,
+  "issn": "2233-4270",
+  "identifierNote": "K412131583 and K432131583 are source identifiers labeled ISBN on Aladin, not valid ISBN values; stored in evidence, not canonical ISBN fields",
+  "coverCreditNote": "Existing issue-level 미스맥심 쥬 retained; B-cover identity not inferred from supplement names or face recognition",
+  "shipping": "Charged; book orders KRW 15,000+ free. Location-dependent estimates; separately supplied bonuses excluded from overseas delivery.",
+  "usedOffers": "No seller-specific offer verified; no aggregate count turned into an offer",
+  "additionalImages": "No additional gallery image verified",
+  "imageStorage": "Two exact source cover URLs saved as remote references with source attribution; no mirrored pixels or reuse license asserted",
+  "deduplication": "Read-only database lookup found only existing PDF/A editions and no Aladin listing for either external ID. Reuse A edition, add B edition under existing issue.",
+  "sourceStatus": "Existing Aladin manual source stays disabled/review"
+}

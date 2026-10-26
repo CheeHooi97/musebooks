@@ -58,7 +58,7 @@ export default function DirectoryProfile({ kind, id }) {
     <Breadcrumb items={[[t(models ? "Models" : "Publishers"), `/${kind}`], [entry?.name || "…"]]} />
     {profile.state !== "live" ? <LoadState state={profile.state} retry={profile.retry} /> : <>
       <header className="profile-header">
-        <div className="profile-header__portrait">{showCatalogImages && entry.coverUrl ? <img src={entry.coverUrl} alt="" /> : <span aria-hidden="true">{entry.name.slice(0, 1)}</span>}</div>
+        {showCatalogImages && <div className="profile-header__portrait">{entry.coverUrl ? <img src={entry.coverUrl} alt="" /> : <span aria-hidden="true">{entry.name.slice(0, 1)}</span>}</div>}
         <div>
           <p className="eyebrow">{t(models ? "Model" : "Publisher")}</p>
           <h1 id="page-title" tabIndex={-1}>{entry.name}</h1>

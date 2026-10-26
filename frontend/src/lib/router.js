@@ -1,4 +1,7 @@
 import { useSyncExternalStore } from "react";
+import { isMobileApp } from "./platform";
+
+const accountPath = pathname => ["/login", "/register", "/verify-email", "/forgot-password", "/reset-password", "/account"].includes(pathname.replace(/\/+$/, ""));
 
 // A small history router. Internal <a href> links are intercepted so pages
 // change without a reload; every route still has a real URL for SEO and sharing.
@@ -26,6 +29,9 @@ export function useLocation() {
 export function navigate(to, { replace = false, scroll = true } = {}) {
   const url = new URL(to, window.location.href);
   if (url.origin !== window.location.origin) { window.location.assign(url.href); return; }
+  // The catalog's ad vendor retains document listeners after unmounting.
+  // Account forms get a fresh document when crossing this boundary.
+  if (!isMobileApp && accountPath(url.pathname) !== accountPath(window.location.pathname)) { window.location[replace ? "replace" : "assign"](url.href); return; }
   const next = `${url.pathname}${url.search}${url.hash}`;
   if (next !== `${window.location.pathname}${window.location.search}${window.location.hash}`) window.history[replace ? "replaceState" : "pushState"](null, "", next);
   emit();

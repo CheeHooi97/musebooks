@@ -1,0 +1,99 @@
+{
+  "canonicalWorkId": "korea-maxim-2026-09-mua-digital",
+  "supersededWorkId": "korea-maxim-2026-09-yoon-yeongseo-print-b",
+  "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+  "evidence": [
+    "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+    "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383"
+  ],
+  "method": "Explicit same-month magazine reassignment inside the publisher import transaction; edition/listing/observation IDs retained; no deletions",
+  "legacyManifestRecord": {
+    "work": {
+      "id": "korea-maxim-2026-09-yoon-yeongseo-print-b",
+      "slug": "korea-maxim-2026-09-yoon-yeongseo-print-b",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-09",
+      "issueNumber": "9월호 B형",
+      "originalTitle": "맥심 MAXIM B형 (월간) : 9월 [2026]",
+      "englishTitle": "MAXIM September 2026 B-type",
+      "summary": "September 2026 print MAXIM B variant. YES24 identifies the exact monthly B-type product. Xports News reports that model 윤영서 announced her MAXIM B-type cover on Instagram on 2026-08-30; matching her announcement to this September item is a cross-source issue match.",
+      "originCode": "KR",
+      "coverUrl": ""
+    },
+    "coverPerson": {
+      "slug": "model-ad8a73bac79aa5927cb8097ba9b8be507e8513a3464bc357a00a425b15e6938b",
+      "canonicalPublicName": "윤영서",
+      "originalName": "윤영서",
+      "englishName": "",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.xportsnews.com/article/2189343",
+      "profileSourceConfidence": "model_self_report_via_press"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+      "workId": "korea-maxim-2026-09-yoon-yeongseo-print-b",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-08-25T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 176,
+      "editionVariant": "B형",
+      "contentSummary": "Print magazine issue, about 176 pages. Barcode 9772233427008 is retained as a barcode, not an ISBN. The product's in-book bonus names 윤영서 and 한지나; cover credit is corroborated separately by a report quoting 윤영서's Instagram post about her B-type cover.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/195411512",
+      "seriesName": "MAXIM",
+      "editionLabel": "September 2026 B-type print issue",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "yes24-kr-print",
+      "name": "YES24 Korea print (manual page capture)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.yes24.com",
+      "allowedHosts": "www.yes24.com",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.yes24.com/notice/service.aspx",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "sourceId": "yes24-kr-print",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-20T12:27:00+08:00",
+      "items": [
+        {
+          "externalId": "195411512",
+          "observationId": "yes24-manual-2026-10-20-1227",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "url": "https://www.yes24.com/product/goods/195411512",
+          "title": "맥심 MAXIM B형 (월간) : 9월 [2026]",
+          "status": "unknown",
+          "priceMinor": 9120,
+          "currency": "KRW",
+          "priceType": "physical",
+          "format": "physical",
+          "publisher": "와이미디어",
+          "editionVariant": "B형",
+          "observedAt": "2026-10-20T12:27:00+08:00",
+          "statusEvidence": "YES24 page snapshot retrieved 2026-10-20 displays list price KRW 9,600, sale price KRW 9,120 (5% off), and 판매중 | 한정판매. The page result was marked crawled last month, so current availability is unknown pending a live recheck. This is a new-copy page price, not a used seller offer.",
+          "timestampPrecision": "minute"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "observedAt": "2026-10-23T21:37:00+08:00",
+  "method": "manual live browser; rendered product metadata and seller rows; no retailer API",
+  "issueMonth": "2024-05",
+  "releaseDate": "2024-04-23",
+  "pageCount": 192,
+  "dimensions": "210×297mm (A4)",
+  "weightGrams": 518,
+  "listPriceKRW": 8900,
+  "lastDisplayedSalePriceKRW": 8450,
+  "retailState": "sold out; publisher distribution stopped; last displayed price, not purchasable stock",
+  "seriesUrl": "https://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=1183085",
+  "issueCreditUrl": "https://www.yes24.com/product/goods/126331777",
+  "coverCreditScope": "Issue-level 바비앙 and 김갑주; exact A/B assignment not established in this capture",
+  "imageState": "No cover or gallery asset copied; reuse permission unconfirmed",
+  "variants": [
+    {
+      "variant": "A형", "key": "a", "itemId": "338433993", "isbn": "K702930094",
+      "productUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338433993",
+      "inventoryUrl": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=338433993&start=newproduct",
+      "displayedCount": 12, "displayedPages": 1,
+      "offers": [
+        {"itemId":"404452388","seller":"SunA","condition":"상","priceKRW":25000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"339620638","seller":"전준혁","condition":"중","priceKRW":30000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"339620637","seller":"전준혁","condition":"중","priceKRW":30000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"339473873","seller":"전준혁","condition":"중","priceKRW":31000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"339473500","seller":"전준혁","condition":"중","priceKRW":31000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"339473491","seller":"전준혁","condition":"중","priceKRW":31000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"361561022","seller":"꾸이중고서점","condition":"상","priceKRW":40000,"shippingText":"택배 3,500원"},
+        {"itemId":"339472894","seller":"전준혁","condition":"상","priceKRW":41000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"339479331","seller":"전준혁","condition":"중","priceKRW":41000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"339473256","seller":"전준혁","condition":"중","priceKRW":41000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"339472908","seller":"전준혁","condition":"중","priceKRW":41000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"339472311","seller":"전준혁","condition":"중","priceKRW":41000,"shippingText":"택배 3,500원, 반값택배 2,400원"}
+      ]
+    },
+    {
+      "variant": "B형", "key": "b", "itemId": "338434071", "isbn": "K742930094",
+      "productUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=338434071",
+      "inventoryUrl": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=338434071&start=newproduct",
+      "displayedCount": 7, "displayedPages": 1,
+      "offers": [
+        {"itemId":"402268758","seller":"낭만시인","condition":"최상","priceKRW":29000,"shippingText":"택배 3,000원"},
+        {"itemId":"375804493","seller":"허책방","condition":"상","priceKRW":26000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"370212836","seller":"P. J. Stahl","condition":"상","priceKRW":32000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"370124297","seller":"챔프123","condition":"최상","priceKRW":33000,"shippingText":"택배 3,500원"},
+        {"itemId":"395470607","seller":"알낳아딘 중고서점","condition":"상","priceKRW":38900,"shippingText":"택배 3,000원"},
+        {"itemId":"339472222","seller":"전준혁","condition":"중","priceKRW":41000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"366822043","seller":"다산","condition":"상","priceKRW":50000,"shippingText":"택배 5,000원"}
+      ]
+    }
+  ]
+}

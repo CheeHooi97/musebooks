@@ -1,0 +1,1074 @@
+{
+  "catalogScopeAudit": {
+    "explanation": "The global digital total fell by 428 since the October24 checkpoint. Exactly428 JP work rows were marked superseded on October24; every Korean ledger work remains present and published. This publisher batch changes only one Korean issue and three physical editions.",
+    "publicationStates": [
+      {
+        "OriginCode": "JP",
+        "Status": "published",
+        "Count": 4717
+      },
+      {
+        "OriginCode": "JP",
+        "Status": "superseded",
+        "Count": 795
+      },
+      {
+        "OriginCode": "KR",
+        "Status": "published",
+        "Count": 110
+      },
+      {
+        "OriginCode": "TW",
+        "Status": "published",
+        "Count": 439
+      },
+      {
+        "OriginCode": "TW",
+        "Status": "superseded",
+        "Count": 2
+      }
+    ],
+    "publishedKoreanLedgerWorks": 110,
+    "recentSupersededWorks": [
+      {
+        "OriginCode": "JP",
+        "Count": 428,
+        "FirstChange": "2026-10-24T22:08:32.644432+08:00",
+        "LastChange": "2026-10-24T22:09:17.555166+08:00"
+      }
+    ]
+  },
+  "credits": [
+    {
+      "workId": "korea-maxim-2026-11-cha-young-hyun",
+      "personId": 68593,
+      "role": "cover_model",
+      "creditedName": "차영현",
+      "creditSource": "verified_cover_credit",
+      "person": {
+        "id": 0,
+        "slug": "",
+        "canonicalPublicName": "",
+        "originalName": "",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "",
+        "verificationSourceUrl": "",
+        "profileSourceConfidence": "",
+        "createdAt": "0001-01-01T00:00:00Z",
+        "updatedAt": "0001-01-01T00:00:00Z"
+      },
+      "createdAt": "2026-10-25T12:52:13.925839+08:00",
+      "updatedAt": "2026-10-25T12:52:14.943133+08:00"
+    }
+  ],
+  "databaseCounts": {
+    "editions": 6805,
+    "listing_observations": 8346,
+    "listings": 8306,
+    "sources": 30,
+    "works": 6063
+  },
+  "limitations": "Only A/B ordinary publisher offers captured. S original publication day and ordinary price unknown; page counts/dimensions/ISBN unknown for all. Remote public preview references only, no reuse license asserted.",
+  "method": "Read-only exact PostgreSQL metadata, credits, prices, observation evidence, media and actual GetBook handler",
+  "passed": true,
+  "person": {
+    "id": 68593,
+    "slug": "model-f845b10c377a00bdc81ac817bf3670ee42701999dbd3b8cf45db904f401f4d73",
+    "canonicalPublicName": "차영현",
+    "originalName": "차영현",
+    "englishName": "",
+    "traditionalChineseName": "",
+    "simplifiedChineseName": "",
+    "personType": "model",
+    "verificationSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+    "profileSourceConfidence": "explicit_publisher_cover_credit",
+    "createdAt": "2026-10-25T12:52:13.865791+08:00",
+    "updatedAt": "2026-10-25T12:52:13.865791+08:00"
+  },
+  "publicBook": {
+    "models": [],
+    "coverModels": [
+      {
+        "id": "model-f845b10c377a00bdc81ac817bf3670ee42701999dbd3b8cf45db904f401f4d73",
+        "name": "차영현"
+      }
+    ],
+    "id": "korea-maxim-2026-11-cha-young-hyun",
+    "slug": "korea-maxim-2026-11-cha-young-hyun",
+    "publicationType": "magazine_issue",
+    "issueMonth": "2026-11",
+    "issueNumber": "282",
+    "originalTitle": "맥심 MAXIM 2026. 11월호",
+    "englishTitle": "MAXIM November 2026",
+    "summary": "MAXIM November 2026 issue No.282. The publisher explicitly credits cheerleader 차영현 on A and B; the subscriber-only S cover also prints her name. A/B were published 2026-10-24 and display KRW9,600 each. Cover variants remain editions of one magazine issue, separate from standalone photobooks; S original release/specifications and ordinary single-copy price are unverified.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "coverUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+    "editions": [
+      {
+        "gallery": [
+          {
+            "id": 84427,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-a",
+            "mediaType": "cover",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "isPrimary": true,
+            "createdAt": "2026-10-25T12:52:13.368535+08:00",
+            "updatedAt": "2026-10-25T12:52:13.368535+08:00"
+          },
+          {
+            "id": 84429,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-a",
+            "mediaType": "publisher_sample_001",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536948619o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536948619o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:13.979977+08:00",
+            "updatedAt": "2026-10-25T12:52:13.979977+08:00"
+          },
+          {
+            "id": 84430,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-a",
+            "mediaType": "publisher_sample_002",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536993224o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536993224o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:13.991722+08:00",
+            "updatedAt": "2026-10-25T12:52:13.991722+08:00"
+          },
+          {
+            "id": 84431,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-a",
+            "mediaType": "publisher_sample_003",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537038166o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537038166o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.035495+08:00",
+            "updatedAt": "2026-10-25T12:52:14.035495+08:00"
+          },
+          {
+            "id": 84432,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-a",
+            "mediaType": "publisher_sample_004",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537076485o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537076485o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.047962+08:00",
+            "updatedAt": "2026-10-25T12:52:14.047962+08:00"
+          },
+          {
+            "id": 84433,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-a",
+            "mediaType": "publisher_sample_005",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537129795o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537129795o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.063136+08:00",
+            "updatedAt": "2026-10-25T12:52:14.063136+08:00"
+          },
+          {
+            "id": 84434,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-a",
+            "mediaType": "publisher_sample_006",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537177626o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537177626o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.076802+08:00",
+            "updatedAt": "2026-10-25T12:52:14.076802+08:00"
+          },
+          {
+            "id": 84435,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-a",
+            "mediaType": "publisher_sample_007",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537216701o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537216701o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.090845+08:00",
+            "updatedAt": "2026-10-25T12:52:14.090845+08:00"
+          }
+        ],
+        "publisherProfile": {
+          "id": "publisher-20c7913da8b7fe2ed167b5bfc9a5c50d49f8789f0bd84471482ebe5c0e0a1044",
+          "name": "와이미디어"
+        },
+        "id": "korea-maxim-2026-11-print-a",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "와이미디어",
+        "releaseDate": "2026-10-24T08:00:00+08:00",
+        "releasePrecision": "day",
+        "editionVariant": "A형",
+        "contentSummary": "MAXIM November 2026 No.282 A형 print edition. Publisher explicitly credits cheerleader 차영현 and release 2026-10-24, with current ordinary KRW9,600 price and enabled cart. Advertised supplement: 책속부록: 치어리더 차영현/미스맥심 박수민 스페셜 브로마이드. Lineup/supplement names are not additional cover credits. Pages, dimensions and ISBN unverified. Exact publisher cover and seven public product-preview panels are referenced remotely; no pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+        "seriesName": "MAXIM",
+        "editionLabel": "November 2026 A-type print issue",
+        "coverUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+        "listings": [
+          {
+            "gallery": [
+              {
+                "id": 84436,
+                "entityType": "listing",
+                "entityId": "listing-ad584a1bec71c1bd8646dd7658e88508",
+                "mediaType": "listing_image",
+                "originalUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+                "storageUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+                "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+                "isPrimary": true,
+                "createdAt": "2026-10-25T12:52:14.487405+08:00",
+                "updatedAt": "2026-10-25T12:52:14.487405+08:00"
+              }
+            ],
+            "id": "listing-ad584a1bec71c1bd8646dd7658e88508",
+            "externalId": "388",
+            "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "title": "맥심282호 치어리더 차영현 편 2026년11월호 A형",
+            "format": "physical",
+            "status": "active",
+            "priceMinor": 9600,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "Physical publisher product; delivery charges not stated on reviewed page",
+            "observedAt": "2026-10-25T12:49:00+08:00",
+            "lastSeenAt": "2026-10-25T12:49:00+08:00",
+            "source": {
+              "id": "maxim-korea-manual",
+              "name": "MAXIM Korea publisher store (manual public page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": [
+          {
+            "gallery": [
+              {
+                "id": 84436,
+                "entityType": "listing",
+                "entityId": "listing-ad584a1bec71c1bd8646dd7658e88508",
+                "mediaType": "listing_image",
+                "originalUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+                "storageUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+                "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+                "isPrimary": true,
+                "createdAt": "2026-10-25T12:52:14.487405+08:00",
+                "updatedAt": "2026-10-25T12:52:14.487405+08:00"
+              }
+            ],
+            "id": "listing-ad584a1bec71c1bd8646dd7658e88508",
+            "externalId": "388",
+            "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "title": "맥심282호 치어리더 차영현 편 2026년11월호 A형",
+            "format": "physical",
+            "status": "active",
+            "priceMinor": 9600,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "Physical publisher product; delivery charges not stated on reviewed page",
+            "observedAt": "2026-10-25T12:49:00+08:00",
+            "lastSeenAt": "2026-10-25T12:49:00+08:00",
+            "source": {
+              "id": "maxim-korea-manual",
+              "name": "MAXIM Korea publisher store (manual public page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ]
+      },
+      {
+        "gallery": [
+          {
+            "id": 84438,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-b",
+            "mediaType": "cover",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+            "isPrimary": true,
+            "createdAt": "2026-10-25T12:52:13.368535+08:00",
+            "updatedAt": "2026-10-25T12:52:13.368535+08:00"
+          },
+          {
+            "id": 84440,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-b",
+            "mediaType": "publisher_sample_001",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535852314o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535852314o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.603257+08:00",
+            "updatedAt": "2026-10-25T12:52:14.603257+08:00"
+          },
+          {
+            "id": 84441,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-b",
+            "mediaType": "publisher_sample_002",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535918503o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535918503o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.617171+08:00",
+            "updatedAt": "2026-10-25T12:52:14.617171+08:00"
+          },
+          {
+            "id": 84442,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-b",
+            "mediaType": "publisher_sample_003",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535967263o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535967263o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.629739+08:00",
+            "updatedAt": "2026-10-25T12:52:14.629739+08:00"
+          },
+          {
+            "id": 84443,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-b",
+            "mediaType": "publisher_sample_004",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536036564o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536036564o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.651112+08:00",
+            "updatedAt": "2026-10-25T12:52:14.651112+08:00"
+          },
+          {
+            "id": 84444,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-b",
+            "mediaType": "publisher_sample_005",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536090834o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536090834o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.663741+08:00",
+            "updatedAt": "2026-10-25T12:52:14.663741+08:00"
+          },
+          {
+            "id": 84445,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-b",
+            "mediaType": "publisher_sample_006",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536144932o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536144932o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.678596+08:00",
+            "updatedAt": "2026-10-25T12:52:14.678596+08:00"
+          },
+          {
+            "id": 84446,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-b",
+            "mediaType": "publisher_sample_007",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_1792453619688o.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_1792453619688o.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T12:52:14.690312+08:00",
+            "updatedAt": "2026-10-25T12:52:14.690312+08:00"
+          }
+        ],
+        "publisherProfile": {
+          "id": "publisher-20c7913da8b7fe2ed167b5bfc9a5c50d49f8789f0bd84471482ebe5c0e0a1044",
+          "name": "와이미디어"
+        },
+        "id": "korea-maxim-2026-11-print-b",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "와이미디어",
+        "releaseDate": "2026-10-24T08:00:00+08:00",
+        "releasePrecision": "day",
+        "editionVariant": "B형",
+        "contentSummary": "MAXIM November 2026 No.282 B형 print edition. Publisher explicitly credits cheerleader 차영현 and release 2026-10-24, with current ordinary KRW9,600 price and enabled cart. Advertised supplement: 책속부록: 치어리더 차영현/미스맥심 지니 스페셜 브로마이드. Lineup/supplement names are not additional cover credits. Pages, dimensions and ISBN unverified. Exact publisher cover and seven public product-preview panels are referenced remotely; no pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+        "seriesName": "MAXIM",
+        "editionLabel": "November 2026 B-type print issue",
+        "coverUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+        "listings": [
+          {
+            "gallery": [
+              {
+                "id": 84447,
+                "entityType": "listing",
+                "entityId": "listing-84f701a8d068db98a448aee20d9d7107",
+                "mediaType": "listing_image",
+                "originalUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+                "storageUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+                "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+                "isPrimary": true,
+                "createdAt": "2026-10-25T12:52:14.855539+08:00",
+                "updatedAt": "2026-10-25T12:52:14.855539+08:00"
+              }
+            ],
+            "id": "listing-84f701a8d068db98a448aee20d9d7107",
+            "externalId": "387",
+            "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+            "title": "맥심282호 치어리더 차영현 편 2026년11월호 B형",
+            "format": "physical",
+            "status": "active",
+            "priceMinor": 9600,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "Physical publisher product; delivery charges not stated on reviewed page",
+            "observedAt": "2026-10-25T12:50:00+08:00",
+            "lastSeenAt": "2026-10-25T12:50:00+08:00",
+            "source": {
+              "id": "maxim-korea-manual",
+              "name": "MAXIM Korea publisher store (manual public page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": [
+          {
+            "gallery": [
+              {
+                "id": 84447,
+                "entityType": "listing",
+                "entityId": "listing-84f701a8d068db98a448aee20d9d7107",
+                "mediaType": "listing_image",
+                "originalUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+                "storageUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+                "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+                "isPrimary": true,
+                "createdAt": "2026-10-25T12:52:14.855539+08:00",
+                "updatedAt": "2026-10-25T12:52:14.855539+08:00"
+              }
+            ],
+            "id": "listing-84f701a8d068db98a448aee20d9d7107",
+            "externalId": "387",
+            "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+            "title": "맥심282호 치어리더 차영현 편 2026년11월호 B형",
+            "format": "physical",
+            "status": "active",
+            "priceMinor": 9600,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "Physical publisher product; delivery charges not stated on reviewed page",
+            "observedAt": "2026-10-25T12:50:00+08:00",
+            "lastSeenAt": "2026-10-25T12:50:00+08:00",
+            "source": {
+              "id": "maxim-korea-manual",
+              "name": "MAXIM Korea publisher store (manual public page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ]
+      },
+      {
+        "gallery": [
+          {
+            "id": 84449,
+            "entityType": "edition",
+            "entityId": "korea-maxim-2026-11-print-s-subscription",
+            "mediaType": "cover",
+            "originalUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+            "storageUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+            "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+            "isPrimary": true,
+            "createdAt": "2026-10-25T12:52:13.368535+08:00",
+            "updatedAt": "2026-10-25T12:52:13.368535+08:00"
+          }
+        ],
+        "publisherProfile": {
+          "id": "publisher-20c7913da8b7fe2ed167b5bfc9a5c50d49f8789f0bd84471482ebe5c0e0a1044",
+          "name": "와이미디어"
+        },
+        "id": "korea-maxim-2026-11-print-s-subscription",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "와이미디어",
+        "editionVariant": "S형",
+        "contentSummary": "MAXIM November 2026 No.282 subscriber-only S-type print edition. Public publisher artwork explicitly prints No.282 S type, subscriber-only limited edition and 치어리더 차영현. Exact original S release day, page count, dimensions, ISBN and ordinary single-copy price remain unknown; A/B date and KRW9,600 offers are not copied into S. Only the exact public S cover is referenced remotely; no pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+        "seriesName": "MAXIM",
+        "editionLabel": "November 2026 subscriber-only S-type print issue",
+        "coverUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "records": [
+    {
+      "edition": {
+        "publisherCompanyId": "publisher-20c7913da8b7fe2ed167b5bfc9a5c50d49f8789f0bd84471482ebe5c0e0a1044",
+        "productLineId": 93,
+        "originalCoverUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+        "id": "korea-maxim-2026-11-print-a",
+        "workId": "korea-maxim-2026-11-cha-young-hyun",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "와이미디어",
+        "releaseDate": "2026-10-24T08:00:00+08:00",
+        "releasePrecision": "day",
+        "editionVariant": "A형",
+        "contentSummary": "MAXIM November 2026 No.282 A형 print edition. Publisher explicitly credits cheerleader 차영현 and release 2026-10-24, with current ordinary KRW9,600 price and enabled cart. Advertised supplement: 책속부록: 치어리더 차영현/미스맥심 박수민 스페셜 브로마이드. Lineup/supplement names are not additional cover credits. Pages, dimensions and ISBN unverified. Exact publisher cover and seven public product-preview panels are referenced remotely; no pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+        "seriesName": "MAXIM",
+        "editionLabel": "November 2026 A-type print issue",
+        "coverUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+        "status": "published",
+        "createdAt": "2026-10-25T12:52:13.827419+08:00",
+        "updatedAt": "2026-10-25T12:52:13.827419+08:00"
+      },
+      "editionMedia": [
+        {
+          "id": 84427,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-a",
+          "mediaType": "cover",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": true,
+          "createdAt": "2026-10-25T12:52:13.368535+08:00",
+          "updatedAt": "2026-10-25T12:52:13.368535+08:00"
+        },
+        {
+          "id": 84428,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-a",
+          "mediaType": "publisher_cover",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": true,
+          "createdAt": "2026-10-25T12:52:13.953037+08:00",
+          "updatedAt": "2026-10-25T12:52:13.953037+08:00"
+        },
+        {
+          "id": 84429,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-a",
+          "mediaType": "publisher_sample_001",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536948619o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536948619o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:13.979977+08:00",
+          "updatedAt": "2026-10-25T12:52:13.979977+08:00"
+        },
+        {
+          "id": 84430,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-a",
+          "mediaType": "publisher_sample_002",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536993224o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536993224o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:13.991722+08:00",
+          "updatedAt": "2026-10-25T12:52:13.991722+08:00"
+        },
+        {
+          "id": 84431,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-a",
+          "mediaType": "publisher_sample_003",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537038166o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537038166o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.035495+08:00",
+          "updatedAt": "2026-10-25T12:52:14.035495+08:00"
+        },
+        {
+          "id": 84432,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-a",
+          "mediaType": "publisher_sample_004",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537076485o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537076485o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.047962+08:00",
+          "updatedAt": "2026-10-25T12:52:14.047962+08:00"
+        },
+        {
+          "id": 84433,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-a",
+          "mediaType": "publisher_sample_005",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537129795o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537129795o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.063136+08:00",
+          "updatedAt": "2026-10-25T12:52:14.063136+08:00"
+        },
+        {
+          "id": 84434,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-a",
+          "mediaType": "publisher_sample_006",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537177626o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537177626o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.076802+08:00",
+          "updatedAt": "2026-10-25T12:52:14.076802+08:00"
+        },
+        {
+          "id": 84435,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-a",
+          "mediaType": "publisher_sample_007",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537216701o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537216701o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.090845+08:00",
+          "updatedAt": "2026-10-25T12:52:14.090845+08:00"
+        }
+      ],
+      "listingMedia": [
+        {
+          "id": 84436,
+          "entityType": "listing",
+          "entityId": "listing-ad584a1bec71c1bd8646dd7658e88508",
+          "mediaType": "listing_image",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": true,
+          "createdAt": "2026-10-25T12:52:14.487405+08:00",
+          "updatedAt": "2026-10-25T12:52:14.487405+08:00"
+        }
+      ],
+      "listings": [
+        {
+          "id": "listing-ad584a1bec71c1bd8646dd7658e88508",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "externalId": "388",
+          "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "title": "맥심282호 치어리더 차영현 편 2026년11월호 A형",
+          "formatCandidate": "physical",
+          "publisher": "와이미디어",
+          "editionVariant": "A형",
+          "status": "active",
+          "priceMinor": 9600,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "shippingText": "Physical publisher product; delivery charges not stated on reviewed page",
+          "imageUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "observedAt": "2026-10-25T12:49:00+08:00",
+          "lastSeenAt": "2026-10-25T12:49:00+08:00",
+          "source": {
+            "marketplaceId": 290,
+            "id": "maxim-korea-manual",
+            "name": "MAXIM Korea publisher store (manual public page capture)",
+            "region": "KR",
+            "locale": "ko-KR",
+            "timezone": "Asia/Seoul",
+            "kind": "bookstore",
+            "adapter": "manual_page_capture",
+            "accessMethod": "manual_browser",
+            "defaultFormat": "physical",
+            "allowedFormats": "physical",
+            "baseUrl": "https://www.maximkorea.net",
+            "allowedHosts": "www.maximkorea.net,maximkorea.net",
+            "capabilities": "catalog_discovery,listing_detail",
+            "accessStatus": "review",
+            "termsUrl": "https://www.maximkorea.net/members/members_law.php",
+            "ratePerMinute": 1,
+            "enabled": false,
+            "createdAt": "2026-10-23T23:26:50.504513+08:00",
+            "updatedAt": "2026-10-25T12:52:14.133702+08:00"
+          },
+          "createdAt": "2026-10-25T12:50:00+08:00",
+          "updatedAt": "2026-10-25T12:52:14.29925+08:00"
+        }
+      ],
+      "observations": [
+        {
+          "id": "observation-129d93ce25e27becfd3e94b6e782268b0f10eb12",
+          "observationKey": "observation-129d93ce25e27becfd3e94b6e782268b0f10eb12",
+          "listingId": "listing-ad584a1bec71c1bd8646dd7658e88508",
+          "jobId": "manual-maxim-november-2026-publisher-20261025",
+          "parserVersion": "manual-page-capture-v1",
+          "observedAt": "2026-10-25T12:49:00+08:00",
+          "status": "active",
+          "format": "physical",
+          "priceMinor": 9600,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "shippingText": "Physical publisher product; delivery charges not stated on reviewed page",
+          "statusEvidence": "Live public MAXIM publisher A형 product checked on 2026-10-25. It explicitly credits 282호 표지모델 치어리더 차영현, issue November2026, release2026-10-24 and ordinary KRW9,600. Quantity control and enabled cart visible, no sold-out warning; no login/cart/checkout attempted. Advertised supplement: 책속부록: 치어리더 차영현/미스맥심 박수민 스페셜 브로마이드. This is an active physical publisher asking/retail price, not a completed sale. Page count/dimensions/ISBN and delivery charges unverified. Exact cover and seven public preview panels captured; title heading and unrelated imagery excluded.",
+          "timestampPrecision": "minute",
+          "createdAt": "2026-10-25T12:52:14.426687+08:00",
+          "updatedAt": "2026-10-25T12:52:14.426687+08:00"
+        }
+      ]
+    },
+    {
+      "edition": {
+        "publisherCompanyId": "publisher-20c7913da8b7fe2ed167b5bfc9a5c50d49f8789f0bd84471482ebe5c0e0a1044",
+        "productLineId": 93,
+        "originalCoverUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+        "id": "korea-maxim-2026-11-print-b",
+        "workId": "korea-maxim-2026-11-cha-young-hyun",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "와이미디어",
+        "releaseDate": "2026-10-24T08:00:00+08:00",
+        "releasePrecision": "day",
+        "editionVariant": "B형",
+        "contentSummary": "MAXIM November 2026 No.282 B형 print edition. Publisher explicitly credits cheerleader 차영현 and release 2026-10-24, with current ordinary KRW9,600 price and enabled cart. Advertised supplement: 책속부록: 치어리더 차영현/미스맥심 지니 스페셜 브로마이드. Lineup/supplement names are not additional cover credits. Pages, dimensions and ISBN unverified. Exact publisher cover and seven public product-preview panels are referenced remotely; no pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+        "seriesName": "MAXIM",
+        "editionLabel": "November 2026 B-type print issue",
+        "coverUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+        "status": "published",
+        "createdAt": "2026-10-25T12:52:14.560309+08:00",
+        "updatedAt": "2026-10-25T12:52:14.560309+08:00"
+      },
+      "editionMedia": [
+        {
+          "id": 84438,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-b",
+          "mediaType": "cover",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "isPrimary": true,
+          "createdAt": "2026-10-25T12:52:13.368535+08:00",
+          "updatedAt": "2026-10-25T12:52:13.368535+08:00"
+        },
+        {
+          "id": 84439,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-b",
+          "mediaType": "publisher_cover",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "isPrimary": true,
+          "createdAt": "2026-10-25T12:52:14.59128+08:00",
+          "updatedAt": "2026-10-25T12:52:14.59128+08:00"
+        },
+        {
+          "id": 84440,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-b",
+          "mediaType": "publisher_sample_001",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535852314o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535852314o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.603257+08:00",
+          "updatedAt": "2026-10-25T12:52:14.603257+08:00"
+        },
+        {
+          "id": 84441,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-b",
+          "mediaType": "publisher_sample_002",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535918503o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535918503o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.617171+08:00",
+          "updatedAt": "2026-10-25T12:52:14.617171+08:00"
+        },
+        {
+          "id": 84442,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-b",
+          "mediaType": "publisher_sample_003",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535967263o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535967263o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.629739+08:00",
+          "updatedAt": "2026-10-25T12:52:14.629739+08:00"
+        },
+        {
+          "id": 84443,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-b",
+          "mediaType": "publisher_sample_004",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536036564o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536036564o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.651112+08:00",
+          "updatedAt": "2026-10-25T12:52:14.651112+08:00"
+        },
+        {
+          "id": 84444,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-b",
+          "mediaType": "publisher_sample_005",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536090834o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536090834o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.663741+08:00",
+          "updatedAt": "2026-10-25T12:52:14.663741+08:00"
+        },
+        {
+          "id": 84445,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-b",
+          "mediaType": "publisher_sample_006",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536144932o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536144932o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.678596+08:00",
+          "updatedAt": "2026-10-25T12:52:14.678596+08:00"
+        },
+        {
+          "id": 84446,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-b",
+          "mediaType": "publisher_sample_007",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/387/editor_1792453619688o.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/387/editor_1792453619688o.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "isPrimary": false,
+          "createdAt": "2026-10-25T12:52:14.690312+08:00",
+          "updatedAt": "2026-10-25T12:52:14.690312+08:00"
+        }
+      ],
+      "listingMedia": [
+        {
+          "id": 84447,
+          "entityType": "listing",
+          "entityId": "listing-84f701a8d068db98a448aee20d9d7107",
+          "mediaType": "listing_image",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "isPrimary": true,
+          "createdAt": "2026-10-25T12:52:14.855539+08:00",
+          "updatedAt": "2026-10-25T12:52:14.855539+08:00"
+        }
+      ],
+      "listings": [
+        {
+          "id": "listing-84f701a8d068db98a448aee20d9d7107",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "externalId": "387",
+          "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "title": "맥심282호 치어리더 차영현 편 2026년11월호 B형",
+          "formatCandidate": "physical",
+          "publisher": "와이미디어",
+          "editionVariant": "B형",
+          "status": "active",
+          "priceMinor": 9600,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "shippingText": "Physical publisher product; delivery charges not stated on reviewed page",
+          "imageUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "observedAt": "2026-10-25T12:50:00+08:00",
+          "lastSeenAt": "2026-10-25T12:50:00+08:00",
+          "source": {
+            "marketplaceId": 290,
+            "id": "maxim-korea-manual",
+            "name": "MAXIM Korea publisher store (manual public page capture)",
+            "region": "KR",
+            "locale": "ko-KR",
+            "timezone": "Asia/Seoul",
+            "kind": "bookstore",
+            "adapter": "manual_page_capture",
+            "accessMethod": "manual_browser",
+            "defaultFormat": "physical",
+            "allowedFormats": "physical",
+            "baseUrl": "https://www.maximkorea.net",
+            "allowedHosts": "www.maximkorea.net,maximkorea.net",
+            "capabilities": "catalog_discovery,listing_detail",
+            "accessStatus": "review",
+            "termsUrl": "https://www.maximkorea.net/members/members_law.php",
+            "ratePerMinute": 1,
+            "enabled": false,
+            "createdAt": "2026-10-23T23:26:50.504513+08:00",
+            "updatedAt": "2026-10-25T12:52:14.133702+08:00"
+          },
+          "createdAt": "2026-10-25T12:50:00+08:00",
+          "updatedAt": "2026-10-25T12:52:14.782468+08:00"
+        }
+      ],
+      "observations": [
+        {
+          "id": "observation-3caeb5e0ffa7324adde8ab7113bf992938f58e3a",
+          "observationKey": "observation-3caeb5e0ffa7324adde8ab7113bf992938f58e3a",
+          "listingId": "listing-84f701a8d068db98a448aee20d9d7107",
+          "jobId": "manual-maxim-november-2026-publisher-20261025",
+          "parserVersion": "manual-page-capture-v1",
+          "observedAt": "2026-10-25T12:50:00+08:00",
+          "status": "active",
+          "format": "physical",
+          "priceMinor": 9600,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "shippingText": "Physical publisher product; delivery charges not stated on reviewed page",
+          "statusEvidence": "Live public MAXIM publisher B형 product checked on 2026-10-25. It explicitly credits 282호 표지모델 치어리더 차영현, issue November2026, release2026-10-24 and ordinary KRW9,600. Quantity control and enabled cart visible, no sold-out warning; no login/cart/checkout attempted. Advertised supplement: 책속부록: 치어리더 차영현/미스맥심 지니 스페셜 브로마이드. This is an active physical publisher asking/retail price, not a completed sale. Page count/dimensions/ISBN and delivery charges unverified. Exact cover and seven public preview panels captured; title heading and unrelated imagery excluded.",
+          "timestampPrecision": "minute",
+          "createdAt": "2026-10-25T12:52:14.828568+08:00",
+          "updatedAt": "2026-10-25T12:52:14.828568+08:00"
+        }
+      ]
+    },
+    {
+      "edition": {
+        "publisherCompanyId": "publisher-20c7913da8b7fe2ed167b5bfc9a5c50d49f8789f0bd84471482ebe5c0e0a1044",
+        "productLineId": 93,
+        "originalCoverUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+        "id": "korea-maxim-2026-11-print-s-subscription",
+        "workId": "korea-maxim-2026-11-cha-young-hyun",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "와이미디어",
+        "editionVariant": "S형",
+        "contentSummary": "MAXIM November 2026 No.282 subscriber-only S-type print edition. Public publisher artwork explicitly prints No.282 S type, subscriber-only limited edition and 치어리더 차영현. Exact original S release day, page count, dimensions, ISBN and ordinary single-copy price remain unknown; A/B date and KRW9,600 offers are not copied into S. Only the exact public S cover is referenced remotely; no pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+        "seriesName": "MAXIM",
+        "editionLabel": "November 2026 subscriber-only S-type print issue",
+        "coverUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+        "status": "published",
+        "createdAt": "2026-10-25T12:52:14.927606+08:00",
+        "updatedAt": "2026-10-25T12:52:14.927606+08:00"
+      },
+      "editionMedia": [
+        {
+          "id": 84449,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-s-subscription",
+          "mediaType": "cover",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": true,
+          "createdAt": "2026-10-25T12:52:13.368535+08:00",
+          "updatedAt": "2026-10-25T12:52:13.368535+08:00"
+        },
+        {
+          "id": 84450,
+          "entityType": "edition",
+          "entityId": "korea-maxim-2026-11-print-s-subscription",
+          "mediaType": "publisher_cover",
+          "originalUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+          "storageUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "isPrimary": true,
+          "createdAt": "2026-10-25T12:52:14.955472+08:00",
+          "updatedAt": "2026-10-25T12:52:14.955472+08:00"
+        }
+      ],
+      "listingMedia": null,
+      "listings": [],
+      "observations": null
+    }
+  ],
+  "source": {
+    "marketplaceId": 290,
+    "id": "maxim-korea-manual",
+    "name": "MAXIM Korea publisher store (manual public page capture)",
+    "region": "KR",
+    "locale": "ko-KR",
+    "timezone": "Asia/Seoul",
+    "kind": "bookstore",
+    "adapter": "manual_page_capture",
+    "accessMethod": "manual_browser",
+    "defaultFormat": "physical",
+    "allowedFormats": "physical",
+    "baseUrl": "https://www.maximkorea.net",
+    "allowedHosts": "www.maximkorea.net,maximkorea.net",
+    "capabilities": "catalog_discovery,listing_detail",
+    "accessStatus": "review",
+    "termsUrl": "https://www.maximkorea.net/members/members_law.php",
+    "ratePerMinute": 1,
+    "enabled": false,
+    "createdAt": "2026-10-23T23:26:50.504513+08:00",
+    "updatedAt": "2026-10-25T12:52:14.133702+08:00"
+  },
+  "verifiedAt": "2026-10-25T04:54:34.9662334Z",
+  "work": {
+    "originMarketId": 10544,
+    "id": "korea-maxim-2026-11-cha-young-hyun",
+    "slug": "korea-maxim-2026-11-cha-young-hyun",
+    "publicationType": "magazine_issue",
+    "issueMonth": "2026-11",
+    "issueNumber": "282",
+    "originalTitle": "맥심 MAXIM 2026. 11월호",
+    "englishTitle": "MAXIM November 2026",
+    "summary": "MAXIM November 2026 issue No.282. The publisher explicitly credits cheerleader 차영현 on A and B; the subscriber-only S cover also prints her name. A/B were published 2026-10-24 and display KRW9,600 each. Cover variants remain editions of one magazine issue, separate from standalone photobooks; S original release/specifications and ordinary single-copy price are unverified.",
+    "originCode": "KR",
+    "coverUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+    "status": "published",
+    "origin": {
+      "code": "",
+      "name": "",
+      "sortOrder": 0,
+      "createdAt": "0001-01-01T00:00:00Z",
+      "updatedAt": "0001-01-01T00:00:00Z"
+    },
+    "createdAt": "2026-10-25T12:52:13.776034+08:00",
+    "updatedAt": "2026-10-25T12:52:14.913682+08:00"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5022,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 174,
+    "log": "korean-maxim-november-2026-publisher-catalog-verify.log",
+    "exitCode": 0
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T15:08:30.0134259+08:00",
+  "checks": {
+    "editionMetadataPreserved": true,
+    "people": true,
+    "credits": true,
+    "media": true,
+    "oldListingsPreserved": true,
+    "oldObservationsPreserved": true,
+    "oneListingAdded": true,
+    "oneObservationAdded": true,
+    "dateStillUnknown": true,
+    "price": true,
+    "sourceDisabled": true,
+    "public": true
+  },
+  "before": "docs/korean-maxim-april-2025-s-ebay-before.json",
+  "readback": "docs/korean-maxim-april-2025-s-ebay-readback.json",
+  "goalComplete": false,
+  "cohortAudit": {
+    "passed": true,
+    "scope": {
+      "distinctObservationKeys": 372,
+      "editions": 208,
+      "explicitMediaReferences": 136,
+      "linkedListings": 361,
+      "listingItemReferences": 372,
+      "people": 144,
+      "records": 353,
+      "sources": 13,
+      "works": 110
+    },
+    "coverageTotals": {
+      "editionsWithoutActiveListing": 140,
+      "editionsWithoutListing": 5,
+      "magazine_issue_digital": 45,
+      "magazine_issue_physical": 84,
+      "missingCover": 178,
+      "missingPageCount": 85,
+      "missingReleaseDate": 8,
+      "photobook_digital": 62,
+      "photobook_physical": 17,
+      "releaseDateNotDayPrecision": 59
+    },
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "cumulativeValidation": {
+    "passed": true,
+    "records": 353,
+    "applied": false
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5026,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 179,
+    "databaseCounts": {
+      "listings": 8349,
+      "listing_observations": 8398,
+      "works": 6064,
+      "editions": 6825,
+      "sources": 34
+    },
+    "log": "korean-maxim-april-2025-s-ebay-catalog-verify.log"
+  }
+}

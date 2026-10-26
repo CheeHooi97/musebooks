@@ -1,0 +1,221 @@
+{
+  "capturedAt": "2026-10-25T13:53:21.9964213+08:00",
+  "method": "Manual rendered public YES24 introduction,contents and retail controls; no API",
+  "sourceUrl": "https://www.yes24.com/product/goods/119131898",
+  "modelSubjects": [
+    "고미오",
+    "이진",
+    "조남숙",
+    "이예림",
+    "박미숙",
+    "이지유",
+    "나효숙",
+    "정미경",
+    "황순향",
+    "박소연",
+    "한영선",
+    "장미화",
+    "진서현",
+    "고희정",
+    "초경화",
+    "김이정",
+    "신성훈",
+    "이미진"
+  ],
+  "subjectCount": 18,
+  "correctedOmission": "이지유",
+  "photographer": "임민경",
+  "photographerEvidence": "187 / 임민경(사진작가)",
+  "rawSpelling": "26 / 이 진",
+  "profiles": [
+    {
+      "slug": "model-970337c4566b12993b6fc67b9eb8fa5a3d6f1167d79bedfe0867b7ec773eb000",
+      "canonicalPublicName": "고미오",
+      "originalName": "고미오",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-eb3880c1c3f8210970b15c4c741d6e75d9128e6f18dd948226e8f52915e811fb",
+      "canonicalPublicName": "이진",
+      "originalName": "이진",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-8af3dfded8a20141ebdb19f6e87bdd1e41c084d96ec960d53e14590ac7b282ed",
+      "canonicalPublicName": "조남숙",
+      "originalName": "조남숙",
+      "englishName": "Jo Nam Suk",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/126289609",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-89e1816582befa56d458e71d949b0c87553a9faba9430f688bafded75a89bd90",
+      "canonicalPublicName": "이예림",
+      "originalName": "이예림",
+      "englishName": "Lee Ye Rim",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/126289609",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-a0ced7973947519b6ac2c1ee45eaae7aeccda5afa29d7cece2c63cc2e986bc43",
+      "canonicalPublicName": "박미숙",
+      "originalName": "박미숙",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-27bafb8bd97158a27141f3dba3bdaf9a75dd712394ab3c8d226aae2216a76300",
+      "canonicalPublicName": "이지유",
+      "originalName": "이지유",
+      "englishName": "Lee Ji Yu",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/126289609",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-a8dd231f3d96db5eafe59f6f0022a866936f4f8610bf07be47a7dba20244b4d1",
+      "canonicalPublicName": "나효숙",
+      "originalName": "나효숙",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-6df0e5a8baf6e930278a9eb305c9ed9087a3d0f1b9d51d07ddb1ed27e9b6ad86",
+      "canonicalPublicName": "정미경",
+      "originalName": "정미경",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-ae9a54d7ffc08f5e1935270800f68f6062b3917fbf14fa5e3945c1f0c33a1258",
+      "canonicalPublicName": "황순향",
+      "originalName": "황순향",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-36d4fca29c51750c51b6a4424e41fedc906c26e22821359b88fb5673adf6ebf8",
+      "canonicalPublicName": "박소연",
+      "originalName": "박소연",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-e161bf8dfdb472d1ec19a2ff8d292a2a995fcd36895b2e668309fb55cc9f65de",
+      "canonicalPublicName": "한영선",
+      "originalName": "한영선",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-9210dc0173e33afbef133d531c35e6081948b6c7f59d0b751d90e4f987a0b160",
+      "canonicalPublicName": "장미화",
+      "originalName": "장미화",
+      "englishName": "Jang mi hwa",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/126289609",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-feec65418f36fc208081114ffcfe88d0c8a5b373081de73f7ea642e7fb6ed11e",
+      "canonicalPublicName": "진서현",
+      "originalName": "진서현",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-ba44b89e42dd570db2ab83c87b42f5a804156831902c61f22b8b38b1fe1b5e9c",
+      "canonicalPublicName": "고희정",
+      "originalName": "고희정",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-9847e49640357aa8c7a30b39e58b312d37dbde7260f9b3f74697179f986e0538",
+      "canonicalPublicName": "초경화",
+      "originalName": "초경화",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-936b38306dc85dfa4f448f6aa024873da9c38c8d58ae3397ea99812e742408e2",
+      "canonicalPublicName": "김이정",
+      "originalName": "김이정",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-983825e2f507c0b37992af8dda6f91034d506f17bf4c03afa5b3d867205b1dba",
+      "canonicalPublicName": "신성훈",
+      "originalName": "신성훈",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/119131898",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    },
+    {
+      "slug": "model-fe527b581ffb30c92ec71e8ba4672fc1d07b3a5cc8ed6d45d905787786d784d6",
+      "canonicalPublicName": "이미진",
+      "originalName": "이미진",
+      "englishName": "Lee Mi Jin",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/126289609",
+      "profileSourceConfidence": "publisher_supplied_model_contents"
+    }
+  ],
+  "newMissingSourceProfiles": [
+    "고미오",
+    "이진",
+    "박미숙",
+    "나효숙",
+    "정미경",
+    "황순향",
+    "박소연",
+    "한영선",
+    "진서현",
+    "고희정",
+    "초경화",
+    "김이정",
+    "신성훈"
+  ],
+  "retail": {
+    "externalId": "119131898",
+    "observationId": "yes24-20261025-briller-live-print",
+    "editionId": "korea-the-briller-senior-models-2023-print-yes24",
+    "url": "https://www.yes24.com/product/goods/119131898",
+    "title": "The Briller (더 브리에)",
+    "status": "active",
+    "priceMinor": 49500,
+    "currency": "KRW",
+    "priceType": "fixed",
+    "format": "physical",
+    "publisher": "북엠",
+    "editionVariant": "Hardcover",
+    "observedAt": "2026-10-25T13:53:21.9964213+08:00",
+    "statusEvidence": "Live rendered YES24 product checked2026-10-25: senior-model fashion anthology,hardcover,release2023-05-24,248pages,210×297×20mm,ISBN9791192584027,listKRW55000,sellingKRW49500,판매중,quantity/cart/immediate-purchase controls,free domestic shipping anddomestic-only notice. Contents name18 model subjects including이지유 and separately임민경(사진작가); event/show heading excluded from person list. Earlier stale49500unknown observation preserved. No login,cart,purchase,API,image reuse or guessed romanization.",
+    "timestampPrecision": "minute",
+    "shippingText": "Free domestic shipping; domestic delivery only"
+  },
+  "listPriceKRW": 55000,
+  "releaseDate": "2023-05-24",
+  "pageCount": 248,
+  "dimensions": "210×297×20mm",
+  "isbn": "9791192584027",
+  "imageAction": "No new image URL accepted; reusepermissionunconfirmed",
+  "limits": "Book-context model subjects; no private identity,agency,birthdate or homonym merge. Photographer not a model subject of this work. Existing verified profile source/Englishname retained."
+}

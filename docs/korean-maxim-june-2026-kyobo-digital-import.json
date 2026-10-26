@@ -1,0 +1,94 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-06-kim-woohyun-digital",
+      "slug": "korea-maxim-2026-06-kim-woohyun-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-06",
+      "issueNumber": "277",
+      "originalTitle": "맥심 MAXIM 2026. 6월호",
+      "englishTitle": "MAXIM June 2026",
+      "summary": "MAXIM June 2026, issue No.277. Public Kyobo contents explicitly credit 김우현. A/B print, existing YES24 digital PDF and independently verified Kyobo PDF are kept separate; Kyobo-specific183pages and70.26MB are not transferred to the unverified YES24 file or physical editions.",
+      "originCode": "KR",
+      "coverUrl": ""
+    },
+    "coverPerson": {
+      "slug": "model-2854011c6bab5b9cc4475762fd7dc090d49a5a66359c0a069bd6e04e935f7ee0",
+      "canonicalPublicName": "김우현",
+      "originalName": "김우현",
+      "englishName": "Kim Woo-hyun",
+      "personType": "model",
+      "verificationSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013081612",
+      "profileSourceConfidence": "explicit_ebook_contents_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-06-digital-kyobo-pdf",
+      "workId": "korea-maxim-2026-06-kim-woohyun-digital",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-06-01T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 183,
+      "editionVariant": "PDF (Kyobo)",
+      "contentSummary": "Kyobo-specific June2026 PDF:183pages,70.26MB,released2026-06-01,digitalISSN25083597. Public contents explicitly표지모델 김우현. Ordinary purchaseKRW5500; conditional coupon4950 excluded. Purchase button enabled; sam subscription is separate. TTS listed available; printing/storage/editing restrictions and DRM apply. Print supplements are not included. Separate Kyobo-linked print date2026-05-26 is not transferred to A/B print or YES24PDF metadata. No ISBN shown; eISSN not stored as ISBN. No preview,reader,download,login,purchase or image collected.",
+      "metadataSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013081612",
+      "seriesName": "MAXIM",
+      "editionLabel": "June 2026 Kyobo digital PDF (183 pages)",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "kyobo-kr-digital-manual",
+      "name": "Kyobo Korea ebook (manual public page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "digital_store",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "digital",
+      "allowedFormats": "digital",
+      "baseUrl": "https://ebook-product.kyobobook.co.kr",
+      "allowedHosts": "ebook-product.kyobobook.co.kr",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.kyobobook.co.kr/policy",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-kyobo-maxim-june-2026-digital-20261025",
+      "sourceId": "kyobo-kr-digital-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:39:21.4274451+08:00",
+      "items": [
+        {
+          "externalId": "E000013081612",
+          "observationId": "kyobo-20261025-maxim-june-digital-E000013081612",
+          "editionId": "korea-maxim-2026-06-digital-kyobo-pdf",
+          "url": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013081612",
+          "title": "맥심 MAXIM 2026.6월호",
+          "status": "active",
+          "priceMinor": 5500,
+          "currency": "KRW",
+          "priceType": "digital",
+          "format": "digital",
+          "digitalAccess": "authorized_store",
+          "publisher": "와이미디어",
+          "editionVariant": "PDF (Kyobo)",
+          "shippingText": "Digital purchase; no shipping; print supplements and sam subscription excluded",
+          "observedAt": "2026-10-25T14:39:21.4274451+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Kyobo ebook page2026-10-25:PDF70.26MB,183pages,release2026-06-01,digitalISSN25083597; ordinary소장KRW5500 and enabled eBook purchase control. KRW4950 labelled coupon price,not ordinary price. Public목차 explicitly표지모델 김우현. Kyobo-linked print release2026-05-26 is context only,not transferred to print/YES24PDF. This retailer-specific PDF is separate because the YES24 file was not directly verified. No age verification,login,preview,paid reader,download,purchase or images accessed."
+        }
+      ]
+    }
+  }
+]

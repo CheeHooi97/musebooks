@@ -1,0 +1,57 @@
+{
+  "observedAt":"2026-10-23T21:52:00+08:00",
+  "method":"Manual live public product/seller-page browser review; no retailer API",
+  "issueMonth":"2024-03",
+  "pageCount":192,
+  "dimensions":"210×297mm (A4)",
+  "weightGrams":518,
+  "listPriceKRW":8900,
+  "lastDisplayedSalePriceKRW":8450,
+  "retailState":"All three variants show sold-out/discontinued messaging",
+  "seriesUrl":"https://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=1170976",
+  "coverCreditSource":"https://www.yes24.com/product/goods/125313325",
+  "specialCoverCreditSource":"https://www.wikitree.co.kr/articles/929660",
+  "dateConflict":"Aladin lists A on 2024-02-21 and B/C on 2024-02-01. The contemporaneous C-cover report describes issuance on 2024-02-24. Preserve retailer-specific date assertions with this conflict; a single original publication day is unresolved.",
+  "imageState":"Reuse permission unconfirmed; no cover or gallery copied",
+  "variants":[
+    {
+      "key":"a","variant":"A형","itemId":"334832870","isbn":"K202938155","releaseDate":"2024-02-21",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=334832870",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=334832870&start=newproduct",
+      "displayedActiveCount":8,"displayedPages":1,
+      "offers":[
+        {"itemId":"336218000","seller":"강지윤","condition":"최상","priceKRW":3000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"336216749","seller":"강지윤","condition":"최상","priceKRW":3000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"336216716","seller":"강지윤","condition":"최상","priceKRW":3000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"336216666","seller":"강지윤","condition":"최상","priceKRW":3000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"336216807","seller":"강지윤","condition":"최상","priceKRW":4000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"336213433","seller":"강지윤","condition":"최상","priceKRW":4000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"336285901","seller":"최예진","condition":"중","priceKRW":4000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"404452475","seller":"SunA","condition":"최상","priceKRW":10000,"shippingText":"택배 3,500원, 반값택배 2,400원"}
+      ]
+    },
+    {
+      "key":"b","variant":"B형","itemId":"334833428","isbn":"K372938155","releaseDate":"2024-02-01",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=334833428",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=334833428&start=newproduct",
+      "displayedActiveCount":5,"displayedPages":1,
+      "offers":[
+        {"itemId":"390194839","seller":"김민수","condition":"최상","priceKRW":20000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"385604752","seller":"P. J. Stahl","condition":"중","priceKRW":20000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"395470220","seller":"알낳아딘 중고서점","condition":"상","priceKRW":28900,"shippingText":"택배 3,000원"},
+        {"itemId":"375804050","seller":"허책방","condition":"상","priceKRW":28900,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"365483510","seller":"P. J. Stahl","condition":"상","priceKRW":35000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"368228558","seller":"김민수","condition":"최상","priceKRW":16700,"shippingText":"택배 3,500원, 도서/산간 6,200원, 반값택배 2,400원","status":"completed","evidence":"Exact live seller page explicitly says 판매완료되었습니다. No sale date or actual paid price is shown; KRW 16,700 is the completed listing's displayed asking amount."}
+      ]
+    },
+    {
+      "key":"c","variant":"C형","itemId":"334834532","isbn":"K922938259","releaseDate":"2024-02-01",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=334834532",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=334834532&start=newproduct",
+      "displayedActiveCount":1,"displayedPages":1,
+      "offers":[
+        {"itemId":"349147972","seller":"김민수","condition":"최상","priceKRW":23000,"shippingText":"택배 3,500원, 반값택배 2,400원"}
+      ]
+    }
+  ]
+}

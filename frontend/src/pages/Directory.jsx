@@ -35,13 +35,13 @@ export default function Directory({ kind, search }) {
       <div className={models ? "person-grid person-grid--directory" : "publisher-list"}>
         {result.data.items.map(entry => models ?
           <a key={entry.id} className="person-card" href={`/models/${encodeURIComponent(entry.id)}`}>
-            <span className="person-card__portrait">{showCatalogImages && entry.coverUrl ? <img src={entry.coverUrl} alt="" loading="lazy" /> : <span aria-hidden="true">{entry.name.slice(0, 1)}</span>}</span>
+            {showCatalogImages && <span className="person-card__portrait">{entry.coverUrl ? <img src={entry.coverUrl} alt="" loading="lazy" /> : <span aria-hidden="true">{entry.name.slice(0, 1)}</span>}</span>}
             <strong>{entry.name}</strong>
             {entry.originalName && entry.originalName !== entry.name && <small>{entry.originalName}</small>}
             <span>{entry.workCount} {t(entry.workCount === 1 ? "publication" : "publications")} · {entry.editionCount} {t(entry.editionCount === 1 ? "edition" : "editions")}</span>
           </a> :
           <a key={entry.id} className="publisher-row" href={`/publishers/${encodeURIComponent(entry.id)}`}>
-            <span className="publisher-row__thumb">{showCatalogImages && entry.coverUrl ? <img src={entry.coverUrl} alt="" loading="lazy" /> : <span aria-hidden="true">{entry.name.slice(0, 1)}</span>}</span>
+            {showCatalogImages && <span className="publisher-row__thumb">{entry.coverUrl ? <img src={entry.coverUrl} alt="" loading="lazy" /> : <span aria-hidden="true">{entry.name.slice(0, 1)}</span>}</span>}
             <strong>{entry.name}</strong>
             <span>{entry.workCount} {t(entry.workCount === 1 ? "publication" : "publications")}</span>
             <span>{entry.editionCount} {t(entry.editionCount === 1 ? "edition" : "editions")}</span>

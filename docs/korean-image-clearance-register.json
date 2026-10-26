@@ -1,0 +1,3405 @@
+{
+  "generatedAt": "2026-10-25T15:10:46.0493458+08:00",
+  "input": "korean-maxim-issue-review.json",
+  "inputRecordCount": 353,
+  "method": "Read-only local manifest inventory; no network requests, downloads or database writes",
+  "distinctAssetUrls": 121,
+  "referenceOccurrences": 255,
+  "explicitMediaReferences": 136,
+  "approvedAssets": 0,
+  "unconfirmedAssets": 121,
+  "runtimeFinding": {
+    "modelFile": "backend/model/catalog_identity.go",
+    "publicResponseFile": "backend/model/catalog_response.go",
+    "mediaPermissionFieldPresent": false,
+    "publicGalleryChecks": "URL safety, source URL and duplicate URL checks; not an exact-asset permission check",
+    "limitation": "This inventory does not gate runtime image delivery or prove any license. Do not describe catalog gallery checks as permission verification."
+  },
+  "assets": [
+    {
+      "assetUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+          "usage": "publisherMedia",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-digital",
+          "sourceId": null,
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+          "usage": "edition.coverUrl",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-digital",
+          "sourceId": null,
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+          "usage": "edition.coverUrl",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-digital",
+          "sourceId": "apple-books-jp-manual",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+          "usage": "publisherMedia",
+          "workId": "korea-pyo-eunji-enbukyoku-2023",
+          "editionId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+          "sourceId": null,
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+          "usage": "work.coverUrl",
+          "workId": "korea-pyo-eunji-enbukyoku-2023",
+          "editionId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+          "sourceId": null,
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+          "usage": "edition.coverUrl",
+          "workId": "korea-pyo-eunji-enbukyoku-2023",
+          "editionId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+          "sourceId": null,
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+          "usage": "work.coverUrl",
+          "workId": "korea-pyo-eunji-enbukyoku-2023",
+          "editionId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+          "sourceId": "apple-books-jp-manual",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+          "usage": "edition.coverUrl",
+          "workId": "korea-pyo-eunji-enbukyoku-2023",
+          "editionId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+          "sourceId": "apple-books-jp-manual",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.aladin.co.kr/img/img_content/8997148613_01.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.aladin.co.kr/img/img_content/8997148613_01.jpg",
+          "usage": "media",
+          "workId": "korea-lee-sung-kyung-be-joyful",
+          "editionId": "korea-lee-sung-kyung-be-joyful-print-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=77364450",
+          "mediaType": "listing_image_001"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/img/img_content/8997148613_01.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-lee-sung-kyung-be-joyful",
+          "editionId": "korea-lee-sung-kyung-be-joyful-print-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=77364450",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.aladin.co.kr/product/39657/58/cover500/k142130193_1.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39657/58/cover500/k142130193_1.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-07-babian-digital",
+          "editionId": "korea-maxim-2026-07-babian-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396575889",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39657/58/cover500/k142130193_1.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-07-babian-digital",
+          "editionId": "korea-maxim-2026-07-babian-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396575889",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39657/58/cover500/k142130193_1.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-07-babian-digital",
+          "editionId": "korea-maxim-2026-07-babian-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396575889",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.aladin.co.kr/product/39657/60/cover500/k202130193_1.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39657/60/cover500/k202130193_1.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-07-babian-digital",
+          "editionId": "korea-maxim-2026-07-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396576004",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39657/60/cover500/k202130193_1.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-07-babian-digital",
+          "editionId": "korea-maxim-2026-07-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396576004",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39657/60/cover500/k202130193_1.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-07-babian-digital",
+          "editionId": "korea-maxim-2026-07-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396576004",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+          "editionId": "korea-maxim-2026-08-seo-yeojin-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885034",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+          "editionId": "korea-maxim-2026-08-seo-yeojin-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885034",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+          "editionId": "korea-maxim-2026-08-seo-yeojin-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885034",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+          "editionId": "korea-maxim-2026-08-seo-yeojin-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885034",
+          "mediaType": "listing_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+          "editionId": "korea-maxim-2026-08-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885187",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39888/50/cover500/k952130723_1.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+          "editionId": "korea-maxim-2026-08-digital-kyobo-pdf",
+          "sourceId": "kyobo-kr-digital-manual",
+          "sourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013351170",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.aladin.co.kr/product/39888/51/cover500/k932130723_1.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39888/51/cover500/k932130723_1.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+          "editionId": "korea-maxim-2026-08-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885187",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39888/51/cover500/k932130723_1.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+          "editionId": "korea-maxim-2026-08-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885187",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/39888/51/cover500/k932130723_1.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-08-seo-yeojin-digital",
+          "editionId": "korea-maxim-2026-08-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398885187",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.aladin.co.kr/product/40289/4/cover500/k412131583_1.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/40289/4/cover500/k412131583_1.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402890491",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/40289/4/cover500/k412131583_1.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.yes24.com/product/goods/196908942",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/40289/4/cover500/k412131583_1.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402890491",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.aladin.co.kr/product/40289/7/cover500/k432131583_1.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/40289/7/cover500/k432131583_1.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402890707",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/40289/7/cover500/k432131583_1.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402890707",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/40289/7/cover500/k432131583_1.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402890707",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.aladin.co.kr/product/40491/4/cover500/k702131214_1.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/40491/4/cover500/k702131214_1.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=404910497",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/40491/4/cover500/k702131214_1.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=404910497",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.aladin.co.kr/product/40491/5/cover500/k842131214_1.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/40491/5/cover500/k842131214_1.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=404910553",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/40491/5/cover500/k842131214_1.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=404910553",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.aladin.co.kr/product/7736/44/cover500/8997148613_1.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/7736/44/cover500/8997148613_1.jpg",
+          "usage": "media",
+          "workId": "korea-lee-sung-kyung-be-joyful",
+          "editionId": "korea-lee-sung-kyung-be-joyful-print-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=77364450",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/7736/44/cover500/8997148613_1.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-lee-sung-kyung-be-joyful",
+          "editionId": "korea-lee-sung-kyung-be-joyful-print-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=77364450",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/7736/44/cover500/8997148613_1.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-lee-sung-kyung-be-joyful",
+          "editionId": "korea-lee-sung-kyung-be-joyful-print-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=77364450",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/7736/44/cover500/8997148613_1.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-lee-sung-kyung-be-joyful",
+          "editionId": "korea-lee-sung-kyung-be-joyful-print-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=77364450",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.aladin.co.kr/product/7736/44/cover500/8997148613_1.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-lee-sung-kyung-be-joyful",
+          "editionId": "korea-lee-sung-kyung-be-joyful-print-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=77364450",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.yes24.com/goods/116981923/XL",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.yes24.com/goods/116981923/XL",
+          "usage": "media",
+          "workId": "korea-kim-seolhwa-26",
+          "editionId": "korea-kim-seolhwa-26-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/116981923/XL",
+          "usage": "publisherMedia",
+          "workId": "korea-kim-seolhwa-26",
+          "editionId": "korea-kim-seolhwa-26-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/116981923/XL",
+          "usage": "work.coverUrl",
+          "workId": "korea-kim-seolhwa-26",
+          "editionId": "korea-kim-seolhwa-26-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/116981923/XL",
+          "usage": "edition.coverUrl",
+          "workId": "korea-kim-seolhwa-26",
+          "editionId": "korea-kim-seolhwa-26-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/116981923/XL",
+          "usage": "listing.imageUrl",
+          "workId": "korea-kim-seolhwa-26",
+          "editionId": "korea-kim-seolhwa-26-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "media",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-digital-yes24-pdf",
+          "sourceId": "yes24-kr",
+          "sourceUrl": "https://www.yes24.com/product/goods/197225466",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-digital-yes24-pdf",
+          "sourceId": "yes24-kr",
+          "sourceUrl": "https://www.yes24.com/product/goods/197225466",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-digital-yes24-pdf",
+          "sourceId": "yes24-kr",
+          "sourceUrl": "https://www.yes24.com/product/goods/197225466",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-digital-yes24-pdf",
+          "sourceId": "yes24-kr",
+          "sourceUrl": "https://www.yes24.com/product/goods/197225466",
+          "mediaType": "listing_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/196908942",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.yes24.com/product/goods/196908942",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402890707",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": "joongna-kr-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/goods/197225466/XL",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-digital-kyobo-pdf",
+          "sourceId": "kyobo-kr-digital-manual",
+          "sourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013637393",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+          "usage": "media",
+          "workId": "korea-go-so-young-santorini",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/416604",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-go-so-young-santorini",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/416604",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-go-so-young-santorini",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/416604",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-go-so-young-santorini",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/416604",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-go-so-young-santorini",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/416604",
+          "mediaType": "listing_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-go-so-young-santorini",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.yes24.com/product/goods/416604",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-go-so-young-santorini",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.yes24.com/product/goods/416604",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-go-so-young-santorini",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "sourceId": "kyobo-kr-print-manual",
+          "sourceUrl": "https://www.yes24.com/product/goods/416604",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-go-so-young-santorini",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "sourceId": "kyobo-kr-print-manual",
+          "sourceUrl": "https://www.yes24.com/product/goods/416604",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://image.yes24.com/momo/TopCate4082/MidCate009/408189518.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate4082/MidCate009/408189518.jpg",
+          "usage": "media",
+          "workId": "korea-kim-seolhwa-26",
+          "editionId": "korea-kim-seolhwa-26-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+          "mediaType": "listing_image_001"
+        },
+        {
+          "assetUrl": "https://image.yes24.com/momo/TopCate4082/MidCate009/408189518.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-kim-seolhwa-26",
+          "editionId": "korea-kim-seolhwa-26-print-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/116981923",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://img2.joongna.com/media/original/2026/09/30/17907493905359os_S1WD0.jpg?impolicy=resize&format=webp",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://img2.joongna.com/media/original/2026/09/30/17907493905359os_S1WD0.jpg?impolicy=resize&format=webp",
+          "usage": "media",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": "joongna-kr-manual",
+          "sourceUrl": "https://web.joongna.com/product/232833048",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://img2.joongna.com/media/original/2026/09/30/17907493905359os_S1WD0.jpg?impolicy=resize&format=webp",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": "joongna-kr-manual",
+          "sourceUrl": "https://web.joongna.com/product/232833048",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://img2.joongna.com/media/original/2026/10/17/1792243262292CO4_wyeRz.jpg?impolicy=resize&format=webp",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://img2.joongna.com/media/original/2026/10/17/1792243262292CO4_wyeRz.jpg?impolicy=resize&format=webp",
+          "usage": "media",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": "joongna-kr-manual",
+          "sourceUrl": "https://web.joongna.com/product/233309433",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://img2.joongna.com/media/original/2026/10/17/1792243262292CO4_wyeRz.jpg?impolicy=resize&format=webp",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": "joongna-kr-manual",
+          "sourceUrl": "https://web.joongna.com/product/233309433",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://img2.joongna.com/media/original/2026/10/23/1792733116164znX_0XA7v.jpg?impolicy=resize&format=webp",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://img2.joongna.com/media/original/2026/10/23/1792733116164znX_0XA7v.jpg?impolicy=resize&format=webp",
+          "usage": "media",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": "joongna-kr-manual",
+          "sourceUrl": "https://web.joongna.com/product/233463669",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://img2.joongna.com/media/original/2026/10/23/1792733116164znX_0XA7v.jpg?impolicy=resize&format=webp",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": "joongna-kr-manual",
+          "sourceUrl": "https://web.joongna.com/product/233463669",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+          "usage": "media",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-digital",
+          "sourceId": "apple-books-jp-manual",
+          "sourceUrl": "https://books.apple.com/jp/book/dj-soda%E5%86%99%E7%9C%9F%E9%9B%86-candid/id6480587148",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+          "usage": "edition.coverUrl",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-digital",
+          "sourceId": "apple-books-jp-manual",
+          "sourceUrl": "https://books.apple.com/jp/book/dj-soda%E5%86%99%E7%9C%9F%E9%9B%86-candid/id6480587148",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+          "usage": "listing.imageUrl",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-digital",
+          "sourceId": "apple-books-jp-manual",
+          "sourceUrl": "https://books.apple.com/jp/book/dj-soda%E5%86%99%E7%9C%9F%E9%9B%86-candid/id6480587148",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/files/111Sold_Out_600x.png?v=1737367082",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/111Sold_Out_600x.png?v=1737367082",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-fanclub-first-2022",
+          "editionId": "korea-pyo-eunji-fanclub-first-2022-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/111Sold_Out_600x.png?v=1737367082",
+          "usage": "listing.imageUrl",
+          "workId": "korea-pyo-eunji-fanclub-first-2022",
+          "editionId": "korea-pyo-eunji-fanclub-first-2022-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.29_grande.png?v=1707811313",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.29_grande.png?v=1707811313",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+          "mediaType": "listing_image_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.45_grande.png?v=1707811313",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.45_grande.png?v=1707811313",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+          "mediaType": "listing_image_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+          "usage": "work.coverUrl",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002115/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+          "usage": "edition.coverUrl",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002115/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+          "usage": "listing.imageUrl",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+          "mediaType": "listing_cover_reference"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+          "usage": "work.coverUrl",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-digital",
+          "sourceId": null,
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+          "usage": "work.coverUrl",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-digital",
+          "sourceId": "apple-books-jp-manual",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+          "usage": "work.coverUrl",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+          "sourceId": "maruzen-junkudo-manual",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002115/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+          "usage": "edition.coverUrl",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+          "sourceId": "maruzen-junkudo-manual",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002115/",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/files/FC_889c5806-e423-44fb-899e-037945f4900a_grande.jpg?v=1707811313",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/FC_889c5806-e423-44fb-899e-037945f4900a_grande.jpg?v=1707811313",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-rondo-2023",
+          "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+          "mediaType": "listing_image_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/files/Sold_Out_1_grande.png?v=1724490231",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/files/Sold_Out_1_grande.png?v=1724490231",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-fanclub-first-2022",
+          "editionId": "korea-pyo-eunji-fanclub-first-2022-jp-visit-cover",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+          "mediaType": "listing_image_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-fanclub-first-2022",
+          "editionId": "korea-pyo-eunji-fanclub-first-2022-jp-visit-cover",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+          "usage": "work.coverUrl",
+          "workId": "korea-pyo-eunji-fanclub-first-2022",
+          "editionId": "korea-pyo-eunji-fanclub-first-2022-jp-visit-cover",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+          "usage": "edition.coverUrl",
+          "workId": "korea-pyo-eunji-fanclub-first-2022",
+          "editionId": "korea-pyo-eunji-fanclub-first-2022-jp-visit-cover",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/A___No1_grande.png?v=1724745338",
+          "usage": "listing.imageUrl",
+          "workId": "korea-pyo-eunji-fanclub-first-2022",
+          "editionId": "korea-pyo-eunji-fanclub-first-2022-jp-visit-cover",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-first-visit-to-japan-commemorative-edition?variant=41660028846262",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/products/FjXeDhfUoAA429M_55dbc58f-3f8c-4f15-b7b5-c0b89b102539_grande.jpg?v=1672028251",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/FjXeDhfUoAA429M_55dbc58f-3f8c-4f15-b7b5-c0b89b102539_grande.jpg?v=1672028251",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-fanclub-photo-book-2022",
+          "editionId": "korea-pyo-eunji-fanclub-photo-book-2022-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-photo-book-2022",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/FjXeDhfUoAA429M_55dbc58f-3f8c-4f15-b7b5-c0b89b102539_grande.jpg?v=1672028251",
+          "usage": "work.coverUrl",
+          "workId": "korea-pyo-eunji-fanclub-photo-book-2022",
+          "editionId": "korea-pyo-eunji-fanclub-photo-book-2022-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-photo-book-2022",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/FjXeDhfUoAA429M_55dbc58f-3f8c-4f15-b7b5-c0b89b102539_grande.jpg?v=1672028251",
+          "usage": "edition.coverUrl",
+          "workId": "korea-pyo-eunji-fanclub-photo-book-2022",
+          "editionId": "korea-pyo-eunji-fanclub-photo-book-2022-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-photo-book-2022",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/FjXeDhfUoAA429M_55dbc58f-3f8c-4f15-b7b5-c0b89b102539_grande.jpg?v=1672028251",
+          "usage": "listing.imageUrl",
+          "workId": "korea-pyo-eunji-fanclub-photo-book-2022",
+          "editionId": "korea-pyo-eunji-fanclub-photo-book-2022-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-photo-book-2022",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/products/FkAmJnZUoAIkDc8_grande.jpg?v=1672028252",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/FkAmJnZUoAIkDc8_grande.jpg?v=1672028252",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-fanclub-photo-book-2022",
+          "editionId": "korea-pyo-eunji-fanclub-photo-book-2022-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-photo-book-2022",
+          "mediaType": "listing_image_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/products/FkbK-FDUEAALv1C_grande.jpg?v=1672028251",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/FkbK-FDUEAALv1C_grande.jpg?v=1672028251",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-fanclub-photo-book-2022",
+          "editionId": "korea-pyo-eunji-fanclub-photo-book-2022-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-photo-book-2022",
+          "mediaType": "listing_image_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://pyoeunji.com/cdn/shop/products/FkVEyX4VUAE5rBR_grande.jpg?v=1672028252",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://pyoeunji.com/cdn/shop/products/FkVEyX4VUAE5rBR_grande.jpg?v=1672028252",
+          "usage": "media",
+          "workId": "korea-pyo-eunji-fanclub-photo-book-2022",
+          "editionId": "korea-pyo-eunji-fanclub-photo-book-2022-jp-print",
+          "sourceId": "pyoeunji-jp-manual",
+          "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-photo-book-2022",
+          "mediaType": "listing_image_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/1929c2250f9f68dd539ba392f8bfe25cc94a7334.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/1929c2250f9f68dd539ba392f8bfe25cc94a7334.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-print",
+          "sourceId": null,
+          "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-print",
+          "sourceId": null,
+          "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-print",
+          "sourceId": null,
+          "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-print",
+          "sourceId": null,
+          "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-print",
+          "sourceId": "maruzen-junkudo-manual",
+          "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-print",
+          "sourceId": "maruzen-junkudo-manual",
+          "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-digital",
+          "sourceId": "apple-books-jp-manual",
+          "sourceUrl": "https://books.apple.com/jp/book/dj-soda%E5%86%99%E7%9C%9F%E9%9B%86-candid/id6480587148",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/9784087901566_170.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://wpb.shueisha.co.jp/gravure/info/images/9784087901566_170.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-dj-soda-candid-2024",
+          "editionId": "korea-dj-soda-candid-2024-jp-print",
+          "sourceId": null,
+          "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/369/369_img_1768857556_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/369_img_1768857556_1215.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/369_img_1768857556_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/369_img_1768857556_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/369_img_1768857556_1215.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642725589o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642725589o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642809617o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642809617o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "publisher_sample_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642850866o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642850866o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "publisher_sample_004"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642912013o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642912013o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "publisher_sample_005"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642975649o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688642975649o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "publisher_sample_006"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688643041876o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_17688643041876o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "publisher_sample_007"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_1768958454182o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/369/editor_1768958454182o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "listing_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-digital-kyobo-pdf",
+          "sourceId": "kyobo-kr-digital-manual",
+          "sourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012542859",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img3_1768857720_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img3_1768857720_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/370_img3_1768857720_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644442187o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644442187o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644491413o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644491413o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "publisher_sample_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644535175o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644535175o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "publisher_sample_004"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644582855o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644582855o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "publisher_sample_005"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644639542o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_17688644639542o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "publisher_sample_006"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_1768864469579o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_1768864469579o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "publisher_sample_007"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_1768958476915o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/370/editor_1768958476915o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-02",
+          "editionId": "korea-maxim-2026-02-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720612875o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720612875o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720645295o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720645295o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720692111o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720692111o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "publisher_sample_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720743424o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720743424o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "publisher_sample_004"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720780942o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720780942o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "publisher_sample_005"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720821642o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720821642o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "publisher_sample_006"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720862983o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720862983o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "publisher_sample_007"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720909589o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720909589o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "publisher_sample_008"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "listing_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-digital-kyobo-pdf",
+          "sourceId": "kyobo-kr-digital-manual",
+          "sourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012761487",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img3_1773970623_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img3_1773970623_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/374_img3_1773970623_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721500141o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721500141o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721529912o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721529912o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721572268o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721572268o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "publisher_sample_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721627665o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721627665o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "publisher_sample_004"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721675771o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721675771o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "publisher_sample_005"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721723916o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721723916o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "publisher_sample_006"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721774008o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721774008o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "publisher_sample_007"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_1773972181958o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/374/editor_1773972181958o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "mediaType": "publisher_sample_008"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140443622o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140443622o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140607742o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140607742o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "publisher_sample_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140653182o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140653182o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "publisher_sample_004"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140712728o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140712728o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "publisher_sample_005"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140817446o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140817446o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "publisher_sample_006"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17873000694652o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17873000694652o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "publisher_sample_007"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17873003787083o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/383/editor_17873003787083o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/195411512",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-digital-yes24-pdf",
+          "sourceId": "yes24-kr",
+          "sourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013514799",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "yes24-kr-print",
+          "sourceUrl": "https://www.yes24.com/product/goods/195411513",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "listing_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-digital-kyobo-pdf",
+          "sourceId": "kyobo-kr-digital-manual",
+          "sourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013514799",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img3_1787299829_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img3_1787299829_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/384_img3_1787299829_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_1787214428654o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_1787214428654o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "publisher_sample_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_1787214432729o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_1787214432729o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "publisher_sample_004"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_17872144416957o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_17872144416957o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "publisher_sample_005"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_17872144496601o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_17872144496601o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "publisher_sample_006"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873001764517o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873001764517o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "publisher_sample_007"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873002459329o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873002459329o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873003290712o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873003290712o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-09-mua-digital",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/385/385_img_1789948852_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/385_img_1789948852_1215.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/385_img_1789948852_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/385_img_1789948852_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/385_img_1789948852_1215.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528217582o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528217582o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528259908o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528259908o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528298885o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528298885o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "publisher_sample_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528342225o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528342225o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "publisher_sample_004"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528378677o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528378677o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "publisher_sample_005"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528411358o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_17899528411358o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "publisher_sample_006"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_1789953142375o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/385/editor_1789953142375o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-b-aladin",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+          "mediaType": "publisher_sample_007"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/386/386_img_1789949028_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/386_img_1789949028_1215.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/386_img_1789949028_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/386_img_1789949028_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/386_img_1789949028_1215.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "listing_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/386/386_img3_1789949029_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/386_img3_1789949029_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/386_img3_1789949029_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/386_img3_1789949029_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-print-s-subscription",
+          "sourceId": "joongna-kr-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_1789953257097o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_1789953257097o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532614046o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532614046o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532656882o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532656882o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "publisher_sample_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532698639o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532698639o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "publisher_sample_004"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532739616o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532739616o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "publisher_sample_005"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532784573o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532784573o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "publisher_sample_006"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532825765o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/386/editor_17899532825765o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-10-joo-digital",
+          "editionId": "korea-maxim-2026-10-joo-print-a-yes24",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+          "mediaType": "publisher_sample_007"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "listing_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535852314o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535852314o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535918503o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535918503o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535967263o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924535967263o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "publisher_sample_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536036564o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536036564o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "publisher_sample_004"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536090834o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536090834o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "publisher_sample_005"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536144932o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_17924536144932o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "publisher_sample_006"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_1792453619688o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/387/editor_1792453619688o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "publisher_sample_007"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "usage": "media",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "listing_image"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "usage": "listing.imageUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "listing_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "canonical_cover_reference"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+          "usage": "work.coverUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-b",
+          "sourceId": "aladin-kr-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "publisher_cover"
+        },
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+          "usage": "edition.coverUrl",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-s-subscription",
+          "sourceId": null,
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "canonical_cover_reference"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536948619o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536948619o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "publisher_sample_001"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536993224o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924536993224o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "publisher_sample_002"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537038166o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537038166o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "publisher_sample_003"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537076485o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537076485o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "publisher_sample_004"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537129795o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537129795o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "publisher_sample_005"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537177626o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537177626o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "publisher_sample_006"
+        }
+      ]
+    },
+    {
+      "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537216701o.jpg",
+      "reuseStatus": "unconfirmed",
+      "approvedForMuseBooksReuse": false,
+      "permissionEvidenceUrl": null,
+      "scope": "Exact URL only; source attribution does not establish permission",
+      "references": [
+        {
+          "assetUrl": "https://www.maximkorea.net/magdb/file/388/editor_17924537216701o.jpg",
+          "usage": "publisherMedia",
+          "workId": "korea-maxim-2026-11-cha-young-hyun",
+          "editionId": "korea-maxim-2026-11-print-a",
+          "sourceId": "maxim-korea-manual",
+          "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+          "mediaType": "publisher_sample_007"
+        }
+      ]
+    }
+  ],
+  "goalComplete": false
+}

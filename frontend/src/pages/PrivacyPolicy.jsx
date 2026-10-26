@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
     return (<div className="page-width">
       <SeoHead path="/privacy-policy" />
       <PageHeader eyebrow={t("Legal")} title={t("Privacy Policy")} intro={t("This policy explains how MuseBooks handles information when you use the MuseBooks website and Android app.")}>
-        <p className="eyebrow">{t("Last updated October 8, 2026")}</p>
+        <p className="eyebrow">{t("Last updated October 23, 2026")}</p>
       </PageHeader>
 
         <div className="article-layout">
@@ -36,7 +36,8 @@ export default function PrivacyPolicyPage() {
             <section id="data-we-handle">
               <h2>{t("Information the service handles")}</h2>
               <p>{t("When you browse the catalog, your browser or app requests catalog and origin information from the MuseBooks API and cover images from our image host. Those requests necessarily expose network details such as your IP address, the requested page or resource, and browser or app information to the systems delivering the response. Hosting and delivery providers may process limited technical logs to operate, secure, and troubleshoot the service.")}</p>
-              <p>{t("The current website and Android app do not provide account sign-up or login. They do not send your saved collection or appearance setting to the MuseBooks API. The app does not include advertising or analytics SDKs.")}</p>
+              <p>{t("MuseBooks offers Google sign-in and email/password accounts. We store your email address, verification status, a password hash for password accounts, and your Google account identifier and profile image when you use Google. Password accounts must verify their email address. Resend delivers verification and password reset emails. We use this information to authenticate you and protect your account.")}</p>
+              <p>{t("Website sign-in uses an HttpOnly session cookie. The app stores a session token on your device. Sessions expire after 30 days and are revoked when you sign out; resetting your password revokes your other sessions. Your collection and preferences remain on your device. Account pages do not load website advertising.")}</p>
             </section>
 
             <section id="device-storage">

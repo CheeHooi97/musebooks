@@ -1,0 +1,81 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T14:59:55.5752276+08:00",
+  "checks": {
+    "issue": true,
+    "editionCount": true,
+    "existingEditionsUnchanged": true,
+    "people": true,
+    "creditContent": true,
+    "observationsPreserved": true,
+    "listingsPreserved": true,
+    "mediaPreserved": true,
+    "metadata": true,
+    "price": true,
+    "counts": true,
+    "sourceDisabled": true,
+    "public": true
+  },
+  "before": "korean-maxim-march-2026-kyobo-digital-before.json",
+  "readback": "korean-maxim-march-2026-kyobo-digital-readback.json",
+  "workId": "korea-maxim-2026-03-kim-doa-digital",
+  "editionId": "korea-maxim-2026-03-digital-kyobo-pdf",
+  "pageCount": 181,
+  "fileSizeMB": "93.12",
+  "displayedISSN": "22334270",
+  "digitalReleaseDate": "2026-03-01",
+  "ordinaryActivePurchaseKRW": 5500,
+  "couponExcludedKRW": 4950,
+  "TTS": "listed available",
+  "newEditions": 1,
+  "newListings": 1,
+  "newObservations": 1,
+  "newMedia": 0,
+  "sourceDisabledReview": true,
+  "goalComplete": false,
+  "formatSeparation": "YES24PDF and print metadata,credit,history unchanged;181pages/ISSN scoped to Kyobo PDF",
+  "reusePermission": "unconfirmed; no images accepted",
+  "cohortAudit": {
+    "passed": true,
+    "scope": {
+      "distinctObservationKeys": 369,
+      "editions": 206,
+      "explicitMediaReferences": 136,
+      "linkedListings": 358,
+      "listingItemReferences": 369,
+      "people": 144,
+      "records": 350,
+      "sources": 12,
+      "works": 110
+    },
+    "coverageTotals": {
+      "editionsWithoutActiveListing": 140,
+      "editionsWithoutListing": 5,
+      "magazine_issue_digital": 43,
+      "magazine_issue_physical": 84,
+      "missingCover": 176,
+      "missingPageCount": 85,
+      "missingReleaseDate": 8,
+      "photobook_digital": 62,
+      "photobook_physical": 17,
+      "releaseDateNotDayPrecision": 59
+    },
+    "linkedPeopleWithoutVerificationSource": 0,
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5026,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 177,
+    "databaseCounts": {
+      "sources": 33,
+      "listing_observations": 8395,
+      "listings": 8346,
+      "editions": 6823,
+      "works": 6064
+    },
+    "log": "korean-maxim-march-2026-kyobo-digital-catalog-verify.log"
+  }
+}

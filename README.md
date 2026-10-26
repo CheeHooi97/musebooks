@@ -72,6 +72,37 @@ does not call eBay, Rakuten, JD, Shopee, Lazada, or any other marketplace API.
 
 ## Verification
 
+Accounts support Google sign-in and email/password registration at `/login`
+and `/register`. Password accounts must confirm the six-digit emailed code
+before signing in. Verification codes expire after 10 minutes, allow five
+attempts, and can be resent after one minute. `/forgot-password` sends a
+separate reset code valid for 15 minutes; resetting revokes other sessions.
+Saved books and preferences remain on the current device.
+
+Configure `SITE_URL`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`,
+`GOOGLE_REDIRECT_URL`, `RESEND_API_KEY`, `EMAIL_FROM`, and a separate
+`EMAIL_VERIFICATION_SECRET` (32+ random characters) in the backend environment.
+Register the exact Google callback URL
+`https://musebooks.my/v1/auth/oauth/google/callback` in Google Cloud. The
+email sender must be verified in Resend. No provider secrets enter the
+frontend build. Google and email registration show an unavailable state until
+their configuration exists; verification is never bypassed.
+
+Apply the additive account migration before starting the updated API:
+`go run ./cmd/catalog-migrate --apply` from `backend/` with the database owner's
+environment. Legacy accounts remain unverified. Duplicate legacy email
+addresses must be reconciled before the unique email index can be created.
+The deploy workflow does not apply database migrations automatically.
+
+Website sessions use a host-only HttpOnly, SameSite cookie; production cookies
+require HTTPS. Native bundles use bearer sessions and open Google in the
+system browser, returning through `my.musebooks.app://auth/callback`. The
+callback contains a short-lived, single-use exchange code bound to the app's
+secret verifier. Session tokens are never put into callback URLs. Rebuild
+and sync native projects for the new URL scheme. Legacy `/v1/user` and
+`/v1/admin` management routes now require the configured internal scraper
+token; signing in does not grant management access.
+
 ```powershell
 cd backend; go test ./...
 cd ../scraper; go test ./...

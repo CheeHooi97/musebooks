@@ -1,0 +1,77 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T14:36:36.8696115+08:00",
+  "checks": {
+    "identity": true,
+    "bibliographyPreserved": true,
+    "people": true,
+    "creditContent": true,
+    "observationsPreserved": true,
+    "listingsPreserved": true,
+    "mediaPreserved": true,
+    "activeObservation": true,
+    "counts": true,
+    "seller": true,
+    "publicAsking": true,
+    "separateHistory": true
+  },
+  "before": "korean-photobook-uhyun-joongna-active-before.json",
+  "readback": "korean-photobook-uhyun-joongna-active-readback.json",
+  "workId": "korea-uhyun-eye-photobook-2021",
+  "editionId": "korea-uhyun-eye-2021-print-yes24",
+  "activeAskingPriceKRW": 50000,
+  "shippingKRW": 3000,
+  "itemPlusDisplayedShippingKRW": 53000,
+  "seller": "mongoose08",
+  "condition": "중고, 구성품 없음; seller claim",
+  "newEditions": 0,
+  "newListings": 1,
+  "newObservations": 1,
+  "newMedia": 0,
+  "goalComplete": false,
+  "remainingBibliography": "Page count,ISBN,dimensions and images remain unknown",
+  "reusePermission": "unconfirmed; no seller images or book pages accepted",
+  "cohortAudit": {
+    "passed": true,
+    "scope": {
+      "distinctObservationKeys": 361,
+      "editions": 198,
+      "explicitMediaReferences": 136,
+      "linkedListings": 350,
+      "listingItemReferences": 361,
+      "people": 144,
+      "records": 342,
+      "sources": 11,
+      "works": 110
+    },
+    "coverageTotals": {
+      "editionsWithoutActiveListing": 140,
+      "editionsWithoutListing": 5,
+      "magazine_issue_digital": 35,
+      "magazine_issue_physical": 84,
+      "missingCover": 168,
+      "missingPageCount": 85,
+      "missingReleaseDate": 8,
+      "photobook_digital": 62,
+      "photobook_physical": 17,
+      "releaseDateNotDayPrecision": 59
+    },
+    "linkedPeopleWithoutVerificationSource": 0,
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5026,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 169,
+    "databaseCounts": {
+      "works": 6064,
+      "listings": 8338,
+      "editions": 6815,
+      "listing_observations": 8387,
+      "sources": 32
+    },
+    "log": "korean-photobook-uhyun-joongna-active-catalog-verify.log"
+  }
+}

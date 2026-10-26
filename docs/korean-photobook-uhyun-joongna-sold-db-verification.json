@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T14:33:50.07279+08:00",
+  "checks": {
+    "identity": true,
+    "bibliographyPreserved": true,
+    "people": true,
+    "creditContent": true,
+    "observationsPreserved": true,
+    "listingsPreserved": true,
+    "mediaPreserved": true,
+    "soldObservation": true,
+    "counts": true,
+    "seller": true,
+    "publicSold": true
+  },
+  "before": "korean-photobook-uhyun-joongna-sold-before.json",
+  "initialReadback": "korean-photobook-uhyun-joongna-sold-readback.json",
+  "readback": "korean-photobook-uhyun-joongna-sold-public-readback.json",
+  "workId": "korea-uhyun-eye-photobook-2021",
+  "editionId": "korea-uhyun-eye-2021-print-yes24",
+  "sellerMarkedSoldAdvertisedPriceKRW": 70000,
+  "finalPaymentVerified": false,
+  "listingDate": "2023-08-01",
+  "saleDateUnknown": true,
+  "newEditions": 0,
+  "newListings": 1,
+  "newObservations": 1,
+  "newMedia": 0,
+  "importRetry": "First transaction failed condition varchar80 limit and rolled back; shortened display label, preserved full claim in evidence; exactly one final listing/observation verified",
+  "publicClassificationCorrection": "Native sold status now maps to marketplace_sold alongside completed; stored observation unchanged",
+  "goalComplete": false,
+  "remainingBibliography": "Page count,ISBN,dimensions and images remain unknown; seller supplied none",
+  "reusePermission": "unconfirmed; no seller images or book pages accepted",
+  "cohortAudit": {
+    "passed": true,
+    "scope": {
+      "distinctObservationKeys": 360,
+      "editions": 198,
+      "explicitMediaReferences": 136,
+      "linkedListings": 349,
+      "listingItemReferences": 360,
+      "people": 144,
+      "records": 341,
+      "sources": 11,
+      "works": 110
+    },
+    "coverageTotals": {
+      "editionsWithoutActiveListing": 141,
+      "editionsWithoutListing": 5,
+      "magazine_issue_digital": 35,
+      "magazine_issue_physical": 84,
+      "missingCover": 168,
+      "missingPageCount": 85,
+      "missingReleaseDate": 8,
+      "photobook_digital": 62,
+      "photobook_physical": 17,
+      "releaseDateNotDayPrecision": 59
+    },
+    "linkedPeopleWithoutVerificationSource": 0,
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5026,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 169,
+    "databaseCounts": {
+      "editions": 6815,
+      "works": 6064,
+      "listing_observations": 8386,
+      "listings": 8337,
+      "sources": 32
+    },
+    "log": "korean-photobook-uhyun-joongna-sold-catalog-verify.log"
+  }
+}

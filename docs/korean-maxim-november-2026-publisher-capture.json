@@ -1,0 +1,80 @@
+{
+  "observedAt": "2026-10-25T12:50:00+08:00",
+  "method": "Manual live public MAXIM Korea archive/product DOM and public image inspection; no API/key",
+  "archiveUrl": "https://www.maximkorea.net/magdb/magdb.php?lib=M",
+  "issue": {
+    "month": "2026-11",
+    "number": "282",
+    "title": "맥심 MAXIM 2026. 11월호",
+    "coverModel": "차영현",
+    "coverCreditEvidence": "A and B product descriptions explicitly say 282호 표지모델 치어리더 차영현. The public S cover prints No.282 S type, SUBSCRIBER ONLY LIMITED EDITION and 치어리더 차영현. Identity comes from printed credit, not face matching.",
+    "publisher": "와이미디어"
+  },
+  "editions": [
+    {
+      "variant": "A형",
+      "externalId": "388",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+      "observedAt": "2026-10-25T12:49:00+08:00",
+      "releaseDate": "2026-10-24",
+      "priceKRW": 9600,
+      "status": "active",
+      "availabilityEvidence": "Quantity field and enabled 장바구니 button; no sold-out warning, login/cart/checkout not attempted.",
+      "cover": "https://www.maximkorea.net/magdb/file/388/388_img_1792453511_1215.jpg",
+      "previews": [
+        "https://www.maximkorea.net/magdb/file/388/editor_17924536948619o.jpg",
+        "https://www.maximkorea.net/magdb/file/388/editor_17924536993224o.jpg",
+        "https://www.maximkorea.net/magdb/file/388/editor_17924537038166o.jpg",
+        "https://www.maximkorea.net/magdb/file/388/editor_17924537076485o.jpg",
+        "https://www.maximkorea.net/magdb/file/388/editor_17924537129795o.jpg",
+        "https://www.maximkorea.net/magdb/file/388/editor_17924537177626o.jpg",
+        "https://www.maximkorea.net/magdb/file/388/editor_17924537216701o.jpg"
+      ],
+      "supplement": "책속부록: 치어리더 차영현/미스맥심 박수민 스페셜 브로마이드",
+      "excludedHeading": "https://www.maximkorea.net/magdb/file/388/editor_17924536915062o.jpg"
+    },
+    {
+      "variant": "B형",
+      "externalId": "387",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=387",
+      "observedAt": "2026-10-25T12:50:00+08:00",
+      "releaseDate": "2026-10-24",
+      "priceKRW": 9600,
+      "status": "active",
+      "availabilityEvidence": "Quantity field and enabled 장바구니 button; no sold-out warning, login/cart/checkout not attempted.",
+      "cover": "https://www.maximkorea.net/magdb/file/387/387_img_1792453351_1215.jpg",
+      "previews": [
+        "https://www.maximkorea.net/magdb/file/387/editor_17924535852314o.jpg",
+        "https://www.maximkorea.net/magdb/file/387/editor_17924535918503o.jpg",
+        "https://www.maximkorea.net/magdb/file/387/editor_17924535967263o.jpg",
+        "https://www.maximkorea.net/magdb/file/387/editor_17924536036564o.jpg",
+        "https://www.maximkorea.net/magdb/file/387/editor_17924536090834o.jpg",
+        "https://www.maximkorea.net/magdb/file/387/editor_17924536144932o.jpg",
+        "https://www.maximkorea.net/magdb/file/387/editor_1792453619688o.jpg"
+      ],
+      "supplement": "책속부록: 치어리더 차영현/미스맥심 지니 스페셜 브로마이드",
+      "excludedHeading": "https://www.maximkorea.net/magdb/file/387/editor_1792453579516o.jpg"
+    },
+    {
+      "variant": "S형",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=388",
+      "releaseDate": null,
+      "priceKRW": null,
+      "status": "metadata_only",
+      "cover": "https://www.maximkorea.net/magdb/file/388/388_img3_1792453512_1215.jpg",
+      "previews": [],
+      "availabilityEvidence": "Public subscriber-only artwork and subscription link establish a distinct S cover edition, not an ordinary single-copy offer. Exact S release day, page count, dimensions, ISBN and ordinary price not verified."
+    }
+  ],
+  "images": {
+    "included": "Three exact edition covers and seven public description/preview panels per A/B product. The final A/B panels explicitly map A/B/S cover designs to the same issue; the S printed credit was read independently.",
+    "excluded": "Title-only heading panels, store logos, archive thumbnails, duplicate B-page S artwork and unrelated banners excluded. No paid B-cut content or gated archive item opened.",
+    "reuse": "Remote URL references with product-page provenance only; no pixels mirrored or reuse license asserted."
+  },
+  "format": "physical",
+  "language": "ko-KR",
+  "market": "KR",
+  "unknownSpecifications": "No page count, dimensions or ISBN stated on the reviewed publisher product pages. They remain blank/zero rather than copying October specifications.",
+  "sourceAccess": "Existing maxim-korea-manual source remains disabled/review. No permission inquiry, login, cart, purchase, subscription or paid reader action.",
+  "rejectedCoverCredits": "Miss Maxim lineup and bromide names 지니, 박수민, 소은, 첼설아 are not treated as cover credits. Only 차영현 is verified for A/B/S."
+}

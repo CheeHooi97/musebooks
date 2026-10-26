@@ -1,0 +1,80 @@
+[
+  {
+    "work": {
+      "id": "korea-uhyun-eye-photobook-2021",
+      "slug": "korea-uhyun-eye-photobook-2021",
+      "publicationType": "photobook",
+      "originalTitle": "우현-아이 화보집",
+      "summary": "Standalone physical photobook by Korean model 김우현. Public YES24 search supplies original product identity and unavailable retail price; the restricted detail is not accessed. A separate public Joongna seller listing supplies seller-marked-sold advertised price history, not new bibliography or verified final payment.",
+      "originCode": "KR",
+      "featuredNames": "김우현",
+      "coverUrl": ""
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-uhyun-eye-2021-print-yes24",
+      "workId": "korea-uhyun-eye-photobook-2021",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "우직스타즈",
+      "releaseDate": "2021-12-09T00:00:00Z",
+      "releasePrecision": "day",
+      "contentSummary": "우현-아이 화보집,author김우현,publisher우직스타즈,stored release2021-12-09 from prior YES24 public search evidence. Page count,ISBN,dimensions and gallery remain unknown; the YES24 detail gate is not bypassed. Joongna124752547 title identifies the same book and is marked판매완료,displayingKRW70000 and listing date2023.08.01. Seller닥터꽥꽥 says opened-only after buying unopened; claims are unverified. Advertised price on a seller-marked-sold listing is not independently verified final payment or sale date. Original retailKRW180000 stays separate. No paid book pages or image pixels collected.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/106517266",
+      "editionLabel": "2021 print photobook",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "joongna-kr-manual",
+      "name": "Joongna Korea seller listings (manual page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "marketplace",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://web.joongna.com",
+      "allowedHosts": "web.joongna.com",
+      "capabilities": "listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://web.joongna.com/terms",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "sourceId": "joongna-kr-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:31:48.3268949+08:00",
+      "items": [
+        {
+          "externalId": "124752547",
+          "observationId": "joongna-20261025-uhyun-sold-124752547",
+          "editionId": "korea-uhyun-eye-2021-print-yes24",
+          "url": "https://web.joongna.com/product/124752547",
+          "title": "우현-아이 김우현 화보집 판매합니다",
+          "sellerLocation": "닥터꽥꽥",
+          "condition": "중고; opened-only/like-new claimed by seller; unverified",
+          "status": "sold",
+          "priceMinor": 70000,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "우직스타즈",
+          "shippingText": "Shipping extra; fee requires seller inquiry, not contacted; direct/pickup options shown",
+          "observedAt": "2026-10-25T14:31:48.3268949+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Joongna exact seller page checked2026-10-25. Explicit판매완료 and sold-item notification popup,displayKRW70000,listing date2023.08.01,seller닥터꽥꽥. Title identifies우현-아이 김우현 화보집. Seller says bought unopened July31 then opened-only; condition claim not verified. Store seller-marked-sold advertised price, not independently verified payment or completed transaction amount; actual sale date unknown. Listing date is not publication date. Original YES24 retail history and bibliography remain unchanged. No contact,purchase,API,login,age verification or media collection."
+        }
+      ],
+      "jobId": "manual-joongna-uhyun-sold-20261025"
+    }
+  }
+]

@@ -22,7 +22,7 @@ export default defineConfig({
     async closeBundle() {
       if (!mobileBuild) { await buildSeo(outputDir, { siteURL }); return }
       const html = fs.readFileSync(path.join(outputDir, 'index.html'), 'utf8')
-      for (const route of ['books', 'models', 'publishers', 'active', 'sold', 'japan', 'saved', 'privacy-policy', 'about']) {
+      for (const route of ['books', 'models', 'publishers', 'active', 'sold', 'japan', 'saved', 'privacy-policy', 'about', 'login', 'register', 'verify-email', 'forgot-password', 'reset-password', 'account']) {
         fs.mkdirSync(path.join(outputDir, route), { recursive: true })
         fs.writeFileSync(path.join(outputDir, route, 'index.html'), html)
       }

@@ -1,0 +1,94 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-04-kim-nayeon-digital",
+      "slug": "korea-maxim-2026-04-kim-nayeon-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-04",
+      "issueNumber": "275",
+      "originalTitle": "맥심 MAXIM 2026. 4월호",
+      "englishTitle": "MAXIM April 2026",
+      "summary": "MAXIM April2026,issueNo.275. Public Kyobo PDF contents explicitly credit 치어리더 김나연,using the existing canonical 김나연 identity. Existing A/B/S print,YES24PDF,print-date assertions,prices and images remain preserved. Kyobo182pages/78.20MB are scoped only to its separate purchase PDF.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-5a743f11d69b3099ea76eb30351b2f0aff825d51495f1af83e002a3d26ca4378",
+      "canonicalPublicName": "김나연",
+      "originalName": "김나연",
+      "englishName": "Kim Na-yeon",
+      "personType": "model",
+      "verificationSourceUrl": "https://news.nate.com/view/20260323n18368",
+      "profileSourceConfidence": "cross_source_explicit_cover_report"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-04-digital-kyobo-pdf",
+      "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-04-01T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 182,
+      "editionVariant": "PDF (Kyobo)",
+      "contentSummary": "Kyobo-specific April2026 PDF:182pages,78.20MB,released2026-04-01,digitalISSN25083597. Public contents explicitly표지모델 치어리더 김나연; existing canonical 김나연 reused. Ordinary purchaseKRW5500; conditional coupon4950 excluded. Purchase enabled; sam separate; TTS listed available. No book ISBN shown; eISSN not stored as ISBN. Existing YES24PDF,A/B/S metadata,print-date assertions,cover credit,prices and images remain unchanged. No preview,reader,download,login,purchase or image collection.",
+      "metadataSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012761487",
+      "seriesName": "MAXIM",
+      "editionLabel": "April 2026 Kyobo digital PDF (182 pages)",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "kyobo-kr-digital-manual",
+      "name": "Kyobo Korea ebook (manual public page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "digital_store",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "digital",
+      "allowedFormats": "digital",
+      "baseUrl": "https://ebook-product.kyobobook.co.kr",
+      "allowedHosts": "ebook-product.kyobobook.co.kr",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.kyobobook.co.kr/policy",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-kyobo-maxim-april-2026-digital-20261025",
+      "sourceId": "kyobo-kr-digital-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:56:28.2818758+08:00",
+      "items": [
+        {
+          "externalId": "E000012761487",
+          "observationId": "kyobo-20261025-maxim-april-digital-E000012761487",
+          "editionId": "korea-maxim-2026-04-digital-kyobo-pdf",
+          "url": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012761487",
+          "title": "맥심 MAXIM 2026.4월호",
+          "status": "active",
+          "priceMinor": 5500,
+          "currency": "KRW",
+          "priceType": "digital",
+          "format": "digital",
+          "digitalAccess": "authorized_store",
+          "publisher": "와이미디어",
+          "editionVariant": "PDF (Kyobo)",
+          "shippingText": "Digital purchase; no shipping; print supplements and sam subscription excluded",
+          "observedAt": "2026-10-25T14:56:28.2818758+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Kyobo ebook page2026-10-25:PDF78.20MB,182pages,release2026-04-01,digitalISSN25083597. Ordinary소장KRW5500 and enabled purchase control; KRW4950 is coupon price,not ordinary. Public목차 explicitly표지모델 치어리더 김나연; existing canonical identity reused. TTS listed available. sam subscription excluded. File metadata scoped to Kyobo PDF,not YES24PDF or A/B/S print; prior print-date assertions preserved. No age verification,login,preview,reader,download,purchase or image collection."
+        }
+      ]
+    }
+  }
+]

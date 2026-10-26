@@ -6,6 +6,9 @@ import { fileURLToPath } from 'node:url'
 import { renderPublishedPage } from './seo-build.mjs'
 import { pageMarkdown } from './agent-files.mjs'
 import { SITE_URL } from '../src/lib/seo.js'
+import { CATALOG_LANGUAGES, languagePath } from '../src/lib/catalog-languages.js'
+import { renderLocalizedCatalog, localizedMarkdown } from './localized-catalog.mjs'
+import { stableMediaURLs } from './seo-build.mjs'
 
 const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[char]))
 const safeSegment = value => typeof value === 'string' && value.length > 0 && value.length <= 140 && value !== '.' && value !== '..' && !/[\/\\\u0000]/.test(value)
@@ -29,9 +32,12 @@ export async function publishImportedPages(outputDir, manifest, { apply = false,
   const plans = [], profiles = new Map(), refresh = new Set(manifest.refreshSlugs)
   const slugs = [...new Set(manifest.bookSlugs)]
   let skipped = 0, backup
-  const checkedTarget = async (kind, id) => {
+  const checkedTarget = async (kind, id, segment = '') => {
     if (!['books', 'models', 'publishers'].includes(kind) || !safeSegment(id)) throw new Error('Unsafe publication route')
-    const parent = path.join(root, kind)
+    if (segment && !CATALOG_LANGUAGES.some(item => item.segment === segment)) throw new Error('Unsafe language route')
+    const languageRoot = segment ? path.join(root, segment) : root
+    if (segment && await exists(languageRoot) && await fs.realpath(languageRoot) !== languageRoot) throw new Error('Symlinked language directory')
+    const parent = path.join(languageRoot, kind)
     if (await exists(parent) && await fs.realpath(parent) !== parent) throw new Error('Symlinked publication directory')
     const directory = path.join(parent, id)
     if (await exists(directory) && await fs.realpath(directory) !== directory) throw new Error('Symlinked publication route')
@@ -43,11 +49,18 @@ export async function publishImportedPages(outputDir, manifest, { apply = false,
     return response.json()
   }
   const plan = async (kind, id, data) => {
+    data = stableMediaURLs(data)
     const target = await checkedTarget(kind, id)
     const route = '/' + kind + '/' + encodeURIComponent(id)
     await stageFile(route, target, renderPublishedPage(template, route, data), false)
     // The markdown twin is staged and rolled back with its page.
     await stageFile(route + '.md', path.join(path.dirname(target) + '.md'), pageMarkdown(route, data, SITE_URL), true)
+    for (const language of CATALOG_LANGUAGES.filter(item => item.segment)) {
+      const localizedTarget = await checkedTarget(kind, id, language.segment)
+      const localizedRoute = languagePath(route, language.code)
+      await stageFile(localizedRoute, localizedTarget, renderLocalizedCatalog(template, route, data, language.code, SITE_URL), false)
+      await stageFile(localizedRoute + '.md', path.dirname(localizedTarget) + '.md', localizedMarkdown(route, data, language.code, SITE_URL), true)
+    }
   }
   const stageFile = async (route, target, bytes, markdown) => {
     const old = await exists(target) ? await fs.readFile(target, 'utf8') : null

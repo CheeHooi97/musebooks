@@ -1,0 +1,94 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-05-chae-sol-digital",
+      "slug": "korea-maxim-2026-05-chae-sol-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-05",
+      "issueNumber": "276",
+      "originalTitle": "맥심 MAXIM 2026. 5월호",
+      "englishTitle": "MAXIM May 2026",
+      "summary": "MAXIM May2026,issueNo.276. Public Kyobo PDF contents explicitly credit 미스맥심 채솔,using the existing canonical 채솔 identity. A/B print,YES24PDF and independently verified Kyobo180-page purchasePDF remain distinct; no file metadata is transferred to print or another store.",
+      "originCode": "KR",
+      "coverUrl": ""
+    },
+    "coverPerson": {
+      "slug": "model-6e0f1a36f652ffabf61a0618faa77506bc77489625f75279465a5c540e0bd14a",
+      "canonicalPublicName": "채솔",
+      "originalName": "채솔",
+      "englishName": "Chae Sol",
+      "personType": "model",
+      "verificationSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012932768",
+      "profileSourceConfidence": "explicit_ebook_contents_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-05-digital-kyobo-pdf",
+      "workId": "korea-maxim-2026-05-chae-sol-digital",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-05-01T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 180,
+      "editionVariant": "PDF (Kyobo)",
+      "contentSummary": "Kyobo-specific May2026 PDF:180pages,57.50MB,released2026-05-01,digitalISSN25083597. Public contents explicitly표지모델 미스맥심 채솔; existing canonical 채솔 reused. Ordinary purchaseKRW5500; conditional coupon4950 excluded. Purchase enabled; sam separate; TTS unavailable. No book ISBN shown; eISSN not stored as ISBN. Existing YES24PDF,A/B print metadata,cover credit,prices and images remain unchanged. No preview,reader,download,login,purchase or image collection.",
+      "metadataSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012932768",
+      "seriesName": "MAXIM",
+      "editionLabel": "May 2026 Kyobo digital PDF (180 pages)",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "kyobo-kr-digital-manual",
+      "name": "Kyobo Korea ebook (manual public page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "digital_store",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "digital",
+      "allowedFormats": "digital",
+      "baseUrl": "https://ebook-product.kyobobook.co.kr",
+      "allowedHosts": "ebook-product.kyobobook.co.kr",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.kyobobook.co.kr/policy",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-kyobo-maxim-may-2026-digital-20261025",
+      "sourceId": "kyobo-kr-digital-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:53:52.0526243+08:00",
+      "items": [
+        {
+          "externalId": "E000012932768",
+          "observationId": "kyobo-20261025-maxim-may-digital-E000012932768",
+          "editionId": "korea-maxim-2026-05-digital-kyobo-pdf",
+          "url": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012932768",
+          "title": "맥심 MAXIM 2026.5월호",
+          "status": "active",
+          "priceMinor": 5500,
+          "currency": "KRW",
+          "priceType": "digital",
+          "format": "digital",
+          "digitalAccess": "authorized_store",
+          "publisher": "와이미디어",
+          "editionVariant": "PDF (Kyobo)",
+          "shippingText": "Digital purchase; no shipping; print supplements and sam subscription excluded",
+          "observedAt": "2026-10-25T14:53:52.0526243+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public Kyobo ebook page2026-10-25:PDF57.50MB,180pages,release2026-05-01,digitalISSN25083597. Ordinary소장KRW5500 and enabled eBook purchase control; KRW4950 is coupon price,not ordinary. Public목차 explicitly표지모델 미스맥심 채솔; existing canonical model reused. TTS unavailable. sam subscription excluded. File metadata scoped only to Kyobo edition,not YES24PDF or A/B print. No age verification,login,preview,reader,download,purchase or image collection."
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "observedAt": "2026-10-23T22:09:00+08:00",
+  "method": "Manual live public product and seller-list browser review; no retailer API",
+  "issueMonth": "2025-02",
+  "pageCount": 192,
+  "dimensions": "210×297mm (A4)",
+  "weightGrams": 518,
+  "issn": "2233-4270",
+  "listPriceKRW": 8900,
+  "lastDisplayedSalePriceKRW": 8450,
+  "retailState": "All three variants show sold-out/discontinued messaging; sale prices are last displayed prices",
+  "supplement": "마비노기 영웅전 X MAXIM 2025 캘린더; advertised with all three retail editions. Inclusion with each used copy is unconfirmed.",
+  "seriesUrl": "https://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=1236135",
+  "coverCreditSources": ["https://www.yes24.com/product/goods/142231472", "https://press.mtime.co.kr/newsRead.php?no=1004747"],
+  "coverCredit": "박근나, 김서아, 려니; existing verified issue-level credits retained without claiming an exact A/B/C mapping",
+  "imageState": "Asset URLs retained as provenance only. Reuse permission unconfirmed; no cover or gallery copied or embedded.",
+  "variants": [
+    {
+      "key":"a", "variant":"A형", "itemId":"356413783", "isbn":"K282036609", "releaseDate":"2025-01-22",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=356413783",
+      "coverAssetUrl":"https://image.aladin.co.kr/product/35641/37/cover500/k282036609_1.jpg",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=356413783&start=newproduct",
+      "displayedActiveCount":1, "displayedPages":1,
+      "offers":[
+        {"itemId":"395631698","seller":"김민수","condition":"최상","priceKRW":10800,"shippingText":"택배 3,500원, 반값택배 2,400원"}
+      ]
+    },
+    {
+      "key":"b", "variant":"B형", "itemId":"356413956", "isbn":"K222036609", "releaseDate":"2025-01-22",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=356413956",
+      "coverAssetUrl":"https://image.aladin.co.kr/product/35641/39/cover500/k222036609_1.jpg",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=356413956&start=newproduct",
+      "displayedActiveCount":5, "displayedPages":1,
+      "offers":[
+        {"itemId":"372197022","seller":"김민수","condition":"상","priceKRW":10200,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"396480514","seller":"P. J. Stahl","condition":"중","priceKRW":15000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"401510830","seller":"P. J. Stahl","condition":"상","priceKRW":20000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"388550304","seller":"P. J. Stahl","condition":"상","priceKRW":20000,"shippingText":"택배 3,500원, 반값택배 2,400원"},
+        {"itemId":"386488357","seller":"P. J. Stahl","condition":"상","priceKRW":20000,"shippingText":"택배 3,500원, 반값택배 2,400원"}
+      ]
+    },
+    {
+      "key":"c", "variant":"C형", "itemId":"356414163", "isbn":"", "releaseDate":"2025-01-22",
+      "displayedBarcode":"9772233427046",
+      "barcodeNote":"Retailer labels this ISBN, but 977 is the ISSN-based serial barcode prefix. Do not store it as ISBN; the image filename is not independent ISBN evidence.",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=356414163",
+      "coverAssetUrl":"https://image.aladin.co.kr/product/35641/41/cover500/k382036609_1.jpg",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=356414163&start=newproduct",
+      "displayedActiveCount":2, "displayedPages":1,
+      "offers":[
+        {"itemId":"402267176","seller":"낭만시인","condition":"최상","priceKRW":25000,"shippingText":"택배 3,000원"},
+        {"itemId":"368780440","seller":"P. J. Stahl","condition":"상","priceKRW":30000,"shippingText":"택배 3,500원, 반값택배 2,400원"}
+      ]
+    }
+  ],
+  "offerStatusEvidence":"Every exact seller row exposes basket and immediate-purchase controls. Distinct item IDs preserve repeated seller/price entries; prices are asking amounts, active at observation time.",
+  "staleSearchDifferences":"An older C listing at KRW 13,000 is absent from the live inventory; no current availability is inferred. Item 368780440 is attributed to P. J. Stahl in the live row, differing from the stale search result's seller attribution. Live evidence is retained."
+}

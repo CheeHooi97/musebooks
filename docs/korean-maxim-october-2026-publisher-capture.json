@@ -1,0 +1,59 @@
+{
+  "observedAt": "2026-10-23T23:24:00+08:00",
+  "method": "Manual publisher archive/card navigation, public detail DOM review and visual review; no API/key",
+  "scope": "October 2026 A/B publisher offers, direct cover credits, public preview URLs and subscriber S metadata",
+  "archiveUrl": "https://www.maximkorea.net/magdb/magdb.php?lib=M",
+  "a": {
+    "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+    "externalId": "magdb-M-386",
+    "coverCredit": "281호 표지모델 미스맥심 쥬",
+    "publicationDate": "2026-09-24",
+    "priceKRW": 9600,
+    "cartEnabled": true,
+    "cover": "https://www.maximkorea.net/magdb/file/386/386_img_1789949028_1215.jpg",
+    "publicPreviewPanels": [
+      "https://www.maximkorea.net/magdb/file/386/editor_1789953257097o.jpg",
+      "https://www.maximkorea.net/magdb/file/386/editor_17899532614046o.jpg",
+      "https://www.maximkorea.net/magdb/file/386/editor_17899532656882o.jpg",
+      "https://www.maximkorea.net/magdb/file/386/editor_17899532698639o.jpg",
+      "https://www.maximkorea.net/magdb/file/386/editor_17899532739616o.jpg",
+      "https://www.maximkorea.net/magdb/file/386/editor_17899532784573o.jpg",
+      "https://www.maximkorea.net/magdb/file/386/editor_17899532825765o.jpg"
+    ],
+    "excludedEventBanner": "https://www.maximkorea.net/magdb/file/386/editor_17917673977418o.jpg"
+  },
+  "b": {
+    "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=385",
+    "externalId": "magdb-M-385",
+    "coverCredit": "281호 표지모델 미스맥심 조아",
+    "publicationDate": "2026-09-24",
+    "priceKRW": 9600,
+    "cartEnabled": true,
+    "cover": "https://www.maximkorea.net/magdb/file/385/385_img_1789948852_1215.jpg",
+    "publicPreviewPanels": [
+      "https://www.maximkorea.net/magdb/file/385/editor_17899528217582o.jpg",
+      "https://www.maximkorea.net/magdb/file/385/editor_17899528259908o.jpg",
+      "https://www.maximkorea.net/magdb/file/385/editor_17899528298885o.jpg",
+      "https://www.maximkorea.net/magdb/file/385/editor_17899528342225o.jpg",
+      "https://www.maximkorea.net/magdb/file/385/editor_17899528378677o.jpg",
+      "https://www.maximkorea.net/magdb/file/385/editor_17899528411358o.jpg",
+      "https://www.maximkorea.net/magdb/file/385/editor_1789953142375o.jpg"
+    ],
+    "excludedEventBanner": "https://www.maximkorea.net/magdb/file/385/editor_17917674181686o.jpg"
+  },
+  "s": {
+    "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=386",
+    "cover": "https://www.maximkorea.net/magdb/file/386/386_img3_1789949029_1215.jpg",
+    "evidence": "Publisher subscriber-only S-type label and visually inspected No.281 S type cover",
+    "releaseDate": null,
+    "pageCount": null,
+    "price": null,
+    "coverModel": "unverified; not inferred from face",
+    "alternativePublicImageReference": "https://www.maximkorea.net/magdb/file/385/385_img3_1789948853_1215.jpg"
+  },
+  "dateResolution": "Publisher confirms A/B September 24; retain Aladin September 23 as a conflicting retailer assertion. S date unknown.",
+  "deduplication": "Database lookup found existing PDF/A/B only, no JoA person name and no publisher source. Reuse A/B, add S metadata only; one new publisher source and two offer identities.",
+  "imageStorage": "Seventeen edition image references: A/B each one cover + seven public preview panels, S one cover. Two listing cover references repeat A/B URLs. Remote URLs only; no pixel mirroring or reuse license asserted.",
+  "access": "Only public ordinary detail and archive pages; no login/age gate, paid ebook or B-cut access, cart/purchase or contact. Other archive months remain discovery leads, outside this accepted batch.",
+  "sourceStatus": "Manual publisher source disabled/review"
+}

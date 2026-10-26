@@ -1,0 +1,46 @@
+{
+  "observedAt":"2026-10-23T22:43:00+08:00",
+  "method":"Manual public Joongna product-page browser review, with historical page-reader metadata for the unavailable older advertisement; no retailer API",
+  "issueMonth":"2025-04",
+  "issueNumber":"263호 (4월호)",
+  "editionVariant":"S형 (subscription)",
+  "coverPerson":"뮤아",
+  "coverCreditSource":"https://www.mimint.co.kr/bbs/view/news/S1N18/4757340?page=280&pageblock=271",
+  "editionIdentityEvidence":"Current exact listing title names MAXIM 263, April 2025 and 뮤아. Its rendered cover visibly prints 263 S type and subscriber-only edition. Existing contemporaneous reporting confirms 뮤아's April subscriber cover.",
+  "publicationDay":null,
+  "pageCount":null,
+  "metadataLimitations":"No original S-edition release date, page count, dimensions, ISBN or original retail price established. Do not copy A/B or PDF publication dates into this edition. Relative listing age '6 days ago' is not the magazine publication date.",
+  "termsUrl":"https://web.joongna.com/terms",
+  "postPolicyUrl":"https://web.joongna.com/post-policy",
+  "accessStatus":"review; automated collection disabled",
+  "offers":[
+    {
+      "itemId":"232133783",
+      "url":"https://web.joongna.com/product/232133783",
+      "title":"맥심 263호 한정판 뮤아 25년 4월호 미개봉 새제품",
+      "seller":"큐팔이",
+      "condition":"새상품, 미개봉; seller description",
+      "configurationClaim":"구성품 전체 포함; seller claim",
+      "priceKRW":29500,
+      "shippingText":"무료배송; CJ대한통운 택배 (seller description)",
+      "status":"active",
+      "evidence":"Live page shows KRW 29,500, free parcel shipping, seller 큐팔이, and chat/purchase buttons. No purchase/contact attempted. The earlier search snapshot's KRW 30,000 is not the current capture.",
+      "coverAssetProvenance":"https://img2.joongna.com/media/original/2026/09/04/1788499993542mdp_Nv3RC.jpg?impolicy=resize&format=webp"
+    },
+    {
+      "itemId":"228026820",
+      "url":"https://web.joongna.com/product/228026820",
+      "title":"맥심 263호 한정판 뮤아 25년 4월호 미개봉 새제품",
+      "seller":null,
+      "condition":"새상품, 미개봉; historical seller description",
+      "priceKRW":25000,
+      "shippingText":"무료배송; historical page snapshot",
+      "status":"unknown",
+      "historicalCrawlAgeLabel":"4 months ago",
+      "evidence":"Live page says 이 상품은 더 이상 판매되지 않아요. The historical exact-page snapshot supplies title, new/unopened description, asking KRW 25,000 and free shipping. This does not establish a completed transaction or paid amount; current availability is unavailable, represented as unknown with explicit evidence. Seller identity is not inferred from the newer advertisement."
+    }
+  ],
+  "offerIdentityCaution":"Separate advertisement IDs are separate source observations; no claim is made that they represent two simultaneous physical copies or a verified sale history of one copy.",
+  "unverifiedAladinLead":"An older search result for Aladin item 379570676 shows an April S-type related-product card at KRW 30,000, but the live page no longer exposes it and no exact S-item identifier was verified. No S offer or unrelated 2021 metadata is inferred from that card.",
+  "imageState":"Seller image inspected for printed issue/variant text only; no image stored or embedded in MuseBooks. Reuse permission unconfirmed."
+}

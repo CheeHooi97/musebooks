@@ -1,0 +1,189 @@
+{
+  "credits": [
+    {
+      "workId": "korea-dj-soda-candid-2024",
+      "personId": 68597,
+      "role": "featured",
+      "creditedName": "DJ SODA",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 68597,
+        "slug": "model-91e38c01fdf9d946b60cee502a8a907069817f59cc332f011f87953ea6d7f055",
+        "canonicalPublicName": "DJ SODA",
+        "originalName": "DJ SODA",
+        "englishName": "DJ SODA",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.hanmoto.com/bd/isbn/9784087901566",
+        "profileSourceConfidence": "publisher_supplied_model_bio",
+        "createdAt": "2026-10-25T13:08:44.384637+08:00",
+        "updatedAt": "2026-10-25T13:08:44.384637+08:00"
+      },
+      "createdAt": "2026-10-25T13:08:44.384637+08:00",
+      "updatedAt": "2026-10-25T13:14:29.229106+08:00"
+    }
+  ],
+  "databaseCounts": {
+    "editions": 6807,
+    "listing_observations": 8350,
+    "listings": 8310,
+    "sources": 30,
+    "works": 6064
+  },
+  "edition": {
+    "publisherCompanyId": "publisher-eed87fb39daf4d50042c7f381e2e568ce354725566004c14a6a1d54b3d36cfb7",
+    "originalCoverUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+    "id": "korea-dj-soda-candid-2024-jp-print",
+    "workId": "korea-dj-soda-candid-2024",
+    "format": "physical",
+    "language": "ja-JP",
+    "editionMarket": "JP",
+    "publisher": "集英社",
+    "releaseDate": "2024-04-05T08:00:00+08:00",
+    "releasePrecision": "day",
+    "isbn": "9784087901566",
+    "pageCount": 128,
+    "dimensions": "297×210×11mm (A4)",
+    "editionVariant": "Print",
+    "contentSummary": "Shueisha public Candid announcement confirms the April 5, 2024 print release, ND CHOW photography, A4 and 128 pages. Hanmoto supplies ISBN9784087901566 and dimensions297×210×11mm. The publisher announcement displays an original planned tax-inclusive priceJPY3630, not a verified current selling offer. One cover and two public promotional previews are retained as attributed remote URL references only; reuse permission is unconfirmed and no pixels are mirrored. Digital metadata and seller availability are not inferred.",
+    "metadataSourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+    "editionLabel": "2024 Japanese print photobook",
+    "coverUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+    "status": "published",
+    "createdAt": "2026-10-25T13:08:44.855343+08:00",
+    "updatedAt": "2026-10-25T13:14:29.139474+08:00"
+  },
+  "limitations": "Publisher remote cover and two public previews; reuse permission unknown. JPY3630 is a historical planned price; no current offer or digital metadata inferred.",
+  "listingCount": 0,
+  "mediaCount": 4,
+  "method": "Read-only exact PostgreSQL bibliography/model credit and actual GetBook handler",
+  "passed": true,
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-91e38c01fdf9d946b60cee502a8a907069817f59cc332f011f87953ea6d7f055",
+        "name": "DJ SODA"
+      }
+    ],
+    "id": "korea-dj-soda-candid-2024",
+    "slug": "korea-dj-soda-candid-2024",
+    "publicationType": "photobook",
+    "originalTitle": "DJ SODA写真集『Candid』",
+    "englishTitle": "Candid: DJ SODA First Photobook",
+    "summary": "Standalone Japanese-published first photobook of South Korean DJ/model DJ SODA, photographed by ND CHOW in Tokyo and Okinawa. Model origin is KR; publication market is JP. Physical and any separately verified electronic edition must remain distinct; no magazine issue fields.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "DJ SODA"
+    ],
+    "photographer": "ND CHOW",
+    "coverUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+    "editions": [
+      {
+        "gallery": [
+          {
+            "id": 84483,
+            "entityType": "edition",
+            "entityId": "korea-dj-soda-candid-2024-jp-print",
+            "mediaType": "cover",
+            "originalUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+            "storageUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+            "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+            "isPrimary": true,
+            "createdAt": "2026-10-25T13:14:28.667132+08:00",
+            "updatedAt": "2026-10-25T13:14:28.667132+08:00"
+          },
+          {
+            "id": 84485,
+            "entityType": "edition",
+            "entityId": "korea-dj-soda-candid-2024-jp-print",
+            "mediaType": "publisher_sample_001",
+            "originalUrl": "https://wpb.shueisha.co.jp/gravure/info/images/1929c2250f9f68dd539ba392f8bfe25cc94a7334.jpg",
+            "storageUrl": "https://wpb.shueisha.co.jp/gravure/info/images/1929c2250f9f68dd539ba392f8bfe25cc94a7334.jpg",
+            "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T13:14:29.280173+08:00",
+            "updatedAt": "2026-10-25T13:14:29.280173+08:00"
+          },
+          {
+            "id": 84486,
+            "entityType": "edition",
+            "entityId": "korea-dj-soda-candid-2024-jp-print",
+            "mediaType": "publisher_sample_002",
+            "originalUrl": "https://wpb.shueisha.co.jp/gravure/info/images/9784087901566_170.jpg",
+            "storageUrl": "https://wpb.shueisha.co.jp/gravure/info/images/9784087901566_170.jpg",
+            "sourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+            "isPrimary": false,
+            "createdAt": "2026-10-25T13:14:29.293314+08:00",
+            "updatedAt": "2026-10-25T13:14:29.293314+08:00"
+          }
+        ],
+        "publisherProfile": {
+          "id": "publisher-eed87fb39daf4d50042c7f381e2e568ce354725566004c14a6a1d54b3d36cfb7",
+          "name": "集英社"
+        },
+        "id": "korea-dj-soda-candid-2024-jp-print",
+        "format": "physical",
+        "language": "ja-JP",
+        "editionMarket": "JP",
+        "publisher": "集英社",
+        "releaseDate": "2024-04-05T08:00:00+08:00",
+        "releasePrecision": "day",
+        "isbn": "9784087901566",
+        "pageCount": 128,
+        "dimensions": "297×210×11mm (A4)",
+        "editionVariant": "Print",
+        "contentSummary": "Shueisha public Candid announcement confirms the April 5, 2024 print release, ND CHOW photography, A4 and 128 pages. Hanmoto supplies ISBN9784087901566 and dimensions297×210×11mm. The publisher announcement displays an original planned tax-inclusive priceJPY3630, not a verified current selling offer. One cover and two public promotional previews are retained as attributed remote URL references only; reuse permission is unconfirmed and no pixels are mirrored. Digital metadata and seller availability are not inferred.",
+        "metadataSourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+        "editionLabel": "2024 Japanese print photobook",
+        "coverUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "verifiedAt": "2026-10-25T05:14:42.7713315Z",
+  "work": {
+    "originMarketId": 10544,
+    "id": "korea-dj-soda-candid-2024",
+    "slug": "korea-dj-soda-candid-2024",
+    "publicationType": "photobook",
+    "originalTitle": "DJ SODA写真集『Candid』",
+    "englishTitle": "Candid: DJ SODA First Photobook",
+    "summary": "Standalone Japanese-published first photobook of South Korean DJ/model DJ SODA, photographed by ND CHOW in Tokyo and Okinawa. Model origin is KR; publication market is JP. Physical and any separately verified electronic edition must remain distinct; no magazine issue fields.",
+    "originCode": "KR",
+    "featuredNames": "DJ SODA",
+    "photographer": "ND CHOW",
+    "coverUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+    "status": "published",
+    "origin": {
+      "code": "",
+      "name": "",
+      "sortOrder": 0,
+      "createdAt": "0001-01-01T00:00:00Z",
+      "updatedAt": "0001-01-01T00:00:00Z"
+    },
+    "createdAt": "2026-10-25T13:08:44.811558+08:00",
+    "updatedAt": "2026-10-25T13:14:29.10397+08:00"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5022,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 172,
+    "databaseCounts": {
+      "works": 6064,
+      "editions": 6807,
+      "listings": 8310,
+      "sources": 30,
+      "listing_observations": 8350
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "observedAt":"2026-10-23T22:13:00+08:00",
+  "method":"Manual live public product and seller-page browser review; no retailer API",
+  "issueMonth":"2025-03",
+  "pageCount":192,"dimensions":"210×297mm (A4)","weightGrams":518,"issn":"2233-4270",
+  "listPriceKRW":8900,"lastDisplayedSalePriceKRW":8450,
+  "retailState":"All three variants show sold-out/discontinued messaging; retail prices are last displayed",
+  "seriesUrl":"https://www.aladin.co.kr/shop/common/wseriesitem.aspx?SRID=1242202",
+  "coverCreditSources":["https://www.yes24.com/product/goods/143312098","https://www.stnsports.co.kr/news/articleView.html?idxno=242497","https://www.newsis.com/view/NISX20250313_0003096828?pc_view=1"],
+  "coverCredit":"Existing 우수한 issue credit retained. NEWSIS's 2025-03-13 report explicitly identifies 잇섭 as March C-type cover model; add creator credit at issue level and record C mapping in edition metadata. No press image copied.",
+  "imageState":"Asset URLs are provenance only; reuse permission unconfirmed, covers/gallery not copied or embedded",
+  "variants":[
+    {
+      "key":"a","variant":"A형","itemId":"358716928","isbn":"K192037788","releaseDate":"2025-02-21",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358716928",
+      "coverAssetUrl":"https://image.aladin.co.kr/product/35871/69/cover500/k192037788_1.jpg",
+      "supplement":"치어리더 우수한/미스맥심 박지연 스페셜 브로마이드 (책속부록)",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=358716928&start=newproduct",
+      "displayedActiveCount":3,"displayedPages":1,
+      "offers":[
+        {"itemId":"401718392","seller":"ts23ets","condition":"최상","priceKRW":12500,"shippingText":"택배 3,500원","status":"active"},
+        {"itemId":"400706550","seller":"전재원","condition":"최상","priceKRW":15000,"shippingText":"택배 3,500원, 반값택배 2,400원","status":"active"},
+        {"itemId":"359533494","seller":"kirinji","condition":"상","priceKRW":15000,"shippingText":"택배 3,500원, 반값택배 2,400원","status":"active"},
+        {"itemId":"370752953","seller":"김민수","condition":"최상","priceKRW":12200,"shippingText":"택배 3,500원, 도서/산간 6,200원, 반값택배 2,400원","status":"completed","evidence":"Exact live seller page says 판매완료되었습니다. No completion date or actual paid amount is exposed; KRW 12,200 is the displayed asking amount."}
+      ]
+    },
+    {
+      "key":"b","variant":"B형","itemId":"358717217","isbn":"K142037788","releaseDate":"2025-02-21",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358717217",
+      "coverAssetUrl":"https://image.aladin.co.kr/product/35871/72/cover500/k142037788_1.jpg",
+      "supplement":"치어리더 우수한/미스맥심 박지연 스페셜 브로마이드 (책속부록)",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=358717217&start=newproduct",
+      "displayedActiveCount":1,"displayedPages":1,
+      "offers":[{"itemId":"398565451","seller":"김민수","condition":"최상","priceKRW":23000,"shippingText":"택배 3,500원, 반값택배 2,400원","status":"active"}]
+    },
+    {
+      "key":"c","variant":"C형","itemId":"358717482","isbn":"","releaseDate":"2025-02-21",
+      "displayedBarcode":"9772233427046","barcodeNote":"ISSN-based serial barcode, not ISBN; do not infer an ISBN from image filename or internal seller-link identifier",
+      "productUrl":"https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=358717482",
+      "coverAssetUrl":"https://image.aladin.co.kr/product/35871/74/cover500/k342037788_1.jpg",
+      "supplement":"유튜버 잇섭/치어리더 우수한 스페셜 브로마이드 (책속부록)",
+      "inventoryUrl":"https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=358717482&start=newproduct",
+      "displayedActiveCount":1,"displayedPages":1,
+      "offers":[{"itemId":"362051264","seller":"Danielle","condition":"최상","priceKRW":50000,"shippingText":"택배 3,500원","status":"active"}]
+    }
+  ],
+  "activeEvidence":"Every active inventory row shows basket and immediate-purchase controls. Supplement inclusion with individual used copies remains unconfirmed."
+}

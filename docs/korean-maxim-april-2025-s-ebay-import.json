@@ -1,0 +1,109 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2025-04-issue",
+      "slug": "korea-maxim-2025-04-issue",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2025-04",
+      "issueNumber": "263호 (4월호)",
+      "originalTitle": "맥심 MAXIM 2025. 4월호 '이불킥' 편",
+      "englishTitle": "MAXIM April 2025",
+      "summary": "MAXIM April 2025 magazine issue, no.263, themed 이불킥. Printed retail covers credit 하리 (A) and 한지나 (B); reporting and an exact S-type marketplace listing establish 뮤아 on the subscriber edition. Aladin A/B editions were published 2025-03-21; the PDF is dated 2025-04-01 by Aladin. Original S-edition release day, page count and original retail price remain unknown.",
+      "originCode": "KR",
+      "coverUrl": ""
+    },
+    "coverPerson": {
+      "slug": "model-c86e6282e7fca3499fa412ddd27367120491ec117fefbc0a64701680cec99afb",
+      "canonicalPublicName": "하리",
+      "originalName": "하리",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360998428",
+      "profileSourceConfidence": "explicit_cover_credit"
+    },
+    "additionalCoverPeople": [
+      {
+        "slug": "model-50b1b7c01dc32647ca4413a4ded3bae3d3d67612bdd15796be9a670477973514",
+        "canonicalPublicName": "한지나",
+        "originalName": "한지나",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=360998557",
+        "profileSourceConfidence": "explicit_cover_credit"
+      },
+      {
+        "slug": "model-c80c8e26e1d9e4db464630f638957962b3f463cf12f6c613d9efd9b95e7f4a55",
+        "canonicalPublicName": "뮤아",
+        "originalName": "뮤아",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.mimint.co.kr/bbs/view/news/S1N18/4757340?page=280&pageblock=271",
+        "profileSourceConfidence": "press_report_cover_credit"
+      }
+    ],
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2025-04-print-s-subscription",
+      "workId": "korea-maxim-2025-04-issue",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어(잡지)",
+      "editionVariant": "S형",
+      "contentSummary": "Subscriber-only S-type print edition of MAXIM April 2025, no.263, cover model 뮤아. The exact Joongna title and rendered cover identify issue, model and S type; a contemporaneous report confirms the subscriber cover. Original S publication day, page count, dimensions, ISBN and original retail price are not established. Do not inherit A/B or PDF dates. Current seller claims unopened/new condition and all components included; these are seller claims. No catalog image stored; reuse permission unconfirmed.",
+      "metadataSourceUrl": "https://web.joongna.com/product/232133783",
+      "seriesName": "MAXIM",
+      "editionLabel": "April 2025 subscription S type — 뮤아",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "ebay-public-manual",
+      "name": "eBay public seller listings (manual capture; access under review)",
+      "region": "GLOBAL",
+      "locale": "en",
+      "timezone": "Asia/Kuala_Lumpur",
+      "kind": "marketplace",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.ebay.com.my",
+      "allowedHosts": "www.ebay.com.my",
+      "capabilities": "listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.ebay.com.my/help/policies/member-behaviour-policies/user-agreement?id=4259",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-ebay-maxim-april-2025-s-20261025",
+      "sourceId": "ebay-public-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T15:08:09.7305663+08:00",
+      "items": [
+        {
+          "externalId": "335870483825-545414919616",
+          "observationId": "ebay-20261025-maxim-april2025-s-545414919616",
+          "editionId": "korea-maxim-2025-04-print-s-subscription",
+          "url": "https://www.ebay.com.my/itm/335870483825?var=545414919616",
+          "title": "MAXIM Korea No263 April2025 S type Myua",
+          "status": "active",
+          "priceMinor": 2500,
+          "currency": "USD",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "MAXIM KOREA",
+          "editionVariant": "S형",
+          "condition": "Brand New; unverified seller claim",
+          "shippingText": "US$15.50 shown for current destination63000; destination dependent; import fees excluded",
+          "observedAt": "2026-10-25T15:08:09.7305663+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Public rendered page selected MPN S type, variation545414919616: US$25.00 item price,Brand New seller claim,quantity input enabled,5 available display and visible Buy It Now. Unselected base US$15 is not S price. ShippingUS$15.50 displayed for current destination63000; not a worldwide quote. Seller bargainkorea explicitly maps S to Myua; existing 뮤아 credit retained. April2025 issue263 only; original release day remains unknown. LastupdatedAug13,2026 is listing revision,not publication. Aggregate17sold is not S-specific or final paid-price evidence. Seller specifics contributorGatSEHUI conflicts with description and is not imported; 9772233427008 labelledISSN is barcode-like,not bookISBN. No images,reader,purchase,contact or API; image reuse unconfirmed.",
+          "sellerLocation": "bargainkorea; Daejeon, South Korea"
+        }
+      ]
+    }
+  }
+]

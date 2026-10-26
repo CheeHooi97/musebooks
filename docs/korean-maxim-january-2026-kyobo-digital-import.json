@@ -1,0 +1,93 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-01-jo-ye-rin-digital",
+      "slug": "korea-maxim-2026-01-jo-ye-rin-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-01",
+      "issueNumber": "272",
+      "originalTitle": "맥심 MAXIM 2026. 1월호",
+      "englishTitle": "MAXIM January 2026",
+      "summary": "Monthly MAXIM issue #272 (January 2026), available as a digital PDF and physical print edition. The official MAXIM Korea announcement identifies cheerleader 조예린 as the cover model.",
+      "originCode": "KR",
+      "coverUrl": ""
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-01-digital-kyobo-pdf",
+      "workId": "korea-maxim-2026-01-jo-ye-rin-digital",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-01-02T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 165,
+      "editionVariant": "PDF (Kyobo)",
+      "contentSummary": "Public Kyobo January2026 purchase PDF: release2026-01-02,165pages,123.61MB,TTS available. Displayed ISSN00000000 is a placeholder,not a verified identifier; ISBN blank. Ordinary purchaseKRW5500 with enabled purchase control; conditional coupon4950 excluded. Public contents identify 치어리더 조예린 edition theme; existing canonical issue cover credit retained without new lineup credits. Linked print2025-12-26 context only; existing print and YES24PDF metadata unchanged. No preview,reader,login,purchase or image collection; reuse permission unconfirmed.",
+      "metadataSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012407155",
+      "seriesName": "MAXIM",
+      "editionLabel": "January 2026 Kyobo digital PDF (165 pages)",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "kyobo-kr-digital-manual",
+      "name": "Kyobo Korea ebook (manual public page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "digital_store",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "digital",
+      "allowedFormats": "digital",
+      "baseUrl": "https://ebook-product.kyobobook.co.kr",
+      "allowedHosts": "ebook-product.kyobobook.co.kr",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.kyobobook.co.kr/policy",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-kyobo-maxim-january-2026-digital-20261025",
+      "sourceId": "kyobo-kr-digital-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T15:06:04.8627652+08:00",
+      "items": [
+        {
+          "externalId": "E000012407155",
+          "observationId": "kyobo-20261025-maxim-january-digital-E000012407155",
+          "editionId": "korea-maxim-2026-01-digital-kyobo-pdf",
+          "url": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012407155",
+          "title": "맥심 MAXIM 2026.1월호",
+          "status": "active",
+          "priceMinor": 5500,
+          "currency": "KRW",
+          "priceType": "digital",
+          "format": "digital",
+          "digitalAccess": "authorized_store",
+          "publisher": "와이미디어",
+          "editionVariant": "PDF (Kyobo)",
+          "shippingText": "Digital purchase; no shipping; print supplements and sam subscription excluded",
+          "observedAt": "2026-10-25T15:06:04.8627652+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Public Kyobo January2026 purchase PDF: release2026-01-02,165pages,123.61MB,TTS available. Displayed ISSN00000000 is a placeholder,not a verified identifier; ISBN blank. Ordinary purchaseKRW5500 with enabled purchase control; conditional coupon4950 excluded. Public contents identify 치어리더 조예린 edition theme; existing canonical issue cover credit retained without new lineup credits. Linked print2025-12-26 context only; existing print and YES24PDF metadata unchanged. No preview,reader,login,purchase or image collection; reuse permission unconfirmed."
+        }
+      ]
+    },
+    "coverPerson": {
+      "slug": "model-6b93ae9ca06dfd3424561ef6bbbfb31ee8faf1e907133a02ea846bb657180c60",
+      "canonicalPublicName": "조예린",
+      "originalName": "조예린",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.youtube.com/watch?v=08foa4rTtBE",
+      "profileSourceConfidence": "official_publisher_cover_announcement"
+    }
+  }
+]

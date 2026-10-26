@@ -1,0 +1,66 @@
+{
+  "observedAt": "2026-10-23T23:03:00+08:00",
+  "method": "Manual public artist-store rendered-page capture; no API/key",
+  "discoveryUrl": "https://pyoeunji.com/en/collections/all",
+  "scope": "Two distinct standalone fanclub photobooks from first collection page",
+  "items": [
+    {
+      "id": "korea-pyo-eunji-fanclub-photo-book-2022",
+      "handle": "pyoeunji-photo-book-2022",
+      "title": "Pro Eunji PHOTO BOOK 2022",
+      "englishTitle": "Pyo Eunji PHOTO BOOK 2022",
+      "pages": 150,
+      "cover": "https://pyoeunji.com/cdn/shop/products/FjXeDhfUoAA429M_55dbc58f-3f8c-4f15-b7b5-c0b89b102539_grande.jpg?v=1672028251",
+      "images": [
+        "https://pyoeunji.com/cdn/shop/products/FjXeDhfUoAA429M_55dbc58f-3f8c-4f15-b7b5-c0b89b102539_grande.jpg?v=1672028251",
+        "https://pyoeunji.com/cdn/shop/products/FkAmJnZUoAIkDc8_grande.jpg?v=1672028252",
+        "https://pyoeunji.com/cdn/shop/products/FkbK-FDUEAALv1C_grande.jpg?v=1672028251",
+        "https://pyoeunji.com/cdn/shop/products/FkVEyX4VUAE5rBR_grande.jpg?v=1672028252"
+      ],
+      "priceMinor": 11500,
+      "regularPriceMinor": 14100,
+      "releaseDate": null,
+      "releasePrecision": "",
+      "variant": "Annual fanclub book",
+      "summary": "Annual Japanese fanclub photobook featuring Korean model 표은지 (Pyo Eunji). It covers photographs from December 2021 through November 2022 and is distinct from the 168-page first fanclub book.",
+      "details": "Artist-store page lists 150 pages, A4, photographed December 2021-November 2022, and a historical mid-January 2023 shipping start. Exact publication date is unknown: the title year, photograph dates and shipping window are not stored as a publication date. Live sale MYR 115.00 against regular MYR 141.00; descriptive original price JPY 4,800 including tax. Membership notice and disabled cart leave availability unknown. One cover plus three additional product-image URLs are source-attributed remote references, without mirrored pixels or an asserted reuse license.",
+      "evidence": "Live artist-store page checked around 23:01-23:03 SGT on 2026-10-23. It displays sale MYR 115.00, regular MYR 141.00, tax included. ADD TO CART is disabled and the members-only notice is visible. The old mid-January 2023 shipping statement is historical and does not establish present dispatch or publication date. Localized MYR values are recorded without currency conversion."
+    },
+    {
+      "id": "korea-pyo-eunji-fanclub-first-2022",
+      "handle": "restock-first-edition-pyo-eunji-photo-book-japan-official-fan-club-only",
+      "title": "［Restock] First Edition Pyo Eunji Photo Book - Japan Official Fan Club Exclusive",
+      "englishTitle": "Pyo Eunji First Japan Fanclub Photobook",
+      "pages": 168,
+      "cover": "",
+      "images": [
+        "https://pyoeunji.com/cdn/shop/files/111Sold_Out_600x.png?v=1737367082"
+      ],
+      "priceMinor": 14100,
+      "regularPriceMinor": 14100,
+      "releaseDate": "2022-01-01T00:00:00Z",
+      "releasePrecision": "year",
+      "variant": "First fanclub edition",
+      "summary": "First Japan fanclub-exclusive photobook featuring Korean model 표은지 (Pyo Eunji), originally released in 2022 to mark the start of her Japanese activities. The reviewed listing is a restock offer for the 168-page book.",
+      "details": "Artist-store page explicitly says the first fanclub photobook was released in 2022; only year precision is known. A4, 168 pages; descriptive original price JPY 4,800 tax included. Restock offer displays MYR 141.00 and disabled SOLD OUT button plus a members-only notice. This is distinct from the 150-page annual PHOTO BOOK 2022 and from KADOKAWA Rondo. The only current product image has a Sold Out overlay; it is retained on the listing as a promotional product image, not asserted to be a clean book cover. Image URL is a remote reference, with no pixels mirrored or reuse license asserted.",
+      "evidence": "Live artist-store page checked around 23:02 SGT on 2026-10-23. It displays tax-included MYR 141.00 and a disabled SOLD OUT button, also with a members-only notice. The product description still says replenished stock, but current disabled sold-out control takes precedence. Status unknown represents unavailable retail stock in this schema, not a completed sale. Original publication is 2022 at year precision; restock date is unknown. No login, membership, cart or purchase attempted."
+    }
+  ],
+  "currencyNote": "Live localized MYR displayed prices; descriptive JPY 4,800 kept separately as reference, no conversion",
+  "imageNote": "Four annual-book image URLs including a visually confirmed cover; one first-edition promotional image with Sold Out overlay, not a clean edition cover. Remote references only, no pixels mirrored or reuse license asserted.",
+  "availabilityChecks": {
+    "annual": {
+      "cartEnabled": false,
+      "membersOnlyNotice": true
+    },
+    "first": {
+      "soldOutButtonDisabled": true,
+      "membersOnlyNotice": true
+    }
+  },
+  "dateNotes": "Annual publication unknown; January 2023 is a historical shipping window. First fanclub book explicitly released in 2022, stored at year precision. ISBNs and publisher imprints unknown.",
+  "deduplication": "Read-only database query found only Rondo and a separate Japanese collaboration, neither matching these books. Different page counts and described contents distinguish the two fanclub books.",
+  "otherCollectionItems": "Membership, water, essay set, event/comic bundles and magazine appearances were not imported as standalone photobooks. Page 2 remains a discovery lead for the next batch.",
+  "termsUrl": "https://pyoeunji.com/pages/terms",
+  "accessStatus": "Existing manual source remains disabled/review"
+}

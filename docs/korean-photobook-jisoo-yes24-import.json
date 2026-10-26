@@ -1,0 +1,92 @@
+[
+  {
+    "work": {
+      "id": "korea-jisoo-me-photobook-2023",
+      "slug": "korea-jisoo-me-photobook-2023",
+      "publicationType": "photobook",
+      "originalTitle": "지수 (JISOO) - JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+      "englishTitle": "JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+      "summary": "Standalone 176-page photo book featuring Korean singer and fashion muse 지수 (JISOO), based on her first solo album [ME].",
+      "originCode": "KR",
+      "featuredNames": "지수",
+      "coverUrl": ""
+    },
+    "featuredPerson": {
+      "slug": "model-0d32317250d77806a4f2e483ad86ad466a02724faa212319f515608ea7a9fcf6",
+      "canonicalPublicName": "지수",
+      "originalName": "지수",
+      "englishName": "JISOO",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/121961075",
+      "profileSourceConfidence": "publisher_supplied_photo_subject"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-jisoo-me-special-2023-print-yes24",
+      "workId": "korea-jisoo-me-photobook-2023",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "YGPLUS / YG Entertainment",
+      "releaseDate": "2023-09-18T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 176,
+      "dimensions": "252×162×28mm",
+      "editionVariant": "Special Edition",
+      "contentSummary": "YES24 lists a 176-page photobook, 20-piece postcard book, random selfie photocard and polaroid, sticker, clear photocard, luggage tag, and a limited random Instax photo film.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/121961075",
+      "editionLabel": "2023 [ME] Special Edition physical photobook package",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "yes24-kr-print",
+      "name": "YES24 Korea print (manual page capture)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.yes24.com",
+      "allowedHosts": "www.yes24.com",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.yes24.com/notice/service.aspx",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "sourceId": "yes24-kr-print",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:08:57.5166637+08:00",
+      "items": [
+        {
+          "externalId": "121961075",
+          "observationId": "yes24-20261025-jisoo-me-live-print",
+          "editionId": "korea-jisoo-me-special-2023-print-yes24",
+          "url": "https://www.yes24.com/product/goods/121961075",
+          "title": "지수 (JISOO) - JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+          "status": "unknown",
+          "priceMinor": 39000,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "YGPLUS / YG Entertainment",
+          "editionVariant": "Special Edition",
+          "observedAt": "2026-10-25T14:08:57.5166637+08:00",
+          "statusEvidence": "Live public YES24 product page on 2026-10-25 shows selling and discounted price KRW 39,000, 품절 / 한정판매, and 현재 새 상품은 구매 할 수 없습니다. Store the displayed unavailable retail price with unknown status; this is not an active offer or completed sale. The publisher-supplied introduction identifies JISOO as the photobook subject and participant in production/design. Release 2023-09-18 and 176-page book confirmed. Free shipping / overseas delivery available are page policies, not an available purchase promise. No seller-specific used offer verified.",
+          "timestampPrecision": "minute"
+        }
+      ],
+      "jobId": "manual-yes24-jisoo-me-20261025"
+    },
+    "replaceLegacyFeaturedAlias": "지수 (JISOO)"
+  }
+]

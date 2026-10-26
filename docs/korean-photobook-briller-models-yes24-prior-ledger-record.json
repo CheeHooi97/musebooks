@@ -1,0 +1,79 @@
+{
+  "work": {
+    "id": "korea-the-briller-senior-models-2023",
+    "slug": "korea-the-briller-senior-models-2023",
+    "publicationType": "photobook",
+    "originalTitle": "The Briller (더 브리에)",
+    "summary": "Senior-fashion-model photobook anthology with 17 named subjects and a separate fashion-show section; the contents identify 임민경 as photographer rather than a featured model.",
+    "originCode": "KR",
+    "featuredNames": "고미오, 이진, 조남숙, 이예림, 박미숙, 나효숙, 정미경, 황순향, 박소연, 한영선, 장미화, 진서현, 고희정, 초경화, 김이정, 신성훈, 이미진",
+    "coverUrl": ""
+  },
+  "origin": {
+    "code": "KR",
+    "name": "South Korea",
+    "nativeName": "대한민국",
+    "sortOrder": 5
+  },
+  "edition": {
+    "id": "korea-the-briller-senior-models-2023-print-yes24",
+    "workId": "korea-the-briller-senior-models-2023",
+    "format": "physical",
+    "language": "ko-KR",
+    "editionMarket": "KR",
+    "publisher": "북엠",
+    "releaseDate": "2023-05-24T00:00:00Z",
+    "releasePrecision": "day",
+    "isbn": "9791192584027",
+    "pageCount": 248,
+    "dimensions": "210×297×20mm",
+    "editionVariant": "Hardcover",
+    "contentSummary": "Senior-model fashion pictorial. Contents name multiple models and identify 임민경 as a photographer.",
+    "metadataSourceUrl": "https://www.yes24.com/product/goods/119131898",
+    "editionLabel": "2023 hardcover edition",
+    "coverUrl": ""
+  },
+  "source": {
+    "id": "yes24-kr-print",
+    "name": "YES24 Korea print (manual page capture)",
+    "region": "KR",
+    "locale": "ko-KR",
+    "timezone": "Asia/Seoul",
+    "kind": "bookstore",
+    "adapter": "manual_page_capture",
+    "accessMethod": "manual_browser",
+    "defaultFormat": "physical",
+    "allowedFormats": "physical",
+    "baseUrl": "https://www.yes24.com",
+    "allowedHosts": "www.yes24.com",
+    "capabilities": "catalog_discovery,active_discovery,listing_detail",
+    "accessStatus": "review",
+    "termsUrl": "https://www.yes24.com/notice/service.aspx",
+    "ratePerMinute": 1,
+    "enabled": false
+  },
+  "batch": {
+    "sourceId": "yes24-kr-print",
+    "parserVersion": "manual-page-capture-v1",
+    "retrievedAt": "2026-10-20T13:26:00+08:00",
+    "items": [
+      {
+        "externalId": "119131898",
+        "observationId": "yes24-manual-2026-10-20-1326-the-briller",
+        "editionId": "korea-the-briller-senior-models-2023-print-yes24",
+        "url": "https://www.yes24.com/product/goods/119131898",
+        "title": "The Briller (더 브리에)",
+        "status": "unknown",
+        "priceMinor": 49500,
+        "currency": "KRW",
+        "priceType": "physical",
+        "format": "physical",
+        "publisher": "북엠",
+        "editionVariant": "Hardcover",
+        "observedAt": "2026-10-20T13:26:00+08:00",
+        "statusEvidence": "The exact YES24 product-page result crawled two months before this review showed list price KRW 55,000, displayed selling price KRW 49,500, 판매중, and purchase controls. Keep KRW 49,500 as a last-observed selling price and current availability as unknown because the snapshot was stale. No seller-specific used offer was verified.",
+        "timestampPrecision": "minute"
+      }
+    ]
+  }
+}

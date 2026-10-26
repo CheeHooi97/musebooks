@@ -17,7 +17,7 @@ type SchemaMigration struct {
 	AppliedAt time.Time
 }
 
-const CatalogSchemaVersion = "20261020_person_aliases_v1"
+const CatalogSchemaVersion = "20261023_accounts_v1"
 
 var catalogMigrationSteps = []struct {
 	version string
@@ -25,7 +25,8 @@ var catalogMigrationSteps = []struct {
 }{
 	{version: "20261007_musecards_structure_v1", file: "migrations/20261007_musecards_structure.sql"},
 	{version: "20261019_publication_type_v1", file: "migrations/20261019_publication_type.sql"},
-	{version: CatalogSchemaVersion, file: "migrations/20261020_person_aliases.sql"},
+	{version: "20261020_person_aliases_v1", file: "migrations/20261020_person_aliases.sql"},
+	{version: CatalogSchemaVersion, file: "migrations/20261023_accounts.sql"},
 }
 
 func renameLegacyAccountTables(db *gorm.DB) error {
@@ -97,7 +98,7 @@ func GrantApplicationAccess(db *gorm.DB, role string) error {
 		return fmt.Errorf("grants are restricted to the dedicated musebooks database")
 	}
 	quoted := "\"" + strings.ReplaceAll(role, "\"", "\"\"") + "\""
-	tables := "companies, users, admins, markets, people, person_aliases, product_lines, marketplaces, origins, sources, works, editions, work_people, catalog_media, listing_matches, active_listings, sold_listings, listings, listing_observations, scrape_jobs, scrape_runs"
+	tables := "companies, users, auth_sessions, admins, markets, people, person_aliases, product_lines, marketplaces, origins, sources, works, editions, work_people, catalog_media, listing_matches, active_listings, sold_listings, listings, listing_observations, scrape_jobs, scrape_runs"
 	return db.Transaction(func(tx *gorm.DB) error {
 		for _, sql := range []string{"GRANT USAGE ON SCHEMA public TO " + quoted, "GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE " + tables + " TO " + quoted, "GRANT SELECT ON TABLE schema_migrations TO " + quoted, "GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO " + quoted} {
 			if err := tx.Exec(sql).Error; err != nil {

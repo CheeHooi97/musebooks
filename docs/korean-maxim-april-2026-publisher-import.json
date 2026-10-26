@@ -1,0 +1,398 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-04-kim-nayeon-digital",
+      "slug": "korea-maxim-2026-04-kim-nayeon-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-04",
+      "issueNumber": "275",
+      "originalTitle": "맥심 MAXIM 2026. 4월호",
+      "englishTitle": "MAXIM April 2026",
+      "summary": "MAXIM April2026 No.275 featuring cover model김나연, explicitly credited by official A/B descriptions and printed subscriberS artwork. Publisher A/B release2026-03-24 takes precedence over retained AladinMarch23 assertions. A currently offersKRW9600; B is sold out. A/B176-page retailer specifications and existing PDF remain independently sourced; subscriberS original date, specs and ordinary price unknown.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-5a743f11d69b3099ea76eb30351b2f0aff825d51495f1af83e002a3d26ca4378",
+      "canonicalPublicName": "김나연",
+      "originalName": "김나연",
+      "englishName": "Kim Na-yeon",
+      "personType": "model",
+      "verificationSourceUrl": "https://news.nate.com/view/20260323n18368",
+      "profileSourceConfidence": "cross_source_explicit_cover_report"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+      "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어(잡지)",
+      "releaseDate": "2026-03-24T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 176,
+      "dimensions": "210×297mm",
+      "editionVariant": "A형",
+      "contentSummary": "MAXIM April2026 No.275 A print. Official publisher explicitly credits치어리더 김나연 and release2026-03-24, superseding canonical AladinMarch23 while preserving retailer/source assertions in evidence. Retain independently sourced176pages,210×297mm. A active ordinaryKRW9600, near-sold-out label and enabled quantity/cart. Exact publisher cover plus eight public product panels retained remotely, including a variant-identification notice; panels are not all interior samples. Exclude contest/merchandise banners and paid B-cut content. Supplement/lineup names are not extra cover credits. No pixels mirrored or reuse license asserted.",
+      "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+      "seriesName": "MAXIM",
+      "editionLabel": "April 2026 A-type print issue",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+      "originalCoverUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg"
+    },
+    "source": {
+      "id": "maxim-korea-manual",
+      "name": "MAXIM Korea publisher store (manual public page capture)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.maximkorea.net",
+      "allowedHosts": "www.maximkorea.net,maximkorea.net",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.maximkorea.net/members/members_law.php",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-maxim-april-2026-publisher-20261025",
+      "sourceId": "maxim-korea-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T13:37:23.8141201+08:00",
+      "items": [
+        {
+          "externalId": "374",
+          "observationId": "maxim-publisher-20261025-detail-374",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-a-aladin",
+          "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+          "title": "맥심275호 치어리더 김나연 편 2026년4월호 A형",
+          "status": "active",
+          "priceMinor": 9600,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "와이미디어",
+          "editionVariant": "A형",
+          "shippingText": "Physical publisher product; shipping fee not stated on reviewed page",
+          "observedAt": "2026-10-25T13:37:23.8141201+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live official public A detail checked2026-10-25. Explicit275호 표지모델 치어리더 김나연, release2026-03-24 andKRW9600. A has quantity controls and enabled장바구니; label품절임박. Availabilityactive at observation. AladinMarch23 remains a date assertion, not silently rewritten history. A/B176page/dimensions are retained fromretailer; no PDF/S spec transfer. SubscriberS artwork independently printsNo275 Stype and김나연. Public product-image references only, includingvariantnotice; no gated media or reuse permission inferred.",
+          "imageUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg"
+        }
+      ]
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": true
+      },
+      {
+        "mediaType": "publisher_sample_001",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721500141o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721500141o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_002",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721529912o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721529912o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_003",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721572268o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721572268o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_004",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721627665o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721627665o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_005",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721675771o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721675771o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_006",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721723916o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721723916o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_007",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721774008o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/editor_17739721774008o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_008",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/editor_1773972181958o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/editor_1773972181958o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": false
+      }
+    ],
+    "media": [
+      {
+        "externalId": "374",
+        "mediaType": "listing_image",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "work": {
+      "id": "korea-maxim-2026-04-kim-nayeon-digital",
+      "slug": "korea-maxim-2026-04-kim-nayeon-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-04",
+      "issueNumber": "275",
+      "originalTitle": "맥심 MAXIM 2026. 4월호",
+      "englishTitle": "MAXIM April 2026",
+      "summary": "MAXIM April2026 No.275 featuring cover model김나연, explicitly credited by official A/B descriptions and printed subscriberS artwork. Publisher A/B release2026-03-24 takes precedence over retained AladinMarch23 assertions. A currently offersKRW9600; B is sold out. A/B176-page retailer specifications and existing PDF remain independently sourced; subscriberS original date, specs and ordinary price unknown.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-5a743f11d69b3099ea76eb30351b2f0aff825d51495f1af83e002a3d26ca4378",
+      "canonicalPublicName": "김나연",
+      "originalName": "김나연",
+      "englishName": "Kim Na-yeon",
+      "personType": "model",
+      "verificationSourceUrl": "https://news.nate.com/view/20260323n18368",
+      "profileSourceConfidence": "cross_source_explicit_cover_report"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+      "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어(잡지)",
+      "releaseDate": "2026-03-24T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 176,
+      "dimensions": "210×297mm",
+      "editionVariant": "B형",
+      "contentSummary": "MAXIM April2026 No.275 B print. Official publisher explicitly credits치어리더 김나연 and release2026-03-24, superseding canonical AladinMarch23 while preserving retailer/source assertions in evidence. Retain independently sourced176pages,210×297mm. B displayedKRW9600 with complete-sold-out label and no cart; purchase availabilityunknown. Exact publisher cover plus eight public product panels retained remotely, including a variant-identification notice; panels are not all interior samples. Exclude contest/merchandise banners and paid B-cut content. Supplement/lineup names are not extra cover credits. No pixels mirrored or reuse license asserted.",
+      "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+      "seriesName": "MAXIM",
+      "editionLabel": "April 2026 B-type print issue",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg",
+      "originalCoverUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg"
+    },
+    "source": {
+      "id": "maxim-korea-manual",
+      "name": "MAXIM Korea publisher store (manual public page capture)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.maximkorea.net",
+      "allowedHosts": "www.maximkorea.net,maximkorea.net",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.maximkorea.net/members/members_law.php",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-maxim-april-2026-publisher-20261025",
+      "sourceId": "maxim-korea-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T13:37:23.8141201+08:00",
+      "items": [
+        {
+          "externalId": "373",
+          "observationId": "maxim-publisher-20261025-detail-373",
+          "editionId": "korea-maxim-2026-04-kim-nayeon-print-b-aladin",
+          "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+          "title": "맥심275호 치어리더 김나연 편 2026년4월호 B형",
+          "status": "unknown",
+          "priceMinor": 9600,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "와이미디어",
+          "editionVariant": "B형",
+          "shippingText": "Physical publisher product; shipping fee not stated on reviewed page",
+          "observedAt": "2026-10-25T13:37:23.8141201+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live official public B detail checked2026-10-25. Explicit275호 표지모델 치어리더 김나연, release2026-03-24 andKRW9600. B says완전품절 with품절 button and no product cart; availabilityunknown, not a completed sale. AladinMarch23 remains a date assertion, not silently rewritten history. A/B176page/dimensions are retained fromretailer; no PDF/S spec transfer. SubscriberS artwork independently printsNo275 Stype and김나연. Public product-image references only, includingvariantnotice; no gated media or reuse permission inferred.",
+          "imageUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg"
+        }
+      ]
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+        "isPrimary": true
+      },
+      {
+        "mediaType": "publisher_sample_001",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720612875o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720612875o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_002",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720645295o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720645295o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_003",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720692111o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720692111o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_004",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720743424o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720743424o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_005",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720780942o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720780942o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_006",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720821642o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720821642o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_007",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720862983o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720862983o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_008",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720909589o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/373/editor_17739720909589o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+        "isPrimary": false
+      }
+    ],
+    "media": [
+      {
+        "externalId": "373",
+        "mediaType": "listing_image",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/373/373_img_1773970519_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "work": {
+      "id": "korea-maxim-2026-04-kim-nayeon-digital",
+      "slug": "korea-maxim-2026-04-kim-nayeon-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-04",
+      "issueNumber": "275",
+      "originalTitle": "맥심 MAXIM 2026. 4월호",
+      "englishTitle": "MAXIM April 2026",
+      "summary": "MAXIM April2026 No.275 featuring cover model김나연, explicitly credited by official A/B descriptions and printed subscriberS artwork. Publisher A/B release2026-03-24 takes precedence over retained AladinMarch23 assertions. A currently offersKRW9600; B is sold out. A/B176-page retailer specifications and existing PDF remain independently sourced; subscriberS original date, specs and ordinary price unknown.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/374/374_img_1773970621_1215.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-5a743f11d69b3099ea76eb30351b2f0aff825d51495f1af83e002a3d26ca4378",
+      "canonicalPublicName": "김나연",
+      "originalName": "김나연",
+      "englishName": "Kim Na-yeon",
+      "personType": "model",
+      "verificationSourceUrl": "https://news.nate.com/view/20260323n18368",
+      "profileSourceConfidence": "cross_source_explicit_cover_report"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-04-print-s-subscription",
+      "workId": "korea-maxim-2026-04-kim-nayeon-digital",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어(잡지)",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "editionVariant": "S형",
+      "contentSummary": "Public publisher subscriber-only artwork explicitly printsNo275 Stype and치어리더 김나연. Distinct physical cover variant under April2026 magazine work. Original release day, pages, dimensions, ISBN and ordinary single-copy price unknown; A/BMarch24/176pages/KRW9600 are not copied. Exact public cover URL retained remotely; no mirrored pixels or reuse license asserted.",
+      "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+      "seriesName": "MAXIM",
+      "editionLabel": "April 2026 subscriber-only S-type print issue",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/374/374_img3_1773970623_1215.jpg",
+      "originalCoverUrl": "https://www.maximkorea.net/magdb/file/374/374_img3_1773970623_1215.jpg",
+      "isbn": ""
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/374/374_img3_1773970623_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/374/374_img3_1773970623_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+        "isPrimary": true
+      }
+    ]
+  }
+]

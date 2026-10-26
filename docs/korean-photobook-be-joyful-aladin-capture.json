@@ -1,0 +1,191 @@
+{
+  "observedAt": "2026-10-24T00:01:00+08:00",
+  "retrievedAt": "2026-10-24T00:06:00+08:00",
+  "method": "Manual live public Aladin product and used-inventory DOM; no API/key",
+  "product": {
+    "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=77364450",
+    "title": "BE JOYFUL - 이성경 Film Photobook",
+    "model": "이성경",
+    "photographer": "신혜림",
+    "publisher": "페이퍼북(Paperbook)",
+    "releaseDate": "2016-02-17",
+    "isbn": "9788997148615",
+    "pages": 248,
+    "dimensions": "200×240mm",
+    "weightGrams": 770,
+    "listPriceKRW": 22000,
+    "displayedPriceKRW": 19800,
+    "status": "unknown",
+    "availabilityEvidence": "품절; publisher/manufacturer distribution discontinued, new copies unavailable. Displayed price is not an active new-copy offer.",
+    "shipping": "무료배송"
+  },
+  "usedInventory": {
+    "url": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=77364450#maintab&start=newproduct",
+    "displayedCount": 12,
+    "rows": [
+      {
+        "externalId": "402503213",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=402503213",
+        "title": "[중고] BE JOYFUL",
+        "seller": "책방",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=1044828",
+        "condition": "중",
+        "priceKRW": 13900,
+        "shippingKRW": 3500,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "370011137",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=370011137",
+        "title": "[중고] BE JOYFUL",
+        "seller": "레이",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=524797",
+        "condition": "상",
+        "priceKRW": 18000,
+        "shippingKRW": 3300,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "391347853",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=391347853",
+        "title": "[중고] BE JOYFUL",
+        "seller": "봄바람77",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=903578",
+        "condition": "최상",
+        "priceKRW": 19500,
+        "shippingKRW": 3000,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "351000830",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=351000830",
+        "title": "[중고] BE JOYFUL",
+        "seller": "Cheese",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=894329",
+        "condition": "최상",
+        "priceKRW": 21000,
+        "shippingKRW": 3500,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "398405110",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=398405110",
+        "title": "[중고] BE JOYFUL",
+        "seller": "소독후 당일발송",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=910927",
+        "condition": "최상",
+        "priceKRW": 22000,
+        "shippingKRW": 4000,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "395022427",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=395022427",
+        "title": "[중고] BE JOYFUL",
+        "seller": "철학",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=579718",
+        "condition": "중",
+        "priceKRW": 22000,
+        "shippingKRW": 3300,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "397325251",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=397325251",
+        "title": "[중고] BE JOYFUL",
+        "seller": "우리의 계절들",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=830497",
+        "condition": "상",
+        "priceKRW": 23000,
+        "shippingKRW": 3500,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "399019367",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=399019367",
+        "title": "[중고] BE JOYFUL (이성경 FILM PHOTOBOOK)",
+        "seller": "준비된서점",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=1042114",
+        "condition": "상",
+        "priceKRW": 25900,
+        "shippingKRW": 6000,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "397032243",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=397032243",
+        "title": "[중고] BE JOYFUL : 알라딘",
+        "seller": "준비된서점",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=1042114",
+        "condition": "상",
+        "priceKRW": 27000,
+        "shippingKRW": 6000,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "392642408",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=392642408",
+        "title": "[중고] BE JOYFUL (이성경 FILM PHOTOBOOK)",
+        "seller": "악어친구들",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=1046684",
+        "condition": "중",
+        "priceKRW": 27000,
+        "shippingKRW": 6000,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "290881880",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=290881880",
+        "title": "[중고] BE JOYFUL",
+        "seller": "바닐라라떼",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=278920",
+        "condition": "상",
+        "priceKRW": 32500,
+        "shippingKRW": 3300,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      },
+      {
+        "externalId": "379217457",
+        "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=379217457",
+        "title": "[중고] BE JOYFUL",
+        "seller": "이어서",
+        "sellerUrl": "https://www.aladin.co.kr/shop/usedshop/wshopitem.aspx?SC=1021078",
+        "condition": "상",
+        "priceKRW": 32900,
+        "shippingKRW": 3500,
+        "halfPriceParcelKRW": 2400,
+        "status": "active",
+        "evidence": "Exact linked seller row in live used inventory; cart/buy controls visible. Seller conditions are claims; no completed sale asserted."
+      }
+    ],
+    "scope": "All twelve visible seller rows captured with exact offer IDs; no aggregate floor converted into an extra listing. No checkout or purchase attempted."
+  },
+  "images": [
+    {
+      "kind": "cover",
+      "url": "https://image.aladin.co.kr/product/7736/44/cover500/8997148613_1.jpg",
+      "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=77364450",
+      "evidence": "Exact CoverMainImage src"
+    },
+    {
+      "kind": "publisher-provided public promotional collage",
+      "rawSrc": "http://image.aladin.co.kr/img/img_content/8997148613_01.jpg",
+      "url": "https://image.aladin.co.kr/img/img_content/8997148613_01.jpg",
+      "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=77364450",
+      "evidence": "Image in 출판사 제공 책소개; rendered photographs inspected and HTTPS image opened successfully as 700×2476. One collage, not multiple separately captured images."
+    }
+  ],
+  "metadataHandling": "Reuse existing BE JOYFUL work/edition and 이성경 person. Aladin corroborates date, ISBN and 248 pages. Existing YES24 200×240×16mm retained with attribution; Aladin reports only 200×240mm. Aladin weight770g conflicts with older YES24 890g; retain source assertions, no canonical weight field. Photographer is not added as a featured model.",
+  "rights": "Remote public image references only; no pixels mirrored, paid viewer opened, or reuse license asserted. Existing Aladin manual source remains disabled/review."
+}

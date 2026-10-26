@@ -1,0 +1,37 @@
+{
+  "observedAt": "2026-10-23T23:49:00+08:00",
+  "method": "Live public KADOKAWA bibliography DOM and cover-link review; no API/key",
+  "scope": "Two electronic publication identities/covers, metadata-only batch before retailer collection",
+  "editions": [
+    {
+      "workId": "korea-pyo-eunji-rondo-2023",
+      "editionId": "korea-pyo-eunji-rondo-2023-jp-digital",
+      "title": "ピョ・ウンジ1st写真集 輪舞曲",
+      "english": "Rondo: Pyo Eunji First Photobook",
+      "date": "2023-08-10",
+      "metadata": "https://www.kadokawa.co.jp/product/322303002121/",
+      "cover": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+      "variant": "Digital",
+      "store": "https://bookwalker.jp/de716ac532-62e3-4d67-883f-2095a72f4fcb/",
+      "notes": "Official KADOKAWA electronic edition of Rondo, separately identified from print ISBN 9784048976268. Publisher confirms digital release 2023-08-10. Digital page count, file format and price have not yet been independently captured; print A4/128-page specifications, ISBN and price are not copied into digital metadata."
+    },
+    {
+      "workId": "korea-pyo-eunji-enbukyoku-2023",
+      "editionId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+      "title": "【オールアザー版】ピョ・ウンジデジタル写真集『円舞曲』",
+      "english": "Pyo Eunji Digital Photobook: Enbukyoku (All-Other Edition)",
+      "date": "2023-11-30",
+      "metadata": "https://www.kadokawa.co.jp/product/322310001500/",
+      "cover": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+      "variant": "All-Other Digital",
+      "store": "https://bookwalker.jp/de599f46c8-4c8c-4b6c-9fae-8d54377a10d2/",
+      "notes": "KADOKAWA digital companion title, explicitly labeled All-Other Edition and described by the publisher as a second chapter following Rondo. Title 円舞曲 is distinct from 輪舞曲, with its own publisher product ID and release 2023-11-30; it is not a duplicate print or standard Rondo ebook edition. Digital page count, file format, ISBN and selling price are not yet verified."
+    }
+  ],
+  "deduplication": "Read-only global title/model/product-ID query found the existing print Rondo, fanclub books and an unrelated collaboration, but neither digital publisher product. Reuse Rondo work, create separate Enbukyoku companion work, reuse existing Pyo person.",
+  "fieldPolicy": "Do not copy print ISBN, physical dimensions, page count or print asking price into ebooks. Digital-specific page/file/price fields remain unknown until separately verified.",
+  "availability": "Publisher bibliography establishes publication, not current retail availability",
+  "images": "Two exact publisher cover URLs saved remotely with attribution; no pixels mirrored or reuse license asserted",
+  "retailerLeads": "Exact BOOK WALKER product detail links are provided by the publisher, not a paid preview opened by this batch",
+  "scopedImport": "korean-photobook-pyo-eunji-digital-publisher-import.json"
+}

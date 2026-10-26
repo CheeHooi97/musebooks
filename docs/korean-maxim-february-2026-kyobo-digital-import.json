@@ -1,0 +1,94 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-02",
+      "slug": "korea-maxim-2026-02",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-02",
+      "issueNumber": "273",
+      "originalTitle": "맥심 MAXIM 2026. 2월호",
+      "englishTitle": "MAXIM February 2026",
+      "summary": "MAXIM February2026 No.273 검스 issue. Publisher explicitly assigns A cover리리,B cover첼설아; public S artwork prints섹밍. Publisher A/B2026-01-24 release takes precedence over retained AladinJanuary21 assertions. Both ordinaryKRW9600 displays are sold out. A/B/PDF/S stay editions of one magazine issue; S original release/specifications/price unknown. Verified cover roles remain separate from cleared legacy featured text.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/370/370_img_1769084726_1215.jpg",
+      "featuredNames": ""
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-02-digital-kyobo-pdf",
+      "workId": "korea-maxim-2026-02",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-02-02T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 183,
+      "editionVariant": "PDF (Kyobo)",
+      "contentSummary": "Public Kyobo February2026 purchase PDF: release2026-02-02,183pages,100.38MB,TTS available. Displayed ISSN00000000 is a placeholder,not a verified identifier; ISBN blank. Ordinary purchaseKRW5500 with enabled purchase control; conditional coupon4950 excluded. Contents mention 리리,첼설아,섹밍 without an explicit digital cover assignment; no new credit inferred. Linked print2026-01-23 context only; existing print dates/credits and YES24PDF unchanged. No preview,reader,login,purchase or image collection; reuse permission unconfirmed. Existing sourced issue-level print cover credit retained only to satisfy magazine validation; it does not identify this digital cover.",
+      "metadataSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012542859",
+      "seriesName": "MAXIM",
+      "editionLabel": "February 2026 Kyobo digital PDF (183 pages)",
+      "coverUrl": ""
+    },
+    "source": {
+      "id": "kyobo-kr-digital-manual",
+      "name": "Kyobo Korea ebook (manual public page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "digital_store",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "digital",
+      "allowedFormats": "digital",
+      "baseUrl": "https://ebook-product.kyobobook.co.kr",
+      "allowedHosts": "ebook-product.kyobobook.co.kr",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.kyobobook.co.kr/policy",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-kyobo-maxim-february-2026-digital-20261025",
+      "sourceId": "kyobo-kr-digital-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T15:03:33.5382589+08:00",
+      "items": [
+        {
+          "externalId": "E000012542859",
+          "observationId": "kyobo-20261025-maxim-february-digital-E000012542859",
+          "editionId": "korea-maxim-2026-02-digital-kyobo-pdf",
+          "url": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012542859",
+          "title": "맥심 MAXIM 2026.2월호",
+          "status": "active",
+          "priceMinor": 5500,
+          "currency": "KRW",
+          "priceType": "digital",
+          "format": "digital",
+          "digitalAccess": "authorized_store",
+          "publisher": "와이미디어",
+          "editionVariant": "PDF (Kyobo)",
+          "shippingText": "Digital purchase; no shipping; print supplements and sam subscription excluded",
+          "observedAt": "2026-10-25T15:03:33.5382589+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Public Kyobo February2026 purchase PDF: release2026-02-02,183pages,100.38MB,TTS available. Displayed ISSN00000000 is a placeholder,not a verified identifier; ISBN blank. Ordinary purchaseKRW5500 with enabled purchase control; conditional coupon4950 excluded. Contents mention 리리,첼설아,섹밍 without an explicit digital cover assignment; no new credit inferred. Linked print2026-01-23 context only; existing print dates/credits and YES24PDF unchanged. No preview,reader,login,purchase or image collection; reuse permission unconfirmed."
+        }
+      ]
+    },
+    "coverPerson": {
+      "slug": "model-f617c5c31dafac47e49facfcbac1f329a7f8c304050d6952bcc6888403e5fe77",
+      "canonicalPublicName": "리리",
+      "originalName": "리리",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.bananamall.co.kr/shop/view.php?cate=&index_no=2495168",
+      "profileSourceConfidence": "explicit_print_cover_variant_credit"
+    }
+  }
+]

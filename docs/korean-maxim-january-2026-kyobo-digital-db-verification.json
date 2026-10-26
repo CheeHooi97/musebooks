@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "verifiedAt": "2026-10-25T15:06:24.2043766+08:00",
+  "checks": {
+    "existingEditionsPreserved": true,
+    "people": true,
+    "credits": true,
+    "media": true,
+    "oldListingsPreserved": true,
+    "oldObservationsPreserved": true,
+    "oneEditionAdded": true,
+    "oneListingAdded": true,
+    "oneObservationAdded": true,
+    "metadata": true,
+    "price": true,
+    "sourceDisabled": true,
+    "public": true
+  },
+  "before": "docs/korean-maxim-january-2026-kyobo-digital-before.json",
+  "readback": "docs/korean-maxim-january-2026-kyobo-digital-readback.json",
+  "goalComplete": false,
+  "cohortAudit": {
+    "passed": true,
+    "scope": {
+      "distinctObservationKeys": 371,
+      "editions": 208,
+      "explicitMediaReferences": 136,
+      "linkedListings": 360,
+      "listingItemReferences": 371,
+      "people": 144,
+      "records": 352,
+      "sources": 12,
+      "works": 110
+    },
+    "coverageTotals": {
+      "editionsWithoutActiveListing": 140,
+      "editionsWithoutListing": 5,
+      "magazine_issue_digital": 45,
+      "magazine_issue_physical": 84,
+      "missingCover": 178,
+      "missingPageCount": 85,
+      "missingReleaseDate": 8,
+      "photobook_digital": 62,
+      "photobook_physical": 17,
+      "releaseDateNotDayPrecision": 59
+    },
+    "report": "korean-catalog-coverage-audit-2026-10-25.json"
+  },
+  "cumulativeValidation": {
+    "passed": true,
+    "records": 352,
+    "applied": false
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5026,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 179,
+    "databaseCounts": {
+      "listing_observations": 8397,
+      "works": 6064,
+      "editions": 6825,
+      "sources": 33,
+      "listings": 8348
+    },
+    "log": "korean-maxim-january-2026-kyobo-digital-catalog-verify.log"
+  }
+}

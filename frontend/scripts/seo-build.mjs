@@ -4,6 +4,8 @@ import { createHash } from 'node:crypto'
 import { pageSeo, SITE_URL, normalizeSiteURL } from '../src/lib/seo.js'
 import { renderContent, json } from './seo-content.mjs'
 import { apiCatalog, atomFeed, llmsFullTxt, llmsTxt, markdownURL, openAPI, pageMarkdown, robotsTxt } from './agent-files.mjs'
+import { CATALOG_LANGUAGES, hasLanguageEditions, languageAlternates, languagePath } from '../src/lib/catalog-languages.js'
+import { renderLocalizedCatalog, localizedMarkdown } from './localized-catalog.mjs'
 
 const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[char]))
 // The API returns R2 images as media Worker URLs whose signature expires, but
@@ -24,6 +26,7 @@ export function renderSeo(html, pathname, book, profile, siteURL = SITE_URL) {
   const seo = pageSeo(pathname, book, profile, siteURL)
   const meta = (key, value, attribute = 'name') => `<meta ${attribute}="${key}" content="${escape(value)}"/>`
   const tags = [meta('description', seo.description), meta('robots', seo.noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'), `<link rel="canonical" href="${escape(seo.url)}"/>`,
+    ...(seo.noindex ? [] : languageAlternates(pathname, siteURL).map(item => `<link rel="alternate" hreflang="${item.code}" href="${escape(item.url)}"/>`)),
     ...(seo.noindex ? [] : [`<link rel="alternate" type="text/markdown" href="${escape(markdownURL(seo.url, siteURL))}"/>`]),
     ...Object.entries({ title: seo.title, description: seo.description, url: seo.url, type: 'website', site_name: 'MuseBooks', ...(seo.image ? { image: seo.image } : {}) }).map(([key, value]) => meta(`og:${key}`, value, 'property')),
     ...Object.entries({ card: seo.image ? 'summary_large_image' : 'summary', title: seo.title, description: seo.description, ...(seo.image ? { image: seo.image } : {}) }).map(([key, value]) => meta(`twitter:${key}`, value)),
@@ -46,6 +49,7 @@ export function renderPublishedPage(template, route, data = {}, siteURL = SITE_U
     .replace(/<meta\b[^>]*(?:name=["'](?:description|robots|twitter:[^"']+)["']|property=["']og:[^"']+["'])[^>]*>/gi, '')
     .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, '')
     .replace(/<link\b[^>]*type=["']text\/markdown["'][^>]*>/gi, '')
+    .replace(/<link\b[^>]*hreflang=["'][^"']+["'][^>]*>/gi, '')
     .replace(/(<div id="root">)[\s\S]*(<\/body>)/, '$1</div>$2')
   const bootstrap = data.book ? `<script id="musebooks-bootstrap" type="application/json">${json({ book: data.book })}</script>` : ''
   return renderSeo(clean, route, data.book, data.profile, siteURL)
@@ -90,10 +94,21 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
     // Markdown twin beside the page directory: /about -> /about.md, / -> /index.md.
     const markdown = route === '/404' ? '' : pageMarkdown(route, data, siteURL)
     if (markdown) await fs.writeFile(parts.length ? path.join(outputDir, ...parts.slice(0, -1), `${parts.at(-1)}.md`) : path.join(outputDir, 'index.md'), markdown)
+    if (hasLanguageEditions(route)) {
+      for (const language of CATALOG_LANGUAGES.filter(item => item.segment)) {
+        const localized = languagePath(route, language.code)
+        const localizedParts = [language.segment, ...parts]
+        await fs.mkdir(path.join(outputDir, ...localizedParts), { recursive: true })
+        await fs.writeFile(path.join(outputDir, ...localizedParts, 'index.html'), renderLocalizedCatalog(template, route, data, language.code, siteURL))
+        await fs.writeFile(path.join(outputDir, ...localizedParts.slice(0, -1), `${localizedParts.at(-1)}.md`), localizedMarkdown(route, data, language.code, siteURL))
+        routes.push(localized)
+      }
+    }
   }
   await write('/', { books })
   await write('/books', { books })
   await write('/saved')
+  for (const route of ['/login', '/register', '/verify-email', '/forgot-password', '/reset-password', '/account']) await write(route)
   await write('/models', { profiles: models })
   await write('/publishers', { profiles: publishers })
   await write('/active', { listings: active })
@@ -104,7 +119,7 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
   for (const [kind, profiles] of [['models', models], ['publishers', publishers]]) {
     for (const profile of profiles) {
       if (!profile.id || !profile.name) throw new Error(`Invalid ${kind} profile`)
-      const related = books.filter(book => kind === 'models' ? book.models?.some(model => model.id === profile.id) : book.editions?.some(edition => edition.publisherProfile?.id === profile.id))
+      const related = books.filter(book => kind === 'models' ? [...(book.models || []), ...(book.coverModels || [])].some(model => model.id === profile.id) : book.editions?.some(edition => edition.publisherProfile?.id === profile.id))
       await write(`/${kind}/${encodeURIComponent(profile.id)}`, { profile: { ...profile, books: related }, books: related })
     }
   }
@@ -127,7 +142,8 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
   }
   await write('/404')
   await fs.writeFile(path.join(outputDir, '404.html'), await fs.readFile(path.join(outputDir, '404/index.html')))
-  await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemapXML(routes.filter(route => route !== '/404' && route !== '/saved'), siteURL))
+  const privateRoutes = new Set(['/404', '/saved', '/login', '/register', '/verify-email', '/forgot-password', '/reset-password', '/account'])
+  await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemapXML(routes.filter(route => !privateRoutes.has(route)), siteURL))
   await fs.writeFile(path.join(outputDir, 'robots.txt'), robotsTxt(siteURL))
   const catalog = { books, models, publishers }
   await fs.writeFile(path.join(outputDir, 'llms.txt'), llmsTxt(siteURL, catalog))

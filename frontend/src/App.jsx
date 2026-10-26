@@ -9,6 +9,7 @@ import Market from "./pages/Market";
 import Saved from "./pages/Saved";
 import About from "./pages/About";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AuthPage, { AccountPage } from "./pages/Auth";
 import { usePreferences } from "./lib/preferences";
 import { useLocation } from "./lib/router";
 
@@ -29,6 +30,8 @@ export function resolveRoute(pathname, search) {
   if (section === "models" || section === "publishers") return id ? { page: <DirectoryProfile kind={section} id={encodeURIComponent(decode(id))} /> } : { page: <Directory kind={section} search={search} /> };
   if (["active", "sold", "japan"].includes(section) && !id) return { page: <Market tab={section} search={search} /> };
   if (section === "saved" && !id) return { page: <Saved />, showAds: false };
+  if (["login", "register", "verify-email", "forgot-password", "reset-password"].includes(section) && !id) return { page: <AuthPage mode={section} />, showAds: false };
+  if (section === "account" && !id) return { page: <AccountPage />, showAds: false };
   if (section === "about" && !id) return { page: <About /> };
   if (section === "privacy-policy" && !id) return { page: <PrivacyPolicy />, showAds: false };
   return { page: <NotFound />, showAds: false };

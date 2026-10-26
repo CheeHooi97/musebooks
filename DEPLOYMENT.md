@@ -86,6 +86,30 @@ That SSH account needs non-interactive `sudo -n` access for the deployment scrip
 
 ## Deploy and verify
 
+Before deploying the account feature, apply the `20261023_accounts_v1`
+migration with `go run ./cmd/catalog-migrate --apply` using the dedicated
+MuseBooks database owner's environment. The API requires this schema version
+and fails startup if it has not been applied. Existing deployment does not
+run migrations automatically.
+
+Add backend-only `SITE_URL=https://musebooks.my`, `GOOGLE_CLIENT_ID`,
+`GOOGLE_CLIENT_SECRET`,
+`GOOGLE_REDIRECT_URL=https://musebooks.my/v1/auth/oauth/google/callback`,
+`RESEND_API_KEY`, `EMAIL_FROM` (a Resend-verified sender), and
+`EMAIL_VERIFICATION_SECRET` (a separate random secret of 32+ characters).
+Register that exact callback in the Google OAuth web client. Google sign-in
+and email registration remain unavailable until configured. Reuse the
+MuseCards provider services if desired, with MuseBooks' own callback, branding,
+verification secret, sessions, and database. No environment secrets are
+included in the website bundle.
+
+After activation, verify a real new email registration, delivery of its
+verification code, rejection of sign-in before verification, verification,
+sign-out, password reset, and a full Google sign-in. Account routes are
+generated static entries with noindex metadata and are excluded from the
+sitemap. Native Google sign-in also needs a fresh Capacitor sync/build and
+device testing of the `my.musebooks.app` callback scheme.
+
 After the one-time server setup and secrets are in place, every push to `main` runs the workflow. You can also run it from **GitHub → Actions → Deploy MuseBooks → Run workflow**. It builds the React/Vite static website and Linux amd64 Go API, uploads an immutable release, activates the MuseBooks Nginx virtual host and API, and checks:
 
 - `https://musebooks.my/` contains MuseBooks and does not contain MuseCards.

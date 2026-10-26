@@ -41,6 +41,13 @@ class WorkIdentityTests(unittest.TestCase):
         self.assertNotEqual(repair.normalized('Book vol.1'), repair.normalized('Book vol.2'))
         self.assertNotEqual(repair.normalized('Book!'), repair.normalized('Book'))
 
+    def test_store_encodings_of_one_title_match(self):
+        for kobo, grajapa in [('霧島聖子　あ〜ん、止められない！', '霧島聖子 あ～ん、止められない！'),
+                              ('Unreal≧Real ーアンリアルとリアルー　紫藤るいデジタル写真集', 'Unreal≧Real ―アンリアルとリアル― 紫藤るいデジタル写真集'),
+                              ('漫画アクションデジタル写真集　紫藤るい「Healing」　（漫画アクションデジタル写真集）', '漫画アクションデジタル写真集 紫藤るい「Healing」')]:
+            self.assertEqual(repair.title_key(kobo), repair.title_key(grajapa))
+        self.assertNotEqual(repair.title_key('A-collection 萌木七海（１）'), repair.title_key('A-collection 萌木七海（３）'))
+
 
 if __name__ == '__main__':
     unittest.main()

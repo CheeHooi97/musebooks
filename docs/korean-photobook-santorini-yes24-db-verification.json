@@ -1,0 +1,368 @@
+{
+  "credits": [
+    {
+      "workId": "korea-go-so-young-santorini",
+      "personId": 16836,
+      "role": "featured",
+      "creditedName": "고소영",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 0,
+        "slug": "",
+        "canonicalPublicName": "",
+        "originalName": "",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "",
+        "verificationSourceUrl": "",
+        "profileSourceConfidence": "",
+        "createdAt": "0001-01-01T00:00:00Z",
+        "updatedAt": "0001-01-01T00:00:00Z"
+      },
+      "createdAt": "2026-10-23T22:59:36.928673+08:00",
+      "updatedAt": "2026-10-24T00:15:41.679426+08:00"
+    }
+  ],
+  "databaseCounts": {
+    "editions": 6802,
+    "listing_observations": 8344,
+    "listings": 8304,
+    "sources": 30,
+    "works": 6062
+  },
+  "edition": {
+    "publisherCompanyId": "publisher-cfdd20d0266a853cfe104091dc518763037ba875e65a2305312e04d2686440ab",
+    "originalCoverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+    "id": "korea-go-so-young-santorini-2003-print-yes24",
+    "workId": "korea-go-so-young-santorini",
+    "format": "physical",
+    "language": "ko-KR",
+    "editionMarket": "KR",
+    "publisher": "Dreamax",
+    "releaseDate": "2003-11-29T08:00:00+08:00",
+    "releasePrecision": "day",
+    "isbn": "9788995439500",
+    "editionVariant": "Five posters and compilation CD",
+    "contentSummary": "Standalone photobook featuring 고소영 with explicit model credit and photographs by 조세현, publisher Dreamax, release 2003-11-29, ISBN 9788995439500. YES24 page count and dimensions remain unconfirmed; its weight field says 1,030g. Original package advertises five posters and one compilation CD, without establishing used-copy completeness. Live 2026-10-24 list/displayed price KRW 27,000/25,650, but new copies unavailable (품절). Two used items from KRW 55,400 appear only as an aggregate linked to a disallowed used-shop route; no seller offers are inferred. Exact main cover is a remote attributed product-page reference; no additional public product image confirmed, pixels mirrored or reuse license asserted.",
+    "metadataSourceUrl": "https://www.yes24.com/product/goods/416604",
+    "editionLabel": "2003 print edition",
+    "coverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+    "status": "published",
+    "createdAt": "2026-10-20T12:13:59.772279+08:00",
+    "updatedAt": "2026-10-24T00:15:41.59264+08:00"
+  },
+  "editionMedia": [
+    {
+      "id": 84423,
+      "entityType": "edition",
+      "entityId": "korea-go-so-young-santorini-2003-print-yes24",
+      "mediaType": "cover",
+      "originalUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "storageUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "sourceUrl": "https://www.yes24.com/product/goods/416604",
+      "isPrimary": true,
+      "createdAt": "2026-10-24T00:15:40.984126+08:00",
+      "updatedAt": "2026-10-24T00:15:40.984126+08:00"
+    },
+    {
+      "id": 84424,
+      "entityType": "edition",
+      "entityId": "korea-go-so-young-santorini-2003-print-yes24",
+      "mediaType": "publisher_cover",
+      "originalUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "storageUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "sourceUrl": "https://www.yes24.com/product/goods/416604",
+      "isPrimary": true,
+      "createdAt": "2026-10-24T00:15:41.70814+08:00",
+      "updatedAt": "2026-10-24T00:15:41.70814+08:00"
+    }
+  ],
+  "limitations": "New-copy displayed price unavailable. Pages and dimensions unknown. Aggregate used-price floor not imported as an offer; package completeness unverified. Only the exact remote cover captured; reuse permission unconfirmed.",
+  "listing": {
+    "id": "listing-e91961b5dc3d26c1611f6cb2a4f926ba",
+    "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+    "sourceId": "yes24-kr-print",
+    "externalId": "416604",
+    "url": "https://www.yes24.com/product/goods/416604",
+    "title": "SANTORINI 산토리니",
+    "formatCandidate": "physical",
+    "isbn": "9788995439500",
+    "publisher": "Dreamax",
+    "editionVariant": "Five posters and compilation CD",
+    "status": "unknown",
+    "priceMinor": 25650,
+    "currency": "KRW",
+    "priceType": "fixed",
+    "shippingText": "YES24 delivery; displayed free shipping; overseas delivery possible, destination costs unverified",
+    "imageUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+    "observedAt": "2026-10-24T00:14:00+08:00",
+    "lastSeenAt": "2026-10-24T00:14:00+08:00",
+    "source": {
+      "marketplaceId": 32,
+      "id": "yes24-kr-print",
+      "name": "YES24 Korea print (manual page capture)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.yes24.com",
+      "allowedHosts": "www.yes24.com",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.yes24.com/notice/service.aspx",
+      "ratePerMinute": 1,
+      "enabled": false,
+      "createdAt": "2026-10-20T12:31:51.337423+08:00",
+      "updatedAt": "2026-10-24T00:15:41.758681+08:00"
+    },
+    "createdAt": "2026-10-24T00:14:00+08:00",
+    "updatedAt": "2026-10-24T00:15:41.8905+08:00"
+  },
+  "listingMedia": [
+    {
+      "id": 84425,
+      "entityType": "listing",
+      "entityId": "listing-e91961b5dc3d26c1611f6cb2a4f926ba",
+      "mediaType": "listing_image",
+      "originalUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "storageUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "sourceUrl": "https://www.yes24.com/product/goods/416604",
+      "isPrimary": true,
+      "createdAt": "2026-10-24T00:15:42.025301+08:00",
+      "updatedAt": "2026-10-24T00:15:42.025301+08:00"
+    }
+  ],
+  "method": "Read-only exact PostgreSQL fields, observation evidence and actual GetBook handler; no migrations",
+  "observations": [
+    {
+      "id": "observation-42c54b8619cae90067bacfc213af6c6980331e1c",
+      "observationKey": "observation-42c54b8619cae90067bacfc213af6c6980331e1c",
+      "listingId": "listing-e91961b5dc3d26c1611f6cb2a4f926ba",
+      "jobId": "manual-yes24-santorini-20261024",
+      "parserVersion": "manual-page-capture-v1",
+      "observedAt": "2026-10-24T00:14:00+08:00",
+      "status": "unknown",
+      "format": "physical",
+      "priceMinor": 25650,
+      "currency": "KRW",
+      "priceType": "fixed",
+      "shippingText": "YES24 delivery; displayed free shipping; overseas delivery possible, destination costs unverified",
+      "statusEvidence": "Live public YES24 SANTORINI page checked on 2026-10-24 around 00:14 SGT. List KRW 27,000, displayed discounted price KRW 25,650. Page marks 품절 and explicitly says current new copies cannot be purchased; listing status unknown, not a completed sale. Release 2003-11-29, ISBN 9788995439500; pages/dimensions unconfirmed, weight1,030g. Model 고소영 and photographer 조세현 explicitly credited. Original package advertises five posters and compilation CD. Public aggregate two used items from KRW 55,400 is not an individual offer; linked disallowed UsedShopHub route was not visited. Exact cover src retained remotely; no additional product image or used-copy completeness inferred.",
+      "timestampPrecision": "minute",
+      "createdAt": "2026-10-24T00:15:41.968284+08:00",
+      "updatedAt": "2026-10-24T00:15:41.968284+08:00"
+    }
+  ],
+  "passed": true,
+  "person": {
+    "id": 16836,
+    "slug": "model-bbb093bcb3f0a4a58bcdf4dc03151104d48ca5d6ba02d3631e9f211c9f66d4bb",
+    "canonicalPublicName": "고소영",
+    "originalName": "고소영",
+    "englishName": "",
+    "traditionalChineseName": "",
+    "simplifiedChineseName": "",
+    "personType": "model",
+    "verificationSourceUrl": "https://www.yes24.com/product/goods/416604",
+    "profileSourceConfidence": "explicit_model_credit",
+    "createdAt": "2026-10-20T12:13:57.122049+08:00",
+    "updatedAt": "2026-10-20T12:13:57.122049+08:00"
+  },
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-bbb093bcb3f0a4a58bcdf4dc03151104d48ca5d6ba02d3631e9f211c9f66d4bb",
+        "name": "고소영"
+      }
+    ],
+    "id": "korea-go-so-young-santorini",
+    "slug": "korea-go-so-young-santorini",
+    "publicationType": "photobook",
+    "originalTitle": "SANTORINI 산토리니",
+    "englishTitle": "SANTORINI",
+    "summary": "Photo book featuring Korean model/actress 고소영, photographed by 조세현. The YES24 new-copy page is marked sold out.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "고소영"
+    ],
+    "photographer": "조세현",
+    "coverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+    "editions": [
+      {
+        "gallery": [
+          {
+            "id": 84423,
+            "entityType": "edition",
+            "entityId": "korea-go-so-young-santorini-2003-print-yes24",
+            "mediaType": "cover",
+            "originalUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+            "storageUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+            "sourceUrl": "https://www.yes24.com/product/goods/416604",
+            "isPrimary": true,
+            "createdAt": "2026-10-24T00:15:40.984126+08:00",
+            "updatedAt": "2026-10-24T00:15:40.984126+08:00"
+          }
+        ],
+        "publisherProfile": {
+          "id": "publisher-cfdd20d0266a853cfe104091dc518763037ba875e65a2305312e04d2686440ab",
+          "name": "Dreamax"
+        },
+        "id": "korea-go-so-young-santorini-2003-print-yes24",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "Dreamax",
+        "releaseDate": "2003-11-29T08:00:00+08:00",
+        "releasePrecision": "day",
+        "isbn": "9788995439500",
+        "editionVariant": "Five posters and compilation CD",
+        "contentSummary": "Standalone photobook featuring 고소영 with explicit model credit and photographs by 조세현, publisher Dreamax, release 2003-11-29, ISBN 9788995439500. YES24 page count and dimensions remain unconfirmed; its weight field says 1,030g. Original package advertises five posters and one compilation CD, without establishing used-copy completeness. Live 2026-10-24 list/displayed price KRW 27,000/25,650, but new copies unavailable (품절). Two used items from KRW 55,400 appear only as an aggregate linked to a disallowed used-shop route; no seller offers are inferred. Exact main cover is a remote attributed product-page reference; no additional public product image confirmed, pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://www.yes24.com/product/goods/416604",
+        "editionLabel": "2003 print edition",
+        "coverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+        "listings": [
+          {
+            "gallery": [
+              {
+                "id": 84425,
+                "entityType": "listing",
+                "entityId": "listing-e91961b5dc3d26c1611f6cb2a4f926ba",
+                "mediaType": "listing_image",
+                "originalUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+                "storageUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+                "sourceUrl": "https://www.yes24.com/product/goods/416604",
+                "isPrimary": true,
+                "createdAt": "2026-10-24T00:15:42.025301+08:00",
+                "updatedAt": "2026-10-24T00:15:42.025301+08:00"
+              }
+            ],
+            "id": "listing-e91961b5dc3d26c1611f6cb2a4f926ba",
+            "externalId": "416604",
+            "url": "https://www.yes24.com/product/goods/416604",
+            "title": "SANTORINI 산토리니",
+            "format": "physical",
+            "status": "unknown",
+            "priceMinor": 25650,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "YES24 delivery; displayed free shipping; overseas delivery possible, destination costs unverified",
+            "observedAt": "2026-10-24T00:14:00+08:00",
+            "lastSeenAt": "2026-10-24T00:14:00+08:00",
+            "source": {
+              "id": "yes24-kr-print",
+              "name": "YES24 Korea print (manual page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": [
+          {
+            "gallery": [
+              {
+                "id": 84425,
+                "entityType": "listing",
+                "entityId": "listing-e91961b5dc3d26c1611f6cb2a4f926ba",
+                "mediaType": "listing_image",
+                "originalUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+                "storageUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+                "sourceUrl": "https://www.yes24.com/product/goods/416604",
+                "isPrimary": true,
+                "createdAt": "2026-10-24T00:15:42.025301+08:00",
+                "updatedAt": "2026-10-24T00:15:42.025301+08:00"
+              }
+            ],
+            "id": "listing-e91961b5dc3d26c1611f6cb2a4f926ba",
+            "externalId": "416604",
+            "url": "https://www.yes24.com/product/goods/416604",
+            "title": "SANTORINI 산토리니",
+            "format": "physical",
+            "status": "unknown",
+            "priceMinor": 25650,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "shippingText": "YES24 delivery; displayed free shipping; overseas delivery possible, destination costs unverified",
+            "observedAt": "2026-10-24T00:14:00+08:00",
+            "lastSeenAt": "2026-10-24T00:14:00+08:00",
+            "source": {
+              "id": "yes24-kr-print",
+              "name": "YES24 Korea print (manual page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "source": {
+    "marketplaceId": 32,
+    "id": "yes24-kr-print",
+    "name": "YES24 Korea print (manual page capture)",
+    "region": "KR",
+    "locale": "ko-KR",
+    "timezone": "Asia/Seoul",
+    "kind": "bookstore",
+    "adapter": "manual_page_capture",
+    "accessMethod": "manual_browser",
+    "defaultFormat": "physical",
+    "allowedFormats": "physical",
+    "baseUrl": "https://www.yes24.com",
+    "allowedHosts": "www.yes24.com",
+    "capabilities": "catalog_discovery,active_discovery,listing_detail",
+    "accessStatus": "review",
+    "termsUrl": "https://www.yes24.com/notice/service.aspx",
+    "ratePerMinute": 1,
+    "enabled": false,
+    "createdAt": "2026-10-20T12:31:51.337423+08:00",
+    "updatedAt": "2026-10-24T00:15:41.758681+08:00"
+  },
+  "verifiedAt": "2026-10-23T16:16:15.6036164Z",
+  "work": {
+    "originMarketId": 10544,
+    "id": "korea-go-so-young-santorini",
+    "slug": "korea-go-so-young-santorini",
+    "publicationType": "photobook",
+    "originalTitle": "SANTORINI 산토리니",
+    "englishTitle": "SANTORINI",
+    "summary": "Photo book featuring Korean model/actress 고소영, photographed by 조세현. The YES24 new-copy page is marked sold out.",
+    "originCode": "KR",
+    "featuredNames": "고소영",
+    "photographer": "조세현",
+    "coverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+    "status": "published",
+    "origin": {
+      "code": "",
+      "name": "",
+      "sortOrder": 0,
+      "createdAt": "0001-01-01T00:00:00Z",
+      "updatedAt": "0001-01-01T00:00:00Z"
+    },
+    "createdAt": "2026-10-20T12:13:59.754958+08:00",
+    "updatedAt": "2026-10-24T00:15:41.560883+08:00"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 337,
+    "digitalWorks": 5450,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 174,
+    "log": "korean-photobook-santorini-yes24-catalog-verify.log",
+    "exitCode": 0
+  }
+}

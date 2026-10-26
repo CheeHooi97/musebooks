@@ -1,0 +1,29 @@
+{
+  "capturedAt": "2026-10-25T13:30:11.3262967+08:00",
+  "method": "Manual rendered public retailer page; no API",
+  "item": {
+    "externalId": "9784048976268",
+    "observationId": "maruzen-20261025-9784048976268",
+    "editionId": "korea-pyo-eunji-rondo-2023-jp-print",
+    "url": "https://www.maruzenjunkudo.co.jp/products/9784048976268",
+    "title": "ピョ・ウンジ1st写真集 輪舞曲",
+    "status": "unknown",
+    "priceMinor": 3300,
+    "currency": "JPY",
+    "priceType": "fixed",
+    "format": "physical",
+    "publisher": "KADOKAWA",
+    "editionVariant": "Print",
+    "isbn": "9784048976268",
+    "shippingText": "No net-store stock; cannot supply. Delivery fee/date not verified",
+    "observedAt": "2026-10-25T13:30:11.3262967+08:00",
+    "timestampPrecision": "minute",
+    "statusEvidence": "Live rendered Maruzen Junkudo product checked2026-10-25 displays normal tax-inclusiveJPY3300,ISBN9784048976268,release2023/08/10,publisherKADOKAWA. Net-store stock explicitly says 在庫なし お取り扱いできません. Cart label is not treated as stock evidence against the explicit unavailability. Price is a displayed unavailable retail amount; no purchasable offer or completed sale inferred. No login,cart,checkout,API or paid reader used. Artist-storeMYR97 membership observation and Apple digital edition remain separate."
+  },
+  "stockText": "在庫なし お取り扱いできません",
+  "priceTaxIncluded": true,
+  "releaseDate": "2023-08-10",
+  "isbn": "9784048976268",
+  "imageAction": "No additional images accepted; existing artist/publisher media retained. Hanmoto exact-title permission unknown.",
+  "limitations": "Unavailable retail display, not active stock. No currency conversion, digital-spec transfer or reuse license."
+}

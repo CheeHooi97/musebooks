@@ -1,0 +1,87 @@
+[
+  {
+    "work": {
+      "id": "korea-go-so-young-santorini",
+      "slug": "korea-go-so-young-santorini",
+      "publicationType": "photobook",
+      "originalTitle": "SANTORINI 산토리니",
+      "englishTitle": "SANTORINI",
+      "summary": "Standalone photobook featuring 고소영, photographed by 조세현. YES24/Aladin and exact-ISBN Kyobo source assertions disagree on publication date and specifications. Canonical date and Aladin page count/dimensions are retained pending stronger edition evidence; each unavailable retailer price remains separate.",
+      "originCode": "KR",
+      "featuredNames": "고소영",
+      "coverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "photographer": "조세현"
+    },
+    "edition": {
+      "id": "korea-go-so-young-santorini-2003-print-yes24",
+      "workId": "korea-go-so-young-santorini",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "Dreamax",
+      "releaseDate": "2003-11-29T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "9788995439500",
+      "editionVariant": "Five posters and compilation CD",
+      "contentSummary": "Standalone Go So-young photobook photographed by 조세현, Dreamax, ISBN9788995439500. Canonical release2003-11-29 is supported by YES24/Aladin;174pages,228×300mm come from Aladin445208. Exact-ISBN Kyobo https://product.kyobobook.co.kr/detail/S000001572227 instead lists2003-09-03,170pages,297×420mm. This direct-source conflict remains unresolved; no replacement canonical bibliography or second edition is inferred. Original package includes photo/poster sheets and compilationCD, not proof of used-copy completeness. Existing YES24 cover/source remain intact. Unavailable retailer prices: YES24KRW25650,AladinKRW24300,KyoboKRW27000. Kyobo explicitly품절. No new images,mirrored pixels or reuse permission.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/416604",
+      "editionLabel": "2003 print edition",
+      "coverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "originalCoverUrl": "https://image.yes24.com/momo/TopCate11/MidCate09/1080744.jpg",
+      "dimensions": "228×300mm",
+      "pageCount": 174
+    },
+    "source": {
+      "id": "kyobo-kr-print-manual",
+      "name": "Kyobo Korea print (manual public page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://product.kyobobook.co.kr",
+      "allowedHosts": "product.kyobobook.co.kr",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.kyobobook.co.kr/policy",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "batch": {
+      "jobId": "manual-kyobo-santorini-20261025",
+      "sourceId": "kyobo-kr-print-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:28:50.3531147+08:00",
+      "items": [
+        {
+          "externalId": "S000001572227",
+          "observationId": "kyobo-20261025-santorini-S000001572227",
+          "editionId": "korea-go-so-young-santorini-2003-print-yes24",
+          "url": "https://product.kyobobook.co.kr/detail/S000001572227",
+          "title": "고소영화보집 CD포함",
+          "status": "unknown",
+          "priceMinor": 27000,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "DREAMAX",
+          "editionVariant": "Five posters and compilation CD",
+          "shippingText": "Page says overseas shipping available; exact fee unstated; product sold out",
+          "observedAt": "2026-10-25T14:28:50.3531147+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public rendered Kyobo exact ISBN9788995439500 page checked2026-10-25. Title고소영화보집 CD포함,DREAMAX,조세현 (labelled author),displayKRW27000 and explicit품절/re-stock notification control. Store unknown unavailable retail display, not active offer or sold transaction. Kyobo directly lists2003-09-03,170pages,297×420mm, conflicting with existing YES24/Aladin date2003-11-29 and Aladin174pages/228×300mm. Canonical values remain unchanged; no second edition inferred from conflicting retail metadata. No API,login,purchase or images collected.",
+          "isbn": "9788995439500"
+        }
+      ]
+    }
+  }
+]

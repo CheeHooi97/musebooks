@@ -1,0 +1,384 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-09-mua-digital",
+      "slug": "korea-maxim-2026-09-mua-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-09",
+      "issueNumber": "280",
+      "originalTitle": "맥심 MAXIM 2026. 9월호",
+      "englishTitle": "MAXIM September 2026",
+      "summary": "MAXIM September2026 issueNo.280, 더티토크 theme. Official publisher credits 미스맥심 뮤아 on A and S, 윤영서 on B. A/B release2026-08-24 takes precedence over retailerAugust25; digitalPDF retainsSeptember1. B is consolidated under the same issue while preserving its existing edition/listing/observation IDs. Subscriber S original release/specifications/ordinary price remain unknown.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-8aba74dc7fb85d97d1667c7f8ddd56a1d749907b15d2845d7dd13669c9b247e4",
+      "canonicalPublicName": "미스맥심 뮤아",
+      "originalName": "미스맥심 뮤아",
+      "englishName": "Miss Maxim Mua",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+      "profileSourceConfidence": "explicit_publisher_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-09-mua-print-a-yes24",
+      "workId": "korea-maxim-2026-09-mua-digital",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-08-24T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 176,
+      "dimensions": "210×297×15mm",
+      "editionVariant": "A형",
+      "contentSummary": "MAXIM September2026 No.280 A형 print edition. Publisher explicitly credits 미스맥심 뮤아, release2026-08-24 and active ordinaryKRW9,600. Earlier YES24August25 remains a source date conflict. Retain YES24-derived176pages,210×297×15mm. Supplement: 미스맥심 뮤아/한지나 스페셜 브로마이드. Lineup/supplement names are not additional cover credits. Exact publisher cover and seven public preview panels retained remotely, excluding event banners; no mirrored pixels or reuse license asserted.",
+      "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+      "seriesName": "MAXIM",
+      "editionLabel": "September 2026 A-type print issue",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+      "originalCoverUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg"
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+        "isPrimary": true
+      },
+      {
+        "mediaType": "publisher_sample_001",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873002459329o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873002459329o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_002",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873003290712o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873003290712o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_003",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/384/editor_1787214428654o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/384/editor_1787214428654o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_004",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/384/editor_1787214432729o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/384/editor_1787214432729o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_005",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/384/editor_17872144416957o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/384/editor_17872144416957o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_006",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/384/editor_17872144496601o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/384/editor_17872144496601o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_007",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873001764517o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/384/editor_17873001764517o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+        "isPrimary": false
+      }
+    ],
+    "source": {
+      "id": "maxim-korea-manual",
+      "name": "MAXIM Korea publisher store (manual public page capture)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.maximkorea.net",
+      "allowedHosts": "www.maximkorea.net,maximkorea.net",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.maximkorea.net/members/members_law.php",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-maxim-september-2026-publisher-20261025",
+      "sourceId": "maxim-korea-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T13:01:00+08:00",
+      "items": [
+        {
+          "externalId": "384",
+          "observationId": "maxim-publisher-20261025-september-384",
+          "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+          "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+          "title": "맥심280호 더티토크 편 2026년9월호 A형",
+          "status": "active",
+          "priceMinor": 9600,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "와이미디어",
+          "editionVariant": "A형",
+          "shippingText": "Physical publisher product; delivery charges not stated on reviewed page",
+          "imageUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+          "observedAt": "2026-10-25T13:01:00+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live official MAXIM A형 public product checked2026-10-25 around13:01SGT. Explicit cover credit 미스맥심 뮤아, issue280 September2026, release2026-08-24 and ordinaryKRW9,600. Quantity control and enabledcart present, no purchase attempted. PublisherAugust24 takes precedence over retained older YES24August25 assertion. Existing A/B176pages retained fromYES24, not copied toS/PDF. Supplement: 미스맥심 뮤아/한지나 스페셜 브로마이드. No completed sale or extra cover credit inferred. Exact cover and seven public preview references, event banners excluded; no mirrored pixels or reuse license asserted."
+        }
+      ]
+    },
+    "media": [
+      {
+        "externalId": "384",
+        "mediaType": "listing_image",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+        "isPrimary": true
+      }
+    ]
+  },
+  {
+    "work": {
+      "id": "korea-maxim-2026-09-mua-digital",
+      "slug": "korea-maxim-2026-09-mua-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-09",
+      "issueNumber": "280",
+      "originalTitle": "맥심 MAXIM 2026. 9월호",
+      "englishTitle": "MAXIM September 2026",
+      "summary": "MAXIM September2026 issueNo.280, 더티토크 theme. Official publisher credits 미스맥심 뮤아 on A and S, 윤영서 on B. A/B release2026-08-24 takes precedence over retailerAugust25; digitalPDF retainsSeptember1. B is consolidated under the same issue while preserving its existing edition/listing/observation IDs. Subscriber S original release/specifications/ordinary price remain unknown.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-ad8a73bac79aa5927cb8097ba9b8be507e8513a3464bc357a00a425b15e6938b",
+      "canonicalPublicName": "윤영서",
+      "originalName": "윤영서",
+      "englishName": "",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+      "profileSourceConfidence": "explicit_publisher_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+      "workId": "korea-maxim-2026-09-mua-digital",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-08-24T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 176,
+      "editionVariant": "B형",
+      "contentSummary": "MAXIM September2026 No.280 B형 print edition. Publisher explicitly credits 미스맥심 윤영서, release2026-08-24 and active ordinaryKRW9,600. Earlier YES24August25 remains a source date conflict. Retain YES24-derived176pages,dimensions unverified. Supplement: 미스맥심 윤영서/한지나 스페셜 브로마이드. Lineup/supplement names are not additional cover credits. Exact publisher cover and seven public preview panels retained remotely, excluding event banners; no mirrored pixels or reuse license asserted.",
+      "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+      "seriesName": "MAXIM",
+      "editionLabel": "September 2026 B-type print issue",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+      "originalCoverUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg"
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+        "isPrimary": true
+      },
+      {
+        "mediaType": "publisher_sample_001",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140443622o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140443622o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_002",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/383/editor_17873003787083o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/383/editor_17873003787083o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_003",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140607742o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140607742o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_004",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140653182o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140653182o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_005",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140712728o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140712728o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_006",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140817446o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/383/editor_17872140817446o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+        "isPrimary": false
+      },
+      {
+        "mediaType": "publisher_sample_007",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/383/editor_17873000694652o.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/383/editor_17873000694652o.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+        "isPrimary": false
+      }
+    ],
+    "source": {
+      "id": "maxim-korea-manual",
+      "name": "MAXIM Korea publisher store (manual public page capture)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.maximkorea.net",
+      "allowedHosts": "www.maximkorea.net,maximkorea.net",
+      "capabilities": "catalog_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.maximkorea.net/members/members_law.php",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-maxim-september-2026-publisher-20261025",
+      "sourceId": "maxim-korea-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T13:01:00+08:00",
+      "items": [
+        {
+          "externalId": "383",
+          "observationId": "maxim-publisher-20261025-september-383",
+          "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+          "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+          "title": "맥심280호 더티토크 편 2026년9월호 B형",
+          "status": "active",
+          "priceMinor": 9600,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "와이미디어",
+          "editionVariant": "B형",
+          "shippingText": "Physical publisher product; delivery charges not stated on reviewed page",
+          "imageUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+          "observedAt": "2026-10-25T13:01:00+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live official MAXIM B형 public product checked2026-10-25 around13:01SGT. Explicit cover credit 미스맥심 윤영서, issue280 September2026, release2026-08-24 and ordinaryKRW9,600. Quantity control and enabledcart present, no purchase attempted. PublisherAugust24 takes precedence over retained older YES24August25 assertion. Existing A/B176pages retained fromYES24, not copied toS/PDF. Supplement: 미스맥심 윤영서/한지나 스페셜 브로마이드. No completed sale or extra cover credit inferred. Exact cover and seven public preview references, event banners excluded; no mirrored pixels or reuse license asserted."
+        }
+      ]
+    },
+    "media": [
+      {
+        "externalId": "383",
+        "mediaType": "listing_image",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+        "isPrimary": true
+      }
+    ],
+    "reassignEditionFromWorkId": "korea-maxim-2026-09-yoon-yeongseo-print-b"
+  },
+  {
+    "work": {
+      "id": "korea-maxim-2026-09-mua-digital",
+      "slug": "korea-maxim-2026-09-mua-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-09",
+      "issueNumber": "280",
+      "originalTitle": "맥심 MAXIM 2026. 9월호",
+      "englishTitle": "MAXIM September 2026",
+      "summary": "MAXIM September2026 issueNo.280, 더티토크 theme. Official publisher credits 미스맥심 뮤아 on A and S, 윤영서 on B. A/B release2026-08-24 takes precedence over retailerAugust25; digitalPDF retainsSeptember1. B is consolidated under the same issue while preserving its existing edition/listing/observation IDs. Subscriber S original release/specifications/ordinary price remain unknown.",
+      "originCode": "KR",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg"
+    },
+    "coverPerson": {
+      "slug": "model-8aba74dc7fb85d97d1667c7f8ddd56a1d749907b15d2845d7dd13669c9b247e4",
+      "canonicalPublicName": "미스맥심 뮤아",
+      "originalName": "미스맥심 뮤아",
+      "englishName": "Miss Maxim Mua",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+      "profileSourceConfidence": "explicit_publisher_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-09-print-s-subscription",
+      "workId": "korea-maxim-2026-09-mua-digital",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "isbn": "",
+      "pageCount": 0,
+      "dimensions": "",
+      "editionVariant": "S형",
+      "contentSummary": "MAXIM September2026 No.280 subscriber-only S-type print edition. The public publisher cover explicitly prints No.280 S type, subscriber-only limited edition and COVER MODEL 미스맥심 뮤아. Exact original release day, page count, dimensions, ISBN and ordinary single-copy price remain unknown. A/B date/specifications/KRW9,600 prices and PDFSeptember1 release are not copied. Public cover is a remote attributed reference; no mirrored pixels or reuse license asserted.",
+      "metadataSourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+      "seriesName": "MAXIM",
+      "editionLabel": "September 2026 subscriber-only S-type print issue",
+      "coverUrl": "https://www.maximkorea.net/magdb/file/384/384_img3_1787299829_1215.jpg",
+      "originalCoverUrl": "https://www.maximkorea.net/magdb/file/384/384_img3_1787299829_1215.jpg"
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://www.maximkorea.net/magdb/file/384/384_img3_1787299829_1215.jpg",
+        "storageUrl": "https://www.maximkorea.net/magdb/file/384/384_img3_1787299829_1215.jpg",
+        "sourceUrl": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+        "isPrimary": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "observedAt": "2026-10-23T23:08:00+08:00",
+  "method": "Manual public rendered YES24 pages; no retailer API/key",
+  "scope": "MAXIM October 2026 digital cover/metadata/price refresh and exact A-print access-state recheck",
+  "issueMonth": "2026-10",
+  "issueNumber": "281",
+  "coverModel": "미스맥심 쥬",
+  "digital": {
+    "url": "https://www.yes24.com/product/goods/197225466",
+    "releaseDate": "2026-10-01",
+    "pageCount": 182,
+    "pageCountApproximate": true,
+    "file": "PDF(DRM), 591.22MB",
+    "issn": "22334270",
+    "listPriceKRW": 5500,
+    "ordinarySalePriceKRW": 5500,
+    "conditionalCouponPriceKRW": 4950,
+    "availability": "판매중; cart/buy controls visible",
+    "coverUrl": "https://image.yes24.com/goods/197225466/XL",
+    "excludedImage": "//image.yes24.com/momo/Noimg_M.gif (series widget placeholder)",
+    "additionalProductImages": "None verified in public page; no paid ebook preview accessed"
+  },
+  "print": {
+    "requestedUrl": "https://www.yes24.com/product/goods/196908942",
+    "finalUrl": "https://www.yes24.com/Product/Base/ExceptionNotice",
+    "notice": "전시제한된 상품입니다.",
+    "currentAvailability": "unknown",
+    "currentPrice": "not visible",
+    "cover": "not visible",
+    "lastVisiblePriceKRW": 9120,
+    "lastVisibleListPriceKRW": 9600,
+    "lastVisiblePriceObservedAt": "2026-10-20T14:42:00+08:00",
+    "releaseDateFromEarlierCapture": "2026-09-24",
+    "pageCountFromEarlierCapture": 176,
+    "accessAction": "Stopped at notice; no access bypass or further interaction"
+  },
+  "imageStorage": "One source-attributed remote digital cover reference; no pixels mirrored, no reuse license asserted",
+  "sourceStatus": "Existing manual sources remain disabled/review",
+  "preservation": "Earlier observations remain in manifest and PostgreSQL; two new observations appended to existing edition/listing identities"
+}

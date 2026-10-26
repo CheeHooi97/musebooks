@@ -1,0 +1,19 @@
+{
+  "capturedAt": "2026-10-25T15:03:33.5382589+08:00",
+  "url": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000012542859",
+  "discoveryUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/sam/E000012542859",
+  "method": "public rendered browser DOM",
+  "acceptedRecords": 1,
+  "releaseDate": "2026-02-02",
+  "pageCount": 183,
+  "fileSizeMB": "100.38",
+  "displayedISSN": "00000000",
+  "identifierDecision": "placeholder; no ISBN or verified ISSN imported",
+  "ordinaryPriceKRW": 5500,
+  "couponPriceExcludedKRW": 4950,
+  "purchaseControlEnabled": true,
+  "TTS": "available",
+  "coverCreditDecision": "No explicit digital cover assignment in public contents; no new credit",
+  "evidence": "Public Kyobo February2026 purchase PDF: release2026-02-02,183pages,100.38MB,TTS available. Displayed ISSN00000000 is a placeholder,not a verified identifier; ISBN blank. Ordinary purchaseKRW5500 with enabled purchase control; conditional coupon4950 excluded. Contents mention 리리,첼설아,섹밍 without an explicit digital cover assignment; no new credit inferred. Linked print2026-01-23 context only; existing print dates/credits and YES24PDF unchanged. No preview,reader,login,purchase or image collection; reuse permission unconfirmed.",
+  "imagesAccepted": 0
+}

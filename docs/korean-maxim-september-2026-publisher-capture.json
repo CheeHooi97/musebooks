@@ -1,0 +1,80 @@
+{
+  "observedAt": "2026-10-25T13:01:00+08:00",
+  "method": "Manual live public publisher archive/product DOM and visual public image review; no API/key",
+  "issue": {
+    "month": "2026-09",
+    "number": "280",
+    "theme": "더티토크",
+    "canonicalWorkId": "korea-maxim-2026-09-mua-digital",
+    "legacyBWorkId": "korea-maxim-2026-09-yoon-yeongseo-print-b",
+    "identityEvidence": "Both exact publisher pages say issue280, September2026, same theme and publication2026-08-24. Each public final comparison panel maps A/B/subscriber S covers to the same issue. The B cover is an edition of the issue, not a separate issue work."
+  },
+  "editions": [
+    {
+      "variant": "A형",
+      "editionId": "korea-maxim-2026-09-mua-print-a-yes24",
+      "externalId": "384",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+      "coverCredit": "미스맥심 뮤아",
+      "canonicalPersonName": "미스맥심 뮤아",
+      "releaseDate": "2026-08-24",
+      "priceKRW": 9600,
+      "status": "active",
+      "cover": "https://www.maximkorea.net/magdb/file/384/384_img_1787299828_1215.jpg",
+      "previews": [
+        "https://www.maximkorea.net/magdb/file/384/editor_17873002459329o.jpg",
+        "https://www.maximkorea.net/magdb/file/384/editor_17873003290712o.jpg",
+        "https://www.maximkorea.net/magdb/file/384/editor_1787214428654o.jpg",
+        "https://www.maximkorea.net/magdb/file/384/editor_1787214432729o.jpg",
+        "https://www.maximkorea.net/magdb/file/384/editor_17872144416957o.jpg",
+        "https://www.maximkorea.net/magdb/file/384/editor_17872144496601o.jpg",
+        "https://www.maximkorea.net/magdb/file/384/editor_17873001764517o.jpg"
+      ],
+      "supplement": "미스맥심 뮤아/한지나 스페셜 브로마이드",
+      "excludedEventBanner": "https://www.maximkorea.net/magdb/file/384/editor_17881833980561o.jpg"
+    },
+    {
+      "variant": "B형",
+      "editionId": "korea-maxim-2026-09-yoon-yeongseo-print-b-yes24",
+      "externalId": "383",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=383",
+      "coverCredit": "미스맥심 윤영서",
+      "canonicalPersonName": "윤영서",
+      "releaseDate": "2026-08-24",
+      "priceKRW": 9600,
+      "status": "active",
+      "cover": "https://www.maximkorea.net/magdb/file/383/383_img_1787214115_1215.jpg",
+      "previews": [
+        "https://www.maximkorea.net/magdb/file/383/editor_17872140443622o.jpg",
+        "https://www.maximkorea.net/magdb/file/383/editor_17873003787083o.jpg",
+        "https://www.maximkorea.net/magdb/file/383/editor_17872140607742o.jpg",
+        "https://www.maximkorea.net/magdb/file/383/editor_17872140653182o.jpg",
+        "https://www.maximkorea.net/magdb/file/383/editor_17872140712728o.jpg",
+        "https://www.maximkorea.net/magdb/file/383/editor_17872140817446o.jpg",
+        "https://www.maximkorea.net/magdb/file/383/editor_17873000694652o.jpg"
+      ],
+      "supplement": "미스맥심 윤영서/한지나 스페셜 브로마이드",
+      "excludedEventBanner": "https://www.maximkorea.net/magdb/file/383/editor_17881834182246o.jpg"
+    },
+    {
+      "variant": "S형",
+      "editionId": "korea-maxim-2026-09-print-s-subscription",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=384",
+      "coverCredit": "미스맥심 뮤아",
+      "canonicalPersonName": "미스맥심 뮤아",
+      "cover": "https://www.maximkorea.net/magdb/file/384/384_img3_1787299829_1215.jpg",
+      "previews": [],
+      "releaseDate": null,
+      "priceKRW": null,
+      "status": "metadata_only",
+      "evidence": "Public publisher image prints No.280 S type, subscriber-only limited edition and COVER MODEL 미스맥심 뮤아. No face matching; no ordinary single-copy price, exact original release or specifications inferred."
+    }
+  ],
+  "availabilityEvidence": "Both A/B pages have quantity controls and enabled 장바구니 buttons; no purchase, login or cart action attempted. Shipping charges unverified.",
+  "dateConflict": "PublisherA/B2026-08-24 supersedes canonical retailer2026-08-25; old dates remain in legacy observations and before snapshot. Digital PDF retains2026-09-01.",
+  "specifications": "Retain independently captured YES24 A/B176pages and A210×297×15mm with source attribution. B dimensions remain unverified. No print specification copied to S or digital PDF.",
+  "imageHandling": "Three exact covers plus seven public preview panels per A/B product. Exclude September19 Mua fan-meeting banners, logos, thumbnails, duplicate B-page S artwork and paid B-cut content. Remote references only, no pixels mirrored or reuse license asserted.",
+  "identityCorrection": "Explicit publisher-reviewed reassignment of the existing B edition to the existing September canonical work. Preserve edition/listing/observation IDs and old work/credits as superseded history. No source data deleted. Rewrite the old B ledger identity to the canonical work so cumulative imports remain replayable; retain its original record in the identity correction file.",
+  "coverCredits": "Reuse the existing Mua and Yoon Yeongseo person identities; do not create a duplicate with a MissMaxim prefix. Strengthen A/B credit provenance to the official publisher. Lineup and bromide names are not extra cover credits.",
+  "sourceAccess": "maxim-korea-manual stays disabled/review; no permission inquiry, account, subscriber content or payment action."
+}

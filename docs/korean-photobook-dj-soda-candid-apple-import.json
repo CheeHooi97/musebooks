@@ -1,0 +1,107 @@
+[
+  {
+    "work": {
+      "id": "korea-dj-soda-candid-2024",
+      "slug": "korea-dj-soda-candid-2024",
+      "publicationType": "photobook",
+      "originalTitle": "DJ SODA写真集『Candid』",
+      "englishTitle": "Candid: DJ SODA First Photobook",
+      "summary": "Standalone Japanese-published first photobook of South Korean DJ/model DJ SODA, photographed by ND CHOW in Tokyo and Okinawa. Model origin is KR; publication market is JP. Separate verified print128-page and Apple digital132-page editions released2024-04-05 remain distinct. No magazine issue fields.",
+      "originCode": "KR",
+      "featuredNames": "DJ SODA",
+      "photographer": "ND CHOW",
+      "coverUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg"
+    },
+    "featuredPerson": {
+      "slug": "model-91e38c01fdf9d946b60cee502a8a907069817f59cc332f011f87953ea6d7f055",
+      "canonicalPublicName": "DJ SODA",
+      "originalName": "DJ SODA",
+      "englishName": "DJ SODA",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.hanmoto.com/bd/isbn/9784087901566",
+      "profileSourceConfidence": "publisher_supplied_model_bio"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-dj-soda-candid-2024-jp-digital",
+      "workId": "korea-dj-soda-candid-2024",
+      "format": "digital",
+      "language": "ja-JP",
+      "editionMarket": "JP",
+      "publisher": "集英社",
+      "releaseDate": "2024-04-05T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 132,
+      "dimensions": "",
+      "editionVariant": "Digital",
+      "contentSummary": "Apple Books Japan independently lists Candid electronic edition, release2024-04-05, Japanese,132digital pages,106.3MB, publisher集英社 and sellerShueisha Inc. Displayed priceJPY3400 captured2026-10-25; current account/storefront purchase eligibility remains unknown. Digital ISBN and file format are unverified. The128-page print ISBN9784087901566 and A4 dimensions are not copied into this edition. Exact displayed storefront cover URL is retained remotely with source attribution; no pixels mirrored or reuse license asserted. No paid reader or download opened.",
+      "metadataSourceUrl": "https://books.apple.com/jp/book/dj-soda%E5%86%99%E7%9C%9F%E9%9B%86-candid/id6480587148",
+      "editionLabel": "Digital Japanese photobook",
+      "coverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+      "originalCoverUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp"
+    },
+    "source": {
+      "id": "apple-books-jp-manual",
+      "name": "Apple Books Japan (manual public storefront capture)",
+      "region": "JP",
+      "locale": "ja-JP",
+      "timezone": "Asia/Tokyo",
+      "kind": "digital_store",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "digital",
+      "allowedFormats": "digital",
+      "baseUrl": "https://books.apple.com",
+      "allowedHosts": "books.apple.com",
+      "capabilities": "listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.apple.com/jp/legal/terms/site.html",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-apple-books-djsoda-20261025",
+      "sourceId": "apple-books-jp-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T13:18:12.4846244+08:00",
+      "items": [
+        {
+          "externalId": "6480587148",
+          "observationId": "apple-jp-20261025-6480587148",
+          "editionId": "korea-dj-soda-candid-2024-jp-digital",
+          "url": "https://books.apple.com/jp/book/dj-soda%E5%86%99%E7%9C%9F%E9%9B%86-candid/id6480587148",
+          "title": "DJ SODA写真集「Candid」",
+          "status": "unknown",
+          "priceMinor": 3400,
+          "currency": "JPY",
+          "priceType": "digital",
+          "format": "digital",
+          "digitalAccess": "authorized_store",
+          "publisher": "集英社",
+          "editionVariant": "Digital",
+          "imageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+          "shippingText": "Digital Apple Books product; not shipped; account/storefront purchase eligibility unverified",
+          "observedAt": "2026-10-25T13:18:12.4846244+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live Apple Books Japan rendered public preview checked2026-10-25: JPY3400, release2024-04-05,132pages,106.3MB, Japanese, publisher集英社, sellerShueisha Inc. Public price is verified; account/region entitlement and purchase availability are not. No login, purchase, paid book reader, API or download accessed."
+        }
+      ]
+    },
+    "media": [
+      {
+        "externalId": "6480587148",
+        "mediaType": "listing_image",
+        "originalUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+        "storageUrl": "https://is1-ssl.mzstatic.com/image/thumb/Publication221/v4/2e/bf/12/2ebf1261-0203-2b67-ba58-c65c710e960e/08790156051224000000.jpg/626x0w.webp",
+        "sourceUrl": "https://books.apple.com/jp/book/dj-soda%E5%86%99%E7%9C%9F%E9%9B%86-candid/id6480587148",
+        "isPrimary": true
+      }
+    ]
+  }
+]

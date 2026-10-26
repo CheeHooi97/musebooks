@@ -1,0 +1,26 @@
+{
+  "capturedAt": "2026-10-25T13:25:40.8726744+08:00",
+  "method": "Rendered public exact used-inventory pages, no API",
+  "items": [
+    {
+      "variant": "A",
+      "productId": "398885034",
+      "url": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=398885034&start=newproduct",
+      "totalUsedOffers": 0,
+      "aladinUsed": 0,
+      "storeUsed": 0,
+      "sellerUsed": 0
+    },
+    {
+      "variant": "B",
+      "productId": "398885187",
+      "url": "https://www.aladin.co.kr/shop/UsedShop/wuseditemall.aspx?ItemId=398885187&start=newproduct",
+      "totalUsedOffers": 0,
+      "aladinUsed": 0,
+      "storeUsed": 0,
+      "sellerUsed": 0
+    }
+  ],
+  "evidence": "전체 중고 (0); 등록된 중고상품이 없습니다.; /0페이지",
+  "databaseAction": "No seller records exist to insert; no fabricated zero-price or completed offer created. Earlier retail/source rows preserved."
+}

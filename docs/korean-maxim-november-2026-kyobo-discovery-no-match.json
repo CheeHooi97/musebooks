@@ -1,0 +1,12 @@
+{
+  "capturedAt": "2026-10-25T14:53:08.2461991+08:00",
+  "method": "public rendered Google exact-title/site query",
+  "query": "site:ebook-product.kyobobook.co.kr \"맥심\" \"2026.11월호\"",
+  "url": "https://www.google.com/search?q=site%3Aebook-product.kyobobook.co.kr+%22%EB%A7%A5%EC%8B%AC%22+%222026.11%EC%9B%94%ED%98%B8%22",
+  "result": "No exact matching indexed result; broader fallback only returned unrelated2024issue",
+  "limits": "Not proof that November ebook does not exist or will not be released; no site-wide absence claim",
+  "acceptedRecords": [],
+  "databaseRowsRequired": 0,
+  "databaseAction": "No ebook,release date,availability or price inferred from print or neighbouring months",
+  "next": "Inspect earlier public Kyobo series item rather than guessed product URLs"
+}

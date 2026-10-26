@@ -1,0 +1,65 @@
+{
+  "observedAt": "2026-10-23T22:52:00+08:00",
+  "method": "Manual live artist-store browser review with official publisher bibliography; no retailer API",
+  "title": "ピョ・ウンジ1st写真集 輪舞曲",
+  "englishTitle": "Rondo: Pyo Eunji First Photobook",
+  "featuredModel": "표은지 / ピョ・ウンジ / Pyo Eunji",
+  "modelOrigin": "KR; publisher explicitly describes the subject as a Korean model/YouTuber",
+  "editionMarket": "JP",
+  "publisherMetadataUrl": "https://www.kadokawa.co.jp/product/322303002115/",
+  "publisherMetadataCrawlLabel": "last month",
+  "publisher": "KADOKAWA",
+  "publicationDate": "2023-08-10",
+  "pageCount": 128,
+  "publisherFormat": "A4",
+  "isbn": "9784048976268",
+  "publisherReferencePrice": {
+    "amount": 3300,
+    "currency": "JPY",
+    "taxIncluded": true,
+    "kind": "publisher list price; not a live store offer"
+  },
+  "storeUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+  "storeProductHandle": "pyoeunji-rondo",
+  "storeTitle": "\"Rondo\" Pyo Eunji Photobook by KADOKAWA publisher",
+  "displayedStorePrice": {
+    "amount": 97,
+    "currency": "MYR",
+    "minorUnits": 9700,
+    "taxIncluded": true
+  },
+  "storeDimensions": "29.7 × 21 × 1 cm",
+  "shippingText": "Additional charge varies by domestic/international region; overseas shipping may be unavailable for some countries",
+  "availability": "unknown; membership restriction visible and ADD TO CART disabled",
+  "availabilityEvidence": {
+    "cartEnabled": false,
+    "memberNoticeVisible": true,
+    "notice": "* Not available due to members-only products."
+  },
+  "storeBonusNotes": "Page describes a site-specific developed photo for preorders and says the ordinary book does not include an autograph. Current bonus eligibility is not verified; no event ticket or signed variant is imported.",
+  "currencyNote": "MYR 97.00 is the live localized display. No currency conversion is performed and it is not treated as JPY 97 or the publisher's JPY list price.",
+  "deduplication": "Read-only database lookup found no edition for ISBN 9784048976268 and no existing Rondo work or Pyo identity. A separate Japanese collaboration title exists and remains a future credit-review lead, not a duplicate of this standalone book.",
+  "imageReferences": [
+    {
+      "role": "cover candidate",
+      "url": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313"
+    },
+    {
+      "role": "additional product image; contents not reviewed",
+      "url": "https://pyoeunji.com/cdn/shop/files/FC_889c5806-e423-44fb-899e-037945f4900a_grande.jpg?v=1707811313"
+    },
+    {
+      "role": "additional product image; contents not reviewed",
+      "url": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.29_grande.png?v=1707811313"
+    },
+    {
+      "role": "additional product image; contents not reviewed",
+      "url": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.45_grande.png?v=1707811313"
+    }
+  ],
+  "imageRights": "Four public artist-store image URLs are saved as source-attributed remote references in catalog_media; the cover URL is linked to the listing/work/edition. No pixels are downloaded or mirrored, and no reuse license is asserted. Additional images are not classified as interior-page samples.",
+  "termsUrl": "https://pyoeunji.com/pages/terms",
+  "contactUrl": "https://pyoeunji.com/en/pages/contact",
+  "accessStatus": "review; automated collection disabled",
+  "databaseImageMapping": "listing_image (primary cover); listing_image_001, listing_image_002, listing_image_003. storageUrl equals originalUrl: remote reference, not local storage."
+}

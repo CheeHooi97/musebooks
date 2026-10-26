@@ -33,17 +33,20 @@ type ListingMediaInput struct {
 }
 
 type Record struct {
-	SupersedesEditionID   string                 `json:"supersedesEditionId,omitempty"`
-	Origin                *model.Origin          `json:"origin,omitempty"`
-	Work                  model.Work             `json:"work"`
-	FeaturedPerson        *model.Person          `json:"featuredPerson,omitempty"`
-	CoverPerson           *model.Person          `json:"coverPerson,omitempty"`
-	AdditionalCoverPeople []model.Person         `json:"additionalCoverPeople,omitempty"`
-	Edition               model.Edition          `json:"edition"`
-	Source                model.Source           `json:"source"`
-	Batch                 model.ObservationBatch `json:"batch"`
-	Media                 []ListingMediaInput    `json:"media,omitempty"`
-	PublisherMedia        []ListingMediaInput    `json:"publisherMedia,omitempty"`
+	ReplaceLegacyFeaturedAlias string                 `json:"replaceLegacyFeaturedAlias,omitempty"`
+	UseCoverCreditsOnly        bool                   `json:"useCoverCreditsOnly,omitempty"`
+	SupersedesEditionID        string                 `json:"supersedesEditionId,omitempty"`
+	ReassignEditionFromWorkID  string                 `json:"reassignEditionFromWorkId,omitempty"`
+	Origin                     *model.Origin          `json:"origin,omitempty"`
+	Work                       model.Work             `json:"work"`
+	FeaturedPerson             *model.Person          `json:"featuredPerson,omitempty"`
+	CoverPerson                *model.Person          `json:"coverPerson,omitempty"`
+	AdditionalCoverPeople      []model.Person         `json:"additionalCoverPeople,omitempty"`
+	Edition                    model.Edition          `json:"edition"`
+	Source                     model.Source           `json:"source"`
+	Batch                      model.ObservationBatch `json:"batch"`
+	Media                      []ListingMediaInput    `json:"media,omitempty"`
+	PublisherMedia             []ListingMediaInput    `json:"publisherMedia,omitempty"`
 }
 
 func validHTTPSURL(value string) bool {
@@ -278,6 +281,9 @@ func main() {
 	}
 	listingMediaCount := 0
 	for i, r := range records {
+		if err := validateFeaturedAliasCorrection(r); err != nil {
+			fail(err)
+		}
 		if r.FeaturedPerson != nil && !validPersonIdentity(r.FeaturedPerson) {
 			fail(fmt.Errorf("record %d has invalid featured person identity", i))
 		}
@@ -298,6 +304,12 @@ func main() {
 			fail(fmt.Errorf("record %d has an invalid origin", i))
 		}
 		if err := validateMediaInput(r); err != nil {
+			fail(fmt.Errorf("record %d: %w", i, err))
+		}
+		if err := validateIssueReassignment(r); err != nil {
+			fail(fmt.Errorf("record %d: %w", i, err))
+		}
+		if err := validateCoverOnlyCorrection(r); err != nil {
 			fail(fmt.Errorf("record %d: %w", i, err))
 		}
 		if r.Work.ID == "" && r.Edition.ID == "" && r.Source.ID != "" && r.Batch.SourceID == r.Source.ID && len(r.Batch.Items) > 0 {
@@ -379,6 +391,14 @@ func main() {
 				r.Edition.Status = "published"
 				var existingEdition model.Edition
 				found := tx.First(&existingEdition, "id = ?", r.Edition.ID)
+				if r.ReassignEditionFromWorkID != "" {
+					if found.Error != nil {
+						return fmt.Errorf("cannot reassign missing edition %s: %w", r.Edition.ID, found.Error)
+					}
+					if err := reassignMagazineEdition(tx, r, &existingEdition); err != nil {
+						return err
+					}
+				}
 				if found.Error == nil && existingEdition.WorkID != r.Edition.WorkID {
 					return fmt.Errorf("edition identity conflicts with existing work: %s", r.Edition.ID)
 				}
@@ -402,7 +422,17 @@ func main() {
 				if previous.Error != nil {
 					return previous.Error
 				}
-				if previous.RowsAffected > 0 && existingWork.FeaturedNames != "" {
+				if r.UseCoverCreditsOnly {
+					if err := guardCoverOnlyCorrection(tx, r); err != nil {
+						return err
+					}
+				}
+				if r.ReplaceLegacyFeaturedAlias != "" {
+					if err := guardFeaturedAliasCorrection(tx, r); err != nil {
+						return err
+					}
+				}
+				if !r.UseCoverCreditsOnly && r.ReplaceLegacyFeaturedAlias == "" && previous.RowsAffected > 0 && existingWork.FeaturedNames != "" {
 					names, seen := []string{}, map[string]bool{}
 					for _, name := range strings.Split(existingWork.FeaturedNames+","+r.Work.FeaturedNames, ",") {
 						name = strings.TrimSpace(name)
@@ -424,7 +454,24 @@ func main() {
 					if known, ok := featuredPeople[person.Slug]; ok {
 						person = known
 					} else {
-						if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "slug"}}, DoNothing: true}).Create(&person).Error; err != nil {
+						// The work trigger may already have created a skeletal person.
+						// Keep the reviewed, nonempty identity fields on that row.
+						personUpdates := map[string]interface{}{}
+						for column, value := range map[string]string{
+							"canonical_public_name":     person.CanonicalPublicName,
+							"original_name":             person.OriginalName,
+							"english_name":              person.EnglishName,
+							"traditional_chinese_name":  person.TraditionalChineseName,
+							"simplified_chinese_name":   person.SimplifiedChineseName,
+							"person_type":               person.PersonType,
+							"verification_source_url":   person.VerificationSourceURL,
+							"profile_source_confidence": person.ProfileSourceConfidence,
+						} {
+							if strings.TrimSpace(value) != "" {
+								personUpdates[column] = value
+							}
+						}
+						if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "slug"}}, DoUpdates: clause.Assignments(personUpdates)}).Create(&person).Error; err != nil {
 							return err
 						}
 						if err := tx.Where("slug = ?", person.Slug).First(&person).Error; err != nil {
@@ -433,7 +480,7 @@ func main() {
 						featuredPeople[person.Slug] = person
 					}
 					credit := model.WorkPerson{WorkID: r.Work.ID, PersonID: person.ID, Role: "featured", CreditedName: person.CanonicalPublicName, CreditSource: "verified_model_capture"}
-					if err := tx.Omit("Work", "Person").Clauses(clause.OnConflict{DoNothing: true}).Create(&credit).Error; err != nil {
+					if err := tx.Omit("Work", "Person").Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "work_id"}, {Name: "person_id"}, {Name: "role"}}, DoUpdates: clause.AssignmentColumns([]string{"credited_name", "credit_source", "updated_at"})}).Create(&credit).Error; err != nil {
 						return err
 					}
 				}
@@ -506,6 +553,7 @@ func main() {
 				continue
 			}
 			if !knownSources[r.Source.ID] {
+				manualSourceDisabled := r.Source.Adapter == "manual_page_capture" && !r.Source.Enabled
 				var source model.Source
 				if result := tx.First(&source, "id = ?", r.Source.ID); result.Error == gorm.ErrRecordNotFound {
 					if err := tx.Create(&r.Source).Error; err != nil {
@@ -515,7 +563,7 @@ func main() {
 					return result.Error
 				}
 				// Preserve an explicit disabled state; GORM applies the field's true default to false on Create.
-				if r.Source.Adapter == "manual_page_capture" && !r.Source.Enabled {
+				if manualSourceDisabled {
 					if err := tx.Model(&model.Source{}).Where("id = ?", r.Source.ID).Update("enabled", false).Error; err != nil {
 						return err
 					}

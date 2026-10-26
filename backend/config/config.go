@@ -28,6 +28,13 @@ var (
 	HTTPAddr                string
 	CORSOrigins             string
 	SystemAesKey            string
+	SiteURL                 string
+	GoogleClientID          string
+	GoogleClientSecret      string
+	GoogleRedirectURL       string
+	ResendAPIKey            string
+	EmailFrom               string
+	EmailVerificationSecret string
 	// Cloudflare R2 media Worker (deploy/media-worker).
 	CloudflareR2PublicBaseURL      string
 	CloudflareR2MediaBaseURL       string
@@ -57,6 +64,13 @@ func LoadConfig() {
 	HTTPAddr = GetEnvOrDefault("HTTP_ADDR", ":2002")
 	CORSOrigins = GetEnvOrDefault("CORS_ALLOWED_ORIGINS", "http://localhost:4173,http://127.0.0.1:4173,capacitor://localhost,https://localhost,http://localhost")
 	SystemAesKey = GetEnv("SYSTEM_AES_KEY")
+	SiteURL = strings.TrimRight(GetEnvOrDefault("SITE_URL", "https://musebooks.my"), "/")
+	GoogleClientID = GetEnvOrDefault("GOOGLE_CLIENT_ID", "")
+	GoogleClientSecret = GetEnvOrDefault("GOOGLE_CLIENT_SECRET", "")
+	GoogleRedirectURL = GetEnvOrDefault("GOOGLE_REDIRECT_URL", SiteURL+"/v1/auth/oauth/google/callback")
+	ResendAPIKey = GetEnvOrDefault("RESEND_API_KEY", "")
+	EmailFrom = GetEnvOrDefault("EMAIL_FROM", "")
+	EmailVerificationSecret = GetEnvOrDefault("EMAIL_VERIFICATION_SECRET", "")
 	CloudflareR2PublicBaseURL = GetEnvOrDefault("CLOUDFLARE_R2_PUBLIC_BASE_URL", "")
 	CloudflareR2MediaBaseURL = GetEnvOrDefault("CLOUDFLARE_R2_MEDIA_BASE_URL", "")
 	CloudflareR2MediaSigningSecret = GetEnvOrDefault("CLOUDFLARE_R2_MEDIA_SIGNING_SECRET", "")

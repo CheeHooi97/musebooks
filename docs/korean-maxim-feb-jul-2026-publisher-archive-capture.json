@@ -1,0 +1,152 @@
+{
+  "capturedAt": "2026-10-25T13:26:43.7997405+08:00",
+  "method": "Rendered public archive card text and navigation attributes only; no API",
+  "sourceUrl": "https://www.maximkorea.net/magdb/magdb.php?lib=M",
+  "cards": [
+    {
+      "issueMonth": "2026-02",
+      "issueNumber": 273,
+      "variant": "A",
+      "theme": "검스",
+      "productId": 370,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "완전품절",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=370",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-02",
+      "issueNumber": 273,
+      "variant": "B",
+      "theme": "검스",
+      "productId": 369,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "완전품절",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=369",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-03",
+      "issueNumber": 274,
+      "variant": "A",
+      "theme": "치어리더 김도아",
+      "productId": 372,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "완전품절 19금",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=372",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-03",
+      "issueNumber": 274,
+      "variant": "B",
+      "theme": "치어리더 김도아",
+      "productId": 371,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "완전품절 19금",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=371",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-04",
+      "issueNumber": 275,
+      "variant": "A",
+      "theme": "치어리더 김나연",
+      "productId": 374,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "품절임박",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=374",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-04",
+      "issueNumber": 275,
+      "variant": "B",
+      "theme": "치어리더 김나연",
+      "productId": 373,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "완전품절",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=373",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-05",
+      "issueNumber": 276,
+      "variant": "A",
+      "theme": "살스",
+      "productId": 376,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "19금",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=376",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-05",
+      "issueNumber": 276,
+      "variant": "B",
+      "theme": "살스",
+      "productId": 375,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "품절임박 19금",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=375",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-06",
+      "issueNumber": 277,
+      "variant": "A",
+      "theme": "김우현",
+      "productId": 378,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "19금",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=378",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-06",
+      "issueNumber": 277,
+      "variant": "B",
+      "theme": "김우현",
+      "productId": 377,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "완전품절 19금",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=377",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-07",
+      "issueNumber": 278,
+      "variant": "A",
+      "theme": "브라운더스트2 콜라보",
+      "productId": 380,
+      "price": 8600,
+      "referencePrice": 9600,
+      "labels": "SALE 19금 파본할인",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=380",
+      "newEdition": false
+    },
+    {
+      "issueMonth": "2026-07",
+      "issueNumber": 278,
+      "variant": "B",
+      "theme": "브라운더스트2 콜라보",
+      "productId": 379,
+      "price": 9600,
+      "referencePrice": 9600,
+      "labels": "19금",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=379",
+      "newEdition": true
+    }
+  ],
+  "limits": "Archive stock labels retained but listing availability unknown. No original release/specification inference or gated image extraction. Themes do not add models. July A is a damaged-copy offer distinct from ordinary retail."
+}

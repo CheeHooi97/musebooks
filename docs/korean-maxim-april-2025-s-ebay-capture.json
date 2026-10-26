@@ -1,0 +1,16 @@
+{
+  "capturedAt": "2026-10-25T15:08:09.7305663+08:00",
+  "method": "public rendered browser DOM; no API",
+  "url": "https://www.ebay.com.my/itm/335870483825?var=545414919616",
+  "parentItemId": "335870483825",
+  "variationId": "545414919616",
+  "selectedVariant": "S type",
+  "priceMinor": 2500,
+  "currency": "USD",
+  "shippingMinor": 1550,
+  "shippingDestinationContext": "63000",
+  "originalReleaseDate": null,
+  "imagesAccepted": 0,
+  "acceptedRecords": 1,
+  "evidence": "Public rendered page selected MPN S type, variation545414919616: US$25.00 item price,Brand New seller claim,quantity input enabled,5 available display and visible Buy It Now. Unselected base US$15 is not S price. ShippingUS$15.50 displayed for current destination63000; not a worldwide quote. Seller bargainkorea explicitly maps S to Myua; existing 뮤아 credit retained. April2025 issue263 only; original release day remains unknown. LastupdatedAug13,2026 is listing revision,not publication. Aggregate17sold is not S-specific or final paid-price evidence. Seller specifics contributorGatSEHUI conflicts with description and is not imported; 9772233427008 labelledISSN is barcode-like,not bookISBN. No images,reader,purchase,contact or API; image reuse unconfirmed."
+}

@@ -1,0 +1,146 @@
+{
+  "credits": [
+    {
+      "workId": "korea-dj-soda-candid-2024",
+      "personId": 68597,
+      "role": "featured",
+      "creditedName": "DJ SODA",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 68597,
+        "slug": "model-91e38c01fdf9d946b60cee502a8a907069817f59cc332f011f87953ea6d7f055",
+        "canonicalPublicName": "DJ SODA",
+        "originalName": "DJ SODA",
+        "englishName": "DJ SODA",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.hanmoto.com/bd/isbn/9784087901566",
+        "profileSourceConfidence": "publisher_supplied_model_bio",
+        "createdAt": "2026-10-25T13:08:44.384637+08:00",
+        "updatedAt": "2026-10-25T13:08:44.384637+08:00"
+      },
+      "createdAt": "2026-10-25T13:08:44.384637+08:00",
+      "updatedAt": "2026-10-25T13:08:44.950628+08:00"
+    }
+  ],
+  "databaseCounts": {
+    "editions": 6807,
+    "listing_observations": 8350,
+    "listings": 8310,
+    "sources": 30,
+    "works": 6064
+  },
+  "edition": {
+    "publisherCompanyId": "publisher-eed87fb39daf4d50042c7f381e2e568ce354725566004c14a6a1d54b3d36cfb7",
+    "id": "korea-dj-soda-candid-2024-jp-print",
+    "workId": "korea-dj-soda-candid-2024",
+    "format": "physical",
+    "language": "ja-JP",
+    "editionMarket": "JP",
+    "publisher": "集英社",
+    "releaseDate": "2024-04-05T08:00:00+08:00",
+    "releasePrecision": "day",
+    "isbn": "9784087901566",
+    "pageCount": 128,
+    "dimensions": "297×210×11mm (A4)",
+    "editionVariant": "Print",
+    "contentSummary": "Hanmoto publisher-supplied bibliography confirms DJ SODA first photobook Candid, photographer ND CHOW, Shueisha, physical128pages, A4 height297×width210×thickness11mm,740g, ISBN9784087901566 and bookstore release2024-04-05. Registration2024-01-22 is not publication. It displays listJPY3,300 plus tax/JPY3,630 including tax, not a verified current selling price. Model bio explicitly identifies SouthKorean origin and modeling work. Exact Hanmoto cover carries permission-unknown label; cover/media fields remain blank in this metadata-only batch. No digital page/file/ISBN or seller availability inferred.",
+    "metadataSourceUrl": "https://www.hanmoto.com/bd/isbn/9784087901566",
+    "editionLabel": "2024 Japanese print photobook",
+    "status": "published",
+    "createdAt": "2026-10-25T13:08:44.855343+08:00",
+    "updatedAt": "2026-10-25T13:08:44.855343+08:00"
+  },
+  "limitations": "Metadata-only print batch. JPY3630 is a bibliographic list price, not an ordinary selling offer. Hanmoto exact-cover permission is unknown; no cover/media or digital metadata inferred.",
+  "listingCount": 0,
+  "mediaCount": 0,
+  "method": "Read-only exact PostgreSQL bibliography/model credit and actual GetBook handler",
+  "passed": true,
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-91e38c01fdf9d946b60cee502a8a907069817f59cc332f011f87953ea6d7f055",
+        "name": "DJ SODA"
+      }
+    ],
+    "id": "korea-dj-soda-candid-2024",
+    "slug": "korea-dj-soda-candid-2024",
+    "publicationType": "photobook",
+    "originalTitle": "DJ SODA写真集『Candid』",
+    "englishTitle": "Candid: DJ SODA First Photobook",
+    "summary": "Standalone Japanese-published first photobook of South Korean DJ/model DJ SODA, photographed by ND CHOW in Tokyo and Okinawa. Model origin is KR; publication market is JP. Physical and any separately verified electronic edition must remain distinct; no magazine issue fields.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "DJ SODA"
+    ],
+    "photographer": "ND CHOW",
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-eed87fb39daf4d50042c7f381e2e568ce354725566004c14a6a1d54b3d36cfb7",
+          "name": "集英社"
+        },
+        "id": "korea-dj-soda-candid-2024-jp-print",
+        "format": "physical",
+        "language": "ja-JP",
+        "editionMarket": "JP",
+        "publisher": "集英社",
+        "releaseDate": "2024-04-05T08:00:00+08:00",
+        "releasePrecision": "day",
+        "isbn": "9784087901566",
+        "pageCount": 128,
+        "dimensions": "297×210×11mm (A4)",
+        "editionVariant": "Print",
+        "contentSummary": "Hanmoto publisher-supplied bibliography confirms DJ SODA first photobook Candid, photographer ND CHOW, Shueisha, physical128pages, A4 height297×width210×thickness11mm,740g, ISBN9784087901566 and bookstore release2024-04-05. Registration2024-01-22 is not publication. It displays listJPY3,300 plus tax/JPY3,630 including tax, not a verified current selling price. Model bio explicitly identifies SouthKorean origin and modeling work. Exact Hanmoto cover carries permission-unknown label; cover/media fields remain blank in this metadata-only batch. No digital page/file/ISBN or seller availability inferred.",
+        "metadataSourceUrl": "https://www.hanmoto.com/bd/isbn/9784087901566",
+        "editionLabel": "2024 Japanese print photobook",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "verifiedAt": "2026-10-25T05:09:48.6548315Z",
+  "work": {
+    "originMarketId": 10544,
+    "id": "korea-dj-soda-candid-2024",
+    "slug": "korea-dj-soda-candid-2024",
+    "publicationType": "photobook",
+    "originalTitle": "DJ SODA写真集『Candid』",
+    "englishTitle": "Candid: DJ SODA First Photobook",
+    "summary": "Standalone Japanese-published first photobook of South Korean DJ/model DJ SODA, photographed by ND CHOW in Tokyo and Okinawa. Model origin is KR; publication market is JP. Physical and any separately verified electronic edition must remain distinct; no magazine issue fields.",
+    "originCode": "KR",
+    "featuredNames": "DJ SODA",
+    "photographer": "ND CHOW",
+    "status": "published",
+    "origin": {
+      "code": "",
+      "name": "",
+      "sortOrder": 0,
+      "createdAt": "0001-01-01T00:00:00Z",
+      "updatedAt": "0001-01-01T00:00:00Z"
+    },
+    "createdAt": "2026-10-25T13:08:44.811558+08:00",
+    "updatedAt": "2026-10-25T13:08:44.811558+08:00"
+  },
+  "publicCatalogVerification": {
+    "passed": true,
+    "physicalWorks": 338,
+    "digitalWorks": 5022,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 173,
+    "databaseCounts": {
+      "works": 6064,
+      "editions": 6807,
+      "listings": 8310,
+      "sources": 30,
+      "listing_observations": 8350
+    }
+  }
+}

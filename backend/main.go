@@ -53,6 +53,8 @@ func main() {
 
 	// Initialize message handler
 	h := handler.NewHandler(services)
+	h.Auth.ConfigureEmailVerification(service.NewResendEmailSender(config.ResendAPIKey, config.EmailFrom), config.EmailVerificationSecret)
+	h.OAuth = handler.NewGoogleOAuth(config.GoogleClientID, config.GoogleClientSecret, config.GoogleRedirectURL)
 
 	mediaSigner, err := storage.NewMediaSigner(storage.MediaConfig{
 		LegacyBaseURLs: []string{config.CloudflareR2PublicBaseURL},
@@ -73,8 +75,9 @@ func main() {
 
 	e := echo.New()
 	e.Use(echoMiddleware.CORSWithConfig(echoMiddleware.CORSConfig{
-		AllowOrigins: strings.Split(config.CORSOrigins, ","),
-		AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept, echo.HeaderAuthorization, "X-Scraper-Token"},
+		AllowOrigins:     strings.Split(config.CORSOrigins, ","),
+		AllowHeaders:     []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept, echo.HeaderAuthorization, "X-Scraper-Token"},
+		AllowCredentials: true,
 	}))
 	e.HTTPErrorHandler = func(err error, c echo.Context) {
 		if !c.Response().Committed {

@@ -1,5 +1,7 @@
 # MuseBooks SEO and GEO inspection
 
+Latest comparison and multilingual implementation: [23 October 2026 review](docs/search-multilingual-audit-2026-10-23.md). Includes MuseCards Search Console observations and the MuseBooks property-access limitation. The earlier inspection below is retained as historical context.
+
 Inspection date: 8 October 2026 (Asia/Singapore).
 
 SEO means search engine optimization. GEO means generative engine optimization: making MuseBooks' records easy for AI search systems to retrieve, understand, and cite accurately.

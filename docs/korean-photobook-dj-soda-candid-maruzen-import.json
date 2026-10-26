@@ -1,0 +1,95 @@
+[
+  {
+    "work": {
+      "id": "korea-dj-soda-candid-2024",
+      "slug": "korea-dj-soda-candid-2024",
+      "publicationType": "photobook",
+      "originalTitle": "DJ SODA写真集『Candid』",
+      "englishTitle": "Candid: DJ SODA First Photobook",
+      "summary": "Standalone Japanese-published first photobook of South Korean DJ/model DJ SODA, photographed by ND CHOW in Tokyo and Okinawa. Model origin is KR; publication market is JP. Physical and any separately verified electronic edition must remain distinct; no magazine issue fields.",
+      "originCode": "KR",
+      "featuredNames": "DJ SODA",
+      "photographer": "ND CHOW",
+      "coverUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg"
+    },
+    "featuredPerson": {
+      "slug": "model-91e38c01fdf9d946b60cee502a8a907069817f59cc332f011f87953ea6d7f055",
+      "canonicalPublicName": "DJ SODA",
+      "originalName": "DJ SODA",
+      "englishName": "DJ SODA",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.hanmoto.com/bd/isbn/9784087901566",
+      "profileSourceConfidence": "publisher_supplied_model_bio"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-dj-soda-candid-2024-jp-print",
+      "workId": "korea-dj-soda-candid-2024",
+      "format": "physical",
+      "language": "ja-JP",
+      "editionMarket": "JP",
+      "publisher": "集英社",
+      "releaseDate": "2024-04-05T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "9784087901566",
+      "pageCount": 128,
+      "dimensions": "297×210×11mm (A4)",
+      "editionVariant": "Print",
+      "contentSummary": "Shueisha public Candid announcement confirms the April 5, 2024 print release, ND CHOW photography, A4 and 128 pages. Hanmoto supplies ISBN9784087901566 and dimensions297×210×11mm. The publisher announcement displays an original planned tax-inclusive priceJPY3630, not a verified current selling offer. One cover and two public promotional previews are retained as attributed remote URL references only; reuse permission is unconfirmed and no pixels are mirrored. Digital metadata and seller availability are not inferred.",
+      "metadataSourceUrl": "https://wpb.shueisha.co.jp/gravure/info/20240216-122279/",
+      "editionLabel": "2024 Japanese print photobook",
+      "coverUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg",
+      "originalCoverUrl": "https://wpb.shueisha.co.jp/gravure/info/images/410449f9028d78d0cac98f3b9e1633f8113310f6.jpg"
+    },
+    "source": {
+      "id": "maruzen-junkudo-manual",
+      "name": "Maruzen Junkudo (manual public page capture)",
+      "region": "JP",
+      "locale": "ja-JP",
+      "timezone": "Asia/Tokyo",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.maruzenjunkudo.co.jp",
+      "allowedHosts": "www.maruzenjunkudo.co.jp,maruzenjunkudo.co.jp",
+      "capabilities": "listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.maruzenjunkudo.co.jp/policies/terms-of-service",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-maruzen-djsoda-20261025",
+      "sourceId": "maruzen-junkudo-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T13:15:41.0844486+08:00",
+      "items": [
+        {
+          "externalId": "9784087901566",
+          "observationId": "maruzen-20261025-9784087901566",
+          "editionId": "korea-dj-soda-candid-2024-jp-print",
+          "url": "https://www.maruzenjunkudo.co.jp/products/9784087901566",
+          "title": "DJ SODA写真集『Candid』",
+          "status": "active",
+          "priceMinor": 3630,
+          "currency": "JPY",
+          "priceType": "retail",
+          "format": "physical",
+          "publisher": "集英社",
+          "editionVariant": "Print",
+          "shippingText": "Partner warehouse stock (在庫△ 提携倉庫在庫あり); shipping fee and delivery date not verified",
+          "observedAt": "2026-10-25T13:15:41.0844486+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live public rendered product page displays tax-inclusive normal selling priceJPY3630, ISBN9784087901566, release2024/04/05 and net-store stock 在庫△ 提携倉庫在庫あり. Product cart button is enabled. This is partner warehouse stock, not guaranteed local branch stock. No purchase, login, cart modification or region entitlement verified. Physical publisher cover and print specifications remain independently sourced."
+        }
+      ]
+    }
+  }
+]

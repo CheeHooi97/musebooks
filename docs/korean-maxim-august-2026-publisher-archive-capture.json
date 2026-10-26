@@ -1,0 +1,52 @@
+{
+  "capturedAt": "2026-10-25T13:20:53.5021318+08:00",
+  "method": "Rendered public archive cards only; no API",
+  "sourceUrl": "https://www.maximkorea.net/magdb/magdb.php?lib=M",
+  "issueMonth": "2026-08",
+  "issueNumber": "279",
+  "issueTitle": "치어리더 서여진",
+  "items": [
+    {
+      "externalId": "382",
+      "observationId": "maxim-publisher-20261025-august-382",
+      "editionId": "korea-maxim-2026-08-seo-yeojin-print-a-yes24",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=382",
+      "title": "맥심279호 치어리더 서여진 편 2026년8월호 A형",
+      "status": "unknown",
+      "priceMinor": 9600,
+      "currency": "KRW",
+      "priceType": "fixed",
+      "format": "physical",
+      "publisher": "와이미디어",
+      "editionVariant": "A형",
+      "shippingText": "Physical publisher archive price; shipping and purchase eligibility unverified",
+      "observedAt": "2026-10-25T13:20:53.5021318+08:00",
+      "timestampPrecision": "minute",
+      "statusEvidence": "Live public MAXIM archive card on2026-10-25 identifies issue279 August2026 A type, title치어리더 서여진 and displayedKRW9600. Exact detail target comes from rendered card navigation. Opening A normally redirects to members_adult.php requiring login/identity verification; both cards carry19금 overlays. No verification attempted, no gated image collected, no current cart/stock or completed transaction asserted. Price is a public archive display; availability unknown."
+    },
+    {
+      "externalId": "381",
+      "observationId": "maxim-publisher-20261025-august-381",
+      "editionId": "korea-maxim-2026-08-print-b",
+      "url": "https://www.maximkorea.net/magdb/magdb_view.php?lib=M&number=381",
+      "title": "맥심279호 치어리더 서여진 편 2026년8월호 B형",
+      "status": "unknown",
+      "priceMinor": 9600,
+      "currency": "KRW",
+      "priceType": "fixed",
+      "format": "physical",
+      "publisher": "와이미디어",
+      "editionVariant": "B형",
+      "shippingText": "Physical publisher archive price; shipping and purchase eligibility unverified",
+      "observedAt": "2026-10-25T13:20:53.5021318+08:00",
+      "timestampPrecision": "minute",
+      "statusEvidence": "Live public MAXIM archive card on2026-10-25 identifies issue279 August2026 B type, title치어리더 서여진 and displayedKRW9600. Exact detail target comes from rendered card navigation. Opening A normally redirects to members_adult.php requiring login/identity verification; both cards carry19금 overlays. No verification attempted, no gated image collected, no current cart/stock or completed transaction asserted. Price is a public archive display; availability unknown."
+    }
+  ],
+  "gate": {
+    "url": "https://www.maximkorea.net/members/members_adult.php",
+    "message": "로그인 후 본인인증을 하실 수 있습니다.",
+    "action": "Stopped at gate; no login, verification, bypass or gated images"
+  },
+  "limits": "Archive title is issue-level credit; individual A/B cover identity, original publisher release day, specs and current availability are unverified."
+}

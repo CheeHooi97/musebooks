@@ -1,0 +1,809 @@
+{
+  "databaseCounts": {
+    "editions": 6802,
+    "listing_observations": 8329,
+    "listings": 8289,
+    "sources": 30,
+    "works": 6062
+  },
+  "limitations": "Public preview prices only; purchase eligibility unknown. File sizes/pages attributed to Apple; file format unverified. BookWalker geography restriction not bypassed; no quoted price imported there.",
+  "passed": true,
+  "preservedPrintEdition": {
+    "publisherCompanyId": "publisher-994d6c88f1ef81853af0a400cc7a60331137d70380bcc650f4d1d860f201c8a1",
+    "originalCoverUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+    "id": "korea-pyo-eunji-rondo-2023-jp-print",
+    "workId": "korea-pyo-eunji-rondo-2023",
+    "format": "physical",
+    "language": "ja-JP",
+    "editionMarket": "JP",
+    "publisher": "KADOKAWA",
+    "releaseDate": "2023-08-10T08:00:00+08:00",
+    "releasePrecision": "day",
+    "isbn": "9784048976268",
+    "pageCount": 128,
+    "dimensions": "297×210×10mm (A4; artist-store dimensions)",
+    "editionVariant": "Print",
+    "contentSummary": "Japanese print photobook Rondo featuring 표은지 / ピョ・ウンジ / Pyo Eunji. Official publisher lists 128 pages, A4, publication 2023-08-10 and reference list price JPY 3,300 including tax. The artist store gives dimensions 29.7×21×1cm and currently displays MYR 97.00, with disabled cart and a members-only notice. Ordinary book is not an autograph-event ticket; current preorder-photo eligibility is unverified. Separate digital/alternate-photo editions are not represented. Public artist-store cover and three additional product-image URLs are linked with source attribution; pixels are not mirrored and no reuse license is asserted. Additional images are product-page references, not verified interior-page samples.",
+    "metadataSourceUrl": "https://www.kadokawa.co.jp/product/322303002115/",
+    "editionLabel": "2023 Japanese print photobook",
+    "coverUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+    "status": "published",
+    "createdAt": "2026-10-23T22:55:37.779981+08:00",
+    "updatedAt": "2026-10-23T23:26:48.994262+08:00"
+  },
+  "records": [
+    {
+      "edition": {
+        "publisherCompanyId": "publisher-994d6c88f1ef81853af0a400cc7a60331137d70380bcc650f4d1d860f201c8a1",
+        "originalCoverUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+        "id": "korea-pyo-eunji-rondo-2023-jp-digital",
+        "workId": "korea-pyo-eunji-rondo-2023",
+        "format": "digital",
+        "language": "ja-JP",
+        "editionMarket": "JP",
+        "publisher": "KADOKAWA",
+        "releaseDate": "2023-08-10T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 136,
+        "editionVariant": "Digital",
+        "contentSummary": "Official KADOKAWA electronic Rondo edition, publisher release 2023-08-10. Apple Books Japan publicly reports 136 digital pages, file size 74.7 MB, publisher KADOKAWA, seller DWANGO Co., Ltd., and displayed JPY 3,400 on 2026-10-23. Page/file figures are Apple-specific; ebook file format is unverified. Print A4/128-page specifications, ISBN 9784048976268 and JPY 3,300 paper price are not copied into the ebook. Public preview pricing does not establish account/storefront purchase eligibility. Publisher cover remains the source-attributed remote cover; no pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+        "editionLabel": "Digital Japanese photobook",
+        "coverUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+        "status": "published",
+        "createdAt": "2026-10-23T23:50:28.456042+08:00",
+        "updatedAt": "2026-10-23T23:55:32.056767+08:00"
+      },
+      "featuredCredit": {
+        "workId": "korea-pyo-eunji-rondo-2023",
+        "personId": 67104,
+        "role": "featured",
+        "creditedName": "표은지",
+        "creditSource": "verified_model_capture",
+        "person": {
+          "id": 67104,
+          "slug": "model-9bd8619dfd3bbfa5ee26b615b34cc92228a220383c647b621f99dadc5a391a77",
+          "canonicalPublicName": "표은지",
+          "originalName": "표은지",
+          "englishName": "Pyo Eunji",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "model",
+          "verificationSourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+          "profileSourceConfidence": "official_model_store",
+          "createdAt": "2026-10-23T22:54:47.069009+08:00",
+          "updatedAt": "2026-10-23T22:54:47.069009+08:00"
+        },
+        "createdAt": "2026-10-23T22:59:36.928673+08:00",
+        "updatedAt": "2026-10-23T23:55:32.164122+08:00"
+      },
+      "listing": {
+        "id": "listing-60cc408aa3b04b60a9adc486361b98dc",
+        "editionId": "korea-pyo-eunji-rondo-2023-jp-digital",
+        "sourceId": "apple-books-jp-manual",
+        "externalId": "6453688939",
+        "url": "https://books.apple.com/jp/book/id6453688939",
+        "title": "ピョ・ウンジ1st写真集 輪舞曲",
+        "formatCandidate": "digital",
+        "digitalAccess": "authorized_store",
+        "publisher": "KADOKAWA",
+        "editionVariant": "Digital",
+        "status": "unknown",
+        "priceMinor": 3400,
+        "currency": "JPY",
+        "priceType": "digital",
+        "shippingText": "Digital Apple Books product; not shipped; account/storefront purchase eligibility not verified",
+        "observedAt": "2026-10-23T23:53:00+08:00",
+        "lastSeenAt": "2026-10-23T23:53:00+08:00",
+        "source": {
+          "id": "",
+          "name": "",
+          "region": "",
+          "locale": "",
+          "timezone": "",
+          "kind": "",
+          "adapter": "",
+          "accessMethod": "",
+          "defaultFormat": "",
+          "allowedFormats": "",
+          "baseUrl": "",
+          "accessStatus": "",
+          "ratePerMinute": 0,
+          "enabled": false,
+          "createdAt": "0001-01-01T00:00:00Z",
+          "updatedAt": "0001-01-01T00:00:00Z"
+        },
+        "createdAt": "2026-10-23T23:54:00+08:00",
+        "updatedAt": "2026-10-23T23:55:32.407135+08:00"
+      },
+      "observation": {
+        "id": "observation-5a66538aa1ee0ef5383334edf134438a851ee3e8",
+        "observationKey": "observation-5a66538aa1ee0ef5383334edf134438a851ee3e8",
+        "listingId": "listing-60cc408aa3b04b60a9adc486361b98dc",
+        "jobId": "manual-apple-books-pyo-digital-20261023",
+        "parserVersion": "manual-page-capture-v1",
+        "observedAt": "2026-10-23T23:53:00+08:00",
+        "status": "unknown",
+        "format": "digital",
+        "digitalAccess": "authorized_store",
+        "priceMinor": 3400,
+        "currency": "JPY",
+        "priceType": "digital",
+        "shippingText": "Digital Apple Books product; not shipped; account/storefront purchase eligibility not verified",
+        "statusEvidence": "Live Apple Books Japan public product preview checked on 2026-10-23. It displays JPY 3400, release 2023-08-10, 136 digital pages, file 74.7 MB, publisher KADOKAWA and seller DWANGO Co., Ltd. Publisher links establish the authorized storefront identity. No web cart/purchase eligibility, account/region entitlement or completed purchase was verified, so availability remains unknown. Price is a displayed storefront amount, not a currency conversion or the print price. No login, purchase, download or book-reader preview was opened.",
+        "timestampPrecision": "minute",
+        "createdAt": "2026-10-23T23:55:32.512806+08:00",
+        "updatedAt": "2026-10-23T23:55:32.512806+08:00"
+      },
+      "publicBook": {
+        "models": [
+          {
+            "id": "model-9bd8619dfd3bbfa5ee26b615b34cc92228a220383c647b621f99dadc5a391a77",
+            "name": "표은지"
+          }
+        ],
+        "id": "korea-pyo-eunji-rondo-2023",
+        "slug": "korea-pyo-eunji-rondo-2023",
+        "publicationType": "photobook",
+        "originalTitle": "ピョ・ウンジ1st写真集 輪舞曲",
+        "englishTitle": "Rondo: Pyo Eunji First Photobook",
+        "summary": "Rondo, the Japanese KADOKAWA photobook of Korean model/YouTuber 표은지 (Pyo Eunji), has separate print and electronic editions released 2023-08-10. The distinct all-other-photo companion 円舞曲 is catalogued as its own title.",
+        "origin": {
+          "code": "KR",
+          "name": "South Korea",
+          "nativeName": "대한민국"
+        },
+        "featuredNames": [
+          "표은지"
+        ],
+        "coverUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+        "editions": [
+          {
+            "gallery": [
+              {
+                "id": 84268,
+                "entityType": "edition",
+                "entityId": "korea-pyo-eunji-rondo-2023-jp-print",
+                "mediaType": "cover",
+                "originalUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+                "storageUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+                "sourceUrl": "https://www.kadokawa.co.jp/product/322303002115/",
+                "isPrimary": true,
+                "createdAt": "2026-10-23T22:57:21.568271+08:00",
+                "updatedAt": "2026-10-23T23:25:17.81533+08:00"
+              }
+            ],
+            "publisherProfile": {
+              "id": "publisher-994d6c88f1ef81853af0a400cc7a60331137d70380bcc650f4d1d860f201c8a1",
+              "name": "KADOKAWA"
+            },
+            "id": "korea-pyo-eunji-rondo-2023-jp-print",
+            "format": "physical",
+            "language": "ja-JP",
+            "editionMarket": "JP",
+            "publisher": "KADOKAWA",
+            "releaseDate": "2023-08-10T08:00:00+08:00",
+            "releasePrecision": "day",
+            "isbn": "9784048976268",
+            "pageCount": 128,
+            "dimensions": "297×210×10mm (A4; artist-store dimensions)",
+            "editionVariant": "Print",
+            "contentSummary": "Japanese print photobook Rondo featuring 표은지 / ピョ・ウンジ / Pyo Eunji. Official publisher lists 128 pages, A4, publication 2023-08-10 and reference list price JPY 3,300 including tax. The artist store gives dimensions 29.7×21×1cm and currently displays MYR 97.00, with disabled cart and a members-only notice. Ordinary book is not an autograph-event ticket; current preorder-photo eligibility is unverified. Separate digital/alternate-photo editions are not represented. Public artist-store cover and three additional product-image URLs are linked with source attribution; pixels are not mirrored and no reuse license is asserted. Additional images are product-page references, not verified interior-page samples.",
+            "metadataSourceUrl": "https://www.kadokawa.co.jp/product/322303002115/",
+            "editionLabel": "2023 Japanese print photobook",
+            "coverUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+            "listings": [
+              {
+                "gallery": [
+                  {
+                    "id": 84269,
+                    "entityType": "listing",
+                    "entityId": "listing-1e7ac7698e5e1a8fb06422ad635fa9bb",
+                    "mediaType": "listing_image",
+                    "originalUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+                    "storageUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+                    "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+                    "isPrimary": true,
+                    "createdAt": "2026-10-23T22:57:59.556283+08:00",
+                    "updatedAt": "2026-10-23T23:26:49.184337+08:00"
+                  },
+                  {
+                    "id": 84270,
+                    "entityType": "listing",
+                    "entityId": "listing-1e7ac7698e5e1a8fb06422ad635fa9bb",
+                    "mediaType": "listing_image_001",
+                    "originalUrl": "https://pyoeunji.com/cdn/shop/files/FC_889c5806-e423-44fb-899e-037945f4900a_grande.jpg?v=1707811313",
+                    "storageUrl": "https://pyoeunji.com/cdn/shop/files/FC_889c5806-e423-44fb-899e-037945f4900a_grande.jpg?v=1707811313",
+                    "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+                    "isPrimary": false,
+                    "createdAt": "2026-10-23T22:57:59.556283+08:00",
+                    "updatedAt": "2026-10-23T23:26:49.184337+08:00"
+                  },
+                  {
+                    "id": 84271,
+                    "entityType": "listing",
+                    "entityId": "listing-1e7ac7698e5e1a8fb06422ad635fa9bb",
+                    "mediaType": "listing_image_002",
+                    "originalUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.29_grande.png?v=1707811313",
+                    "storageUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.29_grande.png?v=1707811313",
+                    "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+                    "isPrimary": false,
+                    "createdAt": "2026-10-23T22:57:59.556283+08:00",
+                    "updatedAt": "2026-10-23T23:26:49.184337+08:00"
+                  },
+                  {
+                    "id": 84272,
+                    "entityType": "listing",
+                    "entityId": "listing-1e7ac7698e5e1a8fb06422ad635fa9bb",
+                    "mediaType": "listing_image_003",
+                    "originalUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.45_grande.png?v=1707811313",
+                    "storageUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.45_grande.png?v=1707811313",
+                    "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+                    "isPrimary": false,
+                    "createdAt": "2026-10-23T22:57:59.556283+08:00",
+                    "updatedAt": "2026-10-23T23:26:49.184337+08:00"
+                  }
+                ],
+                "id": "listing-1e7ac7698e5e1a8fb06422ad635fa9bb",
+                "externalId": "pyoeunji-rondo",
+                "url": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+                "title": "\"Rondo\" Pyo Eunji Photobook by KADOKAWA publisher",
+                "format": "physical",
+                "status": "unknown",
+                "priceMinor": 9700,
+                "currency": "MYR",
+                "priceType": "fixed",
+                "priceCategory": "physical_retail",
+                "shippingText": "Additional charge varies by domestic/international region; overseas shipping may be unavailable for some countries",
+                "observedAt": "2026-10-23T22:52:00+08:00",
+                "lastSeenAt": "2026-10-23T22:52:00+08:00",
+                "source": {
+                  "id": "pyoeunji-jp-manual",
+                  "name": "Pyo Eunji Japan official store (manual page capture; access under review)",
+                  "region": "JP",
+                  "kind": "bookstore",
+                  "photobookFormat": "physical"
+                }
+              }
+            ],
+            "activeListings": [],
+            "soldListings": [],
+            "retailOffers": [
+              {
+                "gallery": [
+                  {
+                    "id": 84269,
+                    "entityType": "listing",
+                    "entityId": "listing-1e7ac7698e5e1a8fb06422ad635fa9bb",
+                    "mediaType": "listing_image",
+                    "originalUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+                    "storageUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+                    "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+                    "isPrimary": true,
+                    "createdAt": "2026-10-23T22:57:59.556283+08:00",
+                    "updatedAt": "2026-10-23T23:26:49.184337+08:00"
+                  },
+                  {
+                    "id": 84270,
+                    "entityType": "listing",
+                    "entityId": "listing-1e7ac7698e5e1a8fb06422ad635fa9bb",
+                    "mediaType": "listing_image_001",
+                    "originalUrl": "https://pyoeunji.com/cdn/shop/files/FC_889c5806-e423-44fb-899e-037945f4900a_grande.jpg?v=1707811313",
+                    "storageUrl": "https://pyoeunji.com/cdn/shop/files/FC_889c5806-e423-44fb-899e-037945f4900a_grande.jpg?v=1707811313",
+                    "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+                    "isPrimary": false,
+                    "createdAt": "2026-10-23T22:57:59.556283+08:00",
+                    "updatedAt": "2026-10-23T23:26:49.184337+08:00"
+                  },
+                  {
+                    "id": 84271,
+                    "entityType": "listing",
+                    "entityId": "listing-1e7ac7698e5e1a8fb06422ad635fa9bb",
+                    "mediaType": "listing_image_002",
+                    "originalUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.29_grande.png?v=1707811313",
+                    "storageUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.29_grande.png?v=1707811313",
+                    "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+                    "isPrimary": false,
+                    "createdAt": "2026-10-23T22:57:59.556283+08:00",
+                    "updatedAt": "2026-10-23T23:26:49.184337+08:00"
+                  },
+                  {
+                    "id": 84272,
+                    "entityType": "listing",
+                    "entityId": "listing-1e7ac7698e5e1a8fb06422ad635fa9bb",
+                    "mediaType": "listing_image_003",
+                    "originalUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.45_grande.png?v=1707811313",
+                    "storageUrl": "https://pyoeunji.com/cdn/shop/files/2023-06-1317.39.45_grande.png?v=1707811313",
+                    "sourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+                    "isPrimary": false,
+                    "createdAt": "2026-10-23T22:57:59.556283+08:00",
+                    "updatedAt": "2026-10-23T23:26:49.184337+08:00"
+                  }
+                ],
+                "id": "listing-1e7ac7698e5e1a8fb06422ad635fa9bb",
+                "externalId": "pyoeunji-rondo",
+                "url": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+                "title": "\"Rondo\" Pyo Eunji Photobook by KADOKAWA publisher",
+                "format": "physical",
+                "status": "unknown",
+                "priceMinor": 9700,
+                "currency": "MYR",
+                "priceType": "fixed",
+                "priceCategory": "physical_retail",
+                "shippingText": "Additional charge varies by domestic/international region; overseas shipping may be unavailable for some countries",
+                "observedAt": "2026-10-23T22:52:00+08:00",
+                "lastSeenAt": "2026-10-23T22:52:00+08:00",
+                "source": {
+                  "id": "pyoeunji-jp-manual",
+                  "name": "Pyo Eunji Japan official store (manual page capture; access under review)",
+                  "region": "JP",
+                  "kind": "bookstore",
+                  "photobookFormat": "physical"
+                }
+              }
+            ]
+          },
+          {
+            "gallery": [
+              {
+                "id": 84401,
+                "entityType": "edition",
+                "entityId": "korea-pyo-eunji-rondo-2023-jp-digital",
+                "mediaType": "cover",
+                "originalUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+                "storageUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+                "sourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+                "isPrimary": true,
+                "createdAt": "2026-10-23T23:50:27.886306+08:00",
+                "updatedAt": "2026-10-23T23:55:31.449096+08:00"
+              }
+            ],
+            "publisherProfile": {
+              "id": "publisher-994d6c88f1ef81853af0a400cc7a60331137d70380bcc650f4d1d860f201c8a1",
+              "name": "KADOKAWA"
+            },
+            "id": "korea-pyo-eunji-rondo-2023-jp-digital",
+            "format": "digital",
+            "language": "ja-JP",
+            "editionMarket": "JP",
+            "publisher": "KADOKAWA",
+            "releaseDate": "2023-08-10T08:00:00+08:00",
+            "releasePrecision": "day",
+            "pageCount": 136,
+            "editionVariant": "Digital",
+            "contentSummary": "Official KADOKAWA electronic Rondo edition, publisher release 2023-08-10. Apple Books Japan publicly reports 136 digital pages, file size 74.7 MB, publisher KADOKAWA, seller DWANGO Co., Ltd., and displayed JPY 3,400 on 2026-10-23. Page/file figures are Apple-specific; ebook file format is unverified. Print A4/128-page specifications, ISBN 9784048976268 and JPY 3,300 paper price are not copied into the ebook. Public preview pricing does not establish account/storefront purchase eligibility. Publisher cover remains the source-attributed remote cover; no pixels mirrored or reuse license asserted.",
+            "metadataSourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+            "editionLabel": "Digital Japanese photobook",
+            "coverUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+            "listings": [
+              {
+                "id": "listing-60cc408aa3b04b60a9adc486361b98dc",
+                "externalId": "6453688939",
+                "url": "https://books.apple.com/jp/book/id6453688939",
+                "title": "ピョ・ウンジ1st写真集 輪舞曲",
+                "format": "digital",
+                "digitalAccess": "authorized_store",
+                "status": "unknown",
+                "priceMinor": 3400,
+                "currency": "JPY",
+                "priceType": "digital",
+                "priceCategory": "digital_retail",
+                "shippingText": "Digital Apple Books product; not shipped; account/storefront purchase eligibility not verified",
+                "observedAt": "2026-10-23T23:53:00+08:00",
+                "lastSeenAt": "2026-10-23T23:53:00+08:00",
+                "source": {
+                  "id": "apple-books-jp-manual",
+                  "name": "Apple Books Japan (manual public storefront capture)",
+                  "region": "JP",
+                  "kind": "digital_store",
+                  "photobookFormat": "digital"
+                }
+              }
+            ],
+            "activeListings": [],
+            "soldListings": [],
+            "retailOffers": [
+              {
+                "id": "listing-60cc408aa3b04b60a9adc486361b98dc",
+                "externalId": "6453688939",
+                "url": "https://books.apple.com/jp/book/id6453688939",
+                "title": "ピョ・ウンジ1st写真集 輪舞曲",
+                "format": "digital",
+                "digitalAccess": "authorized_store",
+                "status": "unknown",
+                "priceMinor": 3400,
+                "currency": "JPY",
+                "priceType": "digital",
+                "priceCategory": "digital_retail",
+                "shippingText": "Digital Apple Books product; not shipped; account/storefront purchase eligibility not verified",
+                "observedAt": "2026-10-23T23:53:00+08:00",
+                "lastSeenAt": "2026-10-23T23:53:00+08:00",
+                "source": {
+                  "id": "apple-books-jp-manual",
+                  "name": "Apple Books Japan (manual public storefront capture)",
+                  "region": "JP",
+                  "kind": "digital_store",
+                  "photobookFormat": "digital"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "publisherMedia": [
+        {
+          "id": 84401,
+          "entityType": "edition",
+          "entityId": "korea-pyo-eunji-rondo-2023-jp-digital",
+          "mediaType": "cover",
+          "originalUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+          "storageUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+          "isPrimary": true,
+          "createdAt": "2026-10-23T23:50:27.886306+08:00",
+          "updatedAt": "2026-10-23T23:55:31.449096+08:00"
+        },
+        {
+          "id": 84402,
+          "entityType": "edition",
+          "entityId": "korea-pyo-eunji-rondo-2023-jp-digital",
+          "mediaType": "publisher_cover",
+          "originalUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+          "storageUrl": "https://cdn.kdkw.jp/cover_1000/322303/322303002121.webp",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322303002121/",
+          "isPrimary": true,
+          "createdAt": "2026-10-23T23:50:28.555827+08:00",
+          "updatedAt": "2026-10-23T23:50:28.555827+08:00"
+        }
+      ],
+      "source": {
+        "marketplaceId": 294,
+        "id": "apple-books-jp-manual",
+        "name": "Apple Books Japan (manual public storefront capture)",
+        "region": "JP",
+        "locale": "ja-JP",
+        "timezone": "Asia/Tokyo",
+        "kind": "digital_store",
+        "adapter": "manual_page_capture",
+        "accessMethod": "manual_browser",
+        "defaultFormat": "digital",
+        "allowedFormats": "digital",
+        "baseUrl": "https://books.apple.com",
+        "allowedHosts": "books.apple.com",
+        "capabilities": "listing_detail",
+        "accessStatus": "review",
+        "termsUrl": "https://www.apple.com/jp/legal/terms/site.html",
+        "ratePerMinute": 1,
+        "enabled": false,
+        "createdAt": "2026-10-23T23:55:32.226967+08:00",
+        "updatedAt": "2026-10-23T23:55:32.255279+08:00"
+      },
+      "work": {
+        "originMarketId": 10544,
+        "id": "korea-pyo-eunji-rondo-2023",
+        "slug": "korea-pyo-eunji-rondo-2023",
+        "publicationType": "photobook",
+        "originalTitle": "ピョ・ウンジ1st写真集 輪舞曲",
+        "englishTitle": "Rondo: Pyo Eunji First Photobook",
+        "summary": "Rondo, the Japanese KADOKAWA photobook of Korean model/YouTuber 표은지 (Pyo Eunji), has separate print and electronic editions released 2023-08-10. The distinct all-other-photo companion 円舞曲 is catalogued as its own title.",
+        "originCode": "KR",
+        "featuredNames": "표은지",
+        "coverUrl": "https://pyoeunji.com/cdn/shop/files/71gw11c9DjL._SL1500_grande.jpg?v=1707811313",
+        "status": "published",
+        "origin": {
+          "code": "",
+          "name": "",
+          "sortOrder": 0,
+          "createdAt": "0001-01-01T00:00:00Z",
+          "updatedAt": "0001-01-01T00:00:00Z"
+        },
+        "createdAt": "2026-10-23T22:55:37.756136+08:00",
+        "updatedAt": "2026-10-23T23:55:32.020951+08:00"
+      }
+    },
+    {
+      "edition": {
+        "publisherCompanyId": "publisher-994d6c88f1ef81853af0a400cc7a60331137d70380bcc650f4d1d860f201c8a1",
+        "originalCoverUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+        "id": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+        "workId": "korea-pyo-eunji-enbukyoku-2023",
+        "format": "digital",
+        "language": "ja-JP",
+        "editionMarket": "JP",
+        "publisher": "KADOKAWA",
+        "releaseDate": "2023-11-30T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 104,
+        "editionVariant": "All-Other Digital",
+        "contentSummary": "Separate KADOKAWA All-Other Edition digital companion titled 円舞曲, publisher release 2023-11-30. Apple Books Japan publicly reports 104 digital pages, file size 116 MB, publisher KADOKAWA, seller DWANGO Co., Ltd., and displayed JPY 2,200 on 2026-10-23. Page/file figures are Apple-specific; ebook file format and ISBN are unverified. This companion is not merged with standard Rondo or its print edition. Public preview pricing does not establish account/storefront purchase eligibility. Publisher cover remains source-attributed and remote; no pixels mirrored or reuse license asserted.",
+        "metadataSourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+        "editionLabel": "All-Other Digital Japanese photobook",
+        "coverUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+        "status": "published",
+        "createdAt": "2026-10-23T23:50:28.627182+08:00",
+        "updatedAt": "2026-10-23T23:55:32.629417+08:00"
+      },
+      "featuredCredit": {
+        "workId": "korea-pyo-eunji-enbukyoku-2023",
+        "personId": 67104,
+        "role": "featured",
+        "creditedName": "표은지",
+        "creditSource": "verified_model_capture",
+        "person": {
+          "id": 67104,
+          "slug": "model-9bd8619dfd3bbfa5ee26b615b34cc92228a220383c647b621f99dadc5a391a77",
+          "canonicalPublicName": "표은지",
+          "originalName": "표은지",
+          "englishName": "Pyo Eunji",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "model",
+          "verificationSourceUrl": "https://pyoeunji.com/en/products/pyoeunji-rondo",
+          "profileSourceConfidence": "official_model_store",
+          "createdAt": "2026-10-23T22:54:47.069009+08:00",
+          "updatedAt": "2026-10-23T22:54:47.069009+08:00"
+        },
+        "createdAt": "2026-10-23T23:50:27.886306+08:00",
+        "updatedAt": "2026-10-23T23:55:32.647863+08:00"
+      },
+      "listing": {
+        "id": "listing-147cf4a2386fa0a53f59e9369f9be233",
+        "editionId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+        "sourceId": "apple-books-jp-manual",
+        "externalId": "6472695690",
+        "url": "https://books.apple.com/jp/book/id6472695690",
+        "title": "【オールアザー版】ピョ・ウンジデジタル写真集『円舞曲』",
+        "formatCandidate": "digital",
+        "digitalAccess": "authorized_store",
+        "publisher": "KADOKAWA",
+        "editionVariant": "All-Other Digital",
+        "status": "unknown",
+        "priceMinor": 2200,
+        "currency": "JPY",
+        "priceType": "digital",
+        "shippingText": "Digital Apple Books product; not shipped; account/storefront purchase eligibility not verified",
+        "observedAt": "2026-10-23T23:54:00+08:00",
+        "lastSeenAt": "2026-10-23T23:54:00+08:00",
+        "source": {
+          "id": "",
+          "name": "",
+          "region": "",
+          "locale": "",
+          "timezone": "",
+          "kind": "",
+          "adapter": "",
+          "accessMethod": "",
+          "defaultFormat": "",
+          "allowedFormats": "",
+          "baseUrl": "",
+          "accessStatus": "",
+          "ratePerMinute": 0,
+          "enabled": false,
+          "createdAt": "0001-01-01T00:00:00Z",
+          "updatedAt": "0001-01-01T00:00:00Z"
+        },
+        "createdAt": "2026-10-23T23:54:00+08:00",
+        "updatedAt": "2026-10-23T23:55:32.737597+08:00"
+      },
+      "observation": {
+        "id": "observation-961440b7bd89275a8502a0331664c6a101aa4608",
+        "observationKey": "observation-961440b7bd89275a8502a0331664c6a101aa4608",
+        "listingId": "listing-147cf4a2386fa0a53f59e9369f9be233",
+        "jobId": "manual-apple-books-pyo-digital-20261023",
+        "parserVersion": "manual-page-capture-v1",
+        "observedAt": "2026-10-23T23:54:00+08:00",
+        "status": "unknown",
+        "format": "digital",
+        "digitalAccess": "authorized_store",
+        "priceMinor": 2200,
+        "currency": "JPY",
+        "priceType": "digital",
+        "shippingText": "Digital Apple Books product; not shipped; account/storefront purchase eligibility not verified",
+        "statusEvidence": "Live Apple Books Japan public product preview checked on 2026-10-23. It displays JPY 2200, release 2023-11-30, 104 digital pages, file 116 MB, publisher KADOKAWA and seller DWANGO Co., Ltd. Publisher links establish the authorized storefront identity. No web cart/purchase eligibility, account/region entitlement or completed purchase was verified, so availability remains unknown. Price is a displayed storefront amount, not a currency conversion or the print price. No login, purchase, download or book-reader preview was opened.",
+        "timestampPrecision": "minute",
+        "createdAt": "2026-10-23T23:55:32.782767+08:00",
+        "updatedAt": "2026-10-23T23:55:32.782767+08:00"
+      },
+      "publicBook": {
+        "models": [
+          {
+            "id": "model-9bd8619dfd3bbfa5ee26b615b34cc92228a220383c647b621f99dadc5a391a77",
+            "name": "표은지"
+          }
+        ],
+        "id": "korea-pyo-eunji-enbukyoku-2023",
+        "slug": "korea-pyo-eunji-enbukyoku-2023",
+        "publicationType": "photobook",
+        "originalTitle": "【オールアザー版】ピョ・ウンジデジタル写真集『円舞曲』",
+        "englishTitle": "Pyo Eunji Digital Photobook: Enbukyoku (All-Other Edition)",
+        "summary": "Separate KADOKAWA digital companion photobook featuring Korean model 표은지 (Pyo Eunji), titled 円舞曲 and labeled All-Other Edition. The publisher describes it as a second chapter following Rondo; its release and content identity are recorded independently.",
+        "origin": {
+          "code": "KR",
+          "name": "South Korea",
+          "nativeName": "대한민국"
+        },
+        "featuredNames": [
+          "표은지"
+        ],
+        "coverUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+        "editions": [
+          {
+            "gallery": [
+              {
+                "id": 84404,
+                "entityType": "edition",
+                "entityId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+                "mediaType": "cover",
+                "originalUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+                "storageUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+                "sourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+                "isPrimary": true,
+                "createdAt": "2026-10-23T23:50:27.886306+08:00",
+                "updatedAt": "2026-10-23T23:55:31.449096+08:00"
+              }
+            ],
+            "publisherProfile": {
+              "id": "publisher-994d6c88f1ef81853af0a400cc7a60331137d70380bcc650f4d1d860f201c8a1",
+              "name": "KADOKAWA"
+            },
+            "id": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+            "format": "digital",
+            "language": "ja-JP",
+            "editionMarket": "JP",
+            "publisher": "KADOKAWA",
+            "releaseDate": "2023-11-30T08:00:00+08:00",
+            "releasePrecision": "day",
+            "pageCount": 104,
+            "editionVariant": "All-Other Digital",
+            "contentSummary": "Separate KADOKAWA All-Other Edition digital companion titled 円舞曲, publisher release 2023-11-30. Apple Books Japan publicly reports 104 digital pages, file size 116 MB, publisher KADOKAWA, seller DWANGO Co., Ltd., and displayed JPY 2,200 on 2026-10-23. Page/file figures are Apple-specific; ebook file format and ISBN are unverified. This companion is not merged with standard Rondo or its print edition. Public preview pricing does not establish account/storefront purchase eligibility. Publisher cover remains source-attributed and remote; no pixels mirrored or reuse license asserted.",
+            "metadataSourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+            "editionLabel": "All-Other Digital Japanese photobook",
+            "coverUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+            "listings": [
+              {
+                "id": "listing-147cf4a2386fa0a53f59e9369f9be233",
+                "externalId": "6472695690",
+                "url": "https://books.apple.com/jp/book/id6472695690",
+                "title": "【オールアザー版】ピョ・ウンジデジタル写真集『円舞曲』",
+                "format": "digital",
+                "digitalAccess": "authorized_store",
+                "status": "unknown",
+                "priceMinor": 2200,
+                "currency": "JPY",
+                "priceType": "digital",
+                "priceCategory": "digital_retail",
+                "shippingText": "Digital Apple Books product; not shipped; account/storefront purchase eligibility not verified",
+                "observedAt": "2026-10-23T23:54:00+08:00",
+                "lastSeenAt": "2026-10-23T23:54:00+08:00",
+                "source": {
+                  "id": "apple-books-jp-manual",
+                  "name": "Apple Books Japan (manual public storefront capture)",
+                  "region": "JP",
+                  "kind": "digital_store",
+                  "photobookFormat": "digital"
+                }
+              }
+            ],
+            "activeListings": [],
+            "soldListings": [],
+            "retailOffers": [
+              {
+                "id": "listing-147cf4a2386fa0a53f59e9369f9be233",
+                "externalId": "6472695690",
+                "url": "https://books.apple.com/jp/book/id6472695690",
+                "title": "【オールアザー版】ピョ・ウンジデジタル写真集『円舞曲』",
+                "format": "digital",
+                "digitalAccess": "authorized_store",
+                "status": "unknown",
+                "priceMinor": 2200,
+                "currency": "JPY",
+                "priceType": "digital",
+                "priceCategory": "digital_retail",
+                "shippingText": "Digital Apple Books product; not shipped; account/storefront purchase eligibility not verified",
+                "observedAt": "2026-10-23T23:54:00+08:00",
+                "lastSeenAt": "2026-10-23T23:54:00+08:00",
+                "source": {
+                  "id": "apple-books-jp-manual",
+                  "name": "Apple Books Japan (manual public storefront capture)",
+                  "region": "JP",
+                  "kind": "digital_store",
+                  "photobookFormat": "digital"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "publisherMedia": [
+        {
+          "id": 84404,
+          "entityType": "edition",
+          "entityId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+          "mediaType": "cover",
+          "originalUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+          "storageUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+          "isPrimary": true,
+          "createdAt": "2026-10-23T23:50:27.886306+08:00",
+          "updatedAt": "2026-10-23T23:55:31.449096+08:00"
+        },
+        {
+          "id": 84405,
+          "entityType": "edition",
+          "entityId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+          "mediaType": "publisher_cover",
+          "originalUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+          "storageUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+          "sourceUrl": "https://www.kadokawa.co.jp/product/322310001500/",
+          "isPrimary": true,
+          "createdAt": "2026-10-23T23:50:28.653005+08:00",
+          "updatedAt": "2026-10-23T23:50:28.653005+08:00"
+        }
+      ],
+      "source": {
+        "marketplaceId": 294,
+        "id": "apple-books-jp-manual",
+        "name": "Apple Books Japan (manual public storefront capture)",
+        "region": "JP",
+        "locale": "ja-JP",
+        "timezone": "Asia/Tokyo",
+        "kind": "digital_store",
+        "adapter": "manual_page_capture",
+        "accessMethod": "manual_browser",
+        "defaultFormat": "digital",
+        "allowedFormats": "digital",
+        "baseUrl": "https://books.apple.com",
+        "allowedHosts": "books.apple.com",
+        "capabilities": "listing_detail",
+        "accessStatus": "review",
+        "termsUrl": "https://www.apple.com/jp/legal/terms/site.html",
+        "ratePerMinute": 1,
+        "enabled": false,
+        "createdAt": "2026-10-23T23:55:32.226967+08:00",
+        "updatedAt": "2026-10-23T23:55:32.255279+08:00"
+      },
+      "work": {
+        "originMarketId": 10544,
+        "id": "korea-pyo-eunji-enbukyoku-2023",
+        "slug": "korea-pyo-eunji-enbukyoku-2023",
+        "publicationType": "photobook",
+        "originalTitle": "【オールアザー版】ピョ・ウンジデジタル写真集『円舞曲』",
+        "englishTitle": "Pyo Eunji Digital Photobook: Enbukyoku (All-Other Edition)",
+        "summary": "Separate KADOKAWA digital companion photobook featuring Korean model 표은지 (Pyo Eunji), titled 円舞曲 and labeled All-Other Edition. The publisher describes it as a second chapter following Rondo; its release and content identity are recorded independently.",
+        "originCode": "KR",
+        "featuredNames": "표은지",
+        "coverUrl": "https://cdn.kdkw.jp/cover_1000/322310/322310001500.webp",
+        "status": "published",
+        "origin": {
+          "code": "",
+          "name": "",
+          "sortOrder": 0,
+          "createdAt": "0001-01-01T00:00:00Z",
+          "updatedAt": "0001-01-01T00:00:00Z"
+        },
+        "createdAt": "2026-10-23T23:50:28.612779+08:00",
+        "updatedAt": "2026-10-23T23:55:32.612559+08:00"
+      }
+    }
+  ],
+  "scope": "Two live Apple Books ebook price observations, Apple-specific digital specs, shared Pyo identity and exact public book responses",
+  "sharedPyoPersonID": 67104,
+  "verifiedAt": "2026-10-23T15:56:48.0717203Z",
+  "publicCatalogVerification": {
+    "passed": true,
+    "database": "musebooks",
+    "physicalWorks": 337,
+    "digitalWorks": 5450,
+    "unlinkedVerifiedListings": 1509,
+    "pendingCoverEditions": 177,
+    "databaseCounts": {
+      "works": 6062,
+      "editions": 6802,
+      "listings": 8289,
+      "sources": 30,
+      "listing_observations": 8329
+    },
+    "log": "korean-photobook-pyo-eunji-apple-catalog-verify.log",
+    "method": "Existing read-only catalog-import -verify command; exit code 0"
+  }
+}

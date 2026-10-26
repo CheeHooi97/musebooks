@@ -1,0 +1,361 @@
+{
+  "aliases": [
+    {
+      "alias_name": "지수 (JISOO)",
+      "alias_slug": "model-2ac5fafae172f0952e38f98fcfe69ac9446b5012c09fdba3f0a48d7613fe7b1f",
+      "created_at": "2026-10-25T14:09:55.278092+08:00",
+      "person_id": 16986,
+      "source": "verified_model_capture"
+    }
+  ],
+  "capturedAt": "2026-10-25T06:10:29.3490414Z",
+  "credits": [
+    {
+      "workId": "korea-jisoo-me-photobook-2023",
+      "personId": 16986,
+      "role": "featured",
+      "creditedName": "지수",
+      "creditSource": "verified_model_capture",
+      "person": {
+        "id": 16986,
+        "slug": "model-0d32317250d77806a4f2e483ad86ad466a02724faa212319f515608ea7a9fcf6",
+        "canonicalPublicName": "지수",
+        "originalName": "지수",
+        "englishName": "JISOO",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.yes24.com/product/goods/121961075",
+        "profileSourceConfidence": "publisher_supplied_photo_subject",
+        "createdAt": "2026-10-20T13:20:32.486055+08:00",
+        "updatedAt": "2026-10-20T13:20:32.486055+08:00"
+      },
+      "createdAt": "2026-10-20T13:20:32.5378+08:00",
+      "updatedAt": "2026-10-25T14:09:56.41413+08:00"
+    }
+  ],
+  "listings": [
+    {
+      "id": "listing-760952d8eeecdfce5e4d917c8e647f96",
+      "editionId": "korea-jisoo-me-special-2023-print-yes24",
+      "sourceId": "yes24-kr-print",
+      "externalId": "121961075",
+      "url": "https://www.yes24.com/product/goods/121961075",
+      "title": "지수 (JISOO) - JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+      "formatCandidate": "physical",
+      "publisher": "YGPLUS / YG Entertainment",
+      "editionVariant": "Special Edition",
+      "status": "unknown",
+      "priceMinor": 39000,
+      "currency": "KRW",
+      "priceType": "fixed",
+      "observedAt": "2026-10-25T14:08:57.516663+08:00",
+      "lastSeenAt": "2026-10-25T14:08:57.516663+08:00",
+      "source": {
+        "id": "",
+        "name": "",
+        "region": "",
+        "locale": "",
+        "timezone": "",
+        "kind": "",
+        "adapter": "",
+        "accessMethod": "",
+        "defaultFormat": "",
+        "allowedFormats": "",
+        "baseUrl": "",
+        "accessStatus": "",
+        "ratePerMinute": 0,
+        "enabled": false,
+        "createdAt": "0001-01-01T00:00:00Z",
+        "updatedAt": "0001-01-01T00:00:00Z"
+      },
+      "createdAt": "2026-10-20T13:18:00+08:00",
+      "updatedAt": "2026-10-25T14:09:56.743875+08:00"
+    }
+  ],
+  "media": [],
+  "observations": [
+    {
+      "id": "observation-b91844bdb0641bd68bfb693aa93024267a6d1775",
+      "observationKey": "observation-b91844bdb0641bd68bfb693aa93024267a6d1775",
+      "listingId": "listing-760952d8eeecdfce5e4d917c8e647f96",
+      "parserVersion": "manual-page-capture-v1",
+      "observedAt": "2026-10-20T13:18:00+08:00",
+      "status": "unknown",
+      "format": "physical",
+      "priceMinor": 39000,
+      "currency": "KRW",
+      "priceType": "physical",
+      "statusEvidence": "The exact YES24 page snapshots show the displayed selling price KRW 39,000 and a sold-out/new-copy unavailable label; the latest indexed result was crawled last week and the mobile snapshot is older. Retain KRW 39,000 as a last-observed page price and set current availability to unknown. No seller-specific used offer was verified.",
+      "timestampPrecision": "minute",
+      "createdAt": "2026-10-20T13:20:32.690858+08:00",
+      "updatedAt": "2026-10-20T13:20:32.690858+08:00"
+    },
+    {
+      "id": "observation-c69054743410218ab74f89fd6834711f6b3cf89c",
+      "observationKey": "observation-c69054743410218ab74f89fd6834711f6b3cf89c",
+      "listingId": "listing-760952d8eeecdfce5e4d917c8e647f96",
+      "jobId": "manual-yes24-jisoo-me-20261025",
+      "parserVersion": "manual-page-capture-v1",
+      "observedAt": "2026-10-25T14:08:57.516663+08:00",
+      "status": "unknown",
+      "format": "physical",
+      "priceMinor": 39000,
+      "currency": "KRW",
+      "priceType": "fixed",
+      "statusEvidence": "Live public YES24 product page on 2026-10-25 shows selling and discounted price KRW 39,000, 품절 / 한정판매, and 현재 새 상품은 구매 할 수 없습니다. Store the displayed unavailable retail price with unknown status; this is not an active offer or completed sale. The publisher-supplied introduction identifies JISOO as the photobook subject and participant in production/design. Release 2023-09-18 and 176-page book confirmed. Free shipping / overseas delivery available are page policies, not an available purchase promise. No seller-specific used offer verified.",
+      "timestampPrecision": "minute",
+      "createdAt": "2026-10-25T14:09:56.853972+08:00",
+      "updatedAt": "2026-10-25T14:09:56.853972+08:00"
+    }
+  ],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 16985,
+      "slug": "model-2ac5fafae172f0952e38f98fcfe69ac9446b5012c09fdba3f0a48d7613fe7b1f",
+      "canonicalPublicName": "지수 (JISOO)",
+      "originalName": "지수 (JISOO)",
+      "englishName": "",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "",
+      "verificationSourceUrl": "",
+      "profileSourceConfidence": "catalog_credit",
+      "createdAt": "2026-10-20T13:20:26.956942+08:00",
+      "updatedAt": "2026-10-20T13:20:26.956942+08:00"
+    },
+    {
+      "id": 16986,
+      "slug": "model-0d32317250d77806a4f2e483ad86ad466a02724faa212319f515608ea7a9fcf6",
+      "canonicalPublicName": "지수",
+      "originalName": "지수",
+      "englishName": "JISOO",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/121961075",
+      "profileSourceConfidence": "publisher_supplied_photo_subject",
+      "createdAt": "2026-10-20T13:20:32.486055+08:00",
+      "updatedAt": "2026-10-20T13:20:32.486055+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-0d32317250d77806a4f2e483ad86ad466a02724faa212319f515608ea7a9fcf6",
+        "name": "지수"
+      }
+    ],
+    "id": "korea-jisoo-me-photobook-2023",
+    "slug": "korea-jisoo-me-photobook-2023",
+    "publicationType": "photobook",
+    "originalTitle": "지수 (JISOO) - JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+    "englishTitle": "JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+    "summary": "Standalone 176-page photo book featuring Korean singer and fashion muse 지수 (JISOO), based on her first solo album [ME].",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "지수"
+    ],
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-f1534ffde28e3fc2dbe38c91e16fc09e32d62f6e136470a47e7e81c22f3900d2",
+          "name": "YGPLUS / YG Entertainment"
+        },
+        "id": "korea-jisoo-me-special-2023-print-yes24",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "YGPLUS / YG Entertainment",
+        "releaseDate": "2023-09-18T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 176,
+        "dimensions": "252×162×28mm",
+        "editionVariant": "Special Edition",
+        "contentSummary": "YES24 lists a 176-page photobook, 20-piece postcard book, random selfie photocard and polaroid, sticker, clear photocard, luggage tag, and a limited random Instax photo film.",
+        "metadataSourceUrl": "https://www.yes24.com/product/goods/121961075",
+        "editionLabel": "2023 [ME] Special Edition physical photobook package",
+        "listings": [
+          {
+            "id": "listing-760952d8eeecdfce5e4d917c8e647f96",
+            "externalId": "121961075",
+            "url": "https://www.yes24.com/product/goods/121961075",
+            "title": "지수 (JISOO) - JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+            "format": "physical",
+            "status": "unknown",
+            "priceMinor": 39000,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "observedAt": "2026-10-25T14:08:57.516663+08:00",
+            "lastSeenAt": "2026-10-25T14:08:57.516663+08:00",
+            "source": {
+              "id": "yes24-kr-print",
+              "name": "YES24 Korea print (manual page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": [
+          {
+            "id": "listing-760952d8eeecdfce5e4d917c8e647f96",
+            "externalId": "121961075",
+            "url": "https://www.yes24.com/product/goods/121961075",
+            "title": "지수 (JISOO) - JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+            "format": "physical",
+            "status": "unknown",
+            "priceMinor": 39000,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "priceCategory": "physical_retail",
+            "observedAt": "2026-10-25T14:08:57.516663+08:00",
+            "lastSeenAt": "2026-10-25T14:08:57.516663+08:00",
+            "source": {
+              "id": "yes24-kr-print",
+              "name": "YES24 Korea print (manual page capture)",
+              "region": "KR",
+              "kind": "bookstore",
+              "photobookFormat": "physical"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-jisoo-me-photobook-2023",
+        "personId": 16986,
+        "role": "featured",
+        "creditedName": "지수",
+        "creditSource": "verified_model_capture",
+        "person": {
+          "id": 16986,
+          "slug": "model-0d32317250d77806a4f2e483ad86ad466a02724faa212319f515608ea7a9fcf6",
+          "canonicalPublicName": "지수",
+          "originalName": "지수",
+          "englishName": "JISOO",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "model",
+          "verificationSourceUrl": "https://www.yes24.com/product/goods/121961075",
+          "profileSourceConfidence": "publisher_supplied_photo_subject",
+          "createdAt": "2026-10-20T13:20:32.486055+08:00",
+          "updatedAt": "2026-10-20T13:20:32.486055+08:00"
+        },
+        "createdAt": "2026-10-20T13:20:32.5378+08:00",
+        "updatedAt": "2026-10-25T14:09:56.41413+08:00"
+      }
+    ],
+    "id": "korea-jisoo-me-photobook-2023",
+    "slug": "korea-jisoo-me-photobook-2023",
+    "publicationType": "photobook",
+    "originalTitle": "지수 (JISOO) - JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+    "englishTitle": "JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+    "summary": "Standalone 176-page photo book featuring Korean singer and fashion muse 지수 (JISOO), based on her first solo album [ME].",
+    "originCode": "KR",
+    "featuredNames": "지수",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "publisherCompanyId": "publisher-f1534ffde28e3fc2dbe38c91e16fc09e32d62f6e136470a47e7e81c22f3900d2",
+        "publisherCompany": {
+          "id": "publisher-f1534ffde28e3fc2dbe38c91e16fc09e32d62f6e136470a47e7e81c22f3900d2",
+          "slug": "publisher-f1534ffde28e3fc2dbe38c91e16fc09e32d62f6e136470a47e7e81c22f3900d2",
+          "canonicalName": "YGPLUS / YG Entertainment",
+          "countryCode": "",
+          "officialUrl": "",
+          "verificationStatus": "catalog_credit",
+          "name": "YGPLUS / YG Entertainment",
+          "host": "",
+          "status": true,
+          "appId": "",
+          "appKey": "",
+          "createdAt": "2026-10-20T12:39:14.764994+08:00",
+          "updatedAt": "2026-10-20T12:39:14.764994+08:00"
+        },
+        "id": "korea-jisoo-me-special-2023-print-yes24",
+        "workId": "korea-jisoo-me-photobook-2023",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "YGPLUS / YG Entertainment",
+        "releaseDate": "2023-09-18T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 176,
+        "dimensions": "252×162×28mm",
+        "editionVariant": "Special Edition",
+        "contentSummary": "YES24 lists a 176-page photobook, 20-piece postcard book, random selfie photocard and polaroid, sticker, clear photocard, luggage tag, and a limited random Instax photo film.",
+        "metadataSourceUrl": "https://www.yes24.com/product/goods/121961075",
+        "editionLabel": "2023 [ME] Special Edition physical photobook package",
+        "status": "published",
+        "listings": [
+          {
+            "id": "listing-760952d8eeecdfce5e4d917c8e647f96",
+            "editionId": "korea-jisoo-me-special-2023-print-yes24",
+            "sourceId": "yes24-kr-print",
+            "externalId": "121961075",
+            "url": "https://www.yes24.com/product/goods/121961075",
+            "title": "지수 (JISOO) - JISOO [ME] PHOTOBOOK [SPECIAL EDITION]",
+            "formatCandidate": "physical",
+            "publisher": "YGPLUS / YG Entertainment",
+            "editionVariant": "Special Edition",
+            "status": "unknown",
+            "priceMinor": 39000,
+            "currency": "KRW",
+            "priceType": "fixed",
+            "observedAt": "2026-10-25T14:08:57.516663+08:00",
+            "lastSeenAt": "2026-10-25T14:08:57.516663+08:00",
+            "source": {
+              "marketplaceId": 32,
+              "id": "yes24-kr-print",
+              "name": "YES24 Korea print (manual page capture)",
+              "region": "KR",
+              "locale": "ko-KR",
+              "timezone": "Asia/Seoul",
+              "kind": "bookstore",
+              "adapter": "manual_page_capture",
+              "accessMethod": "manual_browser",
+              "defaultFormat": "physical",
+              "allowedFormats": "physical",
+              "baseUrl": "https://www.yes24.com",
+              "allowedHosts": "www.yes24.com",
+              "capabilities": "catalog_discovery,active_discovery,listing_detail",
+              "accessStatus": "review",
+              "termsUrl": "https://www.yes24.com/notice/service.aspx",
+              "ratePerMinute": 1,
+              "enabled": false,
+              "createdAt": "2026-10-20T12:31:51.337423+08:00",
+              "updatedAt": "2026-10-25T14:09:56.523421+08:00"
+            },
+            "createdAt": "2026-10-20T13:18:00+08:00",
+            "updatedAt": "2026-10-25T14:09:56.743875+08:00"
+          }
+        ],
+        "createdAt": "2026-10-20T13:20:32.469958+08:00",
+        "updatedAt": "2026-10-25T14:09:56.240219+08:00"
+      }
+    ],
+    "createdAt": "2026-10-20T13:20:32.450881+08:00",
+    "updatedAt": "2026-10-25T14:09:56.207647+08:00"
+  }
+}

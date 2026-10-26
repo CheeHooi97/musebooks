@@ -1,0 +1,41 @@
+{
+  "observedAt": "2026-10-23T23:54:00+08:00",
+  "method": "Live public Apple Books Japan storefront DOM review following KADOKAWA purchase links; no API/key",
+  "scope": "Two displayed ebook prices and Apple-specific digital page/file metadata",
+  "publisherBatchStatus": "Both publisher metadata/covers committed and verified before this store list was collected",
+  "offers": [
+    {
+      "id": "6453688939",
+      "editionId": "korea-pyo-eunji-rondo-2023-jp-digital",
+      "price": 3400,
+      "pages": 136,
+      "file": "74.7 MB",
+      "observedAt": "2026-10-23T23:53:00+08:00",
+      "date": "2023-08-10",
+      "description": "Official KADOKAWA electronic Rondo edition, publisher release 2023-08-10. Apple Books Japan publicly reports 136 digital pages, file size 74.7 MB, publisher KADOKAWA, seller DWANGO Co., Ltd., and displayed JPY 3,400 on 2026-10-23. Page/file figures are Apple-specific; ebook file format is unverified. Print A4/128-page specifications, ISBN 9784048976268 and JPY 3,300 paper price are not copied into the ebook. Public preview pricing does not establish account/storefront purchase eligibility. Publisher cover remains the source-attributed remote cover; no pixels mirrored or reuse license asserted."
+    },
+    {
+      "id": "6472695690",
+      "editionId": "korea-pyo-eunji-enbukyoku-2023-jp-digital",
+      "price": 2200,
+      "pages": 104,
+      "file": "116 MB",
+      "observedAt": "2026-10-23T23:54:00+08:00",
+      "date": "2023-11-30",
+      "description": "Separate KADOKAWA All-Other Edition digital companion titled 円舞曲, publisher release 2023-11-30. Apple Books Japan publicly reports 104 digital pages, file size 116 MB, publisher KADOKAWA, seller DWANGO Co., Ltd., and displayed JPY 2,200 on 2026-10-23. Page/file figures are Apple-specific; ebook file format and ISBN are unverified. This companion is not merged with standard Rondo or its print edition. Public preview pricing does not establish account/storefront purchase eligibility. Publisher cover remains source-attributed and remote; no pixels mirrored or reuse license asserted."
+    }
+  ],
+  "publisher": "KADOKAWA",
+  "seller": "DWANGO Co., Ltd.",
+  "currencyNote": "JPY zero-decimal amounts: priceMinor 3400 and 2200, without multiplying by 100 or converting physical-store prices",
+  "availability": "Unknown purchase eligibility: public preview price observed, no app/account/storefront purchase workflow verified",
+  "fileFormat": "Unknown; do not infer PDF or EPUB solely from storefront",
+  "bookwalkerCheck": {
+    "url": "https://bookwalker.jp/de716ac532-62e3-4d67-883f-2095a72f4fcb/",
+    "state": "Japan-only purchase restriction displayed, no product price visible",
+    "action": "No region change, bypass, login or purchase. No priced BookWalker offer imported."
+  },
+  "images": "Existing KADOKAWA remote edition covers retained; no Apple artwork URL or additional gallery image asserted",
+  "sourceStatus": "New manual Apple Books source disabled/review",
+  "termsUrl": "https://www.apple.com/jp/legal/terms/site.html"
+}

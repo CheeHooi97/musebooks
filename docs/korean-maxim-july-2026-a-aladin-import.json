@@ -1,0 +1,106 @@
+[
+  {
+    "work": {
+      "id": "korea-maxim-2026-07-babian-digital",
+      "slug": "korea-maxim-2026-07-babian-digital",
+      "publicationType": "magazine_issue",
+      "issueMonth": "2026-07",
+      "issueNumber": "278",
+      "originalTitle": "맥심 MAXIM 2026. 7월호",
+      "englishTitle": "MAXIM July 2026",
+      "summary": "MAXIM July 2026, issue No.278, with separate A/B print and digital editions. Publisher archive theme 브라운더스트2 콜라보. The existing digital-content credit for 바비앙 is issue-level, without additional cover identities inferred from supplement names. Aladin A/B pages supply covers and unavailable retailer prices. A publication date conflict (YES24 June29 versus Aladin June24) remains unresolved; original canonical A metadata is retained.",
+      "originCode": "KR",
+      "coverUrl": ""
+    },
+    "coverPerson": {
+      "slug": "model-4bc0b90fe15abb2bf0784f81ffe687716d870ba6fbf3675994393ff3fb0b55ec",
+      "canonicalPublicName": "바비앙",
+      "originalName": "바비앙",
+      "englishName": "Babian",
+      "personType": "model",
+      "verificationSourceUrl": "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000013195770",
+      "profileSourceConfidence": "explicit_ebook_contents_cover_credit"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxim-2026-07-babian-print-a-yes24",
+      "workId": "korea-maxim-2026-07-babian-digital",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "와이미디어",
+      "releaseDate": "2026-06-29T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 176,
+      "dimensions": "210×297×15mm",
+      "editionVariant": "A형",
+      "contentSummary": "MAXIM July2026 A print variant. Aladin exact item396575889 lists2026-06-24,176pages,A4 210×297mm,475g,ISSN2233-4270. Existing canonical YES24 release2026-06-29 and dimensions210×297×15mm are retained; the retailer date conflict is unresolved. Shop keyK142130193 is labelled ISBN but is not a valid book ISBN; canonical ISBN remains blank. ListKRW9600,displayedKRW9120 with explicit sold-out/distribution-stopped status and historical confirmation2026-07-27. Inside-book 미스맥심 바비앙/채솔 special bromide is not an independently verified additional cover-model credit. Public retailer cover attributed remotely; no pixels mirrored or reuse license asserted. Existing publisher damaged-copy KRW8600 and prior price history remain separate.",
+      "metadataSourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396575889",
+      "seriesName": "MAXIM",
+      "editionLabel": "July 2026 A-type print issue",
+      "coverUrl": "https://image.aladin.co.kr/product/39657/58/cover500/k142130193_1.jpg",
+      "originalCoverUrl": "https://image.aladin.co.kr/product/39657/58/cover500/k142130193_1.jpg"
+    },
+    "source": {
+      "id": "aladin-kr-manual",
+      "name": "Aladin Korea (manual page capture; access under review)",
+      "region": "KR",
+      "locale": "ko-KR",
+      "timezone": "Asia/Seoul",
+      "kind": "bookstore",
+      "adapter": "manual_page_capture",
+      "accessMethod": "manual_browser",
+      "defaultFormat": "physical",
+      "allowedFormats": "physical",
+      "baseUrl": "https://www.aladin.co.kr",
+      "allowedHosts": "www.aladin.co.kr,aladin.co.kr",
+      "capabilities": "catalog_discovery,active_discovery,listing_detail",
+      "accessStatus": "review",
+      "termsUrl": "https://www.aladin.co.kr/account/waccount_provision.aspx?pType=1",
+      "ratePerMinute": 1,
+      "enabled": false
+    },
+    "batch": {
+      "jobId": "manual-aladin-july-2026-a-20261025",
+      "sourceId": "aladin-kr-manual",
+      "parserVersion": "manual-page-capture-v1",
+      "retrievedAt": "2026-10-25T14:21:53.6124292+08:00",
+      "items": [
+        {
+          "externalId": "396575889",
+          "observationId": "aladin-20261025-july-a-396575889",
+          "editionId": "korea-maxim-2026-07-babian-print-a-yes24",
+          "url": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396575889",
+          "title": "맥심 Maxim A형 2026.7",
+          "status": "unknown",
+          "priceMinor": 9120,
+          "currency": "KRW",
+          "priceType": "fixed",
+          "format": "physical",
+          "publisher": "와이미디어(잡지)",
+          "editionVariant": "A형",
+          "imageUrl": "https://image.aladin.co.kr/product/39657/58/cover500/k142130193_1.jpg",
+          "shippingText": "Paid shipping belowKRW15000; exact fee unknown; separate supplements excluded from overseas delivery",
+          "observedAt": "2026-10-25T14:21:53.6124292+08:00",
+          "timestampPrecision": "minute",
+          "statusEvidence": "Live rendered Aladin A July2026 exact item checked2026-10-25. Publication2026-06-24,176pages,A4 210×297mm,475g,ISSN2233-4270,shop keyK142130193 (not a valid book ISBN). Existing canonical YES24 A June29 release and15mm thickness retained; date conflict unresolved. ListKRW9600/displayKRW9120; explicit품절 and distributor supply stopped. Store unknown unavailable retail display, not active offer or completed sale. Sold-out confirmation2026-07-27 is not publication date. Supplement바비앙/채솔 does not independently add cover identities. Public retailer cover inspected without login or age gate; no MAXIM gated detail accessed. Used inventory not collected."
+        }
+      ]
+    },
+    "media": [
+      {
+        "externalId": "396575889",
+        "mediaType": "listing_image",
+        "originalUrl": "https://image.aladin.co.kr/product/39657/58/cover500/k142130193_1.jpg",
+        "storageUrl": "https://image.aladin.co.kr/product/39657/58/cover500/k142130193_1.jpg",
+        "sourceUrl": "https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=396575889",
+        "isPrimary": true
+      }
+    ]
+  }
+]
