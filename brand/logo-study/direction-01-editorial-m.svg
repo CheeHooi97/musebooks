@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 170" role="img" aria-label="MuseBooks editorial M logo">
+  <g transform="translate(34 34)">
+    <path d="M12 90V29c0-9 11-13 17-6l21 25 21-25c6-7 17-3 17 6v61" fill="none" stroke="#33265f" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="m50 42 8 9-8 9-8-9z" fill="#ef765f"/>
+  </g>
+  <text x="164" y="105" fill="#33265f" font-family="Georgia, 'Times New Roman', serif" font-size="55" letter-spacing="-1.4">MuseBooks</text>
+</svg>

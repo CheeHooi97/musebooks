@@ -8,6 +8,7 @@ import "@fontsource/gloock/400.css";
 import "@fontsource/hanken-grotesk/400.css";
 import "@fontsource/hanken-grotesk/500.css";
 import "@fontsource/hanken-grotesk/600.css";
+import "@fontsource/hanken-grotesk/800.css";
 import "@fontsource/azeret-mono/400.css";
 import "@fontsource/azeret-mono/500.css";
 import "./styles.css";

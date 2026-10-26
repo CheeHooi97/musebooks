@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MuseBooks — Logo Study</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #25243a; background: #f3f0e9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 52px; }
+    main { max-width: 1480px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 13px; color: #656377; font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    h1 { margin: 0; font: 400 clamp(36px, 5vw, 64px)/1.05 Georgia, 'Times New Roman', serif; letter-spacing: -.035em; }
+    .intro { max-width: 590px; margin: 18px 0 36px; color: #656377; font-size: 16px; line-height: 1.6; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+    article { min-width: 0; min-height: 390px; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; background: #fffefa; border: 1px solid #e4e0d6; border-radius: 18px; }
+    .number { color: #868396; font-size: 12px; font-weight: 700; letter-spacing: .15em; }
+    .logo { width: 100%; height: auto; overflow: visible; }
+    h2 { margin: 0 0 9px; font: 400 25px/1.2 Georgia, 'Times New Roman', serif; }
+    .detail { margin: 0; color: #656377; font-size: 14px; line-height: 1.55; }
+    .tag { align-self: flex-start; margin-top: 20px; padding: 8px 10px; color: #5d5a6e; background: #f2f0f7; border-radius: 999px; font-size: 10px; font-weight: 700; letter-spacing: .12em; }
+    footer { margin-top: 22px; color: #777487; font-size: 12px; }
+    @media (max-width: 900px) { body { padding: 28px; } .grid { grid-template-columns: 1fr; } article { min-height: 320px; } .logo { max-width: 520px; align-self: center; margin: 20px 0; } }
+    @media (max-width: 480px) { body { padding: 20px; } article { padding: 22px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">MuseBooks · Identity exploration</p>
+    <h1>Three new directions</h1>
+    <p class="intro">A visual identity for discovering and collecting people-centered photobooks. Each concept is drawn as a compact, scalable mark paired with a wordmark.</p>
+    <section class="grid" aria-label="Logo concepts">
+      <article>
+        <span class="number">01</span>
+        <img class="logo" src="direction-01-editorial-m.svg" alt="MuseBooks logo with a violet sculpted M and coral glint">
+        <div><h2>Editorial M</h2><p class="detail">A sculpted letterform gives the brand an expressive, publishing-led voice. The coral glint adds a small point of discovery.</p><span class="tag">EDITORIAL · EXPRESSIVE</span></div>
+      </article>
+      <article>
+        <span class="number">02</span>
+        <img class="logo" src="direction-02-collectors-index.svg" alt="MuseBooks logo with cobalt index bars and a citron dot">
+        <div><h2>Collector’s Index</h2><p class="detail">Four catalog bars form a bold, compact glyph. Cobalt and citron make this the most contemporary, app-ready direction.</p><span class="tag">DIGITAL · COLLECTOR</span></div>
+      </article>
+      <article>
+        <span class="number">03</span>
+        <img class="logo" src="direction-03-orbit-and-glint.svg" alt="MuseBooks logo with a teal orbit and apricot glint">
+        <div><h2>Orbit &amp; Glint</h2><p class="detail">An open orbit and warm spark suggest visual discovery and inspiration, with a calmer, gallery-like tone.</p><span class="tag">CURATED · VISUAL</span></div>
+      </article>
+    </section>
+    <footer>Each direction is an original, editable SVG lockup in its own palette.</footer>
+  </main>
+</body>
+</html>

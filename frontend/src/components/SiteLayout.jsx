@@ -8,6 +8,7 @@ import { useCollection } from "../lib/collection";
 import { isMobileApp } from "../lib/platform";
 import { interceptLinks, navigate, runBackHandler } from "../lib/router";
 import { languageAlternates } from "../lib/catalog-languages";
+import Logo from "./Logo";
 
 // Top-level sections. `match` decides which nav item is current for a path.
 export const SECTIONS = [
@@ -53,7 +54,7 @@ export default function SiteLayout({ pathname, children, showAds = true }) {
     <a className="skip-link" href="#main-content">{t("Skip to content")}</a>
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="wordmark" href="/" aria-label={t("MuseBooks home")}>MuseBooks</a>
+        <a className="wordmark" href="/" aria-label={t("MuseBooks home")}><Logo /></a>
         <nav className="main-nav" aria-label={t("Main navigation")}>
           {SECTIONS.map(section => <a key={section.key} href={section.href} className={section.match(pathname) ? "is-active" : ""} aria-current={section.match(pathname) ? "page" : undefined}>{t(section.label)}</a>)}
         </nav>
@@ -68,7 +69,7 @@ export default function SiteLayout({ pathname, children, showAds = true }) {
       <div className="site-footer__inner">
         {!isMobileApp && <nav aria-label="Languages">{languageAlternates(pathname, "").filter(item => item.code !== "x-default").map(item => <a key={item.code} href={item.url} lang={item.code} hrefLang={item.code} data-reload>{item.label}</a>)}</nav>}
         <div className="site-footer__brand">
-          <a className="wordmark" href="/">MuseBooks</a>
+          <a className="wordmark" href="/"><Logo /></a>
           <p>{t("A source-backed catalog of model, idol and entertainer photobooks. Every edition keeps its own record; every price keeps its source.")}</p>
         </div>
         <nav aria-label={t("Catalog")}>
