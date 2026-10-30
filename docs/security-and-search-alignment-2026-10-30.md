@@ -44,3 +44,11 @@ Not copied: MuseCards' blanket 300 requests/minute `/v1` read limit. The MuseBoo
 - `backend/storage/serviceAccountKey.json` (untracked, never committed, unused) is the same `support-system-dev` Firebase key MuseCards removed; delete the local copy.
 - Search Console property access for musebooks.my is still unverified in this account; Bing Webmaster Tools is the natural next property given FAQPage and IndexNow.
 - Error responses still use HTTP 200 with `"error": true` (MuseCards I2); changing it needs coordinated frontend handling.
+
+## Deployment, 30 October 2026
+
+- First release (`09168677`) failed to start and rolled back automatically: GORM postgres 1.6 sends the DSN's `timezone=` text verbatim, so PostgreSQL rejected `'UTC'` (SQLSTATE 22023). Fixed in the next commit with a regression test, then deployed successfully.
+- Live through Cloudflare: all six security headers, document caching, FAQPage on book pages, IndexNow key. Scraper endpoints answer 401 without a token; the production token is set.
+- IndexNow: all 31,195 sitemap URLs accepted (HTTP 200).
+- Media Worker: not redeployed (the local Cloudflare login lacks access to that account), but `media.musebooks.my/robots.txt` already returns 200 from Cloudflare's managed robots.txt, so the MuseCards issue does not occur.
+- Local `backend/storage/serviceAccountKey.json` deleted.
