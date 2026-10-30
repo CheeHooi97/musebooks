@@ -37,6 +37,21 @@ jobs:
       - name: Check out main
         uses: actions/checkout@v7
 
+      - name: Set up Go
+        uses: actions/setup-go@v7
+        with:
+          go-version-file: backend/go.mod
+          cache-dependency-path: backend/go.sum
+
+      # Security gates, as in MuseCards: committed secrets (scanned before any
+      # install or build output exists), backend tests, reachable Go advisories.
+      - name: Test and scan backend
+        working-directory: backend
+        run: |
+          go run github.com/zricethezav/gitleaks/v8@v8.30.1 dir --no-banner --redact --config ../.gitleaks.toml ..
+          go test ./...
+          go run golang.org/x/vuln/cmd/govulncheck@v1.9.0 ./...
+
       - name: Set up Node.js
         uses: actions/setup-node@v7
         with:
@@ -48,14 +63,9 @@ jobs:
         working-directory: frontend
         run: |
           npm ci
+          npm audit --omit=dev --audit-level=high
           npm run test:seo
           npm run build
-
-      - name: Set up Go
-        uses: actions/setup-go@v7
-        with:
-          go-version-file: backend/go.mod
-          cache-dependency-path: backend/go.sum
 
       - name: Package release
         id: package
@@ -69,6 +79,7 @@ jobs:
           GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -C backend -trimpath -ldflags="-s -w" -o "$bundle/musebooks-api" .
           cp deploy/musebooks-api.service "$bundle/musebooks-api.service"
           cp deploy/musebooks-site.conf "$bundle/musebooks-site.conf"
+          cp deploy/musebooks-security-headers.conf deploy/musebooks-cloudflare-real-ip.conf "$bundle/"
           tar -czf "$RUNNER_TEMP/musebooks-${release_id}.tar.gz" -C "$bundle" .
           echo "release_id=$release_id" >> "$GITHUB_OUTPUT"
           echo "archive=$RUNNER_TEMP/musebooks-${release_id}.tar.gz" >> "$GITHUB_OUTPUT"

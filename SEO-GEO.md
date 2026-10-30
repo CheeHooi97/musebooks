@@ -1,5 +1,7 @@
 # MuseBooks SEO and GEO inspection
 
+Security and search alignment with MuseCards, 30 October 2026: [security headers, real client IPs, CI gates, FAQPage, edge caching, IndexNow](docs/security-and-search-alignment-2026-10-30.md).
+
 Latest comparison and multilingual implementation: [23 October 2026 review](docs/search-multilingual-audit-2026-10-23.md). Includes MuseCards Search Console observations and the MuseBooks property-access limitation. The earlier inspection below is retained as historical context.
 
 Inspection date: 8 October 2026 (Asia/Singapore).

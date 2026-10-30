@@ -115,6 +115,8 @@ After the one-time server setup and secrets are in place, every push to `main` r
 - `https://musebooks.my/` contains MuseBooks and does not contain MuseCards.
 - `https://musebooks.my/v1/origins` responds successfully.
 
+Before packaging, the workflow fails on a committed secret (gitleaks with `.gitleaks.toml`), a failing backend test, a reachable Go advisory (govulncheck), or a high-severity production npm advisory. The deploy also installs `deploy/musebooks-security-headers.conf` and `deploy/musebooks-cloudflare-real-ip.conf` into `/etc/nginx/snippets/`; the site config includes both. Re-check the Cloudflare ranges occasionally with `node deploy/check-cloudflare-ranges.mjs`. The API trusts `X-Real-IP` only from the local nginx, and internal scraper/account-management endpoints refuse every request unless `SCRAPER_INGEST_TOKEN` is set in the backend `.env`.
+
 The deploy script rolls the active release links and configs back if the local API check or Nginx reload fails. A separate catalog import is still needed if the production MuseBooks database should contain records; the website does not substitute demo data.
 
 
@@ -132,5 +134,7 @@ After a catalog import, identity change, or record removal, trigger **Deploy Mus
 Until rebuilt, generated HTML and sitemap entries retain the previous catalog snapshot. A newly imported page has no generated entry and returns 404; a removed record can keep its old HTML response until rebuild. The browser confirms API 404s with noindex, but this does not replace rebuilding the static snapshot.
 
 Before activating the new Nginx configuration, run `nginx -t`. After deployment, verify clean and trailing-slash book/profile URLs, a real unknown URL, robots.txt, sitemap.xml, and one original-script slug. Use Search Console URL Inspection to confirm page text, canonical URLs, and indexing directives. The repository tests cover fixture content and client behavior; they do not prove live DNS, CDN rules, or search indexing.
+
+After a deploy that adds or changes many pages, notify Bing, Yandex, Naver and Seznam through IndexNow from frontend: `npm run indexnow -- --since YYYY-MM-DD` (dry run), then add `--submit`. The key is published from `frontend/public/<key>.txt`.
 
 Run local SEO regression tests from frontend with `npm run test:seo`. See [SEO-GEO.md](SEO-GEO.md) for implementation status and the remaining measurement work.

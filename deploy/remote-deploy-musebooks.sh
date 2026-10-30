@@ -34,7 +34,9 @@ for path in \
   "$work_dir/website/index.html" \
   "$work_dir/musebooks-api" \
   "$work_dir/musebooks-api.service" \
-  "$work_dir/musebooks-site.conf"; do
+  "$work_dir/musebooks-site.conf" \
+  "$work_dir/musebooks-security-headers.conf" \
+  "$work_dir/musebooks-cloudflare-real-ip.conf"; do
   if [[ ! -f "$path" ]]; then
     echo "Release is missing $path" >&2
     exit 2
@@ -85,7 +87,7 @@ for config in /etc/nginx/sites-enabled/* /etc/nginx/conf.d/*.conf; do
   fi
 done
 
-mkdir -p "$api_releases" "$web_releases" /etc/nginx/sites-available /etc/nginx/sites-enabled
+mkdir -p "$api_releases" "$web_releases" /etc/nginx/sites-available /etc/nginx/sites-enabled /etc/nginx/snippets
 api_release="$api_releases/$release_id"
 web_release="$web_releases/$release_id"
 rm -rf -- "$api_release" "$web_release"
@@ -177,6 +179,11 @@ if (( ! api_ready )); then
 fi
 
 site_changed=1
+# The site config includes these snippets; they only add headers and the
+# Cloudflare real-IP source, so the previous config also works with them.
+for snippet in musebooks-security-headers.conf musebooks-cloudflare-real-ip.conf; do
+  install -o root -g root -m 0644 "$work_dir/$snippet" "/etc/nginx/snippets/$snippet"
+done
 install -o root -g root -m 0644 "$work_dir/musebooks-site.conf" "$site_file"
 enabled_changed=1
 replace_link "$site_file" "$site_enabled"

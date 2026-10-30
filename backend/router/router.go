@@ -15,10 +15,17 @@ import (
 func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	e := echo.New()
 	e.Validator = utils.NewValidator()
+	e.IPExtractor = clientIP
 
 	v := e.Group("/v1", middleware.Authenticate(db))
+	// One budget for browser and native paths, so switching endpoints does not
+	// reset it.
+	authLimit := echoMiddleware.RateLimiterWithConfig(echoMiddleware.RateLimiterConfig{
+		Store:               echoMiddleware.NewRateLimiterMemoryStoreWithConfig(echoMiddleware.RateLimiterMemoryStoreConfig{Rate: 0.5, Burst: 12, ExpiresIn: 3 * time.Minute}),
+		IdentifierExtractor: rateLimitClient,
+	})
 	for _, prefix := range []string{"/auth", "/mobile/auth"} {
-		auth := v.Group(prefix, handler.AuthRequest, echoMiddleware.BodyLimit("8K"), echoMiddleware.RateLimiter(echoMiddleware.NewRateLimiterMemoryStoreWithConfig(echoMiddleware.RateLimiterMemoryStoreConfig{Rate: 0.5, Burst: 12, ExpiresIn: 3 * time.Minute})))
+		auth := v.Group(prefix, handler.AuthRequest, echoMiddleware.BodyLimit("8K"), authLimit)
 		auth.GET("/providers", h.AuthProviders)
 		auth.GET("/me", h.CurrentAuthUser)
 		auth.POST("/register", h.Register)
@@ -31,7 +38,7 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	}
 	v.GET("/auth/oauth/google", h.GoogleStart, handler.AuthRequest)
 	v.GET("/auth/oauth/google/callback", h.GoogleCallback, handler.AuthRequest)
-	v.POST("/mobile/auth/oauth/exchange", h.MobileOAuthExchange, handler.AuthRequest, echoMiddleware.BodyLimit("8K"), echoMiddleware.RateLimiter(echoMiddleware.NewRateLimiterMemoryStore(1)))
+	v.POST("/mobile/auth/oauth/exchange", h.MobileOAuthExchange, handler.AuthRequest, echoMiddleware.BodyLimit("8K"), echoMiddleware.RateLimiterWithConfig(echoMiddleware.RateLimiterConfig{Store: echoMiddleware.NewRateLimiterMemoryStore(1), IdentifierExtractor: rateLimitClient}))
 	catalogHandler := h.Catalog
 	browse := h.Browse
 	v.GET("/models", browse.Models)
@@ -73,13 +80,3 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	return e
 }
 
-func requireScraperToken(token string) echo.MiddlewareFunc {
-	return func(next echo.HandlerFunc) echo.HandlerFunc {
-		return func(c echo.Context) error {
-			if token != "" && c.Request().Header.Get("X-Scraper-Token") != token {
-				return echo.NewHTTPError(401, "invalid scraper token")
-			}
-			return next(c)
-		}
-	}
-}

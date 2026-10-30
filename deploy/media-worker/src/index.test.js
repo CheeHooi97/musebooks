@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import worker, { objectKeyFromPath, verifySignature } from './index.js'
+import worker, { ROBOTS_TXT, objectKeyFromPath, verifySignature } from './index.js'
 
 // Shared with backend/storage/media_test.go so both sides agree on the
 // signed message and encoding.
@@ -38,4 +38,10 @@ test('serves nothing outside KEY_PREFIX', async () => {
   const env = { KEY_PREFIX: 'musebooks/', MEDIA_SIGNING_SECRET: SECRET, MEDIA_BUCKET: { get: () => assert.fail('bucket read') } }
   const response = await worker.fetch(new Request('https://media.example.test/images/card.jpg?exp=1&sig=x'), env, {})
   assert.equal(response.status, 404)
+})
+
+test('answers robots.txt without a signature', async () => {
+  const response = await worker.fetch(new Request('https://media.musebooks.my/robots.txt'), {}, {})
+  assert.equal(response.status, 200)
+  assert.equal(await response.text(), ROBOTS_TXT)
 })

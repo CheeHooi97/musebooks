@@ -75,17 +75,18 @@ func main() {
 
 	e := echo.New()
 	e.Use(echoMiddleware.CORSWithConfig(echoMiddleware.CORSConfig{
-		AllowOrigins:     strings.Split(config.CORSOrigins, ","),
+		AllowOrigins:     corsOrigins(config.CORSOrigins),
 		AllowHeaders:     []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept, echo.HeaderAuthorization, "X-Scraper-Token"},
 		AllowCredentials: true,
 	}))
 	e.HTTPErrorHandler = func(err error, c echo.Context) {
 		if !c.Response().Committed {
+			// Details stay in the server log, never in the response.
+			c.Logger().Error(err)
 			c.JSON(http.StatusInternalServerError, map[string]any{
 				"error": map[string]any{
 					"code":    "INTERNAL_ERROR",
 					"message": "Internal error",
-					"debug":   err.Error(),
 				},
 			})
 		}
@@ -114,4 +115,22 @@ func main() {
 	if err := e.Shutdown(ctx); err != nil {
 		log.Fatalf("Server forced to shutdown: %v", err)
 	}
+}
+
+// corsOrigins lists the explicitly trusted origins. Credentials are allowed,
+// so a wildcard is dropped rather than letting any website send the session
+// cookie.
+func corsOrigins(configured string) []string {
+	var origins []string
+	for _, origin := range strings.Split(configured, ",") {
+		origin = strings.TrimSpace(origin)
+		if strings.Contains(origin, "*") {
+			log.Printf("CORS_ALLOWED_ORIGINS: ignoring wildcard origin %q; list origins explicitly", origin)
+			continue
+		}
+		if origin != "" {
+			origins = append(origins, origin)
+		}
+	}
+	return origins
 }

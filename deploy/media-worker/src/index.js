@@ -11,6 +11,10 @@ const MAX_URL_LIFETIME_SECONDS = 15 * 24 * 60 * 60
 // content-addressed or versioned keys, so a long edge lifetime is safe.
 const EDGE_CACHE_SECONDS = 30 * 24 * 60 * 60
 
+// Image URLs are signed and expire, so crawlers may fetch them; the catalog
+// pages that embed them are governed by the main site's robots.txt.
+export const ROBOTS_TXT = 'User-agent: *\nAllow: /\n'
+
 const encoder = new TextEncoder()
 
 export default {
@@ -19,6 +23,14 @@ export default {
       return plain(405, 'Method Not Allowed', { Allow: 'GET, HEAD' })
     }
     const url = new URL(request.url)
+    // As in MuseCards: crawlers fetch robots.txt before any image. Answering it
+    // here keeps that request from failing the signature check, which Search
+    // Console reports as a critical robots.txt error for the media host.
+    if (url.pathname === '/robots.txt') {
+      return new Response(request.method === 'HEAD' ? null : ROBOTS_TXT, {
+        headers: { 'Content-Type': 'text/plain; charset=utf-8', 'Cache-Control': 'public, max-age=86400' },
+      })
+    }
     const key = objectKeyFromPath(url.pathname)
     if (!key || !key.startsWith(env.KEY_PREFIX || '')) return plain(404, 'Not Found')
 

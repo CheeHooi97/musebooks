@@ -1,3 +1,4 @@
+import { bookAnswers } from "./book-answers.js";
 export function normalizeSiteURL(value) {
   const url = new URL(value);
   if (!["http:", "https:"].includes(url.protocol)) throw new Error("Invalid canonical site origin");
@@ -37,15 +38,19 @@ export function pageSeo(path = "/", book, profile, siteURL = SITE_URL) {
   const isMagazineIssue = book?.publicationType === "magazine_issue";
   const publicationLabel = isMagazineIssue ? "magazine issue" : "photobook";
   const [title, description] = book ? [`${book.englishTitle || book.originalTitle} — MuseBooks`, book.summary || `Explore ${book.originalTitle}, its ${publicationLabel} details, editions, and source-backed prices.`] : pages[path] || ["Publication not found — MuseBooks", DEFAULT_DESCRIPTION];
+  const answers = book ? bookAnswers(book) : [];
   const structuredData = book ? {
     "@context": "https://schema.org", "@graph": [
       { "@type": isMagazineIssue ? "PublicationIssue" : "Book", "@id": `${url}#publication`, name: book.originalTitle, ...(book.englishTitle ? { alternateName: book.englishTitle } : {}), url, ...(book.summary ? { description: book.summary } : {}), ...(book.coverUrl ? { image: book.coverUrl } : {}), ...(book.issueNumber ? { issueNumber: book.issueNumber } : {}), ...(book.issueMonth ? { datePublished: book.issueMonth } : {}), ...(book.editions?.[0]?.seriesName ? { isPartOf: { "@type": isMagazineIssue ? "Periodical" : "BookSeries", name: book.editions[0].seriesName } } : {}), workExample: (book.editions || []).map(edition => ({ "@id": `${url}#edition-${encodeURIComponent(edition.id)}` })) },
       ...(book.editions || []).map(edition => ({ "@type": isMagazineIssue ? "PublicationIssue" : "Book", "@id": `${url}#edition-${encodeURIComponent(edition.id)}`, name: `${book.originalTitle} — ${edition.editionLabel}`, exampleOfWork: { "@id": `${url}#publication` }, ...(edition.isbn ? { isbn: edition.isbn } : {}), ...(edition.publisher ? { publisher: { "@type": "Organization", name: edition.publisher } } : {}), ...(publicationDate(edition) ? { datePublished: publicationDate(edition) } : {}), ...(edition.language ? { inLanguage: edition.language } : {}), ...(edition.pageCount ? { numberOfPages: edition.pageCount } : {}), ...(edition.contentSummary ? { description: edition.contentSummary } : {}), ...(edition.format === "digital" ? { bookFormat: "https://schema.org/EBook" } : {}) })),
       { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${siteURL}/` }, { "@type": "ListItem", position: 2, name: book.originalTitle, item: url }] },
+      // As in MuseCards: Google no longer shows FAQ rich results here, but Bing
+      // and answer engines read the page's visible Q&A as FAQPage markup.
+      ...(answers.length ? [{ "@type": "FAQPage", "@id": `${url}#questions`, mainEntity: answers.map(({ question, answer }) => ({ "@type": "Question", name: question, acceptedAnswer: { "@type": "Answer", text: answer } })) }] : []),
     ],
   } : { "@context": "https://schema.org", "@graph": [
     { "@type": path === "/" ? "WebSite" : "WebPage", "@id": `${url}#page`, name: title, url, description, publisher: { "@id": `${siteURL}/#organization` } },
-    { "@type": "Organization", "@id": `${siteURL}/#organization`, name: "MuseBooks", url: `${siteURL}/`, ...(path === "/about" ? { email: "musecards67@gmail.com" } : {}) },
+    { "@type": "Organization", "@id": `${siteURL}/#organization`, name: "MuseBooks", url: `${siteURL}/`, logo: `${siteURL}/apple-touch-icon.png`, ...(path === "/about" ? { email: "musecards67@gmail.com" } : {}) },
   ] };
   if (profile) {
     const profileTitle = `${profile.name} publications — MuseBooks`;

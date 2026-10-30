@@ -1,0 +1,8 @@
+# Secret scan used by the deploy workflow (gitleaks, as in MuseCards).
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Catalog import evidence: observation keys are content hashes, not credentials"
+regexTarget = "line"
+regexes = ['''"observationKey":\s*"observation-[0-9a-f]+"''']

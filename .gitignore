@@ -30,3 +30,13 @@ scraper/japan-snapshot-*/
 scraper/*.capture.json
 scraper/*.failures.json
 scraper/japan-crawl-*[0-9].json
+
+# Secrets anywhere in the tree (as in MuseCards); examples stay tracked
+**/.env
+**/.env.*
+!**/.env.example
+**/serviceAccountKey.json
+**/*.pem
+**/*.p8
+**/*.keystore
+**/*.jks

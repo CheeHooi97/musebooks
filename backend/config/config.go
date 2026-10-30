@@ -61,7 +61,8 @@ func LoadConfig() {
 	DBSkipStartupMigrations = strings.EqualFold(GetEnvOrDefault("POSTGRES_SKIP_STARTUP_MIGRATIONS", "false"), "true")
 	DBMigrationUser = GetEnvOrDefault("POSTGRES_MIGRATION_USER", "")
 	DBMigrationPassword = GetEnvOrDefault("POSTGRES_MIGRATION_PASSWORD", "")
-	HTTPAddr = GetEnvOrDefault("HTTP_ADDR", ":2002")
+	// Loopback by default: nginx is the only public entry point.
+	HTTPAddr = GetEnvOrDefault("HTTP_ADDR", "127.0.0.1:2002")
 	CORSOrigins = GetEnvOrDefault("CORS_ALLOWED_ORIGINS", "http://localhost:4173,http://127.0.0.1:4173,capacitor://localhost,https://localhost,http://localhost")
 	SystemAesKey = GetEnv("SYSTEM_AES_KEY")
 	SiteURL = strings.TrimRight(GetEnvOrDefault("SITE_URL", "https://musebooks.my"), "/")

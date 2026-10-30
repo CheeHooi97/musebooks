@@ -13,7 +13,8 @@
     "cap:sync": "npm run build:mobile && cap sync",
     "cap:android": "cap open android",
     "cap:ios": "cap open ios",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "indexnow": "node scripts/submit-indexnow.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.1",

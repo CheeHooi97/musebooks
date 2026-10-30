@@ -1,3 +1,4 @@
+import { bookAnswers } from '../src/lib/book-answers.js'
 import test from 'node:test'
 import assert from 'node:assert/strict'
 import { aliasRedirect, buildSeo, modelSlug, renderSeo, sitemapXML, stableMediaURLs } from './seo-build.mjs'
@@ -176,4 +177,12 @@ test('merged alias profiles redirect to the canonical model without being indexe
   assert.match(html, /rel="canonical" href="https:\/\/musebooks.my\/models\/model-abc"/)
   assert.doesNotMatch(html, /<\/script>"/)
   assert.match(html, /A &amp; B&lt;\/script&gt;/)
+})
+
+test('book FAQPage markup mirrors the visible questions and answers', () => {
+  const graph = pageSeo('/books/test-book', book).structuredData['@graph']
+  const faq = graph.find(item => item['@type'] === 'FAQPage')
+  const visible = bookAnswers(book)
+  assert.ok(visible.length > 0)
+  assert.deepEqual(faq.mainEntity.map(item => [item.name, item.acceptedAnswer.text]), visible.map(item => [item.question, item.answer]))
 })
