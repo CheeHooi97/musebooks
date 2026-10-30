@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import SeoHead from "../components/SeoHead";
+import { CATALOG_DEFINITION } from "../lib/book-answers";
 import Icon from "../components/Icon";
 import BookCard, { BookGridSkeleton } from "../components/BookCard";
 import { LoadState, SectionHeading } from "../components/Page";
@@ -7,7 +8,7 @@ import { usePreferences } from "../lib/preferences";
 import { useCollection } from "../lib/collection";
 import { showCatalogImages } from "../lib/platform";
 import { navigate } from "../lib/router";
-import { loadAllBooks, loadModelTotal, loadOrigins, photobookModels, sortBooks, useLoader, useResource } from "../lib/catalog";
+import { loadBooksById, loadHomeSummary, loadModelTotal, loadOrigins, useLoader, useResource } from "../lib/catalog";
 
 function MarketList({ status, title, href }) {
   const { t, formatPrice } = usePreferences();
@@ -30,13 +31,13 @@ export default function Discover() {
   const { t } = usePreferences();
   const { saved } = useCollection();
   const [query, setQuery] = useState("");
-  const books = useLoader(loadAllBooks, []);
+  const home = useLoader(loadHomeSummary, []);
+  const library = useLoader(() => loadBooksById(saved.slice(0, 4)), [saved.slice(0, 4).join(",")]);
   const origins = useLoader(loadOrigins, []);
   const modelTotal = useLoader(loadModelTotal, []);
-  const newest = useMemo(() => books.state === "live" ? sortBooks(books.data, "newest").slice(0, 8) : [], [books.state, books.data]);
-  const savedBooks = useMemo(() => books.state === "live" ? books.data.filter(book => saved.includes(book.id)).slice(0, 4) : [], [books.state, books.data, saved]);
-  const featuredModels = useMemo(() => books.state === "live" ? photobookModels(books.data).slice(0, 8) : [], [books.state, books.data]);
-  const editionCount = books.state === "live" ? books.data.reduce((sum, book) => sum + (book.editions?.length || 0), 0) : null;
+  const newest = home.state === "live" ? home.data.newest : [];
+  const savedBooks = useMemo(() => library.state === "live" ? library.data : [], [library.state, library.data, saved]);
+  const featuredModels = home.state === "live" ? home.data.models : [];
   return <>
     <SeoHead path="/" />
     <section className="hero" aria-labelledby="page-title">
@@ -44,17 +45,17 @@ export default function Discover() {
         <div className="hero__copy">
           <p className="eyebrow">{t("Photobooks · Magazine issues · Editions · Prices")}</p>
           <h1 id="page-title">{t("Find the next publication worth keeping.")}</h1>
-          <p className="hero__intro">{t("Photobooks and magazine issues from Japan, Taiwan, China, Malaysia, and Korea — with editions and source-backed prices.")}</p>
+          <p className="hero__intro">{t("Photobooks and magazine issues from Japan, Taiwan, and South Korea, including Malaysian models, with mainland China being added — with editions and source-backed prices.")}</p>
         </div>
         <div className="hero__aside">
-          <form className="search-field search-field--hero" role="search" onSubmit={event => { event.preventDefault(); navigate(`/books${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`); }}>
+          <form className="search-field search-field--hero" role="search" action="/books" toolname="search_catalog" tooldescription="Search the MuseBooks catalog of photobooks and magazine issues by title, model, or publisher. Read-only." onSubmit={event => { event.preventDefault(); navigate(`/books${query.trim() ? `?q=${encodeURIComponent(query.trim())}` : ""}`); }}>
             <Icon name="search" size={20} />
-            <input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={t("Search by title, model, or publisher")} aria-label={t("Search the catalog")} />
+            <input type="search" name="q" toolparamdescription="Title, model, or publisher name" value={query} onChange={event => setQuery(event.target.value)} placeholder={t("Search by title, model, or publisher")} aria-label={t("Search the catalog")} />
             <button type="submit" className="button">{t("Search")}</button>
           </form>
-          {books.state === "live" && <dl className="hero__stats">
-            <div><dt>{t("Publications")}</dt><dd>{books.data.length.toLocaleString()}</dd></div>
-            <div><dt>{t("Editions")}</dt><dd>{editionCount.toLocaleString()}</dd></div>
+          {home.state === "live" && <dl className="hero__stats">
+            <div><dt>{t("Publications")}</dt><dd>{home.data.total.toLocaleString()}</dd></div>
+            <div><dt>{t("Editions")}</dt><dd>{home.data.editions.toLocaleString()}</dd></div>
             {modelTotal.state === "live" && <div><dt>{t("Models")}</dt><dd>{modelTotal.data.toLocaleString()}</dd></div>}
             {origins.state === "live" && <div><dt>{t("Origins")}</dt><dd>{origins.data.length}</dd></div>}
           </dl>}
@@ -70,7 +71,7 @@ export default function Discover() {
 
       <section className="discover__section" aria-labelledby="discover-new">
         <SectionHeading id="discover-new" title={t("New releases")} action={t("Browse all")} href="/books" />
-        {books.state === "loading" ? <BookGridSkeleton count={8} /> : books.state !== "live" ? <LoadState state={books.state} retry={books.retry} errorMessage="The catalog couldn’t be reached." /> :
+        {home.state === "loading" ? <BookGridSkeleton count={8} /> : home.state !== "live" ? <LoadState state={home.state} retry={home.retry} errorMessage="The catalog couldn’t be reached." /> :
           <div className="book-grid book-grid--row">{newest.map((book, index) => <BookCard key={book.id} book={book} loading={index < 4 ? "eager" : "lazy"} />)}</div>}
       </section>
 
@@ -105,6 +106,10 @@ export default function Discover() {
           <li><span className="eyebrow">02</span><h3>{t("Edition")}</h3><p>{t("Each physical or digital release, with its own ISBN, publisher, release date and format.")}</p></li>
           <li><span className="eyebrow">03</span><h3>{t("Listing")}</h3><p>{t("Retail and marketplace records for an edition, kept with their source, condition and observation date.")}</p></li>
         </ol>
+      </section>
+      <section className="discover__section" aria-labelledby="discover-about">
+        <SectionHeading id="discover-about" title={t("What is MuseBooks?")} action={t("About")} href="/about" />
+        <p className="prose">{t(CATALOG_DEFINITION)}</p>
       </section>
     </div>
   </>;

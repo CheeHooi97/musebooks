@@ -33,6 +33,7 @@ func (h *CatalogHandler) ListBooks(c echo.Context) error {
 		Language:        strings.TrimSpace(c.QueryParam("language")),
 		Availability:    strings.TrimSpace(c.QueryParam("availability")),
 		Year:            strings.TrimSpace(c.QueryParam("year")),
+		Sort:            strings.TrimSpace(c.QueryParam("sort")),
 		Page:            parsePositiveInt(c.QueryParam("page"), 1),
 		PageSize:        min(parsePositiveInt(c.QueryParam("pageSize"), 24), 50),
 	}

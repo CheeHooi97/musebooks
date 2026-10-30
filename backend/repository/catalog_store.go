@@ -22,14 +22,31 @@ func (r *CatalogRepository) ListBooks(ctx context.Context, params model.ListBook
 		return nil, 0, err
 	}
 	works := []model.Work{}
-	err := query.Distinct("works.*").Preload("Origin").Preload("Editions", func(db *gorm.DB) *gorm.DB {
+	// Filters join editions and listings; select through ids so each work appears once whatever the sort.
+	page := r.db.WithContext(ctx).Model(&model.Work{}).Where("works.id IN (?)", query.Session(&gorm.Session{}).Select("works.id"))
+	err := page.Preload("Origin").Preload("Editions", func(db *gorm.DB) *gorm.DB {
 		return db.Where("status <> ?", "superseded").Order("release_date DESC NULLS LAST, edition_label ASC")
-	}).Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source").Order("works.updated_at DESC, works.id ASC").Offset((params.Page - 1) * params.PageSize).Limit(params.PageSize).Find(&works).Error
+	}).Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source").Order(listBooksOrder(params.Sort)).Offset((params.Page - 1) * params.PageSize).Limit(params.PageSize).Find(&works).Error
 	if err == nil {
 		err = r.loadBookMedia(ctx, works)
 	}
 	return works, total, err
 }
+
+// A fixed set of orders; the sort value never reaches the SQL text.
+func listBooksOrder(sort string) string {
+	const released = "(SELECT MAX(e.release_date) FROM editions e WHERE e.work_id = works.id AND e.status <> 'superseded')"
+	switch sort {
+	case "newest":
+		return released + " DESC NULLS LAST, works.original_title ASC, works.id ASC"
+	case "oldest":
+		return released + " ASC NULLS LAST, works.original_title ASC, works.id ASC"
+	case "title":
+		return "works.original_title ASC, works.id ASC"
+	}
+	return "works.updated_at DESC, works.id ASC"
+}
+
 func (r *CatalogRepository) GetBook(work *model.Work, key string) CatalogResult {
 	found := r.db.Where("works.status = ?", "published").Where("works.id = ? OR works.slug = ?", key, key).Preload("Origin").Preload("Editions", "status <> ?", "superseded").Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source").First(work)
 	if found.Error != nil {

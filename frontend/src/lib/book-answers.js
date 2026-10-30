@@ -45,6 +45,60 @@ export function bookFactSummary(book = {}) {
   return sentences.join(" ");
 }
 
+// Meta descriptions end on a whole sentence where the facts allow it.
+export function fitDescription(text, limit = 160) {
+  const clean = String(text || "").replace(/\s+/g, " ").trim();
+  if (clean.length <= limit) return clean;
+  const kept = clean.slice(0, limit);
+  const end = Math.max(kept.lastIndexOf(". "), kept.lastIndexOf("。"));
+  if (end >= 60) return kept.slice(0, end + 1);
+  return `${kept.slice(0, limit - 1).trimEnd()}…`;
+}
+
+export const CATALOG_DEFINITION = "MuseBooks is a source-backed catalog of model, idol, influencer and celebrity photobooks and magazine issues. Each record separates physical and digital editions and lists the publisher, release date and ISBN where recorded, with links to sources. Retail offers, marketplace asking prices and confirmed completed sales are kept apart, and MuseBooks links to sellers instead of selling books itself.";
+
+export function catalogCounts(books = [], models = 0, publishers = 0) {
+  const origins = topNames(books.map(book => book.origin?.name), 10);
+  return `The catalog records ${books.length.toLocaleString("en-US")} publications${origins.length ? ` from ${names(origins)}` : ""}, featuring ${models.toLocaleString("en-US")} people, from ${publishers.toLocaleString("en-US")} publishers.`;
+}
+
+const publicationYears = books => books.flatMap(book => (book.editions || []).map(publicationDate).filter(Boolean)).map(date => date.slice(0, 4)).sort();
+function topNames(values, limit) {
+  const counts = new Map();
+  for (const value of values.filter(Boolean)) counts.set(value, (counts.get(value) || 0) + 1);
+  return [...counts].sort((a, b) => b[1] - a[1]).slice(0, limit).map(([name]) => name);
+}
+export function profileYears(books = []) {
+  const years = publicationYears(books);
+  return years.length ? (years[0] === years.at(-1) ? years[0] : `${years[0]}–${years.at(-1)}`) : "";
+}
+
+// Lead for model and publisher pages. Totals come from the profile; the type
+// split, years and names only when every publication is known (the app loads a
+// preview of long lists).
+export function profileFactSummary(profile = {}, kind = "models", books = []) {
+  if (!profile.name) return "";
+  const total = Math.max(profile.workCount || 0, books.length);
+  const complete = books.length >= total;
+  const magazines = books.filter(isMagazine).length;
+  const works = complete && total
+    ? names([...(total - magazines ? [plural(total - magazines, "photobook", "photobooks")] : []), ...(magazines ? [plural(magazines, "magazine issue", "magazine issues")] : [])])
+    : plural(total, "publication", "publications");
+  const years = complete ? profileYears(books) : "";
+  const when = years ? `, dated ${years.includes("–") ? years.replace("–", " to ") : years}` : "";
+  const sentences = [];
+  if (kind === "models") {
+    sentences.push(`${profile.name} is featured in ${works} recorded by MuseBooks${when}.`);
+    const publishers = complete ? topNames(books.flatMap(book => [...new Set((book.editions || []).map(edition => edition.publisher))]), 3) : [];
+    if (publishers.length) sentences.push(`Publishers include ${names(publishers)}.`);
+  } else {
+    sentences.push(`MuseBooks records ${works} from ${profile.name}${when}.`);
+    const featured = complete ? topNames(books.flatMap(people), 3) : [];
+    if (featured.length) sentences.push(`Featured people include ${names(featured)}.`);
+  }
+  return sentences.join(" ");
+}
+
 function offers(book, status) {
   return (book.editions || []).flatMap(edition => editionListings({ ...edition, listings: edition.listings || [] })
     .filter(listing => listing.status === status && Number.isFinite(listing.priceMinor) && listing.currency)

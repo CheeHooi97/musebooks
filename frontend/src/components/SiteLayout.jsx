@@ -82,7 +82,7 @@ export default function SiteLayout({ pathname, children, showAds = true }) {
         </nav>
         <nav aria-label={t("MuseBooks")}>
           <h2>MuseBooks</h2>
-          <a href="/about">{t("About & methodology")}</a><a href="/privacy-policy">{t("Privacy Policy")}</a><a href="mailto:musecards67@gmail.com">{t("Send a correction")}</a>
+          <a href="/guides/digital-vs-physical-photobooks">{t("Digital and physical photobooks")}</a><a href="/about">{t("About & methodology")}</a><a href="/privacy-policy">{t("Privacy Policy")}</a><a href="mailto:musecards67@gmail.com">{t("Send a correction")}</a>
         </nav>
       </div>
     </footer>

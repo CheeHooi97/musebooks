@@ -186,3 +186,12 @@ test('book FAQPage markup mirrors the visible questions and answers', () => {
   assert.ok(visible.length > 0)
   assert.deepEqual(faq.mainEntity.map(item => [item.name, item.acceptedAnswer.text]), visible.map(item => [item.question, item.answer]))
 })
+
+test('damaged records stay out of the index, guides are indexed, shared titles name the person', () => {
+  assert.equal(pageSeo('/books/x', { originalTitle: '??????', editions: [] }).noindex, true)
+  assert.equal(pageSeo('/models/x', undefined, { name: '???', books: [] }).noindex, true)
+  assert.equal(pageSeo('/guides/digital-vs-physical-photobooks').noindex, false)
+  assert.match(pageSeo('/books/x', { originalTitle: '絶景', models: [{ id: 'a', name: '天野ちよ' }], editions: [] }).title, /^絶景 天野ちよ — MuseBooks$/)
+  assert.match(pageSeo('/books/x', { originalTitle: '天野ちよ 絶景', models: [{ id: 'a', name: '天野ちよ' }], editions: [] }).title, /^天野ちよ 絶景 — MuseBooks$/)
+})
+

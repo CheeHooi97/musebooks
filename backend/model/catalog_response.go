@@ -12,6 +12,7 @@ type CatalogLink struct {
 }
 
 type BookResponse struct {
+	UpdatedAt       time.Time         `json:"updatedAt"`
 	Models          []CatalogLink     `json:"models"`
 	CoverModels     []CatalogLink     `json:"coverModels,omitempty"`
 	ID              string            `json:"id"`
@@ -106,6 +107,7 @@ type ListBooksQuery struct {
 	Language        string
 	Availability    string
 	Year            string
+	Sort            string
 	Page            int
 	PageSize        int
 }
@@ -133,6 +135,12 @@ func (w Work) Response() BookResponse {
 		Photographer:  w.Photographer,
 		CoverURL:      PublicCoverURL(w.CoverURL),
 		Editions:      make([]EditionResponse, 0, len(w.Editions)),
+		UpdatedAt:     w.UpdatedAt,
+	}
+	for _, edition := range w.Editions {
+		if edition.UpdatedAt.After(result.UpdatedAt) {
+			result.UpdatedAt = edition.UpdatedAt
+		}
 	}
 	result.Models = []CatalogLink{}
 	result.CoverModels = []CatalogLink{}

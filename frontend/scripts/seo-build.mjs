@@ -1,11 +1,13 @@
 import fs from 'node:fs/promises'
 import path from 'node:path'
 import { createHash } from 'node:crypto'
-import { pageSeo, SITE_URL, normalizeSiteURL } from '../src/lib/seo.js'
+import { isCorruptText, pageSeo, SITE_URL, normalizeSiteURL } from '../src/lib/seo.js'
 import { renderContent, json } from './seo-content.mjs'
-import { apiCatalog, atomFeed, llmsFullTxt, llmsTxt, markdownURL, openAPI, pageMarkdown, robotsTxt } from './agent-files.mjs'
+import { apiCatalog, atomFeed, llmsFullTxt, llmsTxt, markdownURL, newestBooks, openAPI, pageMarkdown, robotsTxt } from './agent-files.mjs'
 import { CATALOG_LANGUAGES, hasLanguageEditions, languageAlternates, languagePath } from '../src/lib/catalog-languages.js'
 import { renderLocalizedCatalog, localizedMarkdown } from './localized-catalog.mjs'
+import { homeSummary } from '../src/lib/catalog.js'
+import { GUIDES } from '../src/lib/guides.js'
 
 const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[char]))
 // The API returns R2 images as media Worker URLs whose signature expires, but
@@ -38,8 +40,8 @@ export const modelSlug = name => `model-${createHash('sha256').update(String(nam
 export function aliasRedirect(url, name) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>${escape(name)} — MuseBooks</title><meta name="robots" content="noindex,follow"/><link rel="canonical" href="${escape(url)}"/><meta http-equiv="refresh" content="0;url=${escape(url)}"/><script>location.replace(${json(url)})</script></head><body><p>This profile moved to <a href="${escape(url)}">${escape(name)}</a>.</p></body></html>\n`
 }
-export function sitemapXML(paths, siteURL = SITE_URL) {
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[...new Set(paths)].map(route => `<url><loc>${escape(siteURL + route)}</loc></url>`).join('')}</urlset>\n`
+export function sitemapXML(paths, siteURL = SITE_URL, lastmods = new Map()) {
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[...new Set(paths)].map(route => `<url><loc>${escape(siteURL + route)}</loc>${lastmods.get(route) ? `<lastmod>${lastmods.get(route)}</lastmod>` : ''}</url>`).join('')}</urlset>\n`
 }
 export function renderPublishedPage(template, route, data = {}, siteURL = SITE_URL) {
   if (!template.includes('<div id="root">') || !template.includes('</body>')) throw new Error('Invalid built page template')
@@ -80,11 +82,19 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
     loadAll('books'), loadAll('models'), loadAll('publishers'), loadAll('listings?status=active'), loadAll('listings?status=sold'),
   ])
   const routes = []
+  // The date a record last changed, only where the API reports one.
+  const lastmods = new Map()
+  const hidden = new Set()
+  const changed = list => list.map(item => String(item.updatedAt || '').slice(0, 10)).filter(Boolean).sort().at(-1)
   const write = async (route, data = {}) => {
     const parts = route.slice(1).split('/').filter(Boolean).map(decodeURIComponent)
     if (!route.startsWith('/') || parts.length > 2 || parts.some(part => part === '.' || part === '..' || /[\/\\\u0000]/.test(part))) throw new Error(`Unsafe SEO route: ${route}`)
     if (routes.includes(route)) throw new Error(`Duplicate SEO route: ${route}`)
     routes.push(route)
+    const damaged = isCorruptText(data.book?.originalTitle) || isCorruptText(data.profile?.name)
+    if (damaged) hidden.add(route)
+    const lastmod = data.book ? changed([data.book]) : data.profile ? changed(data.books || []) : ''
+    if (lastmod) lastmods.set(route, lastmod)
     // Nginx resolves decoded URI paths. Keep encoded URLs, decoded disk names.
     const directory = path.join(outputDir, ...parts)
     const bootstrap = data.book ? `<script id="musebooks-bootstrap" type="application/json">${json({ book: data.book })}</script>` : ''
@@ -102,10 +112,12 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
         await fs.writeFile(path.join(outputDir, ...localizedParts, 'index.html'), renderLocalizedCatalog(template, route, data, language.code, siteURL))
         await fs.writeFile(path.join(outputDir, ...localizedParts.slice(0, -1), `${localizedParts.at(-1)}.md`), localizedMarkdown(route, data, language.code, siteURL))
         routes.push(localized)
+        if (damaged) hidden.add(localized)
+        if (lastmod) lastmods.set(localized, lastmod)
       }
     }
   }
-  await write('/', { books })
+  await write('/', { books, totals: { models: models.length, publishers: publishers.length } })
   await write('/books', { books })
   await write('/saved')
   for (const route of ['/login', '/register', '/verify-email', '/forgot-password', '/reset-password', '/account']) await write(route)
@@ -114,7 +126,8 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
   await write('/active', { listings: active })
   await write('/sold', { listings: sold })
   await write('/japan')
-  await write('/about')
+  for (const route of Object.keys(GUIDES)) await write(route)
+  await write('/about', { books, totals: { models: models.length, publishers: publishers.length } })
   await write('/privacy-policy')
   for (const [kind, profiles] of [['models', models], ['publishers', publishers]]) {
     for (const profile of profiles) {
@@ -123,9 +136,15 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
       await write(`/${kind}/${encodeURIComponent(profile.id)}`, { profile: { ...profile, books: related }, books: related })
     }
   }
+  const byPerson = new Map()
+  for (const { book } of newestBooks(books, books.length)) {
+    for (const person of book.models || []) byPerson.set(person.id, [...(byPerson.get(person.id) || []), book])
+  }
   for (const book of books) {
     if (!book.slug || !book.originalTitle) throw new Error('Catalog record missing a slug or title')
-    await write(`/books/${encodeURIComponent(book.slug)}`, { book })
+    const person = (book.models || []).find(item => (byPerson.get(item.id) || []).some(other => other.slug !== book.slug))
+    const related = person ? { person, books: byPerson.get(person.id).filter(other => other.slug !== book.slug).slice(0, 6) } : undefined
+    await write(`/books/${encodeURIComponent(book.slug)}`, { book, related })
   }
   // Names merged into a model (person_aliases) keep their old profile URLs as
   // redirects to the canonical profile; they stay out of the sitemap.
@@ -143,8 +162,9 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
   await write('/404')
   await fs.writeFile(path.join(outputDir, '404.html'), await fs.readFile(path.join(outputDir, '404/index.html')))
   const privateRoutes = new Set(['/404', '/saved', '/login', '/register', '/verify-email', '/forgot-password', '/reset-password', '/account'])
-  await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemapXML(routes.filter(route => !privateRoutes.has(route)), siteURL))
+  await fs.writeFile(path.join(outputDir, 'sitemap.xml'), sitemapXML(routes.filter(route => !privateRoutes.has(route) && !hidden.has(route)), siteURL, lastmods))
   await fs.writeFile(path.join(outputDir, 'robots.txt'), robotsTxt(siteURL))
+  await fs.writeFile(path.join(outputDir, 'home.json'), JSON.stringify(homeSummary(books, newestBooks(books, 8).map(item => item.book))))
   const catalog = { books, models, publishers }
   await fs.writeFile(path.join(outputDir, 'llms.txt'), llmsTxt(siteURL, catalog))
   await fs.writeFile(path.join(outputDir, 'llms-full.txt'), llmsFullTxt(siteURL, catalog))

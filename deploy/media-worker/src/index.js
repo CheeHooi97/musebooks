@@ -14,6 +14,9 @@ const LISTING_IMAGE_KEY_PREFIX = 'musebooks/listing-thumbnails/v2/'
 const LEGACY_LISTING_IMAGE_KEY_PREFIX = 'musebooks/listing-thumbnails/v1/'
 const LISTING_IMAGE_KEY_PREFIXES = [LISTING_IMAGE_KEY_PREFIX, LEGACY_LISTING_IMAGE_KEY_PREFIX]
 const LISTING_IMAGE_CACHE_SUFFIX = '?resize=560x560&format=webp&quality=78'
+// Covers above this size are served resized. Almost all covers are far smaller.
+export const LARGE_COVER_BYTES = 300 * 1024
+const COVER_CACHE_SUFFIX = '?resize=cover-720-webp'
 const LISTING_IMAGE_HOSTS = new Set([
   'auctions.c.yimg.jp',
   'auc-pctr.c.yimg.jp',
@@ -63,6 +66,14 @@ export default {
     const cacheKey = new Request(`${url.origin}${url.pathname}`, { method: 'GET' })
     const cache = caches.default
     let cached = await cache.match(cacheKey)
+    // Image resizing fetches the original through this same Worker; let that through.
+    if (key.includes('/covers/') && !(request.headers.get('Via') || '').includes('image-resizing')) {
+      const large = cached ? Number(cached.headers.get('Content-Length')) > LARGE_COVER_BYTES : (await env.MEDIA_BUCKET.head(key))?.size > LARGE_COVER_BYTES
+      if (large) {
+        const resized = await serveResizedCover(request, url, exp, now, ctx)
+        if (resized) return resized
+      }
+    }
     const cacheStatus = cached ? 'HIT' : 'MISS'
     if (!cached) {
       const object = await env.MEDIA_BUCKET.get(key)
@@ -86,6 +97,33 @@ export default {
     }
     return new Response(request.method === 'HEAD' ? null : cached.body, { status: 200, headers })
   },
+}
+
+async function serveResizedCover(request, url, exp, now, ctx) {
+  const cacheKey = new Request(`${url.origin}${url.pathname}${COVER_CACHE_SUFFIX}`, { method: 'GET' })
+  let cached = await caches.default.match(cacheKey)
+  const cacheStatus = cached ? 'HIT' : 'MISS'
+  if (!cached) {
+    let image
+    try {
+      image = await fetch(url.toString(), { cf: { image: { width: 720, fit: 'scale-down', quality: 80, format: 'webp' } } })
+    } catch {
+      return null
+    }
+    // Keep the original visible if the image cannot be resized.
+    if (!isImageResponse(image)) return null
+    const headers = new Headers(image.headers)
+    headers.delete('ETag')
+    headers.set('Cache-Control', `public, max-age=${EDGE_CACHE_SECONDS}`)
+    cached = new Response(image.body, { status: 200, headers })
+    ctx.waitUntil(caches.default.put(cacheKey, cached.clone()))
+  }
+  const headers = new Headers(cached.headers)
+  headers.set('Cache-Control', `public, max-age=${exp - now}, immutable`)
+  headers.set('X-Content-Type-Options', 'nosniff')
+  headers.set('X-Media-Cache', cacheStatus)
+  headers.set('X-Media-Optimized', 'webp-720')
+  return new Response(request.method === 'HEAD' ? null : cached.body, { status: 200, headers })
 }
 
 async function serveListingImage(request, url, key, exp, env, ctx) {

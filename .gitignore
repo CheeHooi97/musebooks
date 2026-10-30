@@ -40,3 +40,4 @@ scraper/japan-crawl-*[0-9].json
 **/*.p8
 **/*.keystore
 **/*.jks
+.wrangler/

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { bookAnswers, bookFactSummary, longDate } from "./book-answers.js";
+import { bookAnswers, bookFactSummary, longDate, fitDescription, profileFactSummary } from "./book-answers.js";
 
 const source = kind => ({ name: kind === "marketplace" ? "Yahoo! JAPAN Auctions" : "Rakuten Books", kind, photobookFormat: "physical" });
 const listing = (status, priceMinor, observedAt, extra = {}) => ({ status, priceMinor, currency: "JPY", observedAt, format: "physical", priceType: "fixed", priceCategory: "marketplace_asking", source: source("marketplace"), ...extra });
@@ -49,3 +49,21 @@ test("missing facts are stated as not recorded", () => {
   assert.ok(answers.some(item => item.answer.startsWith("No active offer is recorded for this photobook.")));
   assert.ok(!answers.some(item => item.question.startsWith("What has")), "digital-only records have no sold question");
 });
+
+test("profile leads use recorded facts, and drop the split when only a preview is loaded", () => {
+  const books = [
+    { publicationType: "photobook", models: [{ name: "A" }], editions: [{ publisher: "P", releaseDate: "2020-01-01", releasePrecision: "day" }] },
+    { publicationType: "magazine_issue", coverModels: [{ name: "A" }], editions: [{ publisher: "P", releaseDate: "2024-01-01", releasePrecision: "day" }] },
+  ];
+  assert.equal(profileFactSummary({ name: "A", workCount: 2 }, "models", books), "A is featured in 1 photobook and 1 magazine issue recorded by MuseBooks, dated 2020 to 2024. Publishers include P.");
+  assert.equal(profileFactSummary({ name: "A", workCount: 30 }, "models", books), "A is featured in 30 publications recorded by MuseBooks.");
+  assert.equal(profileFactSummary({ name: "P", workCount: 2 }, "publishers", books), "MuseBooks records 1 photobook and 1 magazine issue from P, dated 2020 to 2024. Featured people include A.");
+});
+
+test("meta descriptions end on a whole sentence when one fits", () => {
+  const first = "A".repeat(100) + ".";
+  assert.equal(fitDescription(first + " " + "B".repeat(100) + "."), first);
+  assert.ok(fitDescription("C".repeat(200)).endsWith("…"));
+  assert.equal(fitDescription("C".repeat(200)).length, 160);
+});
+

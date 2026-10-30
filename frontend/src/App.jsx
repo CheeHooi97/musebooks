@@ -8,6 +8,8 @@ import DirectoryProfile from "./pages/DirectoryProfile";
 import Market from "./pages/Market";
 import Saved from "./pages/Saved";
 import About from "./pages/About";
+import Guide from "./pages/Guide";
+import { GUIDES } from "./lib/guides";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import AuthPage, { AccountPage } from "./pages/Auth";
 import { usePreferences } from "./lib/preferences";
@@ -32,6 +34,7 @@ export function resolveRoute(pathname, search) {
   if (section === "saved" && !id) return { page: <Saved />, showAds: false };
   if (["login", "register", "verify-email", "forgot-password", "reset-password"].includes(section) && !id) return { page: <AuthPage mode={section} />, showAds: false };
   if (section === "account" && !id) return { page: <AccountPage />, showAds: false };
+  if (section === "guides" && GUIDES[pathname]) return { page: <Guide path={pathname} /> };
   if (section === "about" && !id) return { page: <About /> };
   if (section === "privacy-policy" && !id) return { page: <PrivacyPolicy />, showAds: false };
   return { page: <NotFound />, showAds: false };

@@ -7,7 +7,7 @@ export const CATALOG_LANGUAGES = [
   { code: 'ko', segment: 'kr', label: '한국어', og: 'ko_KR' },
 ]
 export function hasLanguageEditions(route) {
-  return ['/', '/books', '/models', '/publishers'].includes(route) || /^\/(books|models|publishers)\/[^/]+$/.test(route)
+  return ['/', '/books', '/models', '/publishers'].includes(route) || /^\/(books|models|publishers|guides)\/[^/]+$/.test(route)
 }
 export function languagePath(route, language) {
   const entry = CATALOG_LANGUAGES.find(item => item.code === language)

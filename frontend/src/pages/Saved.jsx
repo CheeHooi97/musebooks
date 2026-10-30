@@ -5,13 +5,13 @@ import BookCard, { BookGridSkeleton } from "../components/BookCard";
 import { LoadState, PageHeader } from "../components/Page";
 import { usePreferences } from "../lib/preferences";
 import { useCollection } from "../lib/collection";
-import { loadAllBooks, sortBooks, useLoader } from "../lib/catalog";
+import { loadBooksById, sortBooks, useLoader } from "../lib/catalog";
 
 export default function Saved() {
   const { t } = usePreferences();
   const { saved } = useCollection();
   const [sortBy, setSortBy] = useState("added");
-  const books = useLoader(loadAllBooks, []);
+  const books = useLoader(() => loadBooksById(saved), [saved.join(",")]);
   const items = useMemo(() => {
     if (books.state !== "live") return [];
     const byId = new Map(books.data.map(book => [book.id, book]));

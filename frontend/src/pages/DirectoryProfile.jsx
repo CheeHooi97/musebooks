@@ -7,6 +7,7 @@ import { Breadcrumb, LoadState, Pagination } from "../components/Page";
 import { usePreferences } from "../lib/preferences";
 import { showCatalogImages } from "../lib/platform";
 import { useResource } from "../lib/catalog";
+import { profileFactSummary } from "../lib/book-answers";
 
 const EMPTY = { q: "", publicationType: "", format: "", language: "", year: "", model: "" };
 
@@ -67,6 +68,7 @@ export default function DirectoryProfile({ kind, id }) {
             <div><dt>{t("Publications")}</dt><dd>{entry.workCount}</dd></div>
             <div><dt>{t("Editions")}</dt><dd>{entry.editionCount}</dd></div>
           </dl>
+          <p className="prose">{profileFactSummary(entry, kind, preview.data?.items || [])}</p>
           {entry.officialUrl && <a className="text-link" href={entry.officialUrl} target="_blank" rel="noreferrer" data-external-link>{t(models ? "Profile source" : "Official source")} ↗</a>}
         </div>
       </header>

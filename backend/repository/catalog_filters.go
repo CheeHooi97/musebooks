@@ -11,7 +11,7 @@ func applyWorkFilters(query *gorm.DB, params model.ListBooksQuery) *gorm.DB {
 	}
 	if params.Query != "" {
 		pattern := "%" + params.Query + "%"
-		query = query.Where("works.original_title ILIKE ? OR works.english_title ILIKE ? OR works.featured_names ILIKE ?", pattern, pattern, pattern)
+		query = query.Where("works.original_title ILIKE ? OR works.english_title ILIKE ? OR works.featured_names ILIKE ? OR works.photographer ILIKE ? OR EXISTS (SELECT 1 FROM editions AS q_editions WHERE q_editions.work_id = works.id AND q_editions.status <> 'superseded' AND q_editions.publisher ILIKE ?)", pattern, pattern, pattern, pattern, pattern)
 	}
 	if params.Origin != "" {
 		query = query.Where("works.origin_code = ?", params.Origin)

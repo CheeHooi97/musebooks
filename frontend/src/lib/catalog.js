@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { apiUrl } from "./api";
+import { apiUrl } from "./api.js";
 
 // Session-level request cache: Discover, Browse and Saved share one catalog load.
 const cache = new Map();
@@ -23,6 +23,17 @@ async function loadAllPages(endpoint) {
 }
 
 export const loadAllBooks = () => cached("books", () => loadAllPages("/v1/books"));
+// Saved books, one request each. A record removed from the catalog is skipped.
+export const loadBooksById = ids => Promise.all(ids.map(id => getJSON(`/v1/books/${encodeURIComponent(id)}`).catch(error => { if (error.message === "missing") return null; throw error; }))).then(books => books.filter(Boolean));
+// The home page reads a small file written at build time. Hosts without it (the
+// mobile apps, local dev) compute the same shape from the full catalog.
+export const loadHomeSummary = () => cached("home", () => getJSON("/home.json").catch(async () => {
+  const books = await loadAllBooks();
+  return homeSummary(books, sortBooks(books, "newest").slice(0, 8));
+}));
+export function homeSummary(books, newest) {
+  return { total: books.length, editions: books.reduce((sum, book) => sum + (book.editions?.length || 0), 0), newest, models: photobookModels(books).slice(0, 8) };
+}
 export const loadOrigins = () => cached("origins", () => getJSON("/v1/origins"));
 export const loadSources = () => cached("sources", () => getJSON("/v1/sources").catch(() => []));
 /** Total of people credited on published MuseBooks works (the API excludes everyone else). */

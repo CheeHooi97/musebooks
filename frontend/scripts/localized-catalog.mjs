@@ -1,6 +1,9 @@
 import { escape, json } from './seo-content.mjs'
 import { pageSeo, publicationDate } from '../src/lib/seo.js'
 import { languagePath, languageAlternates } from '../src/lib/catalog-languages.js'
+import { fitDescription, profileYears } from '../src/lib/book-answers.js'
+import { newestBooks } from './agent-files.mjs'
+import { GUIDES, GUIDE_EXAMPLE } from '../src/lib/guides.js'
 
 // Only fixed editorial text is translated. Names, dates, ISBNs and cited source
 // facts retain their recorded value; no biography or bibliographic fact is invented.
@@ -12,31 +15,59 @@ const copy = {
   ko: ['사진집·잡지 카탈로그', '모델, 아이돌, 유명인의 사진집과 잡지를 찾아보세요. 종이책과 전자책의 출판사, 발행일, ISBN 및 자료 출처를 확인할 수 있습니다.', '사진집·잡지', '모델·출연자', '출판사', '수록된 판본', '형식', '출판사', '발행일', '언어', '쪽수', '크기', '자료 출처', '출연자', '사진가', '지역', '원어 이름', '영문 이름', '종이책', '전자책', '기록되지 않은 정보는 알 수 없습니다. 작품 원제와 출처의 표기를 유지합니다. 가격, 재고 및 확인 날짜는 영어판에서 비교할 수 있습니다. 판매 종료가 거래 완료를 뜻하지는 않습니다.', '수록 기준과 출처 (영어)', '정보 수정 요청', '가격과 판매 기록 보기', '미기록'],
 }
 const texts = language => Object.fromEntries(keys.map((key, index) => [key, copy[language][index]]))
+// Record-specific leads in each language, from recorded facts only.
+const LEADS = {
+  ja: { book: (title, people, magazine) => `${title}は${people ? `${people}の` : ''}${magazine ? '雑誌' : '写真集'}です。`, profile: (name, count) => `${name}の写真集・雑誌を${count}件収録しています。`, count: count => `${count}件`, kind: magazine => magazine ? '雑誌' : '写真集' },
+  'zh-Hant': { book: (title, people, magazine) => `${title}是${people ? `${people}的` : ''}${magazine ? '雜誌' : '寫真集'}。`, profile: (name, count) => `收錄${name}的寫真集與雜誌共${count}部。`, count: count => `${count}個`, kind: magazine => magazine ? '雜誌' : '寫真集' },
+  'zh-Hans': { book: (title, people, magazine) => `${title}是${people ? `${people}的` : ''}${magazine ? '杂志' : '写真集'}。`, profile: (name, count) => `收录${name}的写真集与杂志共${count}部。`, count: count => `${count}个`, kind: magazine => magazine ? '杂志' : '写真集' },
+  ko: { book: (title, people, magazine) => `${title}: ${people ? `${people}의 ` : ''}${magazine ? '잡지' : '사진집'}입니다.`, profile: (name, count) => `${name}의 사진집·잡지 ${count}권을 수록했습니다.`, count: count => `${count}개`, kind: magazine => magazine ? '잡지' : '사진집' },
+}
+function recordLead(language, t, { book, profile, books = [] }, route) {
+  const lead = LEADS[language]
+  if (GUIDES[route]) return GUIDES[route][language].description
+  if (book) {
+    const magazine = book.publicationType === 'magazine_issue'
+    const people = (magazine && book.coverModels?.length ? book.coverModels : book.models || []).slice(0, 4).map(person => person.name).join('、')
+    const dated = (book.editions || []).map(edition => ({ edition, date: publicationDate(edition) })).filter(item => item.date).sort((a, b) => a.date.localeCompare(b.date))[0]
+    const publisher = dated?.edition.publisher || book.editions?.find(edition => edition.publisher)?.publisher
+    return [lead.book(book.originalTitle, people, magazine), publisher && `${t.publisher}: ${publisher}.`, dated && `${t.published}: ${dated.date}.`, book.editions?.length && `${t.editions}: ${lead.count(book.editions.length)}.`].filter(Boolean).join(' ')
+  }
+  if (profile) {
+    const years = profileYears(books)
+    return `${lead.profile(profile.name, books.length)}${years ? ` ${years}.` : ''}`
+  }
+  return t.intro
+}
 export function languageNavigation(route, siteURL = '') {
   return `<nav aria-label="Languages">${languageAlternates(route, siteURL).filter(item => item.code !== 'x-default').map(item => `<a data-reload href="${escape(item.url)}" lang="${item.code}" hreflang="${item.code}">${item.label}</a>`).join(' · ')}</nav>`
 }
 export function localizedCatalog(route, data, language, siteURL) {
   const t = texts(language)
-  const { book, profile, books = [], profiles = [] } = data
+  const { book, profile, books = [], profiles = [], related } = data
   const people = book?.publicationType === 'magazine_issue' && book.coverModels?.length ? book.coverModels : book?.models || []
   const url = `${siteURL}${languagePath(route, language)}`
   const link = (path, label) => `<a href="${escape(languagePath(path, language))}">${escape(label)}</a>`
   const external = (url, label) => /^https?:\/\//i.test(url || '') ? `<a href="${escape(url)}" rel="noreferrer">${escape(label)}</a>` : ''
   const facts = pairs => `<dl>${pairs.filter(([, value]) => value !== undefined && value !== null && value !== '').map(([label, value]) => `<dt>${escape(label)}</dt><dd>${escape(value)}</dd>`).join('')}</dl>`
   const list = items => `<ul>${items.map(item => `<li>${link(`/books/${encodeURIComponent(item.slug)}`, item.originalTitle)}${item.englishTitle ? ` — ${escape(item.englishTitle)}` : ''}</li>`).join('')}</ul>`
-  const heading = book?.originalTitle || profile?.name || (route === '/models' ? t.models : route === '/publishers' ? t.publishers : route === '/books' ? t.books : t.catalog)
-  let body = `<h1>${escape(heading)}</h1><p>${escape(t.intro)}</p>`
+  const heading = GUIDES[route]?.[language].title || book?.originalTitle || profile?.name || (route === '/models' ? t.models : route === '/publishers' ? t.publishers : route === '/books' ? t.books : t.catalog)
+  const guide = GUIDES[route]?.[language]
+  const lead = recordLead(language, t, data, route)
+  let body = `<h1>${escape(heading)}</h1><p>${escape(lead)}</p>`
   if (book) {
-    body = `<h1>${escape(heading)}</h1>${/^https?:\/\//i.test(book.coverUrl || '') ? `<img src="${escape(book.coverUrl)}" alt="${escape(book.originalTitle)}" width="240" style="max-width:100%;height:auto"/>` : ''}${book.englishTitle ? `<p>${escape(book.englishTitle)}</p>` : ''}`
+    body = `<h1>${escape(heading)}</h1>${/^https?:\/\//i.test(book.coverUrl || '') ? `<img src="${escape(book.coverUrl)}" alt="${escape(book.originalTitle)}" width="240" style="max-width:100%;height:auto"/>` : ''}${book.englishTitle ? `<p>${escape(book.englishTitle)}</p>` : ''}<p>${escape(lead)}</p>`
     body += facts([[t.photographer, book.photographer], [t.origin, book.origin?.name]])
     body += `<h2>${t.people}</h2><ul>${people.map(person => `<li>${link(`/models/${encodeURIComponent(person.id)}`, person.name)}</li>`).join('')}</ul><h2>${t.editions}</h2>`
     body += (book.editions || []).map(edition => `<section><h3>${escape(edition.editionLabel || t.editions)}</h3>${facts([[t.format, t[edition.format] || edition.format], [t.publisher, edition.publisher], [t.published, publicationDate(edition)], ['ISBN', edition.isbn], [t.language, edition.language], [t.pages, edition.pageCount], [t.dimensions, edition.dimensions]])}${edition.publisherProfile?.id ? `<p>${link(`/publishers/${encodeURIComponent(edition.publisherProfile.id)}`, edition.publisherProfile.name)}</p>` : ''}<p>${external(edition.metadataSourceUrl, t.source)}</p></section>`).join('')
+    if (related) body += `<h2>${escape(related.person.name)} — ${t.books}</h2>${list(related.books)}`
     body += `<p><a href="${escape(route)}" lang="en">${t.open}</a></p>`
   } else if (profile) {
     body += facts([[t.originalName, profile.originalName], [t.englishName, profile.englishName]]) + `<p>${external(profile.officialUrl, t.source)}</p><h2>${t.books}</h2>${list(books)}`
+  } else if (guide) {
+    body += guide.sections.map(([title, text]) => `<section><h2>${escape(title)}</h2><p>${escape(text)}</p></section>`).join('') + `<p>${link(GUIDE_EXAMPLE, guide.example[0])} · ${link('/books', guide.example[1])}</p>`
   } else if (route === '/models' || route === '/publishers') {
     body += `<ul>${profiles.map(entry => `<li>${link(`${route}/${encodeURIComponent(entry.id)}`, entry.name)}</li>`).join('')}</ul>`
-  } else body += list(books)
+  } else body += list(route === '/' ? newestBooks(books, 100).map(item => item.book) : books)
   body += `<p>${t.note}</p>`
   const seo = pageSeo(route, book, profile, siteURL)
   // Rewrite only site entity URLs, preserving external sources and entity types.
@@ -44,12 +75,15 @@ export function localizedCatalog(route, data, language, siteURL) {
     if (key === 'description') return undefined
     if (typeof value !== 'string' || !value.startsWith(`${siteURL}/`)) return value
     const parsed = new URL(value)
-    return /^\/(books|models|publishers)(\/|$)/.test(parsed.pathname) || parsed.pathname === '/' ? `${siteURL}${languagePath(parsed.pathname, language)}${parsed.hash}` : value
+    return /^\/(books|models|publishers|guides)(\/|$)/.test(parsed.pathname) || parsed.pathname === '/' ? `${siteURL}${languagePath(parsed.pathname, language)}${parsed.hash}` : value
   })
-  const title = `${heading} — ${t.catalog} — MuseBooks`
+  // Editions differ by language word, so a shared original title stays distinct.
+  const kindWord = book ? ` ${LEADS[language].kind(book.publicationType === 'magazine_issue')}` : profile ? ` ${t.books}` : ''
+  const title = `${heading}${kindWord} — MuseBooks`
+  const description = fitDescription(lead)
   // The page language and the publication's recorded inLanguage are distinct.
-  graph['@graph'].push({ '@type': 'WebPage', '@id': `${url}#page`, url, name: title, description: t.intro, inLanguage: language })
-  return { title, description: t.intro, url, structuredData: graph, body: `<div class="site-shell"><header class="site-header"><a href="${languagePath('/', language)}">MuseBooks</a><nav>${link('/books', t.books)} · ${link('/models', t.models)} · ${link('/publishers', t.publishers)}</nav>${languageNavigation(route)}</header><main id="main-content" class="seo-static-content page-width">${body}</main><footer><a href="/about" lang="en">${t.methodology}</a> · <a href="mailto:musecards67@gmail.com">${t.correction}</a></footer></div>` }
+  graph['@graph'].push({ '@type': 'WebPage', '@id': `${url}#page`, url, name: title, description, inLanguage: language })
+  return { title, description, url, structuredData: graph, body: `<div class="site-shell"><header class="site-header"><a href="${languagePath('/', language)}">MuseBooks</a><nav>${link('/books', t.books)} · ${link('/models', t.models)} · ${link('/publishers', t.publishers)}</nav>${languageNavigation(route)}</header><main id="main-content" class="seo-static-content page-width">${body}</main><footer><a href="/about" lang="en">${t.methodology}</a> · <a href="mailto:musecards67@gmail.com">${t.correction}</a></footer></div>` }
 }
 export function localizedMarkdown(route, data, language, siteURL) {
   const t = texts(language)
@@ -57,8 +91,11 @@ export function localizedMarkdown(route, data, language, siteURL) {
   const people = book?.publicationType === 'magazine_issue' && book.coverModels?.length ? book.coverModels : book?.models || []
   const text = value => String(value ?? '').replace(/([\\`*_[\]<>])/g, '\\$1').replace(/\s+/g, ' ').trim()
   const link = (route, name) => `[${text(name)}](${siteURL}${languagePath(route, language)})`
-  const lines = [`# ${text(book?.originalTitle || profile?.name || t.catalog)}`, '', `${t.source}: ${siteURL}${languagePath(route, language)}`, '', t.intro, '']
-  if (book) {
+  const lines = [`# ${text(book?.originalTitle || profile?.name || t.catalog)}`, '', `${t.source}: ${siteURL}${languagePath(route, language)}`, '', recordLead(language, t, data, route), '']
+  if (GUIDES[route]) {
+    lines[0] = `# ${text(GUIDES[route][language].title)}`
+    lines.push(...GUIDES[route][language].sections.flatMap(([title, body]) => [`## ${text(title)}`, '', text(body), '']))
+  } else if (book) {
     lines.push(`## ${t.people}`, '', ...people.map(person => `- ${link(`/models/${encodeURIComponent(person.id)}`, person.name)}`), '', `## ${t.editions}`, '')
     for (const edition of book.editions || []) {
       lines.push(`### ${text(edition.editionLabel || t.editions)}`, '')
@@ -68,14 +105,14 @@ export function localizedMarkdown(route, data, language, siteURL) {
     }
     lines.push(`[${t.open}](${siteURL}${route})`, '')
   } else if (route === '/models' || route === '/publishers') lines.push(...profiles.map(entry => `- ${link(`${route}/${encodeURIComponent(entry.id)}`, entry.name)}`), '')
-  else lines.push(...books.map(book => `- ${link(`/books/${encodeURIComponent(book.slug)}`, book.originalTitle)}`), '')
+  else if (!GUIDES[route]) lines.push(...(route === '/' ? newestBooks(books, 100).map(item => item.book) : books).map(book => `- ${link(`/books/${encodeURIComponent(book.slug)}`, book.originalTitle)}`), '')
   lines.push(t.note, '', ...languageAlternates(route, siteURL).filter(item => item.code !== 'x-default').map(item => `[${item.label}](${item.url})`), '')
   return lines.join('\n')
 }
 export function renderLocalizedCatalog(template, route, data, language, siteURL) {
   const page = localizedCatalog(route, data, language, siteURL)
   const meta = (name, content, attribute = 'name') => `<meta ${attribute}="${name}" content="${escape(content)}"/>`
-  const head = `<title>${escape(page.title)}</title>${meta('description', page.description)}${meta('robots', 'index,follow,max-image-preview:large')}<link rel="canonical" href="${escape(page.url)}"/><link rel="alternate" type="text/markdown" href="${escape(page.url)}.md"/>${languageAlternates(route, siteURL).map(item => `<link rel="alternate" hreflang="${item.code}" href="${escape(item.url)}"/>`).join('')}${meta('og:title', page.title, 'property')}${meta('og:description', page.description, 'property')}${meta('og:url', page.url, 'property')}${meta('og:type', 'website', 'property')}${meta('og:locale', languageAlternates(route, siteURL).find(item => item.code === language).og, 'property')}<script id="musebooks-seo-jsonld" type="application/ld+json">${json(page.structuredData)}</script>`
+  const head = `<title>${escape(page.title)}</title>${meta('description', page.description)}${meta('robots', pageSeo(route, data.book, data.profile, siteURL).noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large')}<link rel="canonical" href="${escape(page.url)}"/><link rel="alternate" type="text/markdown" href="${escape(page.url)}.md"/>${languageAlternates(route, siteURL).map(item => `<link rel="alternate" hreflang="${item.code}" href="${escape(item.url)}"/>`).join('')}${meta('og:title', page.title, 'property')}${meta('og:description', page.description, 'property')}${meta('og:url', page.url, 'property')}${meta('og:type', 'website', 'property')}${meta('og:locale', languageAlternates(route, siteURL).find(item => item.code === language).og, 'property')}<script id="musebooks-seo-jsonld" type="application/ld+json">${json(page.structuredData)}</script>`
   // Public language editions are complete static documents. Do not let the
   // English-only SPA router overwrite their content, metadata or language.
   return template.replace(/<html\b[^>]*>/i, `<html lang="${language}">`).replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '').replace(/<link\b[^>]*(?:rel=["'](?:modulepreload|canonical)["']|hreflang=["'][^"']+["']|type=["']text\/markdown["'])[^>]*>/gi, '').replace(/<title>[\s\S]*?<\/title>/i, '').replace(/<meta\b[^>]*(?:name=["'](?:description|robots|twitter:[^"']+)["']|property=["']og:[^"']+["'])[^>]*>/gi, '').replace(/(<div id="root">)[\s\S]*(<\/body>)/, '$1</div>$2').replace('</head>', () => `${head}</head>`).replace('<div id="root"></div>', () => `<div id="root">${page.body}</div>`)

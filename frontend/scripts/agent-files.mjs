@@ -4,9 +4,10 @@
 // catalog, and a robots.txt that states the crawler policy as content signals.
 import { publicationDate } from '../src/lib/seo.js'
 import { ABOUT_SECTIONS } from '../src/lib/about.js'
-import { bookAnswers, bookFactSummary, longDate } from '../src/lib/book-answers.js'
+import { bookAnswers, bookFactSummary, catalogCounts, CATALOG_DEFINITION, longDate, profileFactSummary } from '../src/lib/book-answers.js'
 import { editionListings, formatPrice, priceLabel } from '../src/lib/price-policy.js'
 import { CATALOG_LANGUAGES, languagePath } from '../src/lib/catalog-languages.js'
+import { GUIDES } from '../src/lib/guides.js'
 
 const SUMMARY = 'Source-backed catalog of model, idol, influencer and celebrity photobooks and magazine issues: works, physical and digital editions, publishers, featured people, and source-linked retail offers, marketplace asking prices and confirmed completed sales. Many records are gravure photobooks; some are intended for adult readers.'
 const NOTES = [
@@ -63,17 +64,17 @@ function bookMarkdown(book, siteURL) {
   return lines
 }
 
-export function pageMarkdown(route, { book, profile, books = [], profiles = [], listings = [] } = {}, siteURL) {
+export function pageMarkdown(route, { book, profile, books = [], profiles = [], listings = [], totals = {} } = {}, siteURL) {
   const url = route === '/' ? `${siteURL}/` : `${siteURL}${route}`
   let lines
   if (book) {
     lines = bookMarkdown(book, siteURL)
   } else if (profile) {
-    lines = [`# ${text(profile.name)}`, '', `Source: ${url}`, '', ...facts([['Original name', profile.originalName], ['English name', profile.englishName]])]
+    lines = [`# ${text(profile.name)}`, '', `Source: ${url}`, '', text(profileFactSummary(profile, route.startsWith('/models/') ? 'models' : 'publishers', books)), '', ...facts([['Original name', profile.originalName], ['English name', profile.englishName], ['Also recorded as', profile.aliases]])]
     if (safeURL(profile.officialUrl)) lines.push(`- Profile source: ${profile.officialUrl}`)
     lines.push('', `## Publications (${books.length})`, '', ...books.map(item => bookLine(siteURL, item)))
   } else if (route === '/') {
-    lines = ['# MuseBooks photobook and magazine catalog', '', `Source: ${url}`, '', SUMMARY, '', '## Newest publications', '',
+    lines = ['# MuseBooks photobook and magazine catalog', '', `Source: ${url}`, '', CATALOG_DEFINITION, '', catalogCounts(books, totals.models, totals.publishers), '', '## Newest publications', '',
       ...newestBooks(books, 100).map(({ book, date }) => `${bookLine(siteURL, book)} — ${date}`), '', `Every catalog page is listed in ${siteURL}/sitemap.xml.`]
   } else if (route === '/books') {
     lines = ['# Browse photobooks and magazine issues', '', `Source: ${url}`, '', ...books.map(item => bookLine(siteURL, item))]
@@ -83,8 +84,11 @@ export function pageMarkdown(route, { book, profile, books = [], profiles = [], 
     lines = [`# ${route === '/active' ? 'Active photobook listings' : 'Sold photobook listings'}`, '', `Source: ${url}`, '',
       route === '/sold' ? 'Confirmed completed physical marketplace sales. Ended offers are separate.' : 'Available at the last recorded observation; check the source before purchasing.', '',
       ...listings.map(item => `- ${link(item.workTitle, `${siteURL}/books/${encodeURIComponent(item.workSlug)}`)} — ${text(item.editionLabel)}, ${text(item.source?.name)}, ${formatPrice(item.priceMinor, item.currency)}, ${text(item.condition || 'Condition not recorded')}. Observed ${item.observedAt ? longDate(item.observedAt.slice(0, 10)) : 'date not recorded'}.${safeURL(item.url) ? ` ${link('View source', item.url)}` : ''}`)]
+  } else if (GUIDES[route]) {
+    const guide = GUIDES[route].en
+    lines = [`# ${guide.title}`, '', `Source: ${url}`, '', guide.description, '', ...guide.sections.flatMap(([title, body]) => [`## ${title}`, '', body, ''])]
   } else if (route === '/about') {
-    lines = ['# About MuseBooks', '', `Source: ${url}`, '', ...ABOUT_SECTIONS.flatMap(([title, body]) => [`## ${title}`, '', body, ''])]
+    lines = ['# About MuseBooks', '', `Source: ${url}`, '', ...(books.length ? [catalogCounts(books, totals.models, totals.publishers), ''] : []), ...ABOUT_SECTIONS.flatMap(([title, body]) => [`## ${title}`, '', body, ''])]
   } else if (route === '/japan') {
     lines = ['# Japan marketplace listings', '', `Source: ${url}`, '', 'A snapshot from Yahoo! JAPAN Auctions, Yahoo! Flea Market, and Rakuma. Captured bids, fixed asks, and completed prices are shown separately. Bundle prices apply to the whole listing. Unmatched records are shown separately from verified catalog books. Open a source listing to check its current status.']
   } else if (route === '/privacy-policy') {

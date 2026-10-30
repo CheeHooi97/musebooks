@@ -14,7 +14,7 @@ export default function About() {
       <aside className="article-toc" aria-label={t("Contents")}><h2>{t("Contents")}</h2><nav>{ABOUT_SECTIONS.map(([title]) => <a key={title} href={`#${slug(title)}`}>{t(title)}</a>)}</nav></aside>
       <article className="article">
         {ABOUT_SECTIONS.map(([title, text]) => <section key={title} id={slug(title)}><h2>{t(title)}</h2><p>{t(text)}</p></section>)}
-        <section id="corrections"><h2>{t("Corrections")}</h2><p>{t("Spotted a wrong credit, edition or price?")} <a href="mailto:musecards67@gmail.com">{t("Send a catalog correction")}</a>.</p></section>
+        <section id="corrections"><h2>{t("Corrections")}</h2><p>{t("Spotted a wrong credit, edition or price?")} <a href="/guides/digital-vs-physical-photobooks">{t("Digital and physical photobooks")}</a> · <a href="mailto:musecards67@gmail.com">{t("Send a catalog correction")}</a>.</p></section>
       </article>
     </div>
   </div>;
