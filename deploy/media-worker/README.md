@@ -6,10 +6,12 @@ cache. Same design as MuseCards' `media.musecards.my`; both read the shared
 
 The Worker also serves HMAC-signed listing-image URLs from an exact host
 allowlist. It creates 560px WebP thumbnails with Cloudflare Images and caches
-successful variants at the edge, instead of sending the browser to large
-marketplace originals. The Go signer and Worker host allowlists must stay in
-sync. If a transform is unavailable, the Worker falls back to the original
-image so listings remain visible.
+successful variants in the shared R2 bucket and at the edge, instead of
+sending the browser to large marketplace originals. An edge cache miss can
+reuse the stored 560px WebP without fetching or transforming the source again.
+The Go signer and Worker host allowlists must stay in sync. If a transform is
+unavailable, the Worker falls back to the original image so listings remain
+visible.
 
 Catalog rows store covers on the old public hostname
 (`https://img.musecards.my/musebooks/...`), which no longer serves objects.
@@ -55,8 +57,8 @@ Without `CLOUDFLARE_R2_MEDIA_BASE_URL` the API returns stored URLs unchanged.
 
 Marketplace transforms use Cloudflare Images' unique-transformation quota:
 the Free plan includes 5,000 unique transforms per month. Above that, new
-transforms fall back to the original source; the edge still serves already
-cached thumbnails.
+transforms fall back to the original source; existing R2 thumbnails and edge
+copies remain available.
 
 Rotating the secret: update both sides together. URLs signed with the old
 secret return 403 until clients refetch the API.

@@ -18,7 +18,7 @@ const (
 	minMediaURLWindow     = time.Hour
 	maxMediaURLWindow     = 7 * 24 * time.Hour
 	minMediaSigningSecret = 32
-	listingImageKeyPrefix = "musebooks/listing-thumbnails/v1/"
+	listingImageKeyPrefix = "musebooks/listing-thumbnails/v2/"
 )
 
 var listingImageHosts = map[string]struct{}{

@@ -10,7 +10,9 @@ const MAX_URL_LIFETIME_SECONDS = 15 * 24 * 60 * 60
 // Edge copies are keyed by object path. Catalog objects are written under
 // content-addressed or versioned keys, so a long edge lifetime is safe.
 const EDGE_CACHE_SECONDS = 30 * 24 * 60 * 60
-const LISTING_IMAGE_KEY_PREFIX = 'musebooks/listing-thumbnails/v1/'
+const LISTING_IMAGE_KEY_PREFIX = 'musebooks/listing-thumbnails/v2/'
+const LEGACY_LISTING_IMAGE_KEY_PREFIX = 'musebooks/listing-thumbnails/v1/'
+const LISTING_IMAGE_KEY_PREFIXES = [LISTING_IMAGE_KEY_PREFIX, LEGACY_LISTING_IMAGE_KEY_PREFIX]
 const LISTING_IMAGE_CACHE_SUFFIX = '?resize=560x560&format=webp&quality=78'
 const LISTING_IMAGE_HOSTS = new Set([
   'auctions.c.yimg.jp',
@@ -52,8 +54,8 @@ export default {
       return plain(403, 'Forbidden')
     }
 
-    if (key.startsWith(LISTING_IMAGE_KEY_PREFIX)) {
-      return serveListingImage(request, url, key, exp, ctx)
+    if (LISTING_IMAGE_KEY_PREFIXES.some((prefix) => key.startsWith(prefix))) {
+      return serveListingImage(request, url, key, exp, env, ctx)
     }
 
     // The signature is checked before the cache is consulted, so keying the
@@ -86,7 +88,7 @@ export default {
   },
 }
 
-async function serveListingImage(request, url, key, exp, ctx) {
+async function serveListingImage(request, url, key, exp, env, ctx) {
   const source = listingImageSourceURL(key)
   if (!source) return plain(404, 'Not Found')
 
@@ -96,27 +98,54 @@ async function serveListingImage(request, url, key, exp, ctx) {
   const cacheStatus = cached ? 'HIT' : 'MISS'
   let optimized = true
   if (!cached) {
-    let image
+    const thumbnailKey = await listingThumbnailObjectKey(source)
+    let stored
     try {
-      image = await fetchListingImage(source, true)
-      if (!isImageResponse(image)) {
-        // Keep source images visible if a host or a format cannot be resized.
-        image = await fetchListingImage(source, false)
-        optimized = false
-      }
+      stored = await env.MEDIA_BUCKET.get(thumbnailKey)
     } catch {
-      return plain(502, 'Image Unavailable')
+      // R2 lookup failures should not make an otherwise reachable source blank.
+      stored = null
     }
-    if (!isImageResponse(image)) return plain(502, 'Image Unavailable')
 
-    const headers = new Headers(image.headers)
-    headers.delete('ETag')
-    headers.set('Cache-Control', `public, max-age=${EDGE_CACHE_SECONDS}`)
-    headers.set('X-Content-Type-Options', 'nosniff')
-    cached = new Response(image.body, { status: 200, headers })
-    // Only keep resized variants at the edge. A failed transform fallback may
-    // be large, so retry it on the next visit instead of caching it for weeks.
-    if (optimized) ctx.waitUntil(cache.put(cacheKey, cached.clone()))
+    if (stored) {
+      const headers = new Headers()
+      stored.writeHttpMetadata(headers)
+      headers.set('ETag', stored.httpEtag)
+      headers.set('Cache-Control', `public, max-age=${EDGE_CACHE_SECONDS}`)
+      cached = new Response(stored.body, { status: 200, headers })
+    } else {
+      let image
+      try {
+        image = await fetchListingImage(source, true)
+        if (!isImageResponse(image)) {
+          // Keep source images visible if a host or a format cannot be resized.
+          image = await fetchListingImage(source, false)
+          optimized = false
+        }
+      } catch {
+        return plain(502, 'Image Unavailable')
+      }
+      if (!isImageResponse(image)) return plain(502, 'Image Unavailable')
+
+      // Clone before handing the stream to the edge response. Both R2 and
+      // Cache API need their own readable stream for background persistence.
+      const persistedImage = optimized ? image.clone() : null
+      const headers = new Headers(image.headers)
+      headers.delete('ETag')
+      headers.set('Cache-Control', `public, max-age=${EDGE_CACHE_SECONDS}`)
+      headers.set('X-Content-Type-Options', 'nosniff')
+      cached = new Response(image.body, { status: 200, headers })
+      if (optimized) {
+        // Persist one transformed copy so a cold visit from another Cloudflare
+        // region can read the small R2 thumbnail instead of re-fetching Yahoo.
+        ctx.waitUntil(env.MEDIA_BUCKET.put(thumbnailKey, persistedImage.body, {
+          httpMetadata: { contentType: 'image/webp', cacheControl: `public, max-age=${EDGE_CACHE_SECONDS}` },
+        }).catch(() => {}))
+        ctx.waitUntil(cache.put(cacheKey, cached.clone()))
+      }
+      // A failed transform fallback may be large; do not keep it at the edge.
+    }
+    if (stored) ctx.waitUntil(cache.put(cacheKey, cached.clone()))
   }
 
   const headers = new Headers(cached.headers)
@@ -125,6 +154,12 @@ async function serveListingImage(request, url, key, exp, ctx) {
   headers.set('X-Media-Cache', cacheStatus)
   headers.set('X-Media-Optimized', optimized ? 'webp-560' : 'source')
   return new Response(request.method === 'HEAD' ? null : cached.body, { status: 200, headers })
+}
+
+async function listingThumbnailObjectKey(source) {
+  const digest = new Uint8Array(await crypto.subtle.digest('SHA-256', encoder.encode(source)))
+  const hash = Array.from(digest, (byte) => byte.toString(16).padStart(2, '0')).join('')
+  return `musebooks/thumbs/listing-v2/${hash}.webp`
 }
 
 async function fetchListingImage(source, resize) {
@@ -156,8 +191,9 @@ function isAllowedListingImageURL(url) {
 }
 
 export function listingImageSourceURL(key) {
-  if (!key.startsWith(LISTING_IMAGE_KEY_PREFIX)) return ''
-  const encoded = key.slice(LISTING_IMAGE_KEY_PREFIX.length)
+  const prefix = LISTING_IMAGE_KEY_PREFIXES.find((candidate) => key.startsWith(candidate))
+  if (!prefix) return ''
+  const encoded = key.slice(prefix.length)
   if (!encoded || encoded.includes('/') || !/^[A-Za-z0-9_-]+$/.test(encoded)) return ''
   let source
   try {
