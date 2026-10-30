@@ -50,5 +50,5 @@ Not copied: MuseCards' blanket 300 requests/minute `/v1` read limit. The MuseBoo
 - First release (`09168677`) failed to start and rolled back automatically: GORM postgres 1.6 sends the DSN's `timezone=` text verbatim, so PostgreSQL rejected `'UTC'` (SQLSTATE 22023). Fixed in the next commit with a regression test, then deployed successfully.
 - Live through Cloudflare: all six security headers, document caching, FAQPage on book pages, IndexNow key. Scraper endpoints answer 401 without a token; the production token is set.
 - IndexNow: all 31,195 sitemap URLs accepted (HTTP 200).
-- Media Worker: not redeployed (the local Cloudflare login lacks access to that account), but `media.musebooks.my/robots.txt` already returns 200 from Cloudflare's managed robots.txt, so the MuseCards issue does not occur.
+- Media Worker deployed (version 807c357b) with a separate wrangler login for the MuseBooks Cloudflare account (`XDG_CONFIG_HOME=C:/Users/cheeh/.wrangler-musebooks`); the default wrangler login on this machine is the cardranking.app account. `/robots.txt` is answered by the Worker; signed covers load (edge MISS then HIT); unsigned or tampered URLs return 403.
 - Local `backend/storage/serviceAccountKey.json` deleted.

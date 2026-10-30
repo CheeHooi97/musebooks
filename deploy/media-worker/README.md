@@ -27,7 +27,7 @@ Without `CLOUDFLARE_R2_MEDIA_BASE_URL` the API returns stored URLs unchanged.
    ```bash
    openssl rand -base64 48
    cd deploy/media-worker
-   npx wrangler@4 login
+   npx wrangler@4 login   # must be the account that owns musebooks.my
    npx wrangler@4 secret put MEDIA_SIGNING_SECRET
    npx wrangler@4 deploy
    ```
