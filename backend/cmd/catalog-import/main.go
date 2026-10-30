@@ -40,6 +40,8 @@ type Record struct {
 	Origin                     *model.Origin          `json:"origin,omitempty"`
 	Work                       model.Work             `json:"work"`
 	FeaturedPerson             *model.Person          `json:"featuredPerson,omitempty"`
+	FeaturedCreditSource       string                 `json:"featuredCreditSource,omitempty"`
+	AdditionalFeaturedPeople   []model.Person         `json:"additionalFeaturedPeople,omitempty"`
 	CoverPerson                *model.Person          `json:"coverPerson,omitempty"`
 	AdditionalCoverPeople      []model.Person         `json:"additionalCoverPeople,omitempty"`
 	Edition                    model.Edition          `json:"edition"`
@@ -74,6 +76,41 @@ func validExclusionReason(reason string) bool {
 
 func validPersonIdentity(person *model.Person) bool {
 	return person != nil && person.ID == 0 && person.Slug == model.CatalogIdentity("model", person.CanonicalPublicName) && strings.TrimSpace(person.CanonicalPublicName) != ""
+}
+
+func upsertFeaturedCredit(tx *gorm.DB, workID string, input model.Person, people map[string]model.Person, creditSource string) error {
+	if strings.TrimSpace(creditSource) == "" {
+		creditSource = "verified_model_capture"
+	}
+	person := input
+	if known, ok := people[person.Slug]; ok {
+		person = known
+	} else {
+		personUpdates := map[string]interface{}{}
+		for column, value := range map[string]string{
+			"canonical_public_name":     person.CanonicalPublicName,
+			"original_name":             person.OriginalName,
+			"english_name":              person.EnglishName,
+			"traditional_chinese_name":  person.TraditionalChineseName,
+			"simplified_chinese_name":   person.SimplifiedChineseName,
+			"person_type":               person.PersonType,
+			"verification_source_url":   person.VerificationSourceURL,
+			"profile_source_confidence": person.ProfileSourceConfidence,
+		} {
+			if strings.TrimSpace(value) != "" {
+				personUpdates[column] = value
+			}
+		}
+		if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "slug"}}, DoUpdates: clause.Assignments(personUpdates)}).Create(&person).Error; err != nil {
+			return err
+		}
+		if err := tx.Where("slug = ?", person.Slug).First(&person).Error; err != nil {
+			return err
+		}
+		people[person.Slug] = person
+	}
+	credit := model.WorkPerson{WorkID: workID, PersonID: person.ID, Role: "featured", CreditedName: person.CanonicalPublicName, CreditSource: creditSource}
+	return tx.Omit("Work", "Person").Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "work_id"}, {Name: "person_id"}, {Name: "role"}}, DoUpdates: clause.AssignmentColumns([]string{"credited_name", "credit_source", "updated_at"})}).Create(&credit).Error
 }
 
 // normalizeReleaseDate stores precision-limited dates as calendar dates at UTC
@@ -287,6 +324,19 @@ func main() {
 		if r.FeaturedPerson != nil && !validPersonIdentity(r.FeaturedPerson) {
 			fail(fmt.Errorf("record %d has invalid featured person identity", i))
 		}
+		seenFeaturedPeople := map[string]bool{}
+		if r.FeaturedPerson != nil {
+			seenFeaturedPeople[r.FeaturedPerson.Slug] = true
+		}
+		for _, person := range r.AdditionalFeaturedPeople {
+			if !validPersonIdentity(&person) || seenFeaturedPeople[person.Slug] {
+				fail(fmt.Errorf("record %d has invalid or duplicate additional featured person identity", i))
+			}
+			seenFeaturedPeople[person.Slug] = true
+		}
+		if r.FeaturedCreditSource != "" && r.FeaturedCreditSource != "verified_model_capture" && r.FeaturedCreditSource != "verified_press_source" && r.FeaturedCreditSource != "verified_publisher_source" {
+			fail(fmt.Errorf("record %d has invalid featured credit source", i))
+		}
 		if r.CoverPerson != nil && !validPersonIdentity(r.CoverPerson) {
 			fail(fmt.Errorf("record %d has invalid cover person identity", i))
 		}
@@ -334,7 +384,7 @@ func main() {
 		} else if strings.TrimSpace(r.Work.FeaturedNames) == "" || r.Work.IssueMonth != "" {
 			fail(fmt.Errorf("record %d photobook requires a featured model and cannot carry an issue month", i))
 		}
-		if r.Work.ID == "" || r.Work.OriginalTitle == "" || !validCatalogOrigin(r.Work.OriginCode) || r.Edition.ID == "" || r.Edition.WorkID != r.Work.ID || r.Edition.MetadataSourceURL == "" {
+		if r.Work.ID == "" || r.Work.OriginalTitle == "" || strings.Contains(r.Work.OriginalTitle, "??") || !validCatalogOrigin(r.Work.OriginCode) || r.Edition.ID == "" || r.Edition.WorkID != r.Work.ID || r.Edition.MetadataSourceURL == "" {
 			fail(fmt.Errorf("record %d lacks verified catalog identity", i))
 		}
 		if r.Edition.Format != "physical" && r.Edition.Format != "digital" {
@@ -450,37 +500,12 @@ func main() {
 					return err
 				}
 				if r.FeaturedPerson != nil {
-					person := *r.FeaturedPerson
-					if known, ok := featuredPeople[person.Slug]; ok {
-						person = known
-					} else {
-						// The work trigger may already have created a skeletal person.
-						// Keep the reviewed, nonempty identity fields on that row.
-						personUpdates := map[string]interface{}{}
-						for column, value := range map[string]string{
-							"canonical_public_name":     person.CanonicalPublicName,
-							"original_name":             person.OriginalName,
-							"english_name":              person.EnglishName,
-							"traditional_chinese_name":  person.TraditionalChineseName,
-							"simplified_chinese_name":   person.SimplifiedChineseName,
-							"person_type":               person.PersonType,
-							"verification_source_url":   person.VerificationSourceURL,
-							"profile_source_confidence": person.ProfileSourceConfidence,
-						} {
-							if strings.TrimSpace(value) != "" {
-								personUpdates[column] = value
-							}
-						}
-						if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "slug"}}, DoUpdates: clause.Assignments(personUpdates)}).Create(&person).Error; err != nil {
-							return err
-						}
-						if err := tx.Where("slug = ?", person.Slug).First(&person).Error; err != nil {
-							return err
-						}
-						featuredPeople[person.Slug] = person
+					if err := upsertFeaturedCredit(tx, r.Work.ID, *r.FeaturedPerson, featuredPeople, r.FeaturedCreditSource); err != nil {
+						return err
 					}
-					credit := model.WorkPerson{WorkID: r.Work.ID, PersonID: person.ID, Role: "featured", CreditedName: person.CanonicalPublicName, CreditSource: "verified_model_capture"}
-					if err := tx.Omit("Work", "Person").Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "work_id"}, {Name: "person_id"}, {Name: "role"}}, DoUpdates: clause.AssignmentColumns([]string{"credited_name", "credit_source", "updated_at"})}).Create(&credit).Error; err != nil {
+				}
+				for _, person := range r.AdditionalFeaturedPeople {
+					if err := upsertFeaturedCredit(tx, r.Work.ID, person, featuredPeople, r.FeaturedCreditSource); err != nil {
 						return err
 					}
 				}

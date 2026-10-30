@@ -123,7 +123,8 @@ func (r *CatalogRepository) DirectoryBooks(ctx context.Context, p model.CatalogB
 		}
 		return db.Order("release_date DESC NULLS LAST,id")
 	}).Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source")
-	err := query.Order("works.original_title,works.id").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Find(&works).Error
+	// Newest release first; undated works follow, by title.
+	err := query.Order("(SELECT MAX(e.release_date) FROM editions e WHERE e.work_id=works.id AND e.status<>'superseded') DESC NULLS LAST,works.original_title,works.id").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Find(&works).Error
 	if err == nil {
 		err = r.loadBookMedia(ctx, works)
 	}

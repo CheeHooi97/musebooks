@@ -22,7 +22,7 @@ export default function ListingsView({ status, scope = {}, syncUrl = false }) {
   const update = (key, value) => { setFilters(current => ({ ...current, [key]: value })); setPage(1); };
   const sold = status === "sold";
   return <div className="listings-view">
-    <div className="toolbar toolbar--wrap">
+    <div className={`toolbar toolbar--wrap listing-toolbar${sold ? " listing-toolbar--compact" : ""}`}>
       <form className="search-field" role="search" onSubmit={event => { event.preventDefault(); update("q", query.trim()); }}>
         <Icon name="search" size={18} />
         <input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={t("Title, person, or publisher")} aria-label={t("Search listings")} />

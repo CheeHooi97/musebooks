@@ -114,7 +114,7 @@ export default function JapanMarket() {
   }
 
   return <div className="japan-market">
-    <div className="toolbar toolbar--wrap">
+    <div className="toolbar toolbar--wrap listing-toolbar">
       <form className="search-field" role="search" onSubmit={event => { event.preventDefault(); setSearch(query.trim()); }}>
         <Icon name="search" size={18} />
         <input type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder={t("Title or model name")} aria-label={t("Search Japan marketplace")} />
@@ -131,15 +131,19 @@ export default function JapanMarket() {
       <div className="offer-grid">{groups.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE).map((group, index) => <article className="offer-card" key={group.key}>
         {showCatalogImages && <div className="offer-card__image">{group.imageUrl ? <img src={group.imageUrl} alt="" loading={index < 2 ? "eager" : "lazy"} fetchPriority={index === 0 ? "high" : "auto"} decoding="async" /> : <span>{t("Photo unavailable")}</span>}</div>}
         <div className="offer-card__body">
-          <p className={`status-tag${group.workSlug ? " status-tag--ok" : ""}`}>{t(group.workSlug ? "Catalog matched" : "Catalog match pending")}</p>
-          <h3>{group.workSlug ? <a href={`/books/${encodeURIComponent(group.workSlug)}`}>{group.title}</a> : group.title}</h3>
-          {group.formats.map(itemFormat => {
-            const offer = group.items.find(item => (item.format || "physical") === itemFormat);
-            return <div className="offer-card__price" key={itemFormat}>
-              <span>{t(itemFormat === "digital" ? "Digital edition" : "Physical book")}{offer.releaseDate ? ` · ${offer.releaseDate.slice(0, offer.releasePrecision === "month" ? 7 : offer.releasePrecision === "year" ? 4 : 10)}` : ""}</span>
-              <strong>{formatPrice(offer.priceMinor, offer.currency)}<small>{t(itemFormat === "digital" ? "Digital retail price" : offer.priceType === "auction_current" ? "Current bid" : offer.status === "completed" ? "Sold price" : "Asking price")}</small></strong>
-            </div>;
-          })}
+          <div className="offer-card__identity">
+            <p className={`status-tag${group.workSlug ? " status-tag--ok" : ""}`}>{t(group.workSlug ? "Catalog matched" : "Catalog match pending")}</p>
+            <h3>{group.workSlug ? <a href={`/books/${encodeURIComponent(group.workSlug)}`}>{group.title}</a> : group.title}</h3>
+          </div>
+          <div className="offer-card__prices">
+            {group.formats.map(itemFormat => {
+              const offer = group.items.find(item => (item.format || "physical") === itemFormat);
+              return <div className="offer-card__price" key={itemFormat}>
+                <span>{t(itemFormat === "digital" ? "Digital edition" : "Physical book")}{offer.releaseDate ? ` · ${offer.releaseDate.slice(0, offer.releasePrecision === "month" ? 7 : offer.releasePrecision === "year" ? 4 : 10)}` : ""}</span>
+                <strong>{formatPrice(offer.priceMinor, offer.currency)}<small>{t(itemFormat === "digital" ? "Digital retail price" : offer.priceType === "auction_current" ? "Current bid" : offer.status === "completed" ? "Sold price" : "Asking price")}</small></strong>
+              </div>;
+            })}
+          </div>
           <details><summary>{t("Prices by platform")} · {group.items.length} {t(group.items.length === 1 ? "offer" : "offers")}</summary>
             {group.formats.map(itemFormat => <EditionPrices key={itemFormat} edition={{ editionLabel: group.title, format: itemFormat, listings: group.items.filter(item => (item.format || "physical") === itemFormat).map(item => ({ ...item, format: itemFormat, source: { ...item.source, photobookFormat: itemFormat } })) }} />)}
           </details>
