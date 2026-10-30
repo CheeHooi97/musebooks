@@ -41,6 +41,9 @@ type MarketplaceListingEntry struct {
 type CatalogBrowseQuery struct {
 	Query, Kind, ID, Status, Format, PublicationType, Source, Person, Publisher, Language, Year, Region string
 	Page, PageSize                                                                                      int
+	Sort, CursorID, CursorTitle                                                                         string
+	CursorMode                                                                                          bool
+	CursorObservedAt                                                                                    *time.Time
 }
 
 func (entry *MarketEntry) SetFeaturedNames() {

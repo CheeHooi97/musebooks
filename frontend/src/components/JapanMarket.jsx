@@ -1,36 +1,46 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Icon from "./Icon";
 import EditionPrices from "./EditionPrices";
-import { LoadState, Pagination } from "./Page";
+import { LoadState } from "./Page";
 import { apiUrl } from "../lib/api";
 import { usePreferences } from "../lib/preferences";
 import { showCatalogImages } from "../lib/platform";
 import { aliasIndex, marketplaceGroups } from "../lib/marketplace-groups";
 import { formatPrice } from "../lib/price-policy";
-import { useLoader, useResource } from "../lib/catalog";
+import { useResource } from "../lib/catalog";
 
 const PAGE_SIZE = 24;
+const API_PAGE_SIZE = 50;
 
-async function loadJapanOffers() {
-  const load = async page => {
-    const response = await fetch(apiUrl(`/v1/marketplace-listings?region=JP&scope=offers&status=all&pageSize=50&page=${page}`));
-    if (!response.ok) throw new Error("error");
-    return response.json();
-  };
-  const first = await load(1);
-  const records = [...first.items];
-  // Bound concurrency while collecting every page, not just the first 50.
-  for (let start = 2; start <= first.totalPages; start += 4) {
-    const batch = await Promise.all(Array.from({ length: Math.min(4, first.totalPages - start + 1) }, (_, i) => load(start + i)));
-    records.push(...batch.flatMap(result => result.items));
+async function loadJapanOffers({ cursor = "", search, format, availability, sortBy, signal }) {
+  const params = new URLSearchParams({ region: "JP", scope: "offers", status: availability || "all", limit: String(API_PAGE_SIZE), sort: sortBy });
+  if (search) params.set("q", search);
+  if (format) params.set("format", format);
+  if (cursor) params.set("cursor", cursor);
+  const response = await fetch(apiUrl(`/v1/marketplace-listings?${params}`), { signal });
+  if (!response.ok) throw new Error("error");
+  return response.json();
+}
+
+async function loadGroupsThroughPage({ data, page, search, format, availability, sortBy, aliases, signal }) {
+  let groups = marketplaceGroups(data.items || [], { query: search, format, availability, aliases });
+  while (groups.length < page * PAGE_SIZE && data.nextCursor) {
+    const next = await loadJapanOffers({ cursor: data.nextCursor, search, format, availability, sortBy, signal });
+    data = { ...data, items: [...data.items, ...(next.items || [])], total: next.total, hasMore: next.hasMore, nextCursor: next.nextCursor };
+    groups = marketplaceGroups(data.items, { query: search, format, availability, aliases });
   }
-  return [...new Map(records.map(item => [item.id, item])).values()];
+  return { data, groups };
 }
 
 /** Japan marketplace offers grouped by verified work or identical listing title. */
 export default function JapanMarket() {
   const { t } = usePreferences();
-  const offers = useLoader(loadJapanOffers, []);
+  const [offers, setOffers] = useState({ state: "loading" });
+  const [attempt, setAttempt] = useState(0);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const [moreError, setMoreError] = useState(false);
+  const generation = useRef(0);
+  const moreController = useRef(null);
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
   // Search aliases come from MuseBooks' own model records: the API matches every
@@ -44,13 +54,65 @@ export default function JapanMarket() {
   const [availability, setAvailability] = useState("");
   const [sortBy, setSortBy] = useState("observed");
   const [page, setPage] = useState(1);
-  useEffect(() => setPage(1), [search, format, availability, sortBy]);
+  useEffect(() => {
+    generation.current += 1;
+    const controller = new AbortController();
+    moreController.current?.abort();
+    moreController.current = null;
+    setPage(1);
+    setLoadingMore(false);
+    setMoreError(false);
+    setOffers({ state: "loading" });
+    loadJapanOffers({ search, format, availability, sortBy, signal: controller.signal })
+      .then(data => loadGroupsThroughPage({ data, page: 1, search, format, availability, sortBy, aliases, signal: controller.signal }))
+      .then(({ data }) => { if (!controller.signal.aborted) setOffers({ state: "live", data }); })
+      .catch(() => { if (!controller.signal.aborted) setOffers({ state: "error" }); });
+    return () => controller.abort();
+  }, [search, format, availability, sortBy, aliases, attempt]);
   const groups = useMemo(() => {
-    const result = marketplaceGroups(offers.data || [], { query: search, format, availability, aliases });
-    // Unmatched records have no verified publication date; keep observation order otherwise.
-    return sortBy === "title" ? result.sort((a, b) => a.title.localeCompare(b.title)) : result;
-  }, [offers.data, search, format, availability, sortBy, aliases]);
-  const offerCount = groups.reduce((count, group) => count + group.items.length, 0);
+    return marketplaceGroups(offers.data?.items || [], { query: search, format, availability, aliases });
+  }, [offers.data?.items, search, format, availability, aliases]);
+  const offerCount = offers.data?.total ?? 0;
+  const hasNextPage = groups.length > page * PAGE_SIZE || Boolean(offers.data?.nextCursor);
+
+  async function goToPage(nextPage) {
+    if (loadingMore || moreController.current) return;
+    if (nextPage < page) {
+      setPage(nextPage);
+      window.scrollTo(0, 0);
+      return;
+    }
+    const firstGroup = (nextPage - 1) * PAGE_SIZE;
+    const request = generation.current;
+    let data = offers.data;
+    let loadedGroups = groups;
+    if (!data) return;
+    if (loadedGroups.length < nextPage * PAGE_SIZE && data.nextCursor) {
+      const controller = new AbortController();
+      moreController.current = controller;
+      setLoadingMore(true);
+      setMoreError(false);
+      try {
+        const loaded = await loadGroupsThroughPage({ data, page: nextPage, search, format, availability, sortBy, aliases, signal: controller.signal });
+        if (request !== generation.current || controller.signal.aborted) return;
+        data = loaded.data;
+        loadedGroups = loaded.groups;
+        setOffers({ state: "live", data });
+      } catch {
+        if (request === generation.current && !controller.signal.aborted) setMoreError(true);
+      } finally {
+        if (request === generation.current) {
+          setLoadingMore(false);
+          moreController.current = null;
+        }
+      }
+    }
+    if (request === generation.current && loadedGroups.length > firstGroup) {
+      setPage(nextPage);
+      window.scrollTo(0, 0);
+    }
+  }
+
   return <div className="japan-market">
     <div className="toolbar toolbar--wrap">
       <form className="search-field" role="search" onSubmit={event => { event.preventDefault(); setSearch(query.trim()); }}>
@@ -62,12 +124,12 @@ export default function JapanMarket() {
       <label className="select-field"><span>{t("Status")}</span><select value={availability} onChange={event => setAvailability(event.target.value)}><option value="">{t("All records")}</option><option value="active">{t("Active")}</option><option value="completed">{t("Completed")}</option></select></label>
       <label className="select-field"><span>{t("Sort by")}</span><select value={sortBy} onChange={event => setSortBy(event.target.value)}><option value="observed">{t("Latest observed")}</option><option value="title">{t("Title")}</option></select></label>
     </div>
-    <LoadState state={offers.state} retry={offers.retry} errorMessage="Japan marketplace records could not be loaded." loadingMessage="Loading marketplace offers…" />
+    <LoadState state={offers.state} retry={() => setAttempt(value => value + 1)} errorMessage="Japan marketplace records could not be loaded." loadingMessage="Loading marketplace offers…" />
     {offers.state === "live" && <>
-      <p className="results-count" role="status">{groups.length.toLocaleString()} {t("title groups")} · {offerCount.toLocaleString()} {t("offers")}</p>
+      <p className="results-count" role="status">{offers.data.hasMore ? <>{offers.data.items.length.toLocaleString()} {t("of")} {offerCount.toLocaleString()} {t("offers")}</> : <>{groups.length.toLocaleString()} {t("title groups")} · {offerCount.toLocaleString()} {t("offers")}</>}</p>
       {!groups.length && <p className="load-state">{t("No Japan marketplace listings match these filters.")}</p>}
-      <div className="offer-grid">{groups.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE).map(group => <article className="offer-card" key={group.key}>
-        {showCatalogImages && <div className="offer-card__image">{group.imageUrl ? <img src={group.imageUrl} alt="" loading="lazy" /> : <span>{t("Photo unavailable")}</span>}</div>}
+      <div className="offer-grid">{groups.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE).map((group, index) => <article className="offer-card" key={group.key}>
+        {showCatalogImages && <div className="offer-card__image">{group.imageUrl ? <img src={group.imageUrl} alt="" loading={index < 2 ? "eager" : "lazy"} fetchPriority={index === 0 ? "high" : "auto"} decoding="async" /> : <span>{t("Photo unavailable")}</span>}</div>}
         <div className="offer-card__body">
           <p className={`status-tag${group.workSlug ? " status-tag--ok" : ""}`}>{t(group.workSlug ? "Catalog matched" : "Catalog match pending")}</p>
           <h3>{group.workSlug ? <a href={`/books/${encodeURIComponent(group.workSlug)}`}>{group.title}</a> : group.title}</h3>
@@ -83,7 +145,12 @@ export default function JapanMarket() {
           </details>
         </div>
       </article>)}</div>
-      <Pagination page={page} pages={Math.ceil(groups.length / PAGE_SIZE)} onPage={next => { setPage(next); window.scrollTo(0, 0); }} label="Marketplace results pages" />
+      {moreError && <p className="load-state load-state--error" role="alert">{t("Japan marketplace records could not be loaded.")} <button type="button" className="button" onClick={() => goToPage(page + 1)}>{t("Retry connection")}</button></p>}
+      {(page > 1 || hasNextPage) && <nav className="pagination" aria-label={t("Marketplace results pages")}>
+        <button type="button" className="button button--ghost" disabled={page <= 1 || loadingMore} onClick={() => goToPage(page - 1)}>{t("Previous")}</button>
+        <span>{t("Page")} {page}</span>
+        <button type="button" className="button button--ghost" disabled={!hasNextPage || loadingMore} onClick={() => goToPage(page + 1)}>{loadingMore ? t("Loading…") : t("Next")}</button>
+      </nav>}
     </>}
   </div>;
 }

@@ -209,11 +209,19 @@ func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.Cat
 	}
 	if p.Query != "" {
 		term := "%" + p.Query + "%"
-		query = query.Where("listing.title ILIKE ? OR work.original_title ILIKE ? OR work.featured_names ILIKE ? OR edition.publisher ILIKE ? OR EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id WHERE wp.work_id=work.id AND wp.role IN ('featured','cover_model') AND p.canonical_public_name ILIKE ?)", term, term, term, term, term)
+		query = query.Where("listing.title ILIKE ? OR work.original_title ILIKE ? OR work.featured_names ILIKE ? OR edition.publisher ILIKE ? OR EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id LEFT JOIN person_aliases pa ON pa.person_id=p.id WHERE wp.work_id=work.id AND wp.role IN ('featured','cover_model') AND (p.canonical_public_name ILIKE ? OR p.original_name ILIKE ? OR p.english_name ILIKE ? OR pa.alias_name ILIKE ?))", term, term, term, term, term, term, term, term)
 	}
 	var total int64
 	if err := query.Session(&gorm.Session{}).Count(&total).Error; err != nil {
 		return nil, 0, err
+	}
+	if p.CursorMode && p.CursorID != "" {
+		if p.Sort == "title" {
+			title := "COALESCE(NULLIF(work.original_title,''),listing.title,'')"
+			query = query.Where("(("+title+" > ?) OR ("+title+" = ? AND (listing.observed_at < ? OR (listing.observed_at = ? AND listing.id > ?))))", p.CursorTitle, p.CursorTitle, *p.CursorObservedAt, *p.CursorObservedAt, p.CursorID)
+		} else if p.CursorObservedAt != nil {
+			query = query.Where("(listing.observed_at < ? OR (listing.observed_at = ? AND listing.id > ?))", *p.CursorObservedAt, *p.CursorObservedAt, p.CursorID)
+		}
 	}
 	columns := `listing.id,listing.external_id,listing.url,listing.title,listing.seller_location,listing.condition,
  listing.format_candidate AS format,listing.status,listing.price_minor,listing.currency,listing.price_type,
@@ -225,7 +233,15 @@ func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.Cat
 	 (work.id IS NOT NULL) AS catalog_matched,work.original_title AS work_title,work.slug AS work_slug,COALESCE(NULLIF(work.featured_names,''),(SELECT string_agg(DISTINCT wp.credited_name, ', ') FROM work_people wp WHERE wp.work_id=work.id AND wp.role='cover_model')) AS featured_names,
  edition.edition_label,edition.publisher,edition.release_date,edition.release_precision`
 	entries := []model.MarketplaceListingEntry{}
-	err := query.Select(columns).Order("listing.observed_at DESC,listing.id ASC").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Scan(&entries).Error
+	order := "listing.observed_at DESC,listing.id ASC"
+	if p.Sort == "title" {
+		order = "COALESCE(NULLIF(work.original_title,''),listing.title,'') ASC,listing.observed_at DESC,listing.id ASC"
+	}
+	query = query.Select(columns).Order(order)
+	if !p.CursorMode {
+		query = query.Offset((p.Page - 1) * p.PageSize)
+	}
+	err := query.Limit(p.PageSize).Scan(&entries).Error
 	for i := range entries {
 		entries[i].ImageURL = model.PublicCoverURL(entries[i].ImageURL)
 	}
