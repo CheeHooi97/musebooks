@@ -1,0 +1,41 @@
+[
+  {
+    "work": {
+      "id": "korea-yebin-picnic-photobook-digital",
+      "slug": "korea-yebin-picnic-photobook-digital",
+      "publicationType": "photobook",
+      "originalTitle": "Yebin's Picnic Photobook",
+      "summary": "Paid digital photobook bundle sold under the product title Yebin's Picnic Photobook. The Gumroad listing includes a Picnic With Love web pictorial and a Nezuko-themed set, each described as 70 photos with an accompanying video. The page does not state a publication year/date, publisher imprint, ISBN, or page count; photo counts are not pagination. Jeon Yebin is identified as the featured influencer/model through the seller's Yebin profile and matching yeb00__ creator links. No image or video reuse license is stated, so no cover or paid files are copied or hosted.",
+      "originCode": "KR",
+      "featuredNames": "전예빈"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-9f203992a6e92353664aa9f3f8c0814d060d6f1cc143e40e5902d9037d662a5a",
+      "canonicalPublicName": "전예빈",
+      "originalName": "전예빈",
+      "englishName": "Jeon Yebin",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://feednews.co.kr/1409",
+      "profileSourceConfidence": "press_and_social_handle"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-yebin-picnic-photobook-digital-edition",
+      "workId": "korea-yebin-picnic-photobook-digital",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "editionVariant": "Picnic and Nezuko digital bundle",
+      "contentSummary": "Gumroad product combines two web-pictorial sets: Picnic With Love (70 photos and one video) and Nezuko (70 photos and one making video). Photo counts are not page counts. No date, publisher, ISBN, or pagination is given. Media is not mirrored because no reuse permission is documented.",
+      "metadataSourceUrl": "https://yeb00.gumroad.com/l/Yebin_Picnic",
+      "seriesName": "Yebin digital photobooks",
+      "editionLabel": "Digital Korean photobook bundle"
+    }
+  }
+]

@@ -1,0 +1,317 @@
+[
+  {
+    "work": {
+      "id": "korea-impact-jeong-yoo-seung-web-photobook-2019",
+      "slug": "korea-impact-jeong-yoo-seung-web-photobook-2019",
+      "publicationType": "photobook",
+      "originalTitle": "정유승 임팩트크루 웹화보집",
+      "englishTitle": "Impact Crew Web Photobook: Jeong Yoo-seung",
+      "summary": "Paid digital Impact Crew photobook featuring Jeong Yoo-seung, Shin Saerom, and Jung Da-yeon. The YES24 edition is a dated, ISBN-identified DRM PDF eBook; the product contents identify all three photo subjects. Sports Kyunghyang independently identifies Jeong Yoo-seung as a fitness model and reports her named Impact photo book.",
+      "originCode": "KR",
+      "featuredNames": "정유승,신새롬,정다연"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-4841ec77aec9adacbaee5b25fbb9abb596b199592b12ed3f6e56c06cc30016bd",
+      "canonicalPublicName": "정유승",
+      "originalName": "정유승",
+      "englishName": "Jeong Yoo-seung",
+      "personType": "model",
+      "verificationSourceUrl": "https://sports.khan.co.kr/article/201904111050003",
+      "profileSourceConfidence": "press_social_link"
+    },
+    "additionalFeaturedPeople": [
+      {
+        "slug": "model-79e0e6e3942c999094e26f5b898b7cc51a199ad71cf4a9f45ceccd340db564a3",
+        "canonicalPublicName": "신새롬",
+        "originalName": "신새롬",
+        "englishName": "Shin Saerom",
+        "personType": "influencer",
+        "verificationSourceUrl": "https://www.etnews.com/20220916000275",
+        "profileSourceConfidence": "contemporary_press"
+      },
+      {
+        "slug": "model-f51abbbb3dd641f9492067dddfd88e70782c6c5e2f76dbabb043fa8b63d3493b",
+        "canonicalPublicName": "정다연",
+        "originalName": "정다연",
+        "englishName": "Jung Da-yeon",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.wikitree.co.kr/articles/453827",
+        "profileSourceConfidence": "press_social_link"
+      }
+    ],
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-impact-jeong-yoo-seung-web-photobook-2019-digital",
+      "workId": "korea-impact-jeong-yoo-seung-web-photobook-2019",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "Impact Crew",
+      "releaseDate": "2019-12-01T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "9791196797867",
+      "editionVariant": "DRM PDF eBook",
+      "contentSummary": "YES24 identifies a 59.11 MB DRM PDF eBook with this title, publisher, 2019-12-01 date, and ISBN-13 9791196797867. Its contents list Jeong Yoo-seung, Shin Saerom, and Jung Da-yeon as photo subjects. The product does not provide a reliable total page count. No cover or paid file was copied.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/87731916",
+      "editionLabel": "Digital PDF eBook"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-impact-girl-crush-web-photobook-2019",
+      "slug": "korea-impact-girl-crush-web-photobook-2019",
+      "publicationType": "photobook",
+      "originalTitle": "걸크러쉬 임팩트크루 웹화보집",
+      "englishTitle": "Impact Crew Web Photobook: Girl Crush",
+      "summary": "Paid digital Impact Crew photobook of the Korean performance/model group Girl Crush (걸크러쉬). The YES24 product description identifies the group title and names Yona, Jia, Bomi, and Taeri in its contents; a 2019 Gwanak FM interview independently identifies the group and lineup.",
+      "originCode": "KR",
+      "featuredNames": "걸크러쉬"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-439ec11f6fa4dc33130fdeaa7af1e4be0bdbe86bc1adde024813fbd490fc0d43",
+      "canonicalPublicName": "걸크러쉬",
+      "originalName": "걸크러쉬",
+      "englishName": "Girl Crush",
+      "personType": "group",
+      "verificationSourceUrl": "https://m.radiogfm.net/news/15151",
+      "profileSourceConfidence": "independent_press"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-impact-girl-crush-web-photobook-2019-digital",
+      "workId": "korea-impact-girl-crush-web-photobook-2019",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "Impact Crew",
+      "releaseDate": "2019-12-01T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "9791196797874",
+      "editionVariant": "DRM PDF eBook",
+      "contentSummary": "YES24 identifies a 61.76 MB DRM PDF eBook with this title, publisher, 2019-12-01 date, and ISBN-13 9791196797874. The contents name Yona, Jia, Bomi, and Taeri and describe previously unpublished photos and Q&A. No total page count is supplied. No cover or paid file was copied.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/87731917",
+      "editionLabel": "Digital PDF eBook"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-impact-an-jeong-mi-web-photobook-2020",
+      "slug": "korea-impact-an-jeong-mi-web-photobook-2020",
+      "publicationType": "photobook",
+      "originalTitle": "안정미 임팩트 웹화보",
+      "englishTitle": "Impact Web Photobook: An Jeong-mi",
+      "summary": "Paid digital Impact Crew photo book featuring model An Jeong-mi (안정미). The exact YES24 eBook product page identifies her as a former model and describes unreleased photographs; its edition metadata gives a date and ISBN.",
+      "originCode": "KR",
+      "featuredNames": "안정미"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-358b6cf5b3ac4495fae319227c1cad98d7f74c80825cc5db21985ff8795f216c",
+      "canonicalPublicName": "안정미",
+      "originalName": "안정미",
+      "englishName": "An Jeong-mi",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.yes24.com/product/goods/90474558",
+      "profileSourceConfidence": "publisher_product_page"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-impact-an-jeong-mi-web-photobook-2020-digital",
+      "workId": "korea-impact-an-jeong-mi-web-photobook-2020",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "Impact Crew",
+      "releaseDate": "2020-06-05T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "9791196797881",
+      "editionVariant": "DRM PDF eBook",
+      "contentSummary": "YES24 identifies an 85.43 MB DRM PDF eBook titled 안정미 임팩트 웹화보, published by Impact Crew on 2020-06-05, ISBN-13 9791196797881. The product describes unreleased photographs and provides no reliable total page count. No cover or paid file was copied.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/90474558",
+      "editionLabel": "Digital PDF eBook"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-impact-laysha-goeun-web-photobook-2020",
+      "slug": "korea-impact-laysha-goeun-web-photobook-2020",
+      "publicationType": "photobook",
+      "originalTitle": "레이샤 고은 임팩트 웹화보",
+      "englishTitle": "Impact Web Photobook: Laysha Goeun",
+      "summary": "Paid digital Impact Crew photo book featuring Goeun (고은), identified on the product page as a former Laysha member. Star News independently identifies Goeun as a Laysha member and reports her own photo-release announcement.",
+      "originCode": "KR",
+      "featuredNames": "레이샤 고은"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-1d0273f711fd2f5e6f472322f578aaa5cfe4f48a44bec302d245c397890a2447",
+      "canonicalPublicName": "레이샤 고은",
+      "originalName": "고은",
+      "englishName": "Goeun",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.starnewskorea.com/music/2021/02/23/2021022311030817945",
+      "profileSourceConfidence": "press_social_link"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-impact-laysha-goeun-web-photobook-2020-digital",
+      "workId": "korea-impact-laysha-goeun-web-photobook-2020",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "Impact Crew",
+      "releaseDate": "2020-06-05T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "9791196797898",
+      "editionVariant": "DRM PDF eBook",
+      "contentSummary": "YES24 identifies a 288.67 MB DRM PDF eBook titled 레이샤 고은 임팩트 웹화보, published by Impact Crew on 2020-06-05, ISBN-13 9791196797898. The product identifies Goeun as a former Laysha member and describes unreleased photographs. No total page count is supplied. No cover or paid file was copied.",
+      "metadataSourceUrl": "https://www.yes24.com/product/goods/90474556",
+      "editionLabel": "Digital PDF eBook"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-riniq-vol06-velvet-murmur-yoo-seorin-digital",
+      "slug": "korea-riniq-vol06-velvet-murmur-yoo-seorin-digital",
+      "publicationType": "photobook",
+      "originalTitle": "RINIQ Vol.6 — Velvet Murmur",
+      "englishTitle": "RINIQ Vol.6: Velvet Murmur",
+      "summary": "Creator-led digital photo magazine issue by YooSeorin, sold through the RINI BOOKS store. The creator's product post offers two PDF versions: Lite (49 pages) and Original (77 pages). No release date, ISBN, or publisher filing is stated; the creator publicly tags the series as Korean-model content.",
+      "originCode": "KR",
+      "featuredNames": "YooSeorin"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-bd6a773e793568b0be2c14cb3736128b52a9d57ceb8e9a1d088dd1686ccb9042",
+      "canonicalPublicName": "YooSeorin",
+      "originalName": "서린",
+      "englishName": "YooSeorin",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.patreon.com/Riniverse/posts/2026nyeon-balmae-147382927?l=de",
+      "profileSourceConfidence": "creator_controlled_patron"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-riniq-vol06-velvet-murmur-yoo-seorin-lite",
+      "workId": "korea-riniq-vol06-velvet-murmur-yoo-seorin-digital",
+      "format": "digital",
+      "editionMarket": "KR",
+      "publisher": "RINI BOOKS",
+      "pageCount": 49,
+      "editionVariant": "Lite PDF",
+      "contentSummary": "The creator's Patreon product post offers the Lite version as a 49-page PDF with a separate purchase price. No publication date or ISBN is stated. The page grants no permission to copy or host the pages or cover art.",
+      "metadataSourceUrl": "https://www.patreon.com/Riniverse/posts/riniq-vol-6-ver-157047855",
+      "seriesName": "RINIQ",
+      "editionLabel": "Lite digital edition"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-riniq-vol06-velvet-murmur-yoo-seorin-digital",
+      "slug": "korea-riniq-vol06-velvet-murmur-yoo-seorin-digital",
+      "publicationType": "photobook",
+      "originalTitle": "RINIQ Vol.6 — Velvet Murmur",
+      "englishTitle": "RINIQ Vol.6: Velvet Murmur",
+      "summary": "Creator-led digital photo magazine issue by YooSeorin, sold through the RINI BOOKS store. The creator's product post offers two PDF versions: Lite (49 pages) and Original (77 pages). No release date, ISBN, or publisher filing is stated; the creator publicly tags the series as Korean-model content.",
+      "originCode": "KR",
+      "featuredNames": "YooSeorin"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-bd6a773e793568b0be2c14cb3736128b52a9d57ceb8e9a1d088dd1686ccb9042",
+      "canonicalPublicName": "YooSeorin",
+      "originalName": "서린",
+      "englishName": "YooSeorin",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.patreon.com/Riniverse/posts/2026nyeon-balmae-147382927?l=de",
+      "profileSourceConfidence": "creator_controlled_patron"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-riniq-vol06-velvet-murmur-yoo-seorin-original",
+      "workId": "korea-riniq-vol06-velvet-murmur-yoo-seorin-digital",
+      "format": "digital",
+      "editionMarket": "KR",
+      "publisher": "RINI BOOKS",
+      "pageCount": 77,
+      "editionVariant": "Original PDF",
+      "contentSummary": "The creator's Patreon product post offers the Original version as a 77-page PDF with a separate purchase price. No publication date or ISBN is stated. The page grants no permission to copy or host the pages or cover art.",
+      "metadataSourceUrl": "https://www.patreon.com/Riniverse/posts/riniq-vol-6-ver-157047855",
+      "seriesName": "RINIQ",
+      "editionLabel": "Original digital edition"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-ono-09-halloween-spicy-yoo-seorin-digital",
+      "slug": "korea-ono-09-halloween-spicy-yoo-seorin-digital",
+      "publicationType": "photobook",
+      "originalTitle": "O.N.O #09 Halloween (Spicy Ver.)",
+      "englishTitle": "O.N.O #09: Halloween (Spicy Ver.)",
+      "summary": "Creator-led 60-page digital photo publication by YooSeorin with two photo concepts. Its first-party Patreon product page lists a limited sale window of October 21–24 but does not state the year; the standalone sale window has passed. RINI BOOKS is linked as the purchase route. No release date or ISBN is assigned.",
+      "originCode": "KR",
+      "featuredNames": "YooSeorin"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-bd6a773e793568b0be2c14cb3736128b52a9d57ceb8e9a1d088dd1686ccb9042",
+      "canonicalPublicName": "YooSeorin",
+      "originalName": "서린",
+      "englishName": "YooSeorin",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.patreon.com/Riniverse/posts/2026nyeon-balmae-147382927?l=de",
+      "profileSourceConfidence": "creator_controlled_patron"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-ono-09-halloween-spicy-yoo-seorin-digital-edition",
+      "workId": "korea-ono-09-halloween-spicy-yoo-seorin-digital",
+      "format": "digital",
+      "editionMarket": "KR",
+      "publisher": "RINI BOOKS",
+      "pageCount": 60,
+      "editionVariant": "Spicy Ver. PDF",
+      "contentSummary": "The creator's Patreon post describes a 60-page digital pack, names the Halloween concept and YooSeorin, and links to RINI BOOKS for purchase. It gives a limited October 21–24 sale window but no year or release date. No cover or paid file was copied.",
+      "metadataSourceUrl": "https://www.patreon.com/Riniverse/posts/o-n-o-09-spicy-172438442",
+      "seriesName": "O.N.O",
+      "editionLabel": "Spicy digital edition"
+    }
+  }
+]

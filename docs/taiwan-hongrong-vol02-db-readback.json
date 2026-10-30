@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-10-30",
+  "catalogQuery": {
+    "url": "https://musebooks.my/v1/books?q=%E3%80%90i%E7%B4%9A%E8%B1%94%E5%90%8E%E3%80%91%E5%AF%AB%E7%9C%9F%E9%9B%9C%E8%AA%8CVol.02",
+    "total": 1
+  },
+  "work": {
+    "id": "work-tw-d5e45f1116c341fc4cd8b90f",
+    "title": "【i級豔后】寫真雜誌Vol.02",
+    "originCode": "TW",
+    "featured": [
+      "洪蓉"
+    ]
+  },
+  "edition": {
+    "id": "edition-7f1b5339234e7f7f07075263",
+    "format": "physical",
+    "releaseDate": "2026-11-01",
+    "releasePrecision": "month",
+    "pageCount": 24,
+    "isbn": ""
+  },
+  "signedApiCoverReadback": {
+    "httpStatus": 200,
+    "bytes": 255140,
+    "sha256": "5edb0e3d949136a4077d368f5168778287de218148fdb39da975230958e32ac8",
+    "matchesSource": true
+  }
+}

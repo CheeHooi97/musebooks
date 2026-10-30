@@ -1,0 +1,55 @@
+{
+  "auditedAt": "2026-10-30T08:08:29.2944637Z",
+  "coverageTotals": {
+    "editionsWithoutActiveListing": 1,
+    "editionsWithoutListing": 1,
+    "missingCover": 1,
+    "missingPageCount": 1,
+    "missingReleaseDate": 1,
+    "photobook_digital": 1
+  },
+  "editionCoverage": [
+    {
+      "activeListingCount": 0,
+      "coverUrl": "",
+      "editionId": "korea-yebin-picnic-photobook-digital-edition",
+      "format": "digital",
+      "gaps": [
+        "release_date_unknown",
+        "page_count_unknown",
+        "cover_unknown",
+        "no_listing"
+      ],
+      "issueMonth": "",
+      "listingCount": 0,
+      "metadataSourceUrl": "https://yeb00.gumroad.com/l/Yebin_Picnic",
+      "pageCount": 0,
+      "publicationType": "photobook",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "retailListingCount": 0,
+      "title": "Yebin's Picnic Photobook",
+      "usedListingCount": 0,
+      "variant": "Picnic and Nezuko digital bundle",
+      "workId": "korea-yebin-picnic-photobook-digital"
+    }
+  ],
+  "goalComplete": false,
+  "integrityFailures": [],
+  "ledgerIntegrityPassed": true,
+  "limits": "No source availability refreshed; active status is historical at its stored observation timestamp. Unknown dates/pages/prices can be legitimate source limitations. Used classification is a coverage heuristic, not a public response assertion. Scope is the ledger cohort, not every Korean publication or all database records.",
+  "method": "Repeatable-read PostgreSQL transaction with READ ONLY; exact ledger work/edition identities, listing links, observation payloads and explicit image provenance",
+  "peopleWithoutVerificationSource": [],
+  "rights": "No captured exact image has confirmed reuse permission in the source guide; URL provenance is not a license. This audit does not approve any asset or automation route.",
+  "scope": {
+    "distinctObservationKeys": 0,
+    "editions": 1,
+    "explicitMediaReferences": 0,
+    "linkedListings": 0,
+    "listingItemReferences": 0,
+    "people": 1,
+    "records": 1,
+    "sources": 0,
+    "works": 1
+  }
+}

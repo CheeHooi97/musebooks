@@ -1,0 +1,46 @@
+[
+  {
+    "work": {
+      "id": "work-tw-e79650b7f2bde8bd490f768a",
+      "slug": "work-tw-e79650b7f2bde8bd490f768a",
+      "publicationType": "photobook",
+      "originalTitle": "澎然心動的蘋率：30赫茲（寫真集 Vol.8）",
+      "summary": "蘋蘋澎澎官方網站 lists this title as photobook series Vol. 8. The creator store offers a 128-page physical single book as a 2027 preorder, with shipments expected to start in mid-December 2026. The official creator-site image is title-specific cover artwork, but has not been confirmed as the final printed cover. A limited VIP package includes high-resolution digital files on USB for the photobook and calendar; no separate standalone ebook is listed. The store does not specify an ISBN or dimensions.",
+      "originCode": "TW",
+      "featuredNames": "蘋蘋澎澎",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/5768bae3b7583f70644a3ab1347f25dce4602562356d3d44beb70d718c4f9210.jpg"
+    },
+    "featuredCreditSource": "verified_model_capture",
+    "featuredPerson": {
+      "slug": "model-5a07c41fad41c705b36a7002a28cb1cb129cf93a78ddef22371150f18eb2920c",
+      "canonicalPublicName": "蘋蘋澎澎",
+      "originalName": "蘋蘋澎澎",
+      "traditionalChineseName": "蘋蘋澎澎",
+      "personType": "creator",
+      "verificationSourceUrl": "https://pinpinponpon.tw/",
+      "profileSourceConfidence": "official_creator_bio"
+    },
+    "origin": {
+      "code": "TW",
+      "name": "Taiwan",
+      "nativeName": "台灣"
+    },
+    "edition": {
+      "id": "edition-00365079599e0343cff5efe3",
+      "workId": "work-tw-e79650b7f2bde8bd490f768a",
+      "format": "physical",
+      "language": "zh-Hant",
+      "editionMarket": "TW",
+      "releaseDate": "2026-12-01T00:00:00Z",
+      "releasePrecision": "month",
+      "pageCount": 128,
+      "editionVariant": "standard",
+      "contentSummary": "Physical 128-page single-book preorder within the 2027 VIP package; the creator store expects shipping to begin mid-December 2026. Official Vol. 8 cover artwork is available at the creator site, but final printed-cover status is not confirmed. The VIP package includes high-resolution digital files for the book and calendar on USB; no standalone ebook edition is listed. ISBN and dimensions are not specified.",
+      "metadataSourceUrl": "https://pinpinponpon627.waca.tw/product/detail/2706145",
+      "editionLabel": "2027 Vol. 8 physical photobook preorder",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/5768bae3b7583f70644a3ab1347f25dce4602562356d3d44beb70d718c4f9210.jpg",
+      "coverObjectKey": "musebooks/covers/5768bae3b7583f70644a3ab1347f25dce4602562356d3d44beb70d718c4f9210.jpg",
+      "originalCoverUrl": "https://pinpinponpon.tw/images/vol8.jpg"
+    }
+  }
+]

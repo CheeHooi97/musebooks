@@ -1,0 +1,181 @@
+{
+  "aliases": null,
+  "capturedAt": "2026-10-30T06:25:48.4453689Z",
+  "credits": [
+    {
+      "workId": "korea-maxq-special-edition-vol06-choi-sohyeon-2021",
+      "personId": 70128,
+      "role": "featured",
+      "creditedName": "최소현",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70128,
+        "slug": "model-0221b62764f5c220d482ad331f424265c564106ade55999f7c7efe913b1dd394",
+        "canonicalPublicName": "최소현",
+        "originalName": "최소현",
+        "englishName": "Choi Sohyeon",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "influencer",
+        "verificationSourceUrl": "https://www.twig24.com/news/entertainments/2020/09/20/20200920500023",
+        "profileSourceConfidence": "contemporary_press",
+        "createdAt": "2026-10-30T13:18:07.072484+08:00",
+        "updatedAt": "2026-10-30T13:18:07.072484+08:00"
+      },
+      "createdAt": "2026-10-30T14:21:46.631374+08:00",
+      "updatedAt": "2026-10-30T14:25:12.123301+08:00"
+    }
+  ],
+  "listings": [],
+  "media": [],
+  "observations": [],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 70128,
+      "slug": "model-0221b62764f5c220d482ad331f424265c564106ade55999f7c7efe913b1dd394",
+      "canonicalPublicName": "최소현",
+      "originalName": "최소현",
+      "englishName": "Choi Sohyeon",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://www.twig24.com/news/entertainments/2020/09/20/20200920500023",
+      "profileSourceConfidence": "contemporary_press",
+      "createdAt": "2026-10-30T13:18:07.072484+08:00",
+      "updatedAt": "2026-10-30T13:18:07.072484+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-0221b62764f5c220d482ad331f424265c564106ade55999f7c7efe913b1dd394",
+        "name": "최소현"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol06-choi-sohyeon-2021",
+    "slug": "korea-maxq-special-edition-vol06-choi-sohyeon-2021",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 6호",
+    "englishTitle": "MAXQ Special Edition Vol. 6: Choi Sohyeon",
+    "summary": "Digital MAXQ Special Edition photobook featuring Choi Sohyeon, a Korean fitness model and Instagram influencer. RIDI identifies the exact Vol. 6 product, a 30-page PDF e-book released on 2021-07-23. Contemporary Korean press describes her Instagram presence and sharing exercise tips with fans. This distinct numbered issue is cataloged without asserting unique photo contents; overlap with her other MAXQ and Secret B releases has not been checked. No ISBN is listed. Metadata only; no cover or paid e-book copied.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "최소현"
+    ],
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "name": "MAXQ International"
+        },
+        "id": "korea-maxq-special-edition-vol06-choi-sohyeon-digital-2021",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "MAXQ International",
+        "releaseDate": "2021-07-23T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 30,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists MAXQ Special Edition 6 with Choi So-hyun as a 30-page PDF e-book, published 2021-07-23 by MAXQ International; file size 6.7 MB. The series description says it selects MAXQ pictorials not previously released online. Whether images overlap with Choi Sohyeon's other MAXQ/Secret B titles has not been checked. No ISBN is listed; no cover or paid file is copied.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000100",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-maxq-special-edition-vol06-choi-sohyeon-2021",
+        "personId": 70128,
+        "role": "featured",
+        "creditedName": "최소현",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70128,
+          "slug": "model-0221b62764f5c220d482ad331f424265c564106ade55999f7c7efe913b1dd394",
+          "canonicalPublicName": "최소현",
+          "originalName": "최소현",
+          "englishName": "Choi Sohyeon",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "influencer",
+          "verificationSourceUrl": "https://www.twig24.com/news/entertainments/2020/09/20/20200920500023",
+          "profileSourceConfidence": "contemporary_press",
+          "createdAt": "2026-10-30T13:18:07.072484+08:00",
+          "updatedAt": "2026-10-30T13:18:07.072484+08:00"
+        },
+        "createdAt": "2026-10-30T14:21:46.631374+08:00",
+        "updatedAt": "2026-10-30T14:25:12.123301+08:00"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol06-choi-sohyeon-2021",
+    "slug": "korea-maxq-special-edition-vol06-choi-sohyeon-2021",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 6호",
+    "englishTitle": "MAXQ Special Edition Vol. 6: Choi Sohyeon",
+    "summary": "Digital MAXQ Special Edition photobook featuring Choi Sohyeon, a Korean fitness model and Instagram influencer. RIDI identifies the exact Vol. 6 product, a 30-page PDF e-book released on 2021-07-23. Contemporary Korean press describes her Instagram presence and sharing exercise tips with fans. This distinct numbered issue is cataloged without asserting unique photo contents; overlap with her other MAXQ and Secret B releases has not been checked. No ISBN is listed. Metadata only; no cover or paid e-book copied.",
+    "originCode": "KR",
+    "featuredNames": "최소현",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "publisherCompanyId": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+        "publisherCompany": {
+          "id": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "slug": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "canonicalName": "MAXQ International",
+          "countryCode": "",
+          "officialUrl": "",
+          "verificationStatus": "catalog_credit",
+          "name": "MAXQ International",
+          "host": "",
+          "status": true,
+          "appId": "",
+          "appKey": "",
+          "createdAt": "2026-10-30T14:08:47.757128+08:00",
+          "updatedAt": "2026-10-30T14:08:47.757128+08:00"
+        },
+        "productLineId": 17833,
+        "id": "korea-maxq-special-edition-vol06-choi-sohyeon-digital-2021",
+        "workId": "korea-maxq-special-edition-vol06-choi-sohyeon-2021",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "MAXQ International",
+        "releaseDate": "2021-07-23T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 30,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists MAXQ Special Edition 6 with Choi So-hyun as a 30-page PDF e-book, published 2021-07-23 by MAXQ International; file size 6.7 MB. The series description says it selects MAXQ pictorials not previously released online. Whether images overlap with Choi Sohyeon's other MAXQ/Secret B titles has not been checked. No ISBN is listed; no cover or paid file is copied.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000100",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "status": "published",
+        "createdAt": "2026-10-30T14:21:46.520598+08:00",
+        "updatedAt": "2026-10-30T14:25:12.010857+08:00"
+      }
+    ],
+    "createdAt": "2026-10-30T14:21:46.474847+08:00",
+    "updatedAt": "2026-10-30T14:25:11.967831+08:00"
+  }
+}

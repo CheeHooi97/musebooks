@@ -1,0 +1,182 @@
+{
+  "aliases": null,
+  "capturedAt": "2026-10-30T08:08:29.0355814Z",
+  "credits": [
+    {
+      "workId": "korea-zenny-aqua-photobook-2018",
+      "personId": 70265,
+      "role": "featured",
+      "creditedName": "신재은",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70265,
+        "slug": "model-5249c2f1631263b4295ab6559cf782158011f1d12b25697a49344bedc35f1f33",
+        "canonicalPublicName": "신재은",
+        "originalName": "신재은",
+        "englishName": "Jae-Eun Shin",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "creator",
+        "verificationSourceUrl": "https://zenn.ee/en/about/",
+        "profileSourceConfidence": "official_creator_profile",
+        "createdAt": "2026-10-30T16:08:14.183512+08:00",
+        "updatedAt": "2026-10-30T16:08:14.183512+08:00"
+      },
+      "createdAt": "2026-10-30T16:08:14.183512+08:00",
+      "updatedAt": "2026-10-30T16:08:15.295189+08:00"
+    }
+  ],
+  "listings": [],
+  "media": [],
+  "observations": [],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 70265,
+      "slug": "model-5249c2f1631263b4295ab6559cf782158011f1d12b25697a49344bedc35f1f33",
+      "canonicalPublicName": "신재은",
+      "originalName": "신재은",
+      "englishName": "Jae-Eun Shin",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "creator",
+      "verificationSourceUrl": "https://zenn.ee/en/about/",
+      "profileSourceConfidence": "official_creator_profile",
+      "createdAt": "2026-10-30T16:08:14.183512+08:00",
+      "updatedAt": "2026-10-30T16:08:14.183512+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-5249c2f1631263b4295ab6559cf782158011f1d12b25697a49344bedc35f1f33",
+        "name": "신재은"
+      }
+    ],
+    "id": "korea-zenny-aqua-photobook-2018",
+    "slug": "korea-zenny-aqua-photobook-2018",
+    "publicationType": "photobook",
+    "originalTitle": "아쿠아 AQUA",
+    "englishTitle": "AQUA",
+    "summary": "Physical photobook created through the ROTTA × ZENNY collaboration and featuring Korean model and online creator Shin Jae-eun (신재은, Zenny). Her official site identifies her aliases and lists Aqua under photo books; YES24 and Aladin bibliographic records agree on ISBN 9791188073146, release date 2018-01-26, and 168 pages. Retailer weight values conflict and are omitted. No asset-specific image reuse permission is documented, so no cover or interior image is copied or hosted.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "신재은"
+    ],
+    "photographer": "ROTTA",
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-023346b4cac8e5ce17897b8ddb0eb52f985ff388ebb9f40fa691fdb3aa3e3228",
+          "name": "브라보 (bravo)"
+        },
+        "id": "korea-zenny-aqua-photobook-2018-physical-isbn-9791188073146",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "브라보 (bravo)",
+        "releaseDate": "2018-01-26T08:00:00+08:00",
+        "releasePrecision": "day",
+        "isbn": "9791188073146",
+        "pageCount": 168,
+        "dimensions": "183 × 257 mm",
+        "contentSummary": "YES24 and Aladin list a physical Korean photo-book edition with ISBN 9791188073146, published by bravo on 2018-01-26, 168 pages, and dimensions 183 × 257 mm. No cover or interior asset is included because reuse permission was not found.",
+        "metadataSourceUrl": "https://www.yes24.com/product/goods/57954502",
+        "editionLabel": "Physical Korean photobook",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-zenny-aqua-photobook-2018",
+        "personId": 70265,
+        "role": "featured",
+        "creditedName": "신재은",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70265,
+          "slug": "model-5249c2f1631263b4295ab6559cf782158011f1d12b25697a49344bedc35f1f33",
+          "canonicalPublicName": "신재은",
+          "originalName": "신재은",
+          "englishName": "Jae-Eun Shin",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "creator",
+          "verificationSourceUrl": "https://zenn.ee/en/about/",
+          "profileSourceConfidence": "official_creator_profile",
+          "createdAt": "2026-10-30T16:08:14.183512+08:00",
+          "updatedAt": "2026-10-30T16:08:14.183512+08:00"
+        },
+        "createdAt": "2026-10-30T16:08:14.183512+08:00",
+        "updatedAt": "2026-10-30T16:08:15.295189+08:00"
+      }
+    ],
+    "id": "korea-zenny-aqua-photobook-2018",
+    "slug": "korea-zenny-aqua-photobook-2018",
+    "publicationType": "photobook",
+    "originalTitle": "아쿠아 AQUA",
+    "englishTitle": "AQUA",
+    "summary": "Physical photobook created through the ROTTA × ZENNY collaboration and featuring Korean model and online creator Shin Jae-eun (신재은, Zenny). Her official site identifies her aliases and lists Aqua under photo books; YES24 and Aladin bibliographic records agree on ISBN 9791188073146, release date 2018-01-26, and 168 pages. Retailer weight values conflict and are omitted. No asset-specific image reuse permission is documented, so no cover or interior image is copied or hosted.",
+    "originCode": "KR",
+    "featuredNames": "신재은",
+    "photographer": "ROTTA",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "publisherCompanyId": "publisher-023346b4cac8e5ce17897b8ddb0eb52f985ff388ebb9f40fa691fdb3aa3e3228",
+        "publisherCompany": {
+          "id": "publisher-023346b4cac8e5ce17897b8ddb0eb52f985ff388ebb9f40fa691fdb3aa3e3228",
+          "slug": "publisher-023346b4cac8e5ce17897b8ddb0eb52f985ff388ebb9f40fa691fdb3aa3e3228",
+          "canonicalName": "브라보 (bravo)",
+          "countryCode": "",
+          "officialUrl": "",
+          "verificationStatus": "catalog_credit",
+          "name": "브라보 (bravo)",
+          "host": "",
+          "status": true,
+          "appId": "",
+          "appKey": "",
+          "createdAt": "2026-10-30T16:08:14.183512+08:00",
+          "updatedAt": "2026-10-30T16:08:14.183512+08:00"
+        },
+        "id": "korea-zenny-aqua-photobook-2018-physical-isbn-9791188073146",
+        "workId": "korea-zenny-aqua-photobook-2018",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "브라보 (bravo)",
+        "releaseDate": "2018-01-26T08:00:00+08:00",
+        "releasePrecision": "day",
+        "isbn": "9791188073146",
+        "pageCount": 168,
+        "dimensions": "183 × 257 mm",
+        "contentSummary": "YES24 and Aladin list a physical Korean photo-book edition with ISBN 9791188073146, published by bravo on 2018-01-26, 168 pages, and dimensions 183 × 257 mm. No cover or interior asset is included because reuse permission was not found.",
+        "metadataSourceUrl": "https://www.yes24.com/product/goods/57954502",
+        "editionLabel": "Physical Korean photobook",
+        "status": "published",
+        "createdAt": "2026-10-30T16:08:15.176778+08:00",
+        "updatedAt": "2026-10-30T16:08:15.176778+08:00"
+      }
+    ],
+    "createdAt": "2026-10-30T16:08:15.122719+08:00",
+    "updatedAt": "2026-10-30T16:08:15.122719+08:00"
+  }
+}

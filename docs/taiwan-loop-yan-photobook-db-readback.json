@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-30",
+  "catalogQuery": {
+    "q": "Loop：晏人物攝影集",
+    "total": 1
+  },
+  "work": {
+    "id": "work-tw-9e5c7c9e51ab01a6e2fcdfba",
+    "originalTitle": "Loop：晏人物攝影集",
+    "title": null,
+    "originCode": null,
+    "featuredNames": [
+      "黃景"
+    ],
+    "photographer": "晏人物",
+    "coverUrl": "https://media.musebooks.my/musebooks/covers/cc48f54048b1f065652c6d15355535dec805815c4f66edd4a8dc1bbf1f1dbc61.webp?exp=1793491200&sig=Yvi-ZqFrpROX-ZrXlLOMpqxEuEhK2eNvukCaC1YUMhE"
+  },
+  "edition": {
+    "id": "edition-86f943f3a51fe9bd8866e257",
+    "format": "physical",
+    "releaseDate": "2024-12-13T00:00:00Z",
+    "releasePrecision": "day",
+    "pageCount": 128,
+    "dimensions": "18 × 25.6 cm",
+    "isbn": null,
+    "metadataSourceUrl": "https://www.zeczec.com/projects/loop-2005/updates/48979",
+    "coverObjectKey": null,
+    "originalCoverUrl": null
+  },
+  "signedApiCoverReadback": {
+    "httpStatus": 200,
+    "bytes": 228714,
+    "sha256": "cc48f54048b1f065652c6d15355535dec805815c4f66edd4a8dc1bbf1f1dbc61",
+    "matchesR2Object": true
+  }
+}

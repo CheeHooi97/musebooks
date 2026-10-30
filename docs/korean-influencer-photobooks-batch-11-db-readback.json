@@ -1,0 +1,342 @@
+{
+  "expectedWorkIDs": [
+    "korea-impact-min-hanna-photobook-2019",
+    "korea-impact-jeong-yuna-photobook-2019",
+    "korea-impact-jung-hyeyul-photobook-2019",
+    "korea-song-joo-a-makima-cosplay-photobook-digital",
+    "korea-song-joo-a-mihara-cosplay-photobook-digital"
+  ],
+  "explicitMediaReferences": 0,
+  "method": "repeatable-read PostgreSQL read-only transaction",
+  "verifiedAt": "2026-10-30T08:44:51.0725502Z",
+  "workCount": 5,
+  "works": [
+    {
+      "originMarketId": 10544,
+      "credits": [
+        {
+          "workId": "korea-impact-jeong-yuna-photobook-2019",
+          "personId": 70281,
+          "role": "featured",
+          "creditedName": "정유나",
+          "creditSource": "verified_press_source",
+          "person": {
+            "id": 70281,
+            "slug": "model-ab80e2bc8735c4b7cca6812b911e26f5b76c03fac80c077859edf5d5f87dfe78",
+            "canonicalPublicName": "정유나",
+            "originalName": "정유나",
+            "englishName": "Jeong Yuna",
+            "traditionalChineseName": "",
+            "simplifiedChineseName": "",
+            "personType": "influencer",
+            "verificationSourceUrl": "https://isplus.com/article/view/isp201908310012",
+            "profileSourceConfidence": "press_social_link",
+            "createdAt": "2026-10-30T16:44:08.638861+08:00",
+            "updatedAt": "2026-10-30T16:44:08.638861+08:00"
+          },
+          "createdAt": "2026-10-30T16:44:08.638861+08:00",
+          "updatedAt": "2026-10-30T16:44:10.036907+08:00"
+        }
+      ],
+      "id": "korea-impact-jeong-yuna-photobook-2019",
+      "slug": "korea-impact-jeong-yuna-photobook-2019",
+      "publicationType": "photobook",
+      "originalTitle": "임팩트 정유나 화보집",
+      "englishTitle": "Impact Photobook: Jeong Yuna",
+      "summary": "Standalone 2019 physical Impact Crew photobook featuring influencer and model Jeong Yuna (정유나). Ilgan Sports identifies her as both a model and influencer at the Impact Crew photobook publication showcase; the exact edition metadata is listed by Youngpoong and Kyobo.",
+      "originCode": "KR",
+      "featuredNames": "정유나",
+      "status": "published",
+      "origin": {
+        "code": "",
+        "name": "",
+        "sortOrder": 0,
+        "createdAt": "0001-01-01T00:00:00Z",
+        "updatedAt": "0001-01-01T00:00:00Z"
+      },
+      "editions": [
+        {
+          "publisherCompanyId": "publisher-034e4c0df6f70591b46e7b9a785e104aacb03462a22c03eb2a5028b7199456fd",
+          "id": "korea-impact-jeong-yuna-photobook-2019-physical",
+          "workId": "korea-impact-jeong-yuna-photobook-2019",
+          "format": "physical",
+          "language": "ko-KR",
+          "editionMarket": "KR",
+          "publisher": "Impact Crew",
+          "releaseDate": "2019-08-05T08:00:00+08:00",
+          "releasePrecision": "day",
+          "isbn": "9791196406820",
+          "pageCount": 144,
+          "dimensions": "225 × 265 mm",
+          "contentSummary": "Youngpoong lists this as a 144-page Impact Crew photobook released 2019-08-05 with ISBN-13 9791196406820. Kyobo's exact product record gives the same date and pagination and lists 225 × 265 mm.",
+          "metadataSourceUrl": "https://www.ypbooks.co.kr/books/202308233083264414",
+          "editionLabel": "Standalone physical photobook",
+          "status": "published",
+          "createdAt": "2026-10-30T16:44:09.985535+08:00",
+          "updatedAt": "2026-10-30T16:44:09.985535+08:00"
+        }
+      ],
+      "createdAt": "2026-10-30T16:44:09.947297+08:00",
+      "updatedAt": "2026-10-30T16:44:09.947297+08:00"
+    },
+    {
+      "originMarketId": 10544,
+      "credits": [
+        {
+          "workId": "korea-impact-jung-hyeyul-photobook-2019",
+          "personId": 70283,
+          "role": "featured",
+          "creditedName": "정혜율",
+          "creditSource": "verified_press_source",
+          "person": {
+            "id": 70283,
+            "slug": "model-0a1d631af96549da7ce280eb4259a79d37e1391437d55c818ab46f2b9a62c7dd",
+            "canonicalPublicName": "정혜율",
+            "originalName": "정혜율",
+            "englishName": "Jung Hyeyul",
+            "traditionalChineseName": "",
+            "simplifiedChineseName": "",
+            "personType": "influencer",
+            "verificationSourceUrl": "https://v.daum.net/v/20200323123309765",
+            "profileSourceConfidence": "press_social_link",
+            "createdAt": "2026-10-30T16:44:08.638861+08:00",
+            "updatedAt": "2026-10-30T16:44:08.638861+08:00"
+          },
+          "createdAt": "2026-10-30T16:44:08.638861+08:00",
+          "updatedAt": "2026-10-30T16:44:10.233281+08:00"
+        }
+      ],
+      "id": "korea-impact-jung-hyeyul-photobook-2019",
+      "slug": "korea-impact-jung-hyeyul-photobook-2019",
+      "publicationType": "photobook",
+      "originalTitle": "임팩트 정혜율 화보집",
+      "englishTitle": "Impact Photobook: Jung Hyeyul",
+      "summary": "Standalone 2019 physical Impact Crew photobook featuring model and SNS personality Jung Hyeyul (정혜율). Sports Seoul reports that she released two solo photobooks; Halla Ilbo and retailer records identify her Impact Crew title and its 2019 preorder period.",
+      "originCode": "KR",
+      "featuredNames": "정혜율",
+      "status": "published",
+      "origin": {
+        "code": "",
+        "name": "",
+        "sortOrder": 0,
+        "createdAt": "0001-01-01T00:00:00Z",
+        "updatedAt": "0001-01-01T00:00:00Z"
+      },
+      "editions": [
+        {
+          "publisherCompanyId": "publisher-034e4c0df6f70591b46e7b9a785e104aacb03462a22c03eb2a5028b7199456fd",
+          "id": "korea-impact-jung-hyeyul-photobook-2019-physical",
+          "workId": "korea-impact-jung-hyeyul-photobook-2019",
+          "format": "physical",
+          "language": "ko-KR",
+          "editionMarket": "KR",
+          "publisher": "Impact Crew",
+          "releaseDate": "2019-08-05T08:00:00+08:00",
+          "releasePrecision": "day",
+          "isbn": "9791196406813",
+          "pageCount": 144,
+          "contentSummary": "Youngpoong lists this as a 144-page Impact Crew photobook released 2019-08-05 with ISBN-13 9791196406813. Contemporary Halla Ilbo coverage names the Impact Crew photobook and says its preorder ran through 2019-08-05.",
+          "metadataSourceUrl": "https://www.ypbooks.co.kr/books/202308233083234211",
+          "editionLabel": "Standalone physical photobook",
+          "status": "published",
+          "createdAt": "2026-10-30T16:44:10.169154+08:00",
+          "updatedAt": "2026-10-30T16:44:10.169154+08:00"
+        }
+      ],
+      "createdAt": "2026-10-30T16:44:10.130314+08:00",
+      "updatedAt": "2026-10-30T16:44:10.130314+08:00"
+    },
+    {
+      "originMarketId": 10544,
+      "credits": [
+        {
+          "workId": "korea-impact-min-hanna-photobook-2019",
+          "personId": 70279,
+          "role": "featured",
+          "creditedName": "민한나",
+          "creditSource": "verified_press_source",
+          "person": {
+            "id": 70279,
+            "slug": "model-7be7bc5e45429ef140e61d487967565fcd63c494b46f327d35efca7934022306",
+            "canonicalPublicName": "민한나",
+            "originalName": "민한나",
+            "englishName": "Min Hanna",
+            "traditionalChineseName": "",
+            "simplifiedChineseName": "",
+            "personType": "influencer",
+            "verificationSourceUrl": "https://v.daum.net/v/20191026112710609?s=print_news",
+            "profileSourceConfidence": "press_social_link",
+            "createdAt": "2026-10-30T16:44:08.638861+08:00",
+            "updatedAt": "2026-10-30T16:44:08.638861+08:00"
+          },
+          "createdAt": "2026-10-30T16:44:08.638861+08:00",
+          "updatedAt": "2026-10-30T16:44:09.837187+08:00"
+        }
+      ],
+      "id": "korea-impact-min-hanna-photobook-2019",
+      "slug": "korea-impact-min-hanna-photobook-2019",
+      "publicationType": "photobook",
+      "originalTitle": "민한나 임팩트화보집 [2019]",
+      "englishTitle": "Impact Photobook: Min Hanna",
+      "summary": "Standalone 2019 physical photobook published by Impact Crew featuring racing model and power influencer Min Hanna (민한나). Sports Seoul reports that Impact Crew produced and published her solo photobook. The edition metadata is supported by the matching 11st/YES24 ISBN record; page count is taken from a YES24 used-book record for the same title and ISBN.",
+      "originCode": "KR",
+      "featuredNames": "민한나",
+      "status": "published",
+      "origin": {
+        "code": "",
+        "name": "",
+        "sortOrder": 0,
+        "createdAt": "0001-01-01T00:00:00Z",
+        "updatedAt": "0001-01-01T00:00:00Z"
+      },
+      "editions": [
+        {
+          "publisherCompanyId": "publisher-034e4c0df6f70591b46e7b9a785e104aacb03462a22c03eb2a5028b7199456fd",
+          "id": "korea-impact-min-hanna-photobook-2019-physical",
+          "workId": "korea-impact-min-hanna-photobook-2019",
+          "format": "physical",
+          "language": "ko-KR",
+          "editionMarket": "KR",
+          "publisher": "Impact Crew",
+          "releaseDate": "2019-11-01T08:00:00+08:00",
+          "releasePrecision": "day",
+          "isbn": "9791196797812",
+          "pageCount": 152,
+          "contentSummary": "11st product 2613122280, sold by YES24, lists Impact Crew, the 2019-11-01 release date, and ISBN-13 9791196797812. YES24's used-book record for the same title and ISBN lists 152 pages. No cover image was captured because reuse permission is not documented.",
+          "metadataSourceUrl": "https://www.11st.co.kr/products/2613122280",
+          "editionLabel": "Standalone physical photobook",
+          "status": "published",
+          "createdAt": "2026-10-30T16:44:09.707259+08:00",
+          "updatedAt": "2026-10-30T16:44:09.707259+08:00"
+        }
+      ],
+      "createdAt": "2026-10-30T16:44:09.634653+08:00",
+      "updatedAt": "2026-10-30T16:44:09.634653+08:00"
+    },
+    {
+      "originMarketId": 10544,
+      "credits": [
+        {
+          "workId": "korea-song-joo-a-makima-cosplay-photobook-digital",
+          "personId": 70285,
+          "role": "featured",
+          "creditedName": "송주아",
+          "creditSource": "verified_publisher_source",
+          "person": {
+            "id": 70285,
+            "slug": "model-dbc2e9363094065ec8274c15143e1537b16752befb99f4f11f78ceadd89e3e80",
+            "canonicalPublicName": "송주아",
+            "originalName": "송주아",
+            "englishName": "Song Joo A",
+            "traditionalChineseName": "",
+            "simplifiedChineseName": "",
+            "personType": "model",
+            "verificationSourceUrl": "https://www.ilovepc.co.kr/news/articleView.html?idxno=21711",
+            "profileSourceConfidence": "press_social_link",
+            "createdAt": "2026-10-30T16:44:08.638861+08:00",
+            "updatedAt": "2026-10-30T16:44:08.638861+08:00"
+          },
+          "createdAt": "2026-10-30T16:44:08.638861+08:00",
+          "updatedAt": "2026-10-30T16:44:10.376797+08:00"
+        }
+      ],
+      "id": "korea-song-joo-a-makima-cosplay-photobook-digital",
+      "slug": "korea-song-joo-a-makima-cosplay-photobook-digital",
+      "publicationType": "photobook",
+      "originalTitle": "MAKIMA PHOTOBOOK",
+      "englishTitle": "Chainsaw Man: MAKIMA",
+      "summary": "Digital cosplay photobook created and sold by Song Joo A (송주아), a Korean racing model and creator. Her creator-controlled Linktree links directly to the exact Gumroad product; the listing describes three Makima concepts and 60 pages of high-resolution JPEGs. No publication date or publisher is stated.",
+      "originCode": "KR",
+      "featuredNames": "송주아",
+      "status": "published",
+      "origin": {
+        "code": "",
+        "name": "",
+        "sortOrder": 0,
+        "createdAt": "0001-01-01T00:00:00Z",
+        "updatedAt": "0001-01-01T00:00:00Z"
+      },
+      "editions": [
+        {
+          "id": "korea-song-joo-a-makima-cosplay-photobook-digital-edition",
+          "workId": "korea-song-joo-a-makima-cosplay-photobook-digital",
+          "format": "digital",
+          "language": "",
+          "editionMarket": "KR",
+          "pageCount": 60,
+          "editionVariant": "High-resolution JPEG download",
+          "contentSummary": "The creator's Gumroad product page identifies the seller as 송주아 (Song Joo A), describes three Chainsaw Man: MAKIMA concepts, and specifies a 60-page, 560 MB high-resolution JPEG download. Creator-controlled Linktree links directly to this listing. No image was captured because reuse permission is not documented.",
+          "metadataSourceUrl": "https://appster50.gumroad.com/l/makimajooa",
+          "editionLabel": "Digital cosplay photobook",
+          "status": "published",
+          "createdAt": "2026-10-30T16:44:10.32779+08:00",
+          "updatedAt": "2026-10-30T16:44:10.32779+08:00"
+        }
+      ],
+      "createdAt": "2026-10-30T16:44:10.311231+08:00",
+      "updatedAt": "2026-10-30T16:44:10.311231+08:00"
+    },
+    {
+      "originMarketId": 10544,
+      "credits": [
+        {
+          "workId": "korea-song-joo-a-mihara-cosplay-photobook-digital",
+          "personId": 70285,
+          "role": "featured",
+          "creditedName": "송주아",
+          "creditSource": "verified_publisher_source",
+          "person": {
+            "id": 70285,
+            "slug": "model-dbc2e9363094065ec8274c15143e1537b16752befb99f4f11f78ceadd89e3e80",
+            "canonicalPublicName": "송주아",
+            "originalName": "송주아",
+            "englishName": "Song Joo A",
+            "traditionalChineseName": "",
+            "simplifiedChineseName": "",
+            "personType": "model",
+            "verificationSourceUrl": "https://www.ilovepc.co.kr/news/articleView.html?idxno=21711",
+            "profileSourceConfidence": "press_social_link",
+            "createdAt": "2026-10-30T16:44:08.638861+08:00",
+            "updatedAt": "2026-10-30T16:44:08.638861+08:00"
+          },
+          "createdAt": "2026-10-30T16:44:08.638861+08:00",
+          "updatedAt": "2026-10-30T16:44:10.470013+08:00"
+        }
+      ],
+      "id": "korea-song-joo-a-mihara-cosplay-photobook-digital",
+      "slug": "korea-song-joo-a-mihara-cosplay-photobook-digital",
+      "publicationType": "photobook",
+      "originalTitle": "MIHARA PHOTOBOOK",
+      "englishTitle": "NIKKE: MIHARA",
+      "summary": "Digital cosplay photobook created and sold by Song Joo A (송주아), a Korean racing model and creator. Her creator-controlled Linktree links directly to the exact Gumroad product; the listing describes Maid, Bonding \u0026 Chain, and Pain Eater concepts in an approximately 70-page photo collection. No publication date or publisher is stated.",
+      "originCode": "KR",
+      "featuredNames": "송주아",
+      "status": "published",
+      "origin": {
+        "code": "",
+        "name": "",
+        "sortOrder": 0,
+        "createdAt": "0001-01-01T00:00:00Z",
+        "updatedAt": "0001-01-01T00:00:00Z"
+      },
+      "editions": [
+        {
+          "id": "korea-song-joo-a-mihara-cosplay-photobook-digital-edition",
+          "workId": "korea-song-joo-a-mihara-cosplay-photobook-digital",
+          "format": "digital",
+          "language": "",
+          "editionMarket": "KR",
+          "editionVariant": "High-resolution JPEG download",
+          "contentSummary": "The creator's Gumroad product page identifies the seller as 송주아 (Song Joo A) and describes an approximately 70-page A4 digital cosplay photobook with Maid, Bonding \u0026 Chain, and Pain Eater concepts. Page count is not normalized because the listing says approximately 70 pages. Creator-controlled Linktree links directly to this listing. No image was captured because reuse permission is not documented.",
+          "metadataSourceUrl": "https://appster50.gumroad.com/l/miharaphotobook",
+          "editionLabel": "Digital cosplay photobook",
+          "status": "published",
+          "createdAt": "2026-10-30T16:44:10.456137+08:00",
+          "updatedAt": "2026-10-30T16:44:10.456137+08:00"
+        }
+      ],
+      "createdAt": "2026-10-30T16:44:10.441537+08:00",
+      "updatedAt": "2026-10-30T16:44:10.441537+08:00"
+    }
+  ]
+}

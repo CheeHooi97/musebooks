@@ -1,0 +1,45 @@
+[
+  {
+    "work": {
+      "id": "korea-junghyun-young-beautiful-2022",
+      "slug": "korea-junghyun-young-beautiful-2022",
+      "publicationType": "photobook",
+      "originalTitle": "정현(JUNGHYUN) 1st PHOTOBOOK Young & Beautiful",
+      "englishTitle": "JUNGHYUN 1st PHOTOBOOK: Young & Beautiful",
+      "summary": "First solo pictorial by Korean creator 정현 (JUNGHYUN). Contemporary launch coverage announced an Interpark preorder and a 2022-11-30 release. A secondary-market product page corroborates that sealed print copies existed and reports Young and Beautiful versions with inserts; no ISBN, page count, publisher imprint, or exact variant specifications were independently verified. Cover omitted because exact-image reuse permission is unconfirmed.",
+      "originCode": "KR",
+      "featuredNames": "정현"
+    },
+    "featuredCreditSource": "verified_press_source",
+    "featuredPerson": {
+      "slug": "model-4e880203e626b16929b06f38394a686d1e8d29856ed77876b75968215d0451b7",
+      "canonicalPublicName": "정현",
+      "originalName": "정현",
+      "englishName": "Junghyun",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://www.thepowernews.co.kr/view.php?mobile=1&ud=2022110710441710346cf2d78c68_7",
+      "profileSourceConfidence": "contemporary_press"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-junghyun-young-beautiful-print-2022",
+      "workId": "korea-junghyun-young-beautiful-2022",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "releaseDate": "2022-11-30T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 0,
+      "editionVariant": "",
+      "contentSummary": "A printed first photo book. GlobalEpic's 2022-10-27 launch coverage announced preorder through Interpark and states a 2022-11-30 release. ThePower's 2022-11-07 story describes creator 정현's solo pictorial and its preorder response. A Bunjang Global secondary listing describes sealed print copies with folded poster and other inserts and mentions Young/Beautiful variants; those are not treated as verified edition metadata or current availability. ISBN, page count, and publisher imprint were not confirmed. Cover omitted because exact-image reuse permission is unconfirmed.",
+      "metadataSourceUrl": "https://www.globalepic.co.kr/view.php?ud=2022102710164099166cf2d78c68_29",
+      "editionLabel": "Physical Korean photobook"
+    }
+  }
+]

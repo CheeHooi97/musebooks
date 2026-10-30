@@ -1,0 +1,181 @@
+{
+  "aliases": null,
+  "capturedAt": "2026-10-30T06:40:28.2023159Z",
+  "credits": [
+    {
+      "workId": "korea-maxq-special-edition-vol05-jeong-hanna-2021",
+      "personId": 70133,
+      "role": "featured",
+      "creditedName": "정한나",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70133,
+        "slug": "model-6f0fe95f1470fda23217bf1e32e5a890e3866f84b8a708bd0c81af056d4030ea",
+        "canonicalPublicName": "정한나",
+        "originalName": "정한나",
+        "englishName": "Jeong Hanna",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "influencer",
+        "verificationSourceUrl": "https://www.mk.co.kr/news/entertain/10007223",
+        "profileSourceConfidence": "contemporary_press",
+        "createdAt": "2026-10-30T13:29:37.515233+08:00",
+        "updatedAt": "2026-10-30T13:29:37.515233+08:00"
+      },
+      "createdAt": "2026-10-30T14:37:35.656066+08:00",
+      "updatedAt": "2026-10-30T14:37:36.615779+08:00"
+    }
+  ],
+  "listings": [],
+  "media": [],
+  "observations": [],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 70133,
+      "slug": "model-6f0fe95f1470fda23217bf1e32e5a890e3866f84b8a708bd0c81af056d4030ea",
+      "canonicalPublicName": "정한나",
+      "originalName": "정한나",
+      "englishName": "Jeong Hanna",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://www.mk.co.kr/news/entertain/10007223",
+      "profileSourceConfidence": "contemporary_press",
+      "createdAt": "2026-10-30T13:29:37.515233+08:00",
+      "updatedAt": "2026-10-30T13:29:37.515233+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-6f0fe95f1470fda23217bf1e32e5a890e3866f84b8a708bd0c81af056d4030ea",
+        "name": "정한나"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol05-jeong-hanna-2021",
+    "slug": "korea-maxq-special-edition-vol05-jeong-hanna-2021",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 5호",
+    "englishTitle": "MAXQ Special Edition Vol. 5: Jeong Hanna",
+    "summary": "Digital MAXQ Special Edition photobook featuring Korean fitness influencer Jeong Hanna (정한나). RIDI identifies the exact product as a 29-page PDF e-book released 2021-04-30. MAXQ's publisher article calls her the solo muse and cover model for MAXQSE 5 and describes it as an online photobook; Sports Seoul also identifies her as Vol. 5 muse. This is a distinct titled product from her Secret B Vol. 11 and the later Vol. 03 compilation; image overlap has not been checked. No ISBN is listed. No cover or paid PDF is copied because reuse permission for the exact asset is unconfirmed.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "정한나"
+    ],
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "name": "MAXQ International"
+        },
+        "id": "korea-maxq-special-edition-vol05-jeong-hanna-digital-2021",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "MAXQ International",
+        "releaseDate": "2021-04-30T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 29,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists MAXQ Special Edition 5 as a 29-page PDF e-book released 2021-04-30 and names its subtitle Perfect Body, Han-na. MAXQ's 2021-10-03 publisher article identifies Jeong Hanna as the solo MAXQSE 5 muse/cover model and says the online photobook was available through ebook sites and apps. No ISBN is listed. This record stores bibliographic metadata only; no cover or paid PDF is copied or mirrored.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000091",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-maxq-special-edition-vol05-jeong-hanna-2021",
+        "personId": 70133,
+        "role": "featured",
+        "creditedName": "정한나",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70133,
+          "slug": "model-6f0fe95f1470fda23217bf1e32e5a890e3866f84b8a708bd0c81af056d4030ea",
+          "canonicalPublicName": "정한나",
+          "originalName": "정한나",
+          "englishName": "Jeong Hanna",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "influencer",
+          "verificationSourceUrl": "https://www.mk.co.kr/news/entertain/10007223",
+          "profileSourceConfidence": "contemporary_press",
+          "createdAt": "2026-10-30T13:29:37.515233+08:00",
+          "updatedAt": "2026-10-30T13:29:37.515233+08:00"
+        },
+        "createdAt": "2026-10-30T14:37:35.656066+08:00",
+        "updatedAt": "2026-10-30T14:37:36.615779+08:00"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol05-jeong-hanna-2021",
+    "slug": "korea-maxq-special-edition-vol05-jeong-hanna-2021",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 5호",
+    "englishTitle": "MAXQ Special Edition Vol. 5: Jeong Hanna",
+    "summary": "Digital MAXQ Special Edition photobook featuring Korean fitness influencer Jeong Hanna (정한나). RIDI identifies the exact product as a 29-page PDF e-book released 2021-04-30. MAXQ's publisher article calls her the solo muse and cover model for MAXQSE 5 and describes it as an online photobook; Sports Seoul also identifies her as Vol. 5 muse. This is a distinct titled product from her Secret B Vol. 11 and the later Vol. 03 compilation; image overlap has not been checked. No ISBN is listed. No cover or paid PDF is copied because reuse permission for the exact asset is unconfirmed.",
+    "originCode": "KR",
+    "featuredNames": "정한나",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "publisherCompanyId": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+        "publisherCompany": {
+          "id": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "slug": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "canonicalName": "MAXQ International",
+          "countryCode": "",
+          "officialUrl": "",
+          "verificationStatus": "catalog_credit",
+          "name": "MAXQ International",
+          "host": "",
+          "status": true,
+          "appId": "",
+          "appKey": "",
+          "createdAt": "2026-10-30T14:08:47.757128+08:00",
+          "updatedAt": "2026-10-30T14:08:47.757128+08:00"
+        },
+        "productLineId": 17833,
+        "id": "korea-maxq-special-edition-vol05-jeong-hanna-digital-2021",
+        "workId": "korea-maxq-special-edition-vol05-jeong-hanna-2021",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "MAXQ International",
+        "releaseDate": "2021-04-30T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 29,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists MAXQ Special Edition 5 as a 29-page PDF e-book released 2021-04-30 and names its subtitle Perfect Body, Han-na. MAXQ's 2021-10-03 publisher article identifies Jeong Hanna as the solo MAXQSE 5 muse/cover model and says the online photobook was available through ebook sites and apps. No ISBN is listed. This record stores bibliographic metadata only; no cover or paid PDF is copied or mirrored.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000091",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "status": "published",
+        "createdAt": "2026-10-30T14:37:36.515604+08:00",
+        "updatedAt": "2026-10-30T14:37:36.515604+08:00"
+      }
+    ],
+    "createdAt": "2026-10-30T14:37:36.475713+08:00",
+    "updatedAt": "2026-10-30T14:37:36.475713+08:00"
+  }
+}

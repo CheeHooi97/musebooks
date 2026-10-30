@@ -1,0 +1,59 @@
+[
+  {
+    "work": {
+      "id": "work-tw-9e5c7c9e51ab01a6e2fcdfba",
+      "slug": "work-tw-9e5c7c9e51ab01a6e2fcdfba",
+      "publicationType": "photobook",
+      "originalTitle": "Loop：晏人物攝影集",
+      "summary": "A photographer-led seven-model physical photobook by 晏人物, featuring 黃景, whom Taiwanese press identifies as a Kaohsiung Instagram creator. The campaign specifies 128 pages and 18 × 25.6 cm. The official update says shipping began on 2024-12-13. The R2 cover is the official shipping photo showing the finished, title-bearing book; it is a product photograph, not a standalone flat cover scan.",
+      "originCode": "TW",
+      "featuredNames": "黃景",
+      "photographer": "晏人物",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/cc48f54048b1f065652c6d15355535dec805815c4f66edd4a8dc1bbf1f1dbc61.webp"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-65eba0aacf72415fff37877b4b456c127c9e844e1389397a30decf46e84cf6ea",
+      "canonicalPublicName": "黃景",
+      "originalName": "黃景",
+      "traditionalChineseName": "黃景",
+      "personType": "creator",
+      "verificationSourceUrl": "https://www.peponews.tw/2020/01/07/66692/",
+      "profileSourceConfidence": "verified_press_source"
+    },
+    "origin": {
+      "code": "TW",
+      "name": "Taiwan",
+      "nativeName": "台灣"
+    },
+    "edition": {
+      "id": "edition-86f943f3a51fe9bd8866e257",
+      "workId": "work-tw-9e5c7c9e51ab01a6e2fcdfba",
+      "format": "physical",
+      "language": "zh-Hant",
+      "editionMarket": "TW",
+      "publisher": "晏人物",
+      "releaseDate": "2024-12-13T00:00:00Z",
+      "releasePrecision": "day",
+      "pageCount": 128,
+      "dimensions": "18 × 25.6 cm",
+      "editionVariant": "limited",
+      "contentSummary": "A photographer-led seven-model physical photobook by 晏人物, featuring 黃景, whom Taiwanese press identifies as a Kaohsiung Instagram creator. The campaign specifies 128 pages and 18 × 25.6 cm. The official update says shipping began on 2024-12-13. The R2 cover is the official shipping photo showing the finished, title-bearing book; it is a product photograph, not a standalone flat cover scan.",
+      "metadataSourceUrl": "https://www.zeczec.com/projects/loop-2005/updates/48979",
+      "seriesName": "Loop",
+      "editionLabel": "Limited physical photobook add-on",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/cc48f54048b1f065652c6d15355535dec805815c4f66edd4a8dc1bbf1f1dbc61.webp",
+      "coverObjectKey": "musebooks/covers/cc48f54048b1f065652c6d15355535dec805815c4f66edd4a8dc1bbf1f1dbc61.webp",
+      "originalCoverUrl": "https://assets.zeczec.com/asset_913856_image_big.jpg?1733981411="
+    },
+    "publisherMedia": [
+      {
+        "mediaType": "publisher_cover",
+        "originalUrl": "https://assets.zeczec.com/asset_913856_image_big.jpg?1733981411=",
+        "storageUrl": "https://img.musecards.my/musebooks/covers/cc48f54048b1f065652c6d15355535dec805815c4f66edd4a8dc1bbf1f1dbc61.webp",
+        "sourceUrl": "https://www.zeczec.com/projects/loop-2005/updates/48979",
+        "isPrimary": true
+      }
+    ]
+  }
+]

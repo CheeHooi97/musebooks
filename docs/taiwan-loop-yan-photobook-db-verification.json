@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-10-30",
+  "manifest": "docs/taiwan-loop-yan-photobook-import.json",
+  "manifestValidation": "Validated 1 import records",
+  "importApply": "Catalog records and price observations committed",
+  "r2": {
+    "objectKey": "musebooks/covers/cc48f54048b1f065652c6d15355535dec805815c4f66edd4a8dc1bbf1f1dbc61.webp",
+    "putHttpStatus": 200,
+    "headHttpStatus": 200,
+    "getBytes": 228714,
+    "sha256": "cc48f54048b1f065652c6d15355535dec805815c4f66edd4a8dc1bbf1f1dbc61"
+  },
+  "databaseReadback": {
+    "query": {
+      "q": "Loop：晏人物攝影集",
+      "total": 1
+    },
+    "workId": "work-tw-9e5c7c9e51ab01a6e2fcdfba",
+    "title": "Loop：晏人物攝影集",
+    "editionId": "edition-86f943f3a51fe9bd8866e257",
+    "format": "physical",
+    "pageCount": 128
+  },
+  "signedApiCoverReadback": {
+    "httpStatus": 200,
+    "bytes": 228714,
+    "sha256": "cc48f54048b1f065652c6d15355535dec805815c4f66edd4a8dc1bbf1f1dbc61",
+    "matchesR2Object": true
+  }
+}

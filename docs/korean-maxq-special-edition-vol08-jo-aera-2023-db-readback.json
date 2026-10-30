@@ -1,0 +1,181 @@
+{
+  "aliases": null,
+  "capturedAt": "2026-10-30T07:14:54.7982172Z",
+  "credits": [
+    {
+      "workId": "korea-maxq-special-edition-vol08-jo-aera-2023",
+      "personId": 70237,
+      "role": "featured",
+      "creditedName": "조애라",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70237,
+        "slug": "model-c963a506e010b402057f48f10e99eac0500126840eda9cc371974797fbed1ffc",
+        "canonicalPublicName": "조애라",
+        "originalName": "조애라",
+        "englishName": "Jo Aera",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "influencer",
+        "verificationSourceUrl": "https://contents.premium.naver.com/wellness/wellnessinsight/contents/230413143753301gh",
+        "profileSourceConfidence": "interview_and_social_profile",
+        "createdAt": "2026-10-30T15:14:38.802714+08:00",
+        "updatedAt": "2026-10-30T15:14:38.802714+08:00"
+      },
+      "createdAt": "2026-10-30T15:14:38.802714+08:00",
+      "updatedAt": "2026-10-30T15:14:39.816256+08:00"
+    }
+  ],
+  "listings": [],
+  "media": [],
+  "observations": [],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 70237,
+      "slug": "model-c963a506e010b402057f48f10e99eac0500126840eda9cc371974797fbed1ffc",
+      "canonicalPublicName": "조애라",
+      "originalName": "조애라",
+      "englishName": "Jo Aera",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://contents.premium.naver.com/wellness/wellnessinsight/contents/230413143753301gh",
+      "profileSourceConfidence": "interview_and_social_profile",
+      "createdAt": "2026-10-30T15:14:38.802714+08:00",
+      "updatedAt": "2026-10-30T15:14:38.802714+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-c963a506e010b402057f48f10e99eac0500126840eda9cc371974797fbed1ffc",
+        "name": "조애라"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol08-jo-aera-2023",
+    "slug": "korea-maxq-special-edition-vol08-jo-aera-2023",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 8호",
+    "englishTitle": "MAXQ Special Edition Vol. 8: Jo Aera",
+    "summary": "Digital MAXQ Special Edition featuring Korean Pilates instructor and online fitness creator Jo Aera (조애라). RIDI identifies the exact Vol. 8 product and describes the series as selected MAXQ pictorials previously unreleased online. A 2023 interview identifies her Instagram profile @aerassam_; later professional profiles document her online teaching and creator activity. Photo overlap with her other MAXQ/Secret B shoots is unverified, so no image uniqueness is asserted. Bibliographic metadata only; no cover or paid PDF copied.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "조애라"
+    ],
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "name": "MAXQ International"
+        },
+        "id": "korea-maxq-special-edition-vol08-jo-aera-digital-2023",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "MAXQ International",
+        "releaseDate": "2023-04-25T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 33,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists MAXQ Special Edition 8호 featuring 조애라, published 2023-04-25 as a 33-page PDF e-book by MAXQ International. The publisher description says the series selects MAXQ pictorials previously unreleased online. Image overlap with other MAXQ issues or Jo Aera's other photo products has not been checked. No cover or paid file copied.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000166",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-maxq-special-edition-vol08-jo-aera-2023",
+        "personId": 70237,
+        "role": "featured",
+        "creditedName": "조애라",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70237,
+          "slug": "model-c963a506e010b402057f48f10e99eac0500126840eda9cc371974797fbed1ffc",
+          "canonicalPublicName": "조애라",
+          "originalName": "조애라",
+          "englishName": "Jo Aera",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "influencer",
+          "verificationSourceUrl": "https://contents.premium.naver.com/wellness/wellnessinsight/contents/230413143753301gh",
+          "profileSourceConfidence": "interview_and_social_profile",
+          "createdAt": "2026-10-30T15:14:38.802714+08:00",
+          "updatedAt": "2026-10-30T15:14:38.802714+08:00"
+        },
+        "createdAt": "2026-10-30T15:14:38.802714+08:00",
+        "updatedAt": "2026-10-30T15:14:39.816256+08:00"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol08-jo-aera-2023",
+    "slug": "korea-maxq-special-edition-vol08-jo-aera-2023",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 8호",
+    "englishTitle": "MAXQ Special Edition Vol. 8: Jo Aera",
+    "summary": "Digital MAXQ Special Edition featuring Korean Pilates instructor and online fitness creator Jo Aera (조애라). RIDI identifies the exact Vol. 8 product and describes the series as selected MAXQ pictorials previously unreleased online. A 2023 interview identifies her Instagram profile @aerassam_; later professional profiles document her online teaching and creator activity. Photo overlap with her other MAXQ/Secret B shoots is unverified, so no image uniqueness is asserted. Bibliographic metadata only; no cover or paid PDF copied.",
+    "originCode": "KR",
+    "featuredNames": "조애라",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "publisherCompanyId": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+        "publisherCompany": {
+          "id": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "slug": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "canonicalName": "MAXQ International",
+          "countryCode": "",
+          "officialUrl": "",
+          "verificationStatus": "catalog_credit",
+          "name": "MAXQ International",
+          "host": "",
+          "status": true,
+          "appId": "",
+          "appKey": "",
+          "createdAt": "2026-10-30T14:08:47.757128+08:00",
+          "updatedAt": "2026-10-30T14:08:47.757128+08:00"
+        },
+        "productLineId": 17833,
+        "id": "korea-maxq-special-edition-vol08-jo-aera-digital-2023",
+        "workId": "korea-maxq-special-edition-vol08-jo-aera-2023",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "MAXQ International",
+        "releaseDate": "2023-04-25T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 33,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists MAXQ Special Edition 8호 featuring 조애라, published 2023-04-25 as a 33-page PDF e-book by MAXQ International. The publisher description says the series selects MAXQ pictorials previously unreleased online. Image overlap with other MAXQ issues or Jo Aera's other photo products has not been checked. No cover or paid file copied.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000166",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "status": "published",
+        "createdAt": "2026-10-30T15:14:39.723093+08:00",
+        "updatedAt": "2026-10-30T15:14:39.723093+08:00"
+      }
+    ],
+    "createdAt": "2026-10-30T15:14:39.677217+08:00",
+    "updatedAt": "2026-10-30T15:14:39.677217+08:00"
+  }
+}

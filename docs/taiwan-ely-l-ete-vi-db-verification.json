@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-30T08:59:02.812069+00:00",
+  "result": "PASS",
+  "importedWorkId": "work-tw-dd68252b2506ce97f5cb7acd",
+  "editionId": "edition-bbc9470be4da68df35a70358",
+  "catalogQueries": {
+    "L'été~VI": {
+      "total": 1,
+      "containsImportedWork": true
+    },
+    "Ely": {
+      "total": 5,
+      "containsImportedWork": true
+    }
+  },
+  "editionFormat": "physical",
+  "pageCount": 64,
+  "dimensions": "B5",
+  "r2PublicGet": {
+    "status": 200,
+    "sha256": "95f94eaff133f2598844a8fd14631f99daa0270e0becfa7ed199ea3cb9d38d43",
+    "matchesUploadedAsset": true
+  },
+  "limitations": [
+    "ISBN and release date were not listed by the official shop and remain unset."
+  ]
+}

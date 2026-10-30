@@ -1,0 +1,67 @@
+[
+  {
+    "work": {
+      "id": "korea-maxq-special-edition-vol01-2020",
+      "slug": "korea-maxq-special-edition-vol01-2020",
+      "publicationType": "photobook",
+      "originalTitle": "MAXQ Special Edition 1호 '머슬여제 3인방' 공민서, 손소희, 최설화",
+      "englishTitle": "MAXQ Special Edition Vol. 1: Three Muscle Queens",
+      "summary": "Digital MAXQ Special Edition photobook featuring Korean fitness models Gong Minseo (공민서), Son Sohee (손소희), and Choi Seolhwa (최설화). RIDI identifies a 50-page PDF e-book dated 2020-08-03 and describes the series as selected MAXQ photos not previously published online. Contemporary Big Data News identifies Choi Seolhwa's YouTube fitness channel and Instagram fitness content; the other two subjects are verified by the product listing as featured models. Image overlap with earlier MAXQ shoots has not been checked. No cover or paid PDF was copied because reuse permission is unconfirmed.",
+      "originCode": "KR",
+      "featuredNames": "공민서,손소희,최설화"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-183302b6f9fb1b7ea7e843b916336bc63a9410ef5971768cac6f5298b69739ab",
+      "canonicalPublicName": "최설화",
+      "originalName": "최설화",
+      "englishName": "Choi Seolhwa",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.thebigdata.co.kr/view.php?ud=202007161721581840992c130dbe_23",
+      "profileSourceConfidence": "contemporary_press"
+    },
+    "additionalFeaturedPeople": [
+      {
+        "slug": "model-1017b023b7a55686739af47ea1fdde7d639bdc1c81beaa0e711c6b90a502c02a",
+        "canonicalPublicName": "공민서",
+        "originalName": "공민서",
+        "englishName": "Gong Minseo",
+        "personType": "model",
+        "verificationSourceUrl": "https://ridibooks.com/books/3563000054",
+        "profileSourceConfidence": "publisher_catalog"
+      },
+      {
+        "slug": "model-e02b01234554fa446174cb0a1fc1ddb4b96c4368744c74e6602aa3ebe338961c",
+        "canonicalPublicName": "손소희",
+        "originalName": "손소희",
+        "englishName": "Son Sohee",
+        "personType": "model",
+        "verificationSourceUrl": "https://ridibooks.com/books/3563000054",
+        "profileSourceConfidence": "publisher_catalog"
+      }
+    ],
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxq-special-edition-vol01-digital-2020",
+      "workId": "korea-maxq-special-edition-vol01-2020",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "㈜맥스큐인터내셔널",
+      "releaseDate": "2020-08-03T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 50,
+      "editionVariant": "PDF e-book",
+      "contentSummary": "RIDI lists the digital Special Edition Vol. 1 as a 50-page, 18.4 MB PDF released 2020-08-03 by MAXQ International. It also records the paper publication date as 2020-07-31; no physical edition was added from that cross-reference alone. No ISBN is listed. The ebook is not copied or mirrored.",
+      "metadataSourceUrl": "https://ridibooks.com/books/3563000054",
+      "seriesName": "MAXQ Special Edition",
+      "editionLabel": "Digital Korean photobook"
+    }
+  }
+]

@@ -1749,6 +1749,13 @@
 
 | 已核對出版名稱 | 格式／版次 | ISBN | 出版日期 | 頁數 | 封面 |
 | --- | --- | --- | --- | --- | --- |
+| [蘋什麼這麼可愛](https://shopee.tw/Twitch%E5%9C%96%E5%A5%87%E7%9B%B4%E6%92%AD%E4%B8%BB%E2%80%9C%E8%98%8B%E8%98%8B%E6%BE%8E%E6%BE%8E%E2%80%9C%E5%B9%B3%E7%94%9F%E7%AC%AC%E4%B8%80%E6%9C%AC%E5%AF%AB%E7%9C%9F%E9%9B%86%E3%80%8E%E8%98%8B%E4%BB%80%E9%BA%BC%E9%80%99%E9%BA%BC%E5%8F%AF%E6%84%9B%E3%80%8F-i.4548848.19756951264) | 實體／一般版 | — | 2022（年份） | 180 | [R2](https://img.musecards.my/musebooks/covers/c928983c8fc24385ec5e0bd40409dddbe50363028f66076a3d5dbaac1369b389.jpg) |
+| [一蘋的海岸線](https://pinpinponpon.tw/) | 實體／寫真系列 Vol.2 | — | — | — | [R2](https://img.musecards.my/musebooks/covers/5652eace9fa488d29b864139933fcd90fa178dd58a33863c0f6b64e59e0ac2ab.jpg) |
+| [雪妹的交換日記](https://pinpinponpon.tw/) | 實體／寫真系列 Vol.3 | — | — | — | [R2](https://img.musecards.my/musebooks/covers/9a7c8a8e6cbf6832e4011c2412f41b5440fbe9dffa83e4aaed704a7fadafec88.jpg) |
+| [轉生到蘋行世界](https://pinpinponpon.tw/) | 實體／寫真系列 Vol.4 | — | — | — | [R2](https://img.musecards.my/musebooks/covers/66c568825fe2d0da8e9fc600c237ab51fe79dcf19da6e55ebf915974ba082a1c.jpg) |
+| [讓世界和蘋的純欲姊姊](https://pinpinponpon.tw/) | 實體／寫真系列 Vol.5 | — | — | — | [R2](https://img.musecards.my/musebooks/covers/2705ad315b40498efd5212ea1651fffa7879e17b9510ca0ca384de4cc3a2b9ff.jpg) |
+| [純・欲双子](https://pinpinponpon.tw/) | 實體／寫真系列 Vol.6 | — | — | — | [R2](https://img.musecards.my/musebooks/covers/f1af5889d5d4bdd1027545c815b1910899c33f9372a7fa582f3326f2fc0e12d4.jpg) |
+| [家有雙生女友](https://pinpinponpon.tw/) | 實體／寫真系列番外篇 | — | — | — | [R2](https://img.musecards.my/musebooks/covers/e801013d95d11fe50b6d8170a881bff9d913f5e58526c6a7b0789ba4c83204cc.jpg) |
 | [2026「純·欲姊姊特休中」寫真單書](https://pinpinponpon627.waca.tw/product/detail/2589988) | 實體／實體單書版 | — | — | 128 | [R2](https://img.musecards.my/musebooks/covers/a88f9b052189d59514873fae650176fa2dce1d64c694a55d879da126ad011445.jpg) |
 
 ## 袁艾菲

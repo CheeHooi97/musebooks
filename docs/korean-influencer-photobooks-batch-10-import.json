@@ -1,0 +1,124 @@
+[
+  {
+    "work": {
+      "id": "korea-impact-jung-da-yeon-photobook-2019",
+      "slug": "korea-impact-jung-da-yeon-photobook-2019",
+      "publicationType": "photobook",
+      "originalTitle": "임팩트 정다연 화보집",
+      "englishTitle": "Impact Photobook: Jung Da-yeon",
+      "summary": "Standalone photographic photobook featuring Korean fitness model and Pilates instructor Jung Da-yeon (정다연). Youngpoong lists 204 pages and a 2019-08-08 date; Kyobo has an exact Impact Crew record dated 2019-08-12. A contemporary report describes presales beginning in March 2019, so the publication date remains unresolved. The retailer labels code 9772635471005 as ISBN-13, but it is not an ISBN-13 and is not stored as ISBN.",
+      "originCode": "KR",
+      "featuredNames": "정다연"
+    },
+    "featuredCreditSource": "verified_press_source",
+    "featuredPerson": {
+      "slug": "model-f51abbbb3dd641f9492067dddfd88e70782c6c5e2f76dbabb043fa8b63d3493b",
+      "canonicalPublicName": "정다연",
+      "originalName": "정다연",
+      "englishName": "Jung Da-yeon",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.wikitree.co.kr/articles/453827",
+      "profileSourceConfidence": "press_social_link"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-impact-jung-da-yeon-photobook-2019-physical",
+      "workId": "korea-impact-jung-da-yeon-photobook-2019",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "Impact Crew (임팩트크루)",
+      "pageCount": 204,
+      "contentSummary": "Youngpoong lists this as a standalone 204-page physical book and labels product code 9772635471005 as ISBN-13. The code fails ISBN-13 prefix rules and is omitted from the ISBN field; no independent serial-number assignment was verified. Youngpoong dates its listing 2019-08-08 and Kyobo lists 2019-08-12, while contemporary coverage describes March 2019 presales. Release date is left blank because the sources do not resolve listing versus publication timing.",
+      "metadataSourceUrl": "https://www.ypbooks.co.kr/books/202308233114560575",
+      "editionLabel": "Single physical photobook edition"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-loveys-vol2-yoo-seorin-digital",
+      "slug": "korea-loveys-vol2-yoo-seorin-digital",
+      "publicationType": "photobook",
+      "originalTitle": "LOVEYS Vol.2 – 소녀, 그리고 설레임",
+      "englishTitle": "LOVEYS Vol.2 – Girlhood, and the Thrill",
+      "summary": "Digital photo-diary issue from creator/model YooSeorin (public persona Seorin). The product page is written in first person and presents three portrait concepts. Her creator-controlled Patreon identifies her publication as a Korean glamour magazine and links the RINI BOOKS store.",
+      "originCode": "KR",
+      "featuredNames": "YooSeorin"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-bd6a773e793568b0be2c14cb3736128b52a9d57ceb8e9a1d088dd1686ccb9042",
+      "canonicalPublicName": "YooSeorin",
+      "originalName": "서린",
+      "englishName": "YooSeorin",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.patreon.com/Riniverse/posts/2026nyeon-balmae-147382927?l=de",
+      "profileSourceConfidence": "creator_controlled_patron"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-loveys-vol2-yoo-seorin-digital-edition",
+      "workId": "korea-loveys-vol2-yoo-seorin-digital",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "RINI BOOKS",
+      "pageCount": 43,
+      "editionVariant": "KR/EN PDF and JPG ZIP",
+      "contentSummary": "Gumroad listing offers Korean and English PDF and JPG ZIP files, describes three portrait concepts, and states 43 pages. The listing calls it the November issue without establishing a year or exact publication date. No image or paid file is mirrored because reuse permission is not documented.",
+      "metadataSourceUrl": "https://rinibooks.gumroad.com/l/loveys_02",
+      "seriesName": "LOVEYS",
+      "editionLabel": "Vol.2 digital photo-diary issue"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-loveys-vol3-winter-trip-yoo-seorin-digital",
+      "slug": "korea-loveys-vol3-winter-trip-yoo-seorin-digital",
+      "publicationType": "photobook",
+      "originalTitle": "LOVEYS Vol.3 – Winter Trip",
+      "summary": "Digital winter photo-diary issue from creator/model YooSeorin (public persona Seorin). The Gumroad product page identifies it as her third LOVEYS issue and offers Korean and English PDF and JPG ZIP files. Page count and publication date are not stated in the reviewed listing.",
+      "originCode": "KR",
+      "featuredNames": "YooSeorin"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-bd6a773e793568b0be2c14cb3736128b52a9d57ceb8e9a1d088dd1686ccb9042",
+      "canonicalPublicName": "YooSeorin",
+      "originalName": "서린",
+      "englishName": "YooSeorin",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.patreon.com/Riniverse/posts/2026nyeon-balmae-147382927?l=de",
+      "profileSourceConfidence": "creator_controlled_patron"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-loveys-vol3-winter-trip-yoo-seorin-digital-edition",
+      "workId": "korea-loveys-vol3-winter-trip-yoo-seorin-digital",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "RINI BOOKS",
+      "editionVariant": "KR/EN PDF and JPG ZIP",
+      "contentSummary": "Gumroad listing offers Korean and English PDF and JPG ZIP files and presents a winter photo-diary narrative. No publication date, page count, or price was verified. No image or paid file is mirrored because reuse permission is not documented.",
+      "metadataSourceUrl": "https://rinibooks.gumroad.com/l/loveys_03",
+      "seriesName": "LOVEYS",
+      "editionLabel": "Vol.3 Winter Trip digital issue"
+    }
+  }
+]

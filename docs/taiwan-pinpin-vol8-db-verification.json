@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-30",
+  "result": "PASS",
+  "importedWorkId": "work-tw-e79650b7f2bde8bd490f768a",
+  "editionId": "edition-00365079599e0343cff5efe3",
+  "catalogQueryTotal": 1,
+  "coverReadback": {
+    "status": 200,
+    "bytes": 88054,
+    "sha256": "5768bae3b7583f70644a3ab1347f25dce4602562356d3d44beb70d718c4f9210",
+    "matchesSource": true
+  },
+  "authenticatedR2Head": {
+    "status": 200,
+    "bytes": 88054,
+    "sha256": "5768bae3b7583f70644a3ab1347f25dce4602562356d3d44beb70d718c4f9210"
+  },
+  "authenticatedR2Get": {
+    "status": 200,
+    "bytes": 88054,
+    "sha256": "5768bae3b7583f70644a3ab1347f25dce4602562356d3d44beb70d718c4f9210"
+  },
+  "productCaveat": "This is a preorder; the official artwork is not confirmed as the final printed cover."
+}

@@ -1,0 +1,36 @@
+{
+  "checkedAt": "2026-10-30T08:59:02.812069+00:00",
+  "catalogQueries": {
+    "L'été~VI": {
+      "total": 1,
+      "containsImportedWork": true
+    },
+    "Ely": {
+      "total": 5,
+      "containsImportedWork": true
+    }
+  },
+  "work": {
+    "id": "work-tw-dd68252b2506ce97f5cb7acd",
+    "originalTitle": "Photobook - 〖L'été~VI〗Birthday生日寫真書",
+    "originCode": "TW",
+    "featuredPeople": [
+      {
+        "id": "model-52fe440ae87b395cc46438ee9275fcadc0f98a048161345f53d6b0038976a6f5",
+        "name": "Ely"
+      }
+    ],
+    "edition": {
+      "id": "edition-bbc9470be4da68df35a70358",
+      "format": "physical",
+      "editionMarket": "TW",
+      "pageCount": 64,
+      "dimensions": "B5",
+      "editionLabel": "B5 physical photobook",
+      "metadataSourceUrl": "https://www.eeelyeee.com/product-page/l-%C3%A9t%C3%A9-vi-photobook-%E7%94%9F%E6%97%A5%E5%AF%AB%E7%9C%9F%E6%9B%B8",
+      "coverPath": "/musebooks/covers/95f94eaff133f2598844a8fd14631f99daa0270e0becfa7ed199ea3cb9d38d43.jpg",
+      "coverReadbackStatus": 200,
+      "coverSha256": "95f94eaff133f2598844a8fd14631f99daa0270e0becfa7ed199ea3cb9d38d43"
+    }
+  }
+}

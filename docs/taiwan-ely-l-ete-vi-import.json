@@ -1,0 +1,52 @@
+[
+  {
+    "work": {
+      "id": "work-tw-dd68252b2506ce97f5cb7acd",
+      "slug": "work-tw-dd68252b2506ce97f5cb7acd",
+      "publicationType": "photobook",
+      "originalTitle": "Photobook - 〖L'été~VI〗Birthday生日寫真書",
+      "englishTitle": "L'été~VI Birthday Photobook",
+      "summary": "Creator-shop physical photobook. The official product page specifies B5 format, 64 full-color pages, gold-foil finishing, and six cosplay sets. The creator's official About page identifies Ely as born in Taiwan and based in Japan. No ISBN or publication date is stated.",
+      "originCode": "TW",
+      "featuredNames": "Ely",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/95f94eaff133f2598844a8fd14631f99daa0270e0becfa7ed199ea3cb9d38d43.jpg",
+      "status": "published"
+    },
+    "featuredCreditSource": "verified_model_capture",
+    "featuredPerson": {
+      "slug": "model-52fe440ae87b395cc46438ee9275fcadc0f98a048161345f53d6b0038976a6f5",
+      "canonicalPublicName": "Ely",
+      "originalName": "Ely",
+      "englishName": "Ely",
+      "traditionalChineseName": "E子",
+      "personType": "creator",
+      "verificationSourceUrl": "https://www.eeelyeee.com/about",
+      "profileSourceConfidence": "official_creator_bio"
+    },
+    "origin": {
+      "code": "TW",
+      "name": "Taiwan",
+      "nativeName": "台灣",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "edition-bbc9470be4da68df35a70358",
+      "workId": "work-tw-dd68252b2506ce97f5cb7acd",
+      "format": "physical",
+      "editionMarket": "TW",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "isbn": "",
+      "pageCount": 64,
+      "dimensions": "B5",
+      "editionVariant": "unspecified",
+      "contentSummary": "B5, 64-page full-color physical photobook with gold-foil stamping and six cosplay sets. The official shop does not state an ISBN or publication date.",
+      "metadataSourceUrl": "https://www.eeelyeee.com/product-page/l-%C3%A9t%C3%A9-vi-photobook-%E7%94%9F%E6%97%A5%E5%AF%AB%E7%9C%9F%E6%9B%B8",
+      "editionLabel": "B5 physical photobook",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/95f94eaff133f2598844a8fd14631f99daa0270e0becfa7ed199ea3cb9d38d43.jpg",
+      "coverObjectKey": "musebooks/covers/95f94eaff133f2598844a8fd14631f99daa0270e0becfa7ed199ea3cb9d38d43.jpg",
+      "originalCoverUrl": "https://static.wixstatic.com/media/8a95b1_049b9828487c41b1a784d703c550a30b~mv2.jpg/v1/fill/w_2576%2Ch_3624%2Cal_c%2Cq_90%2Cenc_avif%2Cquality_auto/8a95b1_049b9828487c41b1a784d703c550a30b~mv2.jpg",
+      "status": "published"
+    }
+  }
+]

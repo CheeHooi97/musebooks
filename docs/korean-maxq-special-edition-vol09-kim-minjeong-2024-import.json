@@ -1,0 +1,47 @@
+[
+  {
+    "work": {
+      "id": "korea-maxq-special-edition-vol09-kim-minjeong-2024",
+      "slug": "korea-maxq-special-edition-vol09-kim-minjeong-2024",
+      "publicationType": "photobook",
+      "originalTitle": "MAXQ Special Edition 9\ud638",
+      "englishTitle": "MAXQ Special Edition Vol. 9: Kim Minjeong",
+      "summary": "Digital MAXQ Special Edition photobook featuring Korean fitness creator Kim Minjeong (\uae40\ubbfc\uc815), known online as Min Joy (\ubbfc\uc88c\uc774). RIDI identifies the exact Vol. 9 product as a 32-page PDF e-book dated 2024-02-05. MAXQ's publisher coverage identifies Kim as the Vol. 9 cover model; a separate MAXQ story documents her Instagram fitness content and exercise videos. Exact image overlap with her magazine or other MAXQ material has not been checked. No ISBN is listed. No cover or paid PDF is copied because reuse permission for the exact asset is unconfirmed.",
+      "originCode": "KR",
+      "featuredNames": "\uae40\ubbfc\uc815"
+    },
+    "featuredPerson": {
+      "slug": "model-6234cd04c10e63ac273fe605827c6e79846a53bfc2baeca991b18f3761db024f",
+      "canonicalPublicName": "\uae40\ubbfc\uc815",
+      "originalName": "\uae40\ubbfc\uc815",
+      "englishName": "Kim Minjeong",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://v.daum.net/v/kO4iSlRryD?f=p",
+      "profileSourceConfidence": "contemporary_press"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "\ub300\ud55c\ubbfc\uad6d",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxq-special-edition-vol09-kim-minjeong-digital-2024",
+      "workId": "korea-maxq-special-edition-vol09-kim-minjeong-2024",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "MAXQ International",
+      "releaseDate": "2024-02-05T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 32,
+      "editionVariant": "PDF e-book",
+      "contentSummary": "RIDI lists MAXQ Special Edition 9 as a 32-page PDF e-book released 2024-02-05, with the subtitle naming Kim Minjeong. Its series description says these editions collect MAXQ pictorials not previously released online. MAXQ/FnToday coverage identifies Kim as Vol. 9 cover model; a MAXQ story separately documents her Instagram account @min.joy___ and fitness videos. The June 2024 press mention does not give a separate publication date; RIDI's date is stored. No ISBN is listed; no cover or paid PDF is copied or mirrored.",
+      "metadataSourceUrl": "https://ridibooks.com/books/3563000187",
+      "seriesName": "MAXQ Special Edition",
+      "editionLabel": "Digital Korean photobook"
+    }
+  }
+]

@@ -1,0 +1,221 @@
+[
+    {
+        "work":  {
+                     "id":  "korea-kang-gyunam-new-face-senior-vol05-2022",
+                     "slug":  "korea-kang-gyunam-new-face-senior-vol05-2022",
+                     "publicationType":  "photobook",
+                     "originalTitle":  "시니어 모델 강규남 뉴페이스 시니어 5",
+                     "englishTitle":  "Senior Model Kang Gyu-nam: New Face Senior, Vol. 5",
+                     "summary":  "Paid digital photobook edition. The Kyobo eBook product page identifies a PDF published by 도서출판 이음 on 2022-02-11, ISBN 9791190821889, and a contents chapter titled ‘강규남 화보집’ (Kang Gyu-nam photobook), establishing her as a featured subject as well as the credited author. The source does not specify total pages. No cover image or file was copied.",
+                     "originCode":  "KR",
+                     "featuredNames":  "강규남"
+                 },
+        "featuredCreditSource":  "verified_publisher_source",
+        "featuredPerson":  {
+                               "slug":  "model-2a7bb08bfc09456d598f2c0c9cf5eb91a22c1b0e7a1165eb0109ade69773c8d1",
+                               "canonicalPublicName":  "강규남",
+                               "originalName":  "강규남",
+                               "englishName":  "Kang Gyu-nam",
+                               "personType":  "model",
+                               "verificationSourceUrl":  "https://jfs77081.wixsite.com/k-seniormodel",
+                               "profileSourceConfidence":  "professional_association"
+                           },
+        "origin":  {
+                       "code":  "KR",
+                       "name":  "South Korea",
+                       "nativeName":  "대한민국",
+                       "sortOrder":  5
+                   },
+        "edition":  {
+                        "id":  "korea-kang-gyunam-new-face-senior-vol05-2022-digital",
+                        "workId":  "korea-kang-gyunam-new-face-senior-vol05-2022",
+                        "format":  "digital",
+                        "language":  "ko-KR",
+                        "editionMarket":  "KR",
+                        "publisher":  "도서출판 이음",
+                        "releaseDate":  "2022-02-11T00:00:00Z",
+                        "releasePrecision":  "day",
+                        "isbn":  "9791190821889",
+                        "editionVariant":  "PDF",
+                        "contentSummary":  "Kyobo eBook lists this as a 20.62 MB PDF, ISBN 9791190821889, released 2022-02-11, with a table-of-contents chapter titled 강규남 화보집. Total page count is not stated on the product page.",
+                        "metadataSourceUrl":  "https://ebook-product.kyobobook.co.kr/dig/epd/ebook/E000003606034",
+                        "editionLabel":  "Digital PDF eBook"
+                    }
+    },
+    {
+        "work":  {
+                     "id":  "korea-kang-gyunam-new-face-senior-vol01-2022",
+                     "slug":  "korea-kang-gyunam-new-face-senior-vol01-2022",
+                     "publicationType":  "photobook",
+                     "originalTitle":  "시니어 모델 강규남 뉴페이스 시니어 1",
+                     "englishTitle":  "Senior Model Kang Gyu-nam: New Face Senior, Vol. 1",
+                     "summary":  "Paid digital PDF photobook. The exact product page identifies Kang Gyu-nam as author and lists this as a photobook for senior models; its contents include a chapter titled 강규남 화보집. Kyobo/YES24 product contents independently establish her as a featured subject in this volume. No cover image or file was copied.",
+                     "originCode":  "KR",
+                     "featuredNames":  "강규남"
+                 },
+        "featuredCreditSource":  "verified_publisher_source",
+        "featuredPerson":  {
+                               "slug":  "model-2a7bb08bfc09456d598f2c0c9cf5eb91a22c1b0e7a1165eb0109ade69773c8d1",
+                               "canonicalPublicName":  "강규남",
+                               "originalName":  "강규남",
+                               "englishName":  "Kang Gyu-nam",
+                               "personType":  "model",
+                               "verificationSourceUrl":  "https://jfs77081.wixsite.com/k-seniormodel",
+                               "profileSourceConfidence":  "professional_association"
+                           },
+        "origin":  {
+                       "code":  "KR",
+                       "name":  "South Korea",
+                       "nativeName":  "대한민국",
+                       "sortOrder":  5
+                   },
+        "edition":  {
+                        "id":  "korea-kang-gyunam-new-face-senior-vol01-2022-digital",
+                        "workId":  "korea-kang-gyunam-new-face-senior-vol01-2022",
+                        "format":  "digital",
+                        "language":  "ko-KR",
+                        "editionMarket":  "KR",
+                        "publisher":  "(도서출판)이음",
+                        "releaseDate":  "2022-02-11T00:00:00Z",
+                        "releasePrecision":  "day",
+                        "isbn":  "9791190821117",
+                        "pageCount":  58,
+                        "editionVariant":  "PDF eBook",
+                        "contentSummary":  "RIDI lists a 21.9 MB PDF, 58 pages, ISBN 9791190821117, published 2022-02-11. The associated Kyobo/YES24 contents identify chapter 3 as 강규남 화보집. The product page supplies no basis for R2 image reuse.",
+                        "metadataSourceUrl":  "https://ridibooks.com/books/1745005096",
+                        "editionLabel":  "Digital PDF eBook"
+                    }
+    },
+    {
+        "work":  {
+                     "id":  "korea-kang-gyunam-new-face-senior-vol02-2022",
+                     "slug":  "korea-kang-gyunam-new-face-senior-vol02-2022",
+                     "publicationType":  "photobook",
+                     "originalTitle":  "시니어 모델 강규남 뉴페이스 시니어 2",
+                     "englishTitle":  "Senior Model Kang Gyu-nam: New Face Senior, Vol. 2",
+                     "summary":  "Paid digital PDF photobook. The exact product page identifies Kang Gyu-nam as author and lists this as a photobook for senior models; its contents include a chapter titled 강규남 화보집. Kyobo/YES24 product contents independently establish her as a featured subject in this volume. No cover image or file was copied.",
+                     "originCode":  "KR",
+                     "featuredNames":  "강규남"
+                 },
+        "featuredCreditSource":  "verified_publisher_source",
+        "featuredPerson":  {
+                               "slug":  "model-2a7bb08bfc09456d598f2c0c9cf5eb91a22c1b0e7a1165eb0109ade69773c8d1",
+                               "canonicalPublicName":  "강규남",
+                               "originalName":  "강규남",
+                               "englishName":  "Kang Gyu-nam",
+                               "personType":  "model",
+                               "verificationSourceUrl":  "https://jfs77081.wixsite.com/k-seniormodel",
+                               "profileSourceConfidence":  "professional_association"
+                           },
+        "origin":  {
+                       "code":  "KR",
+                       "name":  "South Korea",
+                       "nativeName":  "대한민국",
+                       "sortOrder":  5
+                   },
+        "edition":  {
+                        "id":  "korea-kang-gyunam-new-face-senior-vol02-2022-digital",
+                        "workId":  "korea-kang-gyunam-new-face-senior-vol02-2022",
+                        "format":  "digital",
+                        "language":  "ko-KR",
+                        "editionMarket":  "KR",
+                        "publisher":  "(도서출판)이음",
+                        "releaseDate":  "2022-02-11T00:00:00Z",
+                        "releasePrecision":  "day",
+                        "isbn":  "9791190821292",
+                        "pageCount":  58,
+                        "editionVariant":  "PDF eBook",
+                        "contentSummary":  "RIDI lists a 17.9 MB PDF, 58 pages, ISBN 9791190821292, published 2022-02-11. The associated Kyobo/YES24 contents identify chapter 3 as 강규남 화보집. The product page supplies no basis for R2 image reuse.",
+                        "metadataSourceUrl":  "https://ridibooks.com/books/1745005097",
+                        "editionLabel":  "Digital PDF eBook"
+                    }
+    },
+    {
+        "work":  {
+                     "id":  "korea-kang-gyunam-new-face-senior-vol04-2022",
+                     "slug":  "korea-kang-gyunam-new-face-senior-vol04-2022",
+                     "publicationType":  "photobook",
+                     "originalTitle":  "시니어 모델 강규남 뉴페이스 시니어 4",
+                     "englishTitle":  "Senior Model Kang Gyu-nam: New Face Senior, Vol. 4",
+                     "summary":  "Paid digital PDF photobook. The exact product page identifies Kang Gyu-nam as author and lists this as a photobook for senior models; its contents include a chapter titled 강규남 화보집. Kyobo/YES24 product contents independently establish her as a featured subject in this volume. No cover image or file was copied.",
+                     "originCode":  "KR",
+                     "featuredNames":  "강규남"
+                 },
+        "featuredCreditSource":  "verified_publisher_source",
+        "featuredPerson":  {
+                               "slug":  "model-2a7bb08bfc09456d598f2c0c9cf5eb91a22c1b0e7a1165eb0109ade69773c8d1",
+                               "canonicalPublicName":  "강규남",
+                               "originalName":  "강규남",
+                               "englishName":  "Kang Gyu-nam",
+                               "personType":  "model",
+                               "verificationSourceUrl":  "https://jfs77081.wixsite.com/k-seniormodel",
+                               "profileSourceConfidence":  "professional_association"
+                           },
+        "origin":  {
+                       "code":  "KR",
+                       "name":  "South Korea",
+                       "nativeName":  "대한민국",
+                       "sortOrder":  5
+                   },
+        "edition":  {
+                        "id":  "korea-kang-gyunam-new-face-senior-vol04-2022-digital",
+                        "workId":  "korea-kang-gyunam-new-face-senior-vol04-2022",
+                        "format":  "digital",
+                        "language":  "ko-KR",
+                        "editionMarket":  "KR",
+                        "publisher":  "도서출판 이음",
+                        "releaseDate":  "2022-02-11T00:00:00Z",
+                        "releasePrecision":  "day",
+                        "isbn":  "9791190821841",
+                        "pageCount":  64,
+                        "editionVariant":  "PDF eBook",
+                        "contentSummary":  "RIDI lists a 19.4 MB PDF, 64 pages, ISBN 9791190821841, published 2022-02-11. The associated Kyobo/YES24 contents identify chapter 3 as 강규남 화보집. The product page supplies no basis for R2 image reuse.",
+                        "metadataSourceUrl":  "https://ridibooks.com/books/1745005099",
+                        "editionLabel":  "Digital PDF eBook"
+                    }
+    },
+    {
+        "work":  {
+                     "id":  "korea-kang-gyunam-new-face-senior-vol06-2022",
+                     "slug":  "korea-kang-gyunam-new-face-senior-vol06-2022",
+                     "publicationType":  "photobook",
+                     "originalTitle":  "시니어 모델 강규남 뉴페이스 시니어 6",
+                     "englishTitle":  "Senior Model Kang Gyu-nam: New Face Senior, Vol. 6",
+                     "summary":  "Paid digital PDF photobook. The exact product page identifies Kang Gyu-nam as author and lists this as a photobook for senior models; its contents include a chapter titled 강규남 화보집. Kyobo/YES24 product contents independently establish her as a featured subject in this volume. No cover image or file was copied.",
+                     "originCode":  "KR",
+                     "featuredNames":  "강규남"
+                 },
+        "featuredCreditSource":  "verified_publisher_source",
+        "featuredPerson":  {
+                               "slug":  "model-2a7bb08bfc09456d598f2c0c9cf5eb91a22c1b0e7a1165eb0109ade69773c8d1",
+                               "canonicalPublicName":  "강규남",
+                               "originalName":  "강규남",
+                               "englishName":  "Kang Gyu-nam",
+                               "personType":  "model",
+                               "verificationSourceUrl":  "https://jfs77081.wixsite.com/k-seniormodel",
+                               "profileSourceConfidence":  "professional_association"
+                           },
+        "origin":  {
+                       "code":  "KR",
+                       "name":  "South Korea",
+                       "nativeName":  "대한민국",
+                       "sortOrder":  5
+                   },
+        "edition":  {
+                        "id":  "korea-kang-gyunam-new-face-senior-vol06-2022-digital",
+                        "workId":  "korea-kang-gyunam-new-face-senior-vol06-2022",
+                        "format":  "digital",
+                        "language":  "ko-KR",
+                        "editionMarket":  "KR",
+                        "publisher":  "도서출판 이음",
+                        "releaseDate":  "2022-02-11T00:00:00Z",
+                        "releasePrecision":  "day",
+                        "isbn":  "9791190821896",
+                        "pageCount":  55,
+                        "editionVariant":  "PDF eBook",
+                        "contentSummary":  "RIDI lists a 20.4 MB PDF, 55 pages, ISBN 9791190821896, published 2022-02-11. The associated Kyobo/YES24 contents identify chapter 3 as 강규남 화보집. The product page supplies no basis for R2 image reuse.",
+                        "metadataSourceUrl":  "https://ridibooks.com/books/1745005101",
+                        "editionLabel":  "Digital PDF eBook"
+                    }
+    }
+]

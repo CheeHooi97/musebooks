@@ -1,0 +1,47 @@
+[
+  {
+    "work": {
+      "id": "korea-maxq-special-edition-vol10-park-eunhye-2024",
+      "slug": "korea-maxq-special-edition-vol10-park-eunhye-2024",
+      "publicationType": "photobook",
+      "originalTitle": "MAXQ Special Edition 10호",
+      "englishTitle": "MAXQ Special Edition Vol. 10: Park Eunhye",
+      "summary": "Digital MAXQ Special Edition featuring Korean YouTube creator Park Eunhye (Jamong). RIDI identifies the exact Vol. 10 product and describes the Special Edition series as selected MAXQ pictorials not previously released online. The product is a distinct retail title; photographic overlap with Park's other MAXQ/Secret B titles is unverified, so no image uniqueness is asserted. Bibliographic metadata only; no cover or paid PDF copied.",
+      "originCode": "KR",
+      "featuredNames": "박은혜"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-19cd33b7b79ff108a33f1153200906894e37c7cc281bbe6d133eb73c816c9db4",
+      "canonicalPublicName": "박은혜",
+      "originalName": "박은혜",
+      "englishName": "Park Eunhye",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://v.daum.net/v/kksAAWx6b9",
+      "profileSourceConfidence": "publisher_and_press"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxq-special-edition-vol10-park-eunhye-digital-2024",
+      "workId": "korea-maxq-special-edition-vol10-park-eunhye-2024",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "MAXQ International",
+      "releaseDate": "2024-06-27T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 33,
+      "editionVariant": "PDF e-book",
+      "contentSummary": "RIDI lists MAXQ Special Edition 10호 featuring 박은혜, a 33-page PDF e-book published 2024-06-27 by MAXQ International. The publisher description says the series selects MAXQ pictorials previously unreleased online; whether these images overlap with Park Eunhye's other MAXQ books has not been checked. No cover or paid file copied.",
+      "metadataSourceUrl": "https://ridibooks.com/books/3563000201",
+      "seriesName": "MAXQ Special Edition",
+      "editionLabel": "Digital Korean photobook"
+    }
+  }
+]

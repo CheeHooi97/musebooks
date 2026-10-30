@@ -1,0 +1,126 @@
+[
+  {
+    "work": {
+      "id": "korea-minburung-real-photobook-01-red-pill",
+      "slug": "korea-minburung-real-photobook-01-red-pill",
+      "publicationType": "photobook",
+      "originalTitle": "민부릉 첫번째 실사 포토북 RED PILL",
+      "englishTitle": "Minburung: First Real Photo Book — RED PILL",
+      "summary": "Physical photobook listed by Goodswork under its virtual-creator catalog and titled as Minburung's first real photo book. Product page identifies the creator and book; no publication date, ISBN, page count, or cover-hosting license is stated. Metadata only; cover is not mirrored.",
+      "originCode": "KR",
+      "featuredNames": "민부릉"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-98bb56a484f103e99926e3619bd08e23481048e185de4b9e61ef5c3e902d799d",
+      "canonicalPublicName": "민부릉",
+      "originalName": "민부릉",
+      "englishName": "Minburung",
+      "personType": "creator",
+      "verificationSourceUrl": "https://m.spica.ai.kr/main/html.php?htmid=proc%2Fmembers.html",
+      "profileSourceConfidence": "official_creator_profile"
+    },
+    "edition": {
+      "id": "korea-minburung-real-photobook-01-red-pill-physical",
+      "workId": "korea-minburung-real-photobook-01-red-pill",
+      "format": "physical",
+      "editionMarket": "KR",
+      "editionLabel": "Physical photobook, volume 1",
+      "contentSummary": "Goodswork's product page lists the first Minburung real photo book, RED PILL, as a physical domestic-shipping item. No publication date, ISBN, page count, publisher imprint, or image-reuse permission is recorded.",
+      "metadataSourceUrl": "https://goodswork.shop/product/%EB%AF%BC%EB%B6%80%EB%A6%89-%EB%AF%BC%EB%B6%80%EB%A6%89-%EC%B2%AB%EB%B2%88%EC%A7%B8-%EC%8B%A4%EC%82%AC-%ED%8F%AC%ED%86%A0%EB%B6%81-red-pill-%EC%97%BD%EC%84%9C3%EC%A2%85-%EC%A6%9D%EC%A0%95/167/"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-minburung-real-photobook-02-red-pill",
+      "slug": "korea-minburung-real-photobook-02-red-pill",
+      "publicationType": "photobook",
+      "originalTitle": "민부릉 두번째 실사 포토북 RED PILL",
+      "englishTitle": "Minburung: Second Real Photo Book — RED PILL",
+      "summary": "Physical photobook listed by Goodswork under its virtual-creator catalog and titled as Minburung's second real photo book. The storefront identifies the creator and book; no publication date, ISBN, page count, or cover-hosting license is stated. Metadata only; cover is not mirrored.",
+      "originCode": "KR",
+      "featuredNames": "민부릉"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-98bb56a484f103e99926e3619bd08e23481048e185de4b9e61ef5c3e902d799d",
+      "canonicalPublicName": "민부릉",
+      "originalName": "민부릉",
+      "englishName": "Minburung",
+      "personType": "creator",
+      "verificationSourceUrl": "https://m.spica.ai.kr/main/html.php?htmid=proc%2Fmembers.html",
+      "profileSourceConfidence": "official_creator_profile"
+    },
+    "edition": {
+      "id": "korea-minburung-real-photobook-02-red-pill-physical",
+      "workId": "korea-minburung-real-photobook-02-red-pill",
+      "format": "physical",
+      "editionMarket": "KR",
+      "editionLabel": "Physical photobook, volume 2",
+      "contentSummary": "Goodswork's virtual-creator catalog lists the second Minburung real photo book, RED PILL. No publication date, ISBN, page count, publisher imprint, or image-reuse permission is recorded.",
+      "metadataSourceUrl": "https://goodswork.shop/category/%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%EB%B2%84%EC%B8%84%EC%96%BC/71/"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-minburung-real-photobook-03-red-pill",
+      "slug": "korea-minburung-real-photobook-03-red-pill",
+      "publicationType": "photobook",
+      "originalTitle": "민부릉 세번째 실사 포토북 RED PILL",
+      "englishTitle": "Minburung: Third Real Photo Book — RED PILL",
+      "summary": "Physical photobook listed by Goodswork under its virtual-creator catalog and titled as Minburung's third real photo book. The storefront identifies the creator and book; no publication date, ISBN, page count, or cover-hosting license is stated. Metadata only; cover is not mirrored.",
+      "originCode": "KR",
+      "featuredNames": "민부릉"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-98bb56a484f103e99926e3619bd08e23481048e185de4b9e61ef5c3e902d799d",
+      "canonicalPublicName": "민부릉",
+      "originalName": "민부릉",
+      "englishName": "Minburung",
+      "personType": "creator",
+      "verificationSourceUrl": "https://m.spica.ai.kr/main/html.php?htmid=proc%2Fmembers.html",
+      "profileSourceConfidence": "official_creator_profile"
+    },
+    "edition": {
+      "id": "korea-minburung-real-photobook-03-red-pill-physical",
+      "workId": "korea-minburung-real-photobook-03-red-pill",
+      "format": "physical",
+      "editionMarket": "KR",
+      "editionLabel": "Physical photobook, volume 3",
+      "contentSummary": "Goodswork's virtual-creator catalog lists the third Minburung real photo book, RED PILL. No publication date, ISBN, page count, publisher imprint, or image-reuse permission is recorded.",
+      "metadataSourceUrl": "https://goodswork.shop/category/%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%EB%B2%84%EC%B8%84%EC%96%BC/71/"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-minburung-real-photobook-04-night-pool",
+      "slug": "korea-minburung-real-photobook-04-night-pool",
+      "publicationType": "photobook",
+      "originalTitle": "민부릉 네번째 실사 포토북 NIGHT POOL",
+      "englishTitle": "Minburung: Fourth Real Photo Book — NIGHT POOL",
+      "summary": "Physical photobook listed by Goodswork under its virtual-creator catalog and titled as Minburung's fourth real photo book, NIGHT POOL. The current storefront identifies the creator and book; no publication date, ISBN, page count, or cover-hosting license is stated. Metadata only; cover is not mirrored.",
+      "originCode": "KR",
+      "featuredNames": "민부릉"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-98bb56a484f103e99926e3619bd08e23481048e185de4b9e61ef5c3e902d799d",
+      "canonicalPublicName": "민부릉",
+      "originalName": "민부릉",
+      "englishName": "Minburung",
+      "personType": "creator",
+      "verificationSourceUrl": "https://m.spica.ai.kr/main/html.php?htmid=proc%2Fmembers.html",
+      "profileSourceConfidence": "official_creator_profile"
+    },
+    "edition": {
+      "id": "korea-minburung-real-photobook-04-night-pool-physical",
+      "workId": "korea-minburung-real-photobook-04-night-pool",
+      "format": "physical",
+      "editionMarket": "KR",
+      "editionLabel": "Physical photobook, volume 4",
+      "contentSummary": "Goodswork's virtual-creator catalog lists the fourth Minburung real photo book, NIGHT POOL. No publication date, ISBN, page count, publisher imprint, or image-reuse permission is recorded.",
+      "metadataSourceUrl": "https://goodswork.shop/category/%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%EB%B2%84%EC%B8%84%EC%96%BC/71/"
+    }
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "work": {
+      "id": "korea-nyangseul-after-work-web-photobook",
+      "slug": "korea-nyangseul-after-work-web-photobook",
+      "publicationType": "photobook",
+      "originalTitle": "[냥슬] 개인화보 [퇴근 후]",
+      "englishTitle": "Nyangseul Personal Photobook [After Work]",
+      "summary": "Paid digital web-photobook featuring Korean SOOP streamer 냥슬 (channel yeseul1120). The seller identifies 냥슬 as the model and 가람과달 (GARAM & DALL) as photographer, and describes 180 images; this is an image count, not a page count. No publication date, publisher imprint, ISBN, or conventional page count is stated. Creator activity is linked to 냥슬's official SOOP channel. Metadata only: the seller restricts purchased files to personal collection and prohibits unauthorized sharing, so no cover or paid image files are copied or hosted.",
+      "originCode": "KR",
+      "featuredNames": "냥슬",
+      "photographer": "가람과달 (GARAM & DALL)"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-4dc305903fbb0be418c70d2c3f45ebc20d46d529e431cb9a4e7ae62844c12156",
+      "canonicalPublicName": "냥슬",
+      "originalName": "냥슬",
+      "personType": "creator",
+      "verificationSourceUrl": "https://www.sooplive.com/station/yeseul1120/board/63508911",
+      "profileSourceConfidence": "official_creator_profile"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-nyangseul-after-work-web-photobook-digital",
+      "workId": "korea-nyangseul-after-work-web-photobook",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "editionVariant": "180-image web photobook",
+      "contentSummary": "Paid digital web-photobook listed as 180 images. The seller's use terms limit purchased files to personal collection and prohibit unauthorized sharing. Release date, publisher imprint, ISBN, and page count are not stated; the image count is not entered as pagination. No cover or paid files copied.",
+      "metadataSourceUrl": "https://pinkribbon.gumroad.com/l/seul003",
+      "editionLabel": "Digital Korean photobook"
+    }
+  }
+]

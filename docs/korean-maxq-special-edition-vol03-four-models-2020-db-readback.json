@@ -1,0 +1,376 @@
+{
+  "aliases": null,
+  "capturedAt": "2026-10-30T07:23:06.123844Z",
+  "credits": [
+    {
+      "workId": "korea-maxq-special-edition-vol03-four-models-2020",
+      "personId": 70133,
+      "role": "featured",
+      "creditedName": "정한나",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70133,
+        "slug": "model-6f0fe95f1470fda23217bf1e32e5a890e3866f84b8a708bd0c81af056d4030ea",
+        "canonicalPublicName": "정한나",
+        "originalName": "정한나",
+        "englishName": "Jeong Hanna",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "influencer",
+        "verificationSourceUrl": "https://www.mk.co.kr/news/entertain/10007223",
+        "profileSourceConfidence": "contemporary_press",
+        "createdAt": "2026-10-30T13:29:37.515233+08:00",
+        "updatedAt": "2026-10-30T13:29:37.515233+08:00"
+      },
+      "createdAt": "2026-10-30T15:22:53.979203+08:00",
+      "updatedAt": "2026-10-30T15:22:54.988802+08:00"
+    },
+    {
+      "workId": "korea-maxq-special-edition-vol03-four-models-2020",
+      "personId": 70241,
+      "role": "featured",
+      "creditedName": "이하린",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70241,
+        "slug": "model-7166811edf5b4ce4ad02440eaac871deb8542bf547fdea8dad4b16b48abfe131",
+        "canonicalPublicName": "이하린",
+        "originalName": "이하린",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.newstown.co.kr/news/articleView.html?idxno=473998",
+        "profileSourceConfidence": "contemporary_press",
+        "createdAt": "2026-10-30T15:22:53.979203+08:00",
+        "updatedAt": "2026-10-30T15:22:53.979203+08:00"
+      },
+      "createdAt": "2026-10-30T15:22:53.979203+08:00",
+      "updatedAt": "2026-10-30T15:22:55.078185+08:00"
+    },
+    {
+      "workId": "korea-maxq-special-edition-vol03-four-models-2020",
+      "personId": 70242,
+      "role": "featured",
+      "creditedName": "강주연",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70242,
+        "slug": "model-557afdbecb79a73fb577196753f1d4cae960de1fb244391f4c2a8a2230a1ac9a",
+        "canonicalPublicName": "강주연",
+        "originalName": "강주연",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.newstown.co.kr/news/articleView.html?idxno=473998",
+        "profileSourceConfidence": "contemporary_press",
+        "createdAt": "2026-10-30T15:22:53.979203+08:00",
+        "updatedAt": "2026-10-30T15:22:53.979203+08:00"
+      },
+      "createdAt": "2026-10-30T15:22:53.979203+08:00",
+      "updatedAt": "2026-10-30T15:22:55.123095+08:00"
+    },
+    {
+      "workId": "korea-maxq-special-edition-vol03-four-models-2020",
+      "personId": 70243,
+      "role": "featured",
+      "creditedName": "이선이",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70243,
+        "slug": "model-1b71e04986370aae96b2aed02a10e729b6786fff426658bba178ab14c556c7ce",
+        "canonicalPublicName": "이선이",
+        "originalName": "이선이",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.newstown.co.kr/news/articleView.html?idxno=473998",
+        "profileSourceConfidence": "contemporary_press",
+        "createdAt": "2026-10-30T15:22:53.979203+08:00",
+        "updatedAt": "2026-10-30T15:22:53.979203+08:00"
+      },
+      "createdAt": "2026-10-30T15:22:53.979203+08:00",
+      "updatedAt": "2026-10-30T15:22:55.17364+08:00"
+    }
+  ],
+  "listings": [],
+  "media": [],
+  "observations": [],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 70133,
+      "slug": "model-6f0fe95f1470fda23217bf1e32e5a890e3866f84b8a708bd0c81af056d4030ea",
+      "canonicalPublicName": "정한나",
+      "originalName": "정한나",
+      "englishName": "Jeong Hanna",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://www.mk.co.kr/news/entertain/10007223",
+      "profileSourceConfidence": "contemporary_press",
+      "createdAt": "2026-10-30T13:29:37.515233+08:00",
+      "updatedAt": "2026-10-30T13:29:37.515233+08:00"
+    },
+    {
+      "id": 70241,
+      "slug": "model-7166811edf5b4ce4ad02440eaac871deb8542bf547fdea8dad4b16b48abfe131",
+      "canonicalPublicName": "이하린",
+      "originalName": "이하린",
+      "englishName": "",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.newstown.co.kr/news/articleView.html?idxno=473998",
+      "profileSourceConfidence": "contemporary_press",
+      "createdAt": "2026-10-30T15:22:53.979203+08:00",
+      "updatedAt": "2026-10-30T15:22:53.979203+08:00"
+    },
+    {
+      "id": 70242,
+      "slug": "model-557afdbecb79a73fb577196753f1d4cae960de1fb244391f4c2a8a2230a1ac9a",
+      "canonicalPublicName": "강주연",
+      "originalName": "강주연",
+      "englishName": "",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.newstown.co.kr/news/articleView.html?idxno=473998",
+      "profileSourceConfidence": "contemporary_press",
+      "createdAt": "2026-10-30T15:22:53.979203+08:00",
+      "updatedAt": "2026-10-30T15:22:53.979203+08:00"
+    },
+    {
+      "id": 70243,
+      "slug": "model-1b71e04986370aae96b2aed02a10e729b6786fff426658bba178ab14c556c7ce",
+      "canonicalPublicName": "이선이",
+      "originalName": "이선이",
+      "englishName": "",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.newstown.co.kr/news/articleView.html?idxno=473998",
+      "profileSourceConfidence": "contemporary_press",
+      "createdAt": "2026-10-30T15:22:53.979203+08:00",
+      "updatedAt": "2026-10-30T15:22:53.979203+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-6f0fe95f1470fda23217bf1e32e5a890e3866f84b8a708bd0c81af056d4030ea",
+        "name": "정한나"
+      },
+      {
+        "id": "model-7166811edf5b4ce4ad02440eaac871deb8542bf547fdea8dad4b16b48abfe131",
+        "name": "이하린"
+      },
+      {
+        "id": "model-557afdbecb79a73fb577196753f1d4cae960de1fb244391f4c2a8a2230a1ac9a",
+        "name": "강주연"
+      },
+      {
+        "id": "model-1b71e04986370aae96b2aed02a10e729b6786fff426658bba178ab14c556c7ce",
+        "name": "이선이"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol03-four-models-2020",
+    "slug": "korea-maxq-special-edition-vol03-four-models-2020",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 3호",
+    "englishTitle": "MAXQ Special Edition Vol. 3: Muscle Mania Four Beauties of Fantasy Island",
+    "summary": "Digital MAXQ Special Edition Vol. 3, featuring Jeong Hanna (정한나), Lee Ha-rin (이하린), Kang Ju-yeon (강주연), and Lee Seon-i (이선이). RIDI lists the exact work as a 41-page PDF e-book released 2020-12-24 and describes the Special Edition series as an online photobook of selected MAXQ pictorials. A contemporaneous report relaying MAXQ's credits names these four as the Vol. 3 models. Maeil Business separately identifies Jeong Hanna as a fitness influencer. Photo overlap with the models' other MAXQ issues has not been checked. Bibliographic metadata only; no cover or paid PDF was copied.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "정한나",
+      "이하린",
+      "강주연",
+      "이선이"
+    ],
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "name": "MAXQ International"
+        },
+        "id": "korea-maxq-special-edition-vol03-four-models-digital-2020",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "MAXQ International",
+        "releaseDate": "2020-12-24T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 41,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists MAXQ Special Edition 3 as a 41-page PDF e-book published 2020-12-24 by MAXQ International. Its description identifies the series as an online photobook of selected MAXQ pictorials not previously released online. No ISBN is listed. This is bibliographic metadata only; the cover and paid PDF are not mirrored.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000074",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-maxq-special-edition-vol03-four-models-2020",
+        "personId": 70133,
+        "role": "featured",
+        "creditedName": "정한나",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70133,
+          "slug": "model-6f0fe95f1470fda23217bf1e32e5a890e3866f84b8a708bd0c81af056d4030ea",
+          "canonicalPublicName": "정한나",
+          "originalName": "정한나",
+          "englishName": "Jeong Hanna",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "influencer",
+          "verificationSourceUrl": "https://www.mk.co.kr/news/entertain/10007223",
+          "profileSourceConfidence": "contemporary_press",
+          "createdAt": "2026-10-30T13:29:37.515233+08:00",
+          "updatedAt": "2026-10-30T13:29:37.515233+08:00"
+        },
+        "createdAt": "2026-10-30T15:22:53.979203+08:00",
+        "updatedAt": "2026-10-30T15:22:54.988802+08:00"
+      },
+      {
+        "workId": "korea-maxq-special-edition-vol03-four-models-2020",
+        "personId": 70241,
+        "role": "featured",
+        "creditedName": "이하린",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70241,
+          "slug": "model-7166811edf5b4ce4ad02440eaac871deb8542bf547fdea8dad4b16b48abfe131",
+          "canonicalPublicName": "이하린",
+          "originalName": "이하린",
+          "englishName": "",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "model",
+          "verificationSourceUrl": "https://www.newstown.co.kr/news/articleView.html?idxno=473998",
+          "profileSourceConfidence": "contemporary_press",
+          "createdAt": "2026-10-30T15:22:53.979203+08:00",
+          "updatedAt": "2026-10-30T15:22:53.979203+08:00"
+        },
+        "createdAt": "2026-10-30T15:22:53.979203+08:00",
+        "updatedAt": "2026-10-30T15:22:55.078185+08:00"
+      },
+      {
+        "workId": "korea-maxq-special-edition-vol03-four-models-2020",
+        "personId": 70242,
+        "role": "featured",
+        "creditedName": "강주연",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70242,
+          "slug": "model-557afdbecb79a73fb577196753f1d4cae960de1fb244391f4c2a8a2230a1ac9a",
+          "canonicalPublicName": "강주연",
+          "originalName": "강주연",
+          "englishName": "",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "model",
+          "verificationSourceUrl": "https://www.newstown.co.kr/news/articleView.html?idxno=473998",
+          "profileSourceConfidence": "contemporary_press",
+          "createdAt": "2026-10-30T15:22:53.979203+08:00",
+          "updatedAt": "2026-10-30T15:22:53.979203+08:00"
+        },
+        "createdAt": "2026-10-30T15:22:53.979203+08:00",
+        "updatedAt": "2026-10-30T15:22:55.123095+08:00"
+      },
+      {
+        "workId": "korea-maxq-special-edition-vol03-four-models-2020",
+        "personId": 70243,
+        "role": "featured",
+        "creditedName": "이선이",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70243,
+          "slug": "model-1b71e04986370aae96b2aed02a10e729b6786fff426658bba178ab14c556c7ce",
+          "canonicalPublicName": "이선이",
+          "originalName": "이선이",
+          "englishName": "",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "model",
+          "verificationSourceUrl": "https://www.newstown.co.kr/news/articleView.html?idxno=473998",
+          "profileSourceConfidence": "contemporary_press",
+          "createdAt": "2026-10-30T15:22:53.979203+08:00",
+          "updatedAt": "2026-10-30T15:22:53.979203+08:00"
+        },
+        "createdAt": "2026-10-30T15:22:53.979203+08:00",
+        "updatedAt": "2026-10-30T15:22:55.17364+08:00"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol03-four-models-2020",
+    "slug": "korea-maxq-special-edition-vol03-four-models-2020",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 3호",
+    "englishTitle": "MAXQ Special Edition Vol. 3: Muscle Mania Four Beauties of Fantasy Island",
+    "summary": "Digital MAXQ Special Edition Vol. 3, featuring Jeong Hanna (정한나), Lee Ha-rin (이하린), Kang Ju-yeon (강주연), and Lee Seon-i (이선이). RIDI lists the exact work as a 41-page PDF e-book released 2020-12-24 and describes the Special Edition series as an online photobook of selected MAXQ pictorials. A contemporaneous report relaying MAXQ's credits names these four as the Vol. 3 models. Maeil Business separately identifies Jeong Hanna as a fitness influencer. Photo overlap with the models' other MAXQ issues has not been checked. Bibliographic metadata only; no cover or paid PDF was copied.",
+    "originCode": "KR",
+    "featuredNames": "정한나,이하린,강주연,이선이",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "publisherCompanyId": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+        "publisherCompany": {
+          "id": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "slug": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "canonicalName": "MAXQ International",
+          "countryCode": "",
+          "officialUrl": "",
+          "verificationStatus": "catalog_credit",
+          "name": "MAXQ International",
+          "host": "",
+          "status": true,
+          "appId": "",
+          "appKey": "",
+          "createdAt": "2026-10-30T14:08:47.757128+08:00",
+          "updatedAt": "2026-10-30T14:08:47.757128+08:00"
+        },
+        "productLineId": 17833,
+        "id": "korea-maxq-special-edition-vol03-four-models-digital-2020",
+        "workId": "korea-maxq-special-edition-vol03-four-models-2020",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "MAXQ International",
+        "releaseDate": "2020-12-24T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 41,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists MAXQ Special Edition 3 as a 41-page PDF e-book published 2020-12-24 by MAXQ International. Its description identifies the series as an online photobook of selected MAXQ pictorials not previously released online. No ISBN is listed. This is bibliographic metadata only; the cover and paid PDF are not mirrored.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000074",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "status": "published",
+        "createdAt": "2026-10-30T15:22:54.885705+08:00",
+        "updatedAt": "2026-10-30T15:22:54.885705+08:00"
+      }
+    ],
+    "createdAt": "2026-10-30T15:22:54.841802+08:00",
+    "updatedAt": "2026-10-30T15:22:54.841802+08:00"
+  }
+}

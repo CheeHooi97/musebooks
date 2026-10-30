@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-10-30",
+  "catalogQuery": {
+    "total": 1
+  },
+  "work": {
+    "id": "work-tw-e79650b7f2bde8bd490f768a",
+    "title": "澎然心動的蘋率：30赫茲（寫真集 Vol.8）",
+    "originCode": "TW",
+    "featured": [
+      "蘋蘋澎澎"
+    ]
+  },
+  "edition": {
+    "id": "edition-00365079599e0343cff5efe3",
+    "format": "physical",
+    "releaseDate": "2026-12-01",
+    "releasePrecision": "month",
+    "pageCount": 128,
+    "isbn": ""
+  },
+  "signedApiCoverReadback": {
+    "httpStatus": 200,
+    "bytes": 88054,
+    "sha256": "5768bae3b7583f70644a3ab1347f25dce4602562356d3d44beb70d718c4f9210",
+    "matchesSource": true
+  }
+}

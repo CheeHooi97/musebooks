@@ -1,0 +1,218 @@
+{
+  "aliases": null,
+  "capturedAt": "2026-10-30T07:33:37.7733227Z",
+  "credits": [
+    {
+      "workId": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024",
+      "personId": 70248,
+      "role": "featured",
+      "creditedName": "아네싸",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70248,
+        "slug": "model-a2b10faa0325a14a8fb338eb58c62ca317bdb0d3e17bed88a53ec17bdc22f0c0",
+        "canonicalPublicName": "아네싸",
+        "originalName": "아네싸",
+        "englishName": "Anessa",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "drag performer",
+        "verificationSourceUrl": "https://tumblbug.com/drag10",
+        "profileSourceConfidence": "official_project_page",
+        "createdAt": "2026-10-30T15:32:46.110717+08:00",
+        "updatedAt": "2026-10-30T15:32:46.110717+08:00"
+      },
+      "createdAt": "2026-10-30T15:32:46.110717+08:00",
+      "updatedAt": "2026-10-30T15:32:47.435306+08:00"
+    },
+    {
+      "workId": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024",
+      "personId": 70249,
+      "role": "featured",
+      "creditedName": "허리케인 김치",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70249,
+        "slug": "model-d176aebf188aa8b03ef0c26dea42f12a69c1be2fad739647060d1b49dd113465",
+        "canonicalPublicName": "허리케인 김치",
+        "originalName": "허리케인 김치",
+        "englishName": "Hurricane Kimchi",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "creator",
+        "verificationSourceUrl": "https://heezyyang.wixsite.com/heezyyang",
+        "profileSourceConfidence": "official_artist_bio",
+        "createdAt": "2026-10-30T15:32:46.110717+08:00",
+        "updatedAt": "2026-10-30T15:32:46.110717+08:00"
+      },
+      "createdAt": "2026-10-30T15:32:46.110717+08:00",
+      "updatedAt": "2026-10-30T15:32:47.378934+08:00"
+    }
+  ],
+  "listings": [],
+  "media": [],
+  "observations": [],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 70248,
+      "slug": "model-a2b10faa0325a14a8fb338eb58c62ca317bdb0d3e17bed88a53ec17bdc22f0c0",
+      "canonicalPublicName": "아네싸",
+      "originalName": "아네싸",
+      "englishName": "Anessa",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "drag performer",
+      "verificationSourceUrl": "https://tumblbug.com/drag10",
+      "profileSourceConfidence": "official_project_page",
+      "createdAt": "2026-10-30T15:32:46.110717+08:00",
+      "updatedAt": "2026-10-30T15:32:46.110717+08:00"
+    },
+    {
+      "id": 70249,
+      "slug": "model-d176aebf188aa8b03ef0c26dea42f12a69c1be2fad739647060d1b49dd113465",
+      "canonicalPublicName": "허리케인 김치",
+      "originalName": "허리케인 김치",
+      "englishName": "Hurricane Kimchi",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "creator",
+      "verificationSourceUrl": "https://heezyyang.wixsite.com/heezyyang",
+      "profileSourceConfidence": "official_artist_bio",
+      "createdAt": "2026-10-30T15:32:46.110717+08:00",
+      "updatedAt": "2026-10-30T15:32:46.110717+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-a2b10faa0325a14a8fb338eb58c62ca317bdb0d3e17bed88a53ec17bdc22f0c0",
+        "name": "아네싸"
+      },
+      {
+        "id": "model-d176aebf188aa8b03ef0c26dea42f12a69c1be2fad739647060d1b49dd113465",
+        "name": "허리케인 김치"
+      }
+    ],
+    "id": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024",
+    "slug": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024",
+    "publicationType": "photobook",
+    "originalTitle": "드랙퀸 아네싸와 허리케인 김치의 10주년 포토북 \u0026 포스터",
+    "englishTitle": "Anessa \u0026 Hurricane Kimchi's 10th Anniversary Photobook \u0026 Poster",
+    "summary": "Physical commemorative photobook-and-poster project featuring drag performers Anessa and Hurricane Kimchi. The successful official campaign describes production of the book and poster and says the photos and illustrations were prepared. Heezy Yang's official bio identifies them as a Seoul-born Korean artist and activist who performs, makes music, and creates original music videos as Hurricane Kimchi. This is creator-led; the source does not describe either performer as a social-media influencer. Campaign dates are not publication dates. ISBN, page count, publisher imprint, and actual shipment date are not stated. No campaign image is stored because exact-asset reuse permission is unconfirmed.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "아네싸",
+      "허리케인 김치"
+    ],
+    "editions": [
+      {
+        "id": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024-physical",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "editionVariant": "photobook and poster",
+        "contentSummary": "Successful 2024 crowdfunding project for a physical photobook and poster commemorating Anessa and Hurricane Kimchi's 10th drag debut anniversary. The campaign says the imagery was prepared for production; actual shipment and publication date are not verified. No ISBN, page count, or publisher imprint stated. No cover image copied.",
+        "metadataSourceUrl": "https://tumblbug.com/drag10",
+        "seriesName": "10th Anniversary Photobook \u0026 Poster",
+        "editionLabel": "Physical Korean photobook",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024",
+        "personId": 70248,
+        "role": "featured",
+        "creditedName": "아네싸",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70248,
+          "slug": "model-a2b10faa0325a14a8fb338eb58c62ca317bdb0d3e17bed88a53ec17bdc22f0c0",
+          "canonicalPublicName": "아네싸",
+          "originalName": "아네싸",
+          "englishName": "Anessa",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "drag performer",
+          "verificationSourceUrl": "https://tumblbug.com/drag10",
+          "profileSourceConfidence": "official_project_page",
+          "createdAt": "2026-10-30T15:32:46.110717+08:00",
+          "updatedAt": "2026-10-30T15:32:46.110717+08:00"
+        },
+        "createdAt": "2026-10-30T15:32:46.110717+08:00",
+        "updatedAt": "2026-10-30T15:32:47.435306+08:00"
+      },
+      {
+        "workId": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024",
+        "personId": 70249,
+        "role": "featured",
+        "creditedName": "허리케인 김치",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70249,
+          "slug": "model-d176aebf188aa8b03ef0c26dea42f12a69c1be2fad739647060d1b49dd113465",
+          "canonicalPublicName": "허리케인 김치",
+          "originalName": "허리케인 김치",
+          "englishName": "Hurricane Kimchi",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "creator",
+          "verificationSourceUrl": "https://heezyyang.wixsite.com/heezyyang",
+          "profileSourceConfidence": "official_artist_bio",
+          "createdAt": "2026-10-30T15:32:46.110717+08:00",
+          "updatedAt": "2026-10-30T15:32:46.110717+08:00"
+        },
+        "createdAt": "2026-10-30T15:32:46.110717+08:00",
+        "updatedAt": "2026-10-30T15:32:47.378934+08:00"
+      }
+    ],
+    "id": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024",
+    "slug": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024",
+    "publicationType": "photobook",
+    "originalTitle": "드랙퀸 아네싸와 허리케인 김치의 10주년 포토북 \u0026 포스터",
+    "englishTitle": "Anessa \u0026 Hurricane Kimchi's 10th Anniversary Photobook \u0026 Poster",
+    "summary": "Physical commemorative photobook-and-poster project featuring drag performers Anessa and Hurricane Kimchi. The successful official campaign describes production of the book and poster and says the photos and illustrations were prepared. Heezy Yang's official bio identifies them as a Seoul-born Korean artist and activist who performs, makes music, and creates original music videos as Hurricane Kimchi. This is creator-led; the source does not describe either performer as a social-media influencer. Campaign dates are not publication dates. ISBN, page count, publisher imprint, and actual shipment date are not stated. No campaign image is stored because exact-asset reuse permission is unconfirmed.",
+    "originCode": "KR",
+    "featuredNames": "아네싸,허리케인 김치",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "productLineId": 17850,
+        "id": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024-physical",
+        "workId": "korea-anessa-hurricane-kimchi-10th-anniversary-photobook-2024",
+        "format": "physical",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "editionVariant": "photobook and poster",
+        "contentSummary": "Successful 2024 crowdfunding project for a physical photobook and poster commemorating Anessa and Hurricane Kimchi's 10th drag debut anniversary. The campaign says the imagery was prepared for production; actual shipment and publication date are not verified. No ISBN, page count, or publisher imprint stated. No cover image copied.",
+        "metadataSourceUrl": "https://tumblbug.com/drag10",
+        "seriesName": "10th Anniversary Photobook \u0026 Poster",
+        "editionLabel": "Physical Korean photobook",
+        "status": "published",
+        "createdAt": "2026-10-30T15:32:47.276212+08:00",
+        "updatedAt": "2026-10-30T15:32:47.276212+08:00"
+      }
+    ],
+    "createdAt": "2026-10-30T15:32:47.235191+08:00",
+    "updatedAt": "2026-10-30T15:32:47.235191+08:00"
+  }
+}

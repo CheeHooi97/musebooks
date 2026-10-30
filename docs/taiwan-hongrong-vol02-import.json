@@ -1,0 +1,47 @@
+[
+  {
+    "work": {
+      "id": "work-tw-d5e45f1116c341fc4cd8b90f",
+      "slug": "work-tw-d5e45f1116c341fc4cd8b90f",
+      "publicationType": "photobook",
+      "originalTitle": "【i級豔后】寫真雜誌Vol.02",
+      "summary": "The seller lists “【i級豔后】寫真雜誌Vol.02” as a 2026, full-color, glued 24-page physical photo magazine. The creator-linked @cutesww0125 profile links to the i級豔后 shop and 洪蓉’s earlier photobook; HK01 identifies 洪蓉 as a Taiwanese influencer and connects her to the label. The product is a preorder estimated to ship around 2026-11-10. The title-specific image is advertised cover artwork, not verified as the final printed cover. No ISBN is listed.",
+      "originCode": "TW",
+      "featuredNames": "洪蓉",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/5edb0e3d949136a4077d368f5168778287de218148fdb39da975230958e32ac8.jpg"
+    },
+    "featuredCreditSource": "verified_press_source",
+    "featuredPerson": {
+      "slug": "model-dc632abe09c1575634eb9c5b7dc9d3824bc67832747a80dbedb837149778602d",
+      "canonicalPublicName": "洪蓉",
+      "originalName": "洪蓉",
+      "traditionalChineseName": "洪蓉",
+      "personType": "creator",
+      "verificationSourceUrl": "https://www.hk01.com/%E5%8D%B3%E6%99%82%E5%A8%9B%E6%A8%82/60269413/%E5%8F%B0%E7%81%A3%E7%B6%B2%E7%B4%85%E7%82%BA-%E8%AA%87%E5%BC%B5%E8%BA%AB%E6%9D%90%E7%A8%B1%E8%99%9F-%E8%A8%BB%E5%86%8A%E5%95%86%E6%A8%99-%E5%87%BA%E9%81%9314%E5%B9%B4%E6%8B%8D%E5%BB%A3%E5%91%8A%E8%B5%B0%E7%B4%85",
+      "profileSourceConfidence": "verified_press_source"
+    },
+    "origin": {
+      "code": "TW",
+      "name": "Taiwan",
+      "nativeName": "台灣"
+    },
+    "edition": {
+      "id": "edition-7f1b5339234e7f7f07075263",
+      "workId": "work-tw-d5e45f1116c341fc4cd8b90f",
+      "format": "physical",
+      "language": "zh-Hant",
+      "editionMarket": "TW",
+      "releaseDate": "2026-11-01T00:00:00Z",
+      "releasePrecision": "month",
+      "pageCount": 24,
+      "dimensions": "21 × 29.7 cm",
+      "editionVariant": "standard",
+      "contentSummary": "Full-color, glued physical photo magazine, 24 pages, 21 × 29.7 cm. The seller shows NT$899 sale price and estimates dispatch around 2026-11-10; no fulfilled copy or ISBN is verified. The R2 cover is title-specific advertised cover art, not confirmed final print proof.",
+      "metadataSourceUrl": "https://www.yenq888.com/e950vr",
+      "editionLabel": "Vol.02 physical photo magazine preorder",
+      "coverUrl": "https://img.musecards.my/musebooks/covers/5edb0e3d949136a4077d368f5168778287de218148fdb39da975230958e32ac8.jpg",
+      "coverObjectKey": "musebooks/covers/5edb0e3d949136a4077d368f5168778287de218148fdb39da975230958e32ac8.jpg",
+      "originalCoverUrl": "https://img.1shop.tw/B5OrwMWXgNozxLqRVl7m4dYa/v5zx6meKY4vVr22gl0DVkLyo/original.jpg"
+    }
+  }
+]

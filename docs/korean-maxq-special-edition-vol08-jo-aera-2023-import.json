@@ -1,0 +1,47 @@
+[
+  {
+    "work": {
+      "id": "korea-maxq-special-edition-vol08-jo-aera-2023",
+      "slug": "korea-maxq-special-edition-vol08-jo-aera-2023",
+      "publicationType": "photobook",
+      "originalTitle": "MAXQ Special Edition 8호",
+      "englishTitle": "MAXQ Special Edition Vol. 8: Jo Aera",
+      "summary": "Digital MAXQ Special Edition featuring Korean Pilates instructor and online fitness creator Jo Aera (조애라). RIDI identifies the exact Vol. 8 product and describes the series as selected MAXQ pictorials previously unreleased online. A 2023 interview identifies her Instagram profile @aerassam_; later professional profiles document her online teaching and creator activity. Photo overlap with her other MAXQ/Secret B shoots is unverified, so no image uniqueness is asserted. Bibliographic metadata only; no cover or paid PDF copied.",
+      "originCode": "KR",
+      "featuredNames": "조애라"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "featuredPerson": {
+      "slug": "model-c963a506e010b402057f48f10e99eac0500126840eda9cc371974797fbed1ffc",
+      "canonicalPublicName": "조애라",
+      "originalName": "조애라",
+      "englishName": "Jo Aera",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://contents.premium.naver.com/wellness/wellnessinsight/contents/230413143753301gh",
+      "profileSourceConfidence": "interview_and_social_profile"
+    },
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxq-special-edition-vol08-jo-aera-digital-2023",
+      "workId": "korea-maxq-special-edition-vol08-jo-aera-2023",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "MAXQ International",
+      "releaseDate": "2023-04-25T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 33,
+      "editionVariant": "PDF e-book",
+      "contentSummary": "RIDI lists MAXQ Special Edition 8호 featuring 조애라, published 2023-04-25 as a 33-page PDF e-book by MAXQ International. The publisher description says the series selects MAXQ pictorials previously unreleased online. Image overlap with other MAXQ issues or Jo Aera's other photo products has not been checked. No cover or paid file copied.",
+      "metadataSourceUrl": "https://ridibooks.com/books/3563000166",
+      "seriesName": "MAXQ Special Edition",
+      "editionLabel": "Digital Korean photobook"
+    }
+  }
+]

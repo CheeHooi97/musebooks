@@ -1,0 +1,69 @@
+{
+  "method": "read-only PostgreSQL query by imported work IDs",
+  "verifiedAt": "2026-10-30T09:55:38.5125048Z",
+  "workCount": 4,
+  "editionCount": 4,
+  "editionMediaCount": 0,
+  "works": [
+    {
+      "id": "korea-minburung-real-photobook-01-red-pill",
+      "originalTitle": "민부릉 첫번째 실사 포토북 RED PILL",
+      "featuredNames": "민부릉",
+      "originCode": "KR",
+      "publicationType": "photobook",
+      "editions": [
+        {
+          "id": "korea-minburung-real-photobook-01-red-pill-physical",
+          "format": "physical",
+          "status": "published",
+          "metadataSourceUrl": "https://goodswork.shop/product/%EB%AF%BC%EB%B6%80%EB%A6%89-%EB%AF%BC%EB%B6%80%EB%A6%89-%EC%B2%AB%EB%B2%88%EC%A7%B8-%EC%8B%A4%EC%82%AC-%ED%8F%AC%ED%86%A0%EB%B6%81-red-pill-%EC%97%BD%EC%84%9C3%EC%A2%85-%EC%A6%9D%EC%A0%95/167/"
+        }
+      ]
+    },
+    {
+      "id": "korea-minburung-real-photobook-02-red-pill",
+      "originalTitle": "민부릉 두번째 실사 포토북 RED PILL",
+      "featuredNames": "민부릉",
+      "originCode": "KR",
+      "publicationType": "photobook",
+      "editions": [
+        {
+          "id": "korea-minburung-real-photobook-02-red-pill-physical",
+          "format": "physical",
+          "status": "published",
+          "metadataSourceUrl": "https://goodswork.shop/category/%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%EB%B2%84%EC%B8%84%EC%96%BC/71/"
+        }
+      ]
+    },
+    {
+      "id": "korea-minburung-real-photobook-03-red-pill",
+      "originalTitle": "민부릉 세번째 실사 포토북 RED PILL",
+      "featuredNames": "민부릉",
+      "originCode": "KR",
+      "publicationType": "photobook",
+      "editions": [
+        {
+          "id": "korea-minburung-real-photobook-03-red-pill-physical",
+          "format": "physical",
+          "status": "published",
+          "metadataSourceUrl": "https://goodswork.shop/category/%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%EB%B2%84%EC%B8%84%EC%96%BC/71/"
+        }
+      ]
+    },
+    {
+      "id": "korea-minburung-real-photobook-04-night-pool",
+      "originalTitle": "민부릉 네번째 실사 포토북 NIGHT POOL",
+      "featuredNames": "민부릉",
+      "originCode": "KR",
+      "publicationType": "photobook",
+      "editions": [
+        {
+          "id": "korea-minburung-real-photobook-04-night-pool-physical",
+          "format": "physical",
+          "status": "published",
+          "metadataSourceUrl": "https://goodswork.shop/category/%ED%81%AC%EB%A6%AC%EC%97%90%EC%9D%B4%ED%84%B0%EB%B2%84%EC%B8%84%EC%96%BC/71/"
+        }
+      ]
+    }
+  ]
+}

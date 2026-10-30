@@ -1,0 +1,152 @@
+{
+  "aliases": null,
+  "capturedAt": "2026-10-30T07:50:11.1425143Z",
+  "credits": [
+    {
+      "workId": "korea-nyangseul-after-work-web-photobook",
+      "personId": 70258,
+      "role": "featured",
+      "creditedName": "냥슬",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70258,
+        "slug": "model-4dc305903fbb0be418c70d2c3f45ebc20d46d529e431cb9a4e7ae62844c12156",
+        "canonicalPublicName": "냥슬",
+        "originalName": "냥슬",
+        "englishName": "",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "creator",
+        "verificationSourceUrl": "https://www.sooplive.com/station/yeseul1120/board/63508911",
+        "profileSourceConfidence": "official_creator_profile",
+        "createdAt": "2026-10-30T15:49:58.231891+08:00",
+        "updatedAt": "2026-10-30T15:49:58.231891+08:00"
+      },
+      "createdAt": "2026-10-30T15:49:58.231891+08:00",
+      "updatedAt": "2026-10-30T15:49:59.464171+08:00"
+    }
+  ],
+  "listings": [],
+  "media": [],
+  "observations": [],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 70258,
+      "slug": "model-4dc305903fbb0be418c70d2c3f45ebc20d46d529e431cb9a4e7ae62844c12156",
+      "canonicalPublicName": "냥슬",
+      "originalName": "냥슬",
+      "englishName": "",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "creator",
+      "verificationSourceUrl": "https://www.sooplive.com/station/yeseul1120/board/63508911",
+      "profileSourceConfidence": "official_creator_profile",
+      "createdAt": "2026-10-30T15:49:58.231891+08:00",
+      "updatedAt": "2026-10-30T15:49:58.231891+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-4dc305903fbb0be418c70d2c3f45ebc20d46d529e431cb9a4e7ae62844c12156",
+        "name": "냥슬"
+      }
+    ],
+    "id": "korea-nyangseul-after-work-web-photobook",
+    "slug": "korea-nyangseul-after-work-web-photobook",
+    "publicationType": "photobook",
+    "originalTitle": "[냥슬] 개인화보 [퇴근 후]",
+    "englishTitle": "Nyangseul Personal Photobook [After Work]",
+    "summary": "Paid digital web-photobook featuring Korean SOOP streamer 냥슬 (channel yeseul1120). The seller identifies 냥슬 as the model and 가람과달 (GARAM \u0026 DALL) as photographer, and describes 180 images; this is an image count, not a page count. No publication date, publisher imprint, ISBN, or conventional page count is stated. Creator activity is linked to 냥슬's official SOOP channel. Metadata only: the seller restricts purchased files to personal collection and prohibits unauthorized sharing, so no cover or paid image files are copied or hosted.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "냥슬"
+    ],
+    "photographer": "가람과달 (GARAM \u0026 DALL)",
+    "editions": [
+      {
+        "id": "korea-nyangseul-after-work-web-photobook-digital",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "editionVariant": "180-image web photobook",
+        "contentSummary": "Paid digital web-photobook listed as 180 images. The seller's use terms limit purchased files to personal collection and prohibit unauthorized sharing. Release date, publisher imprint, ISBN, and page count are not stated; the image count is not entered as pagination. No cover or paid files copied.",
+        "metadataSourceUrl": "https://pinkribbon.gumroad.com/l/seul003",
+        "editionLabel": "Digital Korean photobook",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-nyangseul-after-work-web-photobook",
+        "personId": 70258,
+        "role": "featured",
+        "creditedName": "냥슬",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70258,
+          "slug": "model-4dc305903fbb0be418c70d2c3f45ebc20d46d529e431cb9a4e7ae62844c12156",
+          "canonicalPublicName": "냥슬",
+          "originalName": "냥슬",
+          "englishName": "",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "creator",
+          "verificationSourceUrl": "https://www.sooplive.com/station/yeseul1120/board/63508911",
+          "profileSourceConfidence": "official_creator_profile",
+          "createdAt": "2026-10-30T15:49:58.231891+08:00",
+          "updatedAt": "2026-10-30T15:49:58.231891+08:00"
+        },
+        "createdAt": "2026-10-30T15:49:58.231891+08:00",
+        "updatedAt": "2026-10-30T15:49:59.464171+08:00"
+      }
+    ],
+    "id": "korea-nyangseul-after-work-web-photobook",
+    "slug": "korea-nyangseul-after-work-web-photobook",
+    "publicationType": "photobook",
+    "originalTitle": "[냥슬] 개인화보 [퇴근 후]",
+    "englishTitle": "Nyangseul Personal Photobook [After Work]",
+    "summary": "Paid digital web-photobook featuring Korean SOOP streamer 냥슬 (channel yeseul1120). The seller identifies 냥슬 as the model and 가람과달 (GARAM \u0026 DALL) as photographer, and describes 180 images; this is an image count, not a page count. No publication date, publisher imprint, ISBN, or conventional page count is stated. Creator activity is linked to 냥슬's official SOOP channel. Metadata only: the seller restricts purchased files to personal collection and prohibits unauthorized sharing, so no cover or paid image files are copied or hosted.",
+    "originCode": "KR",
+    "featuredNames": "냥슬",
+    "photographer": "가람과달 (GARAM \u0026 DALL)",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "id": "korea-nyangseul-after-work-web-photobook-digital",
+        "workId": "korea-nyangseul-after-work-web-photobook",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "editionVariant": "180-image web photobook",
+        "contentSummary": "Paid digital web-photobook listed as 180 images. The seller's use terms limit purchased files to personal collection and prohibit unauthorized sharing. Release date, publisher imprint, ISBN, and page count are not stated; the image count is not entered as pagination. No cover or paid files copied.",
+        "metadataSourceUrl": "https://pinkribbon.gumroad.com/l/seul003",
+        "editionLabel": "Digital Korean photobook",
+        "status": "published",
+        "createdAt": "2026-10-30T15:49:59.344774+08:00",
+        "updatedAt": "2026-10-30T15:49:59.344774+08:00"
+      }
+    ],
+    "createdAt": "2026-10-30T15:49:59.233598+08:00",
+    "updatedAt": "2026-10-30T15:49:59.233598+08:00"
+  }
+}

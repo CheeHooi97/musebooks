@@ -1,0 +1,181 @@
+{
+  "aliases": null,
+  "capturedAt": "2026-10-30T06:12:03.3798836Z",
+  "credits": [
+    {
+      "workId": "korea-maxq-special-edition-vol10-park-eunhye-2024",
+      "personId": 70107,
+      "role": "featured",
+      "creditedName": "박은혜",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70107,
+        "slug": "model-19cd33b7b79ff108a33f1153200906894e37c7cc281bbe6d133eb73c816c9db4",
+        "canonicalPublicName": "박은혜",
+        "originalName": "박은혜",
+        "englishName": "Park Eunhye",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "influencer",
+        "verificationSourceUrl": "https://v.daum.net/v/kksAAWx6b9",
+        "profileSourceConfidence": "publisher_and_press",
+        "createdAt": "2026-10-30T12:39:32.114062+08:00",
+        "updatedAt": "2026-10-30T12:39:32.114062+08:00"
+      },
+      "createdAt": "2026-10-30T14:08:48.715562+08:00",
+      "updatedAt": "2026-10-30T14:10:42.025182+08:00"
+    }
+  ],
+  "listings": [],
+  "media": [],
+  "observations": [],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 70107,
+      "slug": "model-19cd33b7b79ff108a33f1153200906894e37c7cc281bbe6d133eb73c816c9db4",
+      "canonicalPublicName": "박은혜",
+      "originalName": "박은혜",
+      "englishName": "Park Eunhye",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://v.daum.net/v/kksAAWx6b9",
+      "profileSourceConfidence": "publisher_and_press",
+      "createdAt": "2026-10-30T12:39:32.114062+08:00",
+      "updatedAt": "2026-10-30T12:39:32.114062+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-19cd33b7b79ff108a33f1153200906894e37c7cc281bbe6d133eb73c816c9db4",
+        "name": "박은혜"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol10-park-eunhye-2024",
+    "slug": "korea-maxq-special-edition-vol10-park-eunhye-2024",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 10호",
+    "englishTitle": "MAXQ Special Edition Vol. 10: Park Eunhye",
+    "summary": "Digital MAXQ Special Edition featuring Korean YouTube creator Park Eunhye (Jamong). RIDI identifies the exact Vol. 10 product and describes the Special Edition series as selected MAXQ pictorials not previously released online. The product is a distinct retail title; photographic overlap with Park's other MAXQ/Secret B titles is unverified, so no image uniqueness is asserted. Bibliographic metadata only; no cover or paid PDF copied.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "박은혜"
+    ],
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "name": "MAXQ International"
+        },
+        "id": "korea-maxq-special-edition-vol10-park-eunhye-digital-2024",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "MAXQ International",
+        "releaseDate": "2024-06-27T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 33,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists MAXQ Special Edition 10호 featuring 박은혜, a 33-page PDF e-book published 2024-06-27 by MAXQ International. The publisher description says the series selects MAXQ pictorials previously unreleased online; whether these images overlap with Park Eunhye's other MAXQ books has not been checked. No cover or paid file copied.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000201",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-maxq-special-edition-vol10-park-eunhye-2024",
+        "personId": 70107,
+        "role": "featured",
+        "creditedName": "박은혜",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70107,
+          "slug": "model-19cd33b7b79ff108a33f1153200906894e37c7cc281bbe6d133eb73c816c9db4",
+          "canonicalPublicName": "박은혜",
+          "originalName": "박은혜",
+          "englishName": "Park Eunhye",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "influencer",
+          "verificationSourceUrl": "https://v.daum.net/v/kksAAWx6b9",
+          "profileSourceConfidence": "publisher_and_press",
+          "createdAt": "2026-10-30T12:39:32.114062+08:00",
+          "updatedAt": "2026-10-30T12:39:32.114062+08:00"
+        },
+        "createdAt": "2026-10-30T14:08:48.715562+08:00",
+        "updatedAt": "2026-10-30T14:10:42.025182+08:00"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol10-park-eunhye-2024",
+    "slug": "korea-maxq-special-edition-vol10-park-eunhye-2024",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 10호",
+    "englishTitle": "MAXQ Special Edition Vol. 10: Park Eunhye",
+    "summary": "Digital MAXQ Special Edition featuring Korean YouTube creator Park Eunhye (Jamong). RIDI identifies the exact Vol. 10 product and describes the Special Edition series as selected MAXQ pictorials not previously released online. The product is a distinct retail title; photographic overlap with Park's other MAXQ/Secret B titles is unverified, so no image uniqueness is asserted. Bibliographic metadata only; no cover or paid PDF copied.",
+    "originCode": "KR",
+    "featuredNames": "박은혜",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "publisherCompanyId": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+        "publisherCompany": {
+          "id": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "slug": "publisher-eaba3fcfd36feb0295265133f1a561ade37af48f92595cd05ea4a15be1cd0c8d",
+          "canonicalName": "MAXQ International",
+          "countryCode": "",
+          "officialUrl": "",
+          "verificationStatus": "catalog_credit",
+          "name": "MAXQ International",
+          "host": "",
+          "status": true,
+          "appId": "",
+          "appKey": "",
+          "createdAt": "2026-10-30T14:08:47.757128+08:00",
+          "updatedAt": "2026-10-30T14:08:47.757128+08:00"
+        },
+        "productLineId": 17833,
+        "id": "korea-maxq-special-edition-vol10-park-eunhye-digital-2024",
+        "workId": "korea-maxq-special-edition-vol10-park-eunhye-2024",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "MAXQ International",
+        "releaseDate": "2024-06-27T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 33,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists MAXQ Special Edition 10호 featuring 박은혜, a 33-page PDF e-book published 2024-06-27 by MAXQ International. The publisher description says the series selects MAXQ pictorials previously unreleased online; whether these images overlap with Park Eunhye's other MAXQ books has not been checked. No cover or paid file copied.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000201",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "status": "published",
+        "createdAt": "2026-10-30T14:08:48.611375+08:00",
+        "updatedAt": "2026-10-30T14:10:41.941667+08:00"
+      }
+    ],
+    "createdAt": "2026-10-30T14:08:48.570308+08:00",
+    "updatedAt": "2026-10-30T14:11:23.957678+08:00"
+  }
+}

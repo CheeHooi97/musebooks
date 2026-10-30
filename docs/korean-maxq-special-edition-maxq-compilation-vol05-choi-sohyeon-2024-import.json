@@ -1,0 +1,47 @@
+[
+  {
+    "work": {
+      "id": "korea-maxq-special-edition-maxq-compilation-vol05-choi-sohyeon-2024",
+      "slug": "korea-maxq-special-edition-maxq-compilation-vol05-choi-sohyeon-2024",
+      "publicationType": "photobook",
+      "originalTitle": "<스페셜 에디션+맥스큐> 합본호 Vol.05: 최소현",
+      "englishTitle": "MAXQ Special Edition + MAXQ Compilation Vol. 05: Choi Sohyeon",
+      "summary": "Digital MAXQ compilation photobook featuring Choi Sohyeon, a Korean fitness model and Instagram influencer. RIDI identifies the exact 54-page PDF e-book, released 2024-09-30. Its description says it combines online-unreleased MAXQ Special Edition pictorials with MAXQ best and unpublished cuts. This numbered compilation is a distinct retailer product; overlap with Choi Sohyeon's Secret B and other MAXQ titles has not been checked. No ISBN is listed. Metadata only; no cover or paid e-book copied.",
+      "originCode": "KR",
+      "featuredNames": "최소현"
+    },
+    "featuredPerson": {
+      "slug": "model-0221b62764f5c220d482ad331f424265c564106ade55999f7c7efe913b1dd394",
+      "canonicalPublicName": "최소현",
+      "originalName": "최소현",
+      "englishName": "Choi Sohyeon",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://www.twig24.com/news/entertainments/2020/09/20/20200920500023",
+      "profileSourceConfidence": "contemporary_press"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxq-special-edition-maxq-compilation-vol05-choi-sohyeon-digital-2024",
+      "workId": "korea-maxq-special-edition-maxq-compilation-vol05-choi-sohyeon-2024",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "MAXQ International",
+      "releaseDate": "2024-09-30T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 54,
+      "editionVariant": "PDF e-book",
+      "contentSummary": "RIDI lists <스페셜 에디션+맥스큐> 합본호 Vol.05: 최소현 as a 54-page PDF e-book published 2024-09-30 by MAXQ International; file size 11.3 MB. The description says it combines online-unreleased MAXQ Special Edition pictorials with MAXQ magazine best and unpublished cuts. Image overlap with Choi Sohyeon's other MAXQ and Secret B issues has not been checked. No ISBN is listed; no cover or paid file is copied.",
+      "metadataSourceUrl": "https://ridibooks.com/books/3563000209",
+      "seriesName": "MAXQ Special Edition + MAXQ Compilation",
+      "editionLabel": "Digital Korean photobook"
+    }
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "work": {
+      "id": "korea-kim-young-ju-photography-booklet-2022",
+      "slug": "korea-kim-young-ju-photography-booklet-2022",
+      "publicationType": "photobook",
+      "originalTitle": "Kim Young Ju",
+      "englishTitle": "Kim Young Ju: photography booklet",
+      "summary": "The National Library of Korea LOD record KMO202332009 identifies Kim Young Ju as a photography booklet by 김영주, issued in 2022. Bibliographic metadata only; no cover image is included.",
+      "originCode": "KR",
+      "featuredNames": "김영주"
+    },
+    "featuredCreditSource": "verified_press_source",
+    "featuredPerson": {
+      "slug": "model-5e21b9dbb9f46fd679d02a8d633c45a10772833532dd1473d7dd479d3795c2ad",
+      "canonicalPublicName": "김영주",
+      "originalName": "김영주",
+      "englishName": "Kim Young Ju",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.sportsseoul.com/news/read/1202040",
+      "profileSourceConfidence": "verified_press_source"
+    },
+    "edition": {
+      "id": "korea-kim-young-ju-photography-booklet-2022-physical",
+      "workId": "korea-kim-young-ju-photography-booklet-2022",
+      "format": "physical",
+      "editionMarket": "KR",
+      "publisher": "Nadaum (나다움북스)",
+      "releaseDate": "2022-01-01T00:00:00Z",
+      "releasePrecision": "year",
+      "isbn": "9791197931567",
+      "pageCount": 133,
+      "dimensions": "30 cm",
+      "editionLabel": "Print edition",
+      "contentSummary": "The National Library of Korea LOD record specifies a photography booklet, 133 pages, 30 cm, issued in 2022, by Nadaum (나다움북스). No cover image or image-hosting permission is included.",
+      "metadataSourceUrl": "https://lod.nl.go.kr/resource/KMO202332009"
+    }
+  }
+]

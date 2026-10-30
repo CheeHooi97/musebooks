@@ -1,0 +1,311 @@
+{
+  "aliases": null,
+  "capturedAt": "2026-10-30T05:46:16.4370637Z",
+  "credits": [
+    {
+      "workId": "korea-maxq-special-edition-vol01-2020",
+      "personId": 70148,
+      "role": "featured",
+      "creditedName": "공민서",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70148,
+        "slug": "model-1017b023b7a55686739af47ea1fdde7d639bdc1c81beaa0e711c6b90a502c02a",
+        "canonicalPublicName": "공민서",
+        "originalName": "공민서",
+        "englishName": "Gong Minseo",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://ridibooks.com/books/3563000054",
+        "profileSourceConfidence": "publisher_catalog",
+        "createdAt": "2026-10-30T13:46:01.41072+08:00",
+        "updatedAt": "2026-10-30T13:46:01.41072+08:00"
+      },
+      "createdAt": "2026-10-30T13:46:01.41072+08:00",
+      "updatedAt": "2026-10-30T13:46:02.348995+08:00"
+    },
+    {
+      "workId": "korea-maxq-special-edition-vol01-2020",
+      "personId": 70149,
+      "role": "featured",
+      "creditedName": "손소희",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70149,
+        "slug": "model-e02b01234554fa446174cb0a1fc1ddb4b96c4368744c74e6602aa3ebe338961c",
+        "canonicalPublicName": "손소희",
+        "originalName": "손소희",
+        "englishName": "Son Sohee",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://ridibooks.com/books/3563000054",
+        "profileSourceConfidence": "publisher_catalog",
+        "createdAt": "2026-10-30T13:46:01.41072+08:00",
+        "updatedAt": "2026-10-30T13:46:01.41072+08:00"
+      },
+      "createdAt": "2026-10-30T13:46:01.41072+08:00",
+      "updatedAt": "2026-10-30T13:46:02.435352+08:00"
+    },
+    {
+      "workId": "korea-maxq-special-edition-vol01-2020",
+      "personId": 70150,
+      "role": "featured",
+      "creditedName": "최설화",
+      "creditSource": "verified_publisher_source",
+      "person": {
+        "id": 70150,
+        "slug": "model-183302b6f9fb1b7ea7e843b916336bc63a9410ef5971768cac6f5298b69739ab",
+        "canonicalPublicName": "최설화",
+        "originalName": "최설화",
+        "englishName": "Choi Seolhwa",
+        "traditionalChineseName": "",
+        "simplifiedChineseName": "",
+        "personType": "model",
+        "verificationSourceUrl": "https://www.thebigdata.co.kr/view.php?ud=202007161721581840992c130dbe_23",
+        "profileSourceConfidence": "contemporary_press",
+        "createdAt": "2026-10-30T13:46:01.41072+08:00",
+        "updatedAt": "2026-10-30T13:46:01.41072+08:00"
+      },
+      "createdAt": "2026-10-30T13:46:01.41072+08:00",
+      "updatedAt": "2026-10-30T13:46:02.293786+08:00"
+    }
+  ],
+  "listings": [],
+  "media": [],
+  "observations": [],
+  "peopleIncludingAliasRows": [
+    {
+      "id": 70148,
+      "slug": "model-1017b023b7a55686739af47ea1fdde7d639bdc1c81beaa0e711c6b90a502c02a",
+      "canonicalPublicName": "공민서",
+      "originalName": "공민서",
+      "englishName": "Gong Minseo",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "model",
+      "verificationSourceUrl": "https://ridibooks.com/books/3563000054",
+      "profileSourceConfidence": "publisher_catalog",
+      "createdAt": "2026-10-30T13:46:01.41072+08:00",
+      "updatedAt": "2026-10-30T13:46:01.41072+08:00"
+    },
+    {
+      "id": 70149,
+      "slug": "model-e02b01234554fa446174cb0a1fc1ddb4b96c4368744c74e6602aa3ebe338961c",
+      "canonicalPublicName": "손소희",
+      "originalName": "손소희",
+      "englishName": "Son Sohee",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "model",
+      "verificationSourceUrl": "https://ridibooks.com/books/3563000054",
+      "profileSourceConfidence": "publisher_catalog",
+      "createdAt": "2026-10-30T13:46:01.41072+08:00",
+      "updatedAt": "2026-10-30T13:46:01.41072+08:00"
+    },
+    {
+      "id": 70150,
+      "slug": "model-183302b6f9fb1b7ea7e843b916336bc63a9410ef5971768cac6f5298b69739ab",
+      "canonicalPublicName": "최설화",
+      "originalName": "최설화",
+      "englishName": "Choi Seolhwa",
+      "traditionalChineseName": "",
+      "simplifiedChineseName": "",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.thebigdata.co.kr/view.php?ud=202007161721581840992c130dbe_23",
+      "profileSourceConfidence": "contemporary_press",
+      "createdAt": "2026-10-30T13:46:01.41072+08:00",
+      "updatedAt": "2026-10-30T13:46:01.41072+08:00"
+    }
+  ],
+  "publicBook": {
+    "models": [
+      {
+        "id": "model-1017b023b7a55686739af47ea1fdde7d639bdc1c81beaa0e711c6b90a502c02a",
+        "name": "공민서"
+      },
+      {
+        "id": "model-e02b01234554fa446174cb0a1fc1ddb4b96c4368744c74e6602aa3ebe338961c",
+        "name": "손소희"
+      },
+      {
+        "id": "model-183302b6f9fb1b7ea7e843b916336bc63a9410ef5971768cac6f5298b69739ab",
+        "name": "최설화"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol01-2020",
+    "slug": "korea-maxq-special-edition-vol01-2020",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 1호 '머슬여제 3인방' 공민서, 손소희, 최설화",
+    "englishTitle": "MAXQ Special Edition Vol. 1: Three Muscle Queens",
+    "summary": "Digital MAXQ Special Edition photobook featuring Korean fitness models Gong Minseo (공민서), Son Sohee (손소희), and Choi Seolhwa (최설화). RIDI identifies a 50-page PDF e-book dated 2020-08-03 and describes the series as selected MAXQ photos not previously published online. Contemporary Big Data News identifies Choi Seolhwa's YouTube fitness channel and Instagram fitness content; the other two subjects are verified by the product listing as featured models. Image overlap with earlier MAXQ shoots has not been checked. No cover or paid PDF was copied because reuse permission is unconfirmed.",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국"
+    },
+    "featuredNames": [
+      "공민서",
+      "손소희",
+      "최설화"
+    ],
+    "editions": [
+      {
+        "publisherProfile": {
+          "id": "publisher-42178070b167748735bfaec3880c99256f6730933680a205e0a6e3415a14026a",
+          "name": "㈜맥스큐인터내셔널"
+        },
+        "id": "korea-maxq-special-edition-vol01-digital-2020",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "㈜맥스큐인터내셔널",
+        "releaseDate": "2020-08-03T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 50,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists the digital Special Edition Vol. 1 as a 50-page, 18.4 MB PDF released 2020-08-03 by MAXQ International. It also records the paper publication date as 2020-07-31; no physical edition was added from that cross-reference alone. No ISBN is listed. The ebook is not copied or mirrored.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000054",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "listings": [],
+        "activeListings": [],
+        "soldListings": [],
+        "retailOffers": []
+      }
+    ]
+  },
+  "readOnly": true,
+  "work": {
+    "originMarketId": 10544,
+    "credits": [
+      {
+        "workId": "korea-maxq-special-edition-vol01-2020",
+        "personId": 70148,
+        "role": "featured",
+        "creditedName": "공민서",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70148,
+          "slug": "model-1017b023b7a55686739af47ea1fdde7d639bdc1c81beaa0e711c6b90a502c02a",
+          "canonicalPublicName": "공민서",
+          "originalName": "공민서",
+          "englishName": "Gong Minseo",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "model",
+          "verificationSourceUrl": "https://ridibooks.com/books/3563000054",
+          "profileSourceConfidence": "publisher_catalog",
+          "createdAt": "2026-10-30T13:46:01.41072+08:00",
+          "updatedAt": "2026-10-30T13:46:01.41072+08:00"
+        },
+        "createdAt": "2026-10-30T13:46:01.41072+08:00",
+        "updatedAt": "2026-10-30T13:46:02.348995+08:00"
+      },
+      {
+        "workId": "korea-maxq-special-edition-vol01-2020",
+        "personId": 70149,
+        "role": "featured",
+        "creditedName": "손소희",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70149,
+          "slug": "model-e02b01234554fa446174cb0a1fc1ddb4b96c4368744c74e6602aa3ebe338961c",
+          "canonicalPublicName": "손소희",
+          "originalName": "손소희",
+          "englishName": "Son Sohee",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "model",
+          "verificationSourceUrl": "https://ridibooks.com/books/3563000054",
+          "profileSourceConfidence": "publisher_catalog",
+          "createdAt": "2026-10-30T13:46:01.41072+08:00",
+          "updatedAt": "2026-10-30T13:46:01.41072+08:00"
+        },
+        "createdAt": "2026-10-30T13:46:01.41072+08:00",
+        "updatedAt": "2026-10-30T13:46:02.435352+08:00"
+      },
+      {
+        "workId": "korea-maxq-special-edition-vol01-2020",
+        "personId": 70150,
+        "role": "featured",
+        "creditedName": "최설화",
+        "creditSource": "verified_publisher_source",
+        "person": {
+          "id": 70150,
+          "slug": "model-183302b6f9fb1b7ea7e843b916336bc63a9410ef5971768cac6f5298b69739ab",
+          "canonicalPublicName": "최설화",
+          "originalName": "최설화",
+          "englishName": "Choi Seolhwa",
+          "traditionalChineseName": "",
+          "simplifiedChineseName": "",
+          "personType": "model",
+          "verificationSourceUrl": "https://www.thebigdata.co.kr/view.php?ud=202007161721581840992c130dbe_23",
+          "profileSourceConfidence": "contemporary_press",
+          "createdAt": "2026-10-30T13:46:01.41072+08:00",
+          "updatedAt": "2026-10-30T13:46:01.41072+08:00"
+        },
+        "createdAt": "2026-10-30T13:46:01.41072+08:00",
+        "updatedAt": "2026-10-30T13:46:02.293786+08:00"
+      }
+    ],
+    "id": "korea-maxq-special-edition-vol01-2020",
+    "slug": "korea-maxq-special-edition-vol01-2020",
+    "publicationType": "photobook",
+    "originalTitle": "MAXQ Special Edition 1호 '머슬여제 3인방' 공민서, 손소희, 최설화",
+    "englishTitle": "MAXQ Special Edition Vol. 1: Three Muscle Queens",
+    "summary": "Digital MAXQ Special Edition photobook featuring Korean fitness models Gong Minseo (공민서), Son Sohee (손소희), and Choi Seolhwa (최설화). RIDI identifies a 50-page PDF e-book dated 2020-08-03 and describes the series as selected MAXQ photos not previously published online. Contemporary Big Data News identifies Choi Seolhwa's YouTube fitness channel and Instagram fitness content; the other two subjects are verified by the product listing as featured models. Image overlap with earlier MAXQ shoots has not been checked. No cover or paid PDF was copied because reuse permission is unconfirmed.",
+    "originCode": "KR",
+    "featuredNames": "공민서,손소희,최설화",
+    "status": "published",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5,
+      "createdAt": "2026-10-20T11:31:09.856845+08:00",
+      "updatedAt": "2026-10-20T11:31:09.856845+08:00"
+    },
+    "editions": [
+      {
+        "publisherCompanyId": "publisher-42178070b167748735bfaec3880c99256f6730933680a205e0a6e3415a14026a",
+        "publisherCompany": {
+          "id": "publisher-42178070b167748735bfaec3880c99256f6730933680a205e0a6e3415a14026a",
+          "slug": "publisher-42178070b167748735bfaec3880c99256f6730933680a205e0a6e3415a14026a",
+          "canonicalName": "㈜맥스큐인터내셔널",
+          "countryCode": "",
+          "officialUrl": "",
+          "verificationStatus": "catalog_credit",
+          "name": "㈜맥스큐인터내셔널",
+          "host": "",
+          "status": true,
+          "appId": "",
+          "appKey": "",
+          "createdAt": "2026-10-30T12:55:07.456485+08:00",
+          "updatedAt": "2026-10-30T12:55:07.456485+08:00"
+        },
+        "productLineId": 17787,
+        "id": "korea-maxq-special-edition-vol01-digital-2020",
+        "workId": "korea-maxq-special-edition-vol01-2020",
+        "format": "digital",
+        "language": "ko-KR",
+        "editionMarket": "KR",
+        "publisher": "㈜맥스큐인터내셔널",
+        "releaseDate": "2020-08-03T08:00:00+08:00",
+        "releasePrecision": "day",
+        "pageCount": 50,
+        "editionVariant": "PDF e-book",
+        "contentSummary": "RIDI lists the digital Special Edition Vol. 1 as a 50-page, 18.4 MB PDF released 2020-08-03 by MAXQ International. It also records the paper publication date as 2020-07-31; no physical edition was added from that cross-reference alone. No ISBN is listed. The ebook is not copied or mirrored.",
+        "metadataSourceUrl": "https://ridibooks.com/books/3563000054",
+        "seriesName": "MAXQ Special Edition",
+        "editionLabel": "Digital Korean photobook",
+        "status": "published",
+        "createdAt": "2026-10-30T13:46:02.191677+08:00",
+        "updatedAt": "2026-10-30T13:46:02.191677+08:00"
+      }
+    ],
+    "createdAt": "2026-10-30T13:46:02.148557+08:00",
+    "updatedAt": "2026-10-30T13:46:02.148557+08:00"
+  }
+}

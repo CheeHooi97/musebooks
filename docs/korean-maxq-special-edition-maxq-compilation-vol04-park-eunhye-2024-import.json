@@ -1,0 +1,47 @@
+[
+  {
+    "work": {
+      "id": "korea-maxq-special-edition-maxq-compilation-vol04-park-eunhye-2024",
+      "slug": "korea-maxq-special-edition-maxq-compilation-vol04-park-eunhye-2024",
+      "publicationType": "photobook",
+      "originalTitle": "<스페셜 에디션+맥스큐> 합본호 Vol.04: 박은혜",
+      "englishTitle": "MAXQ Special Edition + MAXQ Compilation Vol. 04: Park Eunhye",
+      "summary": "Digital MAXQ compilation photobook featuring Park Eunhye, a Korean YouTube creator and model. RIDI identifies the exact 53-page PDF e-book, released 2024-08-28. Its product description says it combines online-unreleased MAXQ Special Edition pictorials with MAXQ best and unpublished cuts. This numbered compilation is a distinct retailer product; overlap with Park Eunhye's Secret B and other MAXQ images has not been checked. No ISBN is listed. Metadata only; no cover or paid e-book copied.",
+      "originCode": "KR",
+      "featuredNames": "박은혜"
+    },
+    "featuredPerson": {
+      "slug": "model-19cd33b7b79ff108a33f1153200906894e37c7cc281bbe6d133eb73c816c9db4",
+      "canonicalPublicName": "박은혜",
+      "originalName": "박은혜",
+      "englishName": "Park Eunhye",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://v.daum.net/v/kksAAWx6b9",
+      "profileSourceConfidence": "publisher_and_press"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-maxq-special-edition-maxq-compilation-vol04-park-eunhye-digital-2024",
+      "workId": "korea-maxq-special-edition-maxq-compilation-vol04-park-eunhye-2024",
+      "format": "digital",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "publisher": "MAXQ International",
+      "releaseDate": "2024-08-28T00:00:00Z",
+      "releasePrecision": "day",
+      "isbn": "",
+      "pageCount": 53,
+      "editionVariant": "PDF e-book",
+      "contentSummary": "RIDI lists <스페셜 에디션+맥스큐> 합본호 Vol.04: 박은혜 as a 53-page PDF e-book published 2024-08-28 by MAXQ International; file size 11.4 MB. The product description says it combines online-unreleased MAXQ Special Edition pictorials with MAXQ magazine best and unpublished cuts. Image overlap with Park Eunhye's other MAXQ and Secret B issues has not been checked. No ISBN is listed; no cover or paid file is copied.",
+      "metadataSourceUrl": "https://ridibooks.com/books/3563000206",
+      "seriesName": "MAXQ Special Edition + MAXQ Compilation",
+      "editionLabel": "Digital Korean photobook"
+    }
+  }
+]

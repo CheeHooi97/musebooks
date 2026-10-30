@@ -1,0 +1,36 @@
+{
+  "method": "repeatable-read PostgreSQL read-only transaction",
+  "verifiedAt": "2026-10-30T09:37:14.8325399Z",
+  "workCount": 1,
+  "editionCount": 1,
+  "explicitMediaReferences": 0,
+  "works": [
+    {
+      "id": "korea-kang-gyunam-new-face-senior-vol03-2022",
+      "originalTitle": "시니어 모델 강규남 뉴페이스 시니어 3",
+      "featuredNames": "강규남",
+      "publicationType": "photobook",
+      "originCode": "KR",
+      "credits": [
+        {
+          "personId": 70307,
+          "role": "featured",
+          "creditedName": "강규남",
+          "creditSource": "verified_publisher_source",
+          "personType": "model"
+        }
+      ],
+      "editions": [
+        {
+          "id": "korea-kang-gyunam-new-face-senior-vol03-2022-digital",
+          "format": "digital",
+          "isbn": "9791190821339",
+          "publisher": "(도서출판)이음",
+          "pageCount": 64,
+          "metadataSourceUrl": "https://www.yes24.com/Product/Goods/107445976",
+          "mediaCount": 0
+        }
+      ]
+    }
+  ]
+}

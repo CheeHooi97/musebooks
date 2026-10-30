@@ -1,0 +1,9 @@
+# Volume 3 Verified and Added to the Catalog
+
+YES24 lists *시니어 모델 강규남 뉴페이스 시니어 3* as a downloadable DRM PDF e-book from (도서출판)이음, published on 2022-02-11. The page reports 64 pages, 19.62 MB, and ISBN 9791190821339. Its table of contents explicitly includes chapter 3, **강규남 화보집** (“Kang Gyu-nam photobook”), supporting her featured-subject credit as well as the author listing ([YES24 product page](https://www.yes24.com/Product/Goods/107445976)).
+
+Before import, a read-only catalog lookup found no edition matching the ISBN, YES24 URL, or planned edition ID. The manifest passed `Validated 1 import records`. The importer reported `Catalog records and price observations committed; listing image provenance records: 0`. A repeatable-read read-back verified **1 work, 1 digital edition, the featured credit for 강규남, ISBN 9791190821339, and 0 media references** ([database read-back](../docs/korean-influencer-photobooks-batch-14-db-readback.json)).
+
+This completes the indexed 1–6 set in the database: Volumes 1, 2, 4, 5, and 6 were added in batch 13 ([batch 13 read-back](../docs/korean-influencer-photobooks-batch-13-db-readback.json)); Volume 3 is recorded in the [batch 14 import manifest](../docs/korean-influencer-photobooks-batch-14-import.json). This is bibliographic cataloging only. The product page does not grant permission to copy its cover or interior images to R2, so no image was uploaded.
+
+Other Korean creator leads still need product-level genre/subject evidence. The Seojin Patreon creator identity remains unresolved, and Pyo Eunji’s C106 items are not identified by the store as photobooks ([Seojin product](https://www.patreon.com/seojinsatelier/posts/little-early-lot-169117233), [Pyo Eunji C106 set](https://pyoeunji.com/en/products/c106set)). Exact-image reuse permission for R2 remains undocumented.

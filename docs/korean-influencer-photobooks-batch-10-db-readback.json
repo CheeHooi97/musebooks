@@ -1,0 +1,109 @@
+{
+  "credits": [
+    {
+      "workId": "korea-impact-jung-da-yeon-photobook-2019",
+      "publicName": "정다연",
+      "role": "featured",
+      "creditSource": "verified_press_source"
+    },
+    {
+      "workId": "korea-loveys-vol2-yoo-seorin-digital",
+      "publicName": "YooSeorin",
+      "role": "featured",
+      "creditSource": "verified_publisher_source"
+    },
+    {
+      "workId": "korea-loveys-vol3-winter-trip-yoo-seorin-digital",
+      "publicName": "YooSeorin",
+      "role": "featured",
+      "creditSource": "verified_publisher_source"
+    }
+  ],
+  "editions": [
+    {
+      "id": "korea-impact-jung-da-yeon-photobook-2019-physical",
+      "workId": "korea-impact-jung-da-yeon-photobook-2019",
+      "format": "physical",
+      "publisher": "Impact Crew (임팩트크루)",
+      "isbn": "",
+      "pageCount": 204,
+      "releaseDate": null,
+      "editionLabel": "Single physical photobook edition",
+      "coverUrl": "",
+      "metadataSourceUrl": "https://www.ypbooks.co.kr/books/202308233114560575"
+    },
+    {
+      "id": "korea-loveys-vol2-yoo-seorin-digital-edition",
+      "workId": "korea-loveys-vol2-yoo-seorin-digital",
+      "format": "digital",
+      "publisher": "RINI BOOKS",
+      "isbn": "",
+      "pageCount": 43,
+      "releaseDate": null,
+      "editionLabel": "Vol.2 digital photo-diary issue",
+      "coverUrl": "",
+      "metadataSourceUrl": "https://rinibooks.gumroad.com/l/loveys_02"
+    },
+    {
+      "id": "korea-loveys-vol3-winter-trip-yoo-seorin-digital-edition",
+      "workId": "korea-loveys-vol3-winter-trip-yoo-seorin-digital",
+      "format": "digital",
+      "publisher": "RINI BOOKS",
+      "isbn": "",
+      "pageCount": 0,
+      "releaseDate": null,
+      "editionLabel": "Vol.3 Winter Trip digital issue",
+      "coverUrl": "",
+      "metadataSourceUrl": "https://rinibooks.gumroad.com/l/loveys_03"
+    }
+  ],
+  "people": [
+    {
+      "slug": "model-bd6a773e793568b0be2c14cb3736128b52a9d57ceb8e9a1d088dd1686ccb9042",
+      "canonicalPublicName": "YooSeorin",
+      "originalName": "서린",
+      "englishName": "YooSeorin",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.patreon.com/Riniverse/posts/2026nyeon-balmae-147382927?l=de",
+      "profileSourceConfidence": "creator_controlled_patron"
+    },
+    {
+      "slug": "model-f51abbbb3dd641f9492067dddfd88e70782c6c5e2f76dbabb043fa8b63d3493b",
+      "canonicalPublicName": "정다연",
+      "originalName": "정다연",
+      "englishName": "Jung Da-yeon",
+      "personType": "model",
+      "verificationSourceUrl": "https://www.wikitree.co.kr/articles/453827",
+      "profileSourceConfidence": "press_social_link"
+    }
+  ],
+  "works": [
+    {
+      "id": "korea-impact-jung-da-yeon-photobook-2019",
+      "slug": "korea-impact-jung-da-yeon-photobook-2019",
+      "originalTitle": "임팩트 정다연 화보집",
+      "englishTitle": "Impact Photobook: Jung Da-yeon",
+      "featuredNames": "정다연",
+      "originCode": "KR",
+      "status": "published"
+    },
+    {
+      "id": "korea-loveys-vol2-yoo-seorin-digital",
+      "slug": "korea-loveys-vol2-yoo-seorin-digital",
+      "originalTitle": "LOVEYS Vol.2 – 소녀, 그리고 설레임",
+      "englishTitle": "LOVEYS Vol.2 – Girlhood, and the Thrill",
+      "featuredNames": "YooSeorin",
+      "originCode": "KR",
+      "status": "published"
+    },
+    {
+      "id": "korea-loveys-vol3-winter-trip-yoo-seorin-digital",
+      "slug": "korea-loveys-vol3-winter-trip-yoo-seorin-digital",
+      "originalTitle": "LOVEYS Vol.3 – Winter Trip",
+      "englishTitle": "",
+      "featuredNames": "YooSeorin",
+      "originCode": "KR",
+      "status": "published"
+    }
+  ]
+}

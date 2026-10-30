@@ -1,0 +1,151 @@
+{
+  "auditedAt": "2026-10-30T06:59:10.4609257Z",
+  "coverageTotals": {
+    "editionsWithoutActiveListing": 5,
+    "editionsWithoutListing": 5,
+    "missingCover": 5,
+    "missingPageCount": 5,
+    "missingReleaseDate": 5,
+    "photobook_physical": 5
+  },
+  "editionCoverage": [
+    {
+      "activeListingCount": 0,
+      "coverUrl": "",
+      "editionId": "korea-rustic-photobook-24ss-kan-hyeon-bae-physical",
+      "format": "physical",
+      "gaps": [
+        "release_date_unknown",
+        "page_count_unknown",
+        "cover_unknown",
+        "no_listing"
+      ],
+      "issueMonth": "",
+      "listingCount": 0,
+      "metadataSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+      "pageCount": 0,
+      "publicationType": "photobook",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "retailListingCount": 0,
+      "title": "러스틱 사진집 24SS",
+      "usedListingCount": 0,
+      "variant": "KAN HYEON BAE version",
+      "workId": "korea-rustic-photobook-24ss"
+    },
+    {
+      "activeListingCount": 0,
+      "coverUrl": "",
+      "editionId": "korea-rustic-photobook-24ss-kim-dong-yoon-physical",
+      "format": "physical",
+      "gaps": [
+        "release_date_unknown",
+        "page_count_unknown",
+        "cover_unknown",
+        "no_listing"
+      ],
+      "issueMonth": "",
+      "listingCount": 0,
+      "metadataSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+      "pageCount": 0,
+      "publicationType": "photobook",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "retailListingCount": 0,
+      "title": "러스틱 사진집 24SS",
+      "usedListingCount": 0,
+      "variant": "KIM DONG YOON version",
+      "workId": "korea-rustic-photobook-24ss"
+    },
+    {
+      "activeListingCount": 0,
+      "coverUrl": "",
+      "editionId": "korea-rustic-photobook-24ss-shim-min-sup-physical",
+      "format": "physical",
+      "gaps": [
+        "release_date_unknown",
+        "page_count_unknown",
+        "cover_unknown",
+        "no_listing"
+      ],
+      "issueMonth": "",
+      "listingCount": 0,
+      "metadataSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+      "pageCount": 0,
+      "publicationType": "photobook",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "retailListingCount": 0,
+      "title": "러스틱 사진집 24SS",
+      "usedListingCount": 0,
+      "variant": "SHIM MIN SUP version",
+      "workId": "korea-rustic-photobook-24ss"
+    },
+    {
+      "activeListingCount": 0,
+      "coverUrl": "",
+      "editionId": "korea-woo-hyeon-nxde-photobook-2023-ep1-physical",
+      "format": "physical",
+      "gaps": [
+        "release_date_unknown",
+        "page_count_unknown",
+        "cover_unknown",
+        "no_listing"
+      ],
+      "issueMonth": "",
+      "listingCount": 0,
+      "metadataSourceUrl": "https://fanding.kr/@woohye0n/funding/140/",
+      "pageCount": 0,
+      "publicationType": "photobook",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "retailListingCount": 0,
+      "title": "WOO HYEON'S Nxde PhotoBook",
+      "usedListingCount": 0,
+      "variant": "EP 1: Mandarin",
+      "workId": "korea-woo-hyeon-nxde-photobook-2023"
+    },
+    {
+      "activeListingCount": 0,
+      "coverUrl": "",
+      "editionId": "korea-woo-hyeon-nxde-photobook-2023-ep2-physical",
+      "format": "physical",
+      "gaps": [
+        "release_date_unknown",
+        "page_count_unknown",
+        "cover_unknown",
+        "no_listing"
+      ],
+      "issueMonth": "",
+      "listingCount": 0,
+      "metadataSourceUrl": "https://fanding.kr/@woohye0n/funding/140/",
+      "pageCount": 0,
+      "publicationType": "photobook",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "retailListingCount": 0,
+      "title": "WOO HYEON'S Nxde PhotoBook",
+      "usedListingCount": 0,
+      "variant": "EP 2: Cyber Punk",
+      "workId": "korea-woo-hyeon-nxde-photobook-2023"
+    }
+  ],
+  "goalComplete": false,
+  "integrityFailures": [],
+  "ledgerIntegrityPassed": true,
+  "limits": "No source availability refreshed; active status is historical at its stored observation timestamp. Unknown dates/pages/prices can be legitimate source limitations. Used classification is a coverage heuristic, not a public response assertion. Scope is the ledger cohort, not every Korean publication or all database records.",
+  "method": "Repeatable-read PostgreSQL transaction with READ ONLY; exact ledger work/edition identities, listing links, observation payloads and explicit image provenance",
+  "peopleWithoutVerificationSource": [],
+  "rights": "No captured exact image has confirmed reuse permission in the source guide; URL provenance is not a license. This audit does not approve any asset or automation route.",
+  "scope": {
+    "distinctObservationKeys": 0,
+    "editions": 5,
+    "explicitMediaReferences": 0,
+    "linkedListings": 0,
+    "listingItemReferences": 0,
+    "people": 4,
+    "records": 5,
+    "sources": 0,
+    "works": 2
+  }
+}

@@ -1,0 +1,237 @@
+[
+  {
+    "work": {
+      "id": "korea-rustic-photobook-24ss",
+      "slug": "korea-rustic-photobook-24ss",
+      "publicationType": "photobook",
+      "originalTitle": "러스틱 사진집 24SS",
+      "englishTitle": "Rustic Photobook 24SS",
+      "summary": "Rustic Studio's 24SS men's body photobook campaign offered three model-specific versions featuring gymnast and influencer Kan Hyeon-bae, fitness model and influencer Kim Dong-yoon, and climbing influencer Shim Min-sup. Wadiz identifies the three versions and shows separate model book mockups. The campaign ran 2023-12-06 to 2023-12-20; this is not asserted as a publication date. Page count, ISBN, publisher imprint, and actual release date are not stated. No promotional image is copied because exact-asset reuse permission is unconfirmed.",
+      "originCode": "KR",
+      "featuredNames": "간현배,김동윤,심민섭"
+    },
+    "featuredPerson": {
+      "slug": "model-34327ffae2c26fb97ae2020ac4e81963871e90c1c5e7d2a608b505b0910215f3",
+      "canonicalPublicName": "간현배",
+      "originalName": "간현배",
+      "englishName": "KAN HYEON BAE",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+      "profileSourceConfidence": "official_project_page"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "additionalFeaturedPeople": [
+      {
+        "slug": "model-0d5bd7903c59c62140c5ea1b31f5ca1fc3f8d0919ef952b914017f57172dc75f",
+        "canonicalPublicName": "김동윤",
+        "originalName": "김동윤",
+        "englishName": "KIM DONG YOON",
+        "personType": "influencer",
+        "verificationSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+        "profileSourceConfidence": "official_project_page"
+      },
+      {
+        "slug": "model-6774dbb84641a808819ad7ead708912fc972cb31574db6c3231a8739283b4af2",
+        "canonicalPublicName": "심민섭",
+        "originalName": "심민섭",
+        "englishName": "SHIM MIN SUP",
+        "personType": "influencer",
+        "verificationSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+        "profileSourceConfidence": "official_project_page"
+      }
+    ],
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-rustic-photobook-24ss-kan-hyeon-bae-physical",
+      "workId": "korea-rustic-photobook-24ss",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "isbn": "",
+      "pageCount": 0,
+      "editionVariant": "KAN HYEON BAE version",
+      "contentSummary": "One of three Rustic Photobook 24SS ambassador versions named by the Wadiz campaign. The campaign does not state this version's page count, ISBN, or publication date; no claim about unique interior contents is made.",
+      "metadataSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+      "seriesName": "러스틱 사진집",
+      "editionLabel": "Physical Korean photobook"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-rustic-photobook-24ss",
+      "slug": "korea-rustic-photobook-24ss",
+      "publicationType": "photobook",
+      "originalTitle": "러스틱 사진집 24SS",
+      "englishTitle": "Rustic Photobook 24SS",
+      "summary": "Rustic Studio's 24SS men's body photobook campaign offered three model-specific versions featuring gymnast and influencer Kan Hyeon-bae, fitness model and influencer Kim Dong-yoon, and climbing influencer Shim Min-sup. Wadiz identifies the three versions and shows separate model book mockups. The campaign ran 2023-12-06 to 2023-12-20; this is not asserted as a publication date. Page count, ISBN, publisher imprint, and actual release date are not stated. No promotional image is copied because exact-asset reuse permission is unconfirmed.",
+      "originCode": "KR",
+      "featuredNames": "간현배,김동윤,심민섭"
+    },
+    "featuredPerson": {
+      "slug": "model-0d5bd7903c59c62140c5ea1b31f5ca1fc3f8d0919ef952b914017f57172dc75f",
+      "canonicalPublicName": "김동윤",
+      "originalName": "김동윤",
+      "englishName": "KIM DONG YOON",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+      "profileSourceConfidence": "official_project_page"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-rustic-photobook-24ss-kim-dong-yoon-physical",
+      "workId": "korea-rustic-photobook-24ss",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "isbn": "",
+      "pageCount": 0,
+      "editionVariant": "KIM DONG YOON version",
+      "contentSummary": "One of three Rustic Photobook 24SS ambassador versions named by the Wadiz campaign. The campaign does not state this version's page count, ISBN, or publication date; no claim about unique interior contents is made.",
+      "metadataSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+      "seriesName": "러스틱 사진집",
+      "editionLabel": "Physical Korean photobook"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-rustic-photobook-24ss",
+      "slug": "korea-rustic-photobook-24ss",
+      "publicationType": "photobook",
+      "originalTitle": "러스틱 사진집 24SS",
+      "englishTitle": "Rustic Photobook 24SS",
+      "summary": "Rustic Studio's 24SS men's body photobook campaign offered three model-specific versions featuring gymnast and influencer Kan Hyeon-bae, fitness model and influencer Kim Dong-yoon, and climbing influencer Shim Min-sup. Wadiz identifies the three versions and shows separate model book mockups. The campaign ran 2023-12-06 to 2023-12-20; this is not asserted as a publication date. Page count, ISBN, publisher imprint, and actual release date are not stated. No promotional image is copied because exact-asset reuse permission is unconfirmed.",
+      "originCode": "KR",
+      "featuredNames": "간현배,김동윤,심민섭"
+    },
+    "featuredPerson": {
+      "slug": "model-6774dbb84641a808819ad7ead708912fc972cb31574db6c3231a8739283b4af2",
+      "canonicalPublicName": "심민섭",
+      "originalName": "심민섭",
+      "englishName": "SHIM MIN SUP",
+      "personType": "influencer",
+      "verificationSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+      "profileSourceConfidence": "official_project_page"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-rustic-photobook-24ss-shim-min-sup-physical",
+      "workId": "korea-rustic-photobook-24ss",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "isbn": "",
+      "pageCount": 0,
+      "editionVariant": "SHIM MIN SUP version",
+      "contentSummary": "One of three Rustic Photobook 24SS ambassador versions named by the Wadiz campaign. The campaign does not state this version's page count, ISBN, or publication date; no claim about unique interior contents is made.",
+      "metadataSourceUrl": "https://www.wadiz.io/web/campaign/detail/250208",
+      "seriesName": "러스틱 사진집",
+      "editionLabel": "Physical Korean photobook"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-woo-hyeon-nxde-photobook-2023",
+      "slug": "korea-woo-hyeon-nxde-photobook-2023",
+      "publicationType": "photobook",
+      "originalTitle": "WOO HYEON'S Nxde PhotoBook",
+      "englishTitle": "WOO HYEON'S Nxde PhotoBook",
+      "summary": "Kim Woo-hyun's successful 2023 Fanding photography campaign for the physical Nxde PhotoBook. Its rewards list two separately selectable photobook volumes, EP 1: Mandarin and EP 2: Cyber Punk; her creator community later calls it a paper photobook. The campaign's reward due date was 2023-08-16, not a verified publication or actual shipment date. Page count, ISBN, publisher imprint, and actual release date are unknown. A distinct 2021 Kim Woo-hyun photobook already exists in the catalog; this is the separate 2023 campaign product. No cover or paid file is copied because exact-asset reuse permission is unconfirmed.",
+      "originCode": "KR",
+      "featuredNames": "김우현"
+    },
+    "featuredPerson": {
+      "slug": "model-2854011c6bab5b9cc4475762fd7dc090d49a5a66359c0a069bd6e04e935f7ee0",
+      "canonicalPublicName": "김우현",
+      "originalName": "",
+      "englishName": "",
+      "personType": "",
+      "verificationSourceUrl": "",
+      "profileSourceConfidence": ""
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-woo-hyeon-nxde-photobook-2023-ep1-physical",
+      "workId": "korea-woo-hyeon-nxde-photobook-2023",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "isbn": "",
+      "pageCount": 0,
+      "editionVariant": "EP 1: Mandarin",
+      "contentSummary": "The Fanding campaign separately offered the physical EP 1 Mandarin photobook. The exact publication and shipment dates, page count, ISBN, and publisher are not stated.",
+      "metadataSourceUrl": "https://fanding.kr/@woohye0n/funding/140/",
+      "seriesName": "WOO HYEON'S Nxde PhotoBook",
+      "editionLabel": "Physical Korean photobook"
+    }
+  },
+  {
+    "work": {
+      "id": "korea-woo-hyeon-nxde-photobook-2023",
+      "slug": "korea-woo-hyeon-nxde-photobook-2023",
+      "publicationType": "photobook",
+      "originalTitle": "WOO HYEON'S Nxde PhotoBook",
+      "englishTitle": "WOO HYEON'S Nxde PhotoBook",
+      "summary": "Kim Woo-hyun's successful 2023 Fanding photography campaign for the physical Nxde PhotoBook. Its rewards list two separately selectable photobook volumes, EP 1: Mandarin and EP 2: Cyber Punk; her creator community later calls it a paper photobook. The campaign's reward due date was 2023-08-16, not a verified publication or actual shipment date. Page count, ISBN, publisher imprint, and actual release date are unknown. A distinct 2021 Kim Woo-hyun photobook already exists in the catalog; this is the separate 2023 campaign product. No cover or paid file is copied because exact-asset reuse permission is unconfirmed.",
+      "originCode": "KR",
+      "featuredNames": "김우현"
+    },
+    "featuredPerson": {
+      "slug": "model-2854011c6bab5b9cc4475762fd7dc090d49a5a66359c0a069bd6e04e935f7ee0",
+      "canonicalPublicName": "김우현"
+    },
+    "featuredCreditSource": "verified_publisher_source",
+    "origin": {
+      "code": "KR",
+      "name": "South Korea",
+      "nativeName": "대한민국",
+      "sortOrder": 5
+    },
+    "edition": {
+      "id": "korea-woo-hyeon-nxde-photobook-2023-ep2-physical",
+      "workId": "korea-woo-hyeon-nxde-photobook-2023",
+      "format": "physical",
+      "language": "ko-KR",
+      "editionMarket": "KR",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "isbn": "",
+      "pageCount": 0,
+      "editionVariant": "EP 2: Cyber Punk",
+      "contentSummary": "The Fanding campaign separately offered the physical EP 2 Cyber Punk photobook. The exact publication and shipment dates, page count, ISBN, and publisher are not stated.",
+      "metadataSourceUrl": "https://fanding.kr/@woohye0n/funding/140/",
+      "seriesName": "WOO HYEON'S Nxde PhotoBook",
+      "editionLabel": "Physical Korean photobook"
+    }
+  }
+]

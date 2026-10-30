@@ -1,0 +1,102 @@
+{
+  "auditedAt": "2026-10-30T08:26:44.9195337Z",
+  "coverageTotals": {
+    "editionsWithoutActiveListing": 3,
+    "editionsWithoutListing": 3,
+    "missingCover": 3,
+    "missingPageCount": 1,
+    "missingReleaseDate": 3,
+    "photobook_digital": 2,
+    "photobook_physical": 1
+  },
+  "editionCoverage": [
+    {
+      "activeListingCount": 0,
+      "coverUrl": "",
+      "editionId": "korea-impact-jung-da-yeon-photobook-2019-physical",
+      "format": "physical",
+      "gaps": [
+        "release_date_unknown",
+        "cover_unknown",
+        "no_listing"
+      ],
+      "issueMonth": "",
+      "listingCount": 0,
+      "metadataSourceUrl": "https://www.ypbooks.co.kr/books/202308233114560575",
+      "pageCount": 204,
+      "publicationType": "photobook",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "retailListingCount": 0,
+      "title": "임팩트 정다연 화보집",
+      "usedListingCount": 0,
+      "variant": "",
+      "workId": "korea-impact-jung-da-yeon-photobook-2019"
+    },
+    {
+      "activeListingCount": 0,
+      "coverUrl": "",
+      "editionId": "korea-loveys-vol2-yoo-seorin-digital-edition",
+      "format": "digital",
+      "gaps": [
+        "release_date_unknown",
+        "cover_unknown",
+        "no_listing"
+      ],
+      "issueMonth": "",
+      "listingCount": 0,
+      "metadataSourceUrl": "https://rinibooks.gumroad.com/l/loveys_02",
+      "pageCount": 43,
+      "publicationType": "photobook",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "retailListingCount": 0,
+      "title": "LOVEYS Vol.2 – 소녀, 그리고 설레임",
+      "usedListingCount": 0,
+      "variant": "KR/EN PDF and JPG ZIP",
+      "workId": "korea-loveys-vol2-yoo-seorin-digital"
+    },
+    {
+      "activeListingCount": 0,
+      "coverUrl": "",
+      "editionId": "korea-loveys-vol3-winter-trip-yoo-seorin-digital-edition",
+      "format": "digital",
+      "gaps": [
+        "release_date_unknown",
+        "page_count_unknown",
+        "cover_unknown",
+        "no_listing"
+      ],
+      "issueMonth": "",
+      "listingCount": 0,
+      "metadataSourceUrl": "https://rinibooks.gumroad.com/l/loveys_03",
+      "pageCount": 0,
+      "publicationType": "photobook",
+      "releaseDate": null,
+      "releasePrecision": "",
+      "retailListingCount": 0,
+      "title": "LOVEYS Vol.3 – Winter Trip",
+      "usedListingCount": 0,
+      "variant": "KR/EN PDF and JPG ZIP",
+      "workId": "korea-loveys-vol3-winter-trip-yoo-seorin-digital"
+    }
+  ],
+  "goalComplete": false,
+  "integrityFailures": [],
+  "ledgerIntegrityPassed": true,
+  "limits": "No source availability refreshed; active status is historical at its stored observation timestamp. Unknown dates/pages/prices can be legitimate source limitations. Used classification is a coverage heuristic, not a public response assertion. Scope is the ledger cohort, not every Korean publication or all database records.",
+  "method": "Repeatable-read PostgreSQL transaction with READ ONLY; exact ledger work/edition identities, listing links, observation payloads and explicit image provenance",
+  "peopleWithoutVerificationSource": [],
+  "rights": "No captured exact image has confirmed reuse permission in the source guide; URL provenance is not a license. This audit does not approve any asset or automation route.",
+  "scope": {
+    "distinctObservationKeys": 0,
+    "editions": 3,
+    "explicitMediaReferences": 0,
+    "linkedListings": 0,
+    "listingItemReferences": 0,
+    "people": 2,
+    "records": 3,
+    "sources": 0,
+    "works": 3
+  }
+}
