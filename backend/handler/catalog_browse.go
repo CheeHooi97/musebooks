@@ -7,13 +7,17 @@ import (
 	"github.com/labstack/echo/v4"
 	"musebooks/model"
 	"musebooks/service"
+	"musebooks/storage"
 	"net/http"
 	"strconv"
 	"strings"
 	"time"
 )
 
-type CatalogBrowseHandler struct{ service *service.CatalogService }
+type CatalogBrowseHandler struct {
+	service     *service.CatalogService
+	ImageSigner *storage.MediaSigner
+}
 
 func NewCatalogBrowseHandler(s *service.CatalogService) *CatalogBrowseHandler {
 	return &CatalogBrowseHandler{service: s}
@@ -184,6 +188,11 @@ func (h *CatalogBrowseHandler) MarketplaceListings(c echo.Context) error {
 	items, total, err := h.service.MarketplaceListings(c.Request().Context(), p)
 	if err != nil {
 		return echo.NewHTTPError(500, "failed to load marketplace listings")
+	}
+	if h.ImageSigner != nil {
+		for i := range items {
+			items[i].ImageURL = h.ImageSigner.ListingImageURL(items[i].ImageURL)
+		}
 	}
 	if p.CursorMode {
 		limit := p.PageSize - 1

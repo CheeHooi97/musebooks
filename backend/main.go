@@ -68,6 +68,7 @@ func main() {
 	if mediaSigner != nil {
 		model.MediaURL = mediaSigner.URL
 		h.Media.Signer = mediaSigner
+		h.Browse.ImageSigner = mediaSigner
 	}
 
 	// Setup API routes

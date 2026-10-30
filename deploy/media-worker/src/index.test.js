@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import worker, { ROBOTS_TXT, objectKeyFromPath, verifySignature } from './index.js'
+import worker, { ROBOTS_TXT, listingImageSourceURL, objectKeyFromPath, verifySignature } from './index.js'
 
 // Shared with backend/storage/media_test.go so both sides agree on the
 // signed message and encoding.
@@ -32,6 +32,16 @@ test('rejects traversal and empty paths', () => {
   assert.equal(objectKeyFromPath('/musebooks/a%2Fb.jpg'), '')
   assert.equal(objectKeyFromPath('/musebooks/a%5Cb.jpg'), '')
   assert.equal(objectKeyFromPath('/musebooks/%E0%A4%A.jpg'), '')
+})
+
+test('decodes only signed-path marketplace image URLs from the exact host allowlist', () => {
+  const keyFor = (source) => `musebooks/listing-thumbnails/v1/${Buffer.from(source).toString('base64url')}`
+  const source = 'https://auctions.c.yimg.jp/images/sample.jpg?size=1200'
+  assert.equal(listingImageSourceURL(keyFor(source)), source)
+  assert.equal(listingImageSourceURL(keyFor('https://evil.example/image.jpg')), '')
+  assert.equal(listingImageSourceURL(keyFor('http://auctions.c.yimg.jp/images/sample.jpg')), '')
+  assert.equal(listingImageSourceURL(keyFor('https://auctions.c.yimg.jp/images/sample.svg')), '')
+  assert.equal(listingImageSourceURL('musebooks/listing-thumbnails/v1/%2Fetc%2Fpasswd'), '')
 })
 
 test('serves nothing outside KEY_PREFIX', async () => {

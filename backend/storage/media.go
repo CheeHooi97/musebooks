@@ -18,7 +18,16 @@ const (
 	minMediaURLWindow     = time.Hour
 	maxMediaURLWindow     = 7 * 24 * time.Hour
 	minMediaSigningSecret = 32
+	listingImageKeyPrefix = "musebooks/listing-thumbnails/v1/"
 )
+
+var listingImageHosts = map[string]struct{}{
+	"auctions.c.yimg.jp":   {},
+	"auc-pctr.c.yimg.jp":   {},
+	"shop.r10s.jp":         {},
+	"is1-ssl.mzstatic.com": {},
+	"img.fril.jp":          {},
+}
 
 // MediaConfig points R2 cover URLs at the media Worker (deploy/media-worker).
 // Catalog rows store URLs on the old public R2 hostname, which no longer
@@ -90,6 +99,53 @@ func (s *MediaSigner) URL(raw string) string {
 		return raw
 	}
 	return signed
+}
+
+// ListingImageURL sends supported marketplace photos through the media Worker,
+// where they are resized, converted to WebP and cached at the edge. R2 URLs
+// keep using the normal object signing path; unknown hosts stay untouched.
+func (s *MediaSigner) ListingImageURL(raw string) string {
+	now := time.Now()
+	if signed, ok := s.Sign(raw, now); ok {
+		return signed
+	}
+	if signed, ok := s.SignListingImage(raw, now); ok {
+		return signed
+	}
+	return raw
+}
+
+// SignListingImage creates a signed Worker URL for a source-hosted listing
+// image. The encoded source is covered by the same HMAC as the R2 object path.
+func (s *MediaSigner) SignListingImage(raw string, now time.Time) (string, bool) {
+	if s == nil {
+		return "", false
+	}
+	raw = strings.TrimSpace(raw)
+	if raw == "" || len(raw) > 4096 {
+		return "", false
+	}
+	parsed, err := url.Parse(raw)
+	if err != nil || parsed.Scheme != "https" || parsed.Hostname() == "" || parsed.User != nil || parsed.Port() != "" || parsed.Fragment != "" {
+		return "", false
+	}
+	if _, ok := listingImageHosts[strings.ToLower(parsed.Hostname())]; !ok {
+		return "", false
+	}
+	switch strings.ToLower(path.Ext(parsed.Path)) {
+	case ".jpg", ".jpeg", ".png", ".webp":
+	default:
+		return "", false
+	}
+
+	key := listingImageKeyPrefix + base64.RawURLEncoding.EncodeToString([]byte(raw))
+	exp := now.UTC().Truncate(s.window).Add(2 * s.window).Unix()
+	segments := strings.Split(key, "/")
+	for index, segment := range segments {
+		segments[index] = url.PathEscape(segment)
+	}
+	query := url.Values{"exp": {strconv.FormatInt(exp, 10)}, "sig": {mediaSignature(s.secret, key, exp)}}
+	return s.baseURL + "/" + strings.Join(segments, "/") + "?" + query.Encode(), true
 }
 
 // Sign reports whether raw is a media URL this signer owns, and if so returns
