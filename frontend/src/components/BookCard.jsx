@@ -2,7 +2,7 @@ import Icon from "./Icon";
 import { usePreferences } from "../lib/preferences";
 import { useCollection } from "../lib/collection";
 import { showCatalogImages } from "../lib/platform";
-import { bookPath, bookPeople, bookTitle, editionFormatLabel } from "../lib/catalog";
+import { bookPath, bookPeople, bookTitle, editionFormatLabel, releaseYear } from "../lib/catalog";
 import { primaryListing, visibleEditions } from "../lib/price-policy";
 
 export function BookCover({ book, edition, compact = false, loading = "lazy" }) {
@@ -23,11 +23,12 @@ export default function BookCard({ book, filters = {}, loading = "lazy", showPri
   const listing = primaryListing(edition, filters.availability);
   const people = bookPeople(book).map(person => person.name).filter(Boolean).slice(0, 2).join(" · ");
   const saved = isSaved(book.id);
+  const year = releaseYear(book);
   return <article className={`book-card${showCatalogImages ? "" : " book-card--text"}`}>
     <a className="book-card__link" href={bookPath(book)} aria-label={`${bookTitle(book)}${people ? `, ${people}` : ""}`}>
       {showCatalogImages && <div className="book-card__cover"><BookCover book={book} edition={edition} loading={loading} /></div>}
       <div className="book-card__body">
-        <p className="eyebrow">{t(book.origin?.name)} · {t(editionFormatLabel(edition, book))}</p>
+        <p className="eyebrow">{t(book.origin?.name)} · {t(editionFormatLabel(edition, book))}{year ? ` · ${year}` : ""}</p>
         <h3>{book.originalTitle}</h3>
         {people && <p className="book-card__people">{people}</p>}
         {showPrice && <p className="book-card__price">{listing ? formatPrice(listing.priceMinor, listing.currency) : <span>{t(edition ? "Price not recorded" : "No edition record")}</span>}</p>}
