@@ -1,8 +1,6 @@
 import { useEffect } from "react";
 import HeaderControls from "./HeaderControls";
 import Icon from "./Icon";
-import { BannerAds } from "./BannerAds";
-import { WebsiteAds } from "./WebsiteAds";
 import { usePreferences } from "../lib/preferences";
 import { useCollection } from "../lib/collection";
 import { isMobileApp } from "../lib/platform";
@@ -42,7 +40,7 @@ function useNativeShell() {
   }, []);
 }
 
-export default function SiteLayout({ pathname, children, showAds = true }) {
+export default function SiteLayout({ pathname, children }) {
   const { t } = usePreferences();
   const { saved } = useCollection();
   useNativeShell();
@@ -63,7 +61,6 @@ export default function SiteLayout({ pathname, children, showAds = true }) {
     </header>
     <main id="main-content" tabIndex={-1}>
       {children}
-      {showAds && <div className="page-width"><BannerAds /><WebsiteAds /></div>}
     </main>
     <footer className="site-footer">
       <div className="site-footer__inner">

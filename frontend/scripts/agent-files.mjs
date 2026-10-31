@@ -92,7 +92,7 @@ export function pageMarkdown(route, { book, profile, books = [], profiles = [], 
   } else if (route === '/japan') {
     lines = ['# Japan marketplace listings', '', `Source: ${url}`, '', 'A snapshot from Yahoo! JAPAN Auctions, Yahoo! Flea Market, and Rakuma. Captured bids, fixed asks, and completed prices are shown separately. Bundle prices apply to the whole listing. Unmatched records are shown separately from verified catalog books. Open a source listing to check its current status.']
   } else if (route === '/privacy-policy') {
-    lines = ['# Privacy Policy', '', `Source: ${url}`, '', 'MuseBooks stores saved collections and interface preferences in browser storage on your device. The website uses Google Analytics and displays third-party advertising, which is excluded from the Android and iOS apps. For privacy questions, email musecards67@gmail.com.']
+    lines = ['# Privacy Policy', '', `Source: ${url}`, '', 'MuseBooks stores saved collections and interface preferences in browser storage on your device. The website uses Google Analytics and does not display advertising. For privacy questions, email musecards67@gmail.com.']
   } else {
     return ''
   }

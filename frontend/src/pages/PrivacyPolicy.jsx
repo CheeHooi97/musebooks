@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
               <h2>{t("Information the service handles")}</h2>
               <p>{t("When you browse the catalog, your browser or app requests catalog and origin information from the MuseBooks API and cover images from our image host. Those requests necessarily expose network details such as your IP address, the requested page or resource, and browser or app information to the systems delivering the response. Hosting and delivery providers may process limited technical logs to operate, secure, and troubleshoot the service.")}</p>
               <p>{t("MuseBooks offers Google sign-in and email/password accounts. We store your email address, verification status, a password hash for password accounts, and your Google account identifier and profile image when you use Google. Password accounts must verify their email address. Resend delivers verification and password reset emails. We use this information to authenticate you and protect your account.")}</p>
-              <p>{t("Website sign-in uses an HttpOnly session cookie. The app stores a session token on your device. Sessions expire after 30 days and are revoked when you sign out; resetting your password revokes your other sessions. Your collection and preferences remain on your device. Account pages do not load website advertising.")}</p>
+              <p>{t("Website sign-in uses an HttpOnly session cookie. The app stores a session token on your device. Sessions expire after 30 days and are revoked when you sign out; resetting your password revokes your other sessions. Your collection and preferences remain on your device.")}</p>
             </section>
 
             <section id="device-storage">
@@ -51,10 +51,6 @@ export default function PrivacyPolicyPage() {
               <p>{withToken(t("Learn more about how Google handles this information in {link}."), "{link}", <a href="https://policies.google.com/privacy" target="_blank" rel="noreferrer">{t("Google’s Privacy Policy")}</a>)}</p>
             </section>
 
-            <section id="website-advertising">
-              <h2>{t("Website advertising")}</h2>
-              <p>{t("The website displays sponsored links and loads a third-party HilltopAds script that may open advertising tabs or windows when you interact with the page. Ad providers and destinations receive technical information such as your IP address and browser information and may use cookies or similar technologies under their own privacy policies. These website ads are excluded from the Android and iOS app builds.")}</p>
-            </section>
 
             <section id="sharing">
               <h2>{t("Sharing and external links")}</h2>
@@ -64,7 +60,7 @@ export default function PrivacyPolicyPage() {
 
             <section id="use-and-disclosure">
               <h2>{t("How information is used")}</h2>
-              <p>{t("MuseBooks uses catalog requests to return books, editions, origins, listings, and cover images. Limited technical request information may be used to keep the service reliable and secure. Website advertising providers process information as described in the Website advertising section above. Your saved collection and settings are not sent to ad providers as custom data.")}</p>
+              <p>{t("MuseBooks uses catalog requests to return books, editions, origins, listings, and cover images. Limited technical request information may be used to keep the service reliable and secure. MuseBooks does not display advertising.")}</p>
             </section>
 
             <section id="retention">

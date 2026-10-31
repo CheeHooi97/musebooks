@@ -31,18 +31,18 @@ export function resolveRoute(pathname, search) {
   if (section === "books") return id ? { page: <BookPage slug={decode(id)} search={search} /> } : { page: <Browse search={search} /> };
   if (section === "models" || section === "publishers") return id ? { page: <DirectoryProfile kind={section} id={encodeURIComponent(decode(id))} /> } : { page: <Directory kind={section} search={search} /> };
   if (["active", "sold", "japan"].includes(section) && !id) return { page: <Market tab={section} search={search} /> };
-  if (section === "saved" && !id) return { page: <Saved />, showAds: false };
-  if (["login", "register", "verify-email", "forgot-password", "reset-password"].includes(section) && !id) return { page: <AuthPage mode={section} />, showAds: false };
-  if (section === "account" && !id) return { page: <AccountPage />, showAds: false };
+  if (section === "saved" && !id) return { page: <Saved /> };
+  if (["login", "register", "verify-email", "forgot-password", "reset-password"].includes(section) && !id) return { page: <AuthPage mode={section} /> };
+  if (section === "account" && !id) return { page: <AccountPage /> };
   if (section === "guides" && GUIDES[pathname]) return { page: <Guide path={pathname} /> };
   if (section === "about" && !id) return { page: <About /> };
-  if (section === "privacy-policy" && !id) return { page: <PrivacyPolicy />, showAds: false };
-  return { page: <NotFound />, showAds: false };
+  if (section === "privacy-policy" && !id) return { page: <PrivacyPolicy /> };
+  return { page: <NotFound /> };
 }
 
 export default function App() {
   const { pathname, search } = useLocation();
-  const { page, showAds = true } = resolveRoute(pathname, search);
+  const { page } = resolveRoute(pathname, search);
   // Keying on the path remounts a page on navigation, so it reads fresh URL state.
-  return <SiteLayout pathname={pathname} showAds={showAds}><div key={pathname} className="route">{page}</div></SiteLayout>;
+  return <SiteLayout pathname={pathname}><div key={pathname} className="route">{page}</div></SiteLayout>;
 }
