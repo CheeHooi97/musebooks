@@ -2,6 +2,14 @@
 // groups; preserve punctuation, edition wording, and bundle descriptions.
 export const normalizeSearch = value => String(value || "").normalize("NFKC").toLocaleLowerCase().replace(/\s+/gu, "");
 
+/** Resolve a model query only when it equals a recorded catalog name or alias. */
+export function modelsMatchingExactName(models = [], query = "") {
+  const needle = normalizeSearch(query);
+  if (!needle) return [];
+  return models.filter(model => [model.name, model.originalName, model.englishName, ...(model.aliases || "").split(",")]
+    .some(name => normalizeSearch(name) === needle));
+}
+
 /**
  * Builds a name → aliases lookup from lists of equivalent names, e.g. a
  * MuseBooks model's display, original and English names.
@@ -17,6 +25,27 @@ export function aliasIndex(nameLists = []) {
     }
   }
   return index;
+}
+
+const namesFrom = value => Array.isArray(value) ? value : String(value || "").split(",");
+
+/** Merge repeated model-credit results without merging distinct source or format records. */
+export function mergeModelOfferBatches(batches = []) {
+  const offers = new Map();
+  for (const batch of batches) {
+    for (const item of batch.items || []) {
+      const sourceId = item.source?.id || item.sourceId || "";
+      const identity = `${sourceId}\0${item.externalId || item.id || ""}\0${item.format || "physical"}`;
+      const matchedNames = [...new Set(namesFrom(item.featuredNames).concat(namesFrom(item.matchedModelNames)).map(name => name.trim()).filter(Boolean))];
+      const previous = offers.get(identity);
+      if (previous) {
+        previous.featuredNames = [...new Set(namesFrom(previous.featuredNames).concat(matchedNames))].join(",");
+      } else {
+        offers.set(identity, { ...item, id: item.id || identity, featuredNames: matchedNames.join(",") });
+      }
+    }
+  }
+  return [...offers.values()].sort((left, right) => String(right.observedAt || "").localeCompare(String(left.observedAt || "")));
 }
 
 export function marketplaceGroups(items, { query = "", format = "", availability = "", aliases } = {}) {

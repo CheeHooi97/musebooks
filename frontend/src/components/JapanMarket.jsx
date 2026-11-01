@@ -5,29 +5,65 @@ import { LoadState } from "./Page";
 import { apiUrl } from "../lib/api";
 import { usePreferences } from "../lib/preferences";
 import { showCatalogImages } from "../lib/platform";
-import { aliasIndex, marketplaceGroups } from "../lib/marketplace-groups";
+import { aliasIndex, marketplaceGroups, mergeModelOfferBatches, modelsMatchingExactName } from "../lib/marketplace-groups";
 import { formatPrice } from "../lib/price-policy";
-import { useResource } from "../lib/catalog";
 
 const PAGE_SIZE = 24;
 const API_PAGE_SIZE = 50;
+const EMPTY_MODELS = [];
 
-async function loadJapanOffers({ cursor = "", search, format, availability, sortBy, signal }) {
+async function loadModelMatches(query, signal) {
+  const loadPage = async page => {
+    const params = new URLSearchParams({ q: query, pageSize: "50", page: String(page) });
+    const response = await fetch(apiUrl(`/v1/models?${params}`), { signal });
+    if (!response.ok) throw new Error("error");
+    return response.json();
+  };
+  const first = await loadPage(1);
+  const pages = [first];
+  for (let start = 2; start <= first.totalPages; start += 4) {
+    pages.push(...await Promise.all(Array.from(
+      { length: Math.min(4, first.totalPages - start + 1) },
+      (_, index) => loadPage(start + index),
+    )));
+  }
+  return pages.flatMap(page => page.items || []);
+}
+
+async function loadJapanOffers({ cursor = "", modelIds = [], search, format, availability, sortBy, signal }) {
   const params = new URLSearchParams({ region: "JP", scope: "offers", status: availability || "all", limit: String(API_PAGE_SIZE), sort: sortBy });
   if (search) params.set("q", search);
   if (format) params.set("format", format);
+  for (const id of modelIds) params.append("model", id);
   if (cursor) params.set("cursor", cursor);
   const response = await fetch(apiUrl(`/v1/marketplace-listings?${params}`), { signal });
   if (!response.ok) throw new Error("error");
   return response.json();
 }
 
+async function loadJapanModelOffers({ modelIds, format, availability, sortBy, signal }) {
+  const batches = [];
+  for (let start = 0; start < modelIds.length; start += 100) {
+    const ids = modelIds.slice(start, start + 100);
+    let data = await loadJapanOffers({ modelIds: ids, format, availability, sortBy, signal });
+    const items = [...(data.items || [])];
+    while (data.nextCursor) {
+      data = await loadJapanOffers({ modelIds: ids, cursor: data.nextCursor, format, availability, sortBy, signal });
+      items.push(...(data.items || []));
+    }
+    batches.push({ items });
+  }
+  const items = mergeModelOfferBatches(batches);
+  return { items, total: items.length, hasMore: false, nextCursor: null, modelSearch: true };
+}
+
 async function loadGroupsThroughPage({ data, page, search, format, availability, sortBy, aliases, signal }) {
-  let groups = marketplaceGroups(data.items || [], { query: search, format, availability, aliases });
+  const query = data.modelSearch ? "" : search;
+  let groups = marketplaceGroups(data.items || [], { query, format, availability, aliases });
   while (groups.length < page * PAGE_SIZE && data.nextCursor) {
     const next = await loadJapanOffers({ cursor: data.nextCursor, search, format, availability, sortBy, signal });
     data = { ...data, items: [...data.items, ...(next.items || [])], total: next.total, hasMore: next.hasMore, nextCursor: next.nextCursor };
-    groups = marketplaceGroups(data.items, { query: search, format, availability, aliases });
+    groups = marketplaceGroups(data.items, { query: data.modelSearch ? "" : search, format, availability, aliases });
   }
   return { data, groups };
 }
@@ -43,13 +79,28 @@ export default function JapanMarket() {
   const moreController = useRef(null);
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
-  // Search aliases come from MuseBooks' own model records: the API matches every
-  // recorded name variant, and each match contributes its display, original and English names.
-  const matches = useResource(search ? `/v1/models?${new URLSearchParams({ q: search, pageSize: "10" })}` : "");
+  const [matches, setMatches] = useState({ state: "idle", query: "", items: [] });
+  useEffect(() => {
+    if (!search) {
+      setMatches({ state: "idle", query: "", items: [] });
+      return undefined;
+    }
+    const controller = new AbortController();
+    setMatches({ state: "loading", query: search, items: [] });
+    loadModelMatches(search, controller.signal)
+      .then(items => { if (!controller.signal.aborted) setMatches({ state: "live", query: search, items }); })
+      .catch(() => { if (!controller.signal.aborted) setMatches({ state: "error", query: search, items: [] }); });
+    return () => controller.abort();
+  }, [search]);
+  const modelMatches = useMemo(() => {
+    if (matches.state !== "live" || matches.query !== search) return EMPTY_MODELS;
+    return modelsMatchingExactName(matches.items, search);
+  }, [matches, search]);
+  const modelLookupPending = Boolean(search) && (matches.query !== search || matches.state === "loading");
   const aliases = useMemo(() => {
-    const names = (matches.data?.items || []).map(model => [model.name, model.originalName, model.englishName, ...(model.aliases || "").split(",")].map(name => name?.trim()).filter(Boolean));
-    return aliasIndex(names.map(list => [search, ...list]));
-  }, [matches.data, search]);
+    const names = modelMatches.map(model => [model.name, model.originalName, model.englishName, ...(model.aliases || "").split(",")].map(name => name?.trim()).filter(Boolean));
+    return aliasIndex(names);
+  }, [modelMatches]);
   const [format, setFormat] = useState("");
   const [availability, setAvailability] = useState("");
   const [sortBy, setSortBy] = useState("observed");
@@ -63,14 +114,19 @@ export default function JapanMarket() {
     setLoadingMore(false);
     setMoreError(false);
     setOffers({ state: "loading" });
-    loadJapanOffers({ search, format, availability, sortBy, signal: controller.signal })
+    if (modelLookupPending) return () => controller.abort();
+    const modelIds = modelMatches.map(model => model.id).filter(Boolean);
+    const load = modelIds.length
+      ? loadJapanModelOffers({ modelIds, format, availability, sortBy, signal: controller.signal })
+      : loadJapanOffers({ search, format, availability, sortBy, signal: controller.signal });
+    load
       .then(data => loadGroupsThroughPage({ data, page: 1, search, format, availability, sortBy, aliases, signal: controller.signal }))
       .then(({ data }) => { if (!controller.signal.aborted) setOffers({ state: "live", data }); })
       .catch(() => { if (!controller.signal.aborted) setOffers({ state: "error" }); });
     return () => controller.abort();
-  }, [search, format, availability, sortBy, aliases, attempt]);
+  }, [search, format, availability, sortBy, aliases, attempt, modelLookupPending, modelMatches]);
   const groups = useMemo(() => {
-    return marketplaceGroups(offers.data?.items || [], { query: search, format, availability, aliases });
+    return marketplaceGroups(offers.data?.items || [], { query: offers.data?.modelSearch ? "" : search, format, availability, aliases });
   }, [offers.data?.items, search, format, availability, aliases]);
   const offerCount = offers.data?.total ?? 0;
   const hasNextPage = groups.length > page * PAGE_SIZE || Boolean(offers.data?.nextCursor);

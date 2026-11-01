@@ -131,6 +131,22 @@ func (h *CatalogBrowseHandler) Listings(c echo.Context) error {
 func (h *CatalogBrowseHandler) MarketplaceListings(c echo.Context) error {
 	p := browseQuery(c)
 	p.CursorMode = c.QueryParams().Has("limit")
+	modelSlugs := c.QueryParams()["model"]
+	if len(modelSlugs) > 100 {
+		return echo.NewHTTPError(400, "model may contain at most 100 values")
+	}
+	seenModelSlugs := map[string]struct{}{}
+	for _, slug := range modelSlugs {
+		slug = strings.TrimSpace(slug)
+		if slug == "" || len(slug) > 128 {
+			return echo.NewHTTPError(400, "model values must be nonempty and at most 128 characters")
+		}
+		if _, exists := seenModelSlugs[slug]; exists {
+			continue
+		}
+		seenModelSlugs[slug] = struct{}{}
+		p.ModelSlugs = append(p.ModelSlugs, slug)
+	}
 	p.Kind = strings.TrimSpace(c.QueryParam("scope"))
 	if p.Kind != "" && p.Kind != "offers" {
 		return echo.NewHTTPError(400, "scope must be offers")

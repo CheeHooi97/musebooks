@@ -1,8 +1,17 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { marketplaceGroups } from "./marketplace-groups.js";
+import { marketplaceGroups, mergeModelOfferBatches, modelsMatchingExactName } from "./marketplace-groups.js";
 
 const offer = (id, title, extra = {}) => ({ id, title, format: "physical", status: "active", ...extra });
+test("model search resolves recorded aliases exactly, not partial name matches", () => {
+  const models = [
+    { id: "fumina", name: "鈴木ふみ奈", originalName: "鈴木ふみ奈", englishName: "Fumina Suzuki", aliases: "Fumina" },
+    { id: "fumika", name: "鈴木ふみか", englishName: "Fumika Suzuki" },
+  ];
+  assert.deepEqual(modelsMatchingExactName(models, "fumina suzuki").map(model => model.id), ["fumina"]);
+  assert.deepEqual(modelsMatchingExactName(models, "鈴木ふみ奈").map(model => model.id), ["fumina"]);
+  assert.deepEqual(modelsMatchingExactName(models, "Fumi").map(model => model.id), []);
+});
 test("catalog model aliases find unmatched offers under a model's other recorded name", () => {
   const aliases = [["山岸あや花", "山岸逢花", "Aika Yamagishi"]];
   const result = marketplaceGroups([offer("legacy", "山岸 逢花 写真集")], { query: "山岸あや花", aliases });
@@ -51,4 +60,15 @@ test("search retains all offers of a matching group and filters format/status", 
   assert.equal(marketplaceGroups(items, { query: "Seller B" })[0].items.length, 2);
   assert.equal(marketplaceGroups(items, { availability: "completed" })[0].items.length, 1);
   assert.equal(marketplaceGroups(items, { format: "digital" }).length, 0);
+});
+
+test("model-credit result batches deduplicate the same offer and keep format editions separate", () => {
+  const merged = mergeModelOfferBatches([
+    { items: [offer("listing-1", "Shared title", { source: { id: "store" }, externalId: "1", matchedModelNames: "Model A" })] },
+    { items: [offer("listing-1", "Shared title", { source: { id: "store" }, externalId: "1", matchedModelNames: "Model B" })] },
+    { items: [offer("listing-2", "Shared title", { source: { id: "store" }, externalId: "2", format: "digital", matchedModelNames: "Model A" })] },
+  ]);
+  assert.equal(merged.length, 2);
+  assert.equal(merged.find(item => item.externalId === "1").featuredNames, "Model A,Model B");
+  assert.equal(merged.find(item => item.externalId === "2").format, "digital");
 });

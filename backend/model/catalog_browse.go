@@ -29,6 +29,7 @@ type MarketEntry struct {
 type MarketplaceListingEntry struct {
 	ListingResponse  `gorm:"embedded"`
 	FeaturedNames    string     `json:"featuredNames,omitempty"`
+	MatchedModelNames    string `json:"matchedModelNames,omitempty"`
 	ReleaseDate      *time.Time `json:"releaseDate,omitempty"`
 	ReleasePrecision string     `json:"releasePrecision,omitempty"`
 	ImageURL         string     `json:"imageUrl,omitempty"`
@@ -40,6 +41,7 @@ type MarketplaceListingEntry struct {
 }
 type CatalogBrowseQuery struct {
 	Query, Kind, ID, Status, Format, PublicationType, Source, Person, Publisher, Language, Year, Region string
+	ModelSlugs                                                                                          []string
 	Page, PageSize                                                                                      int
 	Sort, CursorID, CursorTitle                                                                         string
 	CursorMode                                                                                          bool

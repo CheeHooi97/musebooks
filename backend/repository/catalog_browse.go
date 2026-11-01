@@ -208,6 +208,12 @@ func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.Cat
 	if p.Source != "" {
 		query = query.Where("listing.source_id = ?", p.Source)
 	}
+	if len(p.ModelSlugs) > 0 {
+		query = query.Where(`EXISTS (
+ SELECT 1 FROM work_people model_wp JOIN people model_person ON model_person.id=model_wp.person_id
+ WHERE model_wp.work_id=work.id AND model_wp.role IN ('featured','cover_model') AND model_person.slug IN ?
+ )`, p.ModelSlugs)
+	}
 	if p.Query != "" {
 		term := "%" + p.Query + "%"
 		query = query.Where("listing.title ILIKE ? OR work.original_title ILIKE ? OR work.featured_names ILIKE ? OR edition.publisher ILIKE ? OR EXISTS (SELECT 1 FROM work_people wp JOIN people p ON p.id=wp.person_id LEFT JOIN person_aliases pa ON pa.person_id=p.id WHERE wp.work_id=work.id AND wp.role IN ('featured','cover_model') AND (p.canonical_public_name ILIKE ? OR p.original_name ILIKE ? OR p.english_name ILIKE ? OR pa.alias_name ILIKE ?))", term, term, term, term, term, term, term, term)
@@ -233,12 +239,21 @@ func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.Cat
  WHEN listing.status='completed' THEN 'marketplace_sold' ELSE 'marketplace_asking' END AS price_category,
 	 (work.id IS NOT NULL) AS catalog_matched,work.original_title AS work_title,work.slug AS work_slug,COALESCE(NULLIF(work.featured_names,''),(SELECT string_agg(DISTINCT wp.credited_name, ', ') FROM work_people wp WHERE wp.work_id=work.id AND wp.role='cover_model')) AS featured_names,
  edition.edition_label,edition.publisher,edition.release_date,edition.release_precision`
+	selectArgs := []any{}
+	if len(p.ModelSlugs) > 0 {
+		columns += `,(SELECT string_agg(DISTINCT matched_person.canonical_public_name, ',')
+ FROM work_people matched_wp JOIN people matched_person ON matched_person.id=matched_wp.person_id
+ WHERE matched_wp.work_id=work.id AND matched_wp.role IN ('featured','cover_model') AND matched_person.slug IN ?) AS matched_model_names`
+		selectArgs = append(selectArgs, p.ModelSlugs)
+	} else {
+		columns += `,'' AS matched_model_names`
+	}
 	entries := []model.MarketplaceListingEntry{}
 	order := "listing.observed_at DESC,listing.id ASC"
 	if p.Sort == "title" {
 		order = "COALESCE(NULLIF(work.original_title,''),listing.title,'') ASC,listing.observed_at DESC,listing.id ASC"
 	}
-	query = query.Select(columns).Order(order)
+	query = query.Select(columns, selectArgs...).Order(order)
 	if !p.CursorMode {
 		query = query.Offset((p.Page - 1) * p.PageSize)
 	}
