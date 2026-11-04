@@ -29,7 +29,7 @@ npm run dev
 
 The Vite development server proxies `/v1/*` to `http://127.0.0.1:2002` by default. Override its proxy target with `VITE_API_PROXY` when needed. Production uses the existing Nginx API proxy or `VITE_API_BASE_URL`. The catalog displays an explicit loading, error, or empty state rather than substituting sample records when the API is unavailable.
 
-See [the Korean-model source map](docs/korean-model-photobook-sources.md) for page-based source research, magazine fields, image-use notes, and the import workflow.
+See [the Korean-model source map](docs/korean-model-photobook-sources.md) for page-based source research, magazine fields, image-use notes, and the import workflow, and [the Korean-model catalog goal](docs/korean-model-catalog-goal.md) for the durable target and acceptance criteria.
 
 The native mobile app omits catalog photographs and cover images. Book covers use text placeholders, and directories and profiles show text only. The website continues to show images on desktop and mobile browsers.
 

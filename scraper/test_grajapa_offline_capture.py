@@ -11,15 +11,15 @@ import collect_model_kobo as kobo
 
 
 class OfflineCaptureTests(unittest.TestCase):
-    def run_capture(self, root, *, cached=True, alias=None, stalled=False):
-        person = dict(id=997, canonical_public_name='Model', original_name='Model', aliases=[alias] if alias else [])
+    def run_capture(self, root, *, cached=True, alias=None, stalled=False, name='Model', model_label=None):
+        person = dict(id=997, canonical_public_name=name, original_name=name, aliases=[alias] if alias else [])
         (root / 'model.json').write_text(json.dumps({'models': [person]}), encoding='utf-8')
         output = root / 'output'
         output.mkdir()
         eid = 'a' * 32
         url = 'https://www.grajapa.shueisha.co.jp/item/detail/gravure/' + eid
-        state = dict(items={}, candidates={url: dict(url=url, title='Model デジタル写真集')},
-            pages=['https://www.grajapa.shueisha.co.jp/search?keyword=Model'], rejected={},
+        state = dict(items={}, candidates={url: dict(url=url, title=name + ' デジタル写真集')},
+            pages=['https://www.grajapa.shueisha.co.jp/search?keyword=' + name], rejected={},
             errors={url: 'previous timeout'}, nextUrl='', pendingSearches=[], status='detail_failures')
         if stalled:
             state['status'] = 'pagination_stalled'
@@ -28,8 +28,8 @@ class OfflineCaptureTests(unittest.TestCase):
         if cached:
             cache_root = root / 'scraper/japan-models/shared-details/grajapa'
             cache_root.mkdir(parents=True)
-            evidence = dict(body='モデル：Model\n出版社：集英社\n発売日：2026-10-01\n￥1,100（税込）\n買い物かごに追加',
-                structured=dict(name='Model デジタル写真集', image='https://example.com/' + eid + '.jpg'),
+            evidence = dict(body='モデル：' + (model_label or name) + '\n出版社：集英社\n発売日：2026-10-01\n￥1,100（税込）\n買い物かごに追加',
+                structured=dict(name=name + ' デジタル写真集', image='https://example.com/' + eid + '.jpg'),
                 imageUrls=[], observedAt=observed)
             (cache_root / (eid + '.json')).write_text(json.dumps(evidence), encoding='utf-8')
         with patch.object(collector, '__file__', str(root / 'scraper/collect_model_digital.py')), \
@@ -68,6 +68,13 @@ class OfflineCaptureTests(unittest.TestCase):
             state, url, _ = self.run_capture(Path(directory), stalled=True)
             self.assertEqual(state['status'], 'pagination_stalled')
             self.assertIn(url, state['items'])
+
+    def test_short_model_name_does_not_match_a_different_full_model_name(self):
+        with tempfile.TemporaryDirectory() as directory:
+            state, url, _ = self.run_capture(Path(directory), name='葵', model_label='葵りんご')
+            self.assertEqual(state['status'], 'public_search_exhausted')
+            self.assertNotIn(url, state['items'])
+            self.assertEqual(state['rejected'][url], 'selected_model_mismatch')
 
     def test_kobo_offline_recovery_also_retains_a_pagination_stall(self):
         with tempfile.TemporaryDirectory() as directory:

@@ -7,6 +7,48 @@ import (
 	"strings"
 )
 
+func mediaPermissionPredicate(alias string, primaryOnly bool) string {
+	primary := ""
+	if primaryOnly {
+		primary = " AND " + alias + ".is_primary = TRUE"
+	}
+	return alias + ".permission_scope IN ('remote_display','display_and_copy')" +
+		" AND " + alias + ".permission_reviewed_at IS NOT NULL" +
+		" AND " + alias + ".permission_evidence_url LIKE 'https://%'" +
+		" AND " + alias + ".source_url LIKE 'https://%'" +
+		" AND " + alias + ".original_url LIKE 'https://%'" +
+		" AND " + alias + ".storage_url LIKE 'https://%'" +
+		" AND (" + alias + ".permission_scope = 'display_and_copy' OR " + alias + ".original_url = " + alias + ".storage_url)" + primary
+}
+
+func mediaURLValueSQL(alias string) string {
+	return "CASE WHEN " + alias + ".permission_scope = 'remote_display' THEN " + alias + ".original_url ELSE " + alias + ".storage_url END"
+}
+
+func approvedMediaSQL(entityType, entityID, field string, primaryOnly bool) string {
+	value := mediaURLValueSQL("cm")
+	if field == "permission_scope" {
+		value = "cm.permission_scope"
+	}
+	return "(SELECT " + value + " FROM catalog_media cm WHERE cm.entity_type = '" + entityType + "' AND cm.entity_id = " + entityID +
+		" AND " + mediaPermissionPredicate("cm", primaryOnly) + " ORDER BY cm.is_primary DESC, cm.id ASC LIMIT 1)"
+}
+
+func directoryMediaSQL(kind, field string) string {
+	eligibleWorks := "SELECT wp.work_id FROM work_people wp JOIN works w ON w.id=wp.work_id WHERE wp.person_id=directory.id AND wp.role IN ('featured','cover_model') AND w.status='published'"
+	eligibleEditions := "SELECT e.id FROM editions e WHERE e.work_id IN (" + eligibleWorks + ") AND e.status<>'superseded'"
+	if kind == "publisher" {
+		eligibleWorks = "SELECT e.work_id FROM editions e JOIN works w ON w.id=e.work_id WHERE e.publisher_company_id=directory.id AND e.status<>'superseded' AND w.status='published'"
+		eligibleEditions = "SELECT e.id FROM editions e WHERE e.publisher_company_id=directory.id AND e.work_id IN (" + eligibleWorks + ") AND e.status<>'superseded'"
+	}
+	value := mediaURLValueSQL("cm")
+	if field == "permission_scope" {
+		value = "cm.permission_scope"
+	}
+	return "(SELECT " + value + " FROM catalog_media cm WHERE ((cm.entity_type='work' AND cm.entity_id IN (" + eligibleWorks + ")) OR (cm.entity_type='edition' AND cm.entity_id IN (" + eligibleEditions + "))) AND " +
+		mediaPermissionPredicate("cm", true) + " ORDER BY CASE WHEN cm.entity_type='edition' THEN 0 ELSE 1 END,cm.entity_id ASC,cm.id ASC LIMIT 1)"
+}
+
 // canonicalPersonSlug maps a merged alias profile (e.g. an old /models link for
 // a romanised name) to the person it was merged into. A slug that still has its
 // own credits, or an alias claimed by several people, is returned unchanged.
@@ -31,8 +73,8 @@ func (r *CatalogRepository) Directory(ctx context.Context, p model.CatalogBrowse
 	columns := `directory.slug AS id, directory.canonical_public_name AS name,directory.original_name,directory.english_name,directory.verification_source_url AS official_url,
  (SELECT COUNT(DISTINCT w.id) FROM work_people wp JOIN works w ON w.id=wp.work_id WHERE wp.person_id=directory.id AND wp.role IN ('featured','cover_model') AND w.status='published') AS work_count,
  (SELECT COUNT(DISTINCT e.id) FROM work_people wp JOIN works w ON w.id=wp.work_id JOIN editions e ON e.work_id=w.id WHERE wp.person_id=directory.id AND wp.role IN ('featured','cover_model') AND w.status='published' AND e.status<>'superseded') AS edition_count,
- (SELECT COALESCE(NULLIF(e.cover_url,''),w.cover_url) FROM work_people wp JOIN works w ON w.id=wp.work_id LEFT JOIN editions e ON e.work_id=w.id AND e.status<>'superseded' WHERE wp.person_id=directory.id AND wp.role IN ('featured','cover_model') AND w.status='published' ORDER BY w.id,e.id LIMIT 1) AS cover_url,
  (SELECT string_agg(pa.alias_name, ',' ORDER BY pa.alias_name) FROM person_aliases pa WHERE pa.person_id=directory.id) AS aliases`
+	columns += "," + directoryMediaSQL("model", "url") + " AS cover_url," + directoryMediaSQL("model", "permission_scope") + " AS cover_permission_scope"
 	query = query.Where("EXISTS (SELECT 1 FROM work_people wp JOIN works w ON w.id=wp.work_id WHERE wp.person_id=directory.id AND wp.role IN ('featured','cover_model') AND w.status='published')")
 	name := "directory.canonical_public_name"
 	if p.Kind == "publisher" {
@@ -40,8 +82,8 @@ func (r *CatalogRepository) Directory(ctx context.Context, p model.CatalogBrowse
 		name = "directory.canonical_name"
 		columns = `directory.slug AS id,directory.canonical_name AS name,directory.official_url,
  (SELECT COUNT(DISTINCT w.id) FROM editions e JOIN works w ON w.id=e.work_id WHERE e.publisher_company_id=directory.id AND e.status<>'superseded' AND w.status='published') AS work_count,
- (SELECT COUNT(*) FROM editions e JOIN works w ON w.id=e.work_id WHERE e.publisher_company_id=directory.id AND e.status<>'superseded' AND w.status='published') AS edition_count,
- (SELECT COALESCE(NULLIF(e.cover_url,''),w.cover_url) FROM editions e JOIN works w ON w.id=e.work_id WHERE e.publisher_company_id=directory.id AND e.status<>'superseded' AND w.status='published' ORDER BY w.id,e.id LIMIT 1) AS cover_url`
+			(SELECT COUNT(*) FROM editions e JOIN works w ON w.id=e.work_id WHERE e.publisher_company_id=directory.id AND e.status<>'superseded' AND w.status='published') AS edition_count`
+		columns += "," + directoryMediaSQL("publisher", "url") + " AS cover_url," + directoryMediaSQL("publisher", "permission_scope") + " AS cover_permission_scope"
 	}
 	if p.ID != "" {
 		query = query.Where("directory.slug = ?", p.ID)
@@ -59,7 +101,7 @@ func (r *CatalogRepository) Directory(ctx context.Context, p model.CatalogBrowse
 	entries := []model.DirectoryEntry{}
 	err := query.Select(columns).Order(name + " ASC,directory.id ASC").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Scan(&entries).Error
 	for i := range entries {
-		entries[i].CoverURL = model.PublicCoverURL(entries[i].CoverURL)
+		entries[i].CoverURL = model.ApprovedImageURL(entries[i].CoverURL, entries[i].CoverPermissionScope)
 	}
 	return entries, total, err
 }
@@ -98,7 +140,7 @@ func (r *CatalogRepository) DirectoryBooks(ctx context.Context, p model.CatalogB
 		args = append(args, "%"+p.Language+"%")
 	}
 	if p.Year != "" {
-		editionFilter += " AND EXTRACT(YEAR FROM e.release_date)=?"
+		editionFilter += " AND EXTRACT(YEAR FROM COALESCE(CASE WHEN e.format='digital' THEN e.store_release_date ELSE e.publication_date END,e.publication_date,e.store_release_date,e.release_date,works.issue_date,CASE WHEN works.issue_month ~ '^[0-9]{4}-(0[1-9]|1[0-2])$' THEN to_date(works.issue_month || '-01','YYYY-MM-DD') END))=?"
 		args = append(args, p.Year)
 	}
 	query = query.Where("EXISTS (SELECT 1 FROM editions e WHERE "+editionFilter+")", args...)
@@ -119,12 +161,12 @@ func (r *CatalogRepository) DirectoryBooks(ctx context.Context, p model.CatalogB
 			db = db.Where("language ILIKE ?", "%"+p.Language+"%")
 		}
 		if p.Year != "" {
-			db = db.Where("EXTRACT(YEAR FROM release_date)=?", p.Year)
+			db = db.Where("EXTRACT(YEAR FROM COALESCE(CASE WHEN editions.format='digital' THEN editions.store_release_date ELSE editions.publication_date END,editions.publication_date,editions.store_release_date,editions.release_date,(SELECT COALESCE(issue_date,CASE WHEN issue_month ~ '^[0-9]{4}-(0[1-9]|1[0-2])$' THEN to_date(issue_month || '-01','YYYY-MM-DD') END) FROM works WHERE works.id=editions.work_id)))=?", p.Year)
 		}
-		return db.Order("release_date DESC NULLS LAST,id")
+		return db.Order("COALESCE(CASE WHEN editions.format='digital' THEN editions.store_release_date ELSE editions.publication_date END,editions.publication_date,editions.store_release_date,editions.release_date,(SELECT COALESCE(issue_date,CASE WHEN issue_month ~ '^[0-9]{4}-(0[1-9]|1[0-2])$' THEN to_date(issue_month || '-01','YYYY-MM-DD') END) FROM works WHERE works.id=editions.work_id)) DESC NULLS LAST,id")
 	}).Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source")
-	// Newest release first; undated works follow, by title.
-	err := query.Order("(SELECT MAX(e.release_date) FROM editions e WHERE e.work_id=works.id AND e.status<>'superseded') DESC NULLS LAST,works.original_title,works.id").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Find(&works).Error
+	// Newest typed publication/release date first; undated works follow, by title.
+	err := query.Order("COALESCE((SELECT MAX(COALESCE(CASE WHEN e.format='digital' THEN e.store_release_date ELSE e.publication_date END,e.publication_date,e.store_release_date,e.release_date)) FROM editions e WHERE e.work_id=works.id AND e.status<>'superseded'),works.issue_date,CASE WHEN works.issue_month ~ '^[0-9]{4}-(0[1-9]|1[0-2])$' THEN to_date(works.issue_month || '-01','YYYY-MM-DD') END) DESC NULLS LAST,works.original_title,works.id").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Find(&works).Error
 	if err == nil {
 		err = r.loadBookMedia(ctx, works)
 	}
@@ -166,17 +208,19 @@ func (r *CatalogRepository) Listings(ctx context.Context, p model.CatalogBrowseQ
 		return nil, 0, err
 	}
 	columns := `feed.source_listing_id AS id,feed.external_listing_id AS external_id,feed.original_url AS url,feed.title,
- feed.seller_location,feed.condition,feed.format,feed.price_minor,feed.original_currency_code AS currency,feed.price_type,
+ feed.seller_location,feed.condition,feed.format,feed.price_minor,feed.original_currency_code AS currency,feed.price_type,feed.price_basis,feed.price_components,
  feed.shipping_text,feed.observed_at,feed.last_seen_at,
  s.id AS source_id,s.name AS source_name,s.region AS source_region,s.kind AS source_kind,feed.format AS source_photobook_format,
 	 w.id AS work_id,w.slug AS work_slug,w.original_title AS work_title,COALESCE(NULLIF(w.featured_names,''),(SELECT string_agg(DISTINCT wp.credited_name, ', ') FROM work_people wp WHERE wp.work_id=w.id AND wp.role='cover_model')) AS featured_names_text,
- e.id AS edition_id,e.edition_label,e.publisher,COALESCE(NULLIF(e.cover_url,''),w.cover_url) AS cover_url,
+	 e.id AS edition_id,e.edition_label,e.publisher,e.publication_date,e.publication_date_precision,e.store_release_date,e.store_release_date_precision,w.issue_date,w.issue_date_precision,
+	 COALESCE(` + approvedMediaSQL("edition", "e.id", "url", true) + "," + approvedMediaSQL("work", "w.id", "url", true) + `) AS cover_url,
+	 COALESCE(` + approvedMediaSQL("edition", "e.id", "permission_scope", true) + "," + approvedMediaSQL("work", "w.id", "permission_scope", true) + `) AS cover_permission_scope,
  CASE WHEN feed.format='digital' THEN 'digital_retail' WHEN s.kind='bookstore' THEN 'physical_retail' WHEN ` + "'" + status + "'" + `='completed' THEN 'marketplace_sold' ELSE 'marketplace_asking' END AS price_category,` + "'" + status + "' AS status"
 	entries := []model.MarketEntry{}
 	err := query.Select(columns).Order("feed.observed_at DESC,feed.source_listing_id ASC").Offset((p.Page - 1) * p.PageSize).Limit(p.PageSize).Scan(&entries).Error
 	for i := range entries {
 		entries[i].SetFeaturedNames()
-		entries[i].CoverURL = model.PublicCoverURL(entries[i].CoverURL)
+		entries[i].CoverURL = model.ApprovedImageURL(entries[i].CoverURL, entries[i].CoverPermissionScope)
 	}
 	return entries, total, err
 }
@@ -231,14 +275,18 @@ func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.Cat
 		}
 	}
 	columns := `listing.id,listing.external_id,listing.url,listing.title,listing.seller_location,listing.condition,
- listing.format_candidate AS format,listing.status,listing.price_minor,listing.currency,listing.price_type,
- listing.shipping_text,listing.observed_at,listing.last_seen_at,listing.image_url,
+	 listing.format_candidate AS format,listing.status,listing.price_minor,listing.currency,listing.price_type,listing.price_basis,listing.price_components,
+ listing.shipping_text,listing.observed_at,listing.last_seen_at,` + approvedMediaSQL("listing", "listing.id", "url", true) + ` AS image_url,
+ ` + approvedMediaSQL("listing", "listing.id", "permission_scope", true) + ` AS image_permission_scope,
  source.id AS source_id,source.name AS source_name,source.region AS source_region,source.kind AS source_kind,
  listing.format_candidate AS source_photobook_format,
  CASE WHEN listing.format_candidate='digital' THEN 'digital_retail' WHEN source.kind='bookstore' THEN 'physical_retail'
  WHEN listing.status='completed' THEN 'marketplace_sold' ELSE 'marketplace_asking' END AS price_category,
 	 (work.id IS NOT NULL) AS catalog_matched,work.original_title AS work_title,work.slug AS work_slug,COALESCE(NULLIF(work.featured_names,''),(SELECT string_agg(DISTINCT wp.credited_name, ', ') FROM work_people wp WHERE wp.work_id=work.id AND wp.role='cover_model')) AS featured_names,
- edition.edition_label,edition.publisher,edition.release_date,edition.release_precision`
+	 edition.edition_label,edition.publisher,edition.release_date,edition.release_precision,
+	 edition.publication_date,edition.publication_date_precision,edition.publication_date_source_url,
+	 edition.store_release_date,edition.store_release_date_precision,edition.store_release_date_source_url,
+	 work.issue_date,work.issue_date_precision,work.issue_date_source_url`
 	selectArgs := []any{}
 	if len(p.ModelSlugs) > 0 {
 		columns += `,(SELECT string_agg(DISTINCT matched_person.canonical_public_name, ',')
@@ -259,7 +307,7 @@ func (r *CatalogRepository) MarketplaceListings(ctx context.Context, p model.Cat
 	}
 	err := query.Limit(p.PageSize).Scan(&entries).Error
 	for i := range entries {
-		entries[i].ImageURL = model.PublicCoverURL(entries[i].ImageURL)
+		entries[i].ImageURL = model.ApprovedImageURL(entries[i].ImageURL, entries[i].ImagePermissionScope)
 	}
 	return entries, total, err
 }

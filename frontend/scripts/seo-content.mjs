@@ -18,13 +18,28 @@ const bookYear = book => (book.editions || []).map(publicationDate).filter(Boole
 // Bibliography lines: newest first, with the date and publisher recorded for each work.
 const bibliography = books => `<ul>${[...books].sort((a, b) => String(bookYear(b) || '').localeCompare(String(bookYear(a) || ''))).map(book => `<li>${bookLink(book)}${[book.englishTitle, bookYear(book), book.editions?.find(edition => edition.publisher)?.publisher].filter(Boolean).map(value => ` — ${escape(value)}`).join('')}</li>`).join('')}</ul>`
 
+// As in MuseCards: a model page links the publishers of its books and a publisher
+// page the people it publishes most, so a profile is not a dead end for crawlers.
+export function relatedProfiles(books, isModel, selfId, limit = 5) {
+  const counts = new Map();
+  for (const book of books) {
+    const entries = isModel ? (book.editions || []).map(edition => edition.publisherProfile) : [...(book.models || []), ...(book.coverModels || [])];
+    const unique = new Map(entries.filter(entry => entry?.id && entry?.name && entry.id !== selfId).map(entry => [entry.id, entry]));
+    for (const entry of unique.values()) counts.set(entry.id, { entry, count: (counts.get(entry.id)?.count || 0) + 1 });
+  }
+  return [...counts.values()].sort((a, b) => b.count - a.count || a.entry.name.localeCompare(b.entry.name)).slice(0, limit).map(item => item.entry);
+}
+
 export function renderContent(route, { book, profile, books = [], profiles = [], listings = [], totals = {}, related } = {}) {
   let content;
   if (book) {
     content = `<h1>${escape(book.originalTitle)}</h1>${safeURL(book.coverUrl) ? `<img src="${escape(book.coverUrl)}" alt="${escape(book.originalTitle)} cover" />` : ""}${book.englishTitle ? `<p>${escape(book.englishTitle)}</p>` : ''}<p>${escape(bookFactSummary(book))}</p>${book.summary ? `<p>${escape(book.summary)}</p>` : ''}<p>${(book.models || []).map(person => `<a href="/models/${encodeURIComponent(person.id)}">${escape(person.name)}</a>`).join(' · ')}</p>${facts([['Photographer', book.photographer], ['Origin', book.origin?.name]])}<h2>Available editions</h2>${(book.editions || []).map(edition => `<section id="edition-${encodeURIComponent(edition.id)}"><h3>${escape(edition.editionLabel)}</h3>${facts([['Format', edition.format], ['Series', edition.seriesName], ['Publisher', edition.publisher], ['Published', publicationDate(edition)], ['ISBN', edition.isbn], ['Language', edition.language], ['Pages', edition.pageCount], ['Dimensions', edition.dimensions], ['Market', edition.editionMarket]])}${edition.publisherProfile ? `<p><a href="/publishers/${encodeURIComponent(edition.publisherProfile.id)}">${escape(edition.publisherProfile.name)} photobooks</a></p>` : ''}${edition.contentSummary ? `<p>${escape(edition.contentSummary)}</p>` : ''}<p>${external(edition.metadataSourceUrl, 'Edition metadata source')}</p><h4>Source-backed prices</h4><p>Original currencies. Availability reflects the last recorded observation.</p><ul>${editionListings({ ...edition, listings: edition.listings || [] }).map(item => `<li>${escape(item.source.name)}: ${escape(priceLabel(edition, item))}, ${escape(formatPrice(item.priceMinor, item.currency))}. ${escape(item.condition || 'Condition not recorded')}. ${escape(item.shippingText || 'Shipping and taxes not recorded')}. Observed ${escape(item.observedAt || 'date not recorded')}. ${external(item.url, 'View source')}</li>`).join('')}</ul></section>`).join('')}<section class="book-questions"><h2>About this ${book.publicationType === 'magazine_issue' ? 'magazine issue' : 'photobook'}</h2>${bookAnswers(book).map(({ question, answer }) => `<h3>${escape(question)}</h3><p>${escape(answer)}</p>`).join('')}</section>`;
   } else if (profile) {
     const isModel = route.startsWith('/models/');
-    content = `<h1>${escape(profile.name)}</h1><p>${escape(profileFactSummary(profile, isModel ? 'models' : 'publishers', books))}</p>${facts([['Original name', profile.originalName], ['English name', profile.englishName], ['Also recorded as', profile.aliases]])}${external(profile.officialUrl, isModel ? 'Profile source' : 'Official source') ? `<p>${external(profile.officialUrl, isModel ? 'Profile source' : 'Official source')}</p>` : ''}<h2>${isModel ? `Publications featuring ${escape(profile.name)}` : `Publications from ${escape(profile.name)}`}</h2>${bibliography(books)}`;
+    const related = relatedProfiles(books, isModel, profile.id);
+    const relatedKind = isModel ? 'publishers' : 'models';
+    const relatedList = related.length ? `<h2>${isModel ? 'Publishers' : 'Featured models'}</h2><ul>${related.map(entry => `<li><a href="/${relatedKind}/${encodeURIComponent(entry.id)}">${escape(entry.name)}</a></li>`).join('')}</ul>` : '';
+    content = `<h1>${escape(profile.name)}</h1><p>${escape(profileFactSummary(profile, isModel ? 'models' : 'publishers', books))}</p>${facts([['Original name', profile.originalName], ['English name', profile.englishName], ['Also recorded as', profile.aliases]])}${external(profile.officialUrl, isModel ? 'Profile source' : 'Official source') ? `<p>${external(profile.officialUrl, isModel ? 'Profile source' : 'Official source')}</p>` : ''}<h2>${isModel ? `Publications featuring ${escape(profile.name)}` : `Publications from ${escape(profile.name)}`}</h2>${bibliography(books)}${relatedList}<p><a href="/guides/digital-vs-physical-photobooks">Digital and physical photobooks: what is the difference?</a></p>`;
   } else if (route === '/about') {
     content = `<h1>About MuseBooks</h1>${books.length ? `<p>${escape(catalogCounts(books, totals.models, totals.publishers))}</p>` : ''}${ABOUT_SECTIONS.map(([title, text]) => `<section><h2>${escape(title)}</h2><p>${escape(text)}</p></section>`).join('')}<p><a href="mailto:musecards67@gmail.com">Send a catalog correction</a></p><p>Updated <time datetime="${GUIDE_UPDATED}">${GUIDE_UPDATED}</time></p>`;
   } else if (GUIDES[route]) {

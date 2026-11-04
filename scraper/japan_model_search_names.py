@@ -48,3 +48,12 @@ def physical_model_search_names(person):
         names.append(value)
         seen.add(key)
     return names
+
+
+def model_name_matches_identity_field(names, field):
+    """Match a source person-name field by full name, never by substring."""
+    separators = re.compile(r"[,，、/／|｜;；&＆·・()（）\[\]{}【】「」『』<>\n\r]+")
+    field_keys = {_key(field)}
+    field_keys.update(_key(part) for part in separators.split(field or ""))
+    field_keys.discard("")
+    return any(key in field_keys for name in names if (key := _key(name)))

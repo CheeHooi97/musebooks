@@ -195,3 +195,18 @@ test('damaged records stay out of the index, guides are indexed, shared titles n
   assert.match(pageSeo('/books/x', { originalTitle: '天野ちよ 絶景', models: [{ id: 'a', name: '天野ちよ' }], editions: [] }).title, /^天野ちよ 絶景 — MuseBooks$/)
 })
 
+
+test('profile pages link related publishers or models, de-duplicated and ranked by count', async () => {
+  const { relatedProfiles, renderContent } = await import('./seo-content.mjs')
+  const press = { id: 'press', name: 'Press' }, other = { id: 'other', name: 'Other' }
+  const books = [
+    { slug: 'a', originalTitle: 'A', models: [{ id: 'm1', name: 'M1' }], editions: [{ publisherProfile: other }, { publisherProfile: press }, { publisherProfile: press }] },
+    { slug: 'b', originalTitle: 'B', models: [{ id: 'm1', name: 'M1' }, { id: 'm2', name: 'M2' }], editions: [{ publisherProfile: press }] },
+  ]
+  assert.deepEqual(relatedProfiles(books, true).map(entry => entry.id), ['press', 'other'])
+  assert.deepEqual(relatedProfiles(books, false, 'm2').map(entry => entry.id), ['m1'])
+  const html = renderContent('/models/m1', { profile: { id: 'm1', name: 'M1' }, books })
+  assert.match(html, /href="\/publishers\/press"/)
+  assert.match(html, /href="\/guides\/digital-vs-physical-photobooks"/)
+  assert.match(renderContent('/publishers/press', { profile: { id: 'press', name: 'Press' }, books }), /href="\/models\/m1"/)
+})

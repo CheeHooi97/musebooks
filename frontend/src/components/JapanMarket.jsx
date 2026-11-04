@@ -6,10 +6,16 @@ import { apiUrl } from "../lib/api";
 import { usePreferences } from "../lib/preferences";
 import { showCatalogImages } from "../lib/platform";
 import { aliasIndex, marketplaceGroups, mergeModelOfferBatches, modelsMatchingExactName } from "../lib/marketplace-groups";
-import { formatPrice } from "../lib/price-policy";
+import { formatPrice, priceBasisLabel } from "../lib/price-policy";
 
 const PAGE_SIZE = 24;
 const API_PAGE_SIZE = 50;
+
+function offerDisplayDate(offer) {
+  const date = offer.format === "digital" ? offer.storeReleaseDate || offer.publicationDate || offer.releaseDate : offer.publicationDate || offer.storeReleaseDate || offer.releaseDate;
+  const precision = offer.format === "digital" ? offer.storeReleaseDate ? offer.storeReleaseDatePrecision : offer.publicationDate ? offer.publicationDatePrecision : offer.releasePrecision : offer.publicationDate ? offer.publicationDatePrecision : offer.storeReleaseDate ? offer.storeReleaseDatePrecision : offer.releasePrecision;
+  return date?.slice(0, precision === "month" ? 7 : precision === "year" ? 4 : 10) || "";
+}
 const EMPTY_MODELS = [];
 
 async function loadModelMatches(query, signal) {
@@ -195,8 +201,8 @@ export default function JapanMarket() {
             {group.formats.map(itemFormat => {
               const offer = group.items.find(item => (item.format || "physical") === itemFormat);
               return <div className="offer-card__price" key={itemFormat}>
-                <span>{t(itemFormat === "digital" ? "Digital edition" : "Physical book")}{offer.releaseDate ? ` · ${offer.releaseDate.slice(0, offer.releasePrecision === "month" ? 7 : offer.releasePrecision === "year" ? 4 : 10)}` : ""}</span>
-                <strong>{formatPrice(offer.priceMinor, offer.currency)}<small>{t(itemFormat === "digital" ? "Digital retail price" : offer.priceType === "auction_current" ? "Current bid" : offer.status === "completed" ? "Sold price" : "Asking price")}</small></strong>
+                <span>{t(itemFormat === "digital" ? "Digital edition" : "Physical book")}{offerDisplayDate(offer) ? ` · ${offerDisplayDate(offer)}` : ""}</span>
+                <strong>{formatPrice(offer.priceMinor, offer.currency)}<small>{t(offer.priceBasis ? priceBasisLabel(offer.priceBasis) : itemFormat === "digital" ? "Digital retail price" : offer.priceType === "auction_current" ? "Current bid" : offer.status === "completed" ? "Sold price" : "Asking price")}</small></strong>
               </div>;
             })}
           </div>

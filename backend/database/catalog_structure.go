@@ -17,7 +17,9 @@ type SchemaMigration struct {
 	AppliedAt time.Time
 }
 
-const CatalogSchemaVersion = "20261023_accounts_v1"
+const CatalogSchemaVersion = "20261101_catalog_source_evidence_v1"
+
+const previousCatalogSourceEvidenceVersion = "20261102_catalog_source_evidence_v1"
 
 var catalogMigrationSteps = []struct {
 	version string
@@ -26,7 +28,11 @@ var catalogMigrationSteps = []struct {
 	{version: "20261007_musecards_structure_v1", file: "migrations/20261007_musecards_structure.sql"},
 	{version: "20261019_publication_type_v1", file: "migrations/20261019_publication_type.sql"},
 	{version: "20261020_person_aliases_v1", file: "migrations/20261020_person_aliases.sql"},
-	{version: CatalogSchemaVersion, file: "migrations/20261023_accounts.sql"},
+	{version: "20261023_accounts_v1", file: "migrations/20261023_accounts.sql"},
+	{version: "20261101_media_permissions_v1", file: "migrations/20261101_media_permissions.sql"},
+	{version: "20261101_source_permissions_v1", file: "migrations/20261101_source_permissions.sql"},
+	{version: "20261101_date_price_semantics_v1", file: "migrations/20261101_date_price_semantics.sql"},
+	{version: CatalogSchemaVersion, file: "migrations/20261101_catalog_source_evidence.sql"},
 }
 
 func renameLegacyAccountTables(db *gorm.DB) error {
@@ -45,6 +51,25 @@ func renameLegacyAccountTables(db *gorm.DB) error {
 }
 func MigrateCatalogStructure(db *gorm.DB) error {
 	if err := db.AutoMigrate(&SchemaMigration{}); err != nil {
+		return err
+	}
+	// Keep the already-applied evidence migration when correcting its date label.
+	if err := db.Transaction(func(tx *gorm.DB) error {
+		var oldCount, currentCount int64
+		if err := tx.Model(&SchemaMigration{}).Where("version = ?", previousCatalogSourceEvidenceVersion).Count(&oldCount).Error; err != nil {
+			return err
+		}
+		if oldCount == 0 {
+			return nil
+		}
+		if err := tx.Model(&SchemaMigration{}).Where("version = ?", CatalogSchemaVersion).Count(&currentCount).Error; err != nil {
+			return err
+		}
+		if currentCount == 0 {
+			return tx.Model(&SchemaMigration{}).Where("version = ?", previousCatalogSourceEvidenceVersion).Update("version", CatalogSchemaVersion).Error
+		}
+		return nil
+	}); err != nil {
 		return err
 	}
 	for _, migration := range catalogMigrationSteps {
@@ -98,7 +123,7 @@ func GrantApplicationAccess(db *gorm.DB, role string) error {
 		return fmt.Errorf("grants are restricted to the dedicated musebooks database")
 	}
 	quoted := "\"" + strings.ReplaceAll(role, "\"", "\"\"") + "\""
-	tables := "companies, users, auth_sessions, admins, markets, people, person_aliases, product_lines, marketplaces, origins, sources, works, editions, work_people, catalog_media, listing_matches, active_listings, sold_listings, listings, listing_observations, scrape_jobs, scrape_runs, push_subscriptions, push_digests"
+	tables := "companies, users, auth_sessions, admins, markets, people, person_aliases, product_lines, marketplaces, origins, sources, source_permissions, catalog_source_evidence, works, editions, work_people, catalog_media, listing_matches, active_listings, sold_listings, listings, listing_observations, scrape_jobs, scrape_runs, push_subscriptions, push_digests"
 	return db.Transaction(func(tx *gorm.DB) error {
 		for _, sql := range []string{"GRANT USAGE ON SCHEMA public TO " + quoted, "GRANT SELECT, INSERT, UPDATE, DELETE ON TABLE " + tables + " TO " + quoted, "GRANT SELECT ON TABLE schema_migrations TO " + quoted, "GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO " + quoted} {
 			if err := tx.Exec(sql).Error; err != nil {

@@ -7,7 +7,7 @@ import { Breadcrumb, LoadState, SectionHeading } from "../components/Page";
 import { usePreferences } from "../lib/preferences";
 import { useCollection } from "../lib/collection";
 import { isMobileApp, showCatalogImages } from "../lib/platform";
-import { publicationDate } from "../lib/seo";
+import { formatCatalogDate, publicationDate, storeReleaseDate } from "../lib/seo";
 import { bookAnswers, bookFactSummary } from "../lib/book-answers";
 import { priceLabel, primaryListing } from "../lib/price-policy";
 import { bookPeople, bookTitle, editionFormatLabel, getBook, isMagazine, publicationTypeLabel, useResource } from "../lib/catalog";
@@ -63,13 +63,15 @@ function Detail({ book, editionId, setEditionId }) {
     ["Publication type", t(publicationTypeLabel(book))],
     edition.seriesName && ["Series", edition.seriesName],
     isMagazine(book) && ["Issue month", book.issueMonth || t("Not recorded")],
+    isMagazine(book) && book.issueDate && ["Issue date", formatCatalogDate(book.issueDate, book.issueDatePrecision)],
     isMagazine(book) && book.issueNumber && ["Issue number", book.issueNumber],
     ["Photographer", book.photographer || t("Not recorded")],
     ["Origin", t(book.origin.name)],
     ["Format", t(editionFormatLabel(edition, book))],
     ["Language", edition.language || t("Not recorded")],
     ["Pages", edition.pageCount ? `${edition.pageCount} ${t("pages")}` : t("Not recorded")],
-    [edition.format === "digital" ? "Store release" : "Published", publicationDate(edition) || t("Not recorded")],
+    edition.format === "digital" ? ["Store release", storeReleaseDate(edition) || t("Not recorded")] : ["Published", publicationDate(edition) || t("Not recorded")],
+    edition.format === "digital" && edition.publicationDate && ["Publication date", publicationDate(edition)],
     ["ISBN", edition.isbn || t("Not recorded")],
     ["Dimensions", edition.dimensions || t("Not recorded")],
     ["Publisher", edition.publisherProfile?.id ? <a href={`/publishers/${encodeURIComponent(edition.publisherProfile.id)}`}>{edition.publisherProfile.name}</a> : edition.publisher || t("Not recorded")],

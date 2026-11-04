@@ -25,7 +25,7 @@ func (r *CatalogRepository) ListBooks(ctx context.Context, params model.ListBook
 	// Filters join editions and listings; select through ids so each work appears once whatever the sort.
 	page := r.db.WithContext(ctx).Model(&model.Work{}).Where("works.id IN (?)", query.Session(&gorm.Session{}).Select("works.id"))
 	err := page.Preload("Origin").Preload("Editions", func(db *gorm.DB) *gorm.DB {
-		return db.Where("status <> ?", "superseded").Order("release_date DESC NULLS LAST, edition_label ASC")
+		return db.Where("status <> ?", "superseded").Order("COALESCE(CASE WHEN editions.format='digital' THEN editions.store_release_date ELSE editions.publication_date END,publication_date,store_release_date,release_date) DESC NULLS LAST, edition_label ASC")
 	}).Preload("Credits.Person").Preload("Editions.PublisherCompany").Preload("Editions.Listings").Preload("Editions.Listings.Source").Order(listBooksOrder(params.Sort)).Offset((params.Page - 1) * params.PageSize).Limit(params.PageSize).Find(&works).Error
 	if err == nil {
 		err = r.loadBookMedia(ctx, works)
@@ -35,7 +35,7 @@ func (r *CatalogRepository) ListBooks(ctx context.Context, params model.ListBook
 
 // A fixed set of orders; the sort value never reaches the SQL text.
 func listBooksOrder(sort string) string {
-	const released = "(SELECT MAX(e.release_date) FROM editions e WHERE e.work_id = works.id AND e.status <> 'superseded')"
+	const released = "COALESCE((SELECT MAX(COALESCE(CASE WHEN e.format='digital' THEN e.store_release_date ELSE e.publication_date END,e.publication_date,e.store_release_date,e.release_date)) FROM editions e WHERE e.work_id = works.id AND e.status <> 'superseded'),works.issue_date,CASE WHEN works.issue_month ~ '^[0-9]{4}-(0[1-9]|1[0-2])$' THEN to_date(works.issue_month || '-01','YYYY-MM-DD') END)"
 	switch sort {
 	case "newest":
 		return released + " DESC NULLS LAST, works.original_title ASC, works.id ASC"
@@ -55,10 +55,31 @@ func (r *CatalogRepository) GetBook(work *model.Work, key string) CatalogResult 
 	return CatalogResult{Error: r.loadBookMedia(context.Background(), []model.Work{*work})}
 }
 func (r *CatalogRepository) GetEdition(edition *model.Edition, id string) CatalogResult {
-	return result(r.db.Joins("JOIN works ON works.id = editions.work_id AND works.status = 'published'").Preload("PublisherCompany").Preload("Listings").Preload("Listings.Source").Where("editions.status <> ?", "superseded").Where("editions.id = ?", id).First(edition))
+	found := r.db.Joins("JOIN works ON works.id = editions.work_id AND works.status = 'published'").Preload("PublisherCompany").Preload("Listings").Preload("Listings.Source").Where("editions.status <> ?", "superseded").Where("editions.id = ?", id).First(edition)
+	if found.Error != nil {
+		return result(found)
+	}
+	works := []model.Work{{Editions: []model.Edition{*edition}}}
+	if err := r.loadBookMedia(context.Background(), works); err != nil {
+		return CatalogResult{Error: err}
+	}
+	*edition = works[0].Editions[0]
+	return CatalogResult{}
 }
 func (r *CatalogRepository) GetEditionIdentity(edition *model.Edition, id string) CatalogResult {
-	return result(r.db.Select("id", "format").First(edition, "id = ?", id))
+	var identity struct {
+		ID             string
+		Format         string
+		WorkOriginCode string
+	}
+	found := r.db.Table("editions").Select("editions.id, editions.format, works.origin_code AS work_origin_code").Joins("JOIN works ON works.id = editions.work_id").Where("editions.id = ?", id).Take(&identity)
+	if found.Error != nil {
+		return result(found)
+	}
+	edition.ID = identity.ID
+	edition.Format = identity.Format
+	edition.WorkOriginCode = identity.WorkOriginCode
+	return CatalogResult{}
 }
 func (r *CatalogRepository) ListOrigins(ctx context.Context) ([]model.OriginResponse, error) {
 	items := []model.OriginResponse{}
@@ -70,6 +91,9 @@ func (r *CatalogRepository) ListSources(sources *[]model.Source) CatalogResult {
 }
 func (r *CatalogRepository) GetSource(source *model.Source, id string) CatalogResult {
 	return result(r.db.First(source, "id = ?", id))
+}
+func (r *CatalogRepository) GetSourcePermission(permission *model.SourcePermission, sourceID, scope string) CatalogResult {
+	return result(r.db.Where("source_id = ? AND scope = ?", sourceID, scope).First(permission))
 }
 func (r *CatalogRepository) GetJob(job *model.ScrapeJob, id string) CatalogResult {
 	return result(r.db.First(job, "id = ?", id))

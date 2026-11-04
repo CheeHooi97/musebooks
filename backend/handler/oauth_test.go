@@ -21,6 +21,25 @@ type authRoundTrip func(*http.Request) (*http.Response, error)
 
 func (f authRoundTrip) RoundTrip(r *http.Request) (*http.Response, error) { return f(r) }
 
+func TestGoogleStartForcesAccountChooserOnlyForMobile(t *testing.T) {
+	h := &Handler{OAuth: NewGoogleOAuth("client", "secret", "https://musebooks.my/v1/auth/oauth/google/callback")}
+	challenge := strings.Repeat("A", 43) // 32 zero bytes, base64url without padding
+	for query, want := range map[string]string{"": "", "?mobile=1&challenge=" + challenge: "select_account"} {
+		r := httptest.NewRecorder()
+		c := echo.New().NewContext(httptest.NewRequest("GET", "/v1/auth/oauth/google"+query, nil), r)
+		if err := h.GoogleStart(c); err != nil {
+			t.Fatal(err)
+		}
+		location, err := url.Parse(r.Header().Get("Location"))
+		if err != nil || location.Host != "accounts.google.com" {
+			t.Fatalf("query %q: unexpected redirect %q", query, r.Header().Get("Location"))
+		}
+		if got := location.Query().Get("prompt"); got != want {
+			t.Fatalf("query %q: prompt = %q, want %q", query, got, want)
+		}
+	}
+}
+
 func TestGoogleStartRequiresProofAndBindsStateAndPKCE(t *testing.T) {
 	h := &Handler{OAuth: NewGoogleOAuth("client", "secret", "https://musebooks.my/v1/auth/oauth/google/callback")}
 	for _, query := range []string{"?mobile=1", "?mobile=1&challenge=bad"} {

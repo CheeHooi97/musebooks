@@ -1,7 +1,6 @@
 package model
 
 import (
-	"net/url"
 	"strings"
 	"time"
 )
@@ -12,22 +11,25 @@ type CatalogLink struct {
 }
 
 type BookResponse struct {
-	UpdatedAt       time.Time         `json:"updatedAt"`
-	Models          []CatalogLink     `json:"models"`
-	CoverModels     []CatalogLink     `json:"coverModels,omitempty"`
-	ID              string            `json:"id"`
-	Slug            string            `json:"slug"`
-	PublicationType string            `json:"publicationType"`
-	IssueMonth      string            `json:"issueMonth,omitempty"`
-	IssueNumber     string            `json:"issueNumber,omitempty"`
-	OriginalTitle   string            `json:"originalTitle"`
-	EnglishTitle    string            `json:"englishTitle,omitempty"`
-	Summary         string            `json:"summary,omitempty"`
-	Origin          OriginResponse    `json:"origin"`
-	FeaturedNames   []string          `json:"featuredNames,omitempty"`
-	Photographer    string            `json:"photographer,omitempty"`
-	CoverURL        string            `json:"coverUrl,omitempty"`
-	Editions        []EditionResponse `json:"editions"`
+	UpdatedAt          time.Time         `json:"updatedAt"`
+	Models             []CatalogLink     `json:"models"`
+	CoverModels        []CatalogLink     `json:"coverModels,omitempty"`
+	ID                 string            `json:"id"`
+	Slug               string            `json:"slug"`
+	PublicationType    string            `json:"publicationType"`
+	IssueMonth         string            `json:"issueMonth,omitempty"`
+	IssueNumber        string            `json:"issueNumber,omitempty"`
+	IssueDate          *time.Time        `json:"issueDate,omitempty"`
+	IssueDatePrecision string            `json:"issueDatePrecision,omitempty"`
+	IssueDateSourceURL string            `json:"issueDateSourceUrl,omitempty"`
+	OriginalTitle      string            `json:"originalTitle"`
+	EnglishTitle       string            `json:"englishTitle,omitempty"`
+	Summary            string            `json:"summary,omitempty"`
+	Origin             OriginResponse    `json:"origin"`
+	FeaturedNames      []string          `json:"featuredNames,omitempty"`
+	Photographer       string            `json:"photographer,omitempty"`
+	CoverURL           string            `json:"coverUrl,omitempty"`
+	Editions           []EditionResponse `json:"editions"`
 }
 
 type OriginResponse struct {
@@ -38,49 +40,57 @@ type OriginResponse struct {
 }
 
 type EditionResponse struct {
-	Gallery           []CatalogMedia    `gorm:"-" json:"gallery,omitempty"`
-	PublisherProfile  *CatalogLink      `json:"publisherProfile,omitempty"`
-	ID                string            `json:"id"`
-	Format            string            `json:"format"`
-	Language          string            `json:"language,omitempty"`
-	EditionMarket     string            `json:"editionMarket,omitempty"`
-	Publisher         string            `json:"publisher,omitempty"`
-	ReleaseDate       *time.Time        `json:"releaseDate,omitempty"`
-	ReleasePrecision  string            `json:"releasePrecision,omitempty"`
-	ISBN              string            `json:"isbn,omitempty"`
-	PageCount         int               `json:"pageCount,omitempty"`
-	Dimensions        string            `json:"dimensions,omitempty"`
-	EditionVariant    string            `json:"editionVariant,omitempty"`
-	ContentSummary    string            `json:"contentSummary,omitempty"`
-	MetadataSourceURL string            `json:"metadataSourceUrl,omitempty"`
-	SeriesName        string            `json:"seriesName,omitempty"`
-	EditionLabel      string            `json:"editionLabel"`
-	CoverURL          string            `json:"coverUrl,omitempty"`
-	Listings          []ListingResponse `json:"listings"`
-	ActiveListings    []ListingResponse `json:"activeListings"`
-	SoldListings      []ListingResponse `json:"soldListings"`
-	RetailOffers      []ListingResponse `json:"retailOffers"`
+	Gallery                   []CatalogMedia    `gorm:"-" json:"gallery,omitempty"`
+	PublisherProfile          *CatalogLink      `json:"publisherProfile,omitempty"`
+	ID                        string            `json:"id"`
+	Format                    string            `json:"format"`
+	Language                  string            `json:"language,omitempty"`
+	EditionMarket             string            `json:"editionMarket,omitempty"`
+	Publisher                 string            `json:"publisher,omitempty"`
+	ReleaseDate               *time.Time        `json:"releaseDate,omitempty"`
+	ReleasePrecision          string            `json:"releasePrecision,omitempty"`
+	PublicationDate           *time.Time        `json:"publicationDate,omitempty"`
+	PublicationDatePrecision  string            `json:"publicationDatePrecision,omitempty"`
+	PublicationDateSourceURL  string            `json:"publicationDateSourceUrl,omitempty"`
+	StoreReleaseDate          *time.Time        `json:"storeReleaseDate,omitempty"`
+	StoreReleaseDatePrecision string            `json:"storeReleaseDatePrecision,omitempty"`
+	StoreReleaseDateSourceURL string            `json:"storeReleaseDateSourceUrl,omitempty"`
+	ISBN                      string            `json:"isbn,omitempty"`
+	PageCount                 int               `json:"pageCount,omitempty"`
+	Dimensions                string            `json:"dimensions,omitempty"`
+	EditionVariant            string            `json:"editionVariant,omitempty"`
+	ContentSummary            string            `json:"contentSummary,omitempty"`
+	MetadataSourceURL         string            `json:"metadataSourceUrl,omitempty"`
+	SeriesName                string            `json:"seriesName,omitempty"`
+	EditionLabel              string            `json:"editionLabel"`
+	CoverURL                  string            `json:"coverUrl,omitempty"`
+	Listings                  []ListingResponse `json:"listings"`
+	ActiveListings            []ListingResponse `json:"activeListings"`
+	SoldListings              []ListingResponse `json:"soldListings"`
+	RetailOffers              []ListingResponse `json:"retailOffers"`
 }
 
 type ListingResponse struct {
-	Gallery        []CatalogMedia `gorm:"-" json:"gallery,omitempty"`
-	ID             string         `json:"id"`
-	ExternalID     string         `json:"externalId"`
-	URL            string         `json:"url"`
-	Title          string         `json:"title"`
-	SellerLocation string         `json:"sellerLocation,omitempty"`
-	Condition      string         `json:"condition,omitempty"`
-	Format         string         `json:"format,omitempty"`
-	DigitalAccess  string         `json:"digitalAccess,omitempty"`
-	Status         string         `json:"status"`
-	PriceMinor     int64          `json:"priceMinor,omitempty"`
-	Currency       string         `json:"currency,omitempty"`
-	PriceType      string         `json:"priceType,omitempty"`
-	PriceCategory  string         `json:"priceCategory"`
-	ShippingText   string         `json:"shippingText,omitempty"`
-	ObservedAt     time.Time      `json:"observedAt"`
-	LastSeenAt     time.Time      `json:"lastSeenAt"`
-	Source         SourceResponse `gorm:"embedded;embeddedPrefix:source_" json:"source"`
+	Gallery         []CatalogMedia   `gorm:"-" json:"gallery,omitempty"`
+	ID              string           `json:"id"`
+	ExternalID      string           `json:"externalId"`
+	URL             string           `json:"url"`
+	Title           string           `json:"title"`
+	SellerLocation  string           `json:"sellerLocation,omitempty"`
+	Condition       string           `json:"condition,omitempty"`
+	Format          string           `json:"format,omitempty"`
+	DigitalAccess   string           `json:"digitalAccess,omitempty"`
+	Status          string           `json:"status"`
+	PriceMinor      int64            `json:"priceMinor,omitempty"`
+	Currency        string           `json:"currency,omitempty"`
+	PriceType       string           `json:"priceType,omitempty"`
+	PriceBasis      string           `json:"priceBasis,omitempty"`
+	PriceComponents []PriceComponent `gorm:"serializer:json;type:jsonb" json:"priceComponents,omitempty"`
+	PriceCategory   string           `json:"priceCategory"`
+	ShippingText    string           `json:"shippingText,omitempty"`
+	ObservedAt      time.Time        `json:"observedAt"`
+	LastSeenAt      time.Time        `json:"lastSeenAt"`
+	Source          SourceResponse   `gorm:"embedded;embeddedPrefix:source_" json:"source"`
 }
 
 type SourceResponse struct {
@@ -118,14 +128,17 @@ func (w Work) Response() BookResponse {
 		publicationType = PublicationTypePhotobook
 	}
 	result := BookResponse{
-		ID:              w.ID,
-		Slug:            w.Slug,
-		PublicationType: publicationType,
-		IssueMonth:      w.IssueMonth,
-		IssueNumber:     w.IssueNumber,
-		OriginalTitle:   w.OriginalTitle,
-		EnglishTitle:    w.EnglishTitle,
-		Summary:         w.Summary,
+		ID:                 w.ID,
+		Slug:               w.Slug,
+		PublicationType:    publicationType,
+		IssueMonth:         w.IssueMonth,
+		IssueNumber:        w.IssueNumber,
+		IssueDate:          w.IssueDate,
+		IssueDatePrecision: w.IssueDatePrecision,
+		IssueDateSourceURL: w.IssueDateSourceURL,
+		OriginalTitle:      w.OriginalTitle,
+		EnglishTitle:       w.EnglishTitle,
+		Summary:            w.Summary,
 		Origin: OriginResponse{
 			Code:       w.Origin.Code,
 			Name:       w.Origin.Name,
@@ -133,7 +146,7 @@ func (w Work) Response() BookResponse {
 		},
 		FeaturedNames: splitNames(w.FeaturedNames),
 		Photographer:  w.Photographer,
-		CoverURL:      PublicCoverURL(w.CoverURL),
+		CoverURL:      permittedPrimaryCover(w.Media, w.CoverURL),
 		Editions:      make([]EditionResponse, 0, len(w.Editions)),
 		UpdatedAt:     w.UpdatedAt,
 	}
@@ -172,27 +185,33 @@ func (w Work) Response() BookResponse {
 
 func (e Edition) Response() EditionResponse {
 	result := EditionResponse{
-		Gallery:           publicGallery(e.Media),
-		ID:                e.ID,
-		Format:            e.Format,
-		Language:          e.Language,
-		EditionMarket:     e.EditionMarket,
-		Publisher:         e.Publisher,
-		ReleaseDate:       e.ReleaseDate,
-		ReleasePrecision:  e.ReleasePrecision,
-		ISBN:              e.ISBN,
-		PageCount:         e.PageCount,
-		Dimensions:        e.Dimensions,
-		EditionVariant:    e.EditionVariant,
-		ContentSummary:    e.ContentSummary,
-		MetadataSourceURL: e.MetadataSourceURL,
-		SeriesName:        e.SeriesName,
-		EditionLabel:      TitleWithoutSeries(e.EditionLabel, e.SeriesName),
-		CoverURL:          PublicCoverURL(e.CoverURL),
-		Listings:          make([]ListingResponse, 0, len(e.Listings)),
-		ActiveListings:    []ListingResponse{},
-		SoldListings:      []ListingResponse{},
-		RetailOffers:      []ListingResponse{},
+		Gallery:                   publicGallery(e.Media),
+		ID:                        e.ID,
+		Format:                    e.Format,
+		Language:                  e.Language,
+		EditionMarket:             e.EditionMarket,
+		Publisher:                 e.Publisher,
+		ReleaseDate:               e.ReleaseDate,
+		ReleasePrecision:          e.ReleasePrecision,
+		PublicationDate:           e.PublicationDate,
+		PublicationDatePrecision:  e.PublicationDatePrecision,
+		PublicationDateSourceURL:  e.PublicationDateSourceURL,
+		StoreReleaseDate:          e.StoreReleaseDate,
+		StoreReleaseDatePrecision: e.StoreReleaseDatePrecision,
+		StoreReleaseDateSourceURL: e.StoreReleaseDateSourceURL,
+		ISBN:                      e.ISBN,
+		PageCount:                 e.PageCount,
+		Dimensions:                e.Dimensions,
+		EditionVariant:            e.EditionVariant,
+		ContentSummary:            e.ContentSummary,
+		MetadataSourceURL:         e.MetadataSourceURL,
+		SeriesName:                e.SeriesName,
+		EditionLabel:              TitleWithoutSeries(e.EditionLabel, e.SeriesName),
+		CoverURL:                  permittedPrimaryCover(e.Media, e.CoverURL),
+		Listings:                  make([]ListingResponse, 0, len(e.Listings)),
+		ActiveListings:            []ListingResponse{},
+		SoldListings:              []ListingResponse{},
+		RetailOffers:              []ListingResponse{},
 	}
 	if e.PublisherCompany != nil {
 		result.PublisherProfile = &CatalogLink{ID: e.PublisherCompany.Slug, Name: e.PublisherCompany.CanonicalName}
@@ -219,23 +238,25 @@ func (e Edition) Response() EditionResponse {
 
 func (l Listing) Response() ListingResponse {
 	return ListingResponse{
-		Gallery:        publicGallery(l.Media),
-		ID:             l.ID,
-		ExternalID:     l.ExternalID,
-		URL:            l.URL,
-		Title:          l.Title,
-		SellerLocation: l.SellerLocation,
-		Condition:      l.Condition,
-		Format:         listingPhotobookFormat(l),
-		DigitalAccess:  l.DigitalAccess,
-		Status:         l.Status,
-		PriceMinor:     l.PriceMinor,
-		Currency:       l.Currency,
-		PriceType:      l.PriceType,
-		PriceCategory:  listingPriceCategory(l),
-		ShippingText:   l.ShippingText,
-		ObservedAt:     l.ObservedAt,
-		LastSeenAt:     l.LastSeenAt,
+		Gallery:         publicGallery(l.Media),
+		ID:              l.ID,
+		ExternalID:      l.ExternalID,
+		URL:             l.URL,
+		Title:           l.Title,
+		SellerLocation:  l.SellerLocation,
+		Condition:       l.Condition,
+		Format:          listingPhotobookFormat(l),
+		DigitalAccess:   l.DigitalAccess,
+		Status:          l.Status,
+		PriceMinor:      l.PriceMinor,
+		Currency:        l.Currency,
+		PriceType:       l.PriceType,
+		PriceBasis:      l.PriceBasis,
+		PriceComponents: l.PriceComponents,
+		PriceCategory:   listingPriceCategory(l),
+		ShippingText:    l.ShippingText,
+		ObservedAt:      l.ObservedAt,
+		LastSeenAt:      l.LastSeenAt,
 		Source: SourceResponse{
 			ID:              l.Source.ID,
 			Name:            l.Source.Name,
@@ -250,12 +271,11 @@ func publicGallery(media []CatalogMedia) []CatalogMedia {
 	result := []CatalogMedia{}
 	seen := map[string]bool{}
 	for _, asset := range media {
-		image, err := url.Parse(asset.StorageURL)
-		source, sourceErr := url.Parse(asset.SourceURL)
-		if err != nil || sourceErr != nil || image.Scheme != "https" || image.Host == "" || image.User != nil || source.Scheme != "https" || source.Host == "" || source.User != nil || PublicCoverURL(asset.StorageURL) == "" {
+		publicURL := PublicMediaURL(asset)
+		if publicURL == "" {
 			continue
 		}
-		asset.StorageURL = PublicCoverURL(asset.StorageURL)
+		asset.StorageURL = publicURL
 		if seen[asset.StorageURL] {
 			continue
 		}

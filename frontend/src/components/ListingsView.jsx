@@ -4,6 +4,7 @@ import { LoadState, Pagination } from "./Page";
 import { usePreferences } from "../lib/preferences";
 import { setSearchParams } from "../lib/router";
 import { loadSources, useLoader, useResource } from "../lib/catalog";
+import { priceBasisLabel } from "../lib/price-policy";
 
 /** Retail and marketplace listings (active or sold) with shared filters. */
 export default function ListingsView({ status, scope = {}, syncUrl = false }) {
@@ -41,7 +42,7 @@ export default function ListingsView({ status, scope = {}, syncUrl = false }) {
           <tbody>{result.data.items.map(item => <tr key={item.id}>
             <td className="ledger__title"><a href={`/books/${encodeURIComponent(item.workSlug)}`}><strong>{item.workTitle}</strong></a><small>{[item.featuredNames?.join(" · "), item.editionLabel, item.format, item.publisher].filter(Boolean).join(" · ")}</small></td>
             <td data-label={t("Source")}>{item.source?.name}<small>{item.source?.region}</small></td>
-            <td data-label={t(sold ? "Sold price" : "Offer price")} className="ledger__num"><strong>{formatPrice(item.priceMinor, item.currency)}</strong><small>{t(sold ? "Completed sale" : item.priceType === "auction_current" ? "Current bid" : item.priceCategory?.includes("retail") ? "Retail asking price" : "Asking price")}</small></td>
+            <td data-label={t(sold ? "Sold price" : "Offer price")} className="ledger__num"><strong>{formatPrice(item.priceMinor, item.currency)}</strong><small>{t(item.priceBasis ? priceBasisLabel(item.priceBasis) : sold ? "Completed sale" : item.priceType === "auction_current" ? "Current bid" : item.priceCategory?.includes("retail") ? "Retail asking price" : "Asking price")}</small></td>
             <td data-label={t("Condition")}>{item.condition || t("Not recorded")}{item.shippingText && <small>{item.shippingText}</small>}</td>
             <td data-label={t("Observed")}>{item.observedAt ? <time dateTime={item.observedAt}>{new Date(item.observedAt).toLocaleDateString()}</time> : t("Not recorded")}</td>
             <td className="ledger__links">{item.url && <a className="text-link" href={item.url} target="_blank" rel="noreferrer" data-external-link>{t("View source")} ↗</a>}</td>

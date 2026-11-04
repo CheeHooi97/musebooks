@@ -24,12 +24,16 @@ import (
 )
 
 type ListingMediaInput struct {
-	ExternalID  string `json:"externalId"`
-	MediaType   string `json:"mediaType"`
-	OriginalURL string `json:"originalUrl"`
-	StorageURL  string `json:"storageUrl"`
-	SourceURL   string `json:"sourceUrl"`
-	IsPrimary   bool   `json:"isPrimary"`
+	ExternalID            string     `json:"externalId"`
+	MediaType             string     `json:"mediaType"`
+	OriginalURL           string     `json:"originalUrl"`
+	StorageURL            string     `json:"storageUrl"`
+	SourceURL             string     `json:"sourceUrl"`
+	PermissionScope       string     `json:"permissionScope,omitempty"`
+	PermissionEvidenceURL string     `json:"permissionEvidenceUrl,omitempty"`
+	PermissionBasis       string     `json:"permissionBasis,omitempty"`
+	PermissionReviewedAt  *time.Time `json:"permissionReviewedAt,omitempty"`
+	IsPrimary             bool       `json:"isPrimary"`
 }
 
 type Record struct {
@@ -41,19 +45,64 @@ type Record struct {
 	Work                       model.Work             `json:"work"`
 	FeaturedPerson             *model.Person          `json:"featuredPerson,omitempty"`
 	FeaturedCreditSource       string                 `json:"featuredCreditSource,omitempty"`
+	FeaturedCreditSourceURL    string                 `json:"featuredCreditSourceUrl,omitempty"`
 	AdditionalFeaturedPeople   []model.Person         `json:"additionalFeaturedPeople,omitempty"`
 	CoverPerson                *model.Person          `json:"coverPerson,omitempty"`
+	CoverCreditSourceURL       string                 `json:"coverCreditSourceUrl,omitempty"`
 	AdditionalCoverPeople      []model.Person         `json:"additionalCoverPeople,omitempty"`
 	Edition                    model.Edition          `json:"edition"`
 	Source                     model.Source           `json:"source"`
 	Batch                      model.ObservationBatch `json:"batch"`
 	Media                      []ListingMediaInput    `json:"media,omitempty"`
+	WorkMedia                  []ListingMediaInput    `json:"workMedia,omitempty"`
 	PublisherMedia             []ListingMediaInput    `json:"publisherMedia,omitempty"`
+	SourceEvidence             []SourceEvidenceInput  `json:"sourceEvidence,omitempty"`
 }
 
 func validHTTPSURL(value string) bool {
 	parsed, err := url.Parse(strings.TrimSpace(value))
 	return err == nil && parsed.Scheme == "https" && parsed.Host != "" && parsed.User == nil
+}
+
+func validateMediaPermission(media ListingMediaInput) error {
+	scope := strings.TrimSpace(media.PermissionScope)
+	if scope == "" {
+		scope = model.MediaPermissionUnreviewed
+	}
+	switch scope {
+	case model.MediaPermissionUnreviewed:
+		return nil
+	case model.MediaPermissionRemoteDisplay, model.MediaPermissionDisplayAndCopy, model.MediaPermissionRevoked:
+		if !validHTTPSURL(media.PermissionEvidenceURL) || strings.TrimSpace(media.PermissionBasis) == "" || media.PermissionReviewedAt == nil || media.PermissionReviewedAt.IsZero() {
+			return fmt.Errorf("permission scope %s requires HTTPS evidence, a basis, and a review timestamp", scope)
+		}
+		if scope == model.MediaPermissionRemoteDisplay && media.OriginalURL != media.StorageURL {
+			return fmt.Errorf("remote_display requires the exact original URL without a stored or transformed copy")
+		}
+		return nil
+	default:
+		return fmt.Errorf("unsupported media permission scope %q", scope)
+	}
+}
+
+func catalogMediaFromInput(entityType, entityID string, media ListingMediaInput) model.CatalogMedia {
+	scope := strings.TrimSpace(media.PermissionScope)
+	if scope == "" {
+		scope = model.MediaPermissionUnreviewed
+	}
+	return model.CatalogMedia{
+		EntityType:            entityType,
+		EntityID:              entityID,
+		MediaType:             media.MediaType,
+		OriginalURL:           media.OriginalURL,
+		StorageURL:            media.StorageURL,
+		SourceURL:             media.SourceURL,
+		PermissionScope:       scope,
+		PermissionEvidenceURL: strings.TrimSpace(media.PermissionEvidenceURL),
+		PermissionBasis:       strings.TrimSpace(media.PermissionBasis),
+		PermissionReviewedAt:  media.PermissionReviewedAt,
+		IsPrimary:             media.IsPrimary,
+	}
 }
 
 func validCatalogOrigin(code string) bool {
@@ -137,10 +186,64 @@ func normalizeReleaseDate(edition *model.Edition) {
 	edition.ReleaseDate = &normalized
 }
 
+func validateSourcedDate(value *time.Time, precision, sourceURL, field string) error {
+	if value == nil {
+		if precision != "" || sourceURL != "" {
+			return fmt.Errorf("%s precision and source require a date", field)
+		}
+		return nil
+	}
+	if precision != "day" && precision != "month" && precision != "year" {
+		return fmt.Errorf("%s requires day, month, or year precision", field)
+	}
+	if !validHTTPSURL(sourceURL) {
+		return fmt.Errorf("%s requires its own HTTPS source URL", field)
+	}
+	return nil
+}
+
+func normalizeSourcedDate(value *time.Time, precision string) *time.Time {
+	if value == nil {
+		return nil
+	}
+	date := *value
+	year, month, day := date.Date()
+	switch precision {
+	case "month":
+		day = 1
+	case "year":
+		month, day = time.January, 1
+	}
+	normalized := time.Date(year, month, day, 0, 0, 0, 0, time.UTC)
+	return &normalized
+}
+
+func normalizeCatalogDates(work *model.Work, edition *model.Edition) {
+	if work != nil {
+		work.IssueDate = normalizeSourcedDate(work.IssueDate, work.IssueDatePrecision)
+	}
+	if edition != nil {
+		edition.PublicationDate = normalizeSourcedDate(edition.PublicationDate, edition.PublicationDatePrecision)
+		edition.StoreReleaseDate = normalizeSourcedDate(edition.StoreReleaseDate, edition.StoreReleaseDatePrecision)
+		normalizeReleaseDate(edition)
+	}
+}
+
 func validateMediaInput(record Record) error {
+	for _, media := range record.WorkMedia {
+		if record.Work.ID == "" || !validHTTPSURL(media.OriginalURL) || !validHTTPSURL(media.StorageURL) || media.SourceURL != record.Edition.MetadataSourceURL || !validHTTPSURL(media.SourceURL) || media.MediaType != "publisher_cover" || !media.IsPrimary || media.StorageURL != record.Work.CoverURL {
+			return fmt.Errorf("work image provenance does not match the reviewed work")
+		}
+		if err := validateMediaPermission(media); err != nil {
+			return fmt.Errorf("work image permission is invalid: %w", err)
+		}
+	}
 	for _, media := range record.PublisherMedia {
 		if record.Edition.ID == "" || !validHTTPSURL(media.OriginalURL) || !validHTTPSURL(media.StorageURL) || media.SourceURL != record.Edition.MetadataSourceURL || !validHTTPSURL(media.SourceURL) || !regexp.MustCompile(`^publisher_(cover|sample_[0-9]{3})$`).MatchString(media.MediaType) || (media.IsPrimary && (media.MediaType != "publisher_cover" || media.StorageURL != record.Edition.CoverURL)) {
 			return fmt.Errorf("publisher image provenance does not match the reviewed edition")
+		}
+		if err := validateMediaPermission(media); err != nil {
+			return fmt.Errorf("publisher image permission is invalid: %w", err)
 		}
 	}
 	if len(record.Media) == 0 {
@@ -158,6 +261,9 @@ func validateMediaInput(record Record) error {
 			!validHTTPSURL(media.OriginalURL) || !validHTTPSURL(media.StorageURL) ||
 			(media.IsPrimary && media.StorageURL != item.ImageURL) || media.SourceURL != item.URL {
 			return fmt.Errorf("listing image provenance does not match an imported item")
+		}
+		if err := validateMediaPermission(media); err != nil {
+			return fmt.Errorf("listing image permission is invalid: %w", err)
 		}
 	}
 	return nil
@@ -381,8 +487,21 @@ func main() {
 			if !regexp.MustCompile(`^\d{4}-(0[1-9]|1[0-2])$`).MatchString(r.Work.IssueMonth) || !validPersonIdentity(r.CoverPerson) {
 				fail(fmt.Errorf("record %d magazine issue requires an issue month and verified cover model", i))
 			}
-		} else if strings.TrimSpace(r.Work.FeaturedNames) == "" || r.Work.IssueMonth != "" {
-			fail(fmt.Errorf("record %d photobook requires a featured model and cannot carry an issue month", i))
+		} else if strings.TrimSpace(r.Work.FeaturedNames) == "" || r.Work.IssueMonth != "" || r.Work.IssueNumber != "" || r.Work.IssueDate != nil {
+			fail(fmt.Errorf("record %d photobook requires a featured model and cannot carry magazine issue identity", i))
+		}
+		if err := validateSourcedDate(r.Work.IssueDate, r.Work.IssueDatePrecision, r.Work.IssueDateSourceURL, "issue date"); err != nil {
+			fail(fmt.Errorf("record %d: %w", i, err))
+		}
+		if err := validateSourcedDate(r.Edition.PublicationDate, r.Edition.PublicationDatePrecision, r.Edition.PublicationDateSourceURL, "publication date"); err != nil {
+			fail(fmt.Errorf("record %d: %w", i, err))
+		}
+		if err := validateSourcedDate(r.Edition.StoreReleaseDate, r.Edition.StoreReleaseDatePrecision, r.Edition.StoreReleaseDateSourceURL, "store release date"); err != nil {
+			fail(fmt.Errorf("record %d: %w", i, err))
+		}
+		koreanWork := strings.EqualFold(r.Work.OriginCode, "KR")
+		if koreanWork && r.Edition.ReleaseDate != nil {
+			fail(fmt.Errorf("record %d Korean imports must use typed publicationDate or storeReleaseDate fields instead of ambiguous releaseDate", i))
 		}
 		if r.Work.ID == "" || r.Work.OriginalTitle == "" || strings.Contains(r.Work.OriginalTitle, "??") || !validCatalogOrigin(r.Work.OriginCode) || r.Edition.ID == "" || r.Edition.WorkID != r.Work.ID || r.Edition.MetadataSourceURL == "" {
 			fail(fmt.Errorf("record %d lacks verified catalog identity", i))
@@ -406,6 +525,10 @@ func main() {
 			if item.EditionID != r.Edition.ID || item.Format != r.Edition.Format {
 				fail(fmt.Errorf("record %d mismatched listing", i))
 			}
+			price, basis, currency, _, err := model.NormalizePriceComponents(item.Format, item.Status, item.Currency, item.PriceBasis, item.PriceMinor, item.PriceComponents)
+			if err != nil || koreanWork && price > 0 && (basis == "" || currency == "") {
+				fail(fmt.Errorf("record %d has an invalid or untyped price observation", i))
+			}
 		}
 	}
 	fmt.Printf("Validated %d import records\n", len(records))
@@ -423,6 +546,10 @@ func main() {
 		if err := tx.Exec("SET LOCAL idle_in_transaction_session_timeout = '120s'").Error; err != nil {
 			return err
 		}
+		sourceEvidenceByRecord, err := validateAndAuthorizeSourceEvidence(tx, records, time.Now().UTC())
+		if err != nil {
+			return err
+		}
 		featuredPeople := map[string]model.Person{}
 		coverPeople := map[string]model.Person{}
 		knownSources := map[string]bool{}
@@ -430,7 +557,7 @@ func main() {
 			return err
 		}
 		for recordIndex, r := range records {
-			normalizeReleaseDate(&r.Edition)
+			normalizeCatalogDates(&r.Work, &r.Edition)
 			if r.Origin != nil {
 				if err := tx.Clauses(clause.OnConflict{DoNothing: true}).Create(r.Origin).Error; err != nil {
 					return err
@@ -455,11 +582,11 @@ func main() {
 				if found.Error != nil && found.Error != gorm.ErrRecordNotFound {
 					return found.Error
 				}
-				workUpdates := []string{"original_title", "featured_names", "summary", "photographer", "publication_type", "issue_month", "issue_number", "updated_at"}
+				workUpdates := []string{"original_title", "featured_names", "summary", "photographer", "publication_type", "issue_month", "issue_number", "issue_date", "issue_date_precision", "issue_date_source_url", "updated_at"}
 				if r.Work.CoverURL != "" {
 					workUpdates = append(workUpdates, "cover_url")
 				}
-				editionUpdates := []string{"language", "publisher", "isbn", "edition_variant", "content_summary", "metadata_source_url", "series_name", "page_count", "dimensions", "release_date", "release_precision", "edition_label", "updated_at"}
+				editionUpdates := []string{"language", "publisher", "isbn", "edition_variant", "content_summary", "metadata_source_url", "series_name", "page_count", "dimensions", "release_date", "release_precision", "publication_date", "publication_date_precision", "publication_date_source_url", "store_release_date", "store_release_date_precision", "store_release_date_source_url", "edition_label", "updated_at"}
 				if r.Edition.CoverURL != "" || existingEdition.CoverURL == "" {
 					editionUpdates = append(editionUpdates, "original_cover_url")
 				}
@@ -546,8 +673,22 @@ func main() {
 					}
 				}
 				for _, image := range r.PublisherMedia {
-					asset := model.CatalogMedia{EntityType: "edition", EntityID: r.Edition.ID, MediaType: image.MediaType, OriginalURL: image.OriginalURL, StorageURL: image.StorageURL, SourceURL: image.SourceURL, IsPrimary: image.IsPrimary}
-					if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "entity_type"}, {Name: "entity_id"}, {Name: "media_type"}}, DoUpdates: clause.AssignmentColumns([]string{"original_url", "storage_url", "source_url", "is_primary", "updated_at"})}).Create(&asset).Error; err != nil {
+					asset := catalogMediaFromInput("edition", r.Edition.ID, image)
+					if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "entity_type"}, {Name: "entity_id"}, {Name: "media_type"}}, DoUpdates: clause.AssignmentColumns([]string{"original_url", "storage_url", "source_url", "permission_scope", "permission_evidence_url", "permission_basis", "permission_reviewed_at", "is_primary", "updated_at"})}).Create(&asset).Error; err != nil {
+						return err
+					}
+				}
+				for _, image := range r.WorkMedia {
+					asset := catalogMediaFromInput("work", r.Work.ID, image)
+					if err := tx.Clauses(clause.OnConflict{Columns: []clause.Column{{Name: "entity_type"}, {Name: "entity_id"}, {Name: "media_type"}}, DoUpdates: clause.AssignmentColumns([]string{"original_url", "storage_url", "source_url", "permission_scope", "permission_evidence_url", "permission_basis", "permission_reviewed_at", "is_primary", "updated_at"})}).Create(&asset).Error; err != nil {
+						return err
+					}
+				}
+				if evidence := sourceEvidenceByRecord[recordIndex]; len(evidence) > 0 {
+					if err := tx.Clauses(clause.OnConflict{
+						Columns:   []clause.Column{{Name: "entity_type"}, {Name: "entity_id"}, {Name: "field_key"}, {Name: "source_id"}, {Name: "captured_at"}},
+						DoUpdates: clause.AssignmentColumns([]string{"grant_field", "scope", "source_url", "updated_at"}),
+					}).Create(&evidence).Error; err != nil {
 						return err
 					}
 				}
@@ -632,22 +773,14 @@ func main() {
 					}
 					listingImages[image.ExternalID] = listing
 				}
-				asset := model.CatalogMedia{
-					EntityType:  "listing",
-					EntityID:    listing.ID,
-					MediaType:   image.MediaType,
-					OriginalURL: image.OriginalURL,
-					StorageURL:  image.StorageURL,
-					SourceURL:   image.SourceURL,
-					IsPrimary:   image.IsPrimary,
-				}
+				asset := catalogMediaFromInput("listing", listing.ID, image)
 				assets = append(assets, asset)
 				listingMediaCount++
 			}
 			if len(assets) > 0 {
 				if err := tx.Clauses(clause.OnConflict{
 					Columns:   []clause.Column{{Name: "entity_type"}, {Name: "entity_id"}, {Name: "media_type"}},
-					DoUpdates: clause.AssignmentColumns([]string{"original_url", "storage_url", "source_url", "is_primary", "updated_at"}),
+					DoUpdates: clause.AssignmentColumns([]string{"original_url", "storage_url", "source_url", "permission_scope", "permission_evidence_url", "permission_basis", "permission_reviewed_at", "is_primary", "updated_at"}),
 				}).Create(&assets).Error; err != nil {
 					return err
 				}

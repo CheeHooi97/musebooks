@@ -3,41 +3,59 @@ package model
 import "time"
 
 type DirectoryEntry struct {
-	OfficialURL  string `json:"officialUrl,omitempty"`
-	OriginalName string `json:"originalName,omitempty"`
-	EnglishName  string `json:"englishName,omitempty"`
-	ID           string `json:"id"`
-	Name         string `json:"name"`
-	WorkCount    int    `json:"workCount"`
-	EditionCount int    `json:"editionCount"`
-	CoverURL     string `json:"coverUrl,omitempty"`
+	OfficialURL          string `json:"officialUrl,omitempty"`
+	OriginalName         string `json:"originalName,omitempty"`
+	EnglishName          string `json:"englishName,omitempty"`
+	ID                   string `json:"id"`
+	Name                 string `json:"name"`
+	WorkCount            int    `json:"workCount"`
+	EditionCount         int    `json:"editionCount"`
+	CoverURL             string `json:"coverUrl,omitempty"`
+	CoverPermissionScope string `gorm:"column:cover_permission_scope" json:"-"`
 	// Other recorded names for a model, comma-separated (see person_aliases).
 	Aliases string `json:"aliases,omitempty"`
 }
 type MarketEntry struct {
-	ListingResponse   `gorm:"embedded"`
-	WorkID            string   `json:"workId"`
-	WorkSlug          string   `json:"workSlug"`
-	WorkTitle         string   `json:"workTitle"`
-	FeaturedNames     []string `gorm:"-" json:"featuredNames"`
-	FeaturedNamesText string   `json:"-"`
-	EditionID         string   `json:"editionId"`
-	EditionLabel      string   `json:"editionLabel"`
-	Publisher         string   `json:"publisher,omitempty"`
-	CoverURL          string   `json:"coverUrl,omitempty"`
+	ListingResponse           `gorm:"embedded"`
+	WorkID                    string     `json:"workId"`
+	WorkSlug                  string     `json:"workSlug"`
+	WorkTitle                 string     `json:"workTitle"`
+	FeaturedNames             []string   `gorm:"-" json:"featuredNames"`
+	FeaturedNamesText         string     `json:"-"`
+	EditionID                 string     `json:"editionId"`
+	EditionLabel              string     `json:"editionLabel"`
+	Publisher                 string     `json:"publisher,omitempty"`
+	PublicationDate           *time.Time `json:"publicationDate,omitempty"`
+	PublicationDatePrecision  string     `json:"publicationDatePrecision,omitempty"`
+	StoreReleaseDate          *time.Time `json:"storeReleaseDate,omitempty"`
+	StoreReleaseDatePrecision string     `json:"storeReleaseDatePrecision,omitempty"`
+	IssueDate                 *time.Time `json:"issueDate,omitempty"`
+	IssueDatePrecision        string     `json:"issueDatePrecision,omitempty"`
+	CoverURL                  string     `json:"coverUrl,omitempty"`
+	CoverPermissionScope      string     `gorm:"column:cover_permission_scope" json:"-"`
 }
 type MarketplaceListingEntry struct {
-	ListingResponse  `gorm:"embedded"`
-	FeaturedNames    string     `json:"featuredNames,omitempty"`
-	MatchedModelNames    string `json:"matchedModelNames,omitempty"`
-	ReleaseDate      *time.Time `json:"releaseDate,omitempty"`
-	ReleasePrecision string     `json:"releasePrecision,omitempty"`
-	ImageURL         string     `json:"imageUrl,omitempty"`
-	CatalogMatched   bool       `json:"catalogMatched"`
-	WorkTitle        string     `json:"workTitle,omitempty"`
-	WorkSlug         string     `json:"workSlug,omitempty"`
-	EditionLabel     string     `json:"editionLabel,omitempty"`
-	Publisher        string     `json:"publisher,omitempty"`
+	ListingResponse           `gorm:"embedded"`
+	FeaturedNames             string     `json:"featuredNames,omitempty"`
+	MatchedModelNames         string     `json:"matchedModelNames,omitempty"`
+	ReleaseDate               *time.Time `json:"releaseDate,omitempty"`
+	ReleasePrecision          string     `json:"releasePrecision,omitempty"`
+	PublicationDate           *time.Time `json:"publicationDate,omitempty"`
+	PublicationDatePrecision  string     `json:"publicationDatePrecision,omitempty"`
+	PublicationDateSourceURL  string     `json:"publicationDateSourceUrl,omitempty"`
+	StoreReleaseDate          *time.Time `json:"storeReleaseDate,omitempty"`
+	StoreReleaseDatePrecision string     `json:"storeReleaseDatePrecision,omitempty"`
+	StoreReleaseDateSourceURL string     `json:"storeReleaseDateSourceUrl,omitempty"`
+	IssueDate                 *time.Time `json:"issueDate,omitempty"`
+	IssueDatePrecision        string     `json:"issueDatePrecision,omitempty"`
+	IssueDateSourceURL        string     `json:"issueDateSourceUrl,omitempty"`
+	ImageURL                  string     `json:"imageUrl,omitempty"`
+	ImagePermissionScope      string     `gorm:"column:image_permission_scope" json:"-"`
+	CatalogMatched            bool       `json:"catalogMatched"`
+	WorkTitle                 string     `json:"workTitle,omitempty"`
+	WorkSlug                  string     `json:"workSlug,omitempty"`
+	EditionLabel              string     `json:"editionLabel,omitempty"`
+	Publisher                 string     `json:"publisher,omitempty"`
 }
 type CatalogBrowseQuery struct {
 	Query, Kind, ID, Status, Format, PublicationType, Source, Person, Publisher, Language, Year, Region string

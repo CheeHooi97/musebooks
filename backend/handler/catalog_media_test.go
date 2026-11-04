@@ -21,7 +21,7 @@ func redirectMedia(t *testing.T, h *MediaRedirectHandler, source string) *httpte
 	return recorder
 }
 
-func TestMediaRedirectSignsR2Sources(t *testing.T) {
+func TestMediaRedirectRequiresCatalogPermission(t *testing.T) {
 	signer, err := storage.NewMediaSigner(storage.MediaConfig{
 		LegacyBaseURLs: []string{"https://img.example.test"},
 		MediaBaseURL:   "https://media.example.test",
@@ -32,12 +32,8 @@ func TestMediaRedirectSignsR2Sources(t *testing.T) {
 	}
 	h := &MediaRedirectHandler{Signer: signer}
 
-	response := redirectMedia(t, h, "https://img.example.test/musebooks/covers/a.jpg")
-	if response.Code != http.StatusTemporaryRedirect || !strings.HasPrefix(response.Header().Get("Location"), "https://media.example.test/musebooks/covers/a.jpg?exp=") {
-		t.Fatalf("got %d %q", response.Code, response.Header().Get("Location"))
-	}
-	if got := response.Header().Get("Cache-Control"); got != "public, max-age=28800" {
-		t.Fatalf("Cache-Control = %q", got)
+	if response := redirectMedia(t, h, "https://img.example.test/musebooks/covers/a.jpg"); response.Code != http.StatusNotFound {
+		t.Fatalf("source with no catalog permission record got %d", response.Code)
 	}
 
 	if response := redirectMedia(t, h, "https://evil.example/a.jpg"); response.Code != http.StatusNotFound {

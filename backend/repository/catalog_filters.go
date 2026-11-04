@@ -25,7 +25,7 @@ func applyWorkFilters(query *gorm.DB, params model.ListBooksQuery) *gorm.DB {
 			query = query.Where("filter_editions.language = ?", params.Language)
 		}
 		if params.Year != "" {
-			query = query.Where("EXTRACT(YEAR FROM filter_editions.release_date) = ?", params.Year)
+			query = query.Where("EXTRACT(YEAR FROM COALESCE(CASE WHEN filter_editions.format='digital' THEN filter_editions.store_release_date ELSE filter_editions.publication_date END, filter_editions.publication_date, filter_editions.store_release_date, filter_editions.release_date, works.issue_date, CASE WHEN works.issue_month ~ '^[0-9]{4}-(0[1-9]|1[0-2])$' THEN to_date(works.issue_month || '-01', 'YYYY-MM-DD') END)) = ?", params.Year)
 		}
 		if params.Availability != "" {
 			query = query.Joins("JOIN listings AS availability_listings ON availability_listings.edition_id = filter_editions.id").

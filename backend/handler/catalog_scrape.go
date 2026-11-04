@@ -31,6 +31,27 @@ var supportedScrapeOperations = map[string]struct{}{
 	"sold_discovery":    {},
 }
 
+var catalogPermissionUses = []string{
+	model.SourcePermissionUseCollect,
+	model.SourcePermissionUseRetain,
+	model.SourcePermissionUseCatalogView,
+}
+
+func getApprovedSourcePermission(catalog *service.CatalogService, source model.Source, scope string, fields []string, now time.Time) (model.SourcePermission, bool, error) {
+	if !model.RequiresSourcePermission(source) {
+		return model.SourcePermission{}, true, nil
+	}
+	var permission model.SourcePermission
+	result := catalog.GetSourcePermission(&permission, source.ID, scope)
+	if errors.Is(result.Error, service.ErrRecordNotFound) {
+		return model.SourcePermission{}, false, nil
+	}
+	if result.Error != nil {
+		return model.SourcePermission{}, false, result.Error
+	}
+	return permission, permission.Allows(source, scope, fields, catalogPermissionUses, now), nil
+}
+
 func (h *CatalogHandler) CreateScrapeJob(c echo.Context) error {
 	if err := h.checkScraperToken(c); err != nil {
 		return err
@@ -55,6 +76,15 @@ func (h *CatalogHandler) CreateScrapeJob(c echo.Context) error {
 	}
 	if result.Error != nil {
 		return echo.NewHTTPError(http.StatusInternalServerError, "failed to load source")
+	}
+	permissionScope, permissionFields := model.SourcePermissionForOperation(request.Operation)
+	if permissionScope == "" {
+		return echo.NewHTTPError(http.StatusBadRequest, "unsupported source permission scope")
+	}
+	if _, allowed, err := getApprovedSourcePermission(h.service, source, permissionScope, permissionFields, time.Now().UTC()); err != nil {
+		return echo.NewHTTPError(http.StatusInternalServerError, "failed to check source permission")
+	} else if !allowed {
+		return echo.NewHTTPError(http.StatusConflict, "source has no active reviewed grant for this collection scope")
 	}
 	if err := model.ValidateDigitalRetailRequest(source, request.Operation, request.Request); err != nil {
 		return echo.NewHTTPError(http.StatusBadRequest, err.Error())
@@ -174,6 +204,22 @@ func (h *CatalogHandler) ClaimScrapeJob(c echo.Context) error {
 		}
 		var jobRequest map[string]any
 		json.Unmarshal([]byte(job.RequestJSON), &jobRequest)
+		permissionScope, permissionFields := model.SourcePermissionForOperation(job.Operation)
+		permission, permissionAllowed, permissionErr := getApprovedSourcePermission(tx, source, permissionScope, permissionFields, now)
+		if permissionErr != nil {
+			return permissionErr
+		}
+		if !permissionAllowed {
+			finished := now
+			if err := tx.UpdateJob(&job, map[string]any{
+				"status":       jobBlocked,
+				"completed_at": finished,
+				"last_error":   "source grant is missing, expired, revoked, or does not cover this operation",
+			}).Error; err != nil {
+				return err
+			}
+			return nil
+		}
 		if model.ValidateDigitalRetailRequest(source, job.Operation, jobRequest) != nil || model.IsRetailScrapeSource(source) || !source.Enabled || strings.ToLower(strings.TrimSpace(source.AccessMethod)) != "browser" {
 			finished := now
 			if err := tx.UpdateJob(&job, map[string]any{
@@ -184,6 +230,9 @@ func (h *CatalogHandler) ClaimScrapeJob(c echo.Context) error {
 				return err
 			}
 			return nil
+		}
+		if model.RequiresSourcePermission(source) && permission.RatePerMinute < source.RatePerMinute {
+			source.RatePerMinute = permission.RatePerMinute
 		}
 		leaseUntil := now.Add(time.Duration(leaseSeconds) * time.Second)
 		leaseToken := model.ScrapeLeaseToken(job.ID, request.WorkerID, now)

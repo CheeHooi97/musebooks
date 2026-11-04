@@ -77,6 +77,11 @@ func (h *Handler) GoogleStart(c echo.Context) error {
 	}
 	c.SetCookie(&http.Cookie{Name: googleStateCookie, Value: state + "." + verifier + "." + mobileChallenge, Path: "/v1/auth/oauth/google", HttpOnly: true, Secure: strings.HasPrefix(h.OAuth.redirectURL, "https://"), SameSite: http.SameSiteLaxMode, Expires: time.Now().Add(10 * time.Minute), MaxAge: 600})
 	values := url.Values{"client_id": {h.OAuth.clientID}, "redirect_uri": {h.OAuth.redirectURL}, "response_type": {"code"}, "scope": {"openid email profile"}, "state": {state}, "code_challenge": {oauthChallenge(verifier)}, "code_challenge_method": {"S256"}}
+	if mobileChallenge != "" {
+		// Any app can open the mobile start URL with its own PKCE challenge and
+		// claim the custom-scheme return, so Google must never approve silently.
+		values.Set("prompt", "select_account")
+	}
 	return c.Redirect(302, "https://accounts.google.com/o/oauth2/v2/auth?"+values.Encode())
 }
 

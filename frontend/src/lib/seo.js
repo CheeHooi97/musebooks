@@ -12,9 +12,15 @@ export function hasSearchFilters(search = "") {
   return [...new URLSearchParams(search)].some(([key, value]) => value && ["q", "origin", "format", "publicationType", "language", "year", "source", "model", "publisher", "availability"].includes(key));
 }
 export function publicationDate(edition) {
-  const date = edition.releaseDate?.slice(0, 10);
+  return formatCatalogDate(edition?.publicationDate || (edition?.format !== "digital" ? edition?.releaseDate : ""), edition?.publicationDate ? edition.publicationDatePrecision : edition?.releasePrecision);
+}
+export function storeReleaseDate(edition) {
+  return formatCatalogDate(edition?.storeReleaseDate || (edition?.format === "digital" ? edition?.releaseDate : ""), edition?.storeReleaseDate ? edition.storeReleaseDatePrecision : edition?.releasePrecision);
+}
+export function formatCatalogDate(value, precision) {
+  const date = value?.slice(0, 10);
   if (!date) return "";
-  return edition.releasePrecision === "year" ? date.slice(0, 4) : edition.releasePrecision === "month" ? date.slice(0, 7) : date;
+  return precision === "year" ? date.slice(0, 4) : precision === "month" ? date.slice(0, 7) : date;
 }
 export const DEFAULT_DESCRIPTION = "Discover model, idol, influencer, and celebrity photobooks and magazine issues. Explore publication dates, cover credits, editions, publishers, and source-backed prices.";
 // Separate works can share a title; the credited person tells them apart in results.

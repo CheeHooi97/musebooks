@@ -43,3 +43,30 @@ func TestPhotobookPriceBoundary(t *testing.T) {
 		t.Fatalf("mixed digital response: %+v", digital)
 	}
 }
+
+func TestPriceComponentsPreserveConcurrentRetailQuotes(t *testing.T) {
+	components := []PriceComponent{
+		{Basis: "list", PriceMinor: 12000, Currency: "KRW"},
+		{Basis: "sale", PriceMinor: 9600, Currency: "KRW"},
+		{Basis: "coupon", PriceMinor: 9000, Currency: "KRW", Condition: "Member coupon"},
+	}
+	price, basis, currency, normalized, err := NormalizePriceComponents("physical", "active", "", "", 0, components)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if price != 9600 || basis != "sale" || currency != "KRW" || len(normalized) != 3 {
+		t.Fatalf("unexpected primary and components: %d %s %s %+v", price, basis, currency, normalized)
+	}
+	if _, _, _, _, err := NormalizePriceComponents("physical", "completed", "KRW", "completed_sale", 8000, []PriceComponent{
+		{Basis: "completed_sale", PriceMinor: 8000, Currency: "KRW"},
+		{Basis: "list", PriceMinor: 12000, Currency: "KRW"},
+	}); err == nil {
+		t.Fatal("mixed a completed sale with a current list price")
+	}
+	if _, _, _, _, err := NormalizePriceComponents("digital", "active", "KRW", "used_asking", 5000, nil); err == nil {
+		t.Fatal("accepted a used asking price for a digital edition")
+	}
+	if _, _, _, _, err := NormalizePriceComponents("physical", "active", "KRW", "coupon", 9000, nil); err == nil {
+		t.Fatal("accepted a coupon amount without its eligibility condition")
+	}
+}

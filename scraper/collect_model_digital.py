@@ -7,6 +7,7 @@ from pathlib import Path
 from urllib.parse import parse_qs, urljoin, urlparse, quote
 
 from cloakbrowser import launch
+from japan_model_search_names import model_name_matches_identity_field, physical_model_search_names
 from photobook_worker import ensure_rendered_page, iso_utc, japan_publication_date, photobook_title_exclusion, structured_product
 from digital_photobook_titles import digital_title_exclusion, reopen_title_reviews
 from capture_checkpoint import save_json as save
@@ -27,8 +28,10 @@ def main():
         parser.error('Output must stay inside workspace')
     output.mkdir(parents=True, exist_ok=True)
     selected_model = json.loads((root / args.model_file).read_text(encoding='utf-8'))['models'][0]
+    names = physical_model_search_names(selected_model)
+    if not names:
+        parser.error('Model has no specific verified name available for searches')
     native_name = selected_model.get('original_name') or selected_model['canonical_public_name']
-    names = list(dict.fromkeys(name for name in [native_name, selected_model['canonical_public_name'], selected_model.get('english_name'), *selected_model.get('aliases', [])] if name))
     start = 'https://' + HOST + '/search?keyword=' + quote(native_name)
     path = output / 'digital-state.json'
     state = json.loads(path.read_text(encoding='utf-8')) if path.exists() else dict(items={}, candidates={}, pages=[], rejected={}, errors={}, nextUrl=start, status='running')
@@ -107,7 +110,7 @@ def main():
                     save(cache_path, cached)
                 selected = body.split('続きを読む', 1)[0]
                 model = re.search(r'モデル\s*[:：]\s*([^\n]+)', selected)
-                if not model or not any(re.sub(r'\s+', '', name) in re.sub(r'\s+', '', model.group(1)) for name in names):
+                if not model or not model_name_matches_identity_field(names, model.group(1)):
                     state['rejected'][url] = 'selected_model_mismatch'
                     continue
                 structured = cached['structured'] if cached else structured_product(detail)

@@ -33,6 +33,9 @@ func (s *CatalogService) ListSources(sources *[]model.Source) CatalogResult {
 func (s *CatalogService) GetSource(source *model.Source, id string) CatalogResult {
 	return s.repo.GetSource(source, id)
 }
+func (s *CatalogService) GetSourcePermission(permission *model.SourcePermission, sourceID, scope string) CatalogResult {
+	return s.repo.GetSourcePermission(permission, sourceID, scope)
+}
 func (s *CatalogService) GetJob(job *model.ScrapeJob, id string) CatalogResult {
 	return s.repo.GetJob(job, id)
 }

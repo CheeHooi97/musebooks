@@ -1,6 +1,6 @@
 import unittest
 
-from japan_model_search_names import physical_model_search_names
+from japan_model_search_names import model_name_matches_identity_field, physical_model_search_names
 from photobook_worker import marketplace_subject_matches, normalized_match_text
 
 
@@ -46,6 +46,12 @@ class JapanModelSearchNameTests(unittest.TestCase):
         self.assertFalse(marketplace_subject_matches(
             {'humanModelKeywords': ['😀']}, '任意の写真集'
         ))
+
+    def test_source_identity_field_requires_a_full_name_not_a_name_fragment(self):
+        self.assertTrue(model_name_matches_identity_field(['鈴木ふみ奈'], '鈴木ふみ奈、神木麗'))
+        self.assertTrue(model_name_matches_identity_field(['Nanami Ogura'], 'Fumina Suzuki / Nanami Ogura'))
+        self.assertFalse(model_name_matches_identity_field(['葵'], '葵りんご'))
+        self.assertFalse(model_name_matches_identity_field(['浅野こころ'], '篠崎こころ'))
 
 
 if __name__ == '__main__':

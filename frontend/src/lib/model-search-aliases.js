@@ -64,10 +64,6 @@ export default [
     "Fuka Hanasaki"
   ],
   [
-    "真田まこと",
-    "Makoto Sanada"
-  ],
-  [
     "入間ゆい",
     "Yui Iruma"
   ],
@@ -90,10 +86,6 @@ export default [
   [
     "夏佳しお",
     "Shio Natsuka"
-  ],
-  [
-    "石川澪",
-    "Mio Ishikawa"
   ],
   [
     "山岸あや花",
@@ -149,7 +141,8 @@ export default [
   ],
   [
     "白石茉莉奈",
-    "Marina Shiraishi"
+    "Marina Shiraishi",
+    "白石茉利奈"
   ],
   [
     "大槻ひびき",
@@ -171,10 +164,6 @@ export default [
   [
     "星乃莉子",
     "Riko Hoshino"
-  ],
-  [
-    "田野憂",
-    "Yuu Tano"
   ],
   [
     "明里つむぎ",
@@ -215,10 +204,6 @@ export default [
     "Fua Kaede"
   ],
   [
-    "美乃すずめ",
-    "Suzume Mino"
-  ],
-  [
     "相沢みなみ",
     "Minami Aizawa"
   ],
@@ -239,10 +224,6 @@ export default [
     "Ai Uehara"
   ],
   [
-    "白上咲花",
-    "Emika Shirakami"
-  ],
-  [
     "逢沢みゆ",
     "Miyu Aizawa",
     "坂本マリア",
@@ -259,10 +240,6 @@ export default [
     "Ruka Inaba",
     "Inaba Ruka",
     "inaba-ruka"
-  ],
-  [
-    "小野六花",
-    "Rikka Ono"
   ],
   [
     "浜崎真緒",
@@ -350,7 +327,8 @@ export default [
   ],
   [
     "楪カレン",
-    "Karen Yuzuriha"
+    "Karen Yuzuriha",
+    "karen-kaede"
   ],
   [
     "河北彩花",
@@ -428,10 +406,6 @@ export default [
     "Yu Shinoda"
   ],
   [
-    "唯井まひろ",
-    "Mahiro Tadai"
-  ],
-  [
     "成宮りか",
     "Rika Narumiya"
   ],
@@ -453,10 +427,6 @@ export default [
   [
     "梓ヒカリ",
     "Hikari Azusa"
-  ],
-  [
-    "小倉由菜",
-    "Yuna Ogura"
   ],
   [
     "深田えいみ",
@@ -590,10 +560,6 @@ export default [
     "Airi Suzumura"
   ],
   [
-    "白石茉利奈",
-    "Marina Shiraishi"
-  ],
-  [
     "MINAMO"
   ],
   [
@@ -667,10 +633,6 @@ export default [
     "有栖花あか",
     "汐世",
     "aka-arisuka"
-  ],
-  [
-    "八木 奈々",
-    "Nana Yagi"
   ],
   [
     "ひなたまりん",
@@ -1128,6 +1090,63 @@ export default [
     "Futaba"
   ],
   [
+    "RM"
+  ],
+  [
+    "Jin"
+  ],
+  [
+    "SUGA"
+  ],
+  [
+    "j-hope"
+  ],
+  [
+    "Jimin"
+  ],
+  [
+    "V"
+  ],
+  [
+    "Jung Kook"
+  ],
+  [
+    "SUNGHO"
+  ],
+  [
+    "RIWOO"
+  ],
+  [
+    "JAEHYUN"
+  ],
+  [
+    "TAESAN"
+  ],
+  [
+    "LEEHAN"
+  ],
+  [
+    "WOONHAK"
+  ],
+  [
+    "SHINYU"
+  ],
+  [
+    "DOHOON"
+  ],
+  [
+    "YOUNGJAE"
+  ],
+  [
+    "HANJIN"
+  ],
+  [
+    "JIHOON"
+  ],
+  [
+    "KYUNGMIN"
+  ],
+  [
     "後藤まつり",
     "Matsuri Goto"
   ],
@@ -1203,10 +1222,6 @@ export default [
     "篠原伊代"
   ],
   [
-    "楪カレン",
-    "Karen Yuzuriha"
-  ],
-  [
     "神宮寺ナオ"
   ],
   [
@@ -1248,7 +1263,9 @@ export default [
   ],
   [
     "八木奈々",
-    "Nana Yagi"
+    "Nana Yagi",
+    "八木-奈々",
+    "八木 奈々"
   ],
   [
     "あいだゆあ",
@@ -1523,6 +1540,10 @@ export default [
     "Sana Mashiro"
   ],
   [
+    "真田まこと",
+    "Makoto Sanada"
+  ],
+  [
     "美乃すずめ",
     "Suzume Mino"
   ],
@@ -1537,5 +1558,35 @@ export default [
   ],
   [
     "長瀬麻美"
+  ],
+  [
+    "Alice Nanase",
+    "七瀬アリス"
+  ],
+  [
+    "Fuka Hanasaki",
+    "花咲楓香"
+  ],
+  [
+    "橋本ひかり"
+  ],
+  [
+    "早川夢菜"
+  ],
+  [
+    "Ayu Hazaki",
+    "波崎天結"
+  ],
+  [
+    "吉瀬結"
+  ],
+  [
+    "ももせもも"
+  ],
+  [
+    "奈月セナ"
+  ],
+  [
+    "緒方咲"
   ]
 ];

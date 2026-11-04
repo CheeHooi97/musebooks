@@ -32,6 +32,8 @@ export function primaryListing(edition, status = "") {
 export function priceLabel(edition, listing) {
     if (!listing)
         return edition.format === "digital" ? "No retail price recorded" : "No marketplace price recorded";
+    if (listing.priceBasis)
+        return priceBasisLabel(listing.priceBasis);
     if (edition.format === "digital")
         return listing.status === "ended" ? "Last retail price" : "Digital retail price";
     if (listing.priceCategory === "physical_retail")
@@ -39,6 +41,9 @@ export function priceLabel(edition, listing) {
     if (listing.status === "completed")
         return "Sold price";
     return listing.status === "active" ? "Active asking price" : "Last asking price";
+}
+export function priceBasisLabel(basis) {
+    return ({ list: "List price", sale: "Sale price", coupon: "Conditional coupon price", used_asking: "Used asking price", completed_sale: "Completed sale price" })[basis] || "Recorded price";
 }
 export function formatPrice(priceMinor, currency) {
     if (priceMinor === undefined || !currency)

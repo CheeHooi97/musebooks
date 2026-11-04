@@ -131,9 +131,11 @@ func (h *CatalogHandler) IngestBatch(c echo.Context) error {
 		return echo.NewHTTPError(http.StatusConflict, "source access is disabled or blocked")
 	}
 	var job model.ScrapeJob
+	jobOperation := ""
 	if batch.JobID != "" {
 		result := h.service.GetJob(&job, batch.JobID)
 		if result.Error == nil {
+			jobOperation = job.Operation
 			if job.SourceID != batch.SourceID {
 				return echo.NewHTTPError(http.StatusBadRequest, "job source does not match sourceId")
 			}
@@ -144,6 +146,37 @@ func (h *CatalogHandler) IngestBatch(c echo.Context) error {
 			return echo.NewHTTPError(http.StatusInternalServerError, "failed to validate scrape job")
 		} else if batch.WorkerID != "" {
 			return echo.NewHTTPError(http.StatusConflict, "scrape job was not found")
+		}
+	}
+	if model.RequiresSourcePermission(source) {
+		operationScope, operationFields := model.SourcePermissionForOperation(jobOperation)
+		for _, item := range batch.Items {
+			scopes := []string{}
+			observationScope := model.ObservationPermissionScope(item)
+			if observationScope == model.SourcePermissionScopeUsedPrices {
+				scopes = append(scopes, observationScope)
+			} else if operationScope != "" {
+				scopes = append(scopes, operationScope)
+			}
+			if !containsPermissionScope(scopes, observationScope) {
+				scopes = append(scopes, observationScope)
+			}
+			fields := append([]string{}, operationFields...)
+			fields = append(fields, model.ObservationPermissionFields(item)...)
+			for _, scope := range scopes {
+				if _, allowed, err := getApprovedSourcePermission(h.service, source, scope, fields, time.Now().UTC()); err != nil {
+					return echo.NewHTTPError(http.StatusInternalServerError, "failed to check source permission")
+				} else if !allowed {
+					return echo.NewHTTPError(http.StatusConflict, "source has no active reviewed grant for this observation scope")
+				}
+			}
+			if strings.TrimSpace(item.ImageURL) != "" {
+				if _, allowed, err := getApprovedSourcePermission(h.service, source, model.SourcePermissionScopeProductImages, []string{"image_url"}, time.Now().UTC()); err != nil {
+					return echo.NewHTTPError(http.StatusInternalServerError, "failed to check source permission")
+				} else if !allowed {
+					return echo.NewHTTPError(http.StatusConflict, "source has no active reviewed grant for product images")
+				}
+			}
 		}
 	}
 	observedAt := batch.RetrievedAt
@@ -171,6 +204,12 @@ func (h *CatalogHandler) IngestBatch(c echo.Context) error {
 				rejected++
 				continue
 			}
+			priceMinor, priceBasis, currency, priceComponents, priceErr := model.NormalizePriceComponents(format, strings.ToLower(strings.TrimSpace(item.Status)), item.Currency, item.PriceBasis, item.PriceMinor, item.PriceComponents)
+			if priceErr != nil {
+				rejected++
+				continue
+			}
+			requiresPriceBasis := model.RequiresSourcePermission(source)
 			seenAt := item.ObservedAt
 			if seenAt.IsZero() {
 				seenAt = observedAt
@@ -208,7 +247,13 @@ func (h *CatalogHandler) IngestBatch(c echo.Context) error {
 						continue
 					}
 					listing.EditionID = ""
+				} else if strings.EqualFold(edition.WorkOriginCode, "KR") {
+					requiresPriceBasis = true
 				}
+			}
+			if requiresPriceBasis && priceMinor > 0 && (priceBasis == "" || currency == "") {
+				rejected++
+				continue
 			}
 			if errors.Is(result.Error, service.ErrRecordNotFound) {
 				created++
@@ -225,9 +270,11 @@ func (h *CatalogHandler) IngestBatch(c echo.Context) error {
 			listing.FormatCandidate = format
 			listing.DigitalAccess = digitalAccess
 			listing.Status = status
-			listing.PriceMinor = item.PriceMinor
-			listing.Currency = item.Currency
+			listing.PriceMinor = priceMinor
+			listing.Currency = currency
 			listing.PriceType = priceType
+			listing.PriceBasis = priceBasis
+			listing.PriceComponents = priceComponents
 			listing.ShippingText = item.ShippingText
 			listing.ImageURL = model.PublicCoverURL(item.ImageURL)
 			listing.ObservedAt = seenAt
@@ -247,9 +294,11 @@ func (h *CatalogHandler) IngestBatch(c echo.Context) error {
 				Status:             status,
 				Format:             format,
 				DigitalAccess:      digitalAccess,
-				PriceMinor:         item.PriceMinor,
-				Currency:           item.Currency,
+				PriceMinor:         priceMinor,
+				Currency:           currency,
 				PriceType:          priceType,
+				PriceBasis:         priceBasis,
+				PriceComponents:    priceComponents,
 				ShippingText:       item.ShippingText,
 				StatusEvidence:     item.StatusEvidence,
 				SourceTimestamp:    item.SourceTimestamp,
@@ -286,6 +335,15 @@ func (h *CatalogHandler) IngestBatch(c echo.Context) error {
 		"observationsCreated": observationCreated, "observationsDuplicate": observationDuplicate,
 		"rejected": rejected, "nextCursor": batch.NextCursor, "hasMore": batch.HasMore, "receivedAt": observedAt,
 	})
+}
+
+func containsPermissionScope(scopes []string, scope string) bool {
+	for _, value := range scopes {
+		if value == scope {
+			return true
+		}
+	}
+	return false
 }
 
 func listingID(sourceID, externalID string) string {

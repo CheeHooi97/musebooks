@@ -18,28 +18,30 @@ type ObservationBatch struct {
 }
 
 type ObservationInput struct {
-	ObservationID      string     `json:"observationId,omitempty"`
-	ExternalID         string     `json:"externalId"`
-	EditionID          string     `json:"editionId,omitempty"`
-	URL                string     `json:"url"`
-	Title              string     `json:"title"`
-	SellerLocation     string     `json:"sellerLocation,omitempty"`
-	Condition          string     `json:"condition,omitempty"`
-	Status             string     `json:"status"`
-	PriceMinor         int64      `json:"priceMinor,omitempty"`
-	Currency           string     `json:"currency,omitempty"`
-	PriceType          string     `json:"priceType,omitempty"`
-	Format             string     `json:"format"`
-	DigitalAccess      string     `json:"digitalAccess,omitempty"`
-	ISBN               string     `json:"isbn,omitempty"`
-	Publisher          string     `json:"publisher,omitempty"`
-	EditionVariant     string     `json:"editionVariant,omitempty"`
-	ShippingText       string     `json:"shippingText,omitempty"`
-	ImageURL           string     `json:"imageUrl,omitempty"`
-	ObservedAt         time.Time  `json:"observedAt"`
-	StatusEvidence     string     `json:"statusEvidence,omitempty"`
-	SourceTimestamp    *time.Time `json:"sourceTimestamp,omitempty"`
-	TimestampPrecision string     `json:"timestampPrecision,omitempty"`
+	ObservationID      string           `json:"observationId,omitempty"`
+	ExternalID         string           `json:"externalId"`
+	EditionID          string           `json:"editionId,omitempty"`
+	URL                string           `json:"url"`
+	Title              string           `json:"title"`
+	SellerLocation     string           `json:"sellerLocation,omitempty"`
+	Condition          string           `json:"condition,omitempty"`
+	Status             string           `json:"status"`
+	PriceMinor         int64            `json:"priceMinor,omitempty"`
+	Currency           string           `json:"currency,omitempty"`
+	PriceType          string           `json:"priceType,omitempty"`
+	PriceBasis         string           `json:"priceBasis,omitempty"`
+	PriceComponents    []PriceComponent `json:"priceComponents,omitempty"`
+	Format             string           `json:"format"`
+	DigitalAccess      string           `json:"digitalAccess,omitempty"`
+	ISBN               string           `json:"isbn,omitempty"`
+	Publisher          string           `json:"publisher,omitempty"`
+	EditionVariant     string           `json:"editionVariant,omitempty"`
+	ShippingText       string           `json:"shippingText,omitempty"`
+	ImageURL           string           `json:"imageUrl,omitempty"`
+	ObservedAt         time.Time        `json:"observedAt"`
+	StatusEvidence     string           `json:"statusEvidence,omitempty"`
+	SourceTimestamp    *time.Time       `json:"sourceTimestamp,omitempty"`
+	TimestampPrecision string           `json:"timestampPrecision,omitempty"`
 }
 
 type CreateScrapeJobRequest struct {

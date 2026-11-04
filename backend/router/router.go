@@ -16,6 +16,9 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	e := echo.New()
 	e.Validator = utils.NewValidator()
 	e.IPExtractor = clientIP
+	if h.Media != nil {
+		h.Media.DB = db
+	}
 
 	v := e.Group("/v1", middleware.Authenticate(db))
 	// One budget for browser and native paths, so switching endpoints does not
@@ -88,4 +91,3 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 
 	return e
 }
-

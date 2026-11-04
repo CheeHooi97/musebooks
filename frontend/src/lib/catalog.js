@@ -116,7 +116,11 @@ export function bookPeople(book) {
   return people?.length ? people : (book.featuredNames || []).map(name => ({ name }));
 }
 export function releaseTimestamp(book) {
-  return Math.max(0, ...(book.editions || []).map(item => item.releaseDate ? Date.parse(item.releaseDate) || 0 : 0));
+  const issueDate = book.issueDate || (book.issueMonth ? `${book.issueMonth}-01` : "");
+  return Math.max(issueDate ? Date.parse(issueDate) || 0 : 0, ...(book.editions || []).map(item => {
+    const value = item.format === "digital" ? item.storeReleaseDate || item.publicationDate || item.releaseDate : item.publicationDate || item.storeReleaseDate || item.releaseDate;
+    return value ? Date.parse(value) || 0 : 0;
+  }));
 }
 export function sortBooks(books, sortBy) {
   const list = [...books];

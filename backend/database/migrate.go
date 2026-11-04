@@ -25,6 +25,7 @@ func Migrate(db *gorm.DB) error {
 			&model.Admin{},
 			&model.Origin{},
 			&model.Source{},
+			&model.SourcePermission{},
 			&model.Work{},
 			&model.Edition{},
 			&model.Listing{},

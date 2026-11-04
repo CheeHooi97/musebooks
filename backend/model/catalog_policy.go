@@ -318,6 +318,106 @@ func ValidateObservationPrice(format, status, priceType string) (string, error) 
 	return value, nil
 }
 
+func ValidatePriceBasis(format, status, basis string) (string, error) {
+	value := strings.ToLower(strings.TrimSpace(basis))
+	status = strings.ToLower(strings.TrimSpace(status))
+	if value == "" {
+		return "", nil // legacy observations do not have a typed basis
+	}
+	switch value {
+	case "list", "sale", "coupon":
+		if status == "completed" || status == "sold" {
+			return "", errors.New("retail price basis conflicts with completed-sale status")
+		}
+	case "used_asking":
+		if NormalizeFormat(format) != formatPhysical || status == "completed" || status == "sold" {
+			return "", errors.New("used asking price requires a physical offer that is not sold")
+		}
+	case "completed_sale":
+		if status != "completed" {
+			return "", errors.New("completed-sale price basis requires completed-sale status")
+		}
+	default:
+		return "", errors.New("unsupported price basis")
+	}
+	return value, nil
+}
+
+// NormalizePriceComponents validates simultaneous seller quotes and chooses a
+// generally available amount for legacy price fields, excluding coupon quotes.
+func NormalizePriceComponents(format, status, currency, basis string, priceMinor int64, components []PriceComponent) (int64, string, string, []PriceComponent, error) {
+	status = strings.ToLower(strings.TrimSpace(status))
+	if components == nil {
+		components = []PriceComponent{}
+	}
+	if priceMinor < 0 {
+		return 0, "", "", nil, errors.New("price cannot be negative")
+	}
+	validatedBasis, err := ValidatePriceBasis(format, status, basis)
+	if err != nil {
+		return 0, "", "", nil, err
+	}
+	basis = validatedBasis
+	if priceMinor == 0 && len(components) == 0 && basis != "" {
+		return 0, "", "", nil, errors.New("price basis requires a price amount")
+	}
+	if basis == "coupon" && len(components) == 0 {
+		return 0, "", "", nil, errors.New("coupon price requires a recorded eligibility condition")
+	}
+	seen := map[string]bool{}
+	componentCurrency := ""
+	for i := range components {
+		component := &components[i]
+		validated, err := ValidatePriceBasis(format, status, component.Basis)
+		if err != nil || validated == "" || component.PriceMinor <= 0 || strings.TrimSpace(component.Currency) == "" || seen[validated] || validated == "coupon" && strings.TrimSpace(component.Condition) == "" {
+			return 0, "", "", nil, errors.New("invalid or duplicate price component")
+		}
+		component.Basis = validated
+		seen[validated] = true
+		if componentCurrency != "" && componentCurrency != component.Currency {
+			return 0, "", "", nil, errors.New("price components must use the same currency")
+		}
+		componentCurrency = component.Currency
+	}
+	if seen["used_asking"] && len(components) != 1 || seen["completed_sale"] && len(components) != 1 {
+		return 0, "", "", nil, errors.New("used and completed-sale prices cannot be combined with retail quotes")
+	}
+	if len(components) > 0 {
+		if priceMinor > 0 {
+			matched := false
+			for _, component := range components {
+				if component.Basis == basis && component.PriceMinor == priceMinor && component.Currency == currency {
+					matched = true
+					break
+				}
+			}
+			if !matched {
+				return 0, "", "", nil, errors.New("primary price must match one price component")
+			}
+		} else {
+			for _, preferred := range []string{"sale", "list", "used_asking", "completed_sale", "coupon"} {
+				for _, component := range components {
+					if component.Basis == preferred {
+						priceMinor, basis, currency = component.PriceMinor, component.Basis, component.Currency
+						break
+					}
+				}
+				if priceMinor > 0 {
+					break
+				}
+			}
+		}
+	}
+	if priceMinor > 0 {
+		validated, err := ValidatePriceBasis(format, status, basis)
+		if err != nil {
+			return 0, "", "", nil, err
+		}
+		basis = validated
+	}
+	return priceMinor, basis, currency, components, nil
+}
+
 func IsRetailScrapeSource(source Source) bool {
 	if IsDigitalRetailSource(source) {
 		return false

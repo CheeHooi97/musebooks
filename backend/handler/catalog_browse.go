@@ -207,7 +207,9 @@ func (h *CatalogBrowseHandler) MarketplaceListings(c echo.Context) error {
 	}
 	if h.ImageSigner != nil {
 		for i := range items {
-			items[i].ImageURL = h.ImageSigner.ListingImageURL(items[i].ImageURL)
+			if items[i].ImagePermissionScope == model.MediaPermissionDisplayAndCopy {
+				items[i].ImageURL = h.ImageSigner.ListingImageURL(items[i].ImageURL)
+			}
 		}
 	}
 	if p.CursorMode {

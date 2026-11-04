@@ -66,16 +66,20 @@ type Marketplace struct {
 	UpdatedAt time.Time `json:"updatedAt"`
 }
 type CatalogMedia struct {
-	ID          int64     `gorm:"primaryKey;autoIncrement" json:"id"`
-	EntityType  string    `gorm:"size:24;uniqueIndex:ux_catalog_media_entity,priority:1;not null" json:"entityType"`
-	EntityID    string    `gorm:"size:100;uniqueIndex:ux_catalog_media_entity,priority:2;not null" json:"entityId"`
-	MediaType   string    `gorm:"size:32;uniqueIndex:ux_catalog_media_entity,priority:3;not null" json:"mediaType"`
-	OriginalURL string    `gorm:"type:text" json:"originalUrl"`
-	StorageURL  string    `gorm:"type:text" json:"storageUrl"`
-	SourceURL   string    `gorm:"type:text" json:"sourceUrl"`
-	IsPrimary   bool      `json:"isPrimary"`
-	CreatedAt   time.Time `json:"createdAt"`
-	UpdatedAt   time.Time `json:"updatedAt"`
+	ID                    int64      `gorm:"primaryKey;autoIncrement" json:"id"`
+	EntityType            string     `gorm:"size:24;uniqueIndex:ux_catalog_media_entity,priority:1;not null" json:"entityType"`
+	EntityID              string     `gorm:"size:100;uniqueIndex:ux_catalog_media_entity,priority:2;not null" json:"entityId"`
+	MediaType             string     `gorm:"size:32;uniqueIndex:ux_catalog_media_entity,priority:3;not null" json:"mediaType"`
+	OriginalURL           string     `gorm:"type:text" json:"originalUrl"`
+	StorageURL            string     `gorm:"type:text" json:"storageUrl"`
+	SourceURL             string     `gorm:"type:text" json:"sourceUrl"`
+	PermissionScope       string     `gorm:"size:32;not null;default:unreviewed" json:"-"`
+	PermissionEvidenceURL string     `gorm:"type:text" json:"-"`
+	PermissionBasis       string     `gorm:"type:text" json:"-"`
+	PermissionReviewedAt  *time.Time `json:"-"`
+	IsPrimary             bool       `json:"isPrimary"`
+	CreatedAt             time.Time  `json:"createdAt"`
+	UpdatedAt             time.Time  `json:"updatedAt"`
 }
 
 func (CatalogMedia) TableName() string { return "catalog_media" }
