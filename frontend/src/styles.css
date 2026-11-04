@@ -656,3 +656,93 @@ a.chip:hover, button.chip:hover { border-color: var(--ink); }
 @keyframes update-prompt-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 @media (max-width: 600px) { .update-prompt { right: 12px; left: 12px; width: auto; } }
 @media (prefers-reduced-motion: reduce) { .update-prompt { animation: none; } }
+
+/* Compact app shell shared by the installed PWA and small-screen website. */
+@media (max-width: 900px) {
+  :root { --header-h: 58px; --gutter: max(clamp(16px, 5vw, 24px), env(safe-area-inset-left), env(safe-area-inset-right)); }
+  html { scroll-padding-top: calc(var(--header-h) + env(safe-area-inset-top) + 16px); }
+  body { font-size: 16px; }
+  .site-shell { padding-bottom: calc(72px + env(safe-area-inset-bottom)); }
+
+  .site-header { padding-top: env(safe-area-inset-top); }
+  .site-header__inner { grid-template-columns: minmax(0, 1fr) auto; gap: 12px; min-height: var(--header-h); }
+  .wordmark { font-size: 22px; }
+  .main-nav, .header-saved { display: none; }
+  .header-actions { gap: 4px; }
+  .menu__panel { max-height: calc(100dvh - var(--header-h) - 112px); }
+
+  .app-tabbar {
+    position: fixed;
+    z-index: 35;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    padding: 5px max(8px, env(safe-area-inset-right)) calc(5px + env(safe-area-inset-bottom)) max(8px, env(safe-area-inset-left));
+    border-top: 1px solid var(--line);
+    background: var(--surface);
+  }
+  .app-tabbar a { min-height: 58px; gap: 2px; padding: 0 2px; font-size: 12px; font-weight: 500; line-height: 1.4; text-align: center; }
+  .app-tabbar a:active { border-radius: 10px; background: var(--surface); }
+  .app-tabbar a.is-active { color: var(--accent); font-weight: 700; }
+  .app-tabbar__icon { width: min(58px, 100%); height: 32px; border-radius: 18px; transition: background-color .15s, color .15s; }
+  .app-tabbar a.is-active .app-tabbar__icon { background: color-mix(in srgb, var(--accent) 12%, var(--bg)); color: var(--accent); }
+  .app-tabbar a.is-active .app-tabbar__icon::after { content: none; }
+  .app-tabbar__icon i { left: calc(50% + 8px); }
+
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "copy" "search" "stats";
+    gap: 16px;
+    align-items: start;
+    padding-block: 28px 22px;
+  }
+  .hero__copy { grid-area: copy; gap: 10px; }
+  .hero__copy .eyebrow { display: none; }
+  .hero h1 { max-width: 14ch; font-size: clamp(34px, 9vw, 44px); line-height: 1.04; }
+  .hero__intro { font-size: 15px; line-height: 1.45; }
+  .hero__aside { display: contents; }
+  .hero__aside .search-field--hero { grid-area: search; flex-wrap: nowrap; gap: 8px; min-height: 52px; padding: 4px; }
+  .hero__aside .search-field--hero > svg { width: 18px; height: 18px; margin-left: 8px; }
+  .hero__aside .search-field--hero input { flex: 1 1 0; flex-basis: 0; min-width: 0; font-size: 16px; }
+  .hero__aside .search-field--hero .button { flex: none; width: auto; min-height: 44px; padding-inline: 12px; font-size: 13px; }
+  .hero__stats { grid-area: stats; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; padding-top: 10px; }
+  .hero__stats div { grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; gap: 8px; padding-block: 9px; border-bottom: 1px solid var(--line); }
+  .hero__stats dt { font-size: 9px; }
+  .hero__stats dd { font-size: 22px; }
+
+  .discover__section { padding-top: 36px; }
+  .section-heading { align-items: center; gap: 10px; padding-bottom: 12px; margin-bottom: 16px; }
+  .section-heading h2 { font-size: 26px; }
+  .book-grid, .book-grid--row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 12px; }
+  .book-card__link { gap: 10px; }
+  .book-card h3 { font-size: 16px; line-height: 1.2; }
+  .book-card__people { font-size: 14px; }
+  .book-card__price { margin-top: 2px; font-size: 14px; }
+  .book-card__save { top: 6px; right: 6px; width: 44px; height: 44px; opacity: 1; }
+  .person-grid--row { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .origin-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .site-footer { margin-top: 56px; }
+
+  .install-banner__inner { gap: 8px; padding-block: 5px; }
+  .install-banner__icon { width: 32px; height: 32px; }
+  .install-banner__text { font-size: 12px; }
+  .install-banner__text strong { font-size: 13px; }
+  .install-banner__text span { display: none; }
+  .install-banner__text[role="status"] span { display: block; }
+  .install-banner__action { min-height: 44px; padding-inline: 12px; }
+  .install-banner__close { width: 44px; height: 44px; }
+
+  .update-prompt { bottom: calc(76px + env(safe-area-inset-bottom)); }
+}
+
+@media (min-width: 681px) and (max-width: 900px) and (orientation: landscape) {
+  .hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(260px, .85fr);
+    grid-template-areas: "copy search" "copy stats";
+    gap: 14px 28px;
+    align-items: center;
+    padding-block: 16px;
+  }
+}

@@ -89,11 +89,11 @@ export default function SiteLayout({ pathname, children }) {
     </footer>
     {!isMobileApp && <UpdatePrompt />}
     {!isMobileApp && <PushOnboarding />}
-    {isMobileApp && <nav className="app-tabbar" aria-label={t("App navigation")}>
+    <nav className="app-tabbar" aria-label={t("Main navigation")}>
       {APP_TABS.map(tab => <a key={tab.key} href={tab.href} className={tab.match(pathname) ? "is-active" : ""} aria-current={tab.match(pathname) ? "page" : undefined}>
         <span className="app-tabbar__icon"><Icon name={tab.icon} size={22} />{tab.key === "saved" && saved.length > 0 && <i>{saved.length}</i>}</span>
         <span>{t(tab.label)}</span>
       </a>)}
-    </nav>}
+    </nav>
   </div>;
 }
