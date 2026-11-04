@@ -9,8 +9,7 @@
 <script>try{const saved=localStorage.getItem('musebooks.theme.v1');document.documentElement.dataset.theme=saved==='light'||saved==='dark'?saved:matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}catch{}</script>
 <!-- Google tag (gtag.js) -->
 <script>
-  // As in MuseCards: events queue in dataLayer, so the tag waits for the load
-  // event instead of competing with the first render on slow phones.
+  // Queue analytics immediately, then load the tag after page rendering starts.
   (function(){function load(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-H93MV1148W';document.head.appendChild(s)}if(document.readyState==='complete')load();else addEventListener('load',load,{once:true})})();
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
