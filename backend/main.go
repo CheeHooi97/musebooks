@@ -55,6 +55,17 @@ func main() {
 	h := handler.NewHandler(services)
 	h.Auth.ConfigureEmailVerification(service.NewResendEmailSender(config.ResendAPIKey, config.EmailFrom), config.EmailVerificationSecret)
 	h.OAuth = handler.NewGoogleOAuth(config.GoogleClientID, config.GoogleClientSecret, config.GoogleRedirectURL)
+	// Daily new-publication notifications. They stay off until the VAPID keys
+	// are set and catalog-migrate has created the push tables.
+	h.Push = service.NewPushService(db, service.PushConfig{PublicKey: config.VAPIDPublicKey, PrivateKey: config.VAPIDPrivateKey, Subject: config.VAPIDSubject})
+	if !h.Push.Enabled() {
+		log.Printf("[push] notifications off: VAPID_PUBLIC_KEY and VAPID_PRIVATE_KEY are not set")
+	} else if !db.Migrator().HasTable(&model.PushSubscription{}) || !db.Migrator().HasTable(&model.PushDigest{}) {
+		log.Printf("[push] notifications off: run go run ./cmd/catalog-migrate -apply to create the push tables")
+		h.Push = service.NewPushService(db, service.PushConfig{})
+	} else {
+		go h.Push.Run(context.Background())
+	}
 
 	mediaSigner, err := storage.NewMediaSigner(storage.MediaConfig{
 		LegacyBaseURLs: []string{config.CloudflareR2PublicBaseURL},

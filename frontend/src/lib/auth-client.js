@@ -22,6 +22,12 @@ export function storeSession(result) {
   } catch { /* In-memory sign-in remains available for this app visit. */ }
 }
 
+export function renewStoredSession(expiresAt) {
+  if (!isMobileApp || !memoryToken || !expiresAt) return;
+  try { localStorage.setItem(nativeSessionKey, JSON.stringify({ sessionToken: memoryToken, expiresAt })); }
+  catch { /* In-memory sign-in remains available for this app visit. */ }
+}
+
 export async function authRequest(path, data, { signal } = {}) {
   const headers = { Accept: "application/json", ...(data === undefined ? {} : { "Content-Type": "application/json" }) };
   if (isMobileApp && memoryToken) headers.Authorization = `Bearer ${memoryToken}`;

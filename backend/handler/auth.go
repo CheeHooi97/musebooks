@@ -171,14 +171,18 @@ func authToken(c echo.Context) string {
 }
 
 func (h *Handler) CurrentAuthUser(c echo.Context) error {
-	user, err := h.Auth.CurrentUser(c.Request().Context(), authToken(c))
+	token := authToken(c)
+	user, expiresAt, err := h.Auth.RefreshSession(c.Request().Context(), token)
 	if err != nil {
 		if errors.Is(err, service.ErrSessionInvalid) {
 			return authFailure(c, 401, "Sign in to continue.", "session_expired")
 		}
 		return authError(c, err)
 	}
-	return responseJSON(c, map[string]any{"user": user})
+	if !strings.HasPrefix(c.Path(), "/v1/mobile/") {
+		setAuthCookie(c, token, expiresAt, int(time.Until(expiresAt).Seconds()))
+	}
+	return responseJSON(c, map[string]any{"user": user, "expiresAt": expiresAt})
 }
 
 func (h *Handler) Logout(c echo.Context) error {

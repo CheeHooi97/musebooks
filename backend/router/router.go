@@ -39,6 +39,15 @@ func SetupRoutes(h *handler.Handler, db *gorm.DB) *echo.Echo {
 	v.GET("/auth/oauth/google", h.GoogleStart, handler.AuthRequest)
 	v.GET("/auth/oauth/google/callback", h.GoogleCallback, handler.AuthRequest)
 	v.POST("/mobile/auth/oauth/exchange", h.MobileOAuthExchange, handler.AuthRequest, echoMiddleware.BodyLimit("8K"), echoMiddleware.RateLimiterWithConfig(echoMiddleware.RateLimiterConfig{Store: echoMiddleware.NewRateLimiterMemoryStore(1), IdentifierExtractor: rateLimitClient}))
+	// New-publication notifications for signed-in accounts (Web Push).
+	push := v.Group("/push", handler.AuthRequest, echoMiddleware.BodyLimit("4K"), echoMiddleware.RateLimiterWithConfig(echoMiddleware.RateLimiterConfig{
+		Store:               echoMiddleware.NewRateLimiterMemoryStoreWithConfig(echoMiddleware.RateLimiterMemoryStoreConfig{Rate: 0.2, Burst: 10, ExpiresIn: 3 * time.Minute}),
+		IdentifierExtractor: rateLimitClient,
+	}))
+	push.GET("/config", h.PushConfig)
+	push.GET("/subscription", h.PushStatus)
+	push.POST("/subscription", h.PushSubscribe)
+	push.POST("/subscription/remove", h.PushUnsubscribe)
 	catalogHandler := h.Catalog
 	browse := h.Browse
 	v.GET("/models", browse.Models)

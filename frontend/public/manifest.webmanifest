@@ -1,0 +1,24 @@
+{
+  "id": "/",
+  "name": "MuseBooks — Photobook and magazine catalog",
+  "short_name": "MuseBooks",
+  "description": "Model, idol, influencer and celebrity photobooks and magazine issues, with editions, publishers and source-backed prices.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "categories": ["books", "shopping"],
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Browse publications", "short_name": "Browse", "url": "/books", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Models", "url": "/models", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Saved collection", "short_name": "Saved", "url": "/saved", "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

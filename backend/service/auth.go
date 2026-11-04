@@ -36,6 +36,7 @@ var (
 )
 
 const (
+	defaultSessionTTL            = 30 * 24 * time.Hour
 	emailVerificationCodeTTL     = 10 * time.Minute
 	emailVerificationResendDelay = time.Minute
 	emailVerificationMaxAttempts = 5
@@ -52,7 +53,7 @@ type AuthService struct {
 
 func NewAuthService(userRepo repository.UserRepository, sessionRepo repository.AuthSessionRepository, sessionTTL time.Duration) *AuthService {
 	if sessionTTL <= 0 {
-		sessionTTL = 30 * 24 * time.Hour
+		sessionTTL = defaultSessionTTL
 	}
 	return &AuthService{userRepo: userRepo, sessionRepo: sessionRepo, sessionTTL: sessionTTL}
 }
@@ -593,6 +594,23 @@ func (s *AuthService) CurrentUser(ctx context.Context, token string) (*model.Use
 	return user, nil
 }
 
+// RefreshSession extends a valid session so active users remain signed in.
+func (s *AuthService) RefreshSession(ctx context.Context, token string) (*model.User, time.Time, error) {
+	user, err := s.CurrentUser(ctx, token)
+	if err != nil {
+		return nil, time.Time{}, err
+	}
+	expiresAt := s.SessionExpiresAt(time.Now().UTC())
+	if extender, ok := s.sessionRepo.(interface {
+		ExtendSession(context.Context, string, time.Time) error
+	}); ok {
+		if err := extender.ExtendSession(ctx, hashSessionToken(token), expiresAt); err != nil {
+			return nil, time.Time{}, err
+		}
+	}
+	return user, expiresAt, nil
+}
+
 func (s *AuthService) Logout(ctx context.Context, token string) error {
 	hash := hashSessionToken(token)
 	if hash == "" {
@@ -603,7 +621,7 @@ func (s *AuthService) Logout(ctx context.Context, token string) error {
 
 func (s *AuthService) SessionExpiresAt(now time.Time) time.Time {
 	if s == nil || s.sessionTTL <= 0 {
-		return now.UTC().Add(30 * 24 * time.Hour)
+		return now.UTC().Add(defaultSessionTTL)
 	}
 	return now.UTC().Add(s.sessionTTL)
 }

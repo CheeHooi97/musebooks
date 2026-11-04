@@ -4,6 +4,8 @@ import { useAuth } from "../lib/auth";
 import { authRequest } from "../lib/auth-client";
 import { usePreferences } from "../lib/preferences";
 import { navigate } from "../lib/router";
+import { isMobileApp } from "../lib/platform";
+import NotificationSettings from "../components/NotificationSettings";
 
 const pages = {
   login: ["Welcome back.", "Sign in to your MuseBooks account.", "Sign in"],
@@ -146,6 +148,7 @@ export function AccountPage() {
       <dl className="auth-account"><div><dt>{t("Email address")}</dt><dd>{auth.user.email}</dd></div><div><dt>{t("Email status")}</dt><dd className="auth-verified">{t("Verified")}</dd></div></dl>
       <p className="auth-intro">{t("Your collection and preferences are saved on this device.")}</p>
       <a className="button button--block" href="/saved">{t("View saved collection")}</a>
+      {!isMobileApp && <NotificationSettings />}
       <a className="text-link" href="/forgot-password">{t("Reset password")}</a>
       {error && <p role="alert" className="auth-message auth-message--error">{t(error)}</p>}
       <button className="button button--ghost button--block" disabled={busy} onClick={logout}>{t(busy ? "Please wait…" : "Sign out")}</button>

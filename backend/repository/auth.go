@@ -39,6 +39,12 @@ func (r *authSessionRepository) GetSession(ctx context.Context, tokenHash string
 	return &session, nil
 }
 
+func (r *authSessionRepository) ExtendSession(ctx context.Context, tokenHash string, expiresAt time.Time) error {
+	return r.db.WithContext(ctx).Model(&model.AuthSession{}).
+		Where("token_hash = ? AND expires_at > ?", tokenHash, time.Now().UTC()).
+		Update("expires_at", expiresAt.UTC()).Error
+}
+
 func (r *authSessionRepository) DeleteSession(ctx context.Context, tokenHash string) error {
 	return r.db.WithContext(ctx).Where("token_hash = ?", tokenHash).Delete(&model.AuthSession{}).Error
 }

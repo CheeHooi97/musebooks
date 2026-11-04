@@ -16,6 +16,7 @@ type Handler struct {
 	Admin   *service.AdminService
 	Auth    *service.AuthService
 	OAuth   *GoogleOAuth
+	Push    *service.PushService
 }
 
 func NewHandler(services *service.Services) *Handler {

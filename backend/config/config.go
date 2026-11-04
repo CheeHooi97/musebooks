@@ -40,6 +40,10 @@ var (
 	CloudflareR2MediaBaseURL       string
 	CloudflareR2MediaSigningSecret string
 	CloudflareR2MediaURLWindow     time.Duration
+	// Web Push (VAPID). Without both keys, notifications stay off.
+	VAPIDPublicKey  string
+	VAPIDPrivateKey string
+	VAPIDSubject    string
 )
 
 // LoadConfig
@@ -75,6 +79,9 @@ func LoadConfig() {
 	CloudflareR2PublicBaseURL = GetEnvOrDefault("CLOUDFLARE_R2_PUBLIC_BASE_URL", "")
 	CloudflareR2MediaBaseURL = GetEnvOrDefault("CLOUDFLARE_R2_MEDIA_BASE_URL", "")
 	CloudflareR2MediaSigningSecret = GetEnvOrDefault("CLOUDFLARE_R2_MEDIA_SIGNING_SECRET", "")
+	VAPIDPublicKey = strings.TrimSpace(GetEnvOrDefault("VAPID_PUBLIC_KEY", ""))
+	VAPIDPrivateKey = strings.TrimSpace(GetEnvOrDefault("VAPID_PRIVATE_KEY", ""))
+	VAPIDSubject = strings.TrimSpace(GetEnvOrDefault("VAPID_SUBJECT", SiteURL))
 	CloudflareR2MediaURLWindow = time.Duration(GetEnvIntOrDefault("CLOUDFLARE_R2_MEDIA_URL_WINDOW_SECONDS", 86400)) * time.Second
 }
 

@@ -1,8 +1,9 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
-import { authRequest, makeOAuthProof, storeSession } from "./auth-client";
+import { authRequest, makeOAuthProof, renewStoredSession, storeSession } from "./auth-client";
 import { apiUrl } from "./api";
 import { isMobileApp } from "./platform";
 import { navigate } from "./router";
+import { disablePush } from "./push";
 
 const AuthContext = createContext(null);
 const emailKey = "musebooks.auth.pending-email";
@@ -21,7 +22,13 @@ export function AuthProvider({ children }) {
   const refresh = useCallback(async () => {
     const version = ++sessionVersion.current;
     setLoading(true); setSessionError("");
-    try { const result = await authRequest("me"); if (version === sessionVersion.current) setUser(result.user); }
+    try {
+      const result = await authRequest("me");
+      if (version === sessionVersion.current) {
+        setUser(result.user);
+        renewStoredSession(result.expiresAt);
+      }
+    }
     catch (error) {
       if (version !== sessionVersion.current) return;
       if (error.status === 401) { setUser(null); storeSession(null); }
@@ -29,6 +36,13 @@ export function AuthProvider({ children }) {
     } finally { if (version === sessionVersion.current) setLoading(false); }
   }, []);
   useEffect(() => { refresh(); }, [refresh]);
+  useEffect(() => {
+    if (!user) return undefined;
+    const timer = window.setInterval(() => {
+      if (!document.hidden) refresh();
+    }, 7 * 24 * 60 * 60 * 1000);
+    return () => window.clearInterval(timer);
+  }, [user, refresh]);
   useEffect(() => {
     if (!isMobileApp) return undefined;
     let stopped = false;
@@ -71,6 +85,8 @@ export function AuthProvider({ children }) {
     } else window.location.assign(url);
   }
   async function logout() {
+    // This device stops getting the account's notifications.
+    if (!isMobileApp) await disablePush().catch(() => undefined);
     await authRequest("logout", {});
     sessionVersion.current++;
     storeSession(null); setUser(null); navigate("/login", { replace: true });

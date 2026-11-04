@@ -6,7 +6,8 @@ import BookCard, { BookGridSkeleton } from "../components/BookCard";
 import { LoadState, SectionHeading } from "../components/Page";
 import { usePreferences } from "../lib/preferences";
 import { useCollection } from "../lib/collection";
-import { showCatalogImages } from "../lib/platform";
+import { isMobileApp, showCatalogImages } from "../lib/platform";
+import NotificationSettings from "../components/NotificationSettings";
 import { navigate } from "../lib/router";
 import { loadBooksById, loadHomeSummary, loadModelTotal, loadOrigins, useLoader, useResource } from "../lib/catalog";
 
@@ -73,6 +74,7 @@ export default function Discover() {
         <SectionHeading id="discover-new" title={t("New releases")} action={t("Browse all")} href="/books" />
         {home.state === "loading" ? <BookGridSkeleton count={8} /> : home.state !== "live" ? <LoadState state={home.state} retry={home.retry} errorMessage="The catalog couldn’t be reached." /> :
           <div className="book-grid book-grid--row">{newest.map((book, index) => <BookCard key={book.id} book={book} loading={index < 4 ? "eager" : "lazy"} />)}</div>}
+        {!isMobileApp && <NotificationSettings id="discover-notifications" />}
       </section>
 
       {origins.state === "live" && origins.data.length > 0 && <section className="discover__section" aria-labelledby="discover-origins">

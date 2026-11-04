@@ -7,6 +7,9 @@ import { isMobileApp } from "../lib/platform";
 import { interceptLinks, navigate, runBackHandler } from "../lib/router";
 import { languageAlternates } from "../lib/catalog-languages";
 import Logo from "./Logo";
+import InstallBanner from "./InstallBanner";
+import UpdatePrompt from "./UpdatePrompt";
+import PushOnboarding from "./PushOnboarding";
 
 // Top-level sections. `match` decides which nav item is current for a path.
 export const SECTIONS = [
@@ -50,6 +53,7 @@ export default function SiteLayout({ pathname, children }) {
   }, []);
   return <div className={`site-shell${isMobileApp ? " is-app" : ""}`}>
     <a className="skip-link" href="#main-content">{t("Skip to content")}</a>
+    {!isMobileApp && <InstallBanner />}
     <header className="site-header">
       <div className="site-header__inner">
         <a className="wordmark" href="/" aria-label={t("MuseBooks home")}><Logo /></a>
@@ -83,6 +87,8 @@ export default function SiteLayout({ pathname, children }) {
         </nav>
       </div>
     </footer>
+    {!isMobileApp && <UpdatePrompt />}
+    {!isMobileApp && <PushOnboarding />}
     {isMobileApp && <nav className="app-tabbar" aria-label={t("App navigation")}>
       {APP_TABS.map(tab => <a key={tab.key} href={tab.href} className={tab.match(pathname) ? "is-active" : ""} aria-current={tab.match(pathname) ? "page" : undefined}>
         <span className="app-tabbar__icon"><Icon name={tab.icon} size={22} />{tab.key === "saved" && saved.length > 0 && <i>{saved.length}</i>}</span>

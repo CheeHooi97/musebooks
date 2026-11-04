@@ -36,6 +36,8 @@ func Migrate(db *gorm.DB) error {
 			&model.ListingMatch{},
 			&model.ActiveListing{},
 			&model.SoldListing{},
+			&model.PushSubscription{},
+			&model.PushDigest{},
 		}
 		err := db.AutoMigrate(models...)
 		if err != nil {
