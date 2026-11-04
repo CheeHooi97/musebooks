@@ -419,7 +419,8 @@
     "This code has expired. Request a new code.": "コードの有効期限が切れています。新しいコードをリクエストしてください。",
     "Too many attempts. Request a new code.": "試行回数の上限に達しました。新しいコードをリクエストしてください。",
     "Wait a minute before requesting another code.": "新しいコードのリクエストは1分後にお試しください。",
-    "Last updated October 23, 2026": "最終更新：2026年10月23日"
+    "Last updated October 23, 2026": "最終更新：2026年10月23日",
+    "Listings": "出品"
   },
   "zh-Hans": {
     "Digital and physical photobooks": "数字与实体写真集",
@@ -841,7 +842,8 @@
     "This code has expired. Request a new code.": "验证码已过期，请请求新验证码。",
     "Too many attempts. Request a new code.": "尝试次数过多，请请求新验证码。",
     "Wait a minute before requesting another code.": "请等待一分钟后再请求验证码。",
-    "Last updated October 23, 2026": "最后更新：2026年10月23日"
+    "Last updated October 23, 2026": "最后更新：2026年10月23日",
+    "Listings": "列表"
   },
   "zh-Hant": {
     "Digital and physical photobooks": "數位與實體寫真集",
@@ -1263,6 +1265,7 @@
     "This code has expired. Request a new code.": "驗證碼已過期，請要求新驗證碼。",
     "Too many attempts. Request a new code.": "嘗試次數過多，請要求新驗證碼。",
     "Wait a minute before requesting another code.": "請等待一分鐘後再要求驗證碼。",
-    "Last updated October 23, 2026": "最後更新：2026年10月23日"
+    "Last updated October 23, 2026": "最後更新：2026年10月23日",
+    "Listings": "列表"
   }
 }

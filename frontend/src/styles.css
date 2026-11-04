@@ -246,6 +246,7 @@ a.chip:hover, button.chip:hover { border-color: var(--ink); }
 .menu__prefs label { display: grid; gap: 6px; font-size: 13px; font-weight: 600; }
 .menu__prefs select { min-height: 42px; padding: 0 10px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--bg); font-size: 14px; }
 .menu__prefs p { color: var(--muted); font-size: 12px; }
+.menu__browse { display: none; }
 
 .site-footer { margin-top: 96px; border-top: 1px solid var(--line-strong); }
 .site-footer__inner { display: grid; grid-template-columns: minmax(0, 1.6fr) repeat(3, minmax(0, 1fr)); gap: 32px; max-width: var(--max); margin: 0 auto; padding: 48px var(--gutter) 56px; }
@@ -690,6 +691,16 @@ a.chip:hover, button.chip:hover { border-color: var(--ink); }
   .app-tabbar a.is-active .app-tabbar__icon { background: color-mix(in srgb, var(--accent) 12%, var(--bg)); color: var(--accent); }
   .app-tabbar a.is-active .app-tabbar__icon::after { content: none; }
   .app-tabbar__icon i { left: calc(50% + 8px); }
+  /* As in MuseCards: outline icons, filled for the current tab; cut-outs take
+     the pill colour. The bar steps aside while the keyboard is open. */
+  .app-tabbar a.is-active .app-tabbar__icon { --tab-pill: color-mix(in srgb, var(--accent) 12%, var(--bg)); }
+  .app-tabbar a.is-active svg > :first-child { fill: currentColor; }
+  .app-tabbar a.is-active svg > :not(:first-child) { fill: var(--tab-pill); stroke: var(--tab-pill); }
+  .app-tabbar a.is-active[data-tab="browse"] svg > * { fill: currentColor; stroke: currentColor; }
+  .app-tabbar a.is-active[data-tab="account"] svg > :last-child { fill: none; stroke-width: 2.2; }
+  @media (pointer: coarse) { .site-shell:has(:is(input:not([type="checkbox"], [type="radio"]), textarea, select):focus) .app-tabbar { display: none; } }
+  .menu__browse { display: grid; padding: 6px 0; border-bottom: 1px solid var(--line); }
+  .menu__browse a { display: flex; align-items: center; min-height: var(--tap); padding: 0 10px; border-radius: var(--radius); font-size: 14px; }
 
   .hero__inner {
     grid-template-columns: minmax(0, 1fr);

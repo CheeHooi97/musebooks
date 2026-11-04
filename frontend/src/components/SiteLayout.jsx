@@ -8,6 +8,7 @@ import { interceptLinks, navigate, runBackHandler } from "../lib/router";
 import { languageAlternates } from "../lib/catalog-languages";
 import Logo from "./Logo";
 import InstallBanner from "./InstallBanner";
+import { useAuth } from "../lib/auth";
 import UpdatePrompt from "./UpdatePrompt";
 import PushOnboarding from "./PushOnboarding";
 
@@ -19,7 +20,16 @@ export const SECTIONS = [
   { key: "publishers", label: "Publishers", href: "/publishers", icon: "book", match: path => path.startsWith("/publishers") },
   { key: "market", label: "Market", href: "/active", icon: "tag", match: path => ["/active", "/sold", "/japan"].includes(path) },
 ];
-const APP_TABS = [...SECTIONS.filter(section => section.key !== "publishers"), { key: "saved", label: "Saved", href: "/saved", icon: "bookmark", match: path => path === "/saved" }];
+// Bottom tabs on phones, tablets and the installed app, as in MuseCards:
+// Home, Browse, Listings, Saved (MuseCards' Watchlist) and Account.
+const ACCOUNT_PATHS = ["/account", "/login", "/register", "/verify-email", "/forgot-password", "/reset-password"];
+const appTabs = signedIn => [
+  { key: "home", label: "Home", href: "/", icon: "home", match: path => path === "/" },
+  { key: "browse", label: "Browse", href: "/books", icon: "grid", match: path => ["/books", "/models", "/publishers", "/guides"].some(prefix => path === prefix || path.startsWith(`${prefix}/`)) },
+  { key: "listings", label: "Listings", href: "/active", icon: "tag", match: path => ["/active", "/sold", "/japan"].includes(path) },
+  { key: "saved", label: "Saved", href: "/saved", icon: "bookmark", match: path => path === "/saved" },
+  { key: "account", label: "Account", href: signedIn ? "/account" : "/login", icon: "account", match: path => ACCOUNT_PATHS.includes(path) },
+];
 
 function useNativeShell() {
   useEffect(() => {
@@ -46,6 +56,7 @@ function useNativeShell() {
 export default function SiteLayout({ pathname, children }) {
   const { t } = usePreferences();
   const { saved } = useCollection();
+  const { user } = useAuth();
   useNativeShell();
   useEffect(() => {
     document.addEventListener("click", interceptLinks);
@@ -90,7 +101,7 @@ export default function SiteLayout({ pathname, children }) {
     {!isMobileApp && <UpdatePrompt />}
     {!isMobileApp && <PushOnboarding />}
     <nav className="app-tabbar" aria-label={t("Main navigation")}>
-      {APP_TABS.map(tab => <a key={tab.key} href={tab.href} className={tab.match(pathname) ? "is-active" : ""} aria-current={tab.match(pathname) ? "page" : undefined}>
+      {appTabs(Boolean(user)).map(tab => <a key={tab.key} data-tab={tab.key} href={tab.href} className={tab.match(pathname) ? "is-active" : ""} aria-current={tab.match(pathname) ? "page" : undefined}>
         <span className="app-tabbar__icon"><Icon name={tab.icon} size={22} />{tab.key === "saved" && saved.length > 0 && <i>{saved.length}</i>}</span>
         <span>{t(tab.label)}</span>
       </a>)}

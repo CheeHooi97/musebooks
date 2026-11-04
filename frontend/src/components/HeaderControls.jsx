@@ -35,6 +35,11 @@ export default function HeaderControls() {
         <div className="menu__intro"><strong>{t("Your MuseBooks")}</strong><p>{t("Your collection is saved on this device.")}</p></div>
         <a href={user ? "/account" : "/login"} onClick={() => setOpen(false)}>{t(user ? "Your account" : "Sign in")}</a>
         {!user && <a href="/register" onClick={() => setOpen(false)}>{t("Create account")}</a>}
+        <nav className="menu__browse" aria-label={t("Browse")}>
+          <a href="/models" onClick={() => setOpen(false)}>{t("Models")}</a>
+          <a href="/publishers" onClick={() => setOpen(false)}>{t("Publishers")}</a>
+          <a href="/sold" onClick={() => setOpen(false)}>{t("Sold")}</a>
+        </nav>
         <a href="/saved" ref={firstItem} onClick={() => setOpen(false)}>{t("Saved collection")}<span>{saved.length}</span></a>
         <div className="menu__prefs">
           <label><span>{t("Language")}</span><select value={language} onChange={event => setLanguage(event.target.value)}>{LANGUAGE_OPTIONS.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}</select></label>
