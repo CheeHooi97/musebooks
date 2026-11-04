@@ -2,11 +2,13 @@ import { useEffect, useRef, useState } from "react";
 import Icon from "./Icon";
 import { useAuth } from "../lib/auth";
 import { usePreferences } from "../lib/preferences";
+import { useLocation } from "../lib/router";
 import { isStandalone } from "../lib/install";
 import { isMobileApp } from "../lib/platform";
 import { enablePush, pushEnabled, pushSupport } from "../lib/push";
 
 const SEEN_KEY = "musebooks.push-onboarding.seen.v1";
+const AUTH_FLOW_PATHS = new Set(["/login", "/register", "/verify-email", "/forgot-password", "/reset-password"]);
 
 function hasSeenPrompt() {
   try { return localStorage.getItem(SEEN_KEY) === "1"; }
@@ -16,6 +18,7 @@ function hasSeenPrompt() {
 export default function PushOnboarding() {
   const { t, language } = usePreferences();
   const auth = useAuth();
+  const { pathname } = useLocation();
   const dialogRef = useRef(null);
   const completed = useRef(false);
   const [open, setOpen] = useState(false);
@@ -24,6 +27,10 @@ export default function PushOnboarding() {
   const [error, setError] = useState("");
 
   useEffect(() => {
+    if (AUTH_FLOW_PATHS.has(pathname)) {
+      setOpen(false);
+      return undefined;
+    }
     if (isMobileApp || !isStandalone() || auth.loading || completed.current || hasSeenPrompt()) return undefined;
     let current = true;
     const available = pushSupport();
@@ -43,7 +50,7 @@ export default function PushOnboarding() {
       if (current) setOpen(true);
     })();
     return () => { current = false; };
-  }, [auth.loading, auth.user]);
+  }, [auth.loading, auth.user, pathname]);
 
   useEffect(() => {
     if (!open) return undefined;
@@ -93,8 +100,8 @@ export default function PushOnboarding() {
       {error && <p role="alert" className="auth-message auth-message--error">{t(error)}</p>}
       <div className="push-onboarding__actions">
         {!auth.user ? <>
-          <a className="button" href="/login">{t("Sign in")}</a>
-          <a className="button button--ghost" href="/register">{t("Create account")}</a>
+          <a className="button" href="/login" onClick={() => setOpen(false)}>{t("Sign in")}</a>
+          <a className="button button--ghost" href="/register" onClick={() => setOpen(false)}>{t("Create account")}</a>
         </> : support === "supported" && <button type="button" className="button" disabled={busy} onClick={turnOn}>{t(busy ? "Please wait…" : "Turn on notifications")}</button>}
         <button type="button" className="button button--ghost" disabled={busy} onClick={finish}>{t("Not now")}</button>
       </div>
