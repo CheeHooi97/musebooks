@@ -1,12 +1,7 @@
 name: Deploy MuseBooks
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
-  repository_dispatch:
-    types: [catalog-updated]
 
 permissions:
   contents: read
