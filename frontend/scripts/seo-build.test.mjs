@@ -132,6 +132,27 @@ test('static build emits facts, citations, links, safe bootstrap and consistent 
   }
 })
 
+test('SEO request timeouts identify the exact page and remain writable by Rollup', async () => {
+  const directory = await fs.mkdtemp(path.join(os.tmpdir(), 'musebooks-seo-timeout-'))
+  try {
+    await fs.writeFile(path.join(directory, 'index.html'), '<html><body><div id="root"></div></body></html>')
+    const timeout = new DOMException('The operation was aborted due to timeout', 'TimeoutError')
+    await assert.rejects(buildSeo(directory, {
+      apiURL: 'https://fixture.example',
+      fetcher: async () => { throw timeout },
+    }), error => {
+      assert.equal(error.constructor, Error)
+      assert.match(error.message, /SEO books page 1 request failed: TimeoutError:/)
+      assert.equal(error.cause, timeout)
+      error.code = 'TEST_PLUGIN_CODE'
+      assert.equal(error.code, 'TEST_PLUGIN_CODE')
+      return true
+    })
+  } finally {
+    await fs.rm(directory, { recursive: true, force: true })
+  }
+})
+
 test('unsafe catalog text cannot inject scripts into body or bootstrap', async () => {
   const { renderContent, json } = await import('./seo-content.mjs')
   const unsafe = { ...book, originalTitle: '</script><script>alert(1)</script>', editions: [{ ...book.editions[0], metadataSourceUrl: 'javascript:alert(1)' }] }

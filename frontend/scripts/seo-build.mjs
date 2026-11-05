@@ -10,6 +10,9 @@ import { homeSummary } from '../src/lib/catalog.js'
 import { GUIDES } from '../src/lib/guides.js'
 
 const escape = value => String(value).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;' }[char]))
+// Directory pages can approach 30 seconds under production load; keep room for
+// slow but successful pages while retaining a finite build failure bound.
+const SEO_API_REQUEST_TIMEOUT_MS = 60_000
 // The API returns R2 images as media Worker URLs whose signature expires, but
 // prerendered HTML lives until the next deploy. Point those images at the
 // API redirect, which signs a fresh URL on every request.
@@ -65,9 +68,24 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
     const items = new Map()
     let totalPages = 1
     for (let page = 1; page <= totalPages; page++) {
-      const response = await fetcher(`${api}/v1/${endpoint}${endpoint.includes('?') ? '&' : '?'}pageSize=50&page=${page}`, { signal: AbortSignal.timeout(30000) })
-      if (!response.ok) throw new Error(`SEO ${endpoint} request failed: ${response.status}`)
-      const data = await response.json()
+      const url = `${api}/v1/${endpoint}${endpoint.includes('?') ? '&' : '?'}pageSize=50&page=${page}`
+      let response
+      try {
+        response = await fetcher(url, { signal: AbortSignal.timeout(SEO_API_REQUEST_TIMEOUT_MS) })
+      } catch (cause) {
+        const detail = cause instanceof Error ? `${cause.name}: ${cause.message}` : String(cause)
+        // Wrap DOMException timeouts in a normal Error. Rollup annotates plugin
+        // errors via `.code`, which is read-only on DOMException instances.
+        throw new Error(`SEO ${endpoint} page ${page} request failed: ${detail}`, { cause })
+      }
+      if (!response.ok) throw new Error(`SEO ${endpoint} page ${page} request failed: ${response.status}`)
+      let data
+      try {
+        data = await response.json()
+      } catch (cause) {
+        const detail = cause instanceof Error ? `${cause.name}: ${cause.message}` : String(cause)
+        throw new Error(`SEO ${endpoint} page ${page} returned invalid JSON: ${detail}`, { cause })
+      }
       if (!Array.isArray(data.items) || !Number.isInteger(data.totalPages) || data.totalPages < 0) throw new Error(`Invalid SEO ${endpoint} response`)
       totalPages = data.totalPages
       for (const item of stableMediaURLs(data.items, siteURL)) {
