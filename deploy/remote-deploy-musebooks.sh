@@ -99,6 +99,13 @@ chown -R www-data:www-data "$web_release"
 
 old_api_target="$(readlink "$api_current" 2>/dev/null || true)"
 old_web_target="$(readlink "$web_current" 2>/dev/null || true)"
+# Like MuseCards: keep the previous release's content-hashed assets, so pages
+# the edge cached before this deploy (s-maxage=3600) can still load them.
+if [[ -n "$old_web_target" && -d "$old_web_target/assets" && "$old_web_target" != "$web_release" ]]; then
+  install -d -o www-data -g www-data -m 0755 "$web_release/assets"
+  cp -an -- "$old_web_target/assets/." "$web_release/assets/"
+  chown -R www-data:www-data "$web_release/assets"
+fi
 old_site_link="$(readlink "$site_enabled" 2>/dev/null || true)"
 had_service=0
 had_site=0

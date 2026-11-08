@@ -27,14 +27,22 @@ export function stableMediaURLs(value, siteURL = SITE_URL) {
   parsed.search = ''
   return `${normalizeSiteURL(siteURL)}/v1/catalog/media/redirect?${new URLSearchParams({ source: parsed.href })}`
 }
+// Like MuseCards' social-logo.png: every page shares a card image, its cover when recorded
+// (brand/social/social-card.html renders the 1200x630 fallback).
+export function socialImage(seo, siteURL = SITE_URL) {
+  return seo.image ? { image: seo.image, alt: seo.title } : { image: `${siteURL}/social-card.png`, alt: 'MuseBooks photobook and magazine catalog' }
+}
 export function renderSeo(html, pathname, book, profile, siteURL = SITE_URL) {
   const seo = pageSeo(pathname, book, profile, siteURL)
+  const social = socialImage(seo, siteURL)
   const meta = (key, value, attribute = 'name') => `<meta ${attribute}="${key}" content="${escape(value)}"/>`
   const tags = [meta('description', seo.description), meta('robots', seo.noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'), `<link rel="canonical" href="${escape(seo.url)}"/>`,
     ...(seo.noindex ? [] : languageAlternates(pathname, siteURL).map(item => `<link rel="alternate" hreflang="${item.code}" href="${escape(item.url)}"/>`)),
     ...(seo.noindex ? [] : [`<link rel="alternate" type="text/markdown" href="${escape(markdownURL(seo.url, siteURL))}"/>`]),
-    ...Object.entries({ title: seo.title, description: seo.description, url: seo.url, type: 'website', site_name: 'MuseBooks', ...(seo.image ? { image: seo.image } : {}) }).map(([key, value]) => meta(`og:${key}`, value, 'property')),
-    ...Object.entries({ card: seo.image ? 'summary_large_image' : 'summary', title: seo.title, description: seo.description, ...(seo.image ? { image: seo.image } : {}) }).map(([key, value]) => meta(`twitter:${key}`, value)),
+    `<link rel="alternate" type="application/atom+xml" title="MuseBooks new publications" href="/feed.xml"/>`,
+    ...Object.entries({ site_name: 'MuseBooks', locale: 'en_US', type: 'website', title: seo.title, description: seo.description, url: seo.url, image: social.image, 'image:alt': social.alt }).map(([key, value]) => meta(`og:${key}`, value, 'property')),
+    ...(seo.noindex ? [] : languageAlternates(pathname, siteURL).filter(item => item.og && item.code !== 'en').map(item => meta('og:locale:alternate', item.og, 'property'))),
+    ...Object.entries({ card: 'summary_large_image', title: seo.title, description: seo.description, image: social.image, 'image:alt': social.alt }).map(([key, value]) => meta(`twitter:${key}`, value)),
     `<script id="musebooks-seo-jsonld" type="application/ld+json">${json(seo.structuredData)}</script>`].join('\n')
   return html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escape(seo.title)}</title>`).replace(/<meta name="description"[^>]*\/?\s*>/, '').replace('</head>', () => `${tags}\n</head>`)
 }
@@ -42,6 +50,12 @@ export function renderSeo(html, pathname, book, profile, siteURL = SITE_URL) {
 export const modelSlug = name => `model-${createHash('sha256').update(String(name).trim().toLowerCase()).digest('hex')}`
 export function aliasRedirect(url, name) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"/><title>${escape(name)} — MuseBooks</title><meta name="robots" content="noindex,follow"/><link rel="canonical" href="${escape(url)}"/><meta http-equiv="refresh" content="0;url=${escape(url)}"/><script>location.replace(${json(url)})</script></head><body><p>This profile moved to <a href="${escape(url)}">${escape(name)}</a>.</p></body></html>\n`
+}
+// RFC 9116. The contact is the one the About and Privacy pages already publish;
+// Expires rolls forward a year on every build.
+export function securityTxt(siteURL = SITE_URL, now = new Date()) {
+  const expires = new Date(now.getTime() + 365 * 86400000).toISOString().replace(/\.\d+Z$/, 'Z')
+  return [`Contact: mailto:musecards67@gmail.com`, `Expires: ${expires}`, 'Preferred-Languages: en', `Canonical: ${siteURL}/.well-known/security.txt`, `Policy: ${siteURL}/privacy-policy`, ''].join('\n')
 }
 export function sitemapXML(paths, siteURL = SITE_URL, lastmods = new Map()) {
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${[...new Set(paths)].map(route => `<url><loc>${escape(siteURL + route)}</loc>${lastmods.get(route) ? `<lastmod>${lastmods.get(route)}</lastmod>` : ''}</url>`).join('')}</urlset>\n`
@@ -53,7 +67,7 @@ export function renderPublishedPage(template, route, data = {}, siteURL = SITE_U
     .replace(/<script\b[^>]*id=["']musebooks-seo-jsonld["'][^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/<meta\b[^>]*(?:name=["'](?:description|robots|twitter:[^"']+)["']|property=["']og:[^"']+["'])[^>]*>/gi, '')
     .replace(/<link\b[^>]*rel=["']canonical["'][^>]*>/gi, '')
-    .replace(/<link\b[^>]*type=["']text\/markdown["'][^>]*>/gi, '')
+    .replace(/<link\b[^>]*type=["'](?:text\/markdown|application\/atom\+xml)["'][^>]*>/gi, '')
     .replace(/<link\b[^>]*hreflang=["'][^"']+["'][^>]*>/gi, '')
     .replace(/(<div id="root">)[\s\S]*(<\/body>)/, '$1</div>$2')
   const bootstrap = data.book ? `<script id="musebooks-bootstrap" type="application/json">${json({ book: data.book })}</script>` : ''
@@ -190,5 +204,6 @@ export async function buildSeo(outputDir, { fetcher = fetch, apiURL = process.en
   await fs.writeFile(path.join(outputDir, 'openapi.json'), openAPI(siteURL))
   await fs.mkdir(path.join(outputDir, '.well-known'), { recursive: true })
   await fs.writeFile(path.join(outputDir, '.well-known', 'api-catalog'), apiCatalog(siteURL))
+  await fs.writeFile(path.join(outputDir, '.well-known', 'security.txt'), securityTxt(siteURL))
   console.log(`SEO: rendered ${books.length} photobook pages and ${routes.length - 1} sitemap URLs`)
 }

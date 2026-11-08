@@ -45,14 +45,42 @@ export function bookFactSummary(book = {}) {
   return sentences.join(" ");
 }
 
-// Meta descriptions end on a whole sentence where the facts allow it.
+// East Asian wide characters count twice, roughly as result snippets lay out
+// (mirrors displayWidth in MuseCards' catalogSeo.js).
+export function displayWidth(text) {
+  let width = 0;
+  for (const character of String(text)) {
+    const code = character.codePointAt(0);
+    const wide = (code >= 0x1100 && code <= 0x115F) || (code >= 0x2E80 && code <= 0xA4CF) || (code >= 0xAC00 && code <= 0xD7A3)
+      || (code >= 0xF900 && code <= 0xFAFF) || (code >= 0xFE30 && code <= 0xFE4F) || (code >= 0xFF00 && code <= 0xFF60)
+      || (code >= 0xFFE0 && code <= 0xFFE6) || (code >= 0x20000 && code <= 0x3FFFD);
+    width += wide ? 2 : 1;
+  }
+  return width;
+}
+
+export const TITLE_BRAND = " — MuseBooks";
+const MAX_BRANDED_TITLE_WIDTH = 70;
+// Too wide for a result title: drop only the brand suffix, never the record identity.
+export function compactTitle(value) {
+  const title = String(value || "").replace(/\s+/g, " ").trim();
+  return title.endsWith(TITLE_BRAND) && displayWidth(title) > MAX_BRANDED_TITLE_WIDTH ? title.slice(0, -TITLE_BRAND.length) : title;
+}
+
+// Meta descriptions end on a whole sentence where the facts allow it. The
+// limit is display width, so Japanese, Chinese and Korean text is not twice
+// as wide as an English snippet.
 export function fitDescription(text, limit = 160) {
   const clean = String(text || "").replace(/\s+/g, " ").trim();
-  if (clean.length <= limit) return clean;
-  const kept = clean.slice(0, limit);
+  if (displayWidth(clean) <= limit) return clean;
+  let kept = "";
+  for (const character of clean) {
+    if (displayWidth(kept + character) > limit - 1) break;
+    kept += character;
+  }
   const end = Math.max(kept.lastIndexOf(". "), kept.lastIndexOf("。"));
-  if (end >= 60) return kept.slice(0, end + 1);
-  return `${kept.slice(0, limit - 1).trimEnd()}…`;
+  if (end >= 0 && displayWidth(kept.slice(0, end)) >= 60) return kept.slice(0, end + 1);
+  return `${kept.trimEnd()}…`;
 }
 
 export const CATALOG_DEFINITION = "MuseBooks is a source-backed catalog of model, idol, influencer and celebrity photobooks and magazine issues. Each record separates physical and digital editions and lists the publisher, release date and ISBN where recorded, with links to sources. Retail offers, marketplace asking prices and confirmed completed sales are kept apart, and MuseBooks links to sellers instead of selling books itself.";

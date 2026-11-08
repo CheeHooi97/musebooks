@@ -1,7 +1,7 @@
 import { escape, json } from './seo-content.mjs'
 import { pageSeo, publicationDate } from '../src/lib/seo.js'
 import { languagePath, languageAlternates } from '../src/lib/catalog-languages.js'
-import { fitDescription, profileYears } from '../src/lib/book-answers.js'
+import { compactTitle, fitDescription, profileYears } from '../src/lib/book-answers.js'
 import { newestBooks } from './agent-files.mjs'
 import { GUIDES, GUIDE_EXAMPLE } from '../src/lib/guides.js'
 
@@ -79,7 +79,7 @@ export function localizedCatalog(route, data, language, siteURL) {
   })
   // Editions differ by language word, so a shared original title stays distinct.
   const kindWord = book ? ` ${LEADS[language].kind(book.publicationType === 'magazine_issue')}` : profile ? ` ${t.books}` : ''
-  const title = `${heading}${kindWord} — MuseBooks`
+  const title = compactTitle(`${heading}${kindWord} — MuseBooks`)
   const description = fitDescription(lead)
   // The page language and the publication's recorded inLanguage are distinct.
   graph['@graph'].push({ '@type': 'WebPage', '@id': `${url}#page`, url, name: title, description, inLanguage: language })

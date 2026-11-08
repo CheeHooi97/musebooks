@@ -1,7 +1,7 @@
 import { bookAnswers } from '../src/lib/book-answers.js'
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { aliasRedirect, buildSeo, modelSlug, renderSeo, sitemapXML, stableMediaURLs } from './seo-build.mjs'
+import { aliasRedirect, buildSeo, modelSlug, renderSeo, securityTxt, sitemapXML, stableMediaURLs } from './seo-build.mjs'
 import { pageSeo, hasSearchFilters, publicationDate } from '../src/lib/seo.js'
 import fs from 'node:fs/promises'
 import os from 'node:os'
@@ -230,4 +230,32 @@ test('profile pages link related publishers or models, de-duplicated and ranked 
   assert.match(html, /href="\/publishers\/press"/)
   assert.match(html, /href="\/guides\/digital-vs-physical-photobooks"/)
   assert.match(renderContent('/publishers/press', { profile: { id: 'press', name: 'Press' }, books }), /href="\/models\/m1"/)
+})
+
+test('every page shares a social image, locale and feed like MuseCards', () => {
+  const home = renderSeo('<head><title>Old</title></head>', '/', undefined, undefined, 'https://musebooks.my')
+  assert.match(home, /<meta property="og:image" content="https:\/\/musebooks.my\/social-card.png"\/>/)
+  assert.match(home, /<meta name="twitter:image:alt" content="MuseBooks photobook and magazine catalog"\/>/)
+  assert.match(home, /<meta property="og:locale" content="en_US"\/>/)
+  assert.match(home, /<meta property="og:locale:alternate" content="ja_JP"\/>/)
+  assert.equal(home.match(/application\/atom\+xml/g).length, 1)
+  const cover = renderSeo('<head><title>Old</title></head>', '/books/test-book', { ...book, coverUrl: 'https://example.com/c.jpg' })
+  assert.match(cover, /<meta property="og:image" content="https:\/\/example.com\/c.jpg"\/>/)
+  assert.match(cover, /<meta name="twitter:card" content="summary_large_image"\/>/)
+  assert.doesNotMatch(renderSeo('<head><title>Old</title></head>', '/login'), /og:locale:alternate/)
+})
+
+test('wide titles drop only the brand suffix and descriptions fit by display width', () => {
+  const wide = pageSeo('/books/x', { originalTitle: '純·欲姊姊特休中寫真單書純·欲姊姊特休中寫真單書純·欲姊姊特休中', editions: [] }).title
+  assert.equal(wide, '純·欲姊姊特休中寫真單書純·欲姊姊特休中寫真單書純·欲姊姊特休中')
+  assert.equal(pageSeo('/books/x', { originalTitle: 'Short', editions: [] }).title, 'Short — MuseBooks')
+  const description = pageSeo('/books/x', { originalTitle: 'x', summary: '寫'.repeat(200), editions: [] }).description
+  assert.ok(description.length <= 80, description.length)
+})
+
+test('security.txt names the published contact and expires within a year', () => {
+  const text = securityTxt('https://musebooks.my', new Date('2026-11-08T00:00:00Z'))
+  assert.match(text, /^Contact: mailto:musecards67@gmail.com$/m)
+  assert.match(text, /^Expires: 2027-11-08T00:00:00Z$/m)
+  assert.match(text, /^Canonical: https:\/\/musebooks\.my\/\.well-known\/security\.txt$/m)
 })

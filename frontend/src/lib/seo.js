@@ -1,4 +1,4 @@
-import { bookAnswers, bookFactSummary, fitDescription, profileFactSummary } from "./book-answers.js";
+import { bookAnswers, bookFactSummary, compactTitle, fitDescription, profileFactSummary } from "./book-answers.js";
 import { GUIDES, GUIDE_UPDATED } from "./guides.js";
 // Import damage: text stored as question marks. Such pages stay out of the index until repaired.
 export const isCorruptText = value => /\?{2,}/.test(String(value || ""));
@@ -76,10 +76,10 @@ export function pageSeo(path = "/", book, profile, siteURL = SITE_URL) {
     const profileTitle = `${profile.name} ${onlyMagazines ? "magazine issues" : "photobooks"} — MuseBooks`;
     const alternateName = [...new Set([profile.originalName, profile.englishName, ...String(profile.aliases || "").split(",")].map(name => name?.trim()).filter(name => name && name !== profile.name))];
     const profileDescription = profileFactSummary(profile, isModel ? "models" : "publishers", profile.books || []);
-    return { title: profileTitle, description: fitDescription(profileDescription), url, image: profile.coverUrl, structuredData: { "@context": "https://schema.org", "@graph": [
+    return { title: compactTitle(profileTitle), description: fitDescription(profileDescription), url, image: profile.coverUrl, structuredData: { "@context": "https://schema.org", "@graph": [
       { "@type": "CollectionPage", name: profileTitle, url, description: profileDescription, about: { "@type": isModel ? "Person" : "Organization", "@id": `${url}#entity`, name: profile.name, url, ...(alternateName.length ? { alternateName } : {}), ...(!isModel && profile.officialUrl ? { sameAs: profile.officialUrl } : {}) }, ...(profile.books?.length ? { mainEntity: { "@type": "ItemList", itemListElement: profile.books.map((item, index) => ({ "@type": "ListItem", position: index + 1, item: { "@type": item.publicationType === "magazine_issue" ? "PublicationIssue" : "Book", name: item.originalTitle, url: `${siteURL}/books/${encodeURIComponent(item.slug)}` } })) } } : {}) },
       { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${siteURL}/` }, { "@type": "ListItem", position: 2, name: path.startsWith("/models/") ? "Models" : "Publishers", item: `${siteURL}/${path.split("/")[1]}` }, { "@type": "ListItem", position: 3, name: profile.name, item: url }] },
     ] }, noindex: isCorruptText(profile.name) };
   }
-  return { title, description: fitDescription(description), url, image: book?.coverUrl, structuredData, noindex: ["/404", "/saved", "/login", "/register", "/verify-email", "/forgot-password", "/reset-password", "/account"].includes(path) || (!book && !pages[path]) || isCorruptText(book?.originalTitle) };
+  return { title: compactTitle(title), description: fitDescription(description), url, image: book?.coverUrl, structuredData, noindex: ["/404", "/saved", "/login", "/register", "/verify-email", "/forgot-password", "/reset-password", "/account"].includes(path) || (!book && !pages[path]) || isCorruptText(book?.originalTitle) };
 }
